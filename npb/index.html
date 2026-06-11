@@ -1,671 +1,595 @@
 <!doctype html>
-<html lang='ko'><head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'>
-<meta name='apple-mobile-web-app-capable' content='yes'>
-<meta name='theme-color' content='#0a0f1e'>
-<title>🇯🇵 NPB Quant — 2026-06-11</title>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>NPB Quant · 2026-06-11</title>
 <style>
-:root{color-scheme:dark;
-  --bg:#0a0f1e;--card:#131a30;--card2:#0f1526;--line:#1f2a4a;--line2:#2a3a64;
-  --text:#e8ecf3;--mute:#94a3b8;--dim:#64748b;
-  --accent:#60a5fa;--pos:#10b981;--neg:#ef4444;--amber:#f59e0b;
-  --home:#60a5fa;--away:#f472b6}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);
-  font:15px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
-  padding-bottom:60px}
-.wrap{max-width:760px;margin:0 auto;padding:0 14px}
-a{color:var(--accent)}
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --bg2: #141a32;
+  --bg3: #1c2444;
+  --border: #1f2a4a;
+  --text: #e8ecf3;
+  --mute: #94a3b8;
+  --accent: #60a5fa;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--text);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 18px 14px 80px; }
+header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+header h1 { font-size: 22px; margin: 0; letter-spacing: -0.02em; }
+header .ts { color: var(--mute); font-size: 12px; }
+.learn-box {
+  background: var(--bg2); border-radius: 10px; padding: 10px 14px;
+  margin-bottom: 16px; font-size: 13px; color: var(--mute);
+  display: flex; flex-wrap: wrap; gap: 14px;
+}
+.learn-box b { color: var(--text); }
 
-/* 헤더 */
-header{position:sticky;top:0;z-index:50;background:rgba(10,15,30,.92);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
-  padding:calc(10px + env(safe-area-inset-top)) 0 0}
-.hd-row{display:flex;align-items:baseline;justify-content:space-between;
-  max-width:760px;margin:0 auto;padding:0 14px}
-h1{font-size:19px;margin:0;letter-spacing:-.02em}
-.hd-sub{font-size:11px;color:var(--dim)}
-nav{display:flex;gap:4px;max-width:760px;margin:6px auto 0;padding:0 14px 8px;
-  overflow-x:auto;scrollbar-width:none}
-nav::-webkit-scrollbar{display:none}
-nav a{flex:none;padding:5px 12px;border-radius:99px;font-size:12.5px;
-  color:var(--mute);text-decoration:none;border:1px solid var(--line)}
-nav a.on{color:var(--text);background:var(--card);border-color:var(--line2)}
+/* TOP picks grid (모바일=1열, 태블릿=2열) */
+.top-section { margin-bottom: 22px; }
+.top-section h2 {
+  font-size: 16px; margin: 0 0 10px;
+  color: var(--text); display: flex; align-items: center; gap: 8px;
+}
+.top-section h2 .ico { font-size: 18px; }
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 720px) {
+  .top-grid { grid-template-columns: 1fr 1fr; }
+  .top-section.full .top-grid { grid-template-columns: 1fr; }
+}
 
-/* 요약 스트립 */
-.strip{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}
-.strip::-webkit-scrollbar{display:none}
-.stat{flex:none;background:var(--card);border:1px solid var(--line);
-  border-radius:13px;padding:9px 13px;min-width:86px}
-.stat .v{font-size:17px;font-weight:800;letter-spacing:-.02em}
-.stat .l{font-size:10.5px;color:var(--dim);margin-top:1px}
+/* Pick card */
+.pick-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 12px;
+  display: grid; grid-template-columns: 32px 1fr auto; gap: 10px; align-items: center;
+}
+.pick-rank {
+  font-weight: 700; font-size: 16px; color: var(--mute);
+  text-align: center;
+}
+.pick-main { min-width: 0; }
+.pick-matchup { font-size: 13px; color: var(--mute); margin-bottom: 2px; }
+.pick-label { font-weight: 600; font-size: 15px; color: var(--text); }
+.pick-meta { font-size: 11px; color: var(--mute); margin-top: 2px; }
+.pick-stats { display: flex; gap: 12px; }
+.stat { display: flex; flex-direction: column; align-items: flex-end; }
+.stat-val { font-weight: 700; font-size: 15px; line-height: 1.1; }
+.stat-lbl { font-size: 10px; color: var(--mute); text-transform: uppercase; }
+.empty { color: var(--mute); text-align: center; padding: 20px; font-size: 13px; }
 
-/* 섹션 */
-.sec{margin-top:20px}
-.sec h2{font-size:16px;margin:0 0 10px;letter-spacing:-.01em}
-.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:14px}
+/* Game card */
+.game-section { margin-top: 28px; }
+.game-section h2 { font-size: 16px; margin: 0 0 12px; }
+.game {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 14px; margin-bottom: 14px;
+}
+.game-hdr {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.game-hdr .teams { font-weight: 700; font-size: 17px; }
+.game-hdr .meta { font-size: 12px; color: var(--mute); }
+.game-stats {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 16px;
+  margin-bottom: 10px;
+}
+@media (min-width: 480px) {
+  .game-stats { grid-template-columns: repeat(3, 1fr); }
+}
+.game-stats .row {
+  display: flex; justify-content: space-between;
+  font-size: 13px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.05);
+}
+.game-stats .row span:first-child { color: var(--mute); }
+.game-stats .row b { color: var(--text); font-weight: 600; }
+.split-box {
+  background: var(--bg3); border-radius: 8px; padding: 10px 12px; margin-top: 10px;
+}
+.split-box h3 { font-size: 13px; margin: 0 0 6px; color: var(--accent); }
+.split-box table { width: 100%; font-size: 12px; border-collapse: collapse; }
+.split-box table td, .split-box table th {
+  padding: 3px 4px; text-align: left;
+}
+.split-box table th { color: var(--mute); font-weight: 500; font-size: 11px; }
+.split-box table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+.two-col { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 600px) { .two-col { grid-template-columns: 1fr 1fr; } }
+.warn { color: #fbbf24; }
+.good { color: #10b981; }
+.bad  { color: #ef4444; }
 
-/* 픽 */
-.picktabs{display:flex;gap:6px;margin-bottom:10px}
-.picktabs button{flex:1;padding:8px;border-radius:11px;border:1px solid var(--line);
-  background:var(--card2);color:var(--mute);font-size:13px;font-weight:600}
-.picktabs button.active{background:var(--card);color:var(--text);border-color:var(--line2)}
-.pickpane{display:none}.pickpane.active{display:block}
-.pick{display:flex;align-items:center;gap:10px;background:var(--card);
-  border:1px solid var(--line);border-radius:13px;padding:10px 12px;margin-bottom:8px}
-.pick-rank{flex:none;width:24px;height:24px;border-radius:8px;background:var(--card2);
-  display:flex;align-items:center;justify-content:center;font-size:12px;
-  font-weight:800;color:var(--mute)}
-.pick-main{flex:1;min-width:0}
-.pick-label{font-size:13.5px;font-weight:700}
-.pick-bar{height:4px;background:var(--card2);border-radius:99px;margin:5px 0 4px;overflow:hidden}
-.pick-fill{height:100%;border-radius:99px}
-.pick-meta{font-size:11.5px;color:var(--mute)}
-.pick-ev{flex:none;text-align:right}
-.ev-v{font-size:16px;font-weight:800;letter-spacing:-.02em}
-.ev-l{font-size:9.5px;color:var(--dim)}
-.stake{font-size:10.5px;color:var(--mute);margin-top:2px}
-
-/* 경기 카드 */
-.gcard{background:var(--card);border:1px solid var(--line);border-radius:16px;
-  margin-bottom:12px;overflow:hidden}
-.gcard.q-fallback{border-color:#5a2a30}
-.gcard.q-partial{border-color:#4a4226}
-.ghead{display:block;width:100%;text-align:left;background:none;border:0;
-  color:var(--text);padding:13px 14px;cursor:pointer;font:inherit}
-.ghead-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.matchup{font-size:16.5px;font-weight:800;letter-spacing:-.02em}
-.at{color:var(--dim);font-weight:400;font-size:13px}
-.gmeta{font-size:11px;color:var(--dim);text-align:right;flex:none}
-.ghead-mid{display:flex;align-items:baseline;gap:10px;margin-top:7px;flex-wrap:wrap}
-.score{font-size:24px;font-weight:800;letter-spacing:-.03em}
-.dash{color:var(--dim);font-weight:400}
-.fav{font-size:13.5px;font-weight:700}
-.chip{font-size:11.5px;color:var(--mute);background:var(--card2);
-  padding:3px 9px;border-radius:99px}
-.ghead-sp{font-size:12px;color:var(--mute);margin-top:6px;display:flex;
-  justify-content:space-between;align-items:center}
-.caret{color:var(--dim);transition:transform .18s}
-.gcard.open .caret{transform:rotate(180deg)}
-.gbody{display:none;border-top:1px solid var(--line);padding:12px 14px 14px}
-.gcard.open .gbody{display:block}
-
-/* 탭 */
-.tabs{display:flex;gap:5px;overflow-x:auto;margin-bottom:12px;scrollbar-width:none}
-.tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;padding:6px 12px;border-radius:99px;border:1px solid var(--line);
-  background:var(--card2);color:var(--mute);font-size:12px;font-weight:600}
-.tab.active{background:var(--accent);color:#0a0f1e;border-color:var(--accent)}
-.pane{display:none}.pane.active{display:block}
-
-/* 승률 바 */
-.winbar{margin-bottom:12px}
-.winbar-row{display:flex;justify-content:space-between;font-size:12px;
-  font-weight:700;margin-bottom:5px}
-.winbar-lab{color:var(--away)}.winbar-lab.r{color:var(--home)}
-.winbar-track{display:flex;height:10px;border-radius:99px;overflow:hidden}
-.winbar-away{background:var(--away);opacity:.85}
-.winbar-home{background:var(--home)}
-
-/* 차트 박스 */
-.chart-box{background:var(--card2);border-radius:12px;padding:11px 12px;margin:10px 0}
-.chart-title{font-size:12px;color:var(--mute);font-weight:700;margin-bottom:8px;
-  display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}
-.dist-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.dist-score{flex:none;width:110px;font-size:11.5px;color:var(--mute)}
-.dist-track{flex:1;height:7px;background:var(--card);border-radius:99px;overflow:hidden}
-.dist-fill{height:100%;background:var(--accent);border-radius:99px}
-.dist-p{flex:none;width:42px;text-align:right;font-size:11px;color:var(--dim)}
-
-/* 토탈 게이지 */
-.tg-track{position:relative;height:8px;background:linear-gradient(90deg,var(--card),var(--line2));
-  border-radius:99px;margin:14px 2px 8px}
-.tg-mark{position:absolute;top:-4px;width:3px;height:16px;border-radius:2px;
-  transform:translateX(-50%)}
-.tg-mark.model{background:var(--accent)}
-.tg-mark.market{background:var(--amber)}
-.tg-labels{display:flex;gap:14px;font-size:11px;color:var(--accent)}
-.tg-labels .mkt{color:var(--amber)}
-.tg-delta{font-size:11px;font-weight:800}
-.tg-delta.pos{color:var(--pos)}.tg-delta.neg{color:var(--neg)}
-
-/* 워터폴 */
-.wf-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.wf-lab{flex:none;width:86px;font-size:11.5px;color:var(--mute);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.wf-track{flex:1;position:relative;height:8px;background:var(--card);border-radius:99px}
-.wf-mid{position:absolute;left:50%;top:-2px;width:1px;height:12px;background:var(--line2)}
-.wf-fill{position:absolute;top:0;height:100%;border-radius:99px}
-.wf-fill.right{left:50%}.wf-fill.left{right:50%}
-.wf-val{flex:none;width:48px;text-align:right;font-size:11px;font-weight:700}
-.wf-empty{font-size:12px;color:var(--dim)}
-.wf-note{font-size:11.5px;color:var(--amber);margin-top:6px}
-
-/* 표 */
-table{width:100%;border-collapse:collapse;font-size:13px}
-.kv tr th{width:42%;text-align:left;color:var(--mute);font-weight:500;
-  padding:5px 8px 5px 0;border-bottom:1px solid var(--line);font-size:12.5px}
-.kv tr td{padding:5px 0;border-bottom:1px solid var(--line)}
-.kv tr:last-child th,.kv tr:last-child td{border-bottom:0}
-.kv.grid2{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
-.kv.grid2 tr{display:flex;justify-content:space-between}
-.kv.grid2 tr th{width:auto;border:0;padding:3px 0}
-.kv.grid2 tr td{border:0;padding:3px 0;text-align:right}
-.cmp{margin:4px 0}
-.cmp th{font-size:11px;color:var(--dim);padding:4px 2px;text-align:center}
-.cmp td{padding:6px 4px;border-top:1px solid var(--line);font-size:12px;vertical-align:top}
-.cmp td.l{text-align:left;width:42%}
-.cmp td.m{text-align:center;color:var(--dim);font-size:10.5px;white-space:nowrap}
-.cmp td.r{text-align:right;width:42%}
-.lineup{margin-top:8px}
-.lineup th{font-size:10.5px;color:var(--dim);text-align:left;padding:4px 5px;
-  border-bottom:1px solid var(--line2)}
-.lineup td{font-size:12px;padding:5px;border-bottom:1px solid var(--line)}
-.lineup tr:last-child td{border-bottom:0}
-.lineup .ord{color:var(--dim);width:18px}
-.lineup .nm{font-weight:600}
-.edge{width:90px}
-.edge-track{position:relative;height:7px;background:var(--card2);border-radius:99px}
-.edge-mid{position:absolute;left:50%;top:-1px;width:1px;height:9px;background:var(--line2)}
-.edge-fill{position:absolute;top:0;height:100%;border-radius:99px}
-.edge-fill.right{left:50%}.edge-fill.left{right:50%}
-
-/* 듀오(좌/우) */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:480px){.duo{grid-template-columns:1fr}}
-.duo-head{font-size:12px;font-weight:800;margin-bottom:6px}
-.duo-head.home{color:var(--home)}.duo-head.away{color:var(--away)}
-.sp-name{font-size:14px;font-weight:700;margin-bottom:5px}
-
-/* 구종 믹스 */
-.mix-box{margin-top:4px}
-.mix-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.mix-lab{flex:none;width:64px;font-size:11.5px;color:var(--mute)}
-.mix-track{flex:1;height:7px;background:var(--card2);border-radius:99px;overflow:hidden}
-.mix-fill{height:100%;background:var(--accent);border-radius:99px}
-.mix-val{flex:none;width:84px;text-align:right;font-size:11px;color:var(--dim)}
-
-/* 불펜 가용성 */
-.avail{border-radius:11px;padding:9px 12px;margin:8px 0;font-size:12.5px}
-.avail.out{background:#2a161c;border:1px solid #4a2530}
-.avail.fat{background:#2a2214;border:1px solid #4a3d20}
-.avail-t{font-weight:800;font-size:11.5px;margin-bottom:4px}
-.avail ul{margin:0;padding-left:16px}
-.avail li{margin-bottom:2px}
-.st{display:inline-block;padding:1px 7px;border-radius:6px;font-size:10.5px;font-weight:700}
-.st-pos{background:#15392b;color:#7be0a8}
-.st-amber{background:#3a3014;color:#f3cf7a}
-.st-neg{background:#3a1c22;color:#f5a3a3}
-
-/* 배지/기타 */
-.b{display:inline-block;padding:1px 7px;border-radius:6px;font-size:10.5px;
-  vertical-align:middle;font-weight:600}
-.b-ok{background:#15392b;color:#7be0a8}
-.b-warn{background:#3a3014;color:#f3cf7a}
-.b-bad{background:#3a1c22;color:#f5a3a3}
-.subhead{font-size:12px;font-weight:800;color:var(--mute);margin:14px 0 6px;
-  text-transform:uppercase;letter-spacing:.04em}
-.dim{color:var(--dim);font-weight:400;font-size:.92em}
-.note{font-size:12.5px;color:var(--mute);background:var(--card2);
-  border-radius:10px;padding:8px 11px;margin:6px 0}
-.note.warn{color:#f5d3a3;background:#2a2214}
-.src-row{display:flex;flex-wrap:wrap;gap:5px}
-.src-chip{font-size:11px;color:var(--dim);background:var(--card2);
-  padding:3px 8px;border-radius:8px}
-.warn-banner{background:#2a161c;border:1px solid #4a2530;border-radius:12px;
-  padding:10px 14px;font-size:13px;color:#f5d3d8;margin-top:12px}
-.toolbar{display:flex;justify-content:flex-end;margin-bottom:8px}
-.toolbar button{background:var(--card2);border:1px solid var(--line);color:var(--mute);
-  font-size:11.5px;padding:5px 11px;border-radius:9px}
-footer{margin-top:34px;text-align:center;font-size:11px;color:var(--dim);line-height:1.7}
+footer {
+  margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--border);
+  color: var(--mute); font-size: 11px; text-align: center;
+}
 </style></head>
 <body>
-<header>
-  <div class='hd-row'>
-    <h1>🇯🇵 NPB Quant</h1>
-    <span class='hd-sub'>2026-06-11 · 갱신 06/11 08:46 KST</span>
-  </div>
-  <nav>
-    <a href='#sec-picks' class='on'>픽</a>
-    <a href='#sec-games'>경기</a>
-    
-  </nav>
-</header>
-<div class='wrap'>
-  <div class='strip'><div class='stat'><div class='v'>6</div><div class='l'>경기</div></div><div class='stat'><div class='v'>+45%</div><div class='l'>베스트 EV</div></div><div class='stat'><div class='v'>8.3</div><div class='l'>평균 토탈</div></div><div class='stat'><div class='v'>6/6</div><div class='l'>배당 확보</div></div><div class='stat'><div class='v'>10</div><div class='l'>＋EV 픽</div></div></div>
-  <div class='warn-banner'>⚠ 데이터 품질: 6경기 중 대체값 6 · 표본부족 0 — 해당 경기 신뢰도 낮음</div>
+<div class="container">
+  <header>
+    <h1>⚾️ NPB Quant · 2026-06-11</h1>
+    <span class="ts">2026-06-11 08:44 KST</span>
+  </header>
   
-<section class='sec' id='sec-picks'>
-  <h2>🎯 TOP 픽</h2>
-  <div class='picktabs'>
-    <button class='active' data-pane='pp-total'>토탈 TOP10</button>
-    <button data-pane='pp-ml'>머니라인 TOP10</button>
+
+  <section class="top-section">
+    <h2><span class="ico">📊</span> 토탈 확률 TOP 10 <span style="color:var(--mute);font-size:13px;font-weight:400">(Over/Under 가장 확신)</span></h2>
+    <div class="top-grid">
+      <div class="empty">픽 없음</div>
+    </div>
+  </section>
+
+  <section class="top-section">
+    <h2><span class="ico">🎯</span> 머니라인 확률 TOP 10 <span style="color:var(--mute);font-size:13px;font-weight:400">(승부 가장 확신)</span></h2>
+    <div class="top-grid">
+      <div class="empty">픽 없음</div>
+    </div>
+  </section>
+
+  <section class="game-section">
+    <h2>🔍 게임별 상세 분석</h2>
+    <div class="game">
+  <div class="game-hdr">
+    <span class="teams">DEN @ NIP</span>
+    <span class="meta">18:00 · エスコンF <span class='bad'>● 데이터 부족</span></span>
   </div>
-  <div class='pickpane active' id='pp-total'>
-<div class='pick'>
-  <div class='pick-rank'>1</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Over 5.5 <span class='dim'>· YAK @ ORX</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:79%;background:var(--pos)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--pos)'>79.0%</b>
-      · 배당 1.83 · DraftKings <span class='dim'>모델 8.01 vs 마켓 5.5 (+2.51)</span></div>
+  <div class="game-stats">
+    <div class="row"><span>DEN 예상</span><b>4.153</b></div>
+    <div class="row"><span>NIP 예상</span><b>3.799</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">7.952</b></div>
+    <div class="row"><span>시장 라인</span><b>—</b></div>
+    <div class="row"><span>DEN 승률</span><b>48.2%</b></div>
+    <div class="row"><span>NIP 승률</span><b>41.1%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">돔</b></div>
+    <div class="row"><span>온도</span><b>None°F</b></div>
+    <div class="row"><span>강수</span><b>None%</b></div>
+    <div class='row'><span>⛓ Markov DEN</span><b style='color:var(--text)'>1.011 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov NIP</span><b style='color:#ef4444'>0.829 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
   </div>
-  <div class='pick-ev' style='color:var(--pos)'>
-    <div class='ev-v'>+44.6%</div><div class='ev-l'>EV</div>
-    <div class='stake'>12,000</div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ NIP 타선 vs 東 克樹 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.321</b> ·
+    매치업 <b style="color:#ef4444">0.988</b> ·
+    platoon 1.019 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
   </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>2</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Over 5.0 <span class='dim'>· HIR @ SEI</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:78%;background:var(--pos)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--pos)'>78.3%</b>
-      · 배당 1.80 · DraftKings <span class='dim'>모델 7.92 vs 마켓 5.0 (+2.92)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--pos)'>
-    <div class='ev-v'>+40.9%</div><div class='ev-l'>EV</div>
-    <div class='stake'>12,000</div>
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>3</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Over 6.5 <span class='dim'>· CHU @ LOT</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:68%;background:var(--pos)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--pos)'>68.1%</b>
-      · 배당 1.95 · DraftKings <span class='dim'>모델 7.96 vs 마켓 6.5 (+1.46)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--pos)'>
-    <div class='ev-v'>+32.8%</div><div class='ev-l'>EV</div>
-    <div class='stake'>12,000</div>
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>4</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Over 7.0 <span class='dim'>· YOM @ RAK</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:64%;background:var(--pos)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--pos)'>63.8%</b>
-      · 배당 1.95 · DraftKings <span class='dim'>모델 8.65 vs 마켓 7.0 (+1.65)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--pos)'>
-    <div class='ev-v'>+24.5%</div><div class='ev-l'>EV</div>
-    <div class='stake'>12,000</div>
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>5</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Over 7.0 <span class='dim'>· DEN @ NIP</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:63%;background:var(--pos)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--pos)'>62.6%</b>
-      · 배당 1.85 · Pinnacle <span class='dim'>모델 8.53 vs 마켓 7.0 (+1.53)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--pos)'>
-    <div class='ev-v'>+15.8%</div><div class='ev-l'>EV</div>
-    <div class='stake'>12,000</div>
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>6</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Over 8.0 <span class='dim'>· HAN @ SOF</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:56%;background:var(--accent)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--accent)'>56.2%</b>
-      · 배당 1.95 · DraftKings <span class='dim'>모델 9.02 vs 마켓 8.0 (+1.02)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--pos)'>
-    <div class='ev-v'>+9.6%</div><div class='ev-l'>EV</div>
-    <div class='stake'>12,000</div>
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>7</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Under 8.0 <span class='dim'>· HAN @ SOF</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:32%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>32.3%</b>
-      · 배당 1.83 · DraftKings <span class='dim'>모델 9.02 vs 마켓 8.0 (+1.02)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-40.9%</div><div class='ev-l'>EV</div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>レイエス<span style='color:var(--mute)'>(R)</span></td><td>0.356</td><td>0.314</td><td style='color:#ef4444'>-74</td></tr><tr><td>2</td><td>清宮 幸太郎<span style='color:var(--mute)'>(L)</span></td><td>0.311</td><td>0.252</td><td style='color:#ef4444'>-69</td></tr><tr><td>3</td><td>万波 中正<span style='color:var(--mute)'>(R)</span></td><td>0.33</td><td>0.292</td><td style='color:#ef4444'>-75</td></tr><tr><td>4</td><td>水野 達稀<span style='color:var(--mute)'>(L)</span></td><td>0.318</td><td>0.244</td><td style='color:#ef4444'>-66</td></tr><tr><td>5</td><td>郡司 裕也<span style='color:var(--mute)'>(R)</span></td><td>0.292</td><td>0.256</td><td style='color:#ef4444'>-71</td></tr><tr><td>6</td><td>野村 佑希<span style='color:var(--mute)'>(R)</span></td><td>0.316</td><td>0.274</td><td style='color:#ef4444'>-63</td></tr><tr><td>7</td><td>田宮 裕涼<span style='color:var(--mute)'>(L)</span></td><td>0.314</td><td>0.239</td><td style='color:#ef4444'>-59</td></tr><tr><td>8</td><td>カストロ<span style='color:var(--mute)'>(R)</span></td><td>0.316</td><td>0.277</td><td style='color:#ef4444'>-68</td></tr><tr><td>9</td><td>奈良間 大己<span style='color:var(--mute)'>(R)</span></td><td>0.301</td><td>0.257</td><td style='color:#ef4444'>-67</td></tr>
     
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ DEN 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.314</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.011 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
   </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>8</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Under 6.5 <span class='dim'>· CHU @ LOT</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:32%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>31.9%</b>
-      · 배당 1.83 · DraftKings <span class='dim'>모델 7.96 vs 마켓 6.5 (+1.46)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-41.6%</div><div class='ev-l'>EV</div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>佐野 恵太<span style='color:var(--mute)'>(L)</span></td><td>0.316</td><td>0.349</td><td style='color:var(--mute)'>+0</td></tr><tr><td>2</td><td>度会 隆輝<span style='color:var(--mute)'>(L)</span></td><td>0.318</td><td>0.343</td><td style='color:var(--mute)'>+0</td></tr><tr><td>3</td><td>蝦名 達夫<span style='color:var(--mute)'>(R)</span></td><td>0.304</td><td>0.305</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>宮﨑 敏郎<span style='color:var(--mute)'>(R)</span></td><td>0.325</td><td>0.328</td><td style='color:var(--mute)'>+0</td></tr><tr><td>5</td><td>ヒュンメル<span style='color:var(--mute)'>(S)</span></td><td>0.304</td><td>0.335</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>勝又 温史<span style='color:var(--mute)'>(L)</span></td><td>0.304</td><td>0.32</td><td style='color:var(--mute)'>+0</td></tr><tr><td>7</td><td>筒香 嘉智<span style='color:var(--mute)'>(L)</span></td><td>0.303</td><td>0.338</td><td style='color:var(--mute)'>+0</td></tr><tr><td>8</td><td>牧 秀悟<span style='color:var(--mute)'>(R)</span></td><td>0.346</td><td>0.344</td><td style='color:var(--mute)'>+0</td></tr><tr><td>9</td><td>松尾 汐恩<span style='color:var(--mute)'>(R)</span></td><td>0.291</td><td>0.285</td><td style='color:var(--mute)'>+0</td></tr>
     
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>9</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Under 7.0 <span class='dim'>· DEN @ NIP</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:26%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>26.4%</b>
-      · 배당 2.00 · Pinnacle <span class='dim'>모델 8.53 vs 마켓 7.0 (+1.53)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-47.2%</div><div class='ev-l'>EV</div>
-    
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>10</div>
-  <div class='pick-main'>
-    <div class='pick-label'>Under 7.0 <span class='dim'>· YOM @ RAK</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:25%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>25.4%</b>
-      · 배당 1.83 · DraftKings <span class='dim'>모델 8.65 vs 마켓 7.0 (+1.65)</span></div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-53.6%</div><div class='ev-l'>EV</div>
-    
-  </div>
+  </table>
 </div></div>
-  <div class='pickpane' id='pp-ml'>
-<div class='pick'>
-  <div class='pick-rank'>1</div>
-  <div class='pick-main'>
-    <div class='pick-label'>YOM ML <span class='dim'>· YOM @ RAK</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:48%;background:var(--mute)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--mute)'>47.6%</b>
-      · 배당 2.05 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-2.4%</div><div class='ev-l'>EV</div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 NIP 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.08</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
     
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>2</div>
-  <div class='pick-main'>
-    <div class='pick-label'>SEI ML <span class='dim'>· HIR @ SEI</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:47%;background:var(--mute)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--mute)'>47.3%</b>
-      · 배당 1.50 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-29.0%</div><div class='ev-l'>EV</div>
     
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>3</div>
-  <div class='pick-main'>
-    <div class='pick-label'>ORX ML <span class='dim'>· YAK @ ORX</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:47%;background:var(--mute)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--mute)'>46.9%</b>
-      · 배당 1.59 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-25.4%</div><div class='ev-l'>EV</div>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 柳川 大晟 (R)</td><td>ERA 1.19 · 22.67 IP</td></tr><tr><td>✅ 島本 浩也 (L)</td><td>ERA 1.29 · 17.67 IP</td></tr><tr><td>✅ 田中 正義 (R)</td><td>ERA 2.14 · 21.0 IP</td></tr><tr><td>✅ 福谷 浩司 (R)</td><td>ERA 2.78 · 11.33 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 DEN 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.54</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>10</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
     
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>4</div>
-  <div class='pick-main'>
-    <div class='pick-label'>SOF ML <span class='dim'>· HAN @ SOF</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:47%;background:var(--mute)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--mute)'>46.9%</b>
-      · 배당 1.77 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-17.0%</div><div class='ev-l'>EV</div>
     
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>5</div>
-  <div class='pick-main'>
-    <div class='pick-label'>NIP ML <span class='dim'>· DEN @ NIP</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:47%;background:var(--mute)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--mute)'>46.5%</b>
-      · 배당 1.88 · Pinnacle </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-12.6%</div><div class='ev-l'>EV</div>
-    
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>6</div>
-  <div class='pick-main'>
-    <div class='pick-label'>LOT ML <span class='dim'>· CHU @ LOT</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:46%;background:var(--mute)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--mute)'>45.7%</b>
-      · 배당 1.91 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-12.8%</div><div class='ev-l'>EV</div>
-    
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>7</div>
-  <div class='pick-main'>
-    <div class='pick-label'>CHU ML <span class='dim'>· CHU @ LOT</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:44%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>43.9%</b>
-      · 배당 1.91 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-16.1%</div><div class='ev-l'>EV</div>
-    
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>8</div>
-  <div class='pick-main'>
-    <div class='pick-label'>DEN ML <span class='dim'>· DEN @ NIP</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:44%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>43.8%</b>
-      · 배당 2.02 · Pinnacle </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-11.5%</div><div class='ev-l'>EV</div>
-    
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>9</div>
-  <div class='pick-main'>
-    <div class='pick-label'>HAN ML <span class='dim'>· HAN @ SOF</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:43%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>43.2%</b>
-      · 배당 2.05 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-11.4%</div><div class='ev-l'>EV</div>
-    
-  </div>
-</div>
-<div class='pick'>
-  <div class='pick-rank'>10</div>
-  <div class='pick-main'>
-    <div class='pick-label'>RAK ML <span class='dim'>· YOM @ RAK</span></div>
-    <div class='pick-bar'><div class='pick-fill' style='width:43%;background:var(--neg)'></div></div>
-    <div class='pick-meta'>확률 <b style='color:var(--neg)'>42.6%</b>
-      · 배당 1.80 · DraftKings </div>
-  </div>
-  <div class='pick-ev' style='color:var(--neg)'>
-    <div class='ev-v'>-23.3%</div><div class='ev-l'>EV</div>
-    
-  </div>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 中川 虎大 (R)</td><td>ERA 1.31 · 20.67 IP</td></tr><tr><td>✅ レイノルズ (R)</td><td>ERA 1.67 · 27.0 IP</td></tr><tr><td>✅ 岩田 将貴 (L)</td><td>ERA 1.77 · 12.0 IP</td></tr><tr><td>✅ 坂本 裕哉 (L)</td><td>ERA 2.28 · 23.67 IP</td></tr>
+  </table>
 </div></div>
-</section>
   
-<section class='sec' id='sec-games'>
-  <h2>⚾ 경기 분석 <span class='dim'>(6)</span></h2>
-  <div class='toolbar'><button id='expand-all'>모두 펼치기</button></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">YOM @ RAK</span>
+    <span class="meta">18:00 · 楽天モバイル <span class='bad'>● 데이터 부족</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>YOM 예상</span><b>3.769</b></div>
+    <div class="row"><span>RAK 예상</span><b>4.088</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">7.857</b></div>
+    <div class="row"><span>시장 라인</span><b>—</b></div>
+    <div class="row"><span>YOM 승률</span><b>41.5%</b></div>
+    <div class="row"><span>RAK 승률</span><b>48.1%</b></div>
+    <div class="row"><span>Park factor</span><b>0.98</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>0.961</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">IN(억제) · 2.7mph</b></div>
+    <div class="row"><span>온도</span><b>64.2°F</b></div>
+    <div class="row"><span>강수</span><b>2.0%</b></div>
+    <div class='row'><span>⛓ Markov YOM</span><b style='color:#10b981'>1.051 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov RAK</span><b style='color:#10b981'>1.045 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
   
-<div class='gcard q-fallback'>
-  <button class='ghead' data-game='0'>
-    <div class='ghead-top'>
-      <span class='matchup'>DEN <span class='at'>@</span> NIP</span>
-      <span class='gmeta'>18:00 · エスコンF <span class='b b-bad'>⚠ 대체값</span></span>
-    </div>
-    <div class='ghead-mid'>
-      <span class='score'>4.15 <span class='dash'>–</span> 4.33</span>
-      <span class='fav' style='color:var(--accent)'>DEN 53.5%</span>
-      <span class='chip'>합 8.48 <span class='dim'>/ 마켓 7.0</span></span>
-    </div>
-    <div class='ghead-sp'>미정 vs 미정<span class='caret'>▾</span></div>
-  </button>
-  <div class='gbody' id='gbody-0'>
-    <div class='tabs'><button class='tab active' data-pane='g0-ov'>종합</button><button class='tab' data-pane='g0-sp'>선발</button><button class='tab' data-pane='g0-lu'>라인업</button><button class='tab' data-pane='g0-bp'>불펜</button><button class='tab' data-pane='g0-env'>환경</button><button class='tab' data-pane='g0-mkt'>마켓</button><button class='tab' data-pane='g0-mdl'>모델</button></div>
-    <div class='pane active' id='g0-ov'><div class='winbar'><div class='winbar-row'><span class='winbar-lab'>DEN 43.8%</span><span class='winbar-lab r'>46.5% NIP</span></div><div class='winbar-track'><div class='winbar-away' style='width:48.5%'></div><div class='winbar-home' style='width:51.5%'></div></div></div><div class='note'>무승부(연장 제한) 확률 9.7%</div><table class='kv '><tr><th>F5 예상 (5이닝)</th><td>DEN 2.31 – 2.38 NIP <span class='dim'>(합 4.69)</span></td></tr><tr><th>F5 홈 승률</th><td><b style='color:var(--neg)'>42.4%</b></td></tr><tr><th>F5 오버 확률</th><td>O3.5 58.2% · O4.5 45.4% · O5.0 34.1%</td></tr></table><div class='chart-box'><div class='chart-title'>🎯 토탈: 모델 vs 마켓 <span class='tg-delta pos'>모델−마켓 +1.48</span></div><div class='tg-track'><div class='tg-mark model' style='left:44.8%' title='모델 8.48'></div><div class='tg-mark market' style='left:30.0%' title='마켓 7.0'></div></div><div class='tg-labels'><span>● 모델 8.48</span><span class='mkt'>● 마켓 7.0</span></div></div><div class='chart-box'><div class='chart-title'>📊 시뮬레이션 최빈 스코어</div><div class='dist-row'><span class='dist-score'>DEN 2–3 NIP</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>DEN 3–2 NIP</span><div class='dist-track'><div class='dist-fill' style='width:98%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>DEN 2–4 NIP</span><div class='dist-track'><div class='dist-fill' style='width:96%'></div></div><span class='dist-p'>1.9%</span></div><div class='dist-row'><span class='dist-score'>DEN 1–2 NIP</span><div class='dist-track'><div class='dist-fill' style='width:93%'></div></div><span class='dist-p'>1.9%</span></div><div class='dist-row'><span class='dist-score'>DEN 2–2 NIP</span><div class='dist-track'><div class='dist-fill' style='width:93%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>DEN 3–3 NIP</span><div class='dist-track'><div class='dist-fill' style='width:90%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>DEN 4–2 NIP</span><div class='dist-track'><div class='dist-fill' style='width:89%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>DEN 4–3 NIP</span><div class='dist-track'><div class='dist-fill' style='width:84%'></div></div><span class='dist-p'>1.7%</span></div></div><table class='kv grid2'><tr><th>NIP −1.5</th><td>37.1%</td></tr><tr><th>NIP +1.5</th><td>65.6%</td></tr><tr><th>DEN −1.5</th><td>34.4%</td></tr><tr><th>DEN +1.5</th><td>62.9%</td></tr></table><div class='chart-box'><div class='chart-title'>⚙️ NIP 득점 팩터</div><div class='wf-row'><span class='wf-lab'>홈 이점</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:4.9%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.012</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.877</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:25.0%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.061</span></div></div><div class='chart-box'><div class='chart-title'>⚙️ DEN 득점 팩터</div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.820</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:3.2%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.011</span></div></div></div><div class='pane' id='g0-sp'><div class='duo'><div class='duo-col'><div class='duo-head away'>DEN 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div><div class='duo-col'><div class='duo-head home'>NIP 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div></div></div><div class='pane' id='g0-lu'><div class='subhead'>DEN 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.314</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.011</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>佐野 恵太 <span class='dim'>L</span></td><td>243</td><td>0.316</td><td>0.349</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>度会 隆輝 <span class='dim'>L</span></td><td>224</td><td>0.318</td><td>0.343</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>蝦名 達夫 <span class='dim'>R</span></td><td>201</td><td>0.304</td><td>0.305</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>宮﨑 敏郎 <span class='dim'>R</span></td><td>167</td><td>0.325</td><td>0.328</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>ヒュンメル <span class='dim'>S</span></td><td>138</td><td>0.304</td><td>0.335</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>勝又 温史 <span class='dim'>L</span></td><td>132</td><td>0.304</td><td>0.320</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>筒香 嘉智 <span class='dim'>L</span></td><td>122</td><td>0.303</td><td>0.338</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>牧 秀悟 <span class='dim'>R</span></td><td>116</td><td>0.346</td><td>0.344</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>松尾 汐恩 <span class='dim'>R</span></td><td>110</td><td>0.291</td><td>0.285</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table><div class='subhead'>NIP 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.316</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>0.991</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>レイエス <span class='dim'>R</span></td><td>244</td><td>0.356</td><td>0.358</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>清宮 幸太郎 <span class='dim'>L</span></td><td>240</td><td>0.311</td><td>0.346</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>万波 中正 <span class='dim'>R</span></td><td>231</td><td>0.330</td><td>0.340</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>水野 達稀 <span class='dim'>L</span></td><td>231</td><td>0.318</td><td>0.335</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>郡司 裕也 <span class='dim'>R</span></td><td>215</td><td>0.292</td><td>0.303</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>野村 佑希 <span class='dim'>R</span></td><td>170</td><td>0.316</td><td>0.311</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>田宮 裕涼 <span class='dim'>L</span></td><td>162</td><td>0.314</td><td>0.324</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>カストロ <span class='dim'>R</span></td><td>135</td><td>0.316</td><td>0.319</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>奈良間 大己 <span class='dim'>R</span></td><td>118</td><td>0.301</td><td>0.300</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table></div><div class='pane' id='g0-bp'><div class='subhead'>DEN 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.54</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.54</b></td></tr><tr><th>가용 인원</th><td>10명</td></tr></table><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>中川 虎大</td><td>20.7</td><td style='color:var(--pos)'>1.31</td><td style='color:var(--pos)'>1.31</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>レイノルズ</td><td>27.0</td><td style='color:var(--pos)'>1.67</td><td style='color:var(--pos)'>1.67</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>岩田 将貴</td><td>12.0</td><td style='color:var(--pos)'>1.77</td><td style='color:var(--pos)'>1.77</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>坂本 裕哉</td><td>23.7</td><td style='color:var(--pos)'>2.28</td><td style='color:var(--pos)'>2.28</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>宮城 滝太</td><td>17.0</td><td style='color:var(--pos)'>2.30</td><td style='color:var(--pos)'>2.30</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>ルイーズ</td><td>19.0</td><td style='color:var(--pos)'>2.86</td><td style='color:var(--pos)'>2.86</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>若松 尚輝</td><td>16.0</td><td style='color:var(--text)'>3.36</td><td style='color:var(--text)'>3.36</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>山﨑 康晃</td><td>18.3</td><td style='color:var(--text)'>3.43</td><td style='color:var(--text)'>3.43</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>伊勢 大夢</td><td>12.7</td><td style='color:var(--text)'>3.46</td><td style='color:var(--text)'>3.46</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>堀岡 隼人</td><td>8.0</td><td style='color:var(--amber)'>5.13</td><td style='color:var(--amber)'>5.13</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table><div class='subhead'>NIP 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.08</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.08</b></td></tr><tr><th>가용 인원</th><td>7명</td></tr></table><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>柳川 大晟</td><td>22.7</td><td style='color:var(--pos)'>1.19</td><td style='color:var(--pos)'>1.19</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>島本 浩也</td><td>17.7</td><td style='color:var(--pos)'>1.29</td><td style='color:var(--pos)'>1.29</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>田中 正義</td><td>21.0</td><td style='color:var(--pos)'>2.14</td><td style='color:var(--pos)'>2.14</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>福谷 浩司</td><td>11.3</td><td style='color:var(--pos)'>2.78</td><td style='color:var(--pos)'>2.78</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>堀 瑞輝</td><td>8.0</td><td style='color:var(--pos)'>2.88</td><td style='color:var(--pos)'>2.88</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>山本 拓実</td><td>12.3</td><td style='color:var(--pos)'>3.07</td><td style='color:var(--pos)'>3.07</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>菊地 大稀</td><td>4.3</td><td style='color:var(--text)'>3.48</td><td style='color:var(--text)'>3.48</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table></div><div class='pane' id='g0-env'><table class='kv '><tr><th>구장</th><td>エスコンF <span class='dim'>(파크팩터 1.00)</span></td></tr><tr><th>날씨</th><td>돔/지붕 폐쇄 — 날씨 영향 없음</td></tr><tr><th>환경 종합</th><td><b style='color:var(--text)'>1.0000</b></td></tr></table></div><div class='pane' id='g0-mkt'><table class='kv '><tr><th>북메이커</th><td>Pinnacle</td></tr><tr><th>머니라인</th><td>DEN 2.02 / NIP 1.88</td></tr><tr><th>토탈</th><td>7.0 (O 1.85 / U 2.00)</td></tr><tr><th>핸디캡</th><td>NIP +1.5 @ 1.51 · DEN -1.5 @ 2.66</td></tr></table><div class='subhead'>이 경기 픽</div><table class='lineup'><thead><tr><th>픽</th><th>확률</th><th>배당</th><th>EV</th><th>스테이크</th></tr></thead><tbody><tr><td class='nm'>Over 7.0</td><td>62.6%</td><td>1.85</td><td style='color:var(--pos);font-weight:700'>+15.8%</td><td>12,000</td></tr><tr><td class='nm'>NIP +1.5</td><td>65.6%</td><td>1.51</td><td style='color:var(--neg);font-weight:700'>-1.0%</td><td>0</td></tr><tr><td class='nm'>DEN -1.5</td><td>34.4%</td><td>2.66</td><td style='color:var(--neg);font-weight:700'>-8.4%</td><td>0</td></tr><tr><td class='nm'>DEN ML</td><td>43.8%</td><td>2.02</td><td style='color:var(--neg);font-weight:700'>-11.5%</td><td>0</td></tr><tr><td class='nm'>NIP ML</td><td>46.5%</td><td>1.88</td><td style='color:var(--neg);font-weight:700'>-12.6%</td><td>0</td></tr><tr><td class='nm'>Under 7.0</td><td>26.4%</td><td>2.00</td><td style='color:var(--neg);font-weight:700'>-47.2%</td><td>0</td></tr></tbody></table></div><div class='pane' id='g0-mdl'><div class='subhead'>DEN 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3107</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3107</td></tr><tr><th>vs 선발 득점</th><td>4.17</td></tr><tr><th>vs 불펜 득점</th><td>4.15</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.16</b></td></tr><tr><th>μ (F5)</th><td>2.31</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--text)'>1.011</b> <span class='dim'>(raw 1.014)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.14 / w=0.40</td></tr></table><div class='subhead'>NIP 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3154</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3154</td></tr><tr><th>vs 선발 득점</th><td>4.35</td></tr><tr><th>vs 불펜 득점</th><td>4.31</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.30</b></td></tr><tr><th>μ (F5)</th><td>2.40</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--pos)'>1.061</b> <span class='dim'>(raw 1.075)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.37 / w=0.40</td></tr></table><div class='subhead'>데이터 출처</div><div class='src-row'><span class='src-chip'>home_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>away_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>home_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>away_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>weather <span class='b b-ok'>돔</span></span> <span class='src-chip'>odds <span class='b b-ok'>실시간</span></span></div><div class='note warn'>누락/대체: 홈 선발 · 원정 선발</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ RAK 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.308</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.0 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
   </div>
-</div>
-<div class='gcard q-fallback'>
-  <button class='ghead' data-game='1'>
-    <div class='ghead-top'>
-      <span class='matchup'>YOM <span class='at'>@</span> RAK</span>
-      <span class='gmeta'>18:00 · 楽天モバイル <span class='b b-bad'>⚠ 대체값</span></span>
-    </div>
-    <div class='ghead-mid'>
-      <span class='score'>4.45 <span class='dash'>–</span> 4.14</span>
-      <span class='fav' style='color:var(--accent)'>YOM 57.4%</span>
-      <span class='chip'>합 8.60 <span class='dim'>/ 마켓 7.0</span></span>
-    </div>
-    <div class='ghead-sp'>미정 vs 미정<span class='caret'>▾</span></div>
-  </button>
-  <div class='gbody' id='gbody-1'>
-    <div class='tabs'><button class='tab active' data-pane='g1-ov'>종합</button><button class='tab' data-pane='g1-sp'>선발</button><button class='tab' data-pane='g1-lu'>라인업</button><button class='tab' data-pane='g1-bp'>불펜</button><button class='tab' data-pane='g1-env'>환경</button><button class='tab' data-pane='g1-mkt'>마켓</button><button class='tab' data-pane='g1-mdl'>모델</button></div>
-    <div class='pane active' id='g1-ov'><div class='winbar'><div class='winbar-row'><span class='winbar-lab'>YOM 47.6%</span><span class='winbar-lab r'>42.6% RAK</span></div><div class='winbar-track'><div class='winbar-away' style='width:52.8%'></div><div class='winbar-home' style='width:47.2%'></div></div></div><div class='note'>무승부(연장 제한) 확률 9.8%</div><table class='kv '><tr><th>F5 예상 (5이닝)</th><td>YOM 2.31 – 2.20 RAK <span class='dim'>(합 4.51)</span></td></tr><tr><th>F5 홈 승률</th><td><b style='color:var(--neg)'>39.8%</b></td></tr><tr><th>F5 오버 확률</th><td>O3.5 55.9% · O4.5 42.5% · O5.0 31.3%</td></tr></table><div class='chart-box'><div class='chart-title'>🎯 토탈: 모델 vs 마켓 <span class='tg-delta pos'>모델−마켓 +1.60</span></div><div class='tg-track'><div class='tg-mark model' style='left:46.0%' title='모델 8.60'></div><div class='tg-mark market' style='left:30.0%' title='마켓 7.0'></div></div><div class='tg-labels'><span>● 모델 8.60</span><span class='mkt'>● 마켓 7.0</span></div></div><div class='chart-box'><div class='chart-title'>📊 시뮬레이션 최빈 스코어</div><div class='dist-row'><span class='dist-score'>YOM 2–3 RAK</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YOM 2–2 RAK</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YOM 3–2 RAK</span><div class='dist-track'><div class='dist-fill' style='width:98%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YOM 3–3 RAK</span><div class='dist-track'><div class='dist-fill' style='width:90%'></div></div><span class='dist-p'>1.9%</span></div><div class='dist-row'><span class='dist-score'>YOM 2–1 RAK</span><div class='dist-track'><div class='dist-fill' style='width:86%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>YOM 3–1 RAK</span><div class='dist-track'><div class='dist-fill' style='width:83%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>YOM 1–3 RAK</span><div class='dist-track'><div class='dist-fill' style='width:81%'></div></div><span class='dist-p'>1.7%</span></div><div class='dist-row'><span class='dist-score'>YOM 4–3 RAK</span><div class='dist-track'><div class='dist-fill' style='width:80%'></div></div><span class='dist-p'>1.7%</span></div></div><table class='kv grid2'><tr><th>RAK −1.5</th><td>33.0%</td></tr><tr><th>RAK +1.5</th><td>62.2%</td></tr><tr><th>YOM −1.5</th><td>37.8%</td></tr><tr><th>YOM +1.5</th><td>67.0%</td></tr></table><div class='chart-box'><div class='chart-title'>⚙️ RAK 득점 팩터</div><div class='wf-row'><span class='wf-lab'>구장</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:10.1%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.020</span></div><div class='wf-row'><span class='wf-lab'>홈 이점</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:6.1%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.012</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.901</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:22.8%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.045</span></div></div><div class='chart-box'><div class='chart-title'>⚙️ YOM 득점 팩터</div><div class='wf-row'><span class='wf-lab'>구장</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:4.9%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.020</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:26.7%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.109</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:50.0%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.204</span></div></div></div><div class='pane' id='g1-sp'><div class='duo'><div class='duo-col'><div class='duo-head away'>YOM 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div><div class='duo-col'><div class='duo-head home'>RAK 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div></div></div><div class='pane' id='g1-lu'><div class='subhead'>YOM 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.314</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.020</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>ダルベック <span class='dim'>R</span></td><td>231</td><td>0.332</td><td>0.337</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>キャベッジ <span class='dim'>L</span></td><td>229</td><td>0.321</td><td>0.345</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>泉口 友汰 <span class='dim'>L</span></td><td>192</td><td>0.289</td><td>0.314</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>浦田 俊輔 <span class='dim'>L</span></td><td>178</td><td>0.297</td><td>0.317</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>佐々木 俊輔 <span class='dim'>L</span></td><td>165</td><td>0.315</td><td>0.332</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>松本 剛 <span class='dim'>R</span></td><td>135</td><td>0.293</td><td>0.285</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>大城 卓三 <span class='dim'>L</span></td><td>127</td><td>0.355</td><td>0.378</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>吉川 尚輝 <span class='dim'>L</span></td><td>126</td><td>0.279</td><td>0.305</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>岸田 行倫 <span class='dim'>R</span></td><td>119</td><td>0.313</td><td>0.308</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table><div class='subhead'>RAK 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.308</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.000</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>辰己 涼介 <span class='dim'>L</span></td><td>245</td><td>0.329</td><td>0.362</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>村林 一輝 <span class='dim'>R</span></td><td>237</td><td>0.311</td><td>0.311</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>黒川 史陽 <span class='dim'>L</span></td><td>234</td><td>0.302</td><td>0.334</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>浅村 栄斗 <span class='dim'>R</span></td><td>203</td><td>0.307</td><td>0.316</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>太田 光 <span class='dim'>R</span></td><td>152</td><td>0.286</td><td>0.290</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>中島 大輔 <span class='dim'>L</span></td><td>141</td><td>0.294</td><td>0.300</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>佐藤 直樹 <span class='dim'>R</span></td><td>121</td><td>0.325</td><td>0.310</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>平良 竜哉 <span class='dim'>R</span></td><td>118</td><td>0.336</td><td>0.338</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>小深田 大翔 <span class='dim'>L</span></td><td>112</td><td>0.278</td><td>0.294</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table></div><div class='pane' id='g1-bp'><div class='subhead'>YOM 불펜</div><div class='dim'>불펜 데이터 없음</div><div class='subhead'>RAK 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--text)'>3.82</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--text)'>4.06</b></td></tr><tr><th>가용 인원</th><td>10명</td></tr></table><div class='avail fat'><div class='avail-t'>⚠️ 피로 누적</div><ul><li><b>藤原 聡大</b> — 어제 32구(추정) <span class='dim'>유효 ERA 5.93</span></li><li><b>西垣 雅矢</b> — 2연투 <span class='dim'>유효 ERA 6.05</span></li><li><b>鈴木 翔天</b> — 어제 38구(추정) <span class='dim'>유효 ERA 5.26</span></li><li><b>津留﨑 大成</b> — 2연투 <span class='dim'>유효 ERA 3.46</span></li></ul></div><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>九谷 瑠</td><td>15.0</td><td style='color:var(--pos)'>1.27</td><td style='color:var(--pos)'>1.27</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>宋 家豪</td><td>12.0</td><td style='color:var(--pos)'>2.67</td><td style='color:var(--pos)'>2.67</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>加治屋 蓮</td><td>25.0</td><td style='color:var(--pos)'>2.88</td><td style='color:var(--pos)'>2.88</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>津留﨑 大成</td><td>17.7</td><td style='color:var(--pos)'>3.09</td><td style='color:var(--text)'>3.46</td><td><span class='st st-amber'>피로</span> <span class='dim'>2연투</span></td></tr><tr><td class='nm'>柴田 大地</td><td>11.7</td><td style='color:var(--text)'>3.63</td><td style='color:var(--text)'>3.63</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>伊藤 樹</td><td>2.0</td><td style='color:var(--amber)'>4.77</td><td style='color:var(--amber)'>4.77</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>鈴木 翔天</td><td>20.3</td><td style='color:var(--amber)'>4.87</td><td style='color:var(--neg)'>5.26</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 38구(추정)</span></td></tr><tr><td class='nm'>西垣 雅矢</td><td>21.7</td><td style='color:var(--neg)'>5.40</td><td style='color:var(--neg)'>6.05</td><td><span class='st st-amber'>피로</span> <span class='dim'>2연투</span></td></tr><tr><td class='nm'>渡辺 翔太</td><td>6.0</td><td style='color:var(--neg)'>5.46</td><td style='color:var(--neg)'>5.46</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>藤原 聡大</td><td>14.0</td><td style='color:var(--neg)'>5.49</td><td style='color:var(--neg)'>5.93</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 32구(추정)</span></td></tr></tbody></table></div><div class='pane' id='g1-env'><table class='kv '><tr><th>구장</th><td>楽天モバイル <span class='dim'>(파크팩터 1.02)</span></td></tr><tr><th>기온</th><td>22.0℃</td></tr><tr><th>바람</th><td>5.0mph —</td></tr><tr><th>습도</th><td>60%</td></tr><tr><th>공기밀도</th><td>1.1886 <span class='dim'>(-0.02%)</span></td></tr><tr><th>비거리 변화</th><td>0.01%</td></tr><tr><th>득점 팩터</th><td><b style='color:var(--text)'>1.0003</b></td></tr><tr><th>환경 종합</th><td><b style='color:var(--pos)'>1.0203</b></td></tr></table></div><div class='pane' id='g1-mkt'><table class='kv '><tr><th>북메이커</th><td>DraftKings</td></tr><tr><th>머니라인</th><td>YOM 2.05 / RAK 1.80</td></tr><tr><th>토탈</th><td>7.0 (O 1.95 / U 1.83)</td></tr><tr><th>핸디캡</th><td>RAK +1.5 @ 1.49 · YOM -1.5 @ 2.65</td></tr></table><div class='subhead'>이 경기 픽</div><table class='lineup'><thead><tr><th>픽</th><th>확률</th><th>배당</th><th>EV</th><th>스테이크</th></tr></thead><tbody><tr><td class='nm'>Over 7.0</td><td>63.8%</td><td>1.95</td><td style='color:var(--pos);font-weight:700'>+24.5%</td><td>12,000</td></tr><tr><td class='nm'>YOM -1.5</td><td>37.8%</td><td>2.65</td><td style='color:var(--accent);font-weight:700'>+0.1%</td><td>110</td></tr><tr><td class='nm'>YOM ML</td><td>47.6%</td><td>2.05</td><td style='color:var(--neg);font-weight:700'>-2.4%</td><td>0</td></tr><tr><td class='nm'>RAK +1.5</td><td>62.2%</td><td>1.49</td><td style='color:var(--neg);font-weight:700'>-7.3%</td><td>0</td></tr><tr><td class='nm'>RAK ML</td><td>42.6%</td><td>1.80</td><td style='color:var(--neg);font-weight:700'>-23.3%</td><td>0</td></tr><tr><td class='nm'>Under 7.0</td><td>25.4%</td><td>1.83</td><td style='color:var(--neg);font-weight:700'>-53.6%</td><td>0</td></tr></tbody></table></div><div class='pane' id='g1-mdl'><div class='subhead'>YOM 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3103</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3103</td></tr><tr><th>vs 선발 득점</th><td>4.16</td></tr><tr><th>vs 불펜 득점</th><td>4.15</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.15</b></td></tr><tr><th>μ (F5)</th><td>2.31</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--pos)'>1.204</b> <span class='dim'>(raw 1.248)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.91 / w=0.40</td></tr></table><div class='subhead'>RAK 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3052</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3052</td></tr><tr><th>vs 선발 득점</th><td>3.97</td></tr><tr><th>vs 불펜 득점</th><td>3.97</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>3.99</b></td></tr><tr><th>μ (F5)</th><td>2.21</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--pos)'>1.045</b> <span class='dim'>(raw 1.055)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.38 / w=0.40</td></tr></table><div class='subhead'>데이터 출처</div><div class='src-row'><span class='src-chip'>home_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>away_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>home_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>away_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>weather <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>odds <span class='b b-ok'>실시간</span></span></div><div class='note warn'>누락/대체: 홈 선발 · 원정 선발</div></div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>辰己 涼介<span style='color:var(--mute)'>(L)</span></td><td>0.329</td><td>0.362</td><td style='color:var(--mute)'>+0</td></tr><tr><td>2</td><td>村林 一輝<span style='color:var(--mute)'>(R)</span></td><td>0.311</td><td>0.311</td><td style='color:var(--mute)'>+0</td></tr><tr><td>3</td><td>黒川 史陽<span style='color:var(--mute)'>(L)</span></td><td>0.302</td><td>0.334</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>浅村 栄斗<span style='color:var(--mute)'>(R)</span></td><td>0.307</td><td>0.316</td><td style='color:var(--mute)'>+0</td></tr><tr><td>5</td><td>太田 光<span style='color:var(--mute)'>(R)</span></td><td>0.286</td><td>0.29</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>中島 大輔<span style='color:var(--mute)'>(L)</span></td><td>0.294</td><td>0.3</td><td style='color:var(--mute)'>+0</td></tr><tr><td>7</td><td>佐藤 直樹<span style='color:var(--mute)'>(R)</span></td><td>0.325</td><td>0.31</td><td style='color:var(--mute)'>+0</td></tr><tr><td>8</td><td>平良 竜哉<span style='color:var(--mute)'>(R)</span></td><td>0.336</td><td>0.338</td><td style='color:var(--mute)'>+0</td></tr><tr><td>9</td><td>小深田 大翔<span style='color:var(--mute)'>(L)</span></td><td>0.278</td><td>0.294</td><td style='color:var(--mute)'>+0</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ YOM 타선 vs 瀧中 瞭太 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.314</b> ·
+    매치업 <b style="color:#ef4444">0.984</b> ·
+    platoon 1.02 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
   </div>
-</div>
-<div class='gcard q-fallback'>
-  <button class='ghead' data-game='2'>
-    <div class='ghead-top'>
-      <span class='matchup'>HIR <span class='at'>@</span> SEI</span>
-      <span class='gmeta'>18:00 · ベルーナドーム <span class='b b-bad'>⚠ 대체값</span></span>
-    </div>
-    <div class='ghead-mid'>
-      <span class='score'>3.82 <span class='dash'>–</span> 4.06</span>
-      <span class='fav' style='color:var(--accent)'>HIR 52.7%</span>
-      <span class='chip'>합 7.88 <span class='dim'>/ 마켓 5.0</span></span>
-    </div>
-    <div class='ghead-sp'>미정 vs 미정<span class='caret'>▾</span></div>
-  </button>
-  <div class='gbody' id='gbody-2'>
-    <div class='tabs'><button class='tab active' data-pane='g2-ov'>종합</button><button class='tab' data-pane='g2-sp'>선발</button><button class='tab' data-pane='g2-lu'>라인업</button><button class='tab' data-pane='g2-bp'>불펜</button><button class='tab' data-pane='g2-env'>환경</button><button class='tab' data-pane='g2-mkt'>마켓</button><button class='tab' data-pane='g2-mdl'>모델</button></div>
-    <div class='pane active' id='g2-ov'><div class='winbar'><div class='winbar-row'><span class='winbar-lab'>HIR 41.7%</span><span class='winbar-lab r'>47.3% SEI</span></div><div class='winbar-track'><div class='winbar-away' style='width:46.9%'></div><div class='winbar-home' style='width:53.1%'></div></div></div><div class='note'>무승부(연장 제한) 확률 11.0%</div><table class='kv '><tr><th>F5 예상 (5이닝)</th><td>HIR 2.06 – 2.23 SEI <span class='dim'>(합 4.29)</span></td></tr><tr><th>F5 홈 승률</th><td><b style='color:var(--neg)'>43.7%</b></td></tr><tr><th>F5 오버 확률</th><td>O3.5 52.6% · O4.5 39.7% · O5.0 29.0%</td></tr></table><div class='chart-box'><div class='chart-title'>🎯 토탈: 모델 vs 마켓 <span class='tg-delta pos'>모델−마켓 +2.88</span></div><div class='tg-track'><div class='tg-mark model' style='left:38.8%' title='모델 7.88'></div><div class='tg-mark market' style='left:10.0%' title='마켓 5.0'></div></div><div class='tg-labels'><span>● 모델 7.88</span><span class='mkt'>● 마켓 5.0</span></div></div><div class='chart-box'><div class='chart-title'>📊 시뮬레이션 최빈 스코어</div><div class='dist-row'><span class='dist-score'>HIR 2–2 SEI</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.4%</span></div><div class='dist-row'><span class='dist-score'>HIR 1–2 SEI</span><div class='dist-track'><div class='dist-fill' style='width:95%'></div></div><span class='dist-p'>2.3%</span></div><div class='dist-row'><span class='dist-score'>HIR 2–3 SEI</span><div class='dist-track'><div class='dist-fill' style='width:90%'></div></div><span class='dist-p'>2.2%</span></div><div class='dist-row'><span class='dist-score'>HIR 1–3 SEI</span><div class='dist-track'><div class='dist-fill' style='width:89%'></div></div><span class='dist-p'>2.2%</span></div><div class='dist-row'><span class='dist-score'>HIR 2–4 SEI</span><div class='dist-track'><div class='dist-fill' style='width:84%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>HIR 2–1 SEI</span><div class='dist-track'><div class='dist-fill' style='width:84%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>HIR 1–1 SEI</span><div class='dist-track'><div class='dist-fill' style='width:82%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>HIR 3–2 SEI</span><div class='dist-track'><div class='dist-fill' style='width:80%'></div></div><span class='dist-p'>2.0%</span></div></div><table class='kv grid2'><tr><th>SEI −1.5</th><td>37.2%</td></tr><tr><th>SEI +1.5</th><td>67.4%</td></tr><tr><th>HIR −1.5</th><td>32.6%</td></tr><tr><th>HIR +1.5</th><td>62.8%</td></tr></table><div class='chart-box'><div class='chart-title'>⚙️ SEI 득점 팩터</div><div class='wf-row'><span class='wf-lab'>구장</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:4.9%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.010</span></div><div class='wf-row'><span class='wf-lab'>홈 이점</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:5.9%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.012</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.898</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:17.5%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.964</span></div></div><div class='chart-box'><div class='chart-title'>⚙️ HIR 득점 팩터</div><div class='wf-row'><span class='wf-lab'>구장</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:6.8%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.010</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.926</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:25.4%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.962</span></div></div></div><div class='pane' id='g2-sp'><div class='duo'><div class='duo-col'><div class='duo-head away'>HIR 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div><div class='duo-col'><div class='duo-head home'>SEI 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div></div></div><div class='pane' id='g2-lu'><div class='subhead'>HIR 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.300</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.010</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>小園 海斗 <span class='dim'>L</span></td><td>225</td><td>0.284</td><td>0.299</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>坂倉 将吾 <span class='dim'>L</span></td><td>218</td><td>0.338</td><td>0.370</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>菊池 涼介 <span class='dim'>R</span></td><td>197</td><td>0.296</td><td>0.300</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>大盛 穂 <span class='dim'>L</span></td><td>155</td><td>0.288</td><td>0.304</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>モンテロ <span class='dim'>R</span></td><td>148</td><td>0.309</td><td>0.306</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>佐々木 泰 <span class='dim'>R</span></td><td>141</td><td>0.279</td><td>0.274</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>持丸 泰輝 <span class='dim'>L</span></td><td>136</td><td>0.311</td><td>0.337</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>ファビアン <span class='dim'>R</span></td><td>107</td><td>0.293</td><td>0.290</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>平川 蓮 <span class='dim'>S</span></td><td>106</td><td>0.279</td><td>0.297</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table><div class='subhead'>SEI 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.308</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.008</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>渡部 聖弥 <span class='dim'>R</span></td><td>252</td><td>0.295</td><td>0.293</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>カナリオ <span class='dim'>R</span></td><td>210</td><td>0.314</td><td>0.313</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>滝澤 夏央 <span class='dim'>L</span></td><td>190</td><td>0.314</td><td>0.344</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>長谷川 信哉 <span class='dim'>R</span></td><td>175</td><td>0.336</td><td>0.328</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>源田 壮亮 <span class='dim'>L</span></td><td>171</td><td>0.278</td><td>0.300</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>西川 愛也 <span class='dim'>L</span></td><td>161</td><td>0.275</td><td>0.283</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>桑原 将志 <span class='dim'>R</span></td><td>156</td><td>0.329</td><td>0.322</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>平沢 大河 <span class='dim'>L</span></td><td>139</td><td>0.321</td><td>0.344</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>小島 大河 <span class='dim'>L</span></td><td>129</td><td>0.302</td><td>0.317</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table></div><div class='pane' id='g2-bp'><div class='subhead'>HIR 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.62</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.66</b></td></tr><tr><th>가용 인원</th><td>9명</td></tr></table><div class='avail fat'><div class='avail-t'>⚠️ 피로 누적</div><ul><li><b>益田 武尚</b> — 어제 28구(추정) <span class='dim'>유효 ERA 4.15</span></li><li><b>ハーン</b> — 어제 29구(추정) <span class='dim'>유효 ERA 1.23</span></li><li><b>髙 太一</b> — 2연투 <span class='dim'>유효 ERA 1.13</span></li></ul></div><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>髙 太一</td><td>19.3</td><td style='color:var(--pos)'>1.01</td><td style='color:var(--pos)'>1.13</td><td><span class='st st-amber'>피로</span> <span class='dim'>2연투</span></td></tr><tr><td class='nm'>ハーン</td><td>23.7</td><td style='color:var(--pos)'>1.14</td><td style='color:var(--pos)'>1.23</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 29구(추정)</span></td></tr><tr><td class='nm'>遠藤 淳志</td><td>18.7</td><td style='color:var(--pos)'>2.02</td><td style='color:var(--pos)'>2.02</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>塹江 敦哉</td><td>20.0</td><td style='color:var(--pos)'>2.70</td><td style='color:var(--pos)'>2.70</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>鈴木 健矢</td><td>20.7</td><td style='color:var(--pos)'>3.05</td><td style='color:var(--pos)'>3.05</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>中﨑 翔太</td><td>20.3</td><td style='color:var(--pos)'>3.10</td><td style='color:var(--pos)'>3.10</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>森浦 大輔</td><td>22.7</td><td style='color:var(--text)'>3.57</td><td style='color:var(--text)'>3.57</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>益田 武尚</td><td>10.3</td><td style='color:var(--text)'>3.84</td><td style='color:var(--text)'>4.15</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 28구(추정)</span></td></tr><tr><td class='nm'>辻 大雅</td><td>11.3</td><td style='color:var(--amber)'>4.58</td><td style='color:var(--amber)'>4.58</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table><div class='subhead'>SEI 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.74</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.83</b></td></tr><tr><th>가용 인원</th><td>8명</td></tr></table><div class='avail fat'><div class='avail-t'>⚠️ 피로 누적</div><ul><li><b>岩城 颯空</b> — 2연투 <span class='dim'>유효 ERA 4.20</span></li></ul></div><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>篠原 響</td><td>19.3</td><td style='color:var(--pos)'>1.46</td><td style='color:var(--pos)'>1.46</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>佐藤 隼輔</td><td>11.0</td><td style='color:var(--pos)'>2.39</td><td style='color:var(--pos)'>2.39</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>甲斐野 央</td><td>21.7</td><td style='color:var(--pos)'>2.49</td><td style='color:var(--pos)'>2.49</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>浜屋 将太</td><td>15.7</td><td style='color:var(--pos)'>2.52</td><td style='color:var(--pos)'>2.52</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>黒田 将矢</td><td>15.0</td><td style='color:var(--pos)'>2.62</td><td style='color:var(--pos)'>2.62</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>上田 大河</td><td>7.0</td><td style='color:var(--text)'>3.72</td><td style='color:var(--text)'>3.72</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>岩城 颯空</td><td>24.0</td><td style='color:var(--text)'>3.75</td><td style='color:var(--text)'>4.20</td><td><span class='st st-amber'>피로</span> <span class='dim'>2연투</span></td></tr><tr><td class='nm'>豆田 泰志</td><td>6.0</td><td style='color:var(--text)'>4.11</td><td style='color:var(--text)'>4.11</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table></div><div class='pane' id='g2-env'><table class='kv '><tr><th>구장</th><td>ベルーナドーム <span class='dim'>(파크팩터 1.01)</span></td></tr><tr><th>날씨</th><td>돔/지붕 폐쇄 — 날씨 영향 없음</td></tr><tr><th>환경 종합</th><td><b style='color:var(--text)'>1.0100</b></td></tr></table></div><div class='pane' id='g2-mkt'><table class='kv '><tr><th>북메이커</th><td>DraftKings</td></tr><tr><th>머니라인</th><td>HIR 2.65 / SEI 1.50</td></tr><tr><th>토탈</th><td>5.0 (O 1.80 / U 2.00)</td></tr><tr><th>핸디캡</th><td>SEI -1.5 @ 2.15 · HIR +1.5 @ 1.71</td></tr></table><div class='subhead'>이 경기 픽</div><table class='lineup'><thead><tr><th>픽</th><th>확률</th><th>배당</th><th>EV</th><th>스테이크</th></tr></thead><tbody><tr><td class='nm'>Over 5.0</td><td>78.3%</td><td>1.80</td><td style='color:var(--pos);font-weight:700'>+40.9%</td><td>12,000</td></tr><tr><td class='nm'>HIR ML</td><td>41.7%</td><td>2.65</td><td style='color:var(--pos);font-weight:700'>+10.6%</td><td>12,000</td></tr><tr><td class='nm'>HIR +1.5</td><td>62.8%</td><td>1.71</td><td style='color:var(--accent);font-weight:700'>+7.4%</td><td>12,000</td></tr><tr><td class='nm'>SEI -1.5</td><td>37.2%</td><td>2.15</td><td style='color:var(--neg);font-weight:700'>-20.0%</td><td>0</td></tr><tr><td class='nm'>SEI ML</td><td>47.3%</td><td>1.50</td><td style='color:var(--neg);font-weight:700'>-29.0%</td><td>0</td></tr><tr><td class='nm'>Under 5.0</td><td>13.5%</td><td>2.00</td><td style='color:var(--neg);font-weight:700'>-73.1%</td><td>0</td></tr></tbody></table></div><div class='pane' id='g2-mdl'><div class='subhead'>HIR 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.2957</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.2957</td></tr><tr><th>vs 선발 득점</th><td>3.62</td></tr><tr><th>vs 불펜 득점</th><td>3.65</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>3.70</b></td></tr><tr><th>μ (F5)</th><td>2.05</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--neg)'>0.962</b> <span class='dim'>(raw 0.954)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.00 / w=0.40</td></tr></table><div class='subhead'>SEI 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3077</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3077</td></tr><tr><th>vs 선발 득점</th><td>4.06</td></tr><tr><th>vs 불펜 득점</th><td>4.05</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.07</b></td></tr><tr><th>μ (F5)</th><td>2.26</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--neg)'>0.964</b> <span class='dim'>(raw 0.956)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.05 / w=0.40</td></tr></table><div class='subhead'>데이터 출처</div><div class='src-row'><span class='src-chip'>home_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>away_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>home_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>away_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>weather <span class='b b-ok'>돔</span></span> <span class='src-chip'>odds <span class='b b-ok'>실시간</span></span></div><div class='note warn'>누락/대체: 홈 선발 · 원정 선발</div></div>
-  </div>
-</div>
-<div class='gcard q-fallback'>
-  <button class='ghead' data-game='3'>
-    <div class='ghead-top'>
-      <span class='matchup'>CHU <span class='at'>@</span> LOT</span>
-      <span class='gmeta'>18:00 · ZOZOマリン <span class='b b-bad'>⚠ 대체값</span></span>
-    </div>
-    <div class='ghead-mid'>
-      <span class='score'>3.92 <span class='dash'>–</span> 3.99</span>
-      <span class='fav' style='color:var(--accent)'>CHU 54.3%</span>
-      <span class='chip'>합 7.92 <span class='dim'>/ 마켓 6.5</span></span>
-    </div>
-    <div class='ghead-sp'>미정 vs 미정<span class='caret'>▾</span></div>
-  </button>
-  <div class='gbody' id='gbody-3'>
-    <div class='tabs'><button class='tab active' data-pane='g3-ov'>종합</button><button class='tab' data-pane='g3-sp'>선발</button><button class='tab' data-pane='g3-lu'>라인업</button><button class='tab' data-pane='g3-bp'>불펜</button><button class='tab' data-pane='g3-env'>환경</button><button class='tab' data-pane='g3-mkt'>마켓</button><button class='tab' data-pane='g3-mdl'>모델</button></div>
-    <div class='pane active' id='g3-ov'><div class='winbar'><div class='winbar-row'><span class='winbar-lab'>CHU 43.9%</span><span class='winbar-lab r'>45.7% LOT</span></div><div class='winbar-track'><div class='winbar-away' style='width:49.0%'></div><div class='winbar-home' style='width:51.0%'></div></div></div><div class='note'>무승부(연장 제한) 확률 10.4%</div><table class='kv '><tr><th>F5 예상 (5이닝)</th><td>CHU 2.24 – 2.20 LOT <span class='dim'>(합 4.44)</span></td></tr><tr><th>F5 홈 승률</th><td><b style='color:var(--neg)'>40.6%</b></td></tr><tr><th>F5 오버 확률</th><td>O3.5 54.6% · O4.5 41.9% · O5.0 30.8%</td></tr></table><div class='chart-box'><div class='chart-title'>🎯 토탈: 모델 vs 마켓 <span class='tg-delta pos'>모델−마켓 +1.42</span></div><div class='tg-track'><div class='tg-mark model' style='left:39.2%' title='모델 7.92'></div><div class='tg-mark market' style='left:25.0%' title='마켓 6.5'></div></div><div class='tg-labels'><span>● 모델 7.92</span><span class='mkt'>● 마켓 6.5</span></div></div><div class='chart-box'><div class='chart-title'>📊 시뮬레이션 최빈 스코어</div><div class='dist-row'><span class='dist-score'>CHU 2–2 LOT</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.3%</span></div><div class='dist-row'><span class='dist-score'>CHU 2–3 LOT</span><div class='dist-track'><div class='dist-fill' style='width:95%'></div></div><span class='dist-p'>2.2%</span></div><div class='dist-row'><span class='dist-score'>CHU 1–2 LOT</span><div class='dist-track'><div class='dist-fill' style='width:95%'></div></div><span class='dist-p'>2.2%</span></div><div class='dist-row'><span class='dist-score'>CHU 2–1 LOT</span><div class='dist-track'><div class='dist-fill' style='width:91%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>CHU 1–3 LOT</span><div class='dist-track'><div class='dist-fill' style='width:88%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>CHU 3–2 LOT</span><div class='dist-track'><div class='dist-fill' style='width:87%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>CHU 3–1 LOT</span><div class='dist-track'><div class='dist-fill' style='width:85%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>CHU 3–3 LOT</span><div class='dist-track'><div class='dist-fill' style='width:82%'></div></div><span class='dist-p'>1.9%</span></div></div><table class='kv grid2'><tr><th>LOT −1.5</th><td>35.9%</td></tr><tr><th>LOT +1.5</th><td>65.6%</td></tr><tr><th>CHU −1.5</th><td>34.4%</td></tr><tr><th>CHU +1.5</th><td>64.1%</td></tr></table><div class='chart-box'><div class='chart-title'>⚙️ LOT 득점 팩터</div><div class='wf-row'><span class='wf-lab'>구장</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:37.9%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.950</span></div><div class='wf-row'><span class='wf-lab'>홈 이점</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:9.1%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.012</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.934</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:15.8%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.021</span></div></div><div class='chart-box'><div class='chart-title'>⚙️ CHU 득점 팩터</div><div class='wf-row'><span class='wf-lab'>구장</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:14.8%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.950</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.831</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:16.7%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.944</span></div></div></div><div class='pane' id='g3-sp'><div class='duo'><div class='duo-col'><div class='duo-head away'>CHU 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div><div class='duo-col'><div class='duo-head home'>LOT 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div></div></div><div class='pane' id='g3-lu'><div class='subhead'>CHU 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.309</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>0.990</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>細川 成也 <span class='dim'>R</span></td><td>253</td><td>0.318</td><td>0.339</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>村松 開人 <span class='dim'>L</span></td><td>238</td><td>0.325</td><td>0.351</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>田中 幹也 <span class='dim'>R</span></td><td>178</td><td>0.283</td><td>0.276</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>ボスラー <span class='dim'>L</span></td><td>162</td><td>0.284</td><td>0.308</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>石伊 雄太 <span class='dim'>R</span></td><td>155</td><td>0.314</td><td>0.302</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>福永 裕基 <span class='dim'>R</span></td><td>154</td><td>0.298</td><td>0.307</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>鵜飼 航丞 <span class='dim'>R</span></td><td>109</td><td>0.327</td><td>0.319</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>板山 祐太郎 <span class='dim'>L</span></td><td>103</td><td>0.332</td><td>0.350</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>石川 昂弥 <span class='dim'>R</span></td><td>83</td><td>0.319</td><td>0.308</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table><div class='subhead'>LOT 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.307</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.019</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>西川 史礁 <span class='dim'>R</span></td><td>261</td><td>0.331</td><td>0.335</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>寺地 隆成 <span class='dim'>L</span></td><td>209</td><td>0.260</td><td>0.285</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>小川 龍成 <span class='dim'>L</span></td><td>206</td><td>0.301</td><td>0.317</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>友杉 篤輝 <span class='dim'>R</span></td><td>188</td><td>0.300</td><td>0.290</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>佐藤 都志也 <span class='dim'>L</span></td><td>172</td><td>0.329</td><td>0.365</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>ソト <span class='dim'>R</span></td><td>166</td><td>0.307</td><td>0.303</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>藤原 恭大 <span class='dim'>L</span></td><td>153</td><td>0.328</td><td>0.365</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>ポランコ <span class='dim'>L</span></td><td>129</td><td>0.303</td><td>0.324</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>髙部 瑛斗 <span class='dim'>L</span></td><td>126</td><td>0.277</td><td>0.301</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table></div><div class='pane' id='g3-bp'><div class='subhead'>CHU 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.88</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.88</b></td></tr><tr><th>가용 인원</th><td>8명</td></tr></table><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>吉田 聖弥</td><td>13.7</td><td style='color:var(--pos)'>1.50</td><td style='color:var(--pos)'>1.50</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>藤嶋 健人</td><td>22.3</td><td style='color:var(--pos)'>2.01</td><td style='color:var(--pos)'>2.01</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>松山 晋也</td><td>13.3</td><td style='color:var(--pos)'>2.45</td><td style='color:var(--pos)'>2.45</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>草加 勝</td><td>3.0</td><td style='color:var(--text)'>3.48</td><td style='color:var(--text)'>3.48</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>伊藤 茉央</td><td>7.0</td><td style='color:var(--text)'>3.72</td><td style='color:var(--text)'>3.72</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>齋藤 綱記</td><td>19.0</td><td style='color:var(--text)'>3.77</td><td style='color:var(--text)'>3.77</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>橋本 侑樹</td><td>8.0</td><td style='color:var(--text)'>3.78</td><td style='color:var(--text)'>3.78</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>勝野 昌慶</td><td>5.7</td><td style='color:var(--amber)'>5.07</td><td style='color:var(--amber)'>5.07</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table><div class='subhead'>LOT 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.25</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.28</b></td></tr><tr><th>가용 인원</th><td>9명</td></tr></table><div class='avail fat'><div class='avail-t'>⚠️ 피로 누적</div><ul><li><b>八木 彬</b> — 어제 31구(추정) <span class='dim'>유효 ERA 1.83</span></li><li><b>坂本 光士郎</b> — 어제 29구(추정) <span class='dim'>유효 ERA 2.58</span></li></ul></div><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>中森 俊介</td><td>13.0</td><td style='color:var(--pos)'>1.60</td><td style='color:var(--pos)'>1.60</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>横山 陸人</td><td>28.0</td><td style='color:var(--pos)'>1.61</td><td style='color:var(--pos)'>1.61</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>小野 郁</td><td>15.7</td><td style='color:var(--pos)'>1.62</td><td style='color:var(--pos)'>1.62</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>鈴木 昭汰</td><td>22.0</td><td style='color:var(--pos)'>1.64</td><td style='color:var(--pos)'>1.64</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>八木 彬</td><td>26.7</td><td style='color:var(--pos)'>1.69</td><td style='color:var(--pos)'>1.83</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 31구(추정)</span></td></tr><tr><td class='nm'>澤田 圭佑</td><td>22.7</td><td style='color:var(--pos)'>1.99</td><td style='color:var(--pos)'>1.99</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>坂本 光士郎</td><td>11.0</td><td style='color:var(--pos)'>2.39</td><td style='color:var(--pos)'>2.58</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 29구(추정)</span></td></tr><tr><td class='nm'>高野 脩汰</td><td>20.0</td><td style='color:var(--text)'>4.05</td><td style='color:var(--text)'>4.05</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>益田 直也</td><td>16.0</td><td style='color:var(--text)'>4.26</td><td style='color:var(--text)'>4.26</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table></div><div class='pane' id='g3-env'><table class='kv '><tr><th>구장</th><td>ZOZOマリン <span class='dim'>(파크팩터 0.95)</span></td></tr><tr><th>기온</th><td>22.0℃</td></tr><tr><th>바람</th><td>5.0mph —</td></tr><tr><th>습도</th><td>60%</td></tr><tr><th>공기밀도</th><td>1.1886 <span class='dim'>(-0.02%)</span></td></tr><tr><th>비거리 변화</th><td>0.01%</td></tr><tr><th>득점 팩터</th><td><b style='color:var(--text)'>1.0003</b></td></tr><tr><th>환경 종합</th><td><b style='color:var(--neg)'>0.9502</b></td></tr></table></div><div class='pane' id='g3-mkt'><table class='kv '><tr><th>북메이커</th><td>DraftKings</td></tr><tr><th>머니라인</th><td>CHU 1.91 / LOT 1.91</td></tr><tr><th>토탈</th><td>6.5 (O 1.95 / U 1.83)</td></tr><tr><th>핸디캡</th><td>LOT +1.5 @ 1.51 · CHU -1.5 @ 2.60</td></tr></table><div class='subhead'>이 경기 픽</div><table class='lineup'><thead><tr><th>픽</th><th>확률</th><th>배당</th><th>EV</th><th>스테이크</th></tr></thead><tbody><tr><td class='nm'>Over 6.5</td><td>68.1%</td><td>1.95</td><td style='color:var(--pos);font-weight:700'>+32.8%</td><td>12,000</td></tr><tr><td class='nm'>LOT +1.5</td><td>65.6%</td><td>1.51</td><td style='color:var(--neg);font-weight:700'>-0.9%</td><td>0</td></tr><tr><td class='nm'>CHU -1.5</td><td>34.4%</td><td>2.60</td><td style='color:var(--neg);font-weight:700'>-10.6%</td><td>0</td></tr><tr><td class='nm'>LOT ML</td><td>45.7%</td><td>1.91</td><td style='color:var(--neg);font-weight:700'>-12.8%</td><td>0</td></tr><tr><td class='nm'>CHU ML</td><td>43.9%</td><td>1.91</td><td style='color:var(--neg);font-weight:700'>-16.1%</td><td>0</td></tr><tr><td class='nm'>Under 6.5</td><td>31.9%</td><td>1.83</td><td style='color:var(--neg);font-weight:700'>-41.6%</td><td>0</td></tr></tbody></table></div><div class='pane' id='g3-mdl'><div class='subhead'>CHU 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3066</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3066</td></tr><tr><th>vs 선발 득점</th><td>4.03</td></tr><tr><th>vs 불펜 득점</th><td>4.03</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.04</b></td></tr><tr><th>μ (F5)</th><td>2.24</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--neg)'>0.944</b> <span class='dim'>(raw 0.931)</span></td></tr><tr><th>Markov μ / 가중</th><td>3.74 / w=0.40</td></tr></table><div class='subhead'>LOT 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3042</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3042</td></tr><tr><th>vs 선발 득점</th><td>3.94</td></tr><tr><th>vs 불펜 득점</th><td>3.94</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>3.96</b></td></tr><tr><th>μ (F5)</th><td>2.20</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--pos)'>1.021</b> <span class='dim'>(raw 1.026)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.04 / w=0.40</td></tr></table><div class='subhead'>데이터 출처</div><div class='src-row'><span class='src-chip'>home_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>away_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>home_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>away_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>weather <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>odds <span class='b b-ok'>실시간</span></span></div><div class='note warn'>누락/대체: 홈 선발 · 원정 선발</div></div>
-  </div>
-</div>
-<div class='gcard q-fallback'>
-  <button class='ghead' data-game='4'>
-    <div class='ghead-top'>
-      <span class='matchup'>YAK <span class='at'>@</span> ORX</span>
-      <span class='gmeta'>18:00 · 京セラD大阪 <span class='b b-bad'>⚠ 대체값</span></span>
-    </div>
-    <div class='ghead-mid'>
-      <span class='score'>3.84 <span class='dash'>–</span> 4.13</span>
-      <span class='fav' style='color:var(--accent)'>YAK 53.1%</span>
-      <span class='chip'>합 7.97 <span class='dim'>/ 마켓 5.5</span></span>
-    </div>
-    <div class='ghead-sp'>미정 vs 미정<span class='caret'>▾</span></div>
-  </button>
-  <div class='gbody' id='gbody-4'>
-    <div class='tabs'><button class='tab active' data-pane='g4-ov'>종합</button><button class='tab' data-pane='g4-sp'>선발</button><button class='tab' data-pane='g4-lu'>라인업</button><button class='tab' data-pane='g4-bp'>불펜</button><button class='tab' data-pane='g4-env'>환경</button><button class='tab' data-pane='g4-mkt'>마켓</button><button class='tab' data-pane='g4-mdl'>모델</button></div>
-    <div class='pane active' id='g4-ov'><div class='winbar'><div class='winbar-row'><span class='winbar-lab'>YAK 42.0%</span><span class='winbar-lab r'>46.9% ORX</span></div><div class='winbar-track'><div class='winbar-away' style='width:47.2%'></div><div class='winbar-home' style='width:52.8%'></div></div></div><div class='note'>무승부(연장 제한) 확률 11.1%</div><table class='kv '><tr><th>F5 예상 (5이닝)</th><td>YAK 2.14 – 2.26 ORX <span class='dim'>(합 4.39)</span></td></tr><tr><th>F5 홈 승률</th><td><b style='color:var(--neg)'>43.3%</b></td></tr><tr><th>F5 오버 확률</th><td>O3.5 53.7% · O4.5 41.2% · O5.0 30.5%</td></tr></table><div class='chart-box'><div class='chart-title'>🎯 토탈: 모델 vs 마켓 <span class='tg-delta pos'>모델−마켓 +2.47</span></div><div class='tg-track'><div class='tg-mark model' style='left:39.7%' title='모델 7.97'></div><div class='tg-mark market' style='left:15.0%' title='마켓 5.5'></div></div><div class='tg-labels'><span>● 모델 7.97</span><span class='mkt'>● 마켓 5.5</span></div></div><div class='chart-box'><div class='chart-title'>📊 시뮬레이션 최빈 스코어</div><div class='dist-row'><span class='dist-score'>YAK 2–2 ORX</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.3%</span></div><div class='dist-row'><span class='dist-score'>YAK 1–2 ORX</span><div class='dist-track'><div class='dist-fill' style='width:94%'></div></div><span class='dist-p'>2.2%</span></div><div class='dist-row'><span class='dist-score'>YAK 2–3 ORX</span><div class='dist-track'><div class='dist-fill' style='width:90%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YAK 1–1 ORX</span><div class='dist-track'><div class='dist-fill' style='width:90%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YAK 3–2 ORX</span><div class='dist-track'><div class='dist-fill' style='width:89%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YAK 2–1 ORX</span><div class='dist-track'><div class='dist-fill' style='width:89%'></div></div><span class='dist-p'>2.1%</span></div><div class='dist-row'><span class='dist-score'>YAK 1–3 ORX</span><div class='dist-track'><div class='dist-fill' style='width:87%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>YAK 3–3 ORX</span><div class='dist-track'><div class='dist-fill' style='width:84%'></div></div><span class='dist-p'>2.0%</span></div></div><table class='kv grid2'><tr><th>ORX −1.5</th><td>36.8%</td></tr><tr><th>ORX +1.5</th><td>67.9%</td></tr><tr><th>YAK −1.5</th><td>32.1%</td></tr><tr><th>YAK +1.5</th><td>63.2%</td></tr></table><div class='chart-box'><div class='chart-title'>⚙️ ORX 득점 팩터</div><div class='wf-row'><span class='wf-lab'>홈 이점</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:11.8%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.012</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.949</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:8.8%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.009</span></div></div><div class='chart-box'><div class='chart-title'>⚙️ YAK 득점 팩터</div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:30.1%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.954</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.924</span></div></div></div><div class='pane' id='g4-sp'><div class='duo'><div class='duo-col'><div class='duo-head away'>YAK 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div><div class='duo-col'><div class='duo-head home'>ORX 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div></div></div><div class='pane' id='g4-lu'><div class='subhead'>YAK 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.302</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>0.992</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>サンタナ <span class='dim'>R</span></td><td>224</td><td>0.346</td><td>0.354</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>長岡 秀樹 <span class='dim'>L</span></td><td>193</td><td>0.291</td><td>0.311</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>岩田 幸宏 <span class='dim'>L</span></td><td>192</td><td>0.286</td><td>0.305</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>オスナ <span class='dim'>R</span></td><td>183</td><td>0.292</td><td>0.293</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>武岡 龍世 <span class='dim'>L</span></td><td>179</td><td>0.307</td><td>0.329</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>増田 珠 <span class='dim'>R</span></td><td>152</td><td>0.328</td><td>0.334</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>古賀 優大 <span class='dim'>R</span></td><td>143</td><td>0.290</td><td>0.283</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>内山 壮真 <span class='dim'>R</span></td><td>131</td><td>0.313</td><td>0.322</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>伊藤 琉偉 <span class='dim'>R</span></td><td>101</td><td>0.277</td><td>0.278</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table><div class='subhead'>ORX 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.311</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.010</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>西川 龍馬 <span class='dim'>L</span></td><td>254</td><td>0.300</td><td>0.319</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>宗 佑磨 <span class='dim'>L</span></td><td>228</td><td>0.313</td><td>0.346</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>紅林 弘太郎 <span class='dim'>R</span></td><td>211</td><td>0.312</td><td>0.317</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>中川 圭太 <span class='dim'>R</span></td><td>210</td><td>0.318</td><td>0.316</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>太田 椋 <span class='dim'>R</span></td><td>184</td><td>0.339</td><td>0.340</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>森 友哉 <span class='dim'>L</span></td><td>164</td><td>0.323</td><td>0.349</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>渡部 遼人 <span class='dim'>L</span></td><td>156</td><td>0.314</td><td>0.342</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>若月 健矢 <span class='dim'>R</span></td><td>142</td><td>0.289</td><td>0.277</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>シーモア <span class='dim'>L</span></td><td>135</td><td>0.268</td><td>0.283</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table></div><div class='pane' id='g4-bp'><div class='subhead'>YAK 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.94</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.97</b></td></tr><tr><th>가용 인원</th><td>9명</td></tr></table><div class='avail fat'><div class='avail-t'>⚠️ 피로 누적</div><ul><li><b>小澤 怜史</b> — 어제 29구(추정) <span class='dim'>유효 ERA 4.36</span></li></ul></div><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>清水 昇</td><td>17.7</td><td style='color:var(--pos)'>1.29</td><td style='color:var(--pos)'>1.29</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>星 知弥</td><td>22.3</td><td style='color:var(--pos)'>1.61</td><td style='color:var(--pos)'>1.61</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>廣澤 優</td><td>19.7</td><td style='color:var(--pos)'>2.31</td><td style='color:var(--pos)'>2.31</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>丸山 翔大</td><td>15.0</td><td style='color:var(--pos)'>2.62</td><td style='color:var(--pos)'>2.62</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>キハダ</td><td>21.7</td><td style='color:var(--pos)'>2.91</td><td style='color:var(--pos)'>2.91</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>阪口 皓亮</td><td>6.3</td><td style='color:var(--text)'>3.68</td><td style='color:var(--text)'>3.68</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>リランソ</td><td>9.3</td><td style='color:var(--text)'>3.86</td><td style='color:var(--text)'>3.86</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>小澤 怜史</td><td>12.3</td><td style='color:var(--text)'>4.04</td><td style='color:var(--amber)'>4.36</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 29구(추정)</span></td></tr><tr><td class='nm'>荘司 宏太</td><td>18.7</td><td style='color:var(--neg)'>5.62</td><td style='color:var(--neg)'>5.62</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table><div class='subhead'>ORX 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>3.00</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>3.00</b></td></tr><tr><th>가용 인원</th><td>10명</td></tr></table><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>マチャド</td><td>21.0</td><td style='color:var(--pos)'>1.29</td><td style='color:var(--pos)'>1.29</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>片山 楽生</td><td>12.3</td><td style='color:var(--pos)'>2.17</td><td style='color:var(--pos)'>2.17</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>博志</td><td>12.3</td><td style='color:var(--pos)'>2.17</td><td style='color:var(--pos)'>2.17</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>山﨑 颯一郎</td><td>24.7</td><td style='color:var(--pos)'>2.92</td><td style='color:var(--pos)'>2.92</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>椋木 蓮</td><td>21.0</td><td style='color:var(--pos)'>3.00</td><td style='color:var(--pos)'>3.00</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>入山 海斗</td><td>17.0</td><td style='color:var(--pos)'>3.20</td><td style='color:var(--pos)'>3.20</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>権田 琉成</td><td>7.7</td><td style='color:var(--text)'>3.38</td><td style='color:var(--text)'>3.38</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>岩嵜 翔</td><td>3.0</td><td style='color:var(--text)'>3.48</td><td style='color:var(--text)'>3.48</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>吉田 輝星</td><td>11.7</td><td style='color:var(--text)'>3.63</td><td style='color:var(--text)'>3.63</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>寺西 成騎</td><td>30.3</td><td style='color:var(--amber)'>4.45</td><td style='color:var(--amber)'>4.45</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table></div><div class='pane' id='g4-env'><table class='kv '><tr><th>구장</th><td>京セラD大阪 <span class='dim'>(파크팩터 1.00)</span></td></tr><tr><th>기온</th><td>22.0℃</td></tr><tr><th>바람</th><td>5.0mph —</td></tr><tr><th>습도</th><td>60%</td></tr><tr><th>공기밀도</th><td>1.1886 <span class='dim'>(-0.02%)</span></td></tr><tr><th>비거리 변화</th><td>0.01%</td></tr><tr><th>득점 팩터</th><td><b style='color:var(--text)'>1.0003</b></td></tr><tr><th>환경 종합</th><td><b style='color:var(--text)'>1.0003</b></td></tr></table></div><div class='pane' id='g4-mkt'><table class='kv '><tr><th>북메이커</th><td>DraftKings</td></tr><tr><th>머니라인</th><td>YAK 2.35 / ORX 1.59</td></tr><tr><th>토탈</th><td>5.5 (O 1.83 / U 2.00)</td></tr><tr><th>핸디캡</th><td>ORX -1.5 @ 2.35 · YAK +1.5 @ 1.61</td></tr></table><div class='subhead'>이 경기 픽</div><table class='lineup'><thead><tr><th>픽</th><th>확률</th><th>배당</th><th>EV</th><th>스테이크</th></tr></thead><tbody><tr><td class='nm'>Over 5.5</td><td>79.0%</td><td>1.83</td><td style='color:var(--pos);font-weight:700'>+44.6%</td><td>12,000</td></tr><tr><td class='nm'>YAK +1.5</td><td>63.2%</td><td>1.61</td><td style='color:var(--accent);font-weight:700'>+1.7%</td><td>5,718</td></tr><tr><td class='nm'>YAK ML</td><td>42.0%</td><td>2.35</td><td style='color:var(--neg);font-weight:700'>-1.3%</td><td>0</td></tr><tr><td class='nm'>ORX -1.5</td><td>36.8%</td><td>2.35</td><td style='color:var(--neg);font-weight:700'>-13.5%</td><td>0</td></tr><tr><td class='nm'>ORX ML</td><td>46.9%</td><td>1.59</td><td style='color:var(--neg);font-weight:700'>-25.4%</td><td>0</td></tr><tr><td class='nm'>Under 5.5</td><td>21.0%</td><td>2.00</td><td style='color:var(--neg);font-weight:700'>-58.0%</td><td>0</td></tr></tbody></table></div><div class='pane' id='g4-mdl'><div class='subhead'>YAK 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3006</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3006</td></tr><tr><th>vs 선발 득점</th><td>3.81</td></tr><tr><th>vs 불펜 득점</th><td>3.81</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>3.85</b></td></tr><tr><th>μ (F5)</th><td>2.14</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--neg)'>0.924</b> <span class='dim'>(raw 0.907)</span></td></tr><tr><th>Markov μ / 가중</th><td>3.84 / w=0.40</td></tr></table><div class='subhead'>ORX 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3087</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3087</td></tr><tr><th>vs 선발 득점</th><td>4.10</td></tr><tr><th>vs 불펜 득점</th><td>4.09</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.10</b></td></tr><tr><th>μ (F5)</th><td>2.28</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--text)'>1.009</b> <span class='dim'>(raw 1.011)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.18 / w=0.40</td></tr></table><div class='subhead'>데이터 출처</div><div class='src-row'><span class='src-chip'>home_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>away_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>home_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>away_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>weather <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>odds <span class='b b-ok'>실시간</span></span></div><div class='note warn'>누락/대체: 홈 선발 · 원정 선발</div></div>
-  </div>
-</div>
-<div class='gcard q-fallback'>
-  <button class='ghead' data-game='5'>
-    <div class='ghead-top'>
-      <span class='matchup'>HAN <span class='at'>@</span> SOF</span>
-      <span class='gmeta'>18:00 · みずほPayPay <span class='b b-bad'>⚠ 대체값</span></span>
-    </div>
-    <div class='ghead-mid'>
-      <span class='score'>4.38 <span class='dash'>–</span> 4.59</span>
-      <span class='fav' style='color:var(--accent)'>HAN 53.1%</span>
-      <span class='chip'>합 8.96 <span class='dim'>/ 마켓 8.0</span></span>
-    </div>
-    <div class='ghead-sp'>미정 vs 미정<span class='caret'>▾</span></div>
-  </button>
-  <div class='gbody' id='gbody-5'>
-    <div class='tabs'><button class='tab active' data-pane='g5-ov'>종합</button><button class='tab' data-pane='g5-sp'>선발</button><button class='tab' data-pane='g5-lu'>라인업</button><button class='tab' data-pane='g5-bp'>불펜</button><button class='tab' data-pane='g5-env'>환경</button><button class='tab' data-pane='g5-mkt'>마켓</button><button class='tab' data-pane='g5-mdl'>모델</button></div>
-    <div class='pane active' id='g5-ov'><div class='winbar'><div class='winbar-row'><span class='winbar-lab'>HAN 43.2%</span><span class='winbar-lab r'>46.9% SOF</span></div><div class='winbar-track'><div class='winbar-away' style='width:48.0%'></div><div class='winbar-home' style='width:52.0%'></div></div></div><div class='note'>무승부(연장 제한) 확률 9.9%</div><table class='kv '><tr><th>F5 예상 (5이닝)</th><td>HAN 2.44 – 2.52 SOF <span class='dim'>(합 4.95)</span></td></tr><tr><th>F5 홈 승률</th><td><b style='color:var(--neg)'>42.8%</b></td></tr><tr><th>F5 오버 확률</th><td>O3.5 61.1% · O4.5 48.2% · O5.0 37.0%</td></tr></table><div class='chart-box'><div class='chart-title'>🎯 토탈: 모델 vs 마켓 <span class='tg-delta pos'>모델−마켓 +0.96</span></div><div class='tg-track'><div class='tg-mark model' style='left:49.6%' title='모델 8.96'></div><div class='tg-mark market' style='left:40.0%' title='마켓 8.0'></div></div><div class='tg-labels'><span>● 모델 8.96</span><span class='mkt'>● 마켓 8.0</span></div></div><div class='chart-box'><div class='chart-title'>📊 시뮬레이션 최빈 스코어</div><div class='dist-row'><span class='dist-score'>HAN 3–3 SOF</span><div class='dist-track'><div class='dist-fill' style='width:100%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>HAN 2–3 SOF</span><div class='dist-track'><div class='dist-fill' style='width:99%'></div></div><span class='dist-p'>2.0%</span></div><div class='dist-row'><span class='dist-score'>HAN 3–2 SOF</span><div class='dist-track'><div class='dist-fill' style='width:95%'></div></div><span class='dist-p'>1.9%</span></div><div class='dist-row'><span class='dist-score'>HAN 1–3 SOF</span><div class='dist-track'><div class='dist-fill' style='width:92%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>HAN 2–4 SOF</span><div class='dist-track'><div class='dist-fill' style='width:90%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>HAN 2–2 SOF</span><div class='dist-track'><div class='dist-fill' style='width:89%'></div></div><span class='dist-p'>1.8%</span></div><div class='dist-row'><span class='dist-score'>HAN 4–2 SOF</span><div class='dist-track'><div class='dist-fill' style='width:86%'></div></div><span class='dist-p'>1.7%</span></div><div class='dist-row'><span class='dist-score'>HAN 3–4 SOF</span><div class='dist-track'><div class='dist-fill' style='width:84%'></div></div><span class='dist-p'>1.7%</span></div></div><table class='kv grid2'><tr><th>SOF −1.5</th><td>37.5%</td></tr><tr><th>SOF +1.5</th><td>65.9%</td></tr><tr><th>HAN −1.5</th><td>34.1%</td></tr><tr><th>HAN +1.5</th><td>62.5%</td></tr></table><div class='chart-box'><div class='chart-title'>⚙️ SOF 득점 팩터</div><div class='wf-row'><span class='wf-lab'>홈 이점</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:4.1%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.012</span></div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:28.3%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.917</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:50.0%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.147</span></div></div><div class='chart-box'><div class='chart-title'>⚙️ HAN 득점 팩터</div><div class='wf-row'><span class='wf-lab'>불펜 (상대)</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:50.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>0.820</span></div><div class='wf-row'><span class='wf-lab'>Markov</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill right' style='width:19.4%;background:var(--pos)'></div></div><span class='wf-val' style='color:var(--pos)'>1.070</span></div></div></div><div class='pane' id='g5-sp'><div class='duo'><div class='duo-col'><div class='duo-head away'>HAN 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div><div class='duo-col'><div class='duo-head home'>SOF 선발</div><div class='sp-name'>미정 <span class='dim'>(R)</span> <span class='b b-bad'>⚠ 대체값</span></div><table class='kv grid2'><tr><th>ERA</th><td><b style='color:var(--text)'>3.30</b></td></tr><tr><th>WHIP</th><td>1.20</td></tr><tr><th>K/9</th><td>7.5</td></tr><tr><th>BB/9</th><td>2.8</td></tr><tr><th>HR/9</th><td>0.7</td></tr><tr><th>FIP</th><td>3.30</td></tr><tr><th>피xwOBA</th><td>0.310</td></tr></table></div></div></div><div class='pane' id='g5-lu'><div class='subhead'>HAN 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.321</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.019</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>森下 翔太 <span class='dim'>R</span></td><td>249</td><td>0.357</td><td>0.360</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>佐藤 輝明 <span class='dim'>L</span></td><td>245</td><td>0.400</td><td>0.430</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>中野 拓夢 <span class='dim'>L</span></td><td>236</td><td>0.294</td><td>0.312</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>大山 悠輔 <span class='dim'>R</span></td><td>231</td><td>0.320</td><td>0.329</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>髙寺 望夢 <span class='dim'>L</span></td><td>149</td><td>0.301</td><td>0.337</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>木浪 聖也 <span class='dim'>L</span></td><td>112</td><td>0.297</td><td>0.323</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>近本 光司 <span class='dim'>L</span></td><td>110</td><td>0.299</td><td>0.327</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>坂本 誠志郎 <span class='dim'>R</span></td><td>104</td><td>0.286</td><td>0.280</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>小幡 竜平 <span class='dim'>L</span></td><td>96</td><td>0.289</td><td>0.308</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table><div class='subhead'>SOF 라인업 <span class='dim'>vs —</span> <span class='b b-warn'>예상</span></div><table class='kv grid2'><tr><th>라인업 wOBA</th><td><b>0.323</b></td></tr><tr><th>매치업 스코어</th><td><b style='color:var(--text)'>1.000</b></td></tr><tr><th>커버리지</th><td>100%</td></tr><tr><th>바텀업 가중</th><td>85%</td></tr><tr><th>플래툰</th><td>1.031</td></tr><tr><th>구종 억제</th><td>—</td></tr></table><table class='lineup'><thead><tr><th>#</th><th>타자</th><th>PA</th><th>wOBA</th><th>vs선발</th><th>엣지</th></tr></thead><tbody><tr><td class='ord'>1</td><td class='nm'>栗原 陵矢 <span class='dim'>L</span></td><td>258</td><td>0.366</td><td>0.395</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>2</td><td class='nm'>周東 佑京 <span class='dim'>L</span></td><td>249</td><td>0.310</td><td>0.332</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>3</td><td class='nm'>近藤 健介 <span class='dim'>L</span></td><td>241</td><td>0.372</td><td>0.412</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>4</td><td class='nm'>牧原 大成 <span class='dim'>L</span></td><td>212</td><td>0.307</td><td>0.325</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>5</td><td class='nm'>柳田 悠岐 <span class='dim'>L</span></td><td>197</td><td>0.318</td><td>0.349</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>6</td><td class='nm'>山川 穂高 <span class='dim'>R</span></td><td>168</td><td>0.304</td><td>0.317</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>7</td><td class='nm'>海野 隆司 <span class='dim'>R</span></td><td>127</td><td>0.277</td><td>0.262</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>8</td><td class='nm'>柳町 達 <span class='dim'>L</span></td><td>118</td><td>0.290</td><td>0.312</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr><tr><td class='ord'>9</td><td class='nm'>庄子 雄大 <span class='dim'>L</span></td><td>110</td><td>0.303</td><td>0.329</td><td class='edge'><div class='edge-track'><div class='edge-mid'></div><div class='edge-fill left' style='width:0%;background:var(--mute)'></div></div></td></tr></tbody></table></div><div class='pane' id='g5-bp'><div class='subhead'>HAN 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.77</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.77</b></td></tr><tr><th>가용 인원</th><td>10명</td></tr></table><div class='avail fat'><div class='avail-t'>⚠️ 피로 누적</div><ul><li><b>津田 淳哉</b> — 어제 29구(추정) <span class='dim'>유효 ERA 3.72</span></li></ul></div><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>ドリス</td><td>21.3</td><td style='color:var(--pos)'>0.84</td><td style='color:var(--pos)'>0.84</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>岩崎 優</td><td>15.7</td><td style='color:var(--pos)'>1.62</td><td style='color:var(--pos)'>1.62</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>工藤 泰成</td><td>15.3</td><td style='color:var(--pos)'>2.12</td><td style='color:var(--pos)'>2.12</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>畠 世周</td><td>9.0</td><td style='color:var(--pos)'>2.71</td><td style='color:var(--pos)'>2.71</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>湯浅 京己</td><td>18.3</td><td style='color:var(--pos)'>2.98</td><td style='color:var(--pos)'>2.98</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>津田 淳哉</td><td>2.3</td><td style='color:var(--text)'>3.44</td><td style='color:var(--text)'>3.72</td><td><span class='st st-amber'>피로</span> <span class='dim'>어제 29구(추정)</span></td></tr><tr><td class='nm'>門別 啓人</td><td>12.0</td><td style='color:var(--text)'>4.02</td><td style='color:var(--text)'>4.02</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>木下 里都</td><td>8.3</td><td style='color:var(--text)'>4.17</td><td style='color:var(--text)'>4.17</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>椎葉 剛</td><td>7.0</td><td style='color:var(--amber)'>4.40</td><td style='color:var(--amber)'>4.40</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>及川 雅貴</td><td>12.3</td><td style='color:var(--amber)'>4.87</td><td style='color:var(--amber)'>4.87</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table><div class='subhead'>SOF 불펜</div><table class='kv '><tr><th>명단 ERA</th><td><b style='color:var(--pos)'>2.10</b></td></tr><tr><th>유효 ERA <span class='dim'>(가용성 반영)</span></th><td><b style='color:var(--pos)'>2.10</b></td></tr><tr><th>가용 인원</th><td>9명</td></tr></table><table class='lineup bp'><thead><tr><th>투수</th><th>IP</th><th>ERA</th><th>유효</th><th>상태 · 최근 투구</th></tr></thead><tbody><tr><td class='nm'>ヘルナンデス</td><td>22.7</td><td style='color:var(--pos)'>1.19</td><td style='color:var(--pos)'>1.19</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>オスナ</td><td>18.0</td><td style='color:var(--pos)'>1.23</td><td style='color:var(--pos)'>1.23</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>上茶谷 大河</td><td>23.0</td><td style='color:var(--pos)'>1.57</td><td style='color:var(--pos)'>1.57</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>伊藤 優輔</td><td>13.3</td><td style='color:var(--pos)'>2.00</td><td style='color:var(--pos)'>2.00</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>木村 光</td><td>22.3</td><td style='color:var(--pos)'>2.01</td><td style='color:var(--pos)'>2.01</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>津森 宥紀</td><td>16.3</td><td style='color:var(--pos)'>2.40</td><td style='color:var(--pos)'>2.40</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>松本 裕樹</td><td>20.7</td><td style='color:var(--pos)'>2.61</td><td style='color:var(--pos)'>2.61</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>杉山 一樹</td><td>17.7</td><td style='color:var(--pos)'>3.09</td><td style='color:var(--pos)'>3.09</td><td><span class='st st-pos'>가용</span> </td></tr><tr><td class='nm'>鈴木 豪太</td><td>17.0</td><td style='color:var(--pos)'>3.20</td><td style='color:var(--pos)'>3.20</td><td><span class='st st-pos'>가용</span> </td></tr></tbody></table></div><div class='pane' id='g5-env'><table class='kv '><tr><th>구장</th><td>みずほPayPay <span class='dim'>(파크팩터 1.00)</span></td></tr><tr><th>기온</th><td>22.0℃</td></tr><tr><th>바람</th><td>5.0mph —</td></tr><tr><th>습도</th><td>60%</td></tr><tr><th>공기밀도</th><td>1.1886 <span class='dim'>(-0.02%)</span></td></tr><tr><th>비거리 변화</th><td>0.01%</td></tr><tr><th>득점 팩터</th><td><b style='color:var(--text)'>1.0003</b></td></tr><tr><th>환경 종합</th><td><b style='color:var(--text)'>1.0003</b></td></tr></table></div><div class='pane' id='g5-mkt'><table class='kv '><tr><th>북메이커</th><td>DraftKings</td></tr><tr><th>머니라인</th><td>HAN 2.05 / SOF 1.77</td></tr><tr><th>토탈</th><td>8.0 (O 1.95 / U 1.83)</td></tr><tr><th>핸디캡</th><td>SOF +1.5 @ 1.50 · HAN -1.5 @ 2.65</td></tr></table><div class='subhead'>이 경기 픽</div><table class='lineup'><thead><tr><th>픽</th><th>확률</th><th>배당</th><th>EV</th><th>스테이크</th></tr></thead><tbody><tr><td class='nm'>Over 8.0</td><td>56.2%</td><td>1.95</td><td style='color:var(--pos);font-weight:700'>+9.6%</td><td>12,000</td></tr><tr><td class='nm'>SOF +1.5</td><td>65.9%</td><td>1.50</td><td style='color:var(--neg);font-weight:700'>-1.2%</td><td>0</td></tr><tr><td class='nm'>HAN -1.5</td><td>34.1%</td><td>2.65</td><td style='color:var(--neg);font-weight:700'>-9.6%</td><td>0</td></tr><tr><td class='nm'>HAN ML</td><td>43.2%</td><td>2.05</td><td style='color:var(--neg);font-weight:700'>-11.4%</td><td>0</td></tr><tr><td class='nm'>SOF ML</td><td>46.9%</td><td>1.77</td><td style='color:var(--neg);font-weight:700'>-17.0%</td><td>0</td></tr><tr><td class='nm'>Under 8.0</td><td>32.3%</td><td>1.83</td><td style='color:var(--neg);font-weight:700'>-40.9%</td><td>0</td></tr></tbody></table></div><div class='pane' id='g5-mdl'><div class='subhead'>HAN 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3186</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3186</td></tr><tr><th>vs 선발 득점</th><td>4.47</td></tr><tr><th>vs 불펜 득점</th><td>4.40</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.40</b></td></tr><tr><th>μ (F5)</th><td>2.46</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--pos)'>1.070</b> <span class='dim'>(raw 1.085)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.35 / w=0.40</td></tr></table><div class='subhead'>SOF 모델 경로</div><table class='kv grid2'><tr><th>타자 wOBA</th><td>0.3223</td></tr><tr><th>선발 피wOBA</th><td>0.3100</td></tr><tr><th>매치업 wOBA</th><td>0.3223</td></tr><tr><th>vs 선발 득점</th><td>4.62</td></tr><tr><th>vs 불펜 득점</th><td>4.56</td></tr><tr><th>선발 소화 이닝</th><td>6.0</td></tr><tr><th>μ (full)</th><td><b>4.53</b></td></tr><tr><th>μ (F5)</th><td>2.52</td></tr></table><table class='kv '><tr><th>⛓ Markov factor</th><td><b style='color:var(--pos)'>1.147</b> <span class='dim'>(raw 1.179)</span></td></tr><tr><th>Markov μ / 가중</th><td>4.67 / w=0.40</td></tr></table><div class='subhead'>데이터 출처</div><div class='src-row'><span class='src-chip'>home_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>away_hitting <span class='b b-ok'>공식</span></span> <span class='src-chip'>home_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>away_pitcher <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>weather <span class='b b-bad'>⚠ 대체값</span></span> <span class='src-chip'>odds <span class='b b-ok'>실시간</span></span></div><div class='note warn'>누락/대체: 홈 선발 · 원정 선발</div></div>
-  </div>
-</div>
-</section>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>ダルベック<span style='color:var(--mute)'>(R)</span></td><td>0.332</td><td>0.275</td><td style='color:#ef4444'>-62</td></tr><tr><td>2</td><td>キャベッジ<span style='color:var(--mute)'>(L)</span></td><td>0.321</td><td>0.278</td><td style='color:#ef4444'>-67</td></tr><tr><td>3</td><td>泉口 友汰<span style='color:var(--mute)'>(L)</span></td><td>0.289</td><td>0.274</td><td style='color:#ef4444'>-40</td></tr><tr><td>4</td><td>浦田 俊輔<span style='color:var(--mute)'>(L)</span></td><td>0.297</td><td>0.289</td><td style='color:#ef4444'>-28</td></tr><tr><td>5</td><td>佐々木 俊輔<span style='color:var(--mute)'>(L)</span></td><td>0.315</td><td>0.283</td><td style='color:#ef4444'>-49</td></tr><tr><td>6</td><td>松本 剛<span style='color:var(--mute)'>(R)</span></td><td>0.293</td><td>0.257</td><td style='color:#ef4444'>-27</td></tr><tr><td>7</td><td>大城 卓三<span style='color:var(--mute)'>(L)</span></td><td>0.355</td><td>0.317</td><td style='color:#ef4444'>-61</td></tr><tr><td>8</td><td>吉川 尚輝<span style='color:var(--mute)'>(L)</span></td><td>0.279</td><td>0.27</td><td style='color:#ef4444'>-34</td></tr><tr><td>9</td><td>岸田 行倫<span style='color:var(--mute)'>(R)</span></td><td>0.313</td><td>0.266</td><td style='color:#ef4444'>-42</td></tr>
+    
+  </table>
+</div></div>
   
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 RAK 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>4.06</b> <span style='color:#ef4444;font-size:11px'>▲0.24 vs 전원기준 3.82</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>10</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    <tr><td>⚠ 藤原 聡大</td><td style='color:#fbbf24'>어제 32구(추정) → 유효 5.93</td></tr><tr><td>⚠ 西垣 雅矢</td><td style='color:#fbbf24'>2연투 → 유효 6.05</td></tr><tr><td>⚠ 鈴木 翔天</td><td style='color:#fbbf24'>어제 38구(추정) → 유효 5.26</td></tr><tr><td>⚠ 津留﨑 大成</td><td style='color:#fbbf24'>2연투 → 유효 3.46</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 九谷 瑠 (R)</td><td>ERA 1.27 · 15.0 IP</td></tr><tr><td>✅ 宋 家豪 (R)</td><td>ERA 2.67 · 12.0 IP</td></tr><tr><td>✅ 加治屋 蓮 (R)</td><td>ERA 2.88 · 25.0 IP</td></tr><tr><td>⚠ 津留﨑 大成 (R)</td><td>ERA 3.46 · 17.67 IP</td></tr>
+  </table>
+</div><div class='split-box'><h3>🔥 YOM 불펜</h3><div style='color:var(--mute)'>데이터 없음</div></div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">HIR @ SEI</span>
+    <span class="meta">18:00 · ベルーナドーム <span class='warn'>● 일부 추정</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>HIR 예상</span><b>2.71</b></div>
+    <div class="row"><span>SEI 예상</span><b>3.811</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">6.521</b></div>
+    <div class="row"><span>시장 라인</span><b>—</b></div>
+    <div class="row"><span>HIR 승률</span><b>33.0%</b></div>
+    <div class="row"><span>SEI 승률</span><b>55.1%</b></div>
+    <div class="row"><span>Park factor</span><b>1.01</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">돔</b></div>
+    <div class="row"><span>온도</span><b>None°F</b></div>
+    <div class="row"><span>강수</span><b>None%</b></div>
+    <div class='row'><span>⛓ Markov HIR</span><b style='color:#ef4444'>0.62 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov SEI</span><b style='color:#ef4444'>0.89 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ SEI 타선 vs ターノック <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.308</b> ·
+    매치업 <b style="color:var(--text)">1.008</b> ·
+    platoon 1.008 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>渡部 聖弥<span style='color:var(--mute)'>(R)</span></td><td>0.295</td><td>0.287</td><td style='color:var(--mute)'>-7</td></tr><tr><td>2</td><td>カナリオ<span style='color:var(--mute)'>(R)</span></td><td>0.314</td><td>0.294</td><td style='color:#ef4444'>-19</td></tr><tr><td>3</td><td>滝澤 夏央<span style='color:var(--mute)'>(L)</span></td><td>0.314</td><td>0.343</td><td style='color:var(--mute)'>-2</td></tr><tr><td>4</td><td>長谷川 信哉<span style='color:var(--mute)'>(R)</span></td><td>0.336</td><td>0.297</td><td style='color:#ef4444'>-31</td></tr><tr><td>5</td><td>源田 壮亮<span style='color:var(--mute)'>(L)</span></td><td>0.278</td><td>0.296</td><td style='color:var(--mute)'>-4</td></tr><tr><td>6</td><td>西川 愛也<span style='color:var(--mute)'>(L)</span></td><td>0.275</td><td>0.277</td><td style='color:var(--mute)'>-6</td></tr><tr><td>7</td><td>桑原 将志<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.316</td><td style='color:var(--mute)'>-6</td></tr><tr><td>8</td><td>平沢 大河<span style='color:var(--mute)'>(L)</span></td><td>0.321</td><td>0.336</td><td style='color:var(--mute)'>-8</td></tr><tr><td>9</td><td>小島 大河<span style='color:var(--mute)'>(L)</span></td><td>0.302</td><td>0.31</td><td style='color:var(--mute)'>-7</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ HIR 타선 vs 平良 海馬 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.3</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.01 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>小園 海斗<span style='color:var(--mute)'>(L)</span></td><td>0.284</td><td>0.178</td><td style='color:#ef4444'>-122</td></tr><tr><td>2</td><td>坂倉 将吾<span style='color:var(--mute)'>(L)</span></td><td>0.338</td><td>0.215</td><td style='color:#ef4444'>-155</td></tr><tr><td>3</td><td>菊池 涼介<span style='color:var(--mute)'>(R)</span></td><td>0.296</td><td>0.185</td><td style='color:#ef4444'>-114</td></tr><tr><td>4</td><td>大盛 穂<span style='color:var(--mute)'>(L)</span></td><td>0.288</td><td>0.168</td><td style='color:#ef4444'>-135</td></tr><tr><td>5</td><td>モンテロ<span style='color:var(--mute)'>(R)</span></td><td>0.309</td><td>0.169</td><td style='color:#ef4444'>-137</td></tr><tr><td>6</td><td>佐々木 泰<span style='color:var(--mute)'>(R)</span></td><td>0.279</td><td>0.156</td><td style='color:#ef4444'>-118</td></tr><tr><td>7</td><td>持丸 泰輝<span style='color:var(--mute)'>(L)</span></td><td>0.311</td><td>0.199</td><td style='color:#ef4444'>-138</td></tr><tr><td>8</td><td>ファビアン<span style='color:var(--mute)'>(R)</span></td><td>0.293</td><td>0.16</td><td style='color:#ef4444'>-129</td></tr><tr><td>9</td><td>平川 蓮<span style='color:var(--mute)'>(S)</span></td><td>0.279</td><td>0.171</td><td style='color:#ef4444'>-126</td></tr>
+    
+  </table>
+</div></div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 SEI 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.83</b> <span style='color:#ef4444;font-size:11px'>▲0.09 vs 전원기준 2.74</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    <tr><td>⚠ 岩城 颯空</td><td style='color:#fbbf24'>2연투 → 유효 4.2</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 篠原 響 (R)</td><td>ERA 1.46 · 19.33 IP</td></tr><tr><td>✅ 佐藤 隼輔 (L)</td><td>ERA 2.39 · 11.0 IP</td></tr><tr><td>✅ 甲斐野 央 (R)</td><td>ERA 2.49 · 21.67 IP</td></tr><tr><td>✅ 浜屋 将太 (L)</td><td>ERA 2.52 · 15.67 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 HIR 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.66</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    <tr><td>⚠ 益田 武尚</td><td style='color:#fbbf24'>어제 28구(추정) → 유효 4.15</td></tr><tr><td>⚠ ハーン</td><td style='color:#fbbf24'>어제 29구(추정) → 유효 1.23</td></tr><tr><td>⚠ 髙 太一</td><td style='color:#fbbf24'>2연투 → 유효 1.13</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>⚠ 髙 太一 (L)</td><td>ERA 1.13 · 19.33 IP</td></tr><tr><td>⚠ ハーン (L)</td><td>ERA 1.23 · 23.67 IP</td></tr><tr><td>✅ 遠藤 淳志 (R)</td><td>ERA 2.02 · 18.67 IP</td></tr><tr><td>✅ 塹江 敦哉 (L)</td><td>ERA 2.7 · 20.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">CHU @ LOT</span>
+    <span class="meta">18:00 · ZOZOマリン <span class='warn'>● 일부 추정</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>CHU 예상</span><b>3.655</b></div>
+    <div class="row"><span>LOT 예상</span><b>3.454</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">7.109</b></div>
+    <div class="row"><span>시장 라인</span><b>—</b></div>
+    <div class="row"><span>CHU 승률</span><b>46.1%</b></div>
+    <div class="row"><span>LOT 승률</span><b>42.5%</b></div>
+    <div class="row"><span>Park factor</span><b>0.905</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>0.953</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">교차풍 · 12.3mph</b></div>
+    <div class="row"><span>온도</span><b>73.2°F</b></div>
+    <div class="row"><span>강수</span><b>27.0%</b></div>
+    <div class='row'><span>⛓ Markov CHU</span><b style='color:#ef4444'>0.785 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov LOT</span><b style='color:#ef4444'>0.87 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ LOT 타선 vs 金丸 夢斗 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.303</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 0.991 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>西川 史礁<span style='color:var(--mute)'>(R)</span></td><td>0.331</td><td>0.339</td><td style='color:#ef4444'>-24</td></tr><tr><td>2</td><td>寺地 隆成<span style='color:var(--mute)'>(L)</span></td><td>0.26</td><td>0.237</td><td style='color:#ef4444'>-27</td></tr><tr><td>3</td><td>小川 龍成<span style='color:var(--mute)'>(L)</span></td><td>0.301</td><td>0.283</td><td style='color:#ef4444'>-9</td></tr><tr><td>4</td><td>友杉 篤輝<span style='color:var(--mute)'>(R)</span></td><td>0.3</td><td>0.304</td><td style='color:#ef4444'>-11</td></tr><tr><td>5</td><td>佐藤 都志也<span style='color:var(--mute)'>(L)</span></td><td>0.329</td><td>0.293</td><td style='color:#ef4444'>-45</td></tr><tr><td>6</td><td>ソト<span style='color:var(--mute)'>(R)</span></td><td>0.307</td><td>0.299</td><td style='color:#ef4444'>-29</td></tr><tr><td>7</td><td>藤原 恭大<span style='color:var(--mute)'>(L)</span></td><td>0.328</td><td>0.302</td><td style='color:#ef4444'>-37</td></tr><tr><td>8</td><td>ポランコ<span style='color:var(--mute)'>(L)</span></td><td>0.303</td><td>0.269</td><td style='color:#ef4444'>-31</td></tr><tr><td>9</td><td>髙部 瑛斗<span style='color:var(--mute)'>(L)</span></td><td>0.277</td><td>0.26</td><td style='color:#ef4444'>-17</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ CHU 타선 vs 小島 和哉 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.314</b> ·
+    매치업 <b style="color:var(--text)">0.995</b> ·
+    platoon 1.02 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>細川 成也<span style='color:var(--mute)'>(R)</span></td><td>0.318</td><td>0.317</td><td style='color:#ef4444'>-46</td></tr><tr><td>2</td><td>村松 開人<span style='color:var(--mute)'>(L)</span></td><td>0.325</td><td>0.287</td><td style='color:#ef4444'>-40</td></tr><tr><td>3</td><td>田中 幹也<span style='color:var(--mute)'>(R)</span></td><td>0.283</td><td>0.26</td><td style='color:#ef4444'>-39</td></tr><tr><td>4</td><td>ボスラー<span style='color:var(--mute)'>(L)</span></td><td>0.284</td><td>0.245</td><td style='color:#ef4444'>-40</td></tr><tr><td>5</td><td>石伊 雄太<span style='color:var(--mute)'>(R)</span></td><td>0.314</td><td>0.279</td><td style='color:#ef4444'>-48</td></tr><tr><td>6</td><td>福永 裕基<span style='color:var(--mute)'>(R)</span></td><td>0.298</td><td>0.289</td><td style='color:#ef4444'>-42</td></tr><tr><td>7</td><td>鵜飼 航丞<span style='color:var(--mute)'>(R)</span></td><td>0.327</td><td>0.293</td><td style='color:#ef4444'>-53</td></tr><tr><td>8</td><td>板山 祐太郎<span style='color:var(--mute)'>(L)</span></td><td>0.332</td><td>0.275</td><td style='color:#ef4444'>-48</td></tr><tr><td>9</td><td>石川 昂弥<span style='color:var(--mute)'>(R)</span></td><td>0.319</td><td>0.283</td><td style='color:#ef4444'>-51</td></tr>
+    
+  </table>
+</div></div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 LOT 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.28</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    <tr><td>⚠ 八木 彬</td><td style='color:#fbbf24'>어제 31구(추정) → 유효 1.83</td></tr><tr><td>⚠ 坂本 光士郎</td><td style='color:#fbbf24'>어제 29구(추정) → 유효 2.58</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 中森 俊介 (R)</td><td>ERA 1.6 · 13.0 IP</td></tr><tr><td>✅ 横山 陸人 (R)</td><td>ERA 1.61 · 28.0 IP</td></tr><tr><td>✅ 小野 郁 (R)</td><td>ERA 1.62 · 15.67 IP</td></tr><tr><td>✅ 鈴木 昭汰 (L)</td><td>ERA 1.64 · 22.0 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 CHU 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.88</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 吉田 聖弥 (L)</td><td>ERA 1.5 · 13.67 IP</td></tr><tr><td>✅ 藤嶋 健人 (R)</td><td>ERA 2.01 · 22.33 IP</td></tr><tr><td>✅ 松山 晋也 (R)</td><td>ERA 2.45 · 13.33 IP</td></tr><tr><td>✅ 草加 勝 (R)</td><td>ERA 3.48 · 3.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">YAK @ ORX</span>
+    <span class="meta">18:00 · 京セラD大阪 <span class='bad'>● 데이터 부족</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>YAK 예상</span><b>3.19</b></div>
+    <div class="row"><span>ORX 예상</span><b>4.129</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">7.319</b></div>
+    <div class="row"><span>시장 라인</span><b>—</b></div>
+    <div class="row"><span>YAK 승률</span><b>35.1%</b></div>
+    <div class="row"><span>ORX 승률</span><b>53.7%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">— · 5.0mph</b></div>
+    <div class="row"><span>온도</span><b>71.6°F</b></div>
+    <div class="row"><span>강수</span><b>None%</b></div>
+    <div class='row'><span>⛓ Markov YAK</span><b style='color:#ef4444'>0.69 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov ORX</span><b style='color:var(--text)'>1.009 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ ORX 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.311</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.01 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>西川 龍馬<span style='color:var(--mute)'>(L)</span></td><td>0.3</td><td>0.319</td><td style='color:var(--mute)'>+0</td></tr><tr><td>2</td><td>宗 佑磨<span style='color:var(--mute)'>(L)</span></td><td>0.313</td><td>0.346</td><td style='color:var(--mute)'>+0</td></tr><tr><td>3</td><td>紅林 弘太郎<span style='color:var(--mute)'>(R)</span></td><td>0.312</td><td>0.317</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>中川 圭太<span style='color:var(--mute)'>(R)</span></td><td>0.318</td><td>0.316</td><td style='color:var(--mute)'>+0</td></tr><tr><td>5</td><td>太田 椋<span style='color:var(--mute)'>(R)</span></td><td>0.339</td><td>0.34</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>森 友哉<span style='color:var(--mute)'>(L)</span></td><td>0.323</td><td>0.349</td><td style='color:var(--mute)'>+0</td></tr><tr><td>7</td><td>渡部 遼人<span style='color:var(--mute)'>(L)</span></td><td>0.314</td><td>0.342</td><td style='color:var(--mute)'>+0</td></tr><tr><td>8</td><td>若月 健矢<span style='color:var(--mute)'>(R)</span></td><td>0.289</td><td>0.277</td><td style='color:var(--mute)'>+0</td></tr><tr><td>9</td><td>シーモア<span style='color:var(--mute)'>(L)</span></td><td>0.268</td><td>0.283</td><td style='color:var(--mute)'>+0</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ YAK 타선 vs エスピノーザ <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.302</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 0.992 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>サンタナ<span style='color:var(--mute)'>(R)</span></td><td>0.346</td><td>0.279</td><td style='color:#ef4444'>-75</td></tr><tr><td>2</td><td>長岡 秀樹<span style='color:var(--mute)'>(L)</span></td><td>0.291</td><td>0.257</td><td style='color:#ef4444'>-54</td></tr><tr><td>3</td><td>岩田 幸宏<span style='color:var(--mute)'>(L)</span></td><td>0.286</td><td>0.252</td><td style='color:#ef4444'>-53</td></tr><tr><td>4</td><td>オスナ<span style='color:var(--mute)'>(R)</span></td><td>0.292</td><td>0.238</td><td style='color:#ef4444'>-55</td></tr><tr><td>5</td><td>武岡 龍世<span style='color:var(--mute)'>(L)</span></td><td>0.307</td><td>0.268</td><td style='color:#ef4444'>-61</td></tr><tr><td>6</td><td>増田 珠<span style='color:var(--mute)'>(R)</span></td><td>0.328</td><td>0.269</td><td style='color:#ef4444'>-64</td></tr><tr><td>7</td><td>古賀 優大<span style='color:var(--mute)'>(R)</span></td><td>0.29</td><td>0.233</td><td style='color:#ef4444'>-49</td></tr><tr><td>8</td><td>内山 壮真<span style='color:var(--mute)'>(R)</span></td><td>0.313</td><td>0.259</td><td style='color:#ef4444'>-63</td></tr><tr><td>9</td><td>伊藤 琉偉<span style='color:var(--mute)'>(R)</span></td><td>0.277</td><td>0.223</td><td style='color:#ef4444'>-55</td></tr>
+    
+  </table>
+</div></div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 ORX 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.0</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>10</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ マチャド (R)</td><td>ERA 1.29 · 21.0 IP</td></tr><tr><td>✅ 片山 楽生 (R)</td><td>ERA 2.17 · 12.33 IP</td></tr><tr><td>✅ 博志 (R)</td><td>ERA 2.17 · 12.33 IP</td></tr><tr><td>✅ 山﨑 颯一郎 (R)</td><td>ERA 2.92 · 24.67 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 YAK 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.97</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    <tr><td>⚠ 小澤 怜史</td><td style='color:#fbbf24'>어제 29구(추정) → 유효 4.36</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 清水 昇 (R)</td><td>ERA 1.29 · 17.67 IP</td></tr><tr><td>✅ 星 知弥 (R)</td><td>ERA 1.61 · 22.33 IP</td></tr><tr><td>✅ 廣澤 優 (R)</td><td>ERA 2.31 · 19.67 IP</td></tr><tr><td>✅ 丸山 翔大 (R)</td><td>ERA 2.62 · 15.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">HAN @ SOF</span>
+    <span class="meta">18:00 · みずほPayPay <span class='bad'>● 데이터 부족</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>HAN 예상</span><b>4.379</b></div>
+    <div class="row"><span>SOF 예상</span><b>4.586</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">8.964</b></div>
+    <div class="row"><span>시장 라인</span><b>—</b></div>
+    <div class="row"><span>HAN 승률</span><b>43.2%</b></div>
+    <div class="row"><span>SOF 승률</span><b>46.9%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">— · 5.0mph</b></div>
+    <div class="row"><span>온도</span><b>71.6°F</b></div>
+    <div class="row"><span>강수</span><b>None%</b></div>
+    <div class='row'><span>⛓ Markov HAN</span><b style='color:#10b981'>1.07 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov SOF</span><b style='color:#10b981'>1.147 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ SOF 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.323</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.031 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>栗原 陵矢<span style='color:var(--mute)'>(L)</span></td><td>0.366</td><td>0.395</td><td style='color:var(--mute)'>+0</td></tr><tr><td>2</td><td>周東 佑京<span style='color:var(--mute)'>(L)</span></td><td>0.31</td><td>0.332</td><td style='color:var(--mute)'>+0</td></tr><tr><td>3</td><td>近藤 健介<span style='color:var(--mute)'>(L)</span></td><td>0.372</td><td>0.412</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>牧原 大成<span style='color:var(--mute)'>(L)</span></td><td>0.307</td><td>0.325</td><td style='color:var(--mute)'>+0</td></tr><tr><td>5</td><td>柳田 悠岐<span style='color:var(--mute)'>(L)</span></td><td>0.318</td><td>0.349</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>山川 穂高<span style='color:var(--mute)'>(R)</span></td><td>0.304</td><td>0.317</td><td style='color:var(--mute)'>+0</td></tr><tr><td>7</td><td>海野 隆司<span style='color:var(--mute)'>(R)</span></td><td>0.277</td><td>0.262</td><td style='color:var(--mute)'>+0</td></tr><tr><td>8</td><td>柳町 達<span style='color:var(--mute)'>(L)</span></td><td>0.29</td><td>0.312</td><td style='color:var(--mute)'>+0</td></tr><tr><td>9</td><td>庄子 雄大<span style='color:var(--mute)'>(L)</span></td><td>0.303</td><td>0.329</td><td style='color:var(--mute)'>+0</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ HAN 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.321</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.019 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>森下 翔太<span style='color:var(--mute)'>(R)</span></td><td>0.357</td><td>0.36</td><td style='color:var(--mute)'>+0</td></tr><tr><td>2</td><td>佐藤 輝明<span style='color:var(--mute)'>(L)</span></td><td>0.4</td><td>0.43</td><td style='color:var(--mute)'>+0</td></tr><tr><td>3</td><td>中野 拓夢<span style='color:var(--mute)'>(L)</span></td><td>0.294</td><td>0.312</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>大山 悠輔<span style='color:var(--mute)'>(R)</span></td><td>0.32</td><td>0.329</td><td style='color:var(--mute)'>+0</td></tr><tr><td>5</td><td>髙寺 望夢<span style='color:var(--mute)'>(L)</span></td><td>0.301</td><td>0.337</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>木浪 聖也<span style='color:var(--mute)'>(L)</span></td><td>0.297</td><td>0.323</td><td style='color:var(--mute)'>+0</td></tr><tr><td>7</td><td>近本 光司<span style='color:var(--mute)'>(L)</span></td><td>0.299</td><td>0.327</td><td style='color:var(--mute)'>+0</td></tr><tr><td>8</td><td>坂本 誠志郎<span style='color:var(--mute)'>(R)</span></td><td>0.286</td><td>0.28</td><td style='color:var(--mute)'>+0</td></tr><tr><td>9</td><td>小幡 竜平<span style='color:var(--mute)'>(L)</span></td><td>0.289</td><td>0.308</td><td style='color:var(--mute)'>+0</td></tr>
+    
+  </table>
+</div></div>
+  
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 SOF 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.1</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ ヘルナンデス (L)</td><td>ERA 1.19 · 22.67 IP</td></tr><tr><td>✅ オスナ (R)</td><td>ERA 1.23 · 18.0 IP</td></tr><tr><td>✅ 上茶谷 大河 (R)</td><td>ERA 1.57 · 23.0 IP</td></tr><tr><td>✅ 伊藤 優輔 (R)</td><td>ERA 2.0 · 13.33 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 HAN 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.77</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>10</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    <tr><td>⚠ 津田 淳哉</td><td style='color:#fbbf24'>어제 29구(추정) → 유효 3.72</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ ドリス (R)</td><td>ERA 0.84 · 21.33 IP</td></tr><tr><td>✅ 岩崎 優 (L)</td><td>ERA 1.62 · 15.67 IP</td></tr><tr><td>✅ 工藤 泰成 (R)</td><td>ERA 2.12 · 15.33 IP</td></tr><tr><td>✅ 畠 世周 (R)</td><td>ERA 2.71 · 9.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+  </section>
+
   <footer>
-    
-    zero-base wOBA + 바텀업 log5 + 24상태 Markov 체인 + Monte Carlo<br>
-    자동 생성 · 2026-06-11 08:46:55 KST · 책임 있는 베팅
+    Generated 2026-06-11 08:44 KST · NPB Quant v5 · raw-pred / learn-corrected / mu-clamped
   </footer>
 </div>
-<script>
-document.addEventListener('click', function(e){
-  var gh = e.target.closest('.ghead');
-  if (gh) { gh.closest('.gcard').classList.toggle('open'); return; }
-  var tab = e.target.closest('.tab');
-  if (tab) {
-    var body = tab.closest('.gbody');
-    body.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
-    body.querySelectorAll('.pane').forEach(function(p){p.classList.remove('active')});
-    tab.classList.add('active');
-    var pane = document.getElementById(tab.dataset.pane);
-    if (pane) pane.classList.add('active');
-    return;
-  }
-  var pt = e.target.closest('.picktabs button');
-  if (pt) {
-    document.querySelectorAll('.picktabs button').forEach(function(b){b.classList.remove('active')});
-    document.querySelectorAll('.pickpane').forEach(function(p){p.classList.remove('active')});
-    pt.classList.add('active');
-    var pp = document.getElementById(pt.dataset.pane);
-    if (pp) pp.classList.add('active');
-    return;
-  }
-  var ex = e.target.closest('#expand-all');
-  if (ex) {
-    var cards = document.querySelectorAll('.gcard');
-    var anyClosed = Array.prototype.some.call(cards, function(c){return !c.classList.contains('open')});
-    cards.forEach(function(c){c.classList.toggle('open', anyClosed)});
-    ex.textContent = anyClosed ? '모두 접기' : '모두 펼치기';
-  }
-});
-// 네비 하이라이트
-var secs = document.querySelectorAll('.sec[id]');
-var navLinks = document.querySelectorAll('nav a');
-function syncNav(){
-  var y = window.scrollY + 120, cur = secs[0] && secs[0].id;
-  secs.forEach(function(s){ if (s.offsetTop <= y) cur = s.id; });
-  navLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + cur); });
-}
-window.addEventListener('scroll', syncNav, {passive:true}); syncNav();
-</script>
 </body></html>
