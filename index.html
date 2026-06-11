@@ -32,14 +32,14 @@ footer{margin-top:auto;padding-top:30px;font-size:11px;color:#4b5a76;text-align:
 </div>
 <footer>모델 기반 분석 · 투자 조언이 아닙니다</footer>
 <script>
-fetch('status.json?'+Date.now()).then(r=>r.json()).then(s=>{
-  for(const k of ['kbo','npb','mlb']){
-    if(s[k]){
-      const d=new Date(s[k].replace(' UTC','Z').replace(' ','T'));
+for(const k of ['kbo','npb','mlb']){
+  fetch('status-'+k+'.json?'+Date.now()).then(r=>r.json()).then(s=>{
+    if(s.updated){
+      const d=new Date(s.updated.replace(' UTC','Z').replace(' ','T'));
       const kst=new Date(d.getTime()+9*3600*1000);
       document.getElementById('u-'+k).textContent='갱신 '+ (kst.getUTCMonth()+1)+'/'+kst.getUTCDate()+' '+String(kst.getUTCHours()).padStart(2,'0')+':'+String(kst.getUTCMinutes()).padStart(2,'0');
     }
-  }
-}).catch(()=>{});
+  }).catch(()=>{});
+}
 </script>
 </body></html>
