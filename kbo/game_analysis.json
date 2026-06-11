@@ -63,25 +63,25 @@
     "umpire": "",
     "market_total": 9.0,
     "environment_factor": 1.1045,
-    "home_runs": 5.243766461666977,
-    "away_runs": 3.209412144177695,
-    "total": 8.453178605844672,
-    "home_win_prob": 0.6321,
-    "away_win_prob": 0.2783,
-    "push_prob": 0.0896,
+    "home_runs": 5.326487056526677,
+    "away_runs": 3.204663111217152,
+    "total": 8.531150167743828,
+    "home_win_prob": 0.63725,
+    "away_win_prob": 0.27425,
+    "push_prob": 0.0885,
     "runline": {
-      "home_minus_1_5": 0.53175,
-      "home_plus_1_5": 0.7947,
-      "away_minus_1_5": 0.2053,
-      "away_plus_1_5": 0.46825
+      "home_minus_1_5": 0.53975,
+      "home_plus_1_5": 0.7995,
+      "away_minus_1_5": 0.2005,
+      "away_plus_1_5": 0.46025
     },
     "inning_split": {
       "home": {
         "runs_vs_sp": 3.653,
-        "runs_vs_bp": 3.881,
+        "runs_vs_bp": 3.831,
         "sp_share": 0.7,
         "expected_ip": 6.3,
-        "mu_full": 3.859,
+        "mu_full": 3.846,
         "mu_f5": 2.29,
         "hr_env": {
           "hr_env_pct": null,
@@ -99,24 +99,24 @@
             "pa_per_inning": 4.225
           },
           "bp_path": {
-            "eff_woba": 0.3113,
-            "rpa": 0.1012,
-            "obp_eff": 0.2957,
-            "pa_per_inning": 4.26
+            "eff_woba": 0.31,
+            "rpa": 0.1001,
+            "obp_eff": 0.2945,
+            "pa_per_inning": 4.252
           },
           "hand_factor": 1.0,
           "park": 1.05,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.811
+          "bp_factor": 0.849
         }
       },
       "away": {
         "runs_vs_sp": 4.312,
-        "runs_vs_bp": 4.244,
+        "runs_vs_bp": 4.263,
         "sp_share": 0.633,
         "expected_ip": 5.7,
-        "mu_full": 4.347,
+        "mu_full": 4.353,
         "mu_f5": 2.51,
         "hr_env": {
           "hr_env_pct": null,
@@ -134,16 +134,16 @@
             "pa_per_inning": 4.326
           },
           "bp_path": {
-            "eff_woba": 0.321,
-            "rpa": 0.1093,
-            "obp_eff": 0.3049,
-            "pa_per_inning": 4.316
+            "eff_woba": 0.3214,
+            "rpa": 0.1097,
+            "obp_eff": 0.3054,
+            "pa_per_inning": 4.319
           },
           "hand_factor": 1.0,
           "park": 1.05,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 1.079
+          "bp_factor": 1.053
         }
       }
     },
@@ -421,38 +421,37 @@
         "_present": false
       },
       "home_bottomup": {
-        "effective_era": 4.94,
+        "effective_era": 4.7,
         "raw_era": 4.63,
-        "n_available": 7,
-        "n_out": 1,
-        "out": [
-          {
-            "name": "이상규",
-            "reason": "어제 81구(추정)",
-            "era": 3.62
-          }
-        ],
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
         "fatigued": [
-          {
-            "name": "이민우",
-            "reason": "어제 35구(추정)",
-            "eff_era": 3.92
-          },
           {
             "name": "조동욱",
             "reason": "2연투",
-            "eff_era": 4.53
+            "eff_era": 4.3
           }
         ],
         "relievers": [
+          {
+            "name": "이상규",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 3.62,
+            "eff_era": 3.62,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
           {
             "name": "이민우",
             "hand": "?",
             "ip": 8.0,
             "era": 3.63,
-            "eff_era": 3.92,
-            "availability": "fatigued",
-            "avail_reason": "어제 35구(추정)",
+            "eff_era": 3.63,
+            "availability": "available",
+            "avail_reason": "가용",
             "streak": 1
           },
           {
@@ -460,7 +459,7 @@
             "hand": "?",
             "ip": 14.7,
             "era": 3.84,
-            "eff_era": 4.53,
+            "eff_era": 4.3,
             "availability": "fatigued",
             "avail_reason": "2연투",
             "streak": 2
@@ -514,46 +513,15 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
-          },
-          {
-            "name": "이상규",
-            "hand": "?",
-            "ip": 12.0,
-            "era": 3.62,
-            "eff_era": 3.62,
-            "availability": "out",
-            "avail_reason": "어제 81구(추정)",
-            "streak": 1
           }
         ]
       },
       "away_bottomup": {
-        "effective_era": 3.15,
+        "effective_era": 3.44,
         "raw_era": 3.44,
-        "n_available": 5,
-        "n_out": 4,
-        "out": [
-          {
-            "name": "최지민",
-            "reason": "어제 101구(추정)",
-            "era": 4.26
-          },
-          {
-            "name": "이형범",
-            "reason": "어제 66구(추정)",
-            "era": 3.25
-          },
-          {
-            "name": "김범수",
-            "reason": "어제 50구(추정)",
-            "era": 4.58
-          },
-          {
-            "name": "한재승",
-            "reason": "어제 70구(추정)",
-            "era": 3.59
-          }
-        ],
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
         "fatigued": [],
         "relievers": [
           {
@@ -587,6 +555,36 @@
             "streak": 0
           },
           {
+            "name": "이형범",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.25,
+            "eff_era": 3.25,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
+            "name": "한재승",
+            "hand": "?",
+            "ip": 13.3,
+            "era": 3.59,
+            "eff_era": 3.59,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
+            "name": "최지민",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.26,
+            "eff_era": 4.26,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
             "name": "정해영",
             "hand": "?",
             "ip": 9.3,
@@ -607,43 +605,13 @@
             "streak": 0
           },
           {
-            "name": "이형범",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 3.25,
-            "eff_era": 3.25,
-            "availability": "out",
-            "avail_reason": "어제 66구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "한재승",
-            "hand": "?",
-            "ip": 13.3,
-            "era": 3.59,
-            "eff_era": 3.59,
-            "availability": "out",
-            "avail_reason": "어제 70구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "최지민",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 4.26,
-            "eff_era": 4.26,
-            "availability": "out",
-            "avail_reason": "어제 101구(추정)",
-            "streak": 1
-          },
-          {
             "name": "김범수",
             "hand": "?",
             "ip": 8.0,
             "era": 4.58,
             "eff_era": 4.58,
-            "availability": "out",
-            "avail_reason": "어제 50구(추정)",
+            "availability": "available",
+            "avail_reason": "가용",
             "streak": 1
           }
         ]
@@ -651,15 +619,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.62,
-        "raw_factor": 0.5026,
-        "mu": 3.571,
+        "factor": 0.667,
+        "raw_factor": 0.594,
+        "mu": 3.797,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.7848,
-        "raw_factor": 0.7376,
-        "mu": 4.309,
+        "factor": 0.7804,
+        "raw_factor": 0.7322,
+        "mu": 4.288,
         "weight": 0.4
       }
     },
@@ -1006,10 +974,10 @@
         "matchup": "KIA @ HAN",
         "market": "moneyline",
         "label": "HAN ML",
-        "prob": 0.6321,
+        "prob": 0.6372,
         "odds": 2.0,
-        "ev": 0.2642,
-        "kelly_raw": 0.2642,
+        "ev": 0.2745,
+        "kelly_raw": 0.2745,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -1018,9 +986,9 @@
         "matchup": "KIA @ HAN",
         "market": "moneyline",
         "label": "KIA ML",
-        "prob": 0.2783,
+        "prob": 0.2742,
         "odds": 1.8,
-        "ev": -0.4991,
+        "ev": -0.5064,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -1030,38 +998,38 @@
         "matchup": "KIA @ HAN",
         "market": "total",
         "label": "Over 9.0",
-        "prob": 0.3883,
+        "prob": 0.3974,
         "odds": 1.91,
-        "ev": -0.2584,
+        "ev": -0.2409,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 8.51,
+        "model_total": 8.59,
         "market_total": 9.0
       },
       {
         "matchup": "KIA @ HAN",
         "market": "total",
         "label": "Under 9.0",
-        "prob": 0.4992,
+        "prob": 0.4903,
         "odds": 1.87,
-        "ev": -0.0664,
+        "ev": -0.0832,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 8.51,
+        "model_total": 8.59,
         "market_total": 9.0
       },
       {
         "matchup": "KIA @ HAN",
         "market": "runline",
         "label": "HAN +1.5",
-        "prob": 0.7947,
+        "prob": 0.7995,
         "odds": 1.62,
-        "ev": 0.2874,
-        "kelly_raw": 0.4636,
+        "ev": 0.2952,
+        "kelly_raw": 0.4761,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -1070,9 +1038,9 @@
         "matchup": "KIA @ HAN",
         "market": "runline",
         "label": "KIA -1.5",
-        "prob": 0.2053,
+        "prob": 0.2005,
         "odds": 2.3,
-        "ev": -0.5278,
+        "ev": -0.5389,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -1083,42 +1051,42 @@
       {
         "away": 1,
         "home": 3,
-        "prob": 0.0226
+        "prob": 0.0225
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0221
+        "prob": 0.0219
       },
       {
         "away": 1,
         "home": 4,
-        "prob": 0.0221
-      },
-      {
-        "away": 1,
-        "home": 5,
-        "prob": 0.0209
-      },
-      {
-        "away": 2,
-        "home": 3,
         "prob": 0.0208
       },
       {
         "away": 2,
-        "home": 4,
-        "prob": 0.019
-      },
-      {
-        "away": 0,
         "home": 3,
-        "prob": 0.0184
+        "prob": 0.0202
       },
       {
-        "away": 0,
+        "away": 2,
         "home": 4,
-        "prob": 0.0184
+        "prob": 0.0193
+      },
+      {
+        "away": 2,
+        "home": 5,
+        "prob": 0.0191
+      },
+      {
+        "away": 1,
+        "home": 5,
+        "prob": 0.0191
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0182
       }
     ],
     "data_sources": {
@@ -1198,25 +1166,25 @@
     "umpire": "",
     "market_total": 7.5,
     "environment_factor": 0.96,
-    "home_runs": 3.991457107660512,
-    "away_runs": 5.172229804200866,
-    "total": 9.163686911861378,
-    "home_win_prob": 0.35385,
-    "away_win_prob": 0.5491,
-    "push_prob": 0.09705,
+    "home_runs": 3.9648916662076186,
+    "away_runs": 5.327871157127473,
+    "total": 9.292762823335092,
+    "home_win_prob": 0.3425,
+    "away_win_prob": 0.56705,
+    "push_prob": 0.09045,
     "runline": {
-      "home_minus_1_5": 0.2708,
-      "home_plus_1_5": 0.54535,
-      "away_minus_1_5": 0.45465,
-      "away_plus_1_5": 0.7292
+      "home_minus_1_5": 0.26315,
+      "home_plus_1_5": 0.52635,
+      "away_minus_1_5": 0.47365,
+      "away_plus_1_5": 0.73685
     },
     "inning_split": {
       "home": {
         "runs_vs_sp": 4.221,
-        "runs_vs_bp": 4.256,
+        "runs_vs_bp": 4.164,
         "sp_share": 0.611,
         "expected_ip": 5.5,
-        "mu_full": 4.3,
+        "mu_full": 4.268,
         "mu_f5": 2.389,
         "hr_env": {
           "hr_env_pct": null,
@@ -1234,24 +1202,24 @@
             "pa_per_inning": 4.312
           },
           "bp_path": {
-            "eff_woba": 0.3213,
-            "rpa": 0.1095,
-            "obp_eff": 0.3052,
-            "pa_per_inning": 4.318
+            "eff_woba": 0.3188,
+            "rpa": 0.1075,
+            "obp_eff": 0.3029,
+            "pa_per_inning": 4.303
           },
           "hand_factor": 1.0,
           "park": 0.96,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.94
+          "bp_factor": 1.061
         }
       },
       "away": {
         "runs_vs_sp": 4.906,
-        "runs_vs_bp": 4.896,
+        "runs_vs_bp": 4.89,
         "sp_share": 0.544,
         "expected_ip": 4.9,
-        "mu_full": 4.902,
+        "mu_full": 4.9,
         "mu_f5": 2.462,
         "hr_env": {
           "hr_env_pct": null,
@@ -1269,16 +1237,16 @@
             "pa_per_inning": 4.418
           },
           "bp_path": {
-            "eff_woba": 0.3376,
-            "rpa": 0.1232,
-            "obp_eff": 0.3207,
-            "pa_per_inning": 4.417
+            "eff_woba": 0.3375,
+            "rpa": 0.1231,
+            "obp_eff": 0.3206,
+            "pa_per_inning": 4.416
           },
           "hand_factor": 1.0,
           "park": 0.96,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 1.042
+          "bp_factor": 1.101
         }
       }
     },
@@ -1546,28 +1514,23 @@
         "_present": false
       },
       "home_bottomup": {
-        "effective_era": 4.61,
+        "effective_era": 5.14,
         "raw_era": 5.03,
-        "n_available": 6,
-        "n_out": 3,
-        "out": [
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
           {
             "name": "박지성",
-            "reason": "어제 144구(추정)",
-            "era": 4.44
+            "reason": "어제 37구",
+            "eff_era": 4.8
           },
           {
             "name": "윤석원",
-            "reason": "어제 113구(추정)",
-            "era": 7.42
-          },
-          {
-            "name": "조영건",
-            "reason": "어제 62구(추정)",
-            "era": 5.91
+            "reason": "어제 29구",
+            "eff_era": 8.01
           }
         ],
-        "fatigued": [],
         "relievers": [
           {
             "name": "원종현",
@@ -1588,6 +1551,16 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
+          },
+          {
+            "name": "박지성",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 4.44,
+            "eff_era": 4.8,
+            "availability": "fatigued",
+            "avail_reason": "어제 37구",
+            "streak": 1
           },
           {
             "name": "박정훈",
@@ -1630,23 +1603,13 @@
             "streak": 0
           },
           {
-            "name": "박지성",
-            "hand": "?",
-            "ip": 9.3,
-            "era": 4.44,
-            "eff_era": 4.44,
-            "availability": "out",
-            "avail_reason": "어제 144구(추정)",
-            "streak": 1
-          },
-          {
             "name": "조영건",
             "hand": "?",
             "ip": 8.0,
             "era": 5.91,
             "eff_era": 5.91,
-            "availability": "out",
-            "avail_reason": "어제 62구(추정)",
+            "availability": "available",
+            "avail_reason": "가용",
             "streak": 1
           },
           {
@@ -1654,41 +1617,41 @@
             "hand": "?",
             "ip": 10.7,
             "era": 7.42,
-            "eff_era": 7.42,
-            "availability": "out",
-            "avail_reason": "어제 113구(추정)",
+            "eff_era": 8.01,
+            "availability": "fatigued",
+            "avail_reason": "어제 29구",
             "streak": 1
           }
         ]
       },
       "away_bottomup": {
-        "effective_era": 4.23,
+        "effective_era": 5.39,
         "raw_era": 4.9,
-        "n_available": 3,
-        "n_out": 4,
-        "out": [
+        "n_available": 7,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
           {
             "name": "김진호",
-            "reason": "어제 50구(추정)",
-            "era": 4.66
+            "reason": "2연투",
+            "eff_era": 5.21
           },
           {
             "name": "임지민",
-            "reason": "어제 101구(추정)",
-            "era": 4.26
+            "reason": "2연투",
+            "eff_era": 5.03
           },
           {
             "name": "류진욱",
-            "reason": "어제 66구(추정)",
-            "era": 7.37
+            "reason": "2연투",
+            "eff_era": 8.26
           },
           {
             "name": "배재환",
-            "reason": "어제 50구(추정)",
-            "era": 4.85
+            "reason": "2연투",
+            "eff_era": 5.43
           }
         ],
-        "fatigued": [],
         "relievers": [
           {
             "name": "전사민",
@@ -1699,6 +1662,16 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
+          },
+          {
+            "name": "임지민",
+            "hand": "?",
+            "ip": 20.0,
+            "era": 4.26,
+            "eff_era": 5.03,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2
           },
           {
             "name": "신영우",
@@ -1721,23 +1694,13 @@
             "streak": 0
           },
           {
-            "name": "임지민",
-            "hand": "?",
-            "ip": 20.0,
-            "era": 4.26,
-            "eff_era": 4.26,
-            "availability": "out",
-            "avail_reason": "어제 101구(추정)",
-            "streak": 2
-          },
-          {
             "name": "김진호",
             "hand": "?",
             "ip": 17.3,
             "era": 4.66,
-            "eff_era": 4.66,
-            "availability": "out",
-            "avail_reason": "어제 50구(추정)",
+            "eff_era": 5.21,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
             "streak": 2
           },
           {
@@ -1745,9 +1708,9 @@
             "hand": "?",
             "ip": 12.0,
             "era": 4.85,
-            "eff_era": 4.85,
-            "availability": "out",
-            "avail_reason": "어제 50구(추정)",
+            "eff_era": 5.43,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
             "streak": 2
           },
           {
@@ -1755,9 +1718,9 @@
             "hand": "?",
             "ip": 14.7,
             "era": 7.37,
-            "eff_era": 7.37,
-            "availability": "out",
-            "avail_reason": "어제 66구(추정)",
+            "eff_era": 8.26,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
             "streak": 2
           }
         ]
@@ -1765,15 +1728,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.0956,
-        "raw_factor": 1.1166,
-        "mu": 5.171,
+        "factor": 1.0912,
+        "raw_factor": 1.1112,
+        "mu": 5.152,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0666,
-        "raw_factor": 1.0812,
-        "mu": 4.983,
+        "factor": 1.1617,
+        "raw_factor": 1.1972,
+        "mu": 5.375,
         "weight": 0.4
       }
     },
@@ -2120,11 +2083,11 @@
         "matchup": "NC @ KIW",
         "market": "moneyline",
         "label": "KIW ML",
-        "prob": 0.3538,
+        "prob": 0.3425,
         "odds": 3.0,
-        "ev": 0.0615,
-        "kelly_raw": 0.0308,
-        "stake": 6155.0,
+        "ev": 0.0275,
+        "kelly_raw": 0.0138,
+        "stake": 2750.0,
         "book": "DraftKings",
         "estimated_odds": false
       },
@@ -2132,9 +2095,9 @@
         "matchup": "NC @ KIW",
         "market": "moneyline",
         "label": "NC ML",
-        "prob": 0.5491,
+        "prob": 0.5671,
         "odds": 1.39,
-        "ev": -0.2368,
+        "ev": -0.2118,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -2144,38 +2107,38 @@
         "matchup": "NC @ KIW",
         "market": "total",
         "label": "Over 7.5",
-        "prob": 0.679,
+        "prob": 0.69,
         "odds": 1.83,
-        "ev": 0.2426,
-        "kelly_raw": 0.2923,
+        "ev": 0.2627,
+        "kelly_raw": 0.3165,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 9.19,
+        "model_total": 9.32,
         "market_total": 7.5
       },
       {
         "matchup": "NC @ KIW",
         "market": "total",
         "label": "Under 7.5",
-        "prob": 0.321,
+        "prob": 0.31,
         "odds": 1.95,
-        "ev": -0.3741,
+        "ev": -0.3955,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 9.19,
+        "model_total": 9.32,
         "market_total": 7.5
       },
       {
         "matchup": "NC @ KIW",
         "market": "runline",
         "label": "KIW +1.5",
-        "prob": 0.5454,
+        "prob": 0.5263,
         "odds": 2.1,
-        "ev": 0.1452,
-        "kelly_raw": 0.132,
+        "ev": 0.1053,
+        "kelly_raw": 0.0958,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -2184,9 +2147,9 @@
         "matchup": "NC @ KIW",
         "market": "runline",
         "label": "NC -1.5",
-        "prob": 0.4546,
+        "prob": 0.4737,
         "odds": 1.74,
-        "ev": -0.2089,
+        "ev": -0.1758,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -2197,41 +2160,41 @@
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0198
-      },
-      {
-        "away": 2,
-        "home": 2,
-        "prob": 0.0188
+        "prob": 0.0176
       },
       {
         "away": 3,
-        "home": 1,
-        "prob": 0.0177
-      },
-      {
-        "away": 4,
-        "home": 1,
-        "prob": 0.0172
+        "home": 3,
+        "prob": 0.0174
       },
       {
         "away": 4,
         "home": 2,
+        "prob": 0.0173
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0173
+      },
+      {
+        "away": 2,
+        "home": 3,
         "prob": 0.0171
       },
       {
-        "away": 4,
-        "home": 3,
-        "prob": 0.0168
+        "away": 3,
+        "home": 1,
+        "prob": 0.0169
       },
       {
-        "away": 3,
+        "away": 4,
         "home": 3,
-        "prob": 0.0164
+        "prob": 0.0167
       },
       {
         "away": 2,
-        "home": 1,
+        "home": 2,
         "prob": 0.0163
       }
     ],
@@ -2312,25 +2275,25 @@
     "umpire": "",
     "market_total": 10.0,
     "environment_factor": 1.0337,
-    "home_runs": 4.516926283747798,
-    "away_runs": 4.051299354607351,
-    "total": 8.568225638355148,
-    "home_win_prob": 0.48985,
-    "away_win_prob": 0.4116,
-    "push_prob": 0.09855,
+    "home_runs": 4.48076313737074,
+    "away_runs": 4.09802815837495,
+    "total": 8.57879129574569,
+    "home_win_prob": 0.4831,
+    "away_win_prob": 0.41595,
+    "push_prob": 0.10095,
     "runline": {
-      "home_minus_1_5": 0.3952,
-      "home_plus_1_5": 0.6805,
-      "away_minus_1_5": 0.3195,
-      "away_plus_1_5": 0.6048
+      "home_minus_1_5": 0.38825,
+      "home_plus_1_5": 0.67395,
+      "away_minus_1_5": 0.32605,
+      "away_plus_1_5": 0.61175
     },
     "inning_split": {
       "home": {
         "runs_vs_sp": 5.647,
-        "runs_vs_bp": 5.695,
+        "runs_vs_bp": 5.672,
         "sp_share": 0.611,
         "expected_ip": 5.5,
-        "mu_full": 5.572,
+        "mu_full": 5.564,
         "mu_f5": 3.086,
         "hr_env": {
           "hr_env_pct": null,
@@ -2348,24 +2311,24 @@
             "pa_per_inning": 4.533
           },
           "bp_path": {
-            "eff_woba": 0.3571,
-            "rpa": 0.1394,
-            "obp_eff": 0.3392,
-            "pa_per_inning": 4.54
+            "eff_woba": 0.3565,
+            "rpa": 0.1389,
+            "obp_eff": 0.3387,
+            "pa_per_inning": 4.537
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 1.093
+          "bp_factor": 1.058
         }
       },
       "away": {
         "runs_vs_sp": 4.746,
-        "runs_vs_bp": 4.758,
+        "runs_vs_bp": 4.765,
         "sp_share": 0.6,
         "expected_ip": 5.4,
-        "mu_full": 4.769,
+        "mu_full": 4.772,
         "mu_f5": 2.604,
         "hr_env": {
           "hr_env_pct": null,
@@ -2383,16 +2346,16 @@
             "pa_per_inning": 4.394
           },
           "bp_path": {
-            "eff_woba": 0.3342,
-            "rpa": 0.1203,
-            "obp_eff": 0.3175,
-            "pa_per_inning": 4.395
+            "eff_woba": 0.3343,
+            "rpa": 0.1204,
+            "obp_eff": 0.3176,
+            "pa_per_inning": 4.396
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.908
+          "bp_factor": 0.883
         }
       }
     },
@@ -2642,32 +2605,16 @@
         "_present": false
       },
       "home_bottomup": {
-        "effective_era": 3.94,
+        "effective_era": 3.72,
         "raw_era": 3.65,
-        "n_available": 6,
-        "n_out": 3,
-        "out": [
-          {
-            "name": "이진하",
-            "reason": "어제 42구(추정)",
-            "era": 2.99
-          },
-          {
-            "name": "김강현",
-            "reason": "어제 42구(추정)",
-            "era": 4.05
-          },
-          {
-            "name": "최준용",
-            "reason": "어제 46구(추정)",
-            "era": 3.53
-          }
-        ],
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
         "fatigued": [
           {
             "name": "김원중",
             "reason": "2연투",
-            "eff_era": 4.17
+            "eff_era": 3.96
           }
         ],
         "relievers": [
@@ -2682,14 +2629,44 @@
             "streak": 0
           },
           {
+            "name": "이진하",
+            "hand": "?",
+            "ip": 14.7,
+            "era": 2.99,
+            "eff_era": 2.99,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
+            "name": "최준용",
+            "hand": "?",
+            "ip": 13.3,
+            "era": 3.53,
+            "eff_era": 3.53,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
             "name": "김원중",
             "hand": "?",
             "ip": 18.7,
             "era": 3.54,
-            "eff_era": 4.17,
+            "eff_era": 3.96,
             "availability": "fatigued",
             "avail_reason": "2연투",
             "streak": 2
+          },
+          {
+            "name": "김강현",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.05,
+            "eff_era": 4.05,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
           },
           {
             "name": "홍민기",
@@ -2730,58 +2707,27 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
-          },
-          {
-            "name": "이진하",
-            "hand": "?",
-            "ip": 14.7,
-            "era": 2.99,
-            "eff_era": 2.99,
-            "availability": "out",
-            "avail_reason": "어제 42구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "최준용",
-            "hand": "?",
-            "ip": 13.3,
-            "era": 3.53,
-            "eff_era": 3.53,
-            "availability": "out",
-            "avail_reason": "어제 46구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "김강현",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 4.05,
-            "eff_era": 4.05,
-            "availability": "out",
-            "avail_reason": "어제 42구(추정)",
-            "streak": 1
           }
         ]
       },
       "away_bottomup": {
-        "effective_era": 5.06,
+        "effective_era": 4.75,
         "raw_era": 4.75,
-        "n_available": 7,
-        "n_out": 2,
-        "out": [
-          {
-            "name": "최준호",
-            "reason": "어제 81구(추정)",
-            "era": 4.2
-          },
-          {
-            "name": "김택연",
-            "reason": "어제 93구(추정)",
-            "era": 3.02
-          }
-        ],
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
         "fatigued": [],
         "relievers": [
+          {
+            "name": "김택연",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.02,
+            "eff_era": 3.02,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
           {
             "name": "박치국",
             "hand": "?",
@@ -2801,6 +2747,16 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
+          },
+          {
+            "name": "최준호",
+            "hand": "?",
+            "ip": 14.7,
+            "era": 4.2,
+            "eff_era": 4.2,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
           },
           {
             "name": "김동주",
@@ -2851,41 +2807,21 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
-          },
-          {
-            "name": "김택연",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 3.02,
-            "eff_era": 3.02,
-            "availability": "out",
-            "avail_reason": "어제 93구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "최준호",
-            "hand": "?",
-            "ip": 14.7,
-            "era": 4.2,
-            "eff_era": 4.2,
-            "availability": "out",
-            "avail_reason": "어제 81구(추정)",
-            "streak": 1
           }
         ]
       }
     },
     "markov_detail": {
       "home": {
-        "factor": 1.1769,
-        "raw_factor": 1.2157,
-        "mu": 5.889,
+        "factor": 1.1595,
+        "raw_factor": 1.1946,
+        "mu": 5.811,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0151,
-        "raw_factor": 1.0185,
-        "mu": 5.092,
+        "factor": 1.0404,
+        "raw_factor": 1.0493,
+        "mu": 5.205,
         "weight": 0.4
       }
     },
@@ -3232,11 +3168,11 @@
         "matchup": "DSN @ LOT",
         "market": "moneyline",
         "label": "LOT ML",
-        "prob": 0.4899,
+        "prob": 0.4831,
         "odds": 2.1,
-        "ev": 0.0287,
-        "kelly_raw": 0.0261,
-        "stake": 5215.0,
+        "ev": 0.0145,
+        "kelly_raw": 0.0132,
+        "stake": 2638.0,
         "book": "DraftKings",
         "estimated_odds": false
       },
@@ -3244,9 +3180,9 @@
         "matchup": "DSN @ LOT",
         "market": "moneyline",
         "label": "DSN ML",
-        "prob": 0.4116,
+        "prob": 0.4159,
         "odds": 1.74,
-        "ev": -0.2838,
+        "ev": -0.2762,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -3256,38 +3192,38 @@
         "matchup": "DSN @ LOT",
         "market": "total",
         "label": "Over 10.0",
-        "prob": 0.2957,
+        "prob": 0.295,
         "odds": 1.83,
-        "ev": -0.4589,
+        "ev": -0.4602,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 8.61,
+        "model_total": 8.6,
         "market_total": 10.0
       },
       {
         "matchup": "DSN @ LOT",
         "market": "total",
         "label": "Under 10.0",
-        "prob": 0.5998,
+        "prob": 0.6006,
         "odds": 1.95,
-        "ev": 0.1696,
-        "kelly_raw": 0.1785,
+        "ev": 0.1711,
+        "kelly_raw": 0.1801,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 8.61,
+        "model_total": 8.6,
         "market_total": 10.0
       },
       {
         "matchup": "DSN @ LOT",
         "market": "runline",
         "label": "LOT +1.5",
-        "prob": 0.6805,
+        "prob": 0.674,
         "odds": 1.71,
-        "ev": 0.1637,
-        "kelly_raw": 0.2305,
+        "ev": 0.1525,
+        "kelly_raw": 0.2147,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -3296,9 +3232,9 @@
         "matchup": "DSN @ LOT",
         "market": "runline",
         "label": "DSN -1.5",
-        "prob": 0.3195,
+        "prob": 0.3261,
         "odds": 2.1,
-        "ev": -0.329,
+        "ev": -0.3153,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -3308,43 +3244,43 @@
     "scores_top": [
       {
         "away": 2,
-        "home": 3,
-        "prob": 0.0221
-      },
-      {
-        "away": 2,
         "home": 2,
-        "prob": 0.0198
-      },
-      {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0192
+        "prob": 0.0206
       },
       {
         "away": 3,
+        "home": 3,
+        "prob": 0.0203
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0192
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0191
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.019
+      },
+      {
+        "away": 1,
         "home": 2,
         "prob": 0.0188
       },
       {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0181
+        "away": 4,
+        "home": 2,
+        "prob": 0.0183
       },
       {
         "away": 2,
         "home": 4,
-        "prob": 0.0177
-      },
-      {
-        "away": 3,
-        "home": 1,
-        "prob": 0.0176
-      },
-      {
-        "away": 1,
-        "home": 2,
-        "prob": 0.017
+        "prob": 0.0171
       }
     ],
     "data_sources": {
@@ -3424,27 +3360,27 @@
       "_source": "naver_preview"
     },
     "umpire": "",
-    "market_total": 9.0,
+    "market_total": 9.5,
     "environment_factor": 1.004,
-    "home_runs": 4.889713565494114,
-    "away_runs": 6.299219344281621,
-    "total": 11.188932909775735,
-    "home_win_prob": 0.35405,
-    "away_win_prob": 0.56645,
-    "push_prob": 0.0795,
+    "home_runs": 5.140357875001886,
+    "away_runs": 6.226662656049626,
+    "total": 11.367020531051512,
+    "home_win_prob": 0.3779,
+    "away_win_prob": 0.5441,
+    "push_prob": 0.078,
     "runline": {
-      "home_minus_1_5": 0.28085,
-      "home_plus_1_5": 0.51655,
-      "away_minus_1_5": 0.48345,
-      "away_plus_1_5": 0.71915
+      "home_minus_1_5": 0.302,
+      "home_plus_1_5": 0.5379,
+      "away_minus_1_5": 0.4621,
+      "away_plus_1_5": 0.698
     },
     "inning_split": {
       "home": {
         "runs_vs_sp": 5.719,
-        "runs_vs_bp": 5.652,
+        "runs_vs_bp": 5.732,
         "sp_share": 0.544,
         "expected_ip": 4.9,
-        "mu_full": 5.596,
+        "mu_full": 5.628,
         "mu_f5": 2.816,
         "hr_env": {
           "hr_env_pct": null,
@@ -3462,24 +3398,24 @@
             "pa_per_inning": 4.544
           },
           "bp_path": {
-            "eff_woba": 0.3561,
-            "rpa": 0.1385,
-            "obp_eff": 0.3383,
-            "pa_per_inning": 4.533
+            "eff_woba": 0.3579,
+            "rpa": 0.1401,
+            "obp_eff": 0.34,
+            "pa_per_inning": 4.546
           },
           "hand_factor": 1.0,
           "park": 0.94,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.92
+          "bp_factor": 1.028
         }
       },
       "away": {
         "runs_vs_sp": 5.659,
-        "runs_vs_bp": 5.682,
+        "runs_vs_bp": 5.659,
         "sp_share": 0.2,
         "expected_ip": 1.3,
-        "mu_full": 5.581,
+        "mu_full": 5.565,
         "mu_f5": 2.677,
         "hr_env": {
           "hr_env_pct": null,
@@ -3497,16 +3433,16 @@
             "pa_per_inning": 4.535
           },
           "bp_path": {
-            "eff_woba": 0.3568,
-            "rpa": 0.1391,
-            "obp_eff": 0.3389,
-            "pa_per_inning": 4.538
+            "eff_woba": 0.3562,
+            "rpa": 0.1387,
+            "obp_eff": 0.3384,
+            "pa_per_inning": 4.535
           },
           "hand_factor": 1.0,
           "park": 0.94,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 1.033
+          "bp_factor": 1.0
         }
       }
     },
@@ -3784,48 +3720,41 @@
         "_present": false
       },
       "home_bottomup": {
-        "effective_era": 4.8,
+        "effective_era": 4.5,
         "raw_era": 4.5,
-        "n_available": 6,
-        "n_out": 4,
-        "out": [
-          {
-            "name": "김영우",
-            "reason": "어제 54구(추정)",
-            "era": 3.6
-          },
-          {
-            "name": "리오스",
-            "reason": "어제 58구(추정)",
-            "era": 4.5
-          },
-          {
-            "name": "김진성",
-            "reason": "어제 74구(추정)",
-            "era": 3.32
-          },
-          {
-            "name": "함덕주",
-            "reason": "어제 66구(추정)",
-            "era": 5.01
-          }
-        ],
-        "fatigued": [
-          {
-            "name": "손주영",
-            "reason": "어제 39구(추정)",
-            "eff_era": 2.76
-          }
-        ],
+        "n_available": 10,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
         "relievers": [
           {
             "name": "손주영",
             "hand": "?",
             "ip": 12.0,
             "era": 2.56,
-            "eff_era": 2.76,
-            "availability": "fatigued",
-            "avail_reason": "어제 39구(추정)",
+            "eff_era": 2.56,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
+            "name": "김진성",
+            "hand": "?",
+            "ip": 17.3,
+            "era": 3.32,
+            "eff_era": 3.32,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
+            "name": "김영우",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 3.6,
+            "eff_era": 3.6,
+            "availability": "available",
+            "avail_reason": "가용",
             "streak": 1
           },
           {
@@ -3849,6 +3778,16 @@
             "streak": 0
           },
           {
+            "name": "리오스",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.5,
+            "eff_era": 4.5,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
             "name": "우강훈",
             "hand": "?",
             "ip": 17.3,
@@ -3869,6 +3808,16 @@
             "streak": 0
           },
           {
+            "name": "함덕주",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 5.01,
+            "eff_era": 5.01,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
             "name": "배재준",
             "hand": "?",
             "ip": 13.3,
@@ -3877,76 +3826,25 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
-          },
-          {
-            "name": "김진성",
-            "hand": "?",
-            "ip": 17.3,
-            "era": 3.32,
-            "eff_era": 3.32,
-            "availability": "out",
-            "avail_reason": "어제 74구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "김영우",
-            "hand": "?",
-            "ip": 9.3,
-            "era": 3.6,
-            "eff_era": 3.6,
-            "availability": "out",
-            "avail_reason": "어제 54구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "리오스",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 4.5,
-            "eff_era": 4.5,
-            "availability": "out",
-            "avail_reason": "어제 58구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "함덕주",
-            "hand": "?",
-            "ip": 16.0,
-            "era": 5.01,
-            "eff_era": 5.01,
-            "availability": "out",
-            "avail_reason": "어제 66구(추정)",
-            "streak": 1
           }
         ]
       },
       "away_bottomup": {
-        "effective_era": 3.81,
+        "effective_era": 4.75,
         "raw_era": 4.61,
-        "n_available": 7,
-        "n_out": 3,
-        "out": [
-          {
-            "name": "이로운",
-            "reason": "어제 54구(추정)",
-            "era": 4.86
-          },
-          {
-            "name": "김민",
-            "reason": "어제 85구(추정)",
-            "era": 4.41
-          },
+        "n_available": 10,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
           {
             "name": "전영준",
-            "reason": "어제 117구(추정)",
-            "era": 8.12
-          }
-        ],
-        "fatigued": [
+            "reason": "어제 30구",
+            "eff_era": 8.76
+          },
           {
             "name": "이건욱",
             "reason": "2연투",
-            "eff_era": 2.4
+            "eff_era": 2.28
           }
         ],
         "relievers": [
@@ -3955,7 +3853,7 @@
             "hand": "?",
             "ip": 16.0,
             "era": 2.04,
-            "eff_era": 2.4,
+            "eff_era": 2.28,
             "availability": "fatigued",
             "avail_reason": "2연투",
             "streak": 2
@@ -3991,6 +3889,16 @@
             "streak": 0
           },
           {
+            "name": "김민",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 4.41,
+            "eff_era": 4.41,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
             "name": "노경은",
             "hand": "?",
             "ip": 8.0,
@@ -3999,6 +3907,16 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
+          },
+          {
+            "name": "이로운",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.86,
+            "eff_era": 4.86,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
           },
           {
             "name": "박시후",
@@ -4021,33 +3939,13 @@
             "streak": 0
           },
           {
-            "name": "김민",
-            "hand": "?",
-            "ip": 12.0,
-            "era": 4.41,
-            "eff_era": 4.41,
-            "availability": "out",
-            "avail_reason": "어제 85구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "이로운",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 4.86,
-            "eff_era": 4.86,
-            "availability": "out",
-            "avail_reason": "어제 54구(추정)",
-            "streak": 1
-          },
-          {
             "name": "전영준",
             "hand": "?",
             "ip": 17.3,
             "era": 8.12,
-            "eff_era": 8.12,
-            "availability": "out",
-            "avail_reason": "어제 117구(추정)",
+            "eff_era": 8.76,
+            "availability": "fatigued",
+            "avail_reason": "어제 30구",
             "streak": 1
           }
         ]
@@ -4055,15 +3953,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.1453,
-        "raw_factor": 1.1772,
-        "mu": 5.598,
+        "factor": 1.2775,
+        "raw_factor": 1.3384,
+        "mu": 6.177,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0461,
-        "raw_factor": 1.0562,
-        "mu": 5.097,
+        "factor": 1.0096,
+        "raw_factor": 1.0117,
+        "mu": 4.939,
         "weight": 0.4
       }
     },
@@ -4397,9 +4295,9 @@
       "book": "DraftKings",
       "home_ml": 1.67,
       "away_ml": 2.2,
-      "total": 9.0,
-      "over": 1.83,
-      "under": 1.95,
+      "total": 9.5,
+      "over": 2.0,
+      "under": 1.8,
       "home_spread": -1.5,
       "home_spread_odds": 2.35,
       "away_spread": 1.5,
@@ -4410,9 +4308,9 @@
         "matchup": "SSG @ LG",
         "market": "moneyline",
         "label": "LG ML",
-        "prob": 0.354,
+        "prob": 0.3779,
         "odds": 1.67,
-        "ev": -0.4087,
+        "ev": -0.3689,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -4422,10 +4320,10 @@
         "matchup": "SSG @ LG",
         "market": "moneyline",
         "label": "SSG ML",
-        "prob": 0.5665,
+        "prob": 0.5441,
         "odds": 2.2,
-        "ev": 0.2462,
-        "kelly_raw": 0.2052,
+        "ev": 0.197,
+        "kelly_raw": 0.1642,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -4433,38 +4331,38 @@
       {
         "matchup": "SSG @ LG",
         "market": "total",
-        "label": "Over 9.0",
-        "prob": 0.6663,
-        "odds": 1.83,
-        "ev": 0.2193,
-        "kelly_raw": 0.2643,
+        "label": "Over 9.5",
+        "prob": 0.6835,
+        "odds": 2.0,
+        "ev": 0.3669,
+        "kelly_raw": 0.3669,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 11.23,
-        "market_total": 9.0
+        "model_total": 11.44,
+        "market_total": 9.5
       },
       {
         "matchup": "SSG @ LG",
         "market": "total",
-        "label": "Under 9.0",
-        "prob": 0.2488,
-        "odds": 1.95,
-        "ev": -0.5149,
+        "label": "Under 9.5",
+        "prob": 0.3165,
+        "odds": 1.8,
+        "ev": -0.4302,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 11.23,
-        "market_total": 9.0
+        "model_total": 11.44,
+        "market_total": 9.5
       },
       {
         "matchup": "SSG @ LG",
         "market": "runline",
         "label": "LG -1.5",
-        "prob": 0.2808,
+        "prob": 0.302,
         "odds": 2.35,
-        "ev": -0.34,
+        "ev": -0.2903,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -4474,10 +4372,10 @@
         "matchup": "SSG @ LG",
         "market": "runline",
         "label": "SSG +1.5",
-        "prob": 0.7191,
+        "prob": 0.698,
         "odds": 1.61,
-        "ev": 0.1578,
-        "kelly_raw": 0.2587,
+        "ev": 0.1238,
+        "kelly_raw": 0.2029,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -4487,41 +4385,41 @@
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0149
-      },
-      {
-        "away": 6,
-        "home": 3,
-        "prob": 0.0142
+        "prob": 0.0137
       },
       {
         "away": 3,
+        "home": 4,
+        "prob": 0.0136
+      },
+      {
+        "away": 5,
         "home": 3,
-        "prob": 0.0135
+        "prob": 0.0134
       },
       {
         "away": 4,
         "home": 2,
-        "prob": 0.0134
+        "prob": 0.0132
       },
       {
-        "away": 5,
-        "home": 2,
-        "prob": 0.013
-      },
-      {
-        "away": 5,
-        "home": 5,
-        "prob": 0.0129
-      },
-      {
-        "away": 5,
-        "home": 3,
-        "prob": 0.0129
+        "away": 4,
+        "home": 4,
+        "prob": 0.0132
       },
       {
         "away": 5,
         "home": 4,
+        "prob": 0.0129
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0126
+      },
+      {
+        "away": 6,
+        "home": 3,
         "prob": 0.0126
       }
     ],
@@ -4604,25 +4502,25 @@
     "umpire": "",
     "market_total": 10.5,
     "environment_factor": 1.056,
-    "home_runs": 4.698979094347012,
-    "away_runs": 4.617428244030519,
-    "total": 9.31640733837753,
-    "home_win_prob": 0.459,
-    "away_win_prob": 0.448,
-    "push_prob": 0.093,
+    "home_runs": 4.761347029282529,
+    "away_runs": 4.778830785895268,
+    "total": 9.540177815177797,
+    "home_win_prob": 0.4519,
+    "away_win_prob": 0.45795,
+    "push_prob": 0.09015,
     "runline": {
-      "home_minus_1_5": 0.3687,
-      "home_plus_1_5": 0.63975,
-      "away_minus_1_5": 0.36025,
-      "away_plus_1_5": 0.6313
+      "home_minus_1_5": 0.36315,
+      "home_plus_1_5": 0.63195,
+      "away_minus_1_5": 0.36805,
+      "away_plus_1_5": 0.63685
     },
     "inning_split": {
       "home": {
         "runs_vs_sp": 5.361,
-        "runs_vs_bp": 5.358,
+        "runs_vs_bp": 5.345,
         "sp_share": 0.567,
         "expected_ip": 5.1,
-        "mu_full": 5.3,
+        "mu_full": 5.295,
         "mu_f5": 2.756,
         "hr_env": {
           "hr_env_pct": null,
@@ -4640,24 +4538,24 @@
             "pa_per_inning": 4.488
           },
           "bp_path": {
-            "eff_woba": 0.349,
-            "rpa": 0.1326,
-            "obp_eff": 0.3316,
-            "pa_per_inning": 4.488
+            "eff_woba": 0.3487,
+            "rpa": 0.1324,
+            "obp_eff": 0.3313,
+            "pa_per_inning": 4.486
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 1.018
+          "bp_factor": 0.983
         }
       },
       "away": {
         "runs_vs_sp": 5.486,
-        "runs_vs_bp": 5.497,
+        "runs_vs_bp": 5.495,
         "sp_share": 0.2,
         "expected_ip": 0.9,
-        "mu_full": 5.417,
+        "mu_full": 5.416,
         "mu_f5": 2.605,
         "hr_env": {
           "hr_env_pct": null,
@@ -4675,16 +4573,16 @@
             "pa_per_inning": 4.508
           },
           "bp_path": {
-            "eff_woba": 0.3524,
+            "eff_woba": 0.3523,
             "rpa": 0.1354,
             "obp_eff": 0.3347,
-            "pa_per_inning": 4.51
+            "pa_per_inning": 4.509
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 1.022
+          "bp_factor": 1.018
         }
       }
     },
@@ -4962,29 +4860,49 @@
         "_present": false
       },
       "home_bottomup": {
-        "effective_era": 4.7,
+        "effective_era": 4.67,
         "raw_era": 4.34,
-        "n_available": 5,
-        "n_out": 3,
-        "out": [
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
           {
             "name": "손동현",
-            "reason": "어제 58구(추정)",
-            "era": 3.32
+            "reason": "2연투",
+            "eff_era": 3.71
           },
           {
             "name": "한승혁",
-            "reason": "어제 101구(추정)",
-            "era": 4.54
+            "reason": "2연투",
+            "eff_era": 5.36
           },
           {
             "name": "박영현",
-            "reason": "어제 101구(추정)",
-            "era": 4.0
+            "reason": "2연투",
+            "eff_era": 4.72
           }
         ],
-        "fatigued": [],
         "relievers": [
+          {
+            "name": "손동현",
+            "hand": "?",
+            "ip": 14.7,
+            "era": 3.32,
+            "eff_era": 3.71,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2
+          },
+          {
+            "name": "박영현",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.0,
+            "eff_era": 4.72,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2
+          },
           {
             "name": "주권",
             "hand": "?",
@@ -5016,6 +4934,16 @@
             "streak": 0
           },
           {
+            "name": "한승혁",
+            "hand": "?",
+            "ip": 17.3,
+            "era": 4.54,
+            "eff_era": 5.36,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2
+          },
+          {
             "name": "김민수",
             "hand": "?",
             "ip": 8.0,
@@ -5034,63 +4962,37 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
-          },
-          {
-            "name": "손동현",
-            "hand": "?",
-            "ip": 14.7,
-            "era": 3.32,
-            "eff_era": 3.32,
-            "availability": "out",
-            "avail_reason": "어제 58구(추정)",
-            "streak": 2
-          },
-          {
-            "name": "박영현",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 4.0,
-            "eff_era": 4.0,
-            "availability": "out",
-            "avail_reason": "어제 101구(추정)",
-            "streak": 2
-          },
-          {
-            "name": "한승혁",
-            "hand": "?",
-            "ip": 17.3,
-            "era": 4.54,
-            "eff_era": 4.54,
-            "availability": "out",
-            "avail_reason": "어제 101구(추정)",
-            "streak": 2
           }
         ]
       },
       "away_bottomup": {
-        "effective_era": 4.67,
+        "effective_era": 4.35,
         "raw_era": 4.35,
-        "n_available": 6,
-        "n_out": 3,
-        "out": [
-          {
-            "name": "배찬승",
-            "reason": "어제 46구(추정)",
-            "era": 3.6
-          },
-          {
-            "name": "이승민",
-            "reason": "어제 50구(추정)",
-            "era": 3.33
-          },
-          {
-            "name": "김재윤",
-            "reason": "어제 89구(추정)",
-            "era": 4.16
-          }
-        ],
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
         "fatigued": [],
         "relievers": [
+          {
+            "name": "이승민",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.33,
+            "eff_era": 3.33,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
+          {
+            "name": "배찬승",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 3.6,
+            "eff_era": 3.6,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
+          },
           {
             "name": "이재희",
             "hand": "?",
@@ -5100,6 +5002,16 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
+          },
+          {
+            "name": "김재윤",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.16,
+            "eff_era": 4.16,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1
           },
           {
             "name": "최지광",
@@ -5150,51 +5062,21 @@
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0
-          },
-          {
-            "name": "이승민",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 3.33,
-            "eff_era": 3.33,
-            "availability": "out",
-            "avail_reason": "어제 50구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "배찬승",
-            "hand": "?",
-            "ip": 12.0,
-            "era": 3.6,
-            "eff_era": 3.6,
-            "availability": "out",
-            "avail_reason": "어제 46구(추정)",
-            "streak": 1
-          },
-          {
-            "name": "김재윤",
-            "hand": "?",
-            "ip": 8.0,
-            "era": 4.16,
-            "eff_era": 4.16,
-            "availability": "out",
-            "avail_reason": "어제 89구(추정)",
-            "streak": 1
           }
         ]
       }
     },
     "markov_detail": {
       "home": {
-        "factor": 1.0432,
-        "raw_factor": 1.0526,
-        "mu": 5.388,
+        "factor": 1.0787,
+        "raw_factor": 1.096,
+        "mu": 5.551,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.3842,
-        "raw_factor": 1.4685,
-        "mu": 6.863,
+        "factor": 1.4735,
+        "raw_factor": 1.5775,
+        "mu": 7.268,
         "weight": 0.4
       }
     },
@@ -5527,7 +5409,7 @@
     "odds": {
       "book": "DraftKings",
       "home_ml": 2.45,
-      "away_ml": 1.56,
+      "away_ml": 1.57,
       "total": 10.5,
       "over": 1.91,
       "under": 1.87,
@@ -5541,10 +5423,10 @@
         "matchup": "SAM @ KT",
         "market": "moneyline",
         "label": "KT ML",
-        "prob": 0.459,
+        "prob": 0.4519,
         "odds": 2.45,
-        "ev": 0.1246,
-        "kelly_raw": 0.0859,
+        "ev": 0.1072,
+        "kelly_raw": 0.0739,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -5553,9 +5435,9 @@
         "matchup": "SAM @ KT",
         "market": "moneyline",
         "label": "SAM ML",
-        "prob": 0.448,
-        "odds": 1.56,
-        "ev": -0.3011,
+        "prob": 0.458,
+        "odds": 1.57,
+        "ev": -0.281,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -5565,38 +5447,38 @@
         "matchup": "SAM @ KT",
         "market": "total",
         "label": "Over 10.5",
-        "prob": 0.3788,
+        "prob": 0.4044,
         "odds": 1.91,
-        "ev": -0.2765,
+        "ev": -0.2277,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 9.37,
+        "model_total": 9.6,
         "market_total": 10.5
       },
       {
         "matchup": "SAM @ KT",
         "market": "total",
         "label": "Under 10.5",
-        "prob": 0.6212,
+        "prob": 0.5956,
         "odds": 1.87,
-        "ev": 0.1617,
-        "kelly_raw": 0.1858,
+        "ev": 0.1138,
+        "kelly_raw": 0.1308,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false,
-        "model_total": 9.37,
+        "model_total": 9.6,
         "market_total": 10.5
       },
       {
         "matchup": "SAM @ KT",
         "market": "runline",
         "label": "KT +1.5",
-        "prob": 0.6398,
+        "prob": 0.632,
         "odds": 1.95,
-        "ev": 0.2475,
-        "kelly_raw": 0.2605,
+        "ev": 0.2323,
+        "kelly_raw": 0.2445,
         "stake": 12000.0,
         "book": "DraftKings",
         "estimated_odds": false
@@ -5605,9 +5487,9 @@
         "matchup": "SAM @ KT",
         "market": "runline",
         "label": "SAM -1.5",
-        "prob": 0.3603,
+        "prob": 0.368,
         "odds": 1.87,
-        "ev": -0.3263,
+        "ev": -0.3117,
         "kelly_raw": 0.0,
         "stake": 0.0,
         "book": "DraftKings",
@@ -5616,24 +5498,19 @@
     ],
     "scores_top": [
       {
-        "away": 3,
-        "home": 3,
-        "prob": 0.0182
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0181
-      },
-      {
         "away": 2,
         "home": 3,
-        "prob": 0.0181
+        "prob": 0.0185
+      },
+      {
+        "away": 3,
+        "home": 3,
+        "prob": 0.0168
       },
       {
         "away": 2,
         "home": 2,
-        "prob": 0.0174
+        "prob": 0.0168
       },
       {
         "away": 4,
@@ -5641,19 +5518,24 @@
         "prob": 0.0165
       },
       {
+        "away": 3,
+        "home": 4,
+        "prob": 0.0162
+      },
+      {
+        "away": 5,
+        "home": 3,
+        "prob": 0.0162
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0157
+      },
+      {
         "away": 2,
         "home": 4,
-        "prob": 0.0164
-      },
-      {
-        "away": 1,
-        "home": 2,
-        "prob": 0.0161
-      },
-      {
-        "away": 1,
-        "home": 4,
-        "prob": 0.0157
+        "prob": 0.0152
       }
     ],
     "data_sources": {
