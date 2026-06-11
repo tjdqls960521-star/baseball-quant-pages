@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>KBO Quant · 2026-06-11</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --bg2: #141a32;
+  --bg3: #1c2444;
+  --border: #1f2a4a;
+  --text: #e8ecf3;
+  --mute: #94a3b8;
+  --accent: #60a5fa;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--text);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 18px 14px 80px; }
+header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+header h1 { font-size: 22px; margin: 0; letter-spacing: -0.02em; }
+header .ts { color: var(--mute); font-size: 12px; }
+.learn-box {
+  background: var(--bg2); border-radius: 10px; padding: 10px 14px;
+  margin-bottom: 16px; font-size: 13px; color: var(--mute);
+  display: flex; flex-wrap: wrap; gap: 14px;
+}
+.learn-box b { color: var(--text); }
+
+/* TOP picks grid (모바일=1열, 태블릿=2열) */
+.top-section { margin-bottom: 22px; }
+.top-section h2 {
+  font-size: 16px; margin: 0 0 10px;
+  color: var(--text); display: flex; align-items: center; gap: 8px;
+}
+.top-section h2 .ico { font-size: 18px; }
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 720px) {
+  .top-grid { grid-template-columns: 1fr 1fr; }
+  .top-section.full .top-grid { grid-template-columns: 1fr; }
+}
+
+/* Pick card */
+.pick-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 12px;
+  display: grid; grid-template-columns: 32px 1fr auto; gap: 10px; align-items: center;
+}
+.pick-rank {
+  font-weight: 700; font-size: 16px; color: var(--mute);
+  text-align: center;
+}
+.pick-main { min-width: 0; }
+.pick-matchup { font-size: 13px; color: var(--mute); margin-bottom: 2px; }
+.pick-label { font-weight: 600; font-size: 15px; color: var(--text); }
+.pick-meta { font-size: 11px; color: var(--mute); margin-top: 2px; }
+.pick-stats { display: flex; gap: 12px; }
+.stat { display: flex; flex-direction: column; align-items: flex-end; }
+.stat-val { font-weight: 700; font-size: 15px; line-height: 1.1; }
+.stat-lbl { font-size: 10px; color: var(--mute); text-transform: uppercase; }
+.empty { color: var(--mute); text-align: center; padding: 20px; font-size: 13px; }
+
+/* Game card */
+.game-section { margin-top: 28px; }
+.game-section h2 { font-size: 16px; margin: 0 0 12px; }
+.game {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 14px; margin-bottom: 14px;
+}
+.game-hdr {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.game-hdr .teams { font-weight: 700; font-size: 17px; }
+.game-hdr .meta { font-size: 12px; color: var(--mute); }
+.game-stats {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 16px;
+  margin-bottom: 10px;
+}
+@media (min-width: 480px) {
+  .game-stats { grid-template-columns: repeat(3, 1fr); }
+}
+.game-stats .row {
+  display: flex; justify-content: space-between;
+  font-size: 13px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.05);
+}
+.game-stats .row span:first-child { color: var(--mute); }
+.game-stats .row b { color: var(--text); font-weight: 600; }
+.split-box {
+  background: var(--bg3); border-radius: 8px; padding: 10px 12px; margin-top: 10px;
+}
+.split-box h3 { font-size: 13px; margin: 0 0 6px; color: var(--accent); }
+.split-box table { width: 100%; font-size: 12px; border-collapse: collapse; }
+.split-box table td, .split-box table th {
+  padding: 3px 4px; text-align: left;
+}
+.split-box table th { color: var(--mute); font-weight: 500; font-size: 11px; }
+.split-box table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+.two-col { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 600px) { .two-col { grid-template-columns: 1fr 1fr; } }
+.warn { color: #fbbf24; }
+.good { color: #10b981; }
+.bad  { color: #ef4444; }
+
+footer {
+  margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--border);
+  color: var(--mute); font-size: 11px; text-align: center;
+}
+</style></head>
+<body>
+<div class="container">
+  <header>
+    <h1>⚾️ KBO Quant · 2026-06-11</h1>
+    <span class="ts">2026-06-11 04:12 KST</span>
+  </header>
+  <div class="learn-box">
+  <span>📚 학습 baseline: <b>4.76</b> RPG (n=70)</span>
+  <span>· 최근 bias: <b>-2.105</b></span>
+  <span>· MAE: <b>2.864</b></span>
+</div>
+
+  <section class="top-section">
+    <h2><span class="ico">📊</span> 토탈 확률 TOP 10 <span style="color:var(--mute);font-size:13px;font-weight:400">(Over/Under 가장 확신)</span></h2>
+    <div class="top-grid">
+      <div class="pick-card">
+  <div class="pick-rank">#1</div>
+  <div class="pick-main">
+    <div class="pick-matchup">NC @ KIW</div>
+    <div class="pick-label">Over 7.5</div>
+    <div class="pick-meta">DraftKings @ 1.83</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">67.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+24.3%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#2</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SSG @ LG</div>
+    <div class="pick-label">Over 9.0</div>
+    <div class="pick-meta">DraftKings @ 1.83</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">66.6%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+21.9%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#3</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SAM @ KT</div>
+    <div class="pick-label">Under 10.5</div>
+    <div class="pick-meta">DraftKings @ 1.87</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">62.1%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#22c55e">+16.2%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#4</div>
+  <div class="pick-main">
+    <div class="pick-matchup">DSN @ LOT</div>
+    <div class="pick-label">Under 10.0</div>
+    <div class="pick-meta">DraftKings @ 1.95</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">61.7%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+20.3%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#5</div>
+  <div class="pick-main">
+    <div class="pick-matchup">KIA @ HAN</div>
+    <div class="pick-label">Under 9.0</div>
+    <div class="pick-meta">DraftKings @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">49.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-4.7%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#6</div>
+  <div class="pick-main">
+    <div class="pick-matchup">KIA @ HAN</div>
+    <div class="pick-label">Over 9.0</div>
+    <div class="pick-meta">DraftKings @ 1.87</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">38.8%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-27.4%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#7</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SAM @ KT</div>
+    <div class="pick-label">Over 10.5</div>
+    <div class="pick-meta">DraftKings @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">37.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-27.7%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#8</div>
+  <div class="pick-main">
+    <div class="pick-matchup">NC @ KIW</div>
+    <div class="pick-label">Under 7.5</div>
+    <div class="pick-meta">DraftKings @ 1.95</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">32.1%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-37.4%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#9</div>
+  <div class="pick-main">
+    <div class="pick-matchup">DSN @ LOT</div>
+    <div class="pick-label">Over 10.0</div>
+    <div class="pick-meta">DraftKings @ 1.83</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">28.0%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-48.8%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#10</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SSG @ LG</div>
+    <div class="pick-label">Under 9.0</div>
+    <div class="pick-meta">DraftKings @ 1.95</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">24.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-51.5%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="top-section">
+    <h2><span class="ico">🎯</span> 머니라인 확률 TOP 10 <span style="color:var(--mute);font-size:13px;font-weight:400">(승부 가장 확신)</span></h2>
+    <div class="top-grid">
+      <div class="pick-card">
+  <div class="pick-rank">#1</div>
+  <div class="pick-main">
+    <div class="pick-matchup">KIA @ HAN</div>
+    <div class="pick-label">HAN ML</div>
+    <div class="pick-meta">DraftKings @ 2.0</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">63.2%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+26.4%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#2</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SSG @ LG</div>
+    <div class="pick-label">SSG ML</div>
+    <div class="pick-meta">DraftKings @ 2.2</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#facc15">56.6%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+24.6%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#3</div>
+  <div class="pick-main">
+    <div class="pick-matchup">NC @ KIW</div>
+    <div class="pick-label">NC ML</div>
+    <div class="pick-meta">DraftKings @ 1.39</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">54.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-23.7%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#4</div>
+  <div class="pick-main">
+    <div class="pick-matchup">DSN @ LOT</div>
+    <div class="pick-label">LOT ML</div>
+    <div class="pick-meta">DraftKings @ 2.1</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">48.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#facc15">+2.8%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#5</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SAM @ KT</div>
+    <div class="pick-label">KT ML</div>
+    <div class="pick-meta">DraftKings @ 2.45</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">45.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#22c55e">+12.5%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#6</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SAM @ KT</div>
+    <div class="pick-label">SAM ML</div>
+    <div class="pick-meta">DraftKings @ 1.56</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">44.8%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-30.1%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#7</div>
+  <div class="pick-main">
+    <div class="pick-matchup">DSN @ LOT</div>
+    <div class="pick-label">DSN ML</div>
+    <div class="pick-meta">DraftKings @ 1.74</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">41.3%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-28.1%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#8</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SSG @ LG</div>
+    <div class="pick-label">LG ML</div>
+    <div class="pick-meta">DraftKings @ 1.67</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">35.4%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-40.9%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#9</div>
+  <div class="pick-main">
+    <div class="pick-matchup">NC @ KIW</div>
+    <div class="pick-label">KIW ML</div>
+    <div class="pick-meta">DraftKings @ 3.0</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">35.4%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#84cc16">+6.2%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#10</div>
+  <div class="pick-main">
+    <div class="pick-matchup">KIA @ HAN</div>
+    <div class="pick-label">KIA ML</div>
+    <div class="pick-meta">DraftKings @ 1.8</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">27.8%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-49.9%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="game-section">
+    <h2>🔍 게임별 상세 분석</h2>
+    <div class="game">
+  <div class="game-hdr">
+    <span class="teams">KIA @ HAN</span>
+    <span class="meta">2026-06-11T18:30:00 · 대전 <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>KIA 예상</span><b>3.209</b></div>
+    <div class="row"><span>HAN 예상</span><b>5.244</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">8.453</b></div>
+    <div class="row"><span>시장 라인</span><b>9.0</b></div>
+    <div class="row"><span>KIA 승률</span><b>27.8%</b></div>
+    <div class="row"><span>HAN 승률</span><b>63.2%</b></div>
+    <div class="row"><span>Park factor</span><b>1.105</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.052</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#10b981">OUT(밀어줌) · 5.9mph</b></div>
+    <div class="row"><span>온도</span><b>73.6°F</b></div>
+    <div class="row"><span>강수</span><b>84.0%</b></div>
+    <div class='row'><span>⛓ Markov KIA</span><b style='color:#ef4444'>0.785 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov HAN</span><b style='color:#ef4444'>0.62 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 HAN 선발 류현진 (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>2.99</b></td><td>1.01</td><td>7.26</td><td>63.2</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.201 / 0.035 · K-BB% <b style='color:var(--text)'>0.166</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>1.5</b> · WHIP 0.17 · K/9 12.0 (6.0 IP / 1G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>📌 KIA 선발 올러 (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>2.4</b></td><td>0.93</td><td>9.83</td><td>75.1</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.278 / 0.075 · K-BB% <b style='color:#10b981'>0.203</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>5.73</b> · WHIP 0.64 · K/9 9.0 (11.0 IP / 2G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ HAN 타선 vs 올러 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.346</b> ·
+    매치업 <b style="color:var(--text)">0.995</b> ·
+    platoon 0.97 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>오재원<span style='color:var(--mute)'>(R)</span></td><td>0.321</td><td>0.209</td><td style='color:#ef4444'>-104</td></tr><tr><td>2</td><td>노시환<span style='color:var(--mute)'>(R)</span></td><td>0.319</td><td>0.21</td><td style='color:#ef4444'>-104</td></tr><tr><td>3</td><td>강백호<span style='color:var(--mute)'>(R)</span></td><td>0.391</td><td>0.263</td><td style='color:#ef4444'>-129</td></tr><tr><td>4</td><td>문현빈<span style='color:var(--mute)'>(R)</span></td><td>0.374</td><td>0.252</td><td style='color:#ef4444'>-120</td></tr><tr><td>5</td><td>페라자<span style='color:var(--mute)'>(R)</span></td><td>0.397</td><td>0.271</td><td style='color:#ef4444'>-129</td></tr><tr><td>6</td><td>채은성<span style='color:var(--mute)'>(R)</span></td><td>0.339</td><td>0.218</td><td style='color:#ef4444'>-110</td></tr><tr><td>7</td><td>하주석<span style='color:var(--mute)'>(R)</span></td><td>0.347</td><td>0.226</td><td style='color:#ef4444'>-111</td></tr><tr><td>8</td><td>심우준<span style='color:var(--mute)'>(R)</span></td><td>0.341</td><td>0.237</td><td style='color:#ef4444'>-112</td></tr><tr><td>9</td><td>최재훈<span style='color:var(--mute)'>(R)</span></td><td>0.333</td><td>0.217</td><td style='color:#ef4444'>-109</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ KIA 타선 vs 류현진 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.356</b> ·
+    매치업 <b style="color:#ef4444">0.97</b> ·
+    platoon 1.045 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>카스트로<span style='color:var(--mute)'>(R)</span></td><td>0.334</td><td>0.266</td><td style='color:#ef4444'>-78</td></tr><tr><td>2</td><td>김호령<span style='color:var(--mute)'>(R)</span></td><td>0.347</td><td>0.276</td><td style='color:#ef4444'>-84</td></tr><tr><td>3</td><td>김도영<span style='color:var(--mute)'>(R)</span></td><td>0.389</td><td>0.297</td><td style='color:#ef4444'>-124</td></tr><tr><td>4</td><td>김선빈<span style='color:var(--mute)'>(R)</span></td><td>0.348</td><td>0.276</td><td style='color:#ef4444'>-102</td></tr><tr><td>5</td><td>데일<span style='color:var(--mute)'>(R)</span></td><td>0.33</td><td>0.264</td><td style='color:#ef4444'>-79</td></tr><tr><td>6</td><td>나성범<span style='color:var(--mute)'>(R)</span></td><td>0.371</td><td>0.291</td><td style='color:#ef4444'>-108</td></tr><tr><td>7</td><td>한준수<span style='color:var(--mute)'>(R)</span></td><td>0.354</td><td>0.277</td><td style='color:#ef4444'>-102</td></tr><tr><td>8</td><td>오선우<span style='color:var(--mute)'>(R)</span></td><td>0.323</td><td>0.257</td><td style='color:#ef4444'>-82</td></tr><tr><td>9</td><td>윤도현<span style='color:var(--mute)'>(R)</span></td><td>0.34</td><td>0.268</td><td style='color:#ef4444'>-84</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 HAN 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.792</td><td>0.348</td><td>5.63</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>5.4</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>페라자 · 시즌 .330 (77H/233AB, 13HR, 40RBI) · 최근5: .526 (10H/19AB)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🏏 KIA 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.771</td><td>0.355</td><td>5.48</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.2</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>김태군 · 시즌 .253 (20H/79AB, 1HR, 6RBI)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 HAN 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.94</b> <span style='color:#ef4444;font-size:11px'>▲0.31 vs 전원기준 4.63</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>1</b>명</td></tr>
+    <tr><td>🚫 이상규</td><td style='color:#ef4444'>어제 81구(추정) <span style='color:var(--mute)'>(시즌 3.62)</span></td></tr>
+    <tr><td>⚠ 이민우</td><td style='color:#fbbf24'>어제 35구(추정) → 유효 3.92</td></tr><tr><td>⚠ 조동욱</td><td style='color:#fbbf24'>2연투 → 유효 4.53</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>⚠ 이민우 (?)</td><td>ERA 3.92 · 8.0 IP</td></tr><tr><td>⚠ 조동욱 (?)</td><td>ERA 4.53 · 14.7 IP</td></tr><tr><td>✅ 장유호 (?)</td><td>ERA 4.5 · 8.0 IP</td></tr><tr><td>✅ 박준영 (?)</td><td>ERA 4.79 · 13.3 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 KIA 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.15</b> <span style='color:#10b981;font-size:11px'>▼0.29 vs 전원기준 3.44</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>5</b>명 · 제외 <b style='color:#ef4444'>4</b>명</td></tr>
+    <tr><td>🚫 최지민</td><td style='color:#ef4444'>어제 101구(추정) <span style='color:var(--mute)'>(시즌 4.26)</span></td></tr><tr><td>🚫 이형범</td><td style='color:#ef4444'>어제 66구(추정) <span style='color:var(--mute)'>(시즌 3.25)</span></td></tr><tr><td>🚫 김범수</td><td style='color:#ef4444'>어제 50구(추정) <span style='color:var(--mute)'>(시즌 4.58)</span></td></tr><tr><td>🚫 한재승</td><td style='color:#ef4444'>어제 70구(추정) <span style='color:var(--mute)'>(시즌 3.59)</span></td></tr>
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 성영탁 (?)</td><td>ERA 1.96 · 16.0 IP</td></tr><tr><td>✅ 조상우 (?)</td><td>ERA 2.81 · 12.0 IP</td></tr><tr><td>✅ 곽도규 (?)</td><td>ERA 3.1 · 9.3 IP</td></tr><tr><td>✅ 정해영 (?)</td><td>ERA 4.5 · 9.3 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">NC @ KIW</span>
+    <span class="meta">2026-06-11T18:30:00 · 고척 <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>NC 예상</span><b>5.172</b></div>
+    <div class="row"><span>KIW 예상</span><b>3.991</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">9.164</b></div>
+    <div class="row"><span>시장 라인</span><b>7.5</b></div>
+    <div class="row"><span>NC 승률</span><b>54.9%</b></div>
+    <div class="row"><span>KIW 승률</span><b>35.4%</b></div>
+    <div class="row"><span>Park factor</span><b>0.96</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">돔</b></div>
+    <div class="row"><span>온도</span><b>None°F</b></div>
+    <div class="row"><span>강수</span><b>None%</b></div>
+    <div class='row'><span>⛓ Markov NC</span><b style='color:#10b981'>1.067 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov KIW</span><b style='color:#10b981'>1.096 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 KIW 선발 박준현 (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.71</b></td><td>1.55</td><td>8.66</td><td>29.1</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.212 / 0.136 · K-BB% <b style='color:#ef4444'>0.076</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>1.5</b> · WHIP 0.33 · K/9 13.5 (6.0 IP / 1G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>📌 NC 선발 라일리 (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.52</b></td><td>1.11</td><td>12.47</td><td>33.2</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.337 / 0.044 · K-BB% <b style='color:#10b981'>0.293</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>1.29</b> · WHIP 0.0 · K/9 10.29 (7.0 IP / 1G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ KIW 타선 vs 라일리 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.337</b> ·
+    매치업 <b style="color:#ef4444">0.966</b> ·
+    platoon 0.97 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>브룩스<span style='color:var(--mute)'>(R)</span></td><td>0.356</td><td>0.318</td><td style='color:#ef4444'>-38</td></tr><tr><td>2</td><td>이주형<span style='color:var(--mute)'>(R)</span></td><td>0.347</td><td>0.31</td><td style='color:#ef4444'>-33</td></tr><tr><td>3</td><td>안치홍<span style='color:var(--mute)'>(R)</span></td><td>0.345</td><td>0.32</td><td style='color:#ef4444'>-30</td></tr><tr><td>4</td><td>어준서<span style='color:var(--mute)'>(R)</span></td><td>0.333</td><td>0.299</td><td style='color:#ef4444'>-25</td></tr><tr><td>5</td><td>최주환<span style='color:var(--mute)'>(R)</span></td><td>0.349</td><td>0.322</td><td style='color:#ef4444'>-21</td></tr><tr><td>6</td><td>김건희<span style='color:var(--mute)'>(R)</span></td><td>0.362</td><td>0.332</td><td style='color:#ef4444'>-24</td></tr><tr><td>7</td><td>박한결<span style='color:var(--mute)'>(R)</span></td><td>0.313</td><td>0.287</td><td style='color:#ef4444'>-23</td></tr><tr><td>8</td><td>박찬혁<span style='color:var(--mute)'>(R)</span></td><td>0.338</td><td>0.306</td><td style='color:#ef4444'>-26</td></tr><tr><td>9</td><td>임지열<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.302</td><td style='color:#ef4444'>-22</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ NC 타선 vs 박준현 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.348</b> ·
+    매치업 <b style="color:var(--text)">1.006</b> ·
+    platoon 0.97 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>김주원<span style='color:var(--mute)'>(R)</span></td><td>0.365</td><td>0.363</td><td style='color:var(--mute)'>-8</td></tr><tr><td>2</td><td>박민우<span style='color:var(--mute)'>(R)</span></td><td>0.361</td><td>0.387</td><td style='color:#10b981'>+17</td></tr><tr><td>3</td><td>데이비슨<span style='color:var(--mute)'>(R)</span></td><td>0.345</td><td>0.344</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>김휘집<span style='color:var(--mute)'>(R)</span></td><td>0.346</td><td>0.351</td><td style='color:#10b981'>+12</td></tr><tr><td>5</td><td>박건우<span style='color:var(--mute)'>(R)</span></td><td>0.378</td><td>0.368</td><td style='color:#ef4444'>-15</td></tr><tr><td>6</td><td>김형준<span style='color:var(--mute)'>(R)</span></td><td>0.335</td><td>0.34</td><td style='color:var(--mute)'>+5</td></tr><tr><td>7</td><td>최정원<span style='color:var(--mute)'>(R)</span></td><td>0.348</td><td>0.352</td><td style='color:#10b981'>+10</td></tr><tr><td>8</td><td>신재인<span style='color:var(--mute)'>(R)</span></td><td>0.35</td><td>0.346</td><td style='color:var(--mute)'>-3</td></tr><tr><td>9</td><td>서호철<span style='color:var(--mute)'>(R)</span></td><td>0.345</td><td>0.337</td><td style='color:var(--mute)'>-1</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 KIW 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.643</td><td>0.331</td><td>4.57</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.1</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>서건창 · 시즌 .295 (33H/112AB, 0HR, 6RBI) · 최근5: .526 (10H/19AB)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🏏 NC 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.764</td><td>0.348</td><td>5.44</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>5.4</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>최정원 · 시즌 .269 (28H/104AB, 0HR, 6RBI)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 KIW 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.61</b> <span style='color:#10b981;font-size:11px'>▼0.42 vs 전원기준 5.03</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>6</b>명 · 제외 <b style='color:#ef4444'>3</b>명</td></tr>
+    <tr><td>🚫 박지성</td><td style='color:#ef4444'>어제 144구(추정) <span style='color:var(--mute)'>(시즌 4.44)</span></td></tr><tr><td>🚫 윤석원</td><td style='color:#ef4444'>어제 113구(추정) <span style='color:var(--mute)'>(시즌 7.42)</span></td></tr><tr><td>🚫 조영건</td><td style='color:#ef4444'>어제 62구(추정) <span style='color:var(--mute)'>(시즌 5.91)</span></td></tr>
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 원종현 (?)</td><td>ERA 3.64 · 8.0 IP</td></tr><tr><td>✅ 유토 (?)</td><td>ERA 4.38 · 8.0 IP</td></tr><tr><td>✅ 박정훈 (?)</td><td>ERA 4.65 · 13.3 IP</td></tr><tr><td>✅ 박진형 (?)</td><td>ERA 4.65 · 8.0 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 NC 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>4.23</b> <span style='color:#10b981;font-size:11px'>▼0.67 vs 전원기준 4.9</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>3</b>명 · 제외 <b style='color:#ef4444'>4</b>명</td></tr>
+    <tr><td>🚫 김진호</td><td style='color:#ef4444'>어제 50구(추정) <span style='color:var(--mute)'>(시즌 4.66)</span></td></tr><tr><td>🚫 임지민</td><td style='color:#ef4444'>어제 101구(추정) <span style='color:var(--mute)'>(시즌 4.26)</span></td></tr><tr><td>🚫 류진욱</td><td style='color:#ef4444'>어제 66구(추정) <span style='color:var(--mute)'>(시즌 7.37)</span></td></tr><tr><td>🚫 배재환</td><td style='color:#ef4444'>어제 50구(추정) <span style='color:var(--mute)'>(시즌 4.85)</span></td></tr>
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 전사민 (?)</td><td>ERA 3.93 · 12.0 IP</td></tr><tr><td>✅ 신영우 (?)</td><td>ERA 4.4 · 8.0 IP</td></tr><tr><td>✅ 이용준 (?)</td><td>ERA 4.5 · 8.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">DSN @ LOT</span>
+    <span class="meta">2026-06-11T18:30:00 · 사직 <span class='warn'>● 일부 추정</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>DSN 예상</span><b>3.997</b></div>
+    <div class="row"><span>LOT 예상</span><b>4.436</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">8.433</b></div>
+    <div class="row"><span>시장 라인</span><b>10.0</b></div>
+    <div class="row"><span>DSN 승률</span><b>41.3%</b></div>
+    <div class="row"><span>LOT 승률</span><b>48.9%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">— · 5.0mph</b></div>
+    <div class="row"><span>온도</span><b>71.6°F</b></div>
+    <div class="row"><span>강수</span><b>None%</b></div>
+    <div class='row'><span>⛓ Markov DSN</span><b style='color:var(--text)'>1.015 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov LOT</span><b style='color:#10b981'>1.177 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 LOT 선발 박세웅 (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>5.02</b></td><td>1.57</td><td>7.6</td><td>59.2</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.185 / 0.107 · K-BB% <b style='color:#ef4444'>0.078</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>10.8</b> · WHIP 0.8 · K/9 3.6 (5.0 IP / 1G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>📌 DSN 선발 타카다 (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>0.0</b></td><td>1.42</td><td>7.5</td><td>0.0</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.0 / 0.0 · K-BB% <b style='color:#ef4444'>0.0</b></td></tr>
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ LOT 타선 vs 타카다 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.363</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 1.045 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>윤동희<span style='color:var(--mute)'>(R)</span></td><td>0.36</td><td>0.38</td><td style='color:var(--mute)'>+0</td></tr><tr><td>2</td><td>전준우<span style='color:var(--mute)'>(R)</span></td><td>0.349</td><td>0.365</td><td style='color:var(--mute)'>+0</td></tr><tr><td>3</td><td>레이예스<span style='color:var(--mute)'>(R)</span></td><td>0.377</td><td>0.405</td><td style='color:var(--mute)'>+0</td></tr><tr><td>4</td><td>노진혁<span style='color:var(--mute)'>(R)</span></td><td>0.376</td><td>0.393</td><td style='color:var(--mute)'>+0</td></tr><tr><td>5</td><td>손호영<span style='color:var(--mute)'>(R)</span></td><td>0.359</td><td>0.376</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>전민재<span style='color:var(--mute)'>(R)</span></td><td>0.34</td><td>0.359</td><td style='color:var(--mute)'>+0</td></tr><tr><td>7</td><td>한태양<span style='color:var(--mute)'>(R)</span></td><td>0.333</td><td>0.351</td><td style='color:var(--mute)'>+0</td></tr><tr><td>8</td><td>유강남<span style='color:var(--mute)'>(R)</span></td><td>0.353</td><td>0.365</td><td style='color:var(--mute)'>+0</td></tr><tr><td>9</td><td>황성빈<span style='color:var(--mute)'>(R)</span></td><td>0.341</td><td>0.351</td><td style='color:var(--mute)'>+0</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ DSN 타선 vs 박세웅 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.333</b> ·
+    매치업 <b style="color:var(--text)">1.006</b> ·
+    platoon 0.97 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>박찬호<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.364</td><td style='color:#10b981'>+38</td></tr><tr><td>2</td><td>정수빈<span style='color:var(--mute)'>(R)</span></td><td>0.331</td><td>0.378</td><td style='color:#10b981'>+41</td></tr><tr><td>3</td><td>안재석<span style='color:var(--mute)'>(R)</span></td><td>0.344</td><td>0.376</td><td style='color:#10b981'>+35</td></tr><tr><td>4</td><td>카메론<span style='color:var(--mute)'>(R)</span></td><td>0.368</td><td>0.396</td><td style='color:#10b981'>+31</td></tr><tr><td>5</td><td>양의지<span style='color:var(--mute)'>(R)</span></td><td>0.307</td><td>0.338</td><td style='color:#10b981'>+33</td></tr><tr><td>6</td><td>양석환<span style='color:var(--mute)'>(R)</span></td><td>0.322</td><td>0.358</td><td style='color:#10b981'>+33</td></tr><tr><td>7</td><td>박준순<span style='color:var(--mute)'>(R)</span></td><td>0.365</td><td>0.369</td><td style='color:#10b981'>+22</td></tr><tr><td>8</td><td>김민석<span style='color:var(--mute)'>(R)</span></td><td>0.339</td><td>0.376</td><td style='color:#10b981'>+38</td></tr><tr><td>9</td><td>강승호<span style='color:var(--mute)'>(R)</span></td><td>0.339</td><td>0.362</td><td style='color:#10b981'>+34</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 LOT 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.695</td><td>0.355</td><td>4.94</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>5.2</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>손성빈 · 시즌 .231 (30H/130AB, 2HR, 12RBI) · 최근5: .357 (5H/14AB)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🏏 DSN 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.722</td><td>0.333</td><td>5.14</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.7</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>양의지 · 시즌 .253 (50H/198AB, 8HR, 30RBI) · 최근5: .429 (6H/14AB)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 LOT 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>3.94</b> <span style='color:#ef4444;font-size:11px'>▲0.29 vs 전원기준 3.65</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>6</b>명 · 제외 <b style='color:#ef4444'>3</b>명</td></tr>
+    <tr><td>🚫 이진하</td><td style='color:#ef4444'>어제 42구(추정) <span style='color:var(--mute)'>(시즌 2.99)</span></td></tr><tr><td>🚫 김강현</td><td style='color:#ef4444'>어제 42구(추정) <span style='color:var(--mute)'>(시즌 4.05)</span></td></tr><tr><td>🚫 최준용</td><td style='color:#ef4444'>어제 46구(추정) <span style='color:var(--mute)'>(시즌 3.53)</span></td></tr>
+    <tr><td>⚠ 김원중</td><td style='color:#fbbf24'>2연투 → 유효 4.17</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 현도훈 (?)</td><td>ERA 2.81 · 16.0 IP</td></tr><tr><td>⚠ 김원중 (?)</td><td>ERA 4.17 · 18.7 IP</td></tr><tr><td>✅ 홍민기 (?)</td><td>ERA 4.05 · 8.0 IP</td></tr><tr><td>✅ 이승헌 (?)</td><td>ERA 4.24 · 8.0 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 DSN 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>5.06</b> <span style='color:#ef4444;font-size:11px'>▲0.31 vs 전원기준 4.75</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>2</b>명</td></tr>
+    <tr><td>🚫 최준호</td><td style='color:#ef4444'>어제 81구(추정) <span style='color:var(--mute)'>(시즌 4.2)</span></td></tr><tr><td>🚫 김택연</td><td style='color:#ef4444'>어제 93구(추정) <span style='color:var(--mute)'>(시즌 3.02)</span></td></tr>
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 박치국 (?)</td><td>ERA 3.76 · 10.7 IP</td></tr><tr><td>✅ 이영하 (?)</td><td>ERA 4.11 · 9.3 IP</td></tr><tr><td>✅ 김동주 (?)</td><td>ERA 4.5 · 12.0 IP</td></tr><tr><td>✅ 이병헌 (?)</td><td>ERA 4.74 · 8.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">SSG @ LG</span>
+    <span class="meta">2026-06-11T18:30:00 · 잠실 <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>SSG 예상</span><b>6.299</b></div>
+    <div class="row"><span>LG 예상</span><b>4.89</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">11.189</b></div>
+    <div class="row"><span>시장 라인</span><b>9.0</b></div>
+    <div class="row"><span>SSG 승률</span><b>56.6%</b></div>
+    <div class="row"><span>LG 승률</span><b>35.4%</b></div>
+    <div class="row"><span>Park factor</span><b>1.004</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.068</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#10b981">OUT(밀어줌) · 8.4mph</b></div>
+    <div class="row"><span>온도</span><b>70.3°F</b></div>
+    <div class="row"><span>강수</span><b>82.0%</b></div>
+    <div class='row'><span>⛓ Markov SSG</span><b style='color:#10b981'>1.046 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov LG</span><b style='color:#10b981'>1.145 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 LG 선발 김윤식 (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.47</b></td><td>1.63</td><td>5.74</td><td>14.1</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.138 / 0.153 · K-BB% <b style='color:#ef4444'>-0.015</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>0.0</b> · WHIP 0.0 · K/9 3.0 (3.0 IP / 1G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>📌 SSG 선발 김건우 (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.64</b></td><td>1.48</td><td>7.27</td><td>58.2</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.18 / 0.119 · K-BB% <b style='color:#ef4444'>0.061</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>4.91</b> · WHIP 0.45 · K/9 7.36 (11.0 IP / 2G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ LG 타선 vs 김건우 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.356</b> ·
+    매치업 <b style="color:var(--text)">1.01</b> ·
+    platoon 1.045 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>홍창기<span style='color:var(--mute)'>(R)</span></td><td>0.32</td><td>0.377</td><td style='color:#10b981'>+29</td></tr><tr><td>2</td><td>오스틴<span style='color:var(--mute)'>(R)</span></td><td>0.414</td><td>0.49</td><td style='color:#10b981'>+48</td></tr><tr><td>3</td><td>박해민<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.365</td><td style='color:#10b981'>+20</td></tr><tr><td>4</td><td>박동원<span style='color:var(--mute)'>(R)</span></td><td>0.348</td><td>0.401</td><td style='color:#10b981'>+31</td></tr><tr><td>5</td><td>문성주<span style='color:var(--mute)'>(R)</span></td><td>0.352</td><td>0.392</td><td style='color:#10b981'>+23</td></tr><tr><td>6</td><td>신민재<span style='color:var(--mute)'>(R)</span></td><td>0.327</td><td>0.368</td><td style='color:#10b981'>+23</td></tr><tr><td>7</td><td>오지환<span style='color:var(--mute)'>(R)</span></td><td>0.335</td><td>0.376</td><td style='color:#10b981'>+25</td></tr><tr><td>8</td><td>천성호<span style='color:var(--mute)'>(R)</span></td><td>0.353</td><td>0.392</td><td style='color:#10b981'>+25</td></tr><tr><td>9</td><td>문보경<span style='color:var(--mute)'>(R)</span></td><td>0.351</td><td>0.407</td><td style='color:#10b981'>+33</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ SSG 타선 vs 김윤식 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.36</b> ·
+    매치업 <b style="color:var(--text)">0.999</b> ·
+    platoon 1.045 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>박성한<span style='color:var(--mute)'>(R)</span></td><td>0.384</td><td>0.436</td><td style='color:#10b981'>+18</td></tr><tr><td>2</td><td>김재환<span style='color:var(--mute)'>(R)</span></td><td>0.308</td><td>0.348</td><td style='color:#10b981'>+9</td></tr><tr><td>3</td><td>고명준<span style='color:var(--mute)'>(R)</span></td><td>0.387</td><td>0.391</td><td style='color:#ef4444'>-8</td></tr><tr><td>4</td><td>에레디아<span style='color:var(--mute)'>(R)</span></td><td>0.371</td><td>0.371</td><td style='color:#ef4444'>-8</td></tr><tr><td>5</td><td>최지훈<span style='color:var(--mute)'>(R)</span></td><td>0.336</td><td>0.358</td><td style='color:var(--mute)'>+3</td></tr><tr><td>6</td><td>최정<span style='color:var(--mute)'>(R)</span></td><td>0.393</td><td>0.409</td><td style='color:var(--mute)'>-7</td></tr><tr><td>7</td><td>조형우<span style='color:var(--mute)'>(R)</span></td><td>0.313</td><td>0.332</td><td style='color:var(--mute)'>+5</td></tr><tr><td>8</td><td>정준재<span style='color:var(--mute)'>(R)</span></td><td>0.349</td><td>0.369</td><td style='color:#10b981'>+13</td></tr><tr><td>9</td><td>김성욱<span style='color:var(--mute)'>(R)</span></td><td>0.324</td><td>0.364</td><td style='color:#10b981'>+11</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 LG 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.75</td><td>0.353</td><td>5.34</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:#10b981'>5.9</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>오스틴 · 시즌 .343 (84H/245AB, 19HR, 55RBI) · 최근5: .421 (8H/19AB)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🏏 SSG 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.757</td><td>0.357</td><td>5.39</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>5.2</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>김성욱 · 시즌 .296 (16H/54AB, 1HR, 6RBI) · 최근5: .600 (6H/10AB)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 LG 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.8</b> <span style='color:#ef4444;font-size:11px'>▲0.30 vs 전원기준 4.5</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>6</b>명 · 제외 <b style='color:#ef4444'>4</b>명</td></tr>
+    <tr><td>🚫 김영우</td><td style='color:#ef4444'>어제 54구(추정) <span style='color:var(--mute)'>(시즌 3.6)</span></td></tr><tr><td>🚫 리오스</td><td style='color:#ef4444'>어제 58구(추정) <span style='color:var(--mute)'>(시즌 4.5)</span></td></tr><tr><td>🚫 김진성</td><td style='color:#ef4444'>어제 74구(추정) <span style='color:var(--mute)'>(시즌 3.32)</span></td></tr><tr><td>🚫 함덕주</td><td style='color:#ef4444'>어제 66구(추정) <span style='color:var(--mute)'>(시즌 5.01)</span></td></tr>
+    <tr><td>⚠ 손주영</td><td style='color:#fbbf24'>어제 39구(추정) → 유효 2.76</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>⚠ 손주영 (?)</td><td>ERA 2.76 · 12.0 IP</td></tr><tr><td>✅ 김진수 (?)</td><td>ERA 4.33 · 8.0 IP</td></tr><tr><td>✅ 박시원 (?)</td><td>ERA 4.44 · 8.0 IP</td></tr><tr><td>✅ 우강훈 (?)</td><td>ERA 4.8 · 17.3 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 SSG 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>3.81</b> <span style='color:#10b981;font-size:11px'>▼0.80 vs 전원기준 4.61</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>3</b>명</td></tr>
+    <tr><td>🚫 이로운</td><td style='color:#ef4444'>어제 54구(추정) <span style='color:var(--mute)'>(시즌 4.86)</span></td></tr><tr><td>🚫 김민</td><td style='color:#ef4444'>어제 85구(추정) <span style='color:var(--mute)'>(시즌 4.41)</span></td></tr><tr><td>🚫 전영준</td><td style='color:#ef4444'>어제 117구(추정) <span style='color:var(--mute)'>(시즌 8.12)</span></td></tr>
+    <tr><td>⚠ 이건욱</td><td style='color:#fbbf24'>2연투 → 유효 2.4</td></tr>
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>⚠ 이건욱 (?)</td><td>ERA 2.4 · 16.0 IP</td></tr><tr><td>✅ 문승원 (?)</td><td>ERA 3.07 · 8.0 IP</td></tr><tr><td>✅ 최용준 (?)</td><td>ERA 3.34 · 12.0 IP</td></tr><tr><td>✅ 조병현 (?)</td><td>ERA 4.13 · 8.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">SAM @ KT</span>
+    <span class="meta">2026-06-11T18:30:00 · 수원 <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>SAM 예상</span><b>4.617</b></div>
+    <div class="row"><span>KT 예상</span><b>4.699</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">9.316</b></div>
+    <div class="row"><span>시장 라인</span><b>10.5</b></div>
+    <div class="row"><span>SAM 승률</span><b>44.8%</b></div>
+    <div class="row"><span>KT 승률</span><b>45.9%</b></div>
+    <div class="row"><span>Park factor</span><b>1.056</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.056</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#10b981">OUT(밀어줌) · 8.5mph</b></div>
+    <div class="row"><span>온도</span><b>66.7°F</b></div>
+    <div class="row"><span>강수</span><b>14.0%</b></div>
+    <div class='row'><span>⛓ Markov SAM</span><b style='color:#10b981'>1.384 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov KT</span><b style='color:#10b981'>1.043 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 KT 선발 스기모토 (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>6.48</b></td><td>1.68</td><td>7.56</td><td>25.0</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.179 / 0.034 · K-BB% <b style='color:var(--text)'>0.145</b></td></tr>
+    
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>📌 SAM 선발 오러클린 (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.27</b></td><td>1.29</td><td>9.28</td><td>61.1</td></tr>
+    
+    <tr><td>K% / BB%</td><td colspan='4'>0.24 / 0.099 · K-BB% <b style='color:var(--text)'>0.141</b></td></tr>
+    <tr><td>vs 오늘 상대</td><td colspan='4'>ERA <b>3.0</b> · WHIP 0.33 · K/9 7.5 (6.0 IP / 1G)</td></tr>
+    <tr><td>주력 구종</td><td colspan='4'>? 0.0% · ? 0.0% · ? 0.0%</td></tr>
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ KT 타선 vs 오러클린 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.363</b> ·
+    매치업 <b style="color:var(--text)">0.996</b> ·
+    platoon 1.045 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>최원준<span style='color:var(--mute)'>(R)</span></td><td>0.398</td><td>0.391</td><td style='color:#ef4444'>-33</td></tr><tr><td>2</td><td>힐리어드<span style='color:var(--mute)'>(R)</span></td><td>0.365</td><td>0.349</td><td style='color:#ef4444'>-36</td></tr><tr><td>3</td><td>김현수<span style='color:var(--mute)'>(R)</span></td><td>0.342</td><td>0.336</td><td style='color:#ef4444'>-29</td></tr><tr><td>4</td><td>안현민<span style='color:var(--mute)'>(R)</span></td><td>0.368</td><td>0.354</td><td style='color:#ef4444'>-32</td></tr><tr><td>5</td><td>장성우<span style='color:var(--mute)'>(R)</span></td><td>0.375</td><td>0.356</td><td style='color:#ef4444'>-34</td></tr><tr><td>6</td><td>이강민<span style='color:var(--mute)'>(R)</span></td><td>0.337</td><td>0.312</td><td style='color:#ef4444'>-31</td></tr><tr><td>7</td><td>김상수<span style='color:var(--mute)'>(R)</span></td><td>0.336</td><td>0.346</td><td style='color:#ef4444'>-22</td></tr><tr><td>8</td><td>류현인<span style='color:var(--mute)'>(R)</span></td><td>0.338</td><td>0.318</td><td style='color:#ef4444'>-30</td></tr><tr><td>9</td><td>한승택<span style='color:var(--mute)'>(R)</span></td><td>0.323</td><td>0.318</td><td style='color:#ef4444'>-28</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ SAM 타선 vs 스기모토 <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.343</b> ·
+    매치업 <b style="color:var(--text)">0.992</b> ·
+    platoon 0.97 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 80%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>디아즈<span style='color:var(--mute)'>(R)</span></td><td>0.357</td><td>0.411</td><td style='color:#10b981'>+50</td></tr><tr><td>2</td><td>구자욱<span style='color:var(--mute)'>(R)</span></td><td>0.346</td><td>0.392</td><td style='color:#10b981'>+55</td></tr><tr><td>3</td><td>최형우<span style='color:var(--mute)'>(R)</span></td><td>0.378</td><td>0.433</td><td style='color:#10b981'>+42</td></tr><tr><td>4</td><td>김지찬<span style='color:var(--mute)'>(R)</span></td><td>0.338</td><td>0.388</td><td style='color:#10b981'>+45</td></tr><tr><td>5</td><td>류지혁<span style='color:var(--mute)'>(R)</span></td><td>0.364</td><td>0.412</td><td style='color:#10b981'>+52</td></tr><tr><td>6</td><td>김영웅<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.374</td><td style='color:#10b981'>+57</td></tr><tr><td>7</td><td>이재현<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.376</td><td style='color:#10b981'>+45</td></tr><tr><td>8</td><td>김성윤<span style='color:var(--mute)'>(R)</span></td><td>0.367</td><td>0.411</td><td style='color:#10b981'>+66</td></tr><tr><td>9</td><td>강민호<span style='color:var(--mute)'>(R)</span></td><td>0.32</td><td>0.363</td><td style='color:#10b981'>+56</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 KT 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.773</td><td>0.36</td><td>5.5</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.2</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>최원준 · 시즌 .385 (95H/247AB, 5HR, 37RBI) · 최근5: .421 (8H/19AB)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🏏 SAM 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.779</td><td>0.345</td><td>5.54</td></tr>
+    <tr><td>최근 5경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.9</b> · 0승 0패</td></tr>
+    <tr><td>vs LHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs RHP</td><td colspan='3' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>🌟 핵심타자</td><td colspan='3'>김지찬 · 시즌 .294 (55H/187AB, 0HR, 15RBI) · 최근5: .389 (7H/18AB)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 KT 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.7</b> <span style='color:#ef4444;font-size:11px'>▲0.36 vs 전원기준 4.34</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>5</b>명 · 제외 <b style='color:#ef4444'>3</b>명</td></tr>
+    <tr><td>🚫 손동현</td><td style='color:#ef4444'>어제 58구(추정) <span style='color:var(--mute)'>(시즌 3.32)</span></td></tr><tr><td>🚫 한승혁</td><td style='color:#ef4444'>어제 101구(추정) <span style='color:var(--mute)'>(시즌 4.54)</span></td></tr><tr><td>🚫 박영현</td><td style='color:#ef4444'>어제 101구(추정) <span style='color:var(--mute)'>(시즌 4.0)</span></td></tr>
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 주권 (?)</td><td>ERA 4.08 · 8.0 IP</td></tr><tr><td>✅ 전용주 (?)</td><td>ERA 4.4 · 8.0 IP</td></tr><tr><td>✅ 이상동 (?)</td><td>ERA 4.5 · 8.0 IP</td></tr><tr><td>✅ 김민수 (?)</td><td>ERA 4.76 · 8.0 IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 SAM 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.67</b> <span style='color:#ef4444;font-size:11px'>▲0.32 vs 전원기준 4.35</span></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>6</b>명 · 제외 <b style='color:#ef4444'>3</b>명</td></tr>
+    <tr><td>🚫 배찬승</td><td style='color:#ef4444'>어제 46구(추정) <span style='color:var(--mute)'>(시즌 3.6)</span></td></tr><tr><td>🚫 이승민</td><td style='color:#ef4444'>어제 50구(추정) <span style='color:var(--mute)'>(시즌 3.33)</span></td></tr><tr><td>🚫 김재윤</td><td style='color:#ef4444'>어제 89구(추정) <span style='color:var(--mute)'>(시즌 4.16)</span></td></tr>
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ 이재희 (?)</td><td>ERA 3.6 · 8.0 IP</td></tr><tr><td>✅ 최지광 (?)</td><td>ERA 4.34 · 8.0 IP</td></tr><tr><td>✅ 임기영 (?)</td><td>ERA 4.45 · 8.0 IP</td></tr><tr><td>✅ 이승현 (?)</td><td>ERA 4.94 · 8.0 IP</td></tr>
+  </table>
+</div></div>
+  
+</div>
+  </section>
+
+  <footer>
+    Generated 2026-06-11 04:12 KST · KBO Quant v5 · raw-pred / learn-corrected / mu-clamped
+  </footer>
+</div>
+</body></html>

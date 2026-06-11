@@ -1,0 +1,1866 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>MLB Quant · 2026-06-11</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --bg2: #141a32;
+  --bg3: #1c2444;
+  --border: #1f2a4a;
+  --text: #e8ecf3;
+  --mute: #94a3b8;
+  --accent: #60a5fa;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--text);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 18px 14px 80px; }
+header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+header h1 { font-size: 22px; margin: 0; letter-spacing: -0.02em; }
+header .ts { color: var(--mute); font-size: 12px; }
+.learn-box {
+  background: var(--bg2); border-radius: 10px; padding: 10px 14px;
+  margin-bottom: 16px; font-size: 13px; color: var(--mute);
+  display: flex; flex-wrap: wrap; gap: 14px;
+}
+.learn-box b { color: var(--text); }
+
+/* TOP picks grid (모바일=1열, 태블릿=2열) */
+.top-section { margin-bottom: 22px; }
+.top-section h2 {
+  font-size: 16px; margin: 0 0 10px;
+  color: var(--text); display: flex; align-items: center; gap: 8px;
+}
+.top-section h2 .ico { font-size: 18px; }
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 720px) {
+  .top-grid { grid-template-columns: 1fr 1fr; }
+  .top-section.full .top-grid { grid-template-columns: 1fr; }
+}
+
+/* Pick card */
+.pick-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 12px;
+  display: grid; grid-template-columns: 32px 1fr auto; gap: 10px; align-items: center;
+}
+.pick-rank {
+  font-weight: 700; font-size: 16px; color: var(--mute);
+  text-align: center;
+}
+.pick-main { min-width: 0; }
+.pick-matchup { font-size: 13px; color: var(--mute); margin-bottom: 2px; }
+.pick-label { font-weight: 600; font-size: 15px; color: var(--text); }
+.pick-meta { font-size: 11px; color: var(--mute); margin-top: 2px; }
+.pick-stats { display: flex; gap: 12px; }
+.stat { display: flex; flex-direction: column; align-items: flex-end; }
+.stat-val { font-weight: 700; font-size: 15px; line-height: 1.1; }
+.stat-lbl { font-size: 10px; color: var(--mute); text-transform: uppercase; }
+.empty { color: var(--mute); text-align: center; padding: 20px; font-size: 13px; }
+
+/* Game card */
+.game-section { margin-top: 28px; }
+.game-section h2 { font-size: 16px; margin: 0 0 12px; }
+.game {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 14px; margin-bottom: 14px;
+}
+.game-hdr {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.game-hdr .teams { font-weight: 700; font-size: 17px; }
+.game-hdr .meta { font-size: 12px; color: var(--mute); }
+.game-stats {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 16px;
+  margin-bottom: 10px;
+}
+@media (min-width: 480px) {
+  .game-stats { grid-template-columns: repeat(3, 1fr); }
+}
+.game-stats .row {
+  display: flex; justify-content: space-between;
+  font-size: 13px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.05);
+}
+.game-stats .row span:first-child { color: var(--mute); }
+.game-stats .row b { color: var(--text); font-weight: 600; }
+.split-box {
+  background: var(--bg3); border-radius: 8px; padding: 10px 12px; margin-top: 10px;
+}
+.split-box h3 { font-size: 13px; margin: 0 0 6px; color: var(--accent); }
+.split-box table { width: 100%; font-size: 12px; border-collapse: collapse; }
+.split-box table td, .split-box table th {
+  padding: 3px 4px; text-align: left;
+}
+.split-box table th { color: var(--mute); font-weight: 500; font-size: 11px; }
+.split-box table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+.two-col { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 600px) { .two-col { grid-template-columns: 1fr 1fr; } }
+.warn { color: #fbbf24; }
+.good { color: #10b981; }
+.bad  { color: #ef4444; }
+
+footer {
+  margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--border);
+  color: var(--mute); font-size: 11px; text-align: center;
+}
+</style></head>
+<body>
+<div class="container">
+  <header>
+    <h1>⚾️ MLB Quant · 2026-06-11</h1>
+    <span class="ts">2026-06-11 08:55 KST</span>
+  </header>
+  <div class="learn-box">
+  <span>📚 학습 baseline: <b>4.64</b> RPG (n=359)</span>
+  <span>· 최근 bias: <b>0.841</b></span>
+  <span>· MAE: <b>2.481</b></span>
+</div>
+
+  <section class="top-section">
+    <h2><span class="ico">📊</span> 토탈 확률 TOP 10 <span style="color:var(--mute);font-size:13px;font-weight:400">(Over/Under 가장 확신)</span></h2>
+    <div class="top-grid">
+      <div class="pick-card">
+  <div class="pick-rank">#1</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SEA @ BAL</div>
+    <div class="pick-label">Over 5.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#10b981">92.7%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+77.1%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#2</div>
+  <div class="pick-main">
+    <div class="pick-matchup">PHI @ TOR</div>
+    <div class="pick-label">Over 7.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#10b981">88.0%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+68.0%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#3</div>
+  <div class="pick-main">
+    <div class="pick-matchup">LAD @ PIT</div>
+    <div class="pick-label">Over 6.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#10b981">87.6%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+67.4%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#4</div>
+  <div class="pick-main">
+    <div class="pick-matchup">AZ @ MIA</div>
+    <div class="pick-label">Over 6.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#22c55e">82.7%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+58.0%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#5</div>
+  <div class="pick-main">
+    <div class="pick-matchup">CHC @ COL</div>
+    <div class="pick-label">Over 12.0</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#22c55e">74.1%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+41.6%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#6</div>
+  <div class="pick-main">
+    <div class="pick-matchup">ATL @ CWS</div>
+    <div class="pick-label">Over 7.0</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#22c55e">73.7%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+40.7%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#7</div>
+  <div class="pick-main">
+    <div class="pick-matchup">MIN @ DET</div>
+    <div class="pick-label">Over 8.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">60.4%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#22c55e">+15.3%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#8</div>
+  <div class="pick-main">
+    <div class="pick-matchup">STL @ NYM</div>
+    <div class="pick-label">Under 9.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">53.0%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#facc15">+1.2%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#9</div>
+  <div class="pick-main">
+    <div class="pick-matchup">HOU @ LAA</div>
+    <div class="pick-label">Over 8.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">52.8%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#facc15">+0.8%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#10</div>
+  <div class="pick-main">
+    <div class="pick-matchup">MIL @ ATH</div>
+    <div class="pick-label">Over 14.5</div>
+    <div class="pick-meta">RotoWire/FD @ 1.91</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">52.2%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-0.2%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="top-section">
+    <h2><span class="ico">🎯</span> 머니라인 확률 TOP 10 <span style="color:var(--mute);font-size:13px;font-weight:400">(승부 가장 확신)</span></h2>
+    <div class="top-grid">
+      <div class="pick-card">
+  <div class="pick-rank">#1</div>
+  <div class="pick-main">
+    <div class="pick-matchup">TEX @ KC</div>
+    <div class="pick-label">TEX ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.893</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#22c55e">75.4%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+42.7%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#2</div>
+  <div class="pick-main">
+    <div class="pick-matchup">SEA @ BAL</div>
+    <div class="pick-label">BAL ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.758</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#22c55e">73.5%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+29.2%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#3</div>
+  <div class="pick-main">
+    <div class="pick-matchup">HOU @ LAA</div>
+    <div class="pick-label">LAA ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.833</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">67.8%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+24.2%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#4</div>
+  <div class="pick-main">
+    <div class="pick-matchup">MIL @ ATH</div>
+    <div class="pick-label">ATH ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.893</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#84cc16">61.7%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#22c55e">+16.9%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#5</div>
+  <div class="pick-main">
+    <div class="pick-matchup">AZ @ MIA</div>
+    <div class="pick-label">AZ ML</div>
+    <div class="pick-meta">RotoWire/FD @ 2.215</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#facc15">59.4%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+31.6%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#6</div>
+  <div class="pick-main">
+    <div class="pick-matchup">ATL @ CWS</div>
+    <div class="pick-label">ATL ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.676</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#facc15">59.2%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-0.8%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#7</div>
+  <div class="pick-main">
+    <div class="pick-matchup">MIN @ DET</div>
+    <div class="pick-label">DET ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.532</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#facc15">57.2%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-12.4%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#8</div>
+  <div class="pick-main">
+    <div class="pick-matchup">CHC @ COL</div>
+    <div class="pick-label">CHC ML</div>
+    <div class="pick-meta">RotoWire/FD @ 1.581</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">53.3%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#94a3b8">-15.7%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#9</div>
+  <div class="pick-main">
+    <div class="pick-matchup">STL @ NYM</div>
+    <div class="pick-label">NYM ML</div>
+    <div class="pick-meta">RotoWire/FD @ 3.024</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">51.6%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+56.1%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+<div class="pick-card">
+  <div class="pick-rank">#10</div>
+  <div class="pick-main">
+    <div class="pick-matchup">PHI @ TOR</div>
+    <div class="pick-label">TOR ML</div>
+    <div class="pick-meta">RotoWire/FD @ 2.534</div>
+  </div>
+  <div class="pick-stats">
+    <div class="stat"><span class="stat-val" style="color:#fbbf24">50.9%</span><span class="stat-lbl">확률</span></div>
+    <div class="stat"><span class="stat-val" style="color:#10b981">+28.9%</span><span class="stat-lbl">EV</span></div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="game-section">
+    <h2>🔍 게임별 상세 분석</h2>
+    <div class="game">
+  <div class="game-hdr">
+    <span class="teams">SEA @ BAL</span>
+    <span class="meta">06/11 07:35 KST · Oriole Park at Camden Yards <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>SEA 예상</span><b>3.897</b></div>
+    <div class="row"><span>BAL 예상</span><b>7.002</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">10.899</b></div>
+    <div class="row"><span>시장 라인</span><b>5.5</b></div>
+    <div class="row"><span>SEA 승률</span><b>26.5%</b></div>
+    <div class="row"><span>BAL 승률</span><b>73.5%</b></div>
+    <div class="row"><span>Park factor</span><b>1.06</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">내야 바람 (in) · 3.9mph</b></div>
+    <div class="row"><span>온도</span><b>76.4°F</b></div>
+    <div class="row"><span>강수</span><b>18.0%</b></div>
+    <div class='row'><span>⛓ Markov SEA</span><b style='color:#10b981'>1.091 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov BAL</span><b style='color:#10b981'>1.108 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 BAL 선발 Brandon Young (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.15</b></td><td>1.27</td><td>6.957</td><td>54.33</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#10b981'><b>2.5</b></td><td>1.0</td><td>8.0</td><td>18.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.67 · WHIP 1.13 (31.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.772 · WHIP 1.69 (18.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.749 · WHIP 1.41 (28.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.657 · WHIP 1.24 (21.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.961</b> (hand × venue × time = 1.002 × 1.02 × 0.941)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 SEA 선발 George Kirby (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.83</b></td><td>1.29</td><td>7.652</td><td>82.33</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#ef4444'><b>5.14</b></td><td>1.64</td><td>9.64</td><td>14.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.679 · WHIP 1.27 (41.67 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.722 · WHIP 1.31 (36.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.723 · WHIP 1.27 (47.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.665 · WHIP 1.3 (30.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.887</b> (hand × venue × time = 0.993 × 0.961 × 0.93)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ BAL 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.329</b> ·
+    매치업 <b style="color:#ef4444">0.988</b> ·
+    platoon 1.001 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Taylor<span style='color:var(--mute)'>(R)</span></td><td>0.343</td><td>0.344</td><td style='color:var(--mute)'>-0</td></tr><tr><td>2</td><td>Gunnar<span style='color:var(--mute)'>(L)</span></td><td>0.321</td><td>0.337</td><td style='color:var(--mute)'>-0</td></tr><tr><td>3</td><td>Pete A<span style='color:var(--mute)'>(R)</span></td><td>0.33</td><td>0.321</td><td style='color:var(--mute)'>-5</td></tr><tr><td>4</td><td>Adley <span style='color:var(--mute)'>(S)</span></td><td>0.334</td><td>0.367</td><td style='color:var(--mute)'>+3</td></tr><tr><td>5</td><td>Leody <span style='color:var(--mute)'>(S)</span></td><td>0.287</td><td>0.349</td><td style='color:#10b981'>+13</td></tr><tr><td>6</td><td>Samuel<span style='color:var(--mute)'>(L)</span></td><td>0.335</td><td>0.361</td><td style='color:var(--mute)'>+2</td></tr><tr><td>7</td><td>Coby M<span style='color:var(--mute)'>(R)</span></td><td>0.313</td><td>0.296</td><td style='color:var(--mute)'>-4</td></tr><tr><td>8</td><td>Jeremi<span style='color:var(--mute)'>(R)</span></td><td>0.309</td><td>0.31</td><td style='color:#10b981'>+14</td></tr><tr><td>9</td><td>Blaze <span style='color:var(--mute)'>(R)</span></td><td>0.347</td><td>0.323</td><td style='color:#10b981'>+15</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ SEA 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.334</b> ·
+    매치업 <b style="color:var(--text)">0.997</b> ·
+    platoon 1.01 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Julio <span style='color:var(--mute)'>(R)</span></td><td>0.33</td><td>0.325</td><td style='color:var(--mute)'>+2</td></tr><tr><td>2</td><td>Randy <span style='color:var(--mute)'>(R)</span></td><td>0.35</td><td>0.35</td><td style='color:var(--mute)'>+4</td></tr><tr><td>3</td><td>Josh N<span style='color:var(--mute)'>(L)</span></td><td>0.32</td><td>0.345</td><td style='color:var(--mute)'>+4</td></tr><tr><td>4</td><td>Cole Y<span style='color:var(--mute)'>(L)</span></td><td>0.306</td><td>0.335</td><td style='color:var(--mute)'>+5</td></tr><tr><td>5</td><td>Luke R<span style='color:var(--mute)'>(L)</span></td><td>0.33</td><td>0.363</td><td style='color:var(--mute)'>-0</td></tr><tr><td>6</td><td>Domini<span style='color:var(--mute)'>(L)</span></td><td>0.388</td><td>0.371</td><td style='color:var(--mute)'>+2</td></tr><tr><td>7</td><td>Mitch <span style='color:var(--mute)'>(R)</span></td><td>0.307</td><td>0.316</td><td style='color:var(--mute)'>+1</td></tr><tr><td>8</td><td>Rob Re<span style='color:var(--mute)'>(R)</span></td><td>0.277</td><td>0.278</td><td style='color:var(--mute)'>+1</td></tr><tr><td>9</td><td>Colt E<span style='color:var(--mute)'>(L)</span></td><td>0.343</td><td>0.35</td><td style='color:var(--mute)'>+1</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 BAL 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.717</td><td>0.327</td><td>4.59</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.93</b> · OPS 0.748</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.671 · wOBA 0.315 (763.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.737 · wOBA 0.315 (1826.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 SEA 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.715</td><td>0.331</td><td>4.2</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.44</b> · OPS 0.749</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.623 · wOBA 0.315 (767.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.759 · wOBA 0.315 (1810.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 BAL 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>4.34</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Rico Garcia (?)</td><td>ERA 2.29 · None IP</td></tr><tr><td>✅ Anthony Nunez (?)</td><td>ERA 5.87 · None IP</td></tr><tr><td>✅ Tyler Wells (?)</td><td>ERA 5.38 · None IP</td></tr><tr><td>✅ Grant Wolfram (?)</td><td>ERA 2.53 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 SEA 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.51</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Andrés Muñoz (?)</td><td>ERA 5.85 · None IP</td></tr><tr><td>✅ José A. Ferrer (?)</td><td>ERA 2.7 · None IP</td></tr><tr><td>✅ Eduard Bazardo (?)</td><td>ERA 2.55 · None IP</td></tr><tr><td>✅ Gabe Speier (?)</td><td>ERA 1.3 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 BAL 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>44% / 56% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.091</td></tr><tr><td>삼진% / 볼넷%</td><td>18% / 8%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>10.3%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.006 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.002</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 SEA 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>58% / 42% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.101</td></tr><tr><td>삼진% / 볼넷%</td><td>20% / 6%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>14.6%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.009 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.016</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">LAD @ PIT</span>
+    <span class="meta">06/11 07:40 KST · PNC Park <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>LAD 예상</span><b>7.667</b></div>
+    <div class="row"><span>PIT 예상</span><b>3.126</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">10.793</b></div>
+    <div class="row"><span>시장 라인</span><b>6.5</b></div>
+    <div class="row"><span>LAD 승률</span><b>81.9%</b></div>
+    <div class="row"><span>PIT 승률</span><b>18.1%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">내야 바람 (in) · 11.9mph</b></div>
+    <div class="row"><span>온도</span><b>86.8°F</b></div>
+    <div class="row"><span>강수</span><b>8.0%</b></div>
+    <div class='row'><span>⛓ Markov LAD</span><b style='color:#10b981'>1.274 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov PIT</span><b style='color:#ef4444'>0.62 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 PIT 선발 Jared Jones (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.73</b></td><td>1.43</td><td>9.45</td><td>13.33</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>4.73</b></td><td>1.43</td><td>9.45</td><td>13.3</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.295 · WHIP 0.67 (6.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.602 · WHIP 1.2 (5.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.05</b> (hand × venue × time = 0.973 × 1.0 × 1.08)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 LAD 선발 Shohei Ohtani (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>0.7</b></td><td>0.79</td><td>9.742</td><td>64.67</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#10b981'><b>1.15</b></td><td>0.77</td><td>9.19</td><td>15.7</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.425 · WHIP 0.76 (31.67 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.445 · WHIP 0.82 (29.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.399 · WHIP 0.84 (31.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.467 · WHIP 0.73 (30.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.88</b> (hand × venue × time = 0.95 × 0.93 × 0.93)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ PIT 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.334</b> ·
+    매치업 <b style="color:#ef4444">0.982</b> ·
+    platoon 1.022 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Bryan <span style='color:var(--mute)'>(S)</span></td><td>0.362</td><td>0.236</td><td style='color:#ef4444'>-144</td></tr><tr><td>2</td><td>Brando<span style='color:var(--mute)'>(L)</span></td><td>0.326</td><td>0.208</td><td style='color:#ef4444'>-167</td></tr><tr><td>3</td><td>Nick G<span style='color:var(--mute)'>(R)</span></td><td>0.332</td><td>0.189</td><td style='color:#ef4444'>-126</td></tr><tr><td>4</td><td>Spence<span style='color:var(--mute)'>(L)</span></td><td>0.351</td><td>0.227</td><td style='color:#ef4444'>-154</td></tr><tr><td>5</td><td>Ryan O<span style='color:var(--mute)'>(L)</span></td><td>0.345</td><td>0.21</td><td style='color:#ef4444'>-163</td></tr><tr><td>6</td><td>Marcel<span style='color:var(--mute)'>(R)</span></td><td>0.29</td><td>0.171</td><td style='color:#ef4444'>-120</td></tr><tr><td>7</td><td>Jake M<span style='color:var(--mute)'>(S)</span></td><td>0.333</td><td>0.198</td><td style='color:#ef4444'>-134</td></tr><tr><td>8</td><td>Jared <span style='color:var(--mute)'>(R)</span></td><td>0.282</td><td>0.173</td><td style='color:#ef4444'>-114</td></tr><tr><td>9</td><td>Endy R<span style='color:var(--mute)'>(S)</span></td><td>0.302</td><td>0.211</td><td style='color:#ef4444'>-137</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ LAD 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.355</b> ·
+    매치업 <b style="color:var(--text)">1.005</b> ·
+    platoon 1.022 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Shohei<span style='color:var(--mute)'>(L)</span></td><td>0.392</td><td>0.422</td><td style='color:#10b981'>+18</td></tr><tr><td>2</td><td>Freddi<span style='color:var(--mute)'>(L)</span></td><td>0.362</td><td>0.395</td><td style='color:#10b981'>+17</td></tr><tr><td>3</td><td>Andy P<span style='color:var(--mute)'>(R)</span></td><td>0.333</td><td>0.356</td><td style='color:#10b981'>+17</td></tr><tr><td>4</td><td>Kyle T<span style='color:var(--mute)'>(L)</span></td><td>0.306</td><td>0.358</td><td style='color:#10b981'>+15</td></tr><tr><td>5</td><td>Max Mu<span style='color:var(--mute)'>(L)</span></td><td>0.368</td><td>0.407</td><td style='color:#10b981'>+19</td></tr><tr><td>6</td><td>Will S<span style='color:var(--mute)'>(R)</span></td><td>0.319</td><td>0.337</td><td style='color:#10b981'>+15</td></tr><tr><td>7</td><td>Alex F<span style='color:var(--mute)'>(S)</span></td><td>0.335</td><td>0.355</td><td style='color:#10b981'>+15</td></tr><tr><td>8</td><td>Mookie<span style='color:var(--mute)'>(R)</span></td><td>0.29</td><td>0.31</td><td style='color:#10b981'>+14</td></tr><tr><td>9</td><td>Dalton<span style='color:var(--mute)'>(L)</span></td><td>0.366</td><td>0.396</td><td style='color:#10b981'>+18</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 PIT 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.733</td><td>0.331</td><td>4.96</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.85</b> · OPS 0.743</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.672 · wOBA 0.315 (743.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.756 · wOBA 0.315 (1886.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 LAD 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.787</td><td>0.349</td><td>5.28</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:#10b981'>5.67</b> · OPS 0.802</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.739 · wOBA 0.315 (668.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.805 · wOBA 0.315 (1905.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 PIT 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>3.92</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>6</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Gregory Soto (?)</td><td>ERA 4.39 · None IP</td></tr><tr><td>✅ Dennis Santana (?)</td><td>ERA 5.11 · None IP</td></tr><tr><td>✅ Yohan Ramírez (?)</td><td>ERA 4.5 · None IP</td></tr><tr><td>✅ Evan Sisk (?)</td><td>ERA 0.77 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 LAD 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>4.01</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Tanner Scott (?)</td><td>ERA 5.16 · None IP</td></tr><tr><td>✅ Alex Vesia (?)</td><td>ERA 3.68 · None IP</td></tr><tr><td>✅ Kyle Hurt (?)</td><td>ERA 4.71 · None IP</td></tr><tr><td>✅ Blake Treinen (?)</td><td>ERA 3.96 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 PIT 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼/뜬공 성향</td><td style='color:var(--mute)'>표본 부족</td></tr><tr><td>삼진% / 볼넷%</td><td>24% / 9%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>15.5%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:#10b981'>-0.019 <span style='font-size:11px'>안전</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.013</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 LAD 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>52% / 48% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.034</td></tr><tr><td>삼진% / 볼넷%</td><td>28% / 8%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>20.1%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.0 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.007</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">MIN @ DET</span>
+    <span class="meta">06/11 07:40 KST · Comerica Park <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>MIN 예상</span><b>4.201</b></div>
+    <div class="row"><span>DET 예상</span><b>5.036</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">9.237</b></div>
+    <div class="row"><span>시장 라인</span><b>8.5</b></div>
+    <div class="row"><span>MIN 승률</span><b>42.8%</b></div>
+    <div class="row"><span>DET 승률</span><b>57.2%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#10b981">외야 강한 바람 (OUT) · 7.4mph</b></div>
+    <div class="row"><span>온도</span><b>83.2°F</b></div>
+    <div class="row"><span>강수</span><b>28.0%</b></div>
+    <div class='row'><span>⛓ Markov MIN</span><b style='color:#10b981'>1.306 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov DET</span><b style='color:#10b981'>1.203 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 DET 선발 Framber Valdez (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.15</b></td><td>1.32</td><td>7.33</td><td>73.67</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>3.55</b></td><td>1.26</td><td>7.11</td><td>12.7</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.695 · WHIP 1.29 (19.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.684 · WHIP 1.33 (53.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.715 · WHIP 1.42 (26.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.671 · WHIP 1.26 (46.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.021</b> (hand × venue × time = 0.987 × 0.997 × 1.038)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 MIN 선발 Mike Paredes (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.91</b></td><td>1.09</td><td>4.909</td><td>7.33</td></tr>
+    <tr><td>최근 0경기</td><td style='color:var(--text)'><b>—</b></td><td>—</td><td>—</td><td>—</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.571 · WHIP 1.0 (5.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.978</b> (hand × venue × time = 0.978 × 1.0 × 1.0)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ DET 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.317</b> ·
+    매치업 <b style="color:var(--text)">1.003</b> ·
+    platoon 1.01 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Kevin <span style='color:var(--mute)'>(L)</span></td><td>0.333</td><td>0.363</td><td style='color:#ef4444'>-8</td></tr><tr><td>2</td><td>Riley <span style='color:var(--mute)'>(L)</span></td><td>0.36</td><td>0.376</td><td style='color:#ef4444'>-9</td></tr><tr><td>3</td><td>Spence<span style='color:var(--mute)'>(R)</span></td><td>0.314</td><td>0.313</td><td style='color:var(--mute)'>-4</td></tr><tr><td>4</td><td>Dillon<span style='color:var(--mute)'>(R)</span></td><td>0.381</td><td>0.341</td><td style='color:var(--mute)'>-4</td></tr><tr><td>5</td><td>Colt K<span style='color:var(--mute)'>(L)</span></td><td>0.272</td><td>0.303</td><td style='color:#ef4444'>-12</td></tr><tr><td>6</td><td>Matt V<span style='color:var(--mute)'>(R)</span></td><td>0.286</td><td>0.281</td><td style='color:var(--mute)'>-7</td></tr><tr><td>7</td><td>Gleybe<span style='color:var(--mute)'>(R)</span></td><td>0.338</td><td>0.328</td><td style='color:var(--mute)'>-6</td></tr><tr><td>8</td><td>Wencee<span style='color:var(--mute)'>(S)</span></td><td>0.316</td><td>0.304</td><td style='color:var(--mute)'>-7</td></tr><tr><td>9</td><td>Zach M<span style='color:var(--mute)'>(L)</span></td><td>0.295</td><td>0.299</td><td style='color:var(--mute)'>-7</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ MIN 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.293</b> ·
+    매치업 <b style="color:var(--text)">1.002</b> ·
+    platoon 1.034 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Josh B<span style='color:var(--mute)'>(S)</span></td><td>0.331</td><td>0.332</td><td style='color:var(--mute)'>+8</td></tr><tr><td>2</td><td>Byron <span style='color:var(--mute)'>(R)</span></td><td>0.346</td><td>0.376</td><td style='color:var(--mute)'>-5</td></tr><tr><td>3</td><td>Luke K<span style='color:var(--mute)'>(R)</span></td><td>0.304</td><td>0.342</td><td style='color:#10b981'>+16</td></tr><tr><td>4</td><td>Brooks<span style='color:var(--mute)'>(S)</span></td><td>0.314</td><td>0.342</td><td style='color:var(--mute)'>+4</td></tr><tr><td>5</td><td>Austin<span style='color:var(--mute)'>(R)</span></td><td>0.282</td><td>0.359</td><td style='color:#10b981'>+15</td></tr><tr><td>6</td><td>Kody C<span style='color:var(--mute)'>(L)</span></td><td>0.354</td><td>0.327</td><td style='color:var(--mute)'>+5</td></tr><tr><td>7</td><td>Trevor<span style='color:var(--mute)'>(L)</span></td><td>0.321</td><td>0.341</td><td style='color:#10b981'>+13</td></tr><tr><td>8</td><td>Victor<span style='color:var(--mute)'>(S)</span></td><td>0.319</td><td>0.335</td><td style='color:#10b981'>+11</td></tr><tr><td>9</td><td>Royce <span style='color:var(--mute)'>(R)</span></td><td>0.29</td><td>0.324</td><td style='color:#10b981'>+8</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 DET 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.703</td><td>0.317</td><td>3.97</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.52</b> · OPS 0.685</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.703 · wOBA 0.315 (671.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.703 · wOBA 0.315 (1846.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 MIN 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.705</td><td>0.297</td><td>4.52</td></tr>
+    <tr><td>최근 28경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.21</b> · OPS 0.7</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.667 · wOBA 0.315 (775.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.721 · wOBA 0.315 (1793.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 DET 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.73</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Kyle Finnegan (?)</td><td>ERA 2.48 · None IP</td></tr><tr><td>✅ Will Vest (?)</td><td>ERA 4.74 · None IP</td></tr><tr><td>✅ Drew Anderson (?)</td><td>ERA 4.68 · None IP</td></tr><tr><td>✅ Enmanuel De Jesus (?)</td><td>ERA 2.87 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 MIN 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>5.49</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Yoendrys Gómez (?)</td><td>ERA 2.24 · None IP</td></tr><tr><td>✅ Taylor Rogers (?)</td><td>ERA 7.3 · None IP</td></tr><tr><td>✅ Anthony Banda (?)</td><td>ERA 3.29 · None IP</td></tr><tr><td>✅ Eric Orze (?)</td><td>ERA 5.13 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 DET 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>54% / 46% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.097</td></tr><tr><td>삼진% / 볼넷%</td><td>19% / 9%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>10.1%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.0 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.0</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 MIN 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼/뜬공 성향</td><td style='color:var(--mute)'>표본 부족</td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.0 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.006</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">AZ @ MIA</span>
+    <span class="meta">06/11 07:40 KST · loanDepot park <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>AZ 예상</span><b>5.454</b></div>
+    <div class="row"><span>MIA 예상</span><b>4.286</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">9.74</b></div>
+    <div class="row"><span>시장 라인</span><b>6.5</b></div>
+    <div class="row"><span>AZ 승률</span><b>59.4%</b></div>
+    <div class="row"><span>MIA 승률</span><b>40.6%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">—</b></div>
+    <div class="row"><span>온도</span><b>None°F</b></div>
+    <div class="row"><span>강수</span><b>0.0%</b></div>
+    <div class='row'><span>⛓ Markov AZ</span><b style='color:#10b981'>1.116 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov MIA</span><b style='color:var(--text)'>1.018 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 MIA 선발 Ryan Gusto (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>6.0</b></td><td>1.44</td><td>9.0</td><td>9.0</td></tr>
+    <tr><td>최근 2경기</td><td style='color:var(--text)'><b>4.5</b></td><td>1.33</td><td>7.5</td><td>6.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>vs 우타</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>홈</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>원정</td><td colspan='4' style='color:var(--mute)'>표본 부족</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.08</b> (hand × venue × time = 1.0 × 1.0 × 1.08)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 AZ 선발 Ryne Nelson (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.54</b></td><td>1.19</td><td>6.69</td><td>75.33</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>4.02</b></td><td>1.21</td><td>4.02</td><td>15.7</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.704 · WHIP 1.09 (39.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.774 · WHIP 1.27 (33.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.776 · WHIP 1.37 (38.67 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.689 · WHIP 0.95 (33.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.979</b> (hand × venue × time = 1.009 × 0.978 × 0.992)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ MIA 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.321</b> ·
+    매치업 <b style="color:#ef4444">0.983</b> ·
+    platoon 1.012 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Xavier<span style='color:var(--mute)'>(S)</span></td><td>0.338</td><td>0.375</td><td style='color:var(--mute)'>-2</td></tr><tr><td>2</td><td>Otto L<span style='color:var(--mute)'>(R)</span></td><td>0.36</td><td>0.334</td><td style='color:var(--mute)'>-3</td></tr><tr><td>3</td><td>Jakob <span style='color:var(--mute)'>(L)</span></td><td>0.3</td><td>0.32</td><td style='color:#ef4444'>-9</td></tr><tr><td>4</td><td>Liam H<span style='color:var(--mute)'>(L)</span></td><td>0.35</td><td>0.399</td><td style='color:#10b981'>+26</td></tr><tr><td>5</td><td>Connor<span style='color:var(--mute)'>(R)</span></td><td>0.307</td><td>0.31</td><td style='color:var(--mute)'>-1</td></tr><tr><td>6</td><td>Kyle S<span style='color:var(--mute)'>(L)</span></td><td>0.308</td><td>0.329</td><td style='color:var(--mute)'>+5</td></tr><tr><td>7</td><td>Owen C<span style='color:var(--mute)'>(L)</span></td><td>0.296</td><td>0.334</td><td style='color:#10b981'>+11</td></tr><tr><td>8</td><td>Javier<span style='color:var(--mute)'>(R)</span></td><td>0.302</td><td>0.3</td><td style='color:var(--mute)'>-1</td></tr><tr><td>9</td><td>Heribe<span style='color:var(--mute)'>(R)</span></td><td>0.31</td><td>0.324</td><td style='color:#10b981'>+15</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ AZ 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.313</b> ·
+    매치업 <b style="color:var(--text)">1.001</b> ·
+    platoon 1.023 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Ketel <span style='color:var(--mute)'>(S)</span></td><td>0.306</td><td>0.348</td><td style='color:var(--mute)'>+2</td></tr><tr><td>2</td><td>Corbin<span style='color:var(--mute)'>(L)</span></td><td>0.368</td><td>0.387</td><td style='color:var(--mute)'>+2</td></tr><tr><td>3</td><td>Gerald<span style='color:var(--mute)'>(S)</span></td><td>0.329</td><td>0.348</td><td style='color:var(--mute)'>+8</td></tr><tr><td>4</td><td>Nolan <span style='color:var(--mute)'>(R)</span></td><td>0.312</td><td>0.329</td><td style='color:var(--mute)'>+2</td></tr><tr><td>5</td><td>Ildema<span style='color:var(--mute)'>(S)</span></td><td>0.287</td><td>0.347</td><td style='color:var(--mute)'>+8</td></tr><tr><td>6</td><td>Gabrie<span style='color:var(--mute)'>(R)</span></td><td>0.347</td><td>0.328</td><td style='color:var(--mute)'>+4</td></tr><tr><td>7</td><td>Adrian<span style='color:var(--mute)'>(L)</span></td><td>0.292</td><td>0.316</td><td style='color:var(--mute)'>+3</td></tr><tr><td>8</td><td>Ryan W<span style='color:var(--mute)'>(R)</span></td><td>0.295</td><td>0.306</td><td style='color:#10b981'>+11</td></tr><tr><td>9</td><td>Jorge <span style='color:var(--mute)'>(S)</span></td><td>0.292</td><td>0.307</td><td style='color:var(--mute)'>+7</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 MIA 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.705</td><td>0.32</td><td>4.22</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.11</b> · OPS 0.702</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.712 · wOBA 0.315 (683.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.7 · wOBA 0.315 (1822.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 AZ 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.697</td><td>0.314</td><td>4.31</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.41</b> · OPS 0.714</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.771 · wOBA 0.315 (677.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.672 · wOBA 0.315 (1769.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 MIA 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>5.26</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>10</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Pete Fairbanks (?)</td><td>ERA 6.92 · None IP</td></tr><tr><td>✅ Anthony Bender (?)</td><td>ERA 2.38 · None IP</td></tr><tr><td>✅ Michael Petersen (?)</td><td>ERA 2.65 · None IP</td></tr><tr><td>✅ Calvin Faucher (?)</td><td>ERA 3.43 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 AZ 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.28</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Paul Sewald (?)</td><td>ERA 2.89 · None IP</td></tr><tr><td>✅ Taylor Clarke (?)</td><td>ERA 2.81 · None IP</td></tr><tr><td>✅ Juan Morillo (?)</td><td>ERA 1.63 · None IP</td></tr><tr><td>✅ Jonathan Loáisiga (?)</td><td>ERA 3.58 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 MIA 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼/뜬공 성향</td><td style='color:var(--mute)'>표본 부족</td></tr><tr><td>장타 위험 보정</td><td style='color:#10b981'>-0.018 <span style='font-size:11px'>안전</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.011</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 AZ 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>33% / 67% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.134</td></tr><tr><td>삼진% / 볼넷%</td><td>18% / 7%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>10.7%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.0 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.0</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">PHI @ TOR</span>
+    <span class="meta">06/11 08:07 KST · Rogers Centre <span class='warn'>● 일부 추정</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>PHI 예상</span><b>5.978</b></div>
+    <div class="row"><span>TOR 예상</span><b>6.076</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">12.055</b></div>
+    <div class="row"><span>시장 라인</span><b>7.5</b></div>
+    <div class="row"><span>PHI 승률</span><b>49.1%</b></div>
+    <div class="row"><span>TOR 승률</span><b>50.9%</b></div>
+    <div class="row"><span>Park factor</span><b>1.02</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">—</b></div>
+    <div class="row"><span>온도</span><b>None°F</b></div>
+    <div class="row"><span>강수</span><b>0.0%</b></div>
+    <div class='row'><span>⛓ Markov PHI</span><b style='color:#10b981'>1.331 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov TOR</span><b style='color:#10b981'>1.166 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 TOR 선발 Max Scherzer (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>8.86</b></td><td>1.64</td><td>5.484</td><td>21.33</td></tr>
+    <tr><td>최근 1경기</td><td style='color:#10b981'><b>3.38</b></td><td>1.88</td><td>10.12</td><td>2.7</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 1.037 · WHIP 1.78 (12.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.842 · WHIP 1.26 (6.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 1.139 · WHIP 1.89 (12.67 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.559 · WHIP 1.0 (6.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.14</b> (hand × venue × time = 1.053 × 1.08 × 1.08)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 PHI 선발 Jesús Luzardo (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.44</b></td><td>1.31</td><td>9.72</td><td>75.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>4.73</b></td><td>1.43</td><td>6.08</td><td>13.3</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.516 · WHIP 0.91 (17.67 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.811 · WHIP 1.5 (54.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.839 · WHIP 1.45 (38.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.633 · WHIP 1.2 (35.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.957</b> (hand × venue × time = 0.998 × 0.938 × 1.023)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ TOR 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.335</b> ·
+    매치업 <b style="color:var(--text)">1.004</b> ·
+    platoon 1.012 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Vladim<span style='color:var(--mute)'>(R)</span></td><td>0.316</td><td>0.376</td><td style='color:#10b981'>+18</td></tr><tr><td>2</td><td>Kazuma<span style='color:var(--mute)'>(R)</span></td><td>0.33</td><td>0.362</td><td style='color:#10b981'>+9</td></tr><tr><td>3</td><td>Ernie <span style='color:var(--mute)'>(R)</span></td><td>0.345</td><td>0.378</td><td style='color:#10b981'>+29</td></tr><tr><td>4</td><td>Daulto<span style='color:var(--mute)'>(L)</span></td><td>0.316</td><td>0.332</td><td style='color:#10b981'>+16</td></tr><tr><td>5</td><td>Andrés<span style='color:var(--mute)'>(L)</span></td><td>0.299</td><td>0.303</td><td style='color:#10b981'>+17</td></tr><tr><td>6</td><td>Jesús <span style='color:var(--mute)'>(L)</span></td><td>0.353</td><td>0.343</td><td style='color:#10b981'>+20</td></tr><tr><td>7</td><td>George<span style='color:var(--mute)'>(R)</span></td><td>0.285</td><td>0.332</td><td style='color:#10b981'>+14</td></tr><tr><td>8</td><td>Brando<span style='color:var(--mute)'>(S)</span></td><td>0.348</td><td>0.369</td><td style='color:#10b981'>+11</td></tr><tr><td>9</td><td>Yohend<span style='color:var(--mute)'>(L)</span></td><td>0.351</td><td>0.341</td><td style='color:#10b981'>+20</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ PHI 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.322</b> ·
+    매치업 <b style="color:#10b981">1.032</b> ·
+    platoon 1.01 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Trea T<span style='color:var(--mute)'>(R)</span></td><td>0.291</td><td>0.355</td><td style='color:#10b981'>+64</td></tr><tr><td>2</td><td>Kyle S<span style='color:var(--mute)'>(L)</span></td><td>0.368</td><td>0.551</td><td style='color:#10b981'>+147</td></tr><tr><td>3</td><td>Bryce <span style='color:var(--mute)'>(L)</span></td><td>0.375</td><td>0.508</td><td style='color:#10b981'>+115</td></tr><tr><td>4</td><td>Adolis<span style='color:var(--mute)'>(R)</span></td><td>0.294</td><td>0.361</td><td style='color:#10b981'>+70</td></tr><tr><td>5</td><td>Alec B<span style='color:var(--mute)'>(R)</span></td><td>0.308</td><td>0.372</td><td style='color:#10b981'>+74</td></tr><tr><td>6</td><td>Brando<span style='color:var(--mute)'>(L)</span></td><td>0.374</td><td>0.457</td><td style='color:#10b981'>+82</td></tr><tr><td>7</td><td>Bryson<span style='color:var(--mute)'>(L)</span></td><td>0.318</td><td>0.393</td><td style='color:#10b981'>+73</td></tr><tr><td>8</td><td>Justin<span style='color:var(--mute)'>(L)</span></td><td>0.29</td><td>0.369</td><td style='color:#10b981'>+54</td></tr><tr><td>9</td><td>J.T. R<span style='color:var(--mute)'>(R)</span></td><td>0.262</td><td>0.356</td><td style='color:#10b981'>+62</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 TOR 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.698</td><td>0.332</td><td>4.01</td></tr>
+    <tr><td>최근 28경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.86</b> · OPS 0.708</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.649 · wOBA 0.315 (670.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.717 · wOBA 0.315 (1864.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 PHI 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.686</td><td>0.321</td><td>3.97</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.7</b> · OPS 0.663</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.682 · wOBA 0.315 (770.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.685 · wOBA 0.315 (1714.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 TOR 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>3.69</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>5</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Louis Varland (?)</td><td>ERA 0.82 · None IP</td></tr><tr><td>✅ Jeff Hoffman (?)</td><td>ERA 8.53 · None IP</td></tr><tr><td>✅ Tyler Rogers (?)</td><td>ERA 1.26 · None IP</td></tr><tr><td>✅ Tommy Nance (?)</td><td>ERA 3.37 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 PHI 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.29</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Jhoan Duran (?)</td><td>ERA 2.69 · None IP</td></tr><tr><td>✅ Brad Keller (?)</td><td>ERA 2.79 · None IP</td></tr><tr><td>✅ José Alvarado (?)</td><td>ERA 5.0 · None IP</td></tr><tr><td>✅ Orion Kerkering (?)</td><td>ERA 1.94 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 TOR 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>32% / 68% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.25</td></tr><tr><td>삼진% / 볼넷%</td><td>14% / 10%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#ef4444'><b>3.1%</b> <span style='font-size:11px'>약함</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.007 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.009</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 PHI 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>60% / 40% <span style='color:var(--mute);font-size:11px'>중립</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.148</td></tr><tr><td>삼진% / 볼넷%</td><td>25% / 7%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>18.8%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:#ef4444'>0.016 <span style='font-size:11px'>위험</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.035</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">STL @ NYM</span>
+    <span class="meta">06/11 08:10 KST · Citi Field <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>STL 예상</span><b>4.462</b></div>
+    <div class="row"><span>NYM 예상</span><b>4.597</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">9.059</b></div>
+    <div class="row"><span>시장 라인</span><b>9.5</b></div>
+    <div class="row"><span>STL 승률</span><b>48.4%</b></div>
+    <div class="row"><span>NYM 승률</span><b>51.6%</b></div>
+    <div class="row"><span>Park factor</span><b>0.98</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">내야 바람 (in) · 8.5mph</b></div>
+    <div class="row"><span>온도</span><b>79.1°F</b></div>
+    <div class="row"><span>강수</span><b>12.0%</b></div>
+    <div class='row'><span>⛓ Markov STL</span><b style='color:#10b981'>1.054 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov NYM</span><b style='color:var(--text)'>1.013 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 NYM 선발 Austin Warren (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>2.7</b></td><td>1.24</td><td>9.257</td><td>23.33</td></tr>
+    <tr><td>최근 2경기</td><td style='color:#ef4444'><b>9.0</b></td><td>2.0</td><td>4.5</td><td>2.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.648 · WHIP 1.09 (11.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.598 · WHIP 1.15 (11.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.368 · WHIP 0.87 (10.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.822 · WHIP 1.33 (12.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.897</b> (hand × venue × time = 0.959 × 0.93 × 1.006)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 STL 선발 Andre Pallante (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.88</b></td><td>1.29</td><td>7.2</td><td>65.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>4.22</b></td><td>1.41</td><td>8.44</td><td>10.7</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.726 · WHIP 1.38 (33.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.66 · WHIP 1.23 (30.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.778 · WHIP 1.5 (36.67 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.568 · WHIP 1.04 (27.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.88</b> (hand × venue × time = 0.987 × 0.93 × 0.947)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ NYM 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.305</b> ·
+    매치업 <b style="color:var(--text)">1.0</b> ·
+    platoon 0.999 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Bo Bic<span style='color:var(--mute)'>(R)</span></td><td>0.296</td><td>0.294</td><td style='color:#10b981'>+9</td></tr><tr><td>2</td><td>Marcus<span style='color:var(--mute)'>(R)</span></td><td>0.323</td><td>0.301</td><td style='color:#10b981'>+9</td></tr><tr><td>3</td><td>Carson<span style='color:var(--mute)'>(L)</span></td><td>0.352</td><td>0.355</td><td style='color:#10b981'>+10</td></tr><tr><td>4</td><td>Brett <span style='color:var(--mute)'>(L)</span></td><td>0.284</td><td>0.33</td><td style='color:#10b981'>+10</td></tr><tr><td>5</td><td>Juan S<span style='color:var(--mute)'>(L)</span></td><td>0.33</td><td>0.4</td><td style='color:#10b981'>+12</td></tr><tr><td>6</td><td>Mark V<span style='color:var(--mute)'>(R)</span></td><td>0.297</td><td>0.294</td><td style='color:#10b981'>+9</td></tr><tr><td>7</td><td>Franci<span style='color:var(--mute)'>(R)</span></td><td>0.316</td><td>0.319</td><td style='color:#10b981'>+10</td></tr><tr><td>8</td><td>Luis T<span style='color:var(--mute)'>(R)</span></td><td>0.308</td><td>0.292</td><td style='color:#10b981'>+9</td></tr><tr><td>9</td><td>MJ Mel<span style='color:var(--mute)'>(L)</span></td><td>0.315</td><td>0.348</td><td style='color:#10b981'>+10</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ STL 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.332</b> ·
+    매치업 <b style="color:var(--text)">1.004</b> ·
+    platoon 1.0 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Iván H<span style='color:var(--mute)'>(R)</span></td><td>0.342</td><td>0.347</td><td style='color:var(--mute)'>-3</td></tr><tr><td>2</td><td>JJ Wet<span style='color:var(--mute)'>(L)</span></td><td>0.328</td><td>0.357</td><td style='color:var(--mute)'>-7</td></tr><tr><td>3</td><td>Alec B<span style='color:var(--mute)'>(L)</span></td><td>0.358</td><td>0.358</td><td style='color:#ef4444'>-13</td></tr><tr><td>4</td><td>Jordan<span style='color:var(--mute)'>(R)</span></td><td>0.362</td><td>0.345</td><td style='color:#ef4444'>-17</td></tr><tr><td>5</td><td>Masyn <span style='color:var(--mute)'>(R)</span></td><td>0.298</td><td>0.291</td><td style='color:var(--mute)'>-5</td></tr><tr><td>6</td><td>Nolan <span style='color:var(--mute)'>(L)</span></td><td>0.269</td><td>0.314</td><td style='color:#ef4444'>-9</td></tr><tr><td>7</td><td>Nathan<span style='color:var(--mute)'>(L)</span></td><td>0.314</td><td>0.316</td><td style='color:#ef4444'>-15</td></tr><tr><td>8</td><td>Pedro <span style='color:var(--mute)'>(R)</span></td><td>0.298</td><td>0.274</td><td style='color:#ef4444'>-12</td></tr><tr><td>9</td><td>José F<span style='color:var(--mute)'>(R)</span></td><td>0.329</td><td>0.296</td><td style='color:#ef4444'>-10</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 NYM 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.656</td><td>0.307</td><td>3.96</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.67</b> · OPS 0.7</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.65 · wOBA 0.315 (647.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.659 · wOBA 0.315 (1800.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 STL 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.712</td><td>0.329</td><td>4.42</td></tr>
+    <tr><td>최근 25경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.04</b> · OPS 0.722</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.712 · wOBA 0.315 (706.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.71 · wOBA 0.315 (1744.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 NYM 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.01</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Devin Williams (?)</td><td>ERA 4.93 · None IP</td></tr><tr><td>✅ Brooks Raley (?)</td><td>ERA 1.86 · None IP</td></tr><tr><td>✅ Luke Weaver (?)</td><td>ERA 1.49 · None IP</td></tr><tr><td>✅ Cionel Pérez (?)</td><td>ERA 4.35 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 STL 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.46</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Riley O'Brien (?)</td><td>ERA 5.09 · None IP</td></tr><tr><td>✅ JoJo Romero (?)</td><td>ERA 4.84 · None IP</td></tr><tr><td>✅ George Soriano (?)</td><td>ERA 2.63 · None IP</td></tr><tr><td>✅ Ryne Stanek (?)</td><td>ERA 2.91 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 NYM 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>46% / 55% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.083</td></tr><tr><td>삼진% / 볼넷%</td><td>24% / 11%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>13.3%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.002 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.007</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 STL 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>57% / 43% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.133</td></tr><tr><td>삼진% / 볼넷%</td><td>19% / 8%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>10.7%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.001 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.007</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">TEX @ KC</span>
+    <span class="meta">06/11 08:40 KST · Kauffman Stadium <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>TEX 예상</span><b>7.016</b></div>
+    <div class="row"><span>KC 예상</span><b>3.527</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">10.543</b></div>
+    <div class="row"><span>시장 라인</span><b>10.0</b></div>
+    <div class="row"><span>TEX 승률</span><b>75.4%</b></div>
+    <div class="row"><span>KC 승률</span><b>24.6%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">내야 강한 바람 (IN) · 18.5mph</b></div>
+    <div class="row"><span>온도</span><b>86.6°F</b></div>
+    <div class="row"><span>강수</span><b>7.0%</b></div>
+    <div class='row'><span>⛓ Markov TEX</span><b style='color:#10b981'>1.286 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov KC</span><b style='color:#ef4444'>0.967 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 KC 선발 Seth Lugo (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.86</b></td><td>1.34</td><td>7.597</td><td>77.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>4.5</b></td><td>1.08</td><td>8.25</td><td>12.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.742 · WHIP 1.48 (47.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.774 · WHIP 1.18 (28.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.761 · WHIP 1.46 (41.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.745 · WHIP 1.23 (35.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.038</b> (hand × venue × time = 1.016 × 1.028 × 0.994)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 TEX 선발 MacKenzie Gore (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.16</b></td><td>1.3</td><td>9.537</td><td>67.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#10b981'><b>3.0</b></td><td>1.58</td><td>6.75</td><td>12.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.738 · WHIP 1.7 (15.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.657 · WHIP 1.16 (50.67 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.531 · WHIP 0.89 (30.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.789 · WHIP 1.63 (35.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.028</b> (hand × venue × time = 0.988 × 1.047 × 0.994)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ KC 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.323</b> ·
+    매치업 <b style="color:var(--text)">1.01</b> ·
+    platoon 1.011 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Bobby <span style='color:var(--mute)'>(R)</span></td><td>0.33</td><td>0.364</td><td style='color:var(--mute)'>-3</td></tr><tr><td>2</td><td>Vinnie<span style='color:var(--mute)'>(L)</span></td><td>0.321</td><td>0.305</td><td style='color:var(--mute)'>+3</td></tr><tr><td>3</td><td>Maikel<span style='color:var(--mute)'>(R)</span></td><td>0.318</td><td>0.336</td><td style='color:var(--mute)'>-0</td></tr><tr><td>4</td><td>Salvad<span style='color:var(--mute)'>(R)</span></td><td>0.265</td><td>0.299</td><td style='color:#ef4444'>-9</td></tr><tr><td>5</td><td>Carter<span style='color:var(--mute)'>(L)</span></td><td>0.3</td><td>0.3</td><td style='color:var(--mute)'>-3</td></tr><tr><td>6</td><td>Jac Ca<span style='color:var(--mute)'>(L)</span></td><td>0.369</td><td>0.325</td><td style='color:var(--mute)'>-4</td></tr><tr><td>7</td><td>Isaac <span style='color:var(--mute)'>(S)</span></td><td>0.298</td><td>0.344</td><td style='color:#10b981'>+9</td></tr><tr><td>8</td><td>Michae<span style='color:var(--mute)'>(L)</span></td><td>0.349</td><td>0.291</td><td style='color:#ef4444'>-13</td></tr><tr><td>9</td><td>Lane T<span style='color:var(--mute)'>(R)</span></td><td>0.31</td><td>0.352</td><td style='color:var(--mute)'>+8</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ TEX 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.325</b> ·
+    매치업 <b style="color:var(--text)">0.995</b> ·
+    platoon 1.0 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Brando<span style='color:var(--mute)'>(L)</span></td><td>0.307</td><td>0.366</td><td style='color:#10b981'>+18</td></tr><tr><td>2</td><td>Jake B<span style='color:var(--mute)'>(R)</span></td><td>0.316</td><td>0.323</td><td style='color:#10b981'>+13</td></tr><tr><td>3</td><td>Josh J<span style='color:var(--mute)'>(R)</span></td><td>0.367</td><td>0.364</td><td style='color:#10b981'>+21</td></tr><tr><td>4</td><td>Evan C<span style='color:var(--mute)'>(L)</span></td><td>0.282</td><td>0.331</td><td style='color:#10b981'>+9</td></tr><tr><td>5</td><td>Ezequi<span style='color:var(--mute)'>(R)</span></td><td>0.343</td><td>0.344</td><td style='color:#10b981'>+24</td></tr><tr><td>6</td><td>Joc Pe<span style='color:var(--mute)'>(L)</span></td><td>0.32</td><td>0.368</td><td style='color:#10b981'>+9</td></tr><tr><td>7</td><td>Corey <span style='color:var(--mute)'>(L)</span></td><td>0.303</td><td>0.338</td><td style='color:var(--mute)'>+6</td></tr><tr><td>8</td><td>Kyle H<span style='color:var(--mute)'>(R)</span></td><td>0.337</td><td>0.323</td><td style='color:#10b981'>+14</td></tr><tr><td>9</td><td>Wyatt <span style='color:var(--mute)'>(R)</span></td><td>0.307</td><td>0.31</td><td style='color:#10b981'>+18</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 KC 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.691</td><td>0.322</td><td>3.87</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.48</b> · OPS 0.663</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.682 · wOBA 0.315 (721.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.695 · wOBA 0.315 (1801.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 TEX 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.697</td><td>0.323</td><td>3.96</td></tr>
+    <tr><td>최근 26경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.46</b> · OPS 0.725</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.686 · wOBA 0.315 (563.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.701 · wOBA 0.315 (1893.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 KC 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>4.85</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Lucas Erceg (?)</td><td>ERA 7.67 · None IP</td></tr><tr><td>✅ Alex Lange (?)</td><td>ERA 2.34 · None IP</td></tr><tr><td>✅ Daniel Lynch IV (?)</td><td>ERA 2.71 · None IP</td></tr><tr><td>✅ Matt Strahm (?)</td><td>ERA 4.64 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 TEX 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.12</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Jacob Latz (?)</td><td>ERA 1.24 · None IP</td></tr><tr><td>✅ Jakob Junis (?)</td><td>ERA 2.07 · None IP</td></tr><tr><td>✅ Tyler Alexander (?)</td><td>ERA 4.5 · None IP</td></tr><tr><td>✅ Cole Winn (?)</td><td>ERA 5.1 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 KC 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>43% / 57% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.08</td></tr><tr><td>삼진% / 볼넷%</td><td>20% / 7%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>12.7%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:#10b981'>-0.021 <span style='font-size:11px'>안전</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.003</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 TEX 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>41% / 59% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.079</td></tr><tr><td>삼진% / 볼넷%</td><td>25% / 11%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>13.9%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:#10b981'>-0.02 <span style='font-size:11px'>안전</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.007</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">ATL @ CWS</span>
+    <span class="meta">06/11 08:40 KST · Rate Field <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>ATL 예상</span><b>5.378</b></div>
+    <div class="row"><span>CWS 예상</span><b>4.233</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">9.611</b></div>
+    <div class="row"><span>시장 라인</span><b>7.0</b></div>
+    <div class="row"><span>ATL 승률</span><b>59.2%</b></div>
+    <div class="row"><span>CWS 승률</span><b>40.8%</b></div>
+    <div class="row"><span>Park factor</span><b>0.98</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">옆/잔잔 · 9.2mph</b></div>
+    <div class="row"><span>온도</span><b>74.2°F</b></div>
+    <div class="row"><span>강수</span><b>25.0%</b></div>
+    <div class='row'><span>⛓ Markov ATL</span><b style='color:#ef4444'>0.883 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov CWS</span><b style='color:#ef4444'>0.653 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 CWS 선발 Davis Martin (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>2.58</b></td><td>1.09</td><td>9.205</td><td>73.33</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#ef4444'><b>5.4</b></td><td>1.46</td><td>6.94</td><td>11.7</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.57 · WHIP 0.92 (44.67 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.701 · WHIP 1.44 (27.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.525 · WHIP 0.94 (29.67 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.694 · WHIP 1.22 (42.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.888</b> (hand × venue × time = 0.973 × 0.93 × 0.982)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 ATL 선발 Chris Sale (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>2.22</b></td><td>1.04</td><td>10.603</td><td>73.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>4.09</b></td><td>2.09</td><td>11.45</td><td>11.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.606 · WHIP 1.0 (18.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.588 · WHIP 1.05 (54.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.575 · WHIP 1.07 (35.67 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.608 · WHIP 1.0 (37.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.88</b> (hand × venue × time = 0.95 × 0.93 × 0.93)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ CWS 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.324</b> ·
+    매치업 <b style="color:var(--text)">0.99</b> ·
+    platoon 1.01 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Miguel<span style='color:var(--mute)'>(R)</span></td><td>0.371</td><td>0.314</td><td style='color:#ef4444'>-78</td></tr><tr><td>2</td><td>Chase <span style='color:var(--mute)'>(R)</span></td><td>0.32</td><td>0.287</td><td style='color:#ef4444'>-58</td></tr><tr><td>3</td><td>Colson<span style='color:var(--mute)'>(L)</span></td><td>0.343</td><td>0.271</td><td style='color:#ef4444'>-69</td></tr><tr><td>4</td><td>Andrew<span style='color:var(--mute)'>(L)</span></td><td>0.335</td><td>0.248</td><td style='color:#ef4444'>-54</td></tr><tr><td>5</td><td>Sam An<span style='color:var(--mute)'>(L)</span></td><td>0.327</td><td>0.271</td><td style='color:#ef4444'>-55</td></tr><tr><td>6</td><td>Trista<span style='color:var(--mute)'>(L)</span></td><td>0.374</td><td>0.266</td><td style='color:#ef4444'>-52</td></tr><tr><td>7</td><td>Edgar <span style='color:var(--mute)'>(S)</span></td><td>0.281</td><td>0.252</td><td style='color:#ef4444'>-54</td></tr><tr><td>8</td><td>Luisan<span style='color:var(--mute)'>(R)</span></td><td>0.272</td><td>0.243</td><td style='color:#ef4444'>-48</td></tr><tr><td>9</td><td>Randal<span style='color:var(--mute)'>(R)</span></td><td>0.359</td><td>0.286</td><td style='color:#ef4444'>-65</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ ATL 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.339</b> ·
+    매치업 <b style="color:#ef4444">0.977</b> ·
+    platoon 1.012 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Matt O<span style='color:var(--mute)'>(L)</span></td><td>0.371</td><td>0.298</td><td style='color:#ef4444'>-92</td></tr><tr><td>2</td><td>Ozzie <span style='color:var(--mute)'>(S)</span></td><td>0.353</td><td>0.298</td><td style='color:#ef4444'>-61</td></tr><tr><td>3</td><td>Austin<span style='color:var(--mute)'>(R)</span></td><td>0.283</td><td>0.243</td><td style='color:#ef4444'>-55</td></tr><tr><td>4</td><td>Mauric<span style='color:var(--mute)'>(R)</span></td><td>0.341</td><td>0.266</td><td style='color:#ef4444'>-47</td></tr><tr><td>5</td><td>Michae<span style='color:var(--mute)'>(L)</span></td><td>0.364</td><td>0.307</td><td style='color:#ef4444'>-71</td></tr><tr><td>6</td><td>Mike Y<span style='color:var(--mute)'>(L)</span></td><td>0.312</td><td>0.284</td><td style='color:#ef4444'>-50</td></tr><tr><td>7</td><td>Domini<span style='color:var(--mute)'>(L)</span></td><td>0.316</td><td>0.292</td><td style='color:#ef4444'>-59</td></tr><tr><td>8</td><td>Jorge <span style='color:var(--mute)'>(R)</span></td><td>0.331</td><td>0.265</td><td style='color:#ef4444'>-56</td></tr><tr><td>9</td><td>Eli Wh<span style='color:var(--mute)'>(R)</span></td><td>0.301</td><td>0.242</td><td style='color:#ef4444'>-48</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 CWS 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.741</td><td>0.323</td><td>4.72</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>5.37</b> · OPS 0.786</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.772 · wOBA 0.315 (701.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.729 · wOBA 0.315 (1826.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 ATL 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.754</td><td>0.336</td><td>5.13</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.48</b> · OPS 0.705</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.742 · wOBA 0.315 (928.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.762 · wOBA 0.315 (1612.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 CWS 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.47</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>5</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Seranthony Domínguez (?)</td><td>ERA 2.71 · None IP</td></tr><tr><td>✅ Sean Newcomb (?)</td><td>ERA 1.41 · None IP</td></tr><tr><td>✅ Tyler Davis (?)</td><td>ERA 5.07 · None IP</td></tr><tr><td>✅ Chris Murphy (?)</td><td>ERA 4.88 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 ATL 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>1.18</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>5</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Raisel Iglesias (?)</td><td>ERA 1.36 · None IP</td></tr><tr><td>✅ Robert Suarez (?)</td><td>ERA 0.37 · None IP</td></tr><tr><td>✅ Dylan Lee (?)</td><td>ERA 0.7 · None IP</td></tr><tr><td>✅ Didier Fuentes (?)</td><td>ERA 2.09 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 CWS 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>53% / 47% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.048</td></tr><tr><td>삼진% / 볼넷%</td><td>26% / 6%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>20.0%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>-0.004 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.023</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 ATL 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>48% / 52% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.091</td></tr><tr><td>삼진% / 볼넷%</td><td>29% / 6%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>22.7%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>-0.004 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.011</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">CHC @ COL</span>
+    <span class="meta">06/11 09:40 KST · Coors Field <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>CHC 예상</span><b>7.87</b></div>
+    <div class="row"><span>COL 예상</span><b>7.373</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">15.243</b></div>
+    <div class="row"><span>시장 라인</span><b>12.0</b></div>
+    <div class="row"><span>CHC 승률</span><b>53.3%</b></div>
+    <div class="row"><span>COL 승률</span><b>46.7%</b></div>
+    <div class="row"><span>Park factor</span><b>1.28</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">옆/잔잔 · 15.7mph</b></div>
+    <div class="row"><span>온도</span><b>88.4°F</b></div>
+    <div class="row"><span>강수</span><b>0.0%</b></div>
+    <div class='row'><span>⛓ Markov CHC</span><b style='color:#10b981'>1.55 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov COL</span><b style='color:#10b981'>1.179 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 COL 선발 Michael Lorenzen (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>8.01</b></td><td>1.99</td><td>7.121</td><td>60.67</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#ef4444'><b>12.0</b></td><td>2.33</td><td>9.0</td><td>12.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 1.238 · WHIP 2.75 (24.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.758 · WHIP 1.5 (36.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 1.073 · WHIP 2.37 (27.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.899 · WHIP 1.69 (33.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.14</b> (hand × venue × time = 1.036 × 1.08 × 1.08)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 CHC 선발 Shota Imanaga (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.74</b></td><td>1.08</td><td>8.763</td><td>76.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#ef4444'><b>9.35</b></td><td>1.21</td><td>6.75</td><td>17.3</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.736 · WHIP 1.14 (22.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.73 · WHIP 1.06 (53.67 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.752 · WHIP 1.14 (47.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.698 · WHIP 0.98 (28.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.054</b> (hand × venue × time = 1.005 × 0.985 × 1.065)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ COL 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.306</b> ·
+    매치업 <b style="color:#ef4444">0.977</b> ·
+    platoon 1.001 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Hunter<span style='color:var(--mute)'>(R)</span></td><td>0.384</td><td>0.416</td><td style='color:#10b981'>+39</td></tr><tr><td>2</td><td>TJ Rum<span style='color:var(--mute)'>(L)</span></td><td>0.305</td><td>0.313</td><td style='color:#ef4444'>-15</td></tr><tr><td>3</td><td>Ezequi<span style='color:var(--mute)'>(R)</span></td><td>0.298</td><td>0.293</td><td style='color:#ef4444'>-13</td></tr><tr><td>4</td><td>Troy J<span style='color:var(--mute)'>(L)</span></td><td>0.334</td><td>0.288</td><td style='color:#ef4444'>-37</td></tr><tr><td>5</td><td>Kyle K<span style='color:var(--mute)'>(R)</span></td><td>0.342</td><td>0.309</td><td style='color:#ef4444'>-30</td></tr><tr><td>6</td><td>Willi <span style='color:var(--mute)'>(S)</span></td><td>0.338</td><td>0.315</td><td style='color:#ef4444'>-29</td></tr><tr><td>7</td><td>Jake M<span style='color:var(--mute)'>(L)</span></td><td>0.344</td><td>0.292</td><td style='color:#ef4444'>-18</td></tr><tr><td>8</td><td>Edouar<span style='color:var(--mute)'>(L)</span></td><td>0.318</td><td>0.275</td><td style='color:#ef4444'>-28</td></tr><tr><td>9</td><td>Brett <span style='color:var(--mute)'>(L)</span></td><td>0.292</td><td>0.262</td><td style='color:#ef4444'>-16</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ CHC 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.323</b> ·
+    매치업 <b style="color:var(--text)">0.997</b> ·
+    platoon 0.999 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Alex B<span style='color:var(--mute)'>(R)</span></td><td>0.297</td><td>0.451</td><td style='color:#10b981'>+142</td></tr><tr><td>2</td><td>Nico H<span style='color:var(--mute)'>(R)</span></td><td>0.294</td><td>0.451</td><td style='color:#10b981'>+141</td></tr><tr><td>3</td><td>Michae<span style='color:var(--mute)'>(L)</span></td><td>0.341</td><td>0.523</td><td style='color:#10b981'>+156</td></tr><tr><td>4</td><td>Pete C<span style='color:var(--mute)'>(L)</span></td><td>0.368</td><td>0.526</td><td style='color:#10b981'>+165</td></tr><tr><td>5</td><td>Ian Ha<span style='color:var(--mute)'>(S)</span></td><td>0.379</td><td>0.542</td><td style='color:#10b981'>+165</td></tr><tr><td>6</td><td>Dansby<span style='color:var(--mute)'>(R)</span></td><td>0.278</td><td>0.428</td><td style='color:#10b981'>+132</td></tr><tr><td>7</td><td>Seiya <span style='color:var(--mute)'>(R)</span></td><td>0.333</td><td>0.479</td><td style='color:#10b981'>+150</td></tr><tr><td>8</td><td>Carson<span style='color:var(--mute)'>(R)</span></td><td>0.319</td><td>0.466</td><td style='color:#10b981'>+147</td></tr><tr><td>9</td><td>Moisés<span style='color:var(--mute)'>(L)</span></td><td>0.319</td><td>0.506</td><td style='color:#10b981'>+161</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 COL 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.711</td><td>0.307</td><td>4.34</td></tr>
+    <tr><td>최근 26경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.46</b> · OPS 0.699</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.653 · wOBA 0.315 (632.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.73 · wOBA 0.315 (1905.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 CHC 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.721</td><td>0.322</td><td>4.57</td></tr>
+    <tr><td>최근 26경기</td><td colspan='3'>RPG <b style='color:#ef4444'>3.5</b> · OPS 0.651</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.716 · wOBA 0.315 (752.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.722 · wOBA 0.315 (1872.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 COL 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>7.2</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>7</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Juan Mejia (?)</td><td>ERA 10.29 · None IP</td></tr><tr><td>✅ Jaden Hill (?)</td><td>ERA 8.59 · None IP</td></tr><tr><td>✅ Antonio Senzatela (?)</td><td>ERA 3.48 · None IP</td></tr><tr><td>✅ Zach Agnos (?)</td><td>ERA 11.85 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 CHC 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#ef4444;font-size:17px'><b>5.04</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Daniel Palencia (?)</td><td>ERA 2.1 · None IP</td></tr><tr><td>✅ Hoby Milner (?)</td><td>ERA 6.96 · None IP</td></tr><tr><td>✅ Jacob Webb (?)</td><td>ERA 1.36 · None IP</td></tr><tr><td>✅ Caleb Thielbar (?)</td><td>ERA 5.28 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 COL 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>53% / 47% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.18</td></tr><tr><td>삼진% / 볼넷%</td><td>16% / 7%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#ef4444'><b>8.6%</b> <span style='font-size:11px'>약함</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.008 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.014</td></tr><tr><td>🏔 타선: 고지대 후유증</td><td style='color:#fbbf24'>1일 전 쿠어스 경기 (타격 반동 가능)</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 CHC 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>44% / 56% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.205</td></tr><tr><td>삼진% / 볼넷%</td><td>24% / 6%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>17.8%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.006 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.018</td></tr><tr><td>🏔 타선: 고지대 후유증</td><td style='color:#fbbf24'>1일 전 쿠어스 경기 (타격 반동 가능)</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">MIL @ ATH</span>
+    <span class="meta">06/11 10:05 KST · Las Vegas Ballpark <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>MIL 예상</span><b>6.422</b></div>
+    <div class="row"><span>ATH 예상</span><b>8.195</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">14.617</b></div>
+    <div class="row"><span>시장 라인</span><b>14.5</b></div>
+    <div class="row"><span>MIL 승률</span><b>38.3%</b></div>
+    <div class="row"><span>ATH 승률</span><b>61.7%</b></div>
+    <div class="row"><span>Park factor</span><b>1.0</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:var(--text)">— · 10.0mph</b></div>
+    <div class="row"><span>온도</span><b>101.0°F</b></div>
+    <div class="row"><span>강수</span><b>0.0%</b></div>
+    <div class='row'><span>⛓ Markov MIL</span><b style='color:#10b981'>1.136 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov ATH</span><b style='color:#10b981'>1.55 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 ATH 선발 Jack Perkins (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>6.19</b></td><td>1.28</td><td>10.969</td><td>32.0</td></tr>
+    <tr><td>최근 1경기</td><td style='color:#ef4444'><b>11.25</b></td><td>1.75</td><td>13.5</td><td>4.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.529 · WHIP 1.13 (15.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.798 · WHIP 1.41 (17.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.647 · WHIP 1.22 (16.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.7 · WHIP 1.34 (15.67 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.957</b> (hand × venue × time = 0.995 × 0.948 × 1.014)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 MIL 선발 Brandon Sproat (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>6.17</b></td><td>1.56</td><td>9.0</td><td>54.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#ef4444'><b>7.43</b></td><td>1.73</td><td>8.78</td><td>13.3</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.854 · WHIP 1.72 (25.0 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.863 · WHIP 1.52 (27.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.897 · WHIP 1.7 (27.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.821 · WHIP 1.41 (27.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>1.14</b> (hand × venue × time = 1.054 × 1.068 × 1.08)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ ATH 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.332</b> ·
+    매치업 <b style="color:#10b981">1.042</b> ·
+    platoon 1.011 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Nick K<span style='color:var(--mute)'>(L)</span></td><td>0.416</td><td>0.561</td><td style='color:#10b981'>+135</td></tr><tr><td>2</td><td>Shea L<span style='color:var(--mute)'>(R)</span></td><td>0.349</td><td>0.466</td><td style='color:#10b981'>+111</td></tr><tr><td>3</td><td>Tyler <span style='color:var(--mute)'>(L)</span></td><td>0.394</td><td>0.473</td><td style='color:#10b981'>+109</td></tr><tr><td>4</td><td>Jeff M<span style='color:var(--mute)'>(L)</span></td><td>0.264</td><td>0.391</td><td style='color:#10b981'>+73</td></tr><tr><td>5</td><td>Brent <span style='color:var(--mute)'>(R)</span></td><td>0.322</td><td>0.41</td><td style='color:#10b981'>+101</td></tr><tr><td>6</td><td>Zack G<span style='color:var(--mute)'>(R)</span></td><td>0.343</td><td>0.409</td><td style='color:#10b981'>+90</td></tr><tr><td>7</td><td>Lawren<span style='color:var(--mute)'>(L)</span></td><td>0.273</td><td>0.382</td><td style='color:#10b981'>+82</td></tr><tr><td>8</td><td>Carlos<span style='color:var(--mute)'>(L)</span></td><td>0.322</td><td>0.476</td><td style='color:#10b981'>+98</td></tr><tr><td>9</td><td>Max Mu<span style='color:var(--mute)'>(R)</span></td><td>0.312</td><td>0.378</td><td style='color:#10b981'>+78</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ MIL 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.336</b> ·
+    매치업 <b style="color:var(--text)">1.003</b> ·
+    platoon 1.033 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Brice <span style='color:var(--mute)'>(L)</span></td><td>0.361</td><td>0.376</td><td style='color:#ef4444'>-11</td></tr><tr><td>2</td><td>Willia<span style='color:var(--mute)'>(R)</span></td><td>0.314</td><td>0.325</td><td style='color:var(--mute)'>+2</td></tr><tr><td>3</td><td>Sal Fr<span style='color:var(--mute)'>(L)</span></td><td>0.296</td><td>0.316</td><td style='color:var(--mute)'>+3</td></tr><tr><td>4</td><td>Jake B<span style='color:var(--mute)'>(L)</span></td><td>0.386</td><td>0.378</td><td style='color:#ef4444'>-16</td></tr><tr><td>5</td><td>Garret<span style='color:var(--mute)'>(L)</span></td><td>0.339</td><td>0.35</td><td style='color:var(--mute)'>+0</td></tr><tr><td>6</td><td>Luis R<span style='color:var(--mute)'>(S)</span></td><td>0.271</td><td>0.306</td><td style='color:var(--mute)'>+8</td></tr><tr><td>7</td><td>David <span style='color:var(--mute)'>(L)</span></td><td>0.326</td><td>0.328</td><td style='color:var(--mute)'>-0</td></tr><tr><td>8</td><td>Christ<span style='color:var(--mute)'>(L)</span></td><td>0.33</td><td>0.354</td><td style='color:var(--mute)'>-0</td></tr><tr><td>9</td><td>Joey O<span style='color:var(--mute)'>(R)</span></td><td>0.289</td><td>0.292</td><td style='color:var(--mute)'>+1</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 ATH 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.732</td><td>0.33</td><td>4.39</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.37</b> · OPS 0.742</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.761 · wOBA 0.315 (748.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.72 · wOBA 0.315 (1843.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 MIL 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.727</td><td>0.333</td><td>5.37</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:#10b981'>5.7</b> · OPS 0.778</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.667 · wOBA 0.315 (753.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.751 · wOBA 0.315 (1794.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 ATH 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>4.21</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Hogan Harris (?)</td><td>ERA 2.84 · None IP</td></tr><tr><td>✅ Justin Sterner (?)</td><td>ERA 1.91 · None IP</td></tr><tr><td>✅ Scott Barlow (?)</td><td>ERA 7.39 · None IP</td></tr><tr><td>✅ Mark Leiter Jr. (?)</td><td>ERA 3.84 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 MIL 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:var(--text);font-size:17px'><b>4.53</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>6</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Trevor Megill (?)</td><td>ERA 4.63 · None IP</td></tr><tr><td>✅ Abner Uribe (?)</td><td>ERA 3.18 · None IP</td></tr><tr><td>✅ Joel Kuhnel (?)</td><td>ERA 7.59 · None IP</td></tr><tr><td>✅ Grant Anderson (?)</td><td>ERA 2.68 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 ATH 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>45% / 55% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.062</td></tr><tr><td>삼진% / 볼넷%</td><td>27% / 6%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>20.9%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.002 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.016</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 MIL 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>50% / 50% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.224</td></tr><tr><td>삼진% / 볼넷%</td><td>22% / 12%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>10.4%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>-0.001 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.015</td></tr></table>
+</div></div>
+</div>
+<div class="game">
+  <div class="game-hdr">
+    <span class="teams">HOU @ LAA</span>
+    <span class="meta">06/11 10:38 KST · Angel Stadium <span class='good'>● 정상</span></span>
+  </div>
+  <div class="game-stats">
+    <div class="row"><span>HOU 예상</span><b>3.257</b></div>
+    <div class="row"><span>LAA 예상</span><b>5.305</b></div>
+    <div class="row"><span>모델 총점</span><b style="color:var(--accent)">8.561</b></div>
+    <div class="row"><span>시장 라인</span><b>8.5</b></div>
+    <div class="row"><span>HOU 승률</span><b>32.3%</b></div>
+    <div class="row"><span>LAA 승률</span><b>67.7%</b></div>
+    <div class="row"><span>Park factor</span><b>1.02</b></div>
+    <div class="row"><span>심판 보정</span><b>None</b></div>
+    <div class="row"><span>날씨 factor</span><b>1.0</b></div>
+    <div class="row"><span>🌬️ 바람</span><b style="color:#ef4444">내야 강한 바람 (IN) · 7.3mph</b></div>
+    <div class="row"><span>온도</span><b>72.7°F</b></div>
+    <div class="row"><span>강수</span><b>0.0%</b></div>
+    <div class='row'><span>⛓ Markov HOU</span><b style='color:var(--text)'>1.006 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div><div class='row'><span>⛓ Markov LAA</span><b style='color:#ef4444'>0.903 <span style="color:var(--mute);font-size:10px">w=0.4</span></b></div>
+  </div>
+  <div class="two-col"><div class="split-box">
+  <h3>📌 LAA 선발 Reid Detmers (LHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>4.26</b></td><td>1.14</td><td>10.703</td><td>74.0</td></tr>
+    <tr><td>최근 3경기</td><td style='color:#10b981'><b>1.89</b></td><td>0.68</td><td>12.79</td><td>19.0</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.524 · WHIP 0.98 (20.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.67 · WHIP 1.21 (53.0 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.629 · WHIP 1.11 (37.0 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.633 · WHIP 1.16 (37.0 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.88</b> (hand × venue × time = 0.966 × 0.935 × 0.93)</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>📌 HOU 선발 Peter Lambert (RHP)</h3>
+  <table>
+    <tr><th></th><th>ERA</th><th>WHIP</th><th>K/9</th><th>IP</th></tr>
+    <tr><td>시즌</td><td><b>3.55</b></td><td>1.26</td><td>8.349</td><td>50.67</td></tr>
+    <tr><td>최근 3경기</td><td style='color:var(--text)'><b>3.52</b></td><td>1.7</td><td>7.04</td><td>15.3</td></tr>
+    
+    
+    
+    <tr><td>vs 좌타</td><td colspan='4'>OPS 0.457 · WHIP 1.22 (30.33 IP)</td></tr>
+    <tr><td>vs 우타</td><td colspan='4'>OPS 0.835 · WHIP 1.33 (20.33 IP)</td></tr>
+    <tr><td>홈</td><td colspan='4'>OPS 0.649 · WHIP 1.25 (35.33 IP)</td></tr>
+    <tr><td>원정</td><td colspan='4'>OPS 0.559 · WHIP 1.3 (15.33 IP)</td></tr>
+    <tr><td>split factor</td><td colspan='4'><b>0.891</b> (hand × venue × time = 1.002 × 0.93 × 0.955)</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>⚔️ LAA 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.326</b> ·
+    매치업 <b style="color:var(--text)">1.006</b> ·
+    platoon 0.987 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Mike T<span style='color:var(--mute)'>(R)</span></td><td>0.334</td><td>0.353</td><td style='color:#ef4444'>-11</td></tr><tr><td>2</td><td>Zach N<span style='color:var(--mute)'>(R)</span></td><td>0.352</td><td>0.318</td><td style='color:#ef4444'>-21</td></tr><tr><td>3</td><td>Jo Ade<span style='color:var(--mute)'>(R)</span></td><td>0.311</td><td>0.271</td><td style='color:#ef4444'>-32</td></tr><tr><td>4</td><td>Nolan <span style='color:var(--mute)'>(L)</span></td><td>0.313</td><td>0.31</td><td style='color:#ef4444'>-23</td></tr><tr><td>5</td><td>Oswald<span style='color:var(--mute)'>(R)</span></td><td>0.321</td><td>0.288</td><td style='color:#ef4444'>-29</td></tr><tr><td>6</td><td>Logan <span style='color:var(--mute)'>(R)</span></td><td>0.289</td><td>0.278</td><td style='color:#ef4444'>-12</td></tr><tr><td>7</td><td>Wade M<span style='color:var(--mute)'>(L)</span></td><td>0.354</td><td>0.334</td><td style='color:#ef4444'>-27</td></tr><tr><td>8</td><td>Donova<span style='color:var(--mute)'>(L)</span></td><td>0.306</td><td>0.296</td><td style='color:#ef4444'>-22</td></tr><tr><td>9</td><td>Jose S<span style='color:var(--mute)'>(R)</span></td><td>0.346</td><td>0.285</td><td style='color:#ef4444'>-30</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>⚔️ HOU 타선 vs ? <span style='color:#fbbf24;font-size:10px'>예상 라인업</span></h3>
+  <div style="font-size:11px;color:var(--mute);margin-bottom:6px">
+    라인업 wOBA <b style="color:var(--text)">0.329</b> ·
+    매치업 <b style="color:#ef4444">0.985</b> ·
+    platoon 1.042 ·
+    <span style="color:#10b981">커버 9/9</span>
+    (블렌드 85%)
+  </div>
+  <table>
+    <tr><th>#</th><th>타자</th><th>wOBA</th><th>vs투수</th><th>±pt</th></tr>
+    <tr><td>1</td><td>Yordan<span style='color:var(--mute)'>(L)</span></td><td>0.419</td><td>0.354</td><td style='color:#ef4444'>-56</td></tr><tr><td>2</td><td>Christ<span style='color:var(--mute)'>(R)</span></td><td>0.331</td><td>0.318</td><td style='color:#ef4444'>-51</td></tr><tr><td>3</td><td>Isaac <span style='color:var(--mute)'>(R)</span></td><td>0.348</td><td>0.315</td><td style='color:#ef4444'>-42</td></tr><tr><td>4</td><td>Cam Sm<span style='color:var(--mute)'>(R)</span></td><td>0.318</td><td>0.296</td><td style='color:#ef4444'>-37</td></tr><tr><td>5</td><td>Jose A<span style='color:var(--mute)'>(R)</span></td><td>0.327</td><td>0.302</td><td style='color:#ef4444'>-38</td></tr><tr><td>6</td><td>Brice <span style='color:var(--mute)'>(R)</span></td><td>0.293</td><td>0.274</td><td style='color:#ef4444'>-36</td></tr><tr><td>7</td><td>Christ<span style='color:var(--mute)'>(R)</span></td><td>0.29</td><td>0.29</td><td style='color:#ef4444'>-38</td></tr><tr><td>8</td><td>Jeremy<span style='color:var(--mute)'>(R)</span></td><td>0.356</td><td>0.31</td><td style='color:#ef4444'>-38</td></tr><tr><td>9</td><td>Jake M<span style='color:var(--mute)'>(R)</span></td><td>0.285</td><td>0.285</td><td style='color:#ef4444'>-35</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🏏 LAA 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.702</td><td>0.324</td><td>4.49</td></tr>
+    <tr><td>최근 26경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.85</b> · OPS 0.693</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.707 · wOBA 0.315 (698.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.7 · wOBA 0.315 (1886.0 PA)</td></tr>
+    
+  </table>
+</div><div class="split-box">
+  <h3>🏏 HOU 타격</h3>
+  <table>
+    <tr><th></th><th>OPS</th><th>wOBA</th><th>RPG</th></tr>
+    <tr><td>시즌</td><td>0.728</td><td>0.327</td><td>4.54</td></tr>
+    <tr><td>최근 27경기</td><td colspan='3'>RPG <b style='color:var(--text)'>4.3</b> · OPS 0.681</td></tr>
+    <tr><td>vs LHP</td><td colspan='3'>OPS 0.755 · wOBA 0.315 (642.0 PA)</td></tr>
+    <tr><td>vs RHP</td><td colspan='3'>OPS 0.72 · wOBA 0.315 (1974.0 PA)</td></tr>
+    
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🔥 LAA 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>3.37</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>9</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Sam Bachman (?)</td><td>ERA 1.25 · None IP</td></tr><tr><td>✅ Ryan Zeferjahn (?)</td><td>ERA 6.01 · None IP</td></tr><tr><td>✅ Drew Pomeranz (?)</td><td>ERA 3.04 · None IP</td></tr><tr><td>✅ Chase Silseth (?)</td><td>ERA 1.02 · None IP</td></tr>
+  </table>
+</div><div class="split-box">
+  <h3>🔥 HOU 불펜 <span style='font-size:11px;color:var(--mute)'>(가용성 분석)</span></h3>
+  <table>
+    <tr><td><b>유효 불펜 ERA</b><br><span style='font-size:10px;color:var(--mute)'>오늘 던질 수 있는 투수 기준</span></td>
+        <td style='color:#10b981;font-size:17px'><b>2.91</b></td></tr>
+    <tr><td>가용 / 제외</td><td>가용 <b>8</b>명 · 제외 <b style='color:#ef4444'>0</b>명</td></tr>
+    
+    
+    <tr><td colspan='2' style='color:var(--mute);font-size:10px;padding-top:4px'>가용 핵심 불펜</td></tr>
+    <tr><td>✅ Bryan King (?)</td><td>ERA 1.55 · None IP</td></tr><tr><td>✅ Bryan Abreu (?)</td><td>ERA 6.81 · None IP</td></tr><tr><td>✅ Enyel De Los Santos (?)</td><td>ERA 2.6 · None IP</td></tr><tr><td>✅ AJ Blubaugh (?)</td><td>ERA 3.33 · None IP</td></tr>
+  </table>
+</div></div>
+  <div class="two-col"><div class="split-box">
+  <h3>🧪 LAA 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>39% / 61% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.074</td></tr><tr><td>삼진% / 볼넷%</td><td>28% / 8%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:#10b981'><b>20.7%</b> <span style='font-size:11px'>우수</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.006 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>0.014</td></tr></table>
+</div><div class="split-box">
+  <h3>🧪 HOU 선발투수 성향</h3>
+  <div style='font-size:10px;color:var(--mute);margin:-4px 0 6px'>상대 타선이 상대할 이 팀 선발의 구위·제구</div>
+  <table><tr><td>땅볼% / 뜬공%</td><td>46% / 55% <span style='color:#ef4444;font-size:11px'>뜬공형(피홈런 위험↑)</span></td></tr><tr><td>뜬공 중 홈런 비율</td><td>0.056</td></tr><tr><td>삼진% / 볼넷%</td><td>22% / 12%</td></tr><tr><td>제구·탈삼진 (K-BB%)</td><td style='color:var(--text)'><b>10.3%</b> <span style='font-size:11px'>보통</span></td></tr><tr><td>장타 위험 보정</td><td style='color:var(--text)'>0.008 <span style='font-size:11px'>중립</span></td></tr><tr><td>vs 상대 타선 삼진 궁합</td><td>-0.016</td></tr></table>
+</div></div>
+</div>
+  </section>
+
+  <footer>
+    Generated 2026-06-11 08:55 KST · MLB Quant v5 · raw-pred / learn-corrected / mu-clamped
+  </footer>
+</div>
+</body></html>
