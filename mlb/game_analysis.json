@@ -25,7 +25,7 @@
     "umpire": "",
     "home_lineup_ids": [],
     "away_lineup_ids": [],
-    "market_total": 8.5,
+    "market_total": 9.0,
     "ballpark_pal": {
       "source": "ballpark_pal",
       "game_pk": 823694,
@@ -84,20 +84,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.935949156244268,
+    "raw_total": 10.90497864426099,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 5.769,
-    "raw_away_pre_learn": 5.562,
-    "home_runs": 4.402070264240717,
-    "away_runs": 6.5338788920035515,
-    "total": 10.935949156244268,
-    "home_win_prob": 0.34035,
-    "away_win_prob": 0.65965,
+    "raw_home_pre_learn": 5.749,
+    "raw_away_pre_learn": 5.552,
+    "home_runs": 4.381797587659166,
+    "away_runs": 6.523181056601824,
+    "total": 10.90497864426099,
+    "home_win_prob": 0.3354,
+    "away_win_prob": 0.6646,
     "runline": {
-      "home_minus_1_5": 0.2332,
-      "home_plus_1_5": 0.45695,
-      "away_minus_1_5": 0.54305,
-      "away_plus_1_5": 0.7668
+      "home_minus_1_5": 0.2325,
+      "home_plus_1_5": 0.45435,
+      "away_minus_1_5": 0.54565,
+      "away_plus_1_5": 0.7675
     },
     "home_matchup": 0.9570000000000001,
     "away_matchup": 1.048,
@@ -1898,13 +1898,13 @@
     "odds": {
       "home_ml": 1.91,
       "away_ml": 1.91,
-      "total": 8.5,
-      "over": 2.05,
-      "under": 1.8,
+      "total": 9.0,
+      "over": 1.91,
+      "under": 1.91,
       "home_spread": 1.5,
-      "home_spread_odds": 1.56,
+      "home_spread_odds": 1.55,
       "away_spread": -1.5,
-      "away_spread_odds": 2.48,
+      "away_spread_odds": 2.49,
       "book": "FanDuel",
       "estimated": true
     },
@@ -1913,12 +1913,15 @@
         "matchup": "STL @ MIN",
         "market": "moneyline",
         "label": "MIN ML",
-        "prob": 0.3403,
+        "prob": 0.3354,
         "odds": 1.91,
-        "ev": -0.3499,
+        "ev": -0.3594,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4753,
+        "kelly_f": -0.1013,
+        "ev_debiased": -0.0922,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -1926,55 +1929,67 @@
         "matchup": "STL @ MIN",
         "market": "moneyline",
         "label": "STL ML",
-        "prob": 0.6596,
+        "prob": 0.6646,
         "odds": 1.91,
-        "ev": 0.2599,
-        "kelly_raw": 0.2856,
-        "stake": 143,
-        "stake_base": 100,
+        "ev": 0.2694,
+        "kelly_raw": 0.296,
+        "p_hat": 0.5247,
+        "kelly_f": 0.0024,
+        "ev_debiased": 0.0022,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
       {
         "matchup": "STL @ MIN",
         "market": "total",
-        "label": "Over 8.5",
-        "prob": 0.688,
-        "odds": 2.05,
-        "ev": 0.4104,
-        "kelly_raw": 0.3908,
-        "stake": 195,
-        "stake_base": 100,
+        "label": "Over 9.0",
+        "prob": 0.6175,
+        "odds": 1.91,
+        "ev": 0.1794,
+        "kelly_raw": 0.1971,
+        "p_hat": 0.5411,
+        "kelly_f": 0.0368,
+        "ev_debiased": 0.0335,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 11.1,
-        "market_total": 8.5
+        "model_total": 11.07,
+        "market_total": 9.0
       },
       {
         "matchup": "STL @ MIN",
         "market": "total",
-        "label": "Under 8.5",
-        "prob": 0.312,
-        "odds": 1.8,
-        "ev": -0.4384,
+        "label": "Under 9.0",
+        "prob": 0.3125,
+        "odds": 1.91,
+        "ev": -0.4032,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4344,
+        "kelly_f": -0.1872,
+        "ev_debiased": -0.1704,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 11.1,
-        "market_total": 8.5
+        "model_total": 11.07,
+        "market_total": 9.0
       },
       {
         "matchup": "STL @ MIN",
         "market": "runline",
         "label": "MIN +1.5",
-        "prob": 0.457,
-        "odds": 1.56,
-        "ev": -0.2872,
+        "prob": 0.4543,
+        "odds": 1.55,
+        "ev": -0.2958,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -1982,12 +1997,15 @@
         "matchup": "STL @ MIN",
         "market": "runline",
         "label": "STL -1.5",
-        "prob": 0.5431,
-        "odds": 2.48,
-        "ev": 0.3468,
-        "kelly_raw": 0.2343,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.5456,
+        "odds": 2.49,
+        "ev": 0.3587,
+        "kelly_raw": 0.2407,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -1996,20 +2014,20 @@
       "source": "ballpark_pal",
       "text": "2% Precipitation 70°  Wind 14 mph",
       "precip_prob": 2.0,
-      "temp_f": 73.7,
-      "wind_mph": 14.4,
+      "temp_f": 73.4,
+      "wind_mph": 13.9,
       "venue": "Target Field",
       "roof": "open",
       "forecast_hour": "2026-06-13T18:00",
-      "wind_direction_deg": 285.0,
-      "humidity_pct": 36.0,
-      "temp_f_3h_avg": 74.0,
-      "wind_mph_3h_avg": 14.9,
-      "wind_direction_deg_3h_avg": 287.0,
+      "wind_direction_deg": 280.0,
+      "humidity_pct": 37.0,
+      "temp_f_3h_avg": 73.7,
+      "wind_mph_3h_avg": 14.3,
+      "wind_direction_deg_3h_avg": 285.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0412,
+      "carry_adj": 0.0406,
       "run_factor": 1.06,
-      "wind_dot_of": 14.181,
+      "wind_dot_of": 13.847,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 95,
@@ -2045,42 +2063,42 @@
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0214
+        "prob": 0.0225
       },
       {
         "away": 5,
         "home": 4,
-        "prob": 0.0196
-      },
-      {
-        "away": 4,
-        "home": 5,
-        "prob": 0.0187
+        "prob": 0.0198
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.018
+        "prob": 0.0177
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.018
-      },
-      {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0173
-      },
-      {
-        "away": 5,
-        "home": 2,
-        "prob": 0.0152
+        "prob": 0.0174
       },
       {
         "away": 6,
         "home": 5,
-        "prob": 0.015
+        "prob": 0.0157
+      },
+      {
+        "away": 5,
+        "home": 2,
+        "prob": 0.0157
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0155
+      },
+      {
+        "away": 5,
+        "home": 3,
+        "prob": 0.0154
       }
     ],
     "hr_env": {
@@ -2608,15 +2626,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.5215,
-        "raw_factor": 1.636,
-        "mu": 7.373,
+        "factor": 1.512,
+        "raw_factor": 1.6244,
+        "mu": 7.323,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.3544,
-        "raw_factor": 1.4322,
-        "mu": 6.494,
+        "factor": 1.3539,
+        "raw_factor": 1.4316,
+        "mu": 6.467,
         "weight": 0.4
       }
     },
@@ -3658,15 +3676,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.57,
-      "away_xr": 2.56,
-      "total_xr": 5.13,
-      "home_win_prob": 0.4222,
-      "away_win_prob": 0.425,
+      "home_xr": 3.2,
+      "away_xr": 2.8,
+      "total_xr": 6.0,
+      "home_win_prob": 0.4773,
+      "away_win_prob": 0.3919,
       "over_probs": {
-        "4.5": 0.5071,
-        "5.0": 0.3918,
-        "5.5": 0.3918
+        "4.5": 0.6068,
+        "5.0": 0.4859,
+        "5.5": 0.4859
       }
     }
   },
@@ -3704,13 +3722,13 @@
       "away_abbr": "NYY",
       "home_abbr": "TOR",
       "venue": "Rogers Centre",
-      "hr_pct": 18.0,
+      "hr_pct": 19.0,
       "runs_pct": 6.0,
-      "runs_number": 0.51,
+      "runs_number": 0.54,
       "stadium_runs_pct": -1.0,
-      "weather_runs_pct": 7.0,
+      "weather_runs_pct": 8.0,
       "stadium_runs_number": -0.12,
-      "weather_runs_number": 0.63,
+      "weather_runs_number": 0.67,
       "wind_receptiveness": "Minimal",
       "wind_hour_1": {
         "speed_mph": 9.0,
@@ -3737,7 +3755,7 @@
       "description": "A neutral-sized retractable roof venue where every opportunity is taken to play outdoors. A closed roof is well-received by hitters on cold Toronto days but can favor pitchers when its hot out .",
       "combined_run_factor": 1.06,
       "stadium_run_factor": 0.99,
-      "weather_run_factor": 1.07
+      "weather_run_factor": 1.08
     },
     "environment_factor": 1.06,
     "data_sources": {
@@ -3755,20 +3773,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.05081714006764,
+    "raw_total": 9.933596489349306,
     "calibration": "market_independent",
     "raw_home_pre_learn": 3.512,
-    "raw_away_pre_learn": 4.795,
-    "home_runs": 4.405537982115362,
-    "away_runs": 5.645279157952277,
-    "total": 10.05081714006764,
-    "home_win_prob": 0.40375,
-    "away_win_prob": 0.59625,
+    "raw_away_pre_learn": 4.678,
+    "home_runs": 4.405169789660195,
+    "away_runs": 5.52842669968911,
+    "total": 9.933596489349306,
+    "home_win_prob": 0.4071,
+    "away_win_prob": 0.5929,
     "runline": {
-      "home_minus_1_5": 0.28015,
-      "home_plus_1_5": 0.5278,
-      "away_minus_1_5": 0.4722,
-      "away_plus_1_5": 0.71985
+      "home_minus_1_5": 0.28715,
+      "home_plus_1_5": 0.54055,
+      "away_minus_1_5": 0.45945,
+      "away_plus_1_5": 0.71285
     },
     "home_matchup": 1.0015,
     "away_matchup": 1.0305,
@@ -5034,9 +5052,9 @@
     ],
     "starter_phase": {
       "home_runs_no_bp": 3.299,
-      "away_runs_no_bp": 4.679,
-      "home_lead_prob": 0.26459476466724097,
-      "away_lead_prob": 0.735405235332759
+      "away_runs_no_bp": 4.68,
+      "home_lead_prob": 0.2644506532289484,
+      "away_lead_prob": 0.7355493467710517
     },
     "home_stuff": 84.9,
     "home_loc": 99.0,
@@ -5182,14 +5200,14 @@
     ],
     "odds": {
       "home_ml": 2.05,
-      "away_ml": 1.77,
+      "away_ml": 1.8,
       "total": 7.5,
-      "over": 1.91,
-      "under": 1.91,
+      "over": 1.87,
+      "under": 1.95,
       "home_spread": 1.5,
-      "home_spread_odds": 1.59,
+      "home_spread_odds": 1.61,
       "away_spread": -1.5,
-      "away_spread_odds": 2.4,
+      "away_spread_odds": 2.35,
       "book": "FanDuel",
       "estimated": true
     },
@@ -5198,12 +5216,15 @@
         "matchup": "NYY @ TOR",
         "market": "moneyline",
         "label": "TOR ML",
-        "prob": 0.4037,
+        "prob": 0.4071,
         "odds": 2.05,
-        "ev": -0.1723,
+        "ev": -0.1654,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4585,
+        "kelly_f": -0.0573,
+        "ev_debiased": -0.0601,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -5211,12 +5232,15 @@
         "matchup": "NYY @ TOR",
         "market": "moneyline",
         "label": "NYY ML",
-        "prob": 0.5962,
-        "odds": 1.77,
-        "ev": 0.0554,
-        "kelly_raw": 0.0719,
-        "stake": 36,
-        "stake_base": 100,
+        "prob": 0.5929,
+        "odds": 1.8,
+        "ev": 0.0672,
+        "kelly_raw": 0.084,
+        "p_hat": 0.5415,
+        "kelly_f": -0.0316,
+        "ev_debiased": -0.0252,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -5224,42 +5248,51 @@
         "matchup": "NYY @ TOR",
         "market": "total",
         "label": "Over 7.5",
-        "prob": 0.7068,
-        "odds": 1.91,
-        "ev": 0.3501,
-        "kelly_raw": 0.3847,
-        "stake": 100,
-        "stake_base": 100,
+        "prob": 0.699,
+        "odds": 1.87,
+        "ev": 0.3072,
+        "kelly_raw": 0.3531,
+        "p_hat": 0.5765,
+        "kelly_f": 0.0896,
+        "ev_debiased": 0.078,
+        "stake": 4,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.24,
+        "model_total": 10.12,
         "market_total": 7.5
       },
       {
         "matchup": "NYY @ TOR",
         "market": "total",
         "label": "Under 7.5",
-        "prob": 0.2932,
-        "odds": 1.91,
-        "ev": -0.4401,
+        "prob": 0.301,
+        "odds": 1.95,
+        "ev": -0.4131,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4235,
+        "kelly_f": -0.1833,
+        "ev_debiased": -0.1741,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.24,
+        "model_total": 10.12,
         "market_total": 7.5
       },
       {
         "matchup": "NYY @ TOR",
         "market": "runline",
         "label": "TOR +1.5",
-        "prob": 0.5278,
-        "odds": 1.59,
-        "ev": -0.1608,
+        "prob": 0.5405,
+        "odds": 1.61,
+        "ev": -0.1297,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -5267,12 +5300,15 @@
         "matchup": "NYY @ TOR",
         "market": "runline",
         "label": "NYY -1.5",
-        "prob": 0.4722,
-        "odds": 2.4,
-        "ev": 0.1333,
-        "kelly_raw": 0.0952,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.4595,
+        "odds": 2.35,
+        "ev": 0.0797,
+        "kelly_raw": 0.059,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -5281,20 +5317,20 @@
       "source": "ballpark_pal",
       "text": "Dome In Domed Stadium",
       "precip_prob": 1.0,
-      "temp_f": 80.3,
-      "wind_mph": 12.9,
+      "temp_f": 80.7,
+      "wind_mph": 14.3,
       "venue": "Rogers Centre",
       "roof": "open",
       "forecast_hour": "2026-06-13T19:00",
-      "wind_direction_deg": 188.0,
-      "humidity_pct": 37.0,
-      "temp_f_3h_avg": 80.9,
-      "wind_mph_3h_avg": 13.9,
-      "wind_direction_deg_3h_avg": 190.0,
+      "wind_direction_deg": 189.0,
+      "humidity_pct": 36.0,
+      "temp_f_3h_avg": 81.0,
+      "wind_mph_3h_avg": 14.3,
+      "wind_direction_deg_3h_avg": 192.0,
       "_source": "open-meteo",
-      "carry_adj": 0.053,
+      "carry_adj": 0.0556,
       "run_factor": 1.0707,
-      "wind_dot_of": 12.774,
+      "wind_dot_of": 14.124,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 0,
@@ -5304,9 +5340,9 @@
       "altitude": 247.0,
       "combined_run_factor": 1.06,
       "stadium_run_factor": 0.99,
-      "weather_run_factor": 1.07,
+      "weather_run_factor": 1.08,
       "runs_pct": 6.0,
-      "hr_pct": 18.0,
+      "hr_pct": 19.0,
       "wind_receptiveness": "Minimal",
       "wind_hour_1": {
         "speed_mph": 9.0,
@@ -5328,63 +5364,63 @@
     },
     "scores_top": [
       {
-        "away": 3,
-        "home": 4,
-        "prob": 0.0232
-      },
-      {
         "away": 4,
         "home": 3,
-        "prob": 0.0227
+        "prob": 0.0256
       },
       {
-        "away": 5,
+        "away": 3,
         "home": 4,
-        "prob": 0.022
+        "prob": 0.0231
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0226
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0215
+        "prob": 0.0217
       },
       {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0211
+        "away": 5,
+        "home": 4,
+        "prob": 0.021
       },
       {
         "away": 4,
         "home": 5,
-        "prob": 0.0184
+        "prob": 0.0201
       },
       {
         "away": 4,
         "home": 2,
-        "prob": 0.017
+        "prob": 0.0176
       },
       {
-        "away": 1,
-        "home": 2,
-        "prob": 0.0155
+        "away": 6,
+        "home": 5,
+        "prob": 0.0168
       }
     ],
     "hr_env": {
-      "hr_env_pct": 18.0,
+      "hr_env_pct": 19.0,
       "home_hr_adj": {
-        "hr_env_pct": 18.0,
-        "hr_env_excess": -0.82,
+        "hr_env_pct": 19.0,
+        "hr_env_excess": -0.81,
         "team_hr_dep": 0.927,
         "hr_dep_excess": 0.0,
         "pitch_hr_factor": 0.8,
         "applied": 0.0
       },
       "away_hr_adj": {
-        "hr_env_pct": 18.0,
-        "hr_env_excess": -0.82,
+        "hr_env_pct": 19.0,
+        "hr_env_excess": -0.81,
         "team_hr_dep": 1.13,
         "hr_dep_excess": 0.13,
         "pitch_hr_factor": 0.88,
-        "applied": -0.0576
+        "applied": -0.0569
       }
     },
     "hand_split": {
@@ -5893,15 +5929,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.7112,
-        "raw_factor": 0.6478,
-        "mu": 3.644,
+        "factor": 0.711,
+        "raw_factor": 0.6475,
+        "mu": 3.643,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0145,
-        "raw_factor": 1.0177,
-        "mu": 4.957,
+        "factor": 1.0073,
+        "raw_factor": 1.0089,
+        "mu": 4.665,
         "weight": 0.4
       }
     },
@@ -6600,17 +6636,17 @@
         "_present": true
       },
       "home_bb_factor": {
-        "applied": 0.0173,
+        "applied": 0.0183,
         "fb_pct": 0.538,
         "hr_per_fb": 0.048,
-        "park_hr_idx": 0.18,
+        "park_hr_idx": 0.19,
         "fb_relative": 0.494
       },
       "away_bb_factor": {
-        "applied": 0.0181,
+        "applied": 0.0191,
         "fb_pct": 0.532,
         "hr_per_fb": 0.107,
-        "park_hr_idx": 0.18,
+        "park_hr_idx": 0.19,
         "fb_relative": 0.478
       },
       "home_coors_hangover": {
@@ -6671,8 +6707,8 @@
         "mu_full": 3.424,
         "mu_f5": 2.061,
         "hr_env": {
-          "hr_env_pct": 18.0,
-          "hr_env_excess": -0.82,
+          "hr_env_pct": 19.0,
+          "hr_env_excess": -0.81,
           "team_hr_dep": 0.927,
           "hr_dep_excess": 0.0,
           "pitch_hr_factor": 0.8,
@@ -6695,7 +6731,7 @@
             "obp_eff": 0.2631,
             "pa_per_inning": 4.071
           },
-          "hand_factor": 0.849,
+          "hand_factor": 0.85,
           "tto_mult": 1.017,
           "park": 0.99,
           "wx": 1.071,
@@ -6707,19 +6743,19 @@
         }
       },
       "away": {
-        "runs_vs_sp": 4.679,
+        "runs_vs_sp": 4.68,
         "runs_vs_bp": 4.67,
         "sp_share": 0.634,
         "expected_ip": 5.71,
         "mu_full": 4.686,
-        "mu_f5": 2.832,
+        "mu_f5": 2.833,
         "hr_env": {
-          "hr_env_pct": 18.0,
-          "hr_env_excess": -0.82,
+          "hr_env_pct": 19.0,
+          "hr_env_excess": -0.81,
           "team_hr_dep": 1.13,
           "hr_dep_excess": 0.13,
           "pitch_hr_factor": 0.88,
-          "applied": -0.0576
+          "applied": -0.0569
         },
         "components": {
           "method": "zero_base_woba",
@@ -6728,7 +6764,7 @@
           "matchup_woba": 0.3141,
           "sp_path": {
             "eff_woba": 0.3144,
-            "rpa": 0.1215,
+            "rpa": 0.1216,
             "obp_eff": 0.2987,
             "pa_per_inning": 4.278
           },
@@ -6743,7 +6779,7 @@
           "park": 0.99,
           "wx": 1.071,
           "ump": 1.0,
-          "hr_adj": 0.942,
+          "hr_adj": 0.943,
           "travel_mult": 1.0,
           "home_mult": 1.0,
           "bp_factor": 0.929
@@ -6751,15 +6787,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.04,
-      "away_xr": 2.83,
-      "total_xr": 4.88,
-      "home_win_prob": 0.3229,
-      "away_win_prob": 0.5234,
+      "home_xr": 1.93,
+      "away_xr": 2.69,
+      "total_xr": 4.62,
+      "home_win_prob": 0.3193,
+      "away_win_prob": 0.5177,
       "over_probs": {
-        "4.5": 0.4725,
-        "5.0": 0.361,
-        "5.5": 0.361
+        "4.5": 0.4411,
+        "5.0": 0.3288,
+        "5.5": 0.3288
       }
     }
   },
@@ -6850,20 +6886,20 @@
         "홈 선발 표본↓"
       ]
     },
-    "raw_total": 13.756779889416503,
+    "raw_total": 13.712194682694838,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 7.021,
-    "raw_away_pre_learn": 5.921,
-    "home_runs": 7.546643268337596,
-    "away_runs": 6.210136621078906,
-    "total": 13.756779889416503,
-    "home_win_prob": 0.59225,
-    "away_win_prob": 0.40775,
+    "raw_home_pre_learn": 7.008,
+    "raw_away_pre_learn": 5.889,
+    "home_runs": 7.534112567563836,
+    "away_runs": 6.1780821151310015,
+    "total": 13.712194682694838,
+    "home_win_prob": 0.60145,
+    "away_win_prob": 0.39855,
     "runline": {
-      "home_minus_1_5": 0.4847,
-      "home_plus_1_5": 0.69305,
-      "away_minus_1_5": 0.30695,
-      "away_plus_1_5": 0.5153
+      "home_minus_1_5": 0.49215,
+      "home_plus_1_5": 0.6983,
+      "away_minus_1_5": 0.3017,
+      "away_plus_1_5": 0.50785
     },
     "home_matchup": 1.0535,
     "away_matchup": 1.029,
@@ -8625,12 +8661,15 @@
         "matchup": "SD @ BAL",
         "market": "moneyline",
         "label": "BAL ML",
-        "prob": 0.5923,
+        "prob": 0.6015,
         "odds": 1.74,
-        "ev": 0.0305,
-        "kelly_raw": 0.0412,
-        "stake": 21,
-        "stake_base": 100,
+        "ev": 0.0465,
+        "kelly_raw": 0.0629,
+        "p_hat": 0.5551,
+        "kelly_f": -0.0462,
+        "ev_debiased": -0.0342,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -8638,12 +8677,15 @@
         "matchup": "SD @ BAL",
         "market": "moneyline",
         "label": "SD ML",
-        "prob": 0.4078,
+        "prob": 0.3986,
         "odds": 2.1,
-        "ev": -0.1437,
+        "ev": -0.163,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4449,
+        "kelly_f": -0.0597,
+        "ev_debiased": -0.0656,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -8651,12 +8693,15 @@
         "matchup": "SD @ BAL",
         "market": "runline",
         "label": "BAL -1.5",
-        "prob": 0.4847,
+        "prob": 0.4921,
         "odds": 2.5,
-        "ev": 0.2118,
-        "kelly_raw": 0.1412,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.2304,
+        "kelly_raw": 0.1536,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -8664,12 +8709,15 @@
         "matchup": "SD @ BAL",
         "market": "runline",
         "label": "SD +1.5",
-        "prob": 0.5153,
+        "prob": 0.5079,
         "odds": 1.54,
-        "ev": -0.2064,
+        "ev": -0.2179,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -8678,20 +8726,20 @@
       "source": "ballpark_pal",
       "text": "0% 90°  Wind 5 mph L-R",
       "precip_prob": 0.0,
-      "temp_f": 90.4,
+      "temp_f": 90.6,
       "wind_mph": 7.2,
       "venue": "Oriole Park at Camden Yards",
       "roof": "open",
       "forecast_hour": "2026-06-13T20:00",
-      "wind_direction_deg": 284.0,
-      "humidity_pct": 24.0,
-      "temp_f_3h_avg": 90.0,
-      "wind_mph_3h_avg": 8.0,
-      "wind_direction_deg_3h_avg": 277.0,
+      "wind_direction_deg": 274.0,
+      "humidity_pct": 28.0,
+      "temp_f_3h_avg": 90.3,
+      "wind_mph_3h_avg": 7.7,
+      "wind_direction_deg_3h_avg": 276.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0431,
+      "carry_adj": 0.0446,
       "run_factor": 1.0571,
-      "wind_dot_of": 5.179,
+      "wind_dot_of": 5.969,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 60,
@@ -8727,42 +8775,42 @@
       {
         "away": 5,
         "home": 6,
-        "prob": 0.0159
+        "prob": 0.0169
       },
       {
         "away": 4,
         "home": 5,
-        "prob": 0.0157
+        "prob": 0.0151
       },
       {
         "away": 6,
         "home": 7,
-        "prob": 0.0152
-      },
-      {
-        "away": 5,
-        "home": 4,
-        "prob": 0.0144
-      },
-      {
-        "away": 6,
-        "home": 5,
-        "prob": 0.0139
+        "prob": 0.0148
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0127
+        "prob": 0.0146
       },
       {
-        "away": 4,
-        "home": 3,
-        "prob": 0.0124
+        "away": 5,
+        "home": 4,
+        "prob": 0.0138
+      },
+      {
+        "away": 6,
+        "home": 5,
+        "prob": 0.0135
       },
       {
         "away": 7,
         "home": 6,
-        "prob": 0.0123
+        "prob": 0.0134
+      },
+      {
+        "away": 4,
+        "home": 3,
+        "prob": 0.0126
       }
     ],
     "hr_env": {
@@ -9290,15 +9338,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.1441,
-        "raw_factor": 1.1757,
-        "mu": 5.885,
+        "factor": 1.1376,
+        "raw_factor": 1.1678,
+        "mu": 5.854,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0248,
-        "raw_factor": 1.0303,
-        "mu": 5.223,
+        "factor": 1.0316,
+        "raw_factor": 1.0386,
+        "mu": 5.142,
         "weight": 0.4
       }
     },
@@ -10312,15 +10360,15 @@
       }
     },
     "f5": {
-      "home_xr": 4.4,
-      "away_xr": 3.65,
-      "total_xr": 8.06,
-      "home_win_prob": 0.5193,
-      "away_win_prob": 0.378,
+      "home_xr": 4.13,
+      "away_xr": 3.4,
+      "total_xr": 7.53,
+      "home_win_prob": 0.5163,
+      "away_win_prob": 0.3744,
       "over_probs": {
-        "4.5": 0.7946,
-        "5.0": 0.7024,
-        "5.5": 0.7024
+        "4.5": 0.7459,
+        "5.0": 0.647,
+        "5.5": 0.647
       }
     }
   },
@@ -10401,7 +10449,7 @@
       "away_pitcher": "statsapi",
       "home_pitch_form": "statcast",
       "away_pitch_form": "statcast",
-      "weather": "met.no",
+      "weather": "open-meteo",
       "ballpark_pal": "ballpark_pal",
       "odds": "live"
     },
@@ -10409,20 +10457,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.85315495274567,
+    "raw_total": 10.551575674024647,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 5.973,
-    "raw_away_pre_learn": 5.852,
-    "home_runs": 6.455079628294768,
-    "away_runs": 4.398075324450903,
-    "total": 10.85315495274567,
-    "home_win_prob": 0.6577,
-    "away_win_prob": 0.3423,
+    "raw_home_pre_learn": 5.93,
+    "raw_away_pre_learn": 5.594,
+    "home_runs": 6.411632918584945,
+    "away_runs": 4.139942755439703,
+    "total": 10.551575674024647,
+    "home_win_prob": 0.67855,
+    "away_win_prob": 0.32145,
     "runline": {
-      "home_minus_1_5": 0.53725,
-      "home_plus_1_5": 0.76195,
-      "away_minus_1_5": 0.23805,
-      "away_plus_1_5": 0.46275
+      "home_minus_1_5": 0.5538,
+      "home_plus_1_5": 0.7831,
+      "away_minus_1_5": 0.2169,
+      "away_plus_1_5": 0.4462
     },
     "home_matchup": 1.0635,
     "away_matchup": 1.0325,
@@ -11921,15 +11969,15 @@
       }
     ],
     "odds": {
-      "home_ml": 1.87,
-      "away_ml": 1.95,
+      "home_ml": 1.91,
+      "away_ml": 1.91,
       "total": 9.0,
-      "over": 2.05,
-      "under": 1.8,
+      "over": 1.95,
+      "under": 1.87,
       "home_spread": 1.5,
-      "home_spread_odds": 1.53,
+      "home_spread_odds": 1.54,
       "away_spread": -1.5,
-      "away_spread_odds": 2.55,
+      "away_spread_odds": 2.5,
       "book": "FanDuel",
       "estimated": true
     },
@@ -11938,12 +11986,15 @@
         "matchup": "SEA @ WSH",
         "market": "moneyline",
         "label": "WSH ML",
-        "prob": 0.6577,
-        "odds": 1.87,
-        "ev": 0.2299,
-        "kelly_raw": 0.2643,
-        "stake": 132,
-        "stake_base": 100,
+        "prob": 0.6785,
+        "odds": 1.91,
+        "ev": 0.296,
+        "kelly_raw": 0.3253,
+        "p_hat": 0.5268,
+        "kelly_f": 0.0068,
+        "ev_debiased": 0.0062,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -11951,12 +12002,15 @@
         "matchup": "SEA @ WSH",
         "market": "moneyline",
         "label": "SEA ML",
-        "prob": 0.3423,
-        "odds": 1.95,
-        "ev": -0.3325,
+        "prob": 0.3215,
+        "odds": 1.91,
+        "ev": -0.386,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4732,
+        "kelly_f": -0.1057,
+        "ev_debiased": -0.0962,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -11964,42 +12018,51 @@
         "matchup": "SEA @ WSH",
         "market": "total",
         "label": "Over 9.0",
-        "prob": 0.6152,
-        "odds": 2.05,
-        "ev": 0.2612,
-        "kelly_raw": 0.2487,
-        "stake": 124,
-        "stake_base": 100,
+        "prob": 0.5929,
+        "odds": 1.95,
+        "ev": 0.1562,
+        "kelly_raw": 0.1644,
+        "p_hat": 0.5257,
+        "kelly_f": 0.0265,
+        "ev_debiased": 0.0251,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 11.03,
+        "model_total": 10.72,
         "market_total": 9.0
       },
       {
         "matchup": "SEA @ WSH",
         "market": "total",
         "label": "Under 9.0",
-        "prob": 0.3142,
-        "odds": 1.8,
-        "ev": -0.4344,
+        "prob": 0.3346,
+        "odds": 1.87,
+        "ev": -0.3743,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4489,
+        "kelly_f": -0.1845,
+        "ev_debiased": -0.1605,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 11.03,
+        "model_total": 10.72,
         "market_total": 9.0
       },
       {
         "matchup": "SEA @ WSH",
         "market": "runline",
         "label": "WSH +1.5",
-        "prob": 0.762,
-        "odds": 1.53,
-        "ev": 0.1658,
-        "kelly_raw": 0.3128,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.7831,
+        "odds": 1.54,
+        "ev": 0.206,
+        "kelly_raw": 0.3814,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -12007,12 +12070,15 @@
         "matchup": "SEA @ WSH",
         "market": "runline",
         "label": "SEA -1.5",
-        "prob": 0.2381,
-        "odds": 2.55,
-        "ev": -0.393,
+        "prob": 0.2169,
+        "odds": 2.5,
+        "ev": -0.4577,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -12020,21 +12086,21 @@
     "weather": {
       "source": "ballpark_pal",
       "text": "0% 88°  Wind 6 mph",
-      "precip_prob": null,
-      "temp_f": 90.0,
-      "wind_mph": 6.9,
+      "precip_prob": 0.0,
+      "temp_f": 91.2,
+      "wind_mph": 6.3,
       "venue": "Nationals Park",
       "roof": "open",
-      "forecast_hour": "2026-06-13T20:00:00Z",
-      "wind_direction_deg": 262.0,
-      "humidity_pct": 29.5,
-      "temp_f_3h_avg": 90.0,
+      "forecast_hour": "2026-06-13T20:00",
+      "wind_direction_deg": 253.0,
+      "humidity_pct": 27.0,
+      "temp_f_3h_avg": 90.5,
       "wind_mph_3h_avg": 6.9,
-      "wind_direction_deg_3h_avg": 262.0,
-      "_source": "met.no",
-      "carry_adj": 0.0431,
+      "wind_direction_deg_3h_avg": 254.0,
+      "_source": "open-meteo",
+      "carry_adj": 0.0438,
       "run_factor": 1.0192,
-      "wind_dot_of": 4.248,
+      "wind_dot_of": 4.608,
       "wind_dir_label": "외야 바람 (out)",
       "wind_source": "open-meteo",
       "of_bearing": 30,
@@ -12070,42 +12136,42 @@
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0205
-      },
-      {
-        "away": 4,
-        "home": 5,
-        "prob": 0.0198
+        "prob": 0.0237
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0198
+        "prob": 0.0204
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0194
+        "prob": 0.0188
+      },
+      {
+        "away": 4,
+        "home": 5,
+        "prob": 0.0186
       },
       {
         "away": 5,
         "home": 4,
-        "prob": 0.0176
+        "prob": 0.0173
       },
       {
-        "away": 5,
-        "home": 6,
+        "away": 2,
+        "home": 5,
+        "prob": 0.0169
+      },
+      {
+        "away": 3,
+        "home": 2,
         "prob": 0.0163
       },
       {
         "away": 2,
         "home": 4,
-        "prob": 0.0156
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0153
+        "prob": 0.0162
       }
     ],
     "hr_env": {
@@ -12633,15 +12699,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.3033,
-        "raw_factor": 1.3699,
-        "mu": 6.369,
+        "factor": 1.2797,
+        "raw_factor": 1.3411,
+        "mu": 6.261,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.3185,
-        "raw_factor": 1.3885,
-        "mu": 6.332,
+        "factor": 1.3064,
+        "raw_factor": 1.3736,
+        "mu": 5.687,
         "weight": 0.4
       }
     },
@@ -13532,15 +13598,15 @@
       }
     },
     "f5": {
-      "home_xr": 3.34,
-      "away_xr": 2.87,
-      "total_xr": 6.22,
-      "home_win_prob": 0.483,
-      "away_win_prob": 0.3833,
+      "home_xr": 3.53,
+      "away_xr": 3.0,
+      "total_xr": 6.53,
+      "home_win_prob": 0.4927,
+      "away_win_prob": 0.3853,
       "over_probs": {
-        "4.5": 0.6282,
-        "5.0": 0.5099,
-        "5.5": 0.5099
+        "4.5": 0.6585,
+        "5.0": 0.5469,
+        "5.5": 0.5469
       }
     }
   },
@@ -13629,20 +13695,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.393460511973426,
+    "raw_total": 10.366321860502065,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 4.263,
-    "raw_away_pre_learn": 5.344,
-    "home_runs": 4.8397573758673165,
-    "away_runs": 5.55370313610611,
-    "total": 10.393460511973426,
-    "home_win_prob": 0.44145,
-    "away_win_prob": 0.55855,
+    "raw_home_pre_learn": 4.249,
+    "raw_away_pre_learn": 5.332,
+    "home_runs": 4.825446499307956,
+    "away_runs": 5.54087536119411,
+    "total": 10.366321860502065,
+    "home_win_prob": 0.4403,
+    "away_win_prob": 0.5597,
     "runline": {
-      "home_minus_1_5": 0.31895,
-      "home_plus_1_5": 0.5694,
-      "away_minus_1_5": 0.4306,
-      "away_plus_1_5": 0.68105
+      "home_minus_1_5": 0.3234,
+      "home_plus_1_5": 0.56825,
+      "away_minus_1_5": 0.43175,
+      "away_plus_1_5": 0.6766
     },
     "home_matchup": 0.99,
     "away_matchup": 0.9984999999999999,
@@ -15177,8 +15243,8 @@
     "starter_phase": {
       "home_runs_no_bp": 4.167,
       "away_runs_no_bp": 5.003,
-      "home_lead_prob": 0.3499499400834954,
-      "away_lead_prob": 0.6500500599165047
+      "home_lead_prob": 0.34994994008349545,
+      "away_lead_prob": 0.6500500599165046
     },
     "home_stuff": 102.9,
     "home_loc": 100.2,
@@ -15328,12 +15394,12 @@
       "home_ml": 1.74,
       "away_ml": 2.1,
       "total": 9.0,
-      "over": 1.91,
-      "under": 1.91,
+      "over": 1.87,
+      "under": 1.95,
       "home_spread": -1.5,
-      "home_spread_odds": 2.55,
+      "home_spread_odds": 2.5,
       "away_spread": 1.5,
-      "away_spread_odds": 1.53,
+      "away_spread_odds": 1.54,
       "book": "FanDuel",
       "estimated": true
     },
@@ -15342,12 +15408,15 @@
         "matchup": "MIA @ PIT",
         "market": "moneyline",
         "label": "PIT ML",
-        "prob": 0.4415,
+        "prob": 0.4403,
         "odds": 1.74,
-        "ev": -0.2319,
+        "ev": -0.2339,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.5309,
+        "kelly_f": -0.103,
+        "ev_debiased": -0.0763,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -15355,12 +15424,15 @@
         "matchup": "MIA @ PIT",
         "market": "moneyline",
         "label": "MIA ML",
-        "prob": 0.5585,
+        "prob": 0.5597,
         "odds": 2.1,
-        "ev": 0.173,
-        "kelly_raw": 0.1572,
-        "stake": 79,
-        "stake_base": 100,
+        "ev": 0.1754,
+        "kelly_raw": 0.1594,
+        "p_hat": 0.4691,
+        "kelly_f": -0.0135,
+        "ev_debiased": -0.0149,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -15368,42 +15440,51 @@
         "matchup": "MIA @ PIT",
         "market": "total",
         "label": "Over 9.0",
-        "prob": 0.5813,
-        "odds": 1.91,
-        "ev": 0.1103,
-        "kelly_raw": 0.1213,
-        "stake": 61,
-        "stake_base": 100,
+        "prob": 0.5792,
+        "odds": 1.87,
+        "ev": 0.0832,
+        "kelly_raw": 0.0956,
+        "p_hat": 0.5345,
+        "kelly_f": -0.0005,
+        "ev_debiased": -0.0004,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.56,
+        "model_total": 10.52,
         "market_total": 9.0
       },
       {
         "matchup": "MIA @ PIT",
         "market": "total",
         "label": "Under 9.0",
-        "prob": 0.3449,
-        "odds": 1.91,
-        "ev": -0.3413,
+        "prob": 0.3464,
+        "odds": 1.95,
+        "ev": -0.3246,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4394,
+        "kelly_f": -0.1507,
+        "ev_debiased": -0.1431,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.56,
+        "model_total": 10.52,
         "market_total": 9.0
       },
       {
         "matchup": "MIA @ PIT",
         "market": "runline",
         "label": "PIT -1.5",
-        "prob": 0.319,
-        "odds": 2.55,
-        "ev": -0.1867,
+        "prob": 0.3234,
+        "odds": 2.5,
+        "ev": -0.1915,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -15411,12 +15492,15 @@
         "matchup": "MIA @ PIT",
         "market": "runline",
         "label": "MIA +1.5",
-        "prob": 0.6811,
-        "odds": 1.53,
+        "prob": 0.6766,
+        "odds": 1.54,
         "ev": 0.042,
-        "kelly_raw": 0.0793,
-        "stake": 0.0,
-        "stake_base": 100,
+        "kelly_raw": 0.0777,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -15425,20 +15509,20 @@
       "source": "ballpark_pal",
       "text": "0% 86°  Wind 7 mph R-L",
       "precip_prob": 0.0,
-      "temp_f": 88.3,
-      "wind_mph": 7.1,
+      "temp_f": 87.5,
+      "wind_mph": 8.1,
       "venue": "PNC Park",
       "roof": "open",
       "forecast_hour": "2026-06-13T20:00",
-      "wind_direction_deg": 283.0,
+      "wind_direction_deg": 267.0,
       "humidity_pct": 24.0,
-      "temp_f_3h_avg": 87.8,
-      "wind_mph_3h_avg": 8.1,
-      "wind_direction_deg_3h_avg": 264.0,
+      "temp_f_3h_avg": 87.1,
+      "wind_mph_3h_avg": 8.7,
+      "wind_direction_deg_3h_avg": 251.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0376,
+      "carry_adj": 0.038,
       "run_factor": 1.0404,
-      "wind_dot_of": 6.945,
+      "wind_dot_of": 7.152,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 115,
@@ -15472,44 +15556,44 @@
     },
     "scores_top": [
       {
-        "away": 3,
-        "home": 4,
-        "prob": 0.0225
-      },
-      {
         "away": 4,
         "home": 3,
-        "prob": 0.0225
-      },
-      {
-        "away": 5,
-        "home": 4,
-        "prob": 0.022
+        "prob": 0.0229
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0205
+        "prob": 0.0215
       },
       {
-        "away": 2,
-        "home": 3,
+        "away": 3,
+        "home": 4,
+        "prob": 0.0213
+      },
+      {
+        "away": 5,
+        "home": 4,
         "prob": 0.02
       },
       {
         "away": 4,
         "home": 5,
-        "prob": 0.0193
+        "prob": 0.0199
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0186
+      },
+      {
+        "away": 4,
+        "home": 2,
+        "prob": 0.018
       },
       {
         "away": 6,
         "home": 5,
-        "prob": 0.0163
-      },
-      {
-        "away": 5,
-        "home": 6,
-        "prob": 0.0154
+        "prob": 0.016
       }
     ],
     "hr_env": {
@@ -16037,15 +16121,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.892,
-        "raw_factor": 0.8682,
-        "mu": 4.36,
+        "factor": 0.884,
+        "raw_factor": 0.8585,
+        "mu": 4.324,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.2569,
-        "raw_factor": 1.3133,
-        "mu": 5.893,
+        "factor": 1.2496,
+        "raw_factor": 1.3043,
+        "mu": 5.86,
         "weight": 0.4
       }
     },
@@ -17029,15 +17113,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.53,
-      "away_xr": 2.76,
-      "total_xr": 5.29,
-      "home_win_prob": 0.3971,
-      "away_win_prob": 0.4545,
+      "home_xr": 2.4,
+      "away_xr": 3.13,
+      "total_xr": 5.54,
+      "home_win_prob": 0.3425,
+      "away_win_prob": 0.5197,
       "over_probs": {
-        "4.5": 0.5244,
-        "5.0": 0.4092,
-        "5.5": 0.4092
+        "4.5": 0.5576,
+        "5.0": 0.4353,
+        "5.5": 0.4353
       }
     }
   },
@@ -17126,20 +17210,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 9.31962703858507,
+    "raw_total": 9.140718236163622,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 4.285,
-    "raw_away_pre_learn": 6.844,
-    "home_runs": 3.348039934654145,
-    "away_runs": 5.971587103930925,
-    "total": 9.31962703858507,
-    "home_win_prob": 0.28915,
-    "away_win_prob": 0.71085,
+    "raw_home_pre_learn": 4.16,
+    "raw_away_pre_learn": 6.79,
+    "home_runs": 3.2226600942806964,
+    "away_runs": 5.918058141882924,
+    "total": 9.140718236163622,
+    "home_win_prob": 0.28025,
+    "away_win_prob": 0.71975,
     "runline": {
-      "home_minus_1_5": 0.18145,
-      "home_plus_1_5": 0.41585,
-      "away_minus_1_5": 0.58415,
-      "away_plus_1_5": 0.81855
+      "home_minus_1_5": 0.1759,
+      "home_plus_1_5": 0.40935,
+      "away_minus_1_5": 0.59065,
+      "away_plus_1_5": 0.8241
     },
     "home_matchup": 1.0274999999999999,
     "away_matchup": 1.032,
@@ -18716,15 +18800,15 @@
       }
     ],
     "odds": {
-      "home_ml": 2.15,
-      "away_ml": 1.71,
+      "home_ml": 2.18,
+      "away_ml": 1.69,
       "total": 9.5,
-      "over": 1.91,
-      "under": 1.91,
+      "over": 1.95,
+      "under": 1.87,
       "home_spread": 1.5,
       "home_spread_odds": 1.69,
       "away_spread": -1.5,
-      "away_spread_odds": 2.2,
+      "away_spread_odds": 2.18,
       "book": "FanDuel",
       "estimated": true
     },
@@ -18733,12 +18817,15 @@
         "matchup": "AZ @ CIN",
         "market": "moneyline",
         "label": "CIN ML",
-        "prob": 0.2892,
-        "odds": 2.15,
-        "ev": -0.3783,
+        "prob": 0.2802,
+        "odds": 2.18,
+        "ev": -0.3891,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4132,
+        "kelly_f": -0.084,
+        "ev_debiased": -0.0992,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -18746,12 +18833,15 @@
         "matchup": "AZ @ CIN",
         "market": "moneyline",
         "label": "AZ ML",
-        "prob": 0.7108,
-        "odds": 1.71,
-        "ev": 0.2156,
-        "kelly_raw": 0.3036,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.7198,
+        "odds": 1.69,
+        "ev": 0.2164,
+        "kelly_raw": 0.3136,
+        "p_hat": 0.5868,
+        "kelly_f": -0.0121,
+        "ev_debiased": -0.0084,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -18759,42 +18849,51 @@
         "matchup": "AZ @ CIN",
         "market": "total",
         "label": "Over 9.5",
-        "prob": 0.495,
-        "odds": 1.91,
-        "ev": -0.0545,
+        "prob": 0.4781,
+        "odds": 1.95,
+        "ev": -0.0677,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4855,
+        "kelly_f": -0.056,
+        "ev_debiased": -0.0532,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 9.44,
+        "model_total": 9.24,
         "market_total": 9.5
       },
       {
         "matchup": "AZ @ CIN",
         "market": "total",
         "label": "Under 9.5",
-        "prob": 0.505,
-        "odds": 1.91,
-        "ev": -0.0355,
+        "prob": 0.5219,
+        "odds": 1.87,
+        "ev": -0.024,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.5145,
+        "kelly_f": -0.0436,
+        "ev_debiased": -0.0379,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 9.44,
+        "model_total": 9.24,
         "market_total": 9.5
       },
       {
         "matchup": "AZ @ CIN",
         "market": "runline",
         "label": "CIN +1.5",
-        "prob": 0.4158,
+        "prob": 0.4093,
         "odds": 1.69,
-        "ev": -0.2972,
+        "ev": -0.3082,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -18802,12 +18901,15 @@
         "matchup": "AZ @ CIN",
         "market": "runline",
         "label": "AZ -1.5",
-        "prob": 0.5841,
-        "odds": 2.2,
-        "ev": 0.2851,
-        "kelly_raw": 0.2376,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.5907,
+        "odds": 2.18,
+        "ev": 0.2876,
+        "kelly_raw": 0.2437,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -18816,20 +18918,20 @@
       "source": "ballpark_pal",
       "text": "0% 86°  Wind 5 mph R-L",
       "precip_prob": 0.0,
-      "temp_f": 89.2,
-      "wind_mph": 6.2,
+      "temp_f": 88.9,
+      "wind_mph": 6.9,
       "venue": "Great American Ball Park",
       "roof": "open",
       "forecast_hour": "2026-06-13T20:00",
-      "wind_direction_deg": 210.0,
+      "wind_direction_deg": 213.0,
       "humidity_pct": 28.0,
-      "temp_f_3h_avg": 89.2,
+      "temp_f_3h_avg": 89.0,
       "wind_mph_3h_avg": 6.9,
-      "wind_direction_deg_3h_avg": 210.0,
+      "wind_direction_deg_3h_avg": 213.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0287,
+      "carry_adj": 0.0298,
       "run_factor": 0.9725,
-      "wind_dot_of": 2.121,
+      "wind_dot_of": 2.696,
       "wind_dir_label": "외야 바람 (out)",
       "wind_source": "open-meteo",
       "of_bearing": 100,
@@ -18865,42 +18967,42 @@
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0244
+        "prob": 0.0248
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0234
-      },
-      {
-        "away": 5,
-        "home": 2,
-        "prob": 0.0209
+        "prob": 0.0232
       },
       {
         "away": 2,
         "home": 1,
+        "prob": 0.0227
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0222
+      },
+      {
+        "away": 4,
+        "home": 1,
+        "prob": 0.0215
+      },
+      {
+        "away": 4,
+        "home": 2,
         "prob": 0.0208
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0204
-      },
-      {
-        "away": 2,
-        "home": 3,
         "prob": 0.0202
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0202
-      },
-      {
-        "away": 4,
-        "home": 1,
-        "prob": 0.0198
+        "prob": 0.0194
       }
     ],
     "hr_env": {
@@ -19428,15 +19530,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.8248,
-        "raw_factor": 0.7864,
-        "mu": 4.167,
+        "factor": 0.8288,
+        "raw_factor": 0.7913,
+        "mu": 3.853,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.4048,
-        "raw_factor": 1.4936,
-        "mu": 6.722,
+        "factor": 1.3752,
+        "raw_factor": 1.4575,
+        "mu": 6.588,
         "weight": 0.4
       }
     },
@@ -20368,15 +20470,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.6,
-      "away_xr": 3.34,
-      "total_xr": 5.94,
-      "home_win_prob": 0.348,
-      "away_win_prob": 0.5242,
+      "home_xr": 2.46,
+      "away_xr": 3.32,
+      "total_xr": 5.78,
+      "home_win_prob": 0.3298,
+      "away_win_prob": 0.5371,
       "over_probs": {
-        "4.5": 0.5964,
-        "5.0": 0.4831,
-        "5.5": 0.4831
+        "4.5": 0.5803,
+        "5.0": 0.4637,
+        "5.5": 0.4637
       }
     }
   },
@@ -20406,7 +20508,7 @@
     "umpire": "",
     "home_lineup_ids": [],
     "away_lineup_ids": [],
-    "market_total": 7.5,
+    "market_total": 8.0,
     "ballpark_pal": {
       "source": "ballpark_pal",
       "game_pk": 824426,
@@ -20457,7 +20559,7 @@
       "away_pitcher": "statsapi",
       "home_pitch_form": "statcast",
       "away_pitch_form": "fallback",
-      "weather": "met.no",
+      "weather": "open-meteo",
       "ballpark_pal": "ballpark_pal",
       "odds": "live"
     },
@@ -20465,20 +20567,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.628683287129228,
+    "raw_total": 10.475959424378956,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 4.042,
-    "raw_away_pre_learn": 6.162,
-    "home_runs": 4.1968587859476445,
-    "away_runs": 6.431824501181582,
-    "total": 10.628683287129228,
-    "home_win_prob": 0.32775,
-    "away_win_prob": 0.67225,
+    "raw_home_pre_learn": 3.981,
+    "raw_away_pre_learn": 6.071,
+    "home_runs": 4.1353480680953565,
+    "away_runs": 6.340611356283599,
+    "total": 10.475959424378956,
+    "home_win_prob": 0.32835,
+    "away_win_prob": 0.67165,
     "runline": {
-      "home_minus_1_5": 0.22455,
-      "home_plus_1_5": 0.44735,
-      "away_minus_1_5": 0.55265,
-      "away_plus_1_5": 0.77545
+      "home_minus_1_5": 0.22165,
+      "home_plus_1_5": 0.45,
+      "away_minus_1_5": 0.55,
+      "away_plus_1_5": 0.77835
     },
     "home_matchup": 0.9445,
     "away_matchup": 0.9650000000000001,
@@ -22171,13 +22273,13 @@
     "odds": {
       "home_ml": 2.25,
       "away_ml": 1.65,
-      "total": 7.5,
-      "over": 1.91,
-      "under": 1.91,
+      "total": 8.0,
+      "over": 1.87,
+      "under": 1.95,
       "home_spread": 1.5,
-      "home_spread_odds": 1.74,
+      "home_spread_odds": 1.71,
       "away_spread": -1.5,
-      "away_spread_odds": 2.1,
+      "away_spread_odds": 2.15,
       "book": "FanDuel",
       "estimated": true
     },
@@ -22186,12 +22288,15 @@
         "matchup": "DET @ CLE",
         "market": "moneyline",
         "label": "CLE ML",
-        "prob": 0.3277,
+        "prob": 0.3283,
         "odds": 2.25,
-        "ev": -0.2626,
+        "ev": -0.2612,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4089,
+        "kelly_f": -0.064,
+        "ev_debiased": -0.08,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -22199,55 +22304,67 @@
         "matchup": "DET @ CLE",
         "market": "moneyline",
         "label": "DET ML",
-        "prob": 0.6723,
+        "prob": 0.6716,
         "odds": 1.65,
-        "ev": 0.1092,
-        "kelly_raw": 0.168,
-        "stake": 84,
-        "stake_base": 100,
+        "ev": 0.1082,
+        "kelly_raw": 0.1665,
+        "p_hat": 0.5911,
+        "kelly_f": -0.0379,
+        "ev_debiased": -0.0246,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
       {
         "matchup": "DET @ CLE",
         "market": "total",
-        "label": "Over 7.5",
-        "prob": 0.736,
-        "odds": 1.91,
-        "ev": 0.4057,
-        "kelly_raw": 0.4458,
-        "stake": 100,
-        "stake_base": 100,
+        "label": "Over 8.0",
+        "prob": 0.6591,
+        "odds": 1.87,
+        "ev": 0.2325,
+        "kelly_raw": 0.2672,
+        "p_hat": 0.5625,
+        "kelly_f": 0.0596,
+        "ev_debiased": 0.0518,
+        "stake": 3,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.79,
-        "market_total": 7.5
+        "model_total": 10.62,
+        "market_total": 8.0
       },
       {
         "matchup": "DET @ CLE",
         "market": "total",
-        "label": "Under 7.5",
-        "prob": 0.264,
-        "odds": 1.91,
-        "ev": -0.4957,
+        "label": "Under 8.0",
+        "prob": 0.2731,
+        "odds": 1.95,
+        "ev": -0.4675,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4138,
+        "kelly_f": -0.2033,
+        "ev_debiased": -0.1932,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.79,
-        "market_total": 7.5
+        "model_total": 10.62,
+        "market_total": 8.0
       },
       {
         "matchup": "DET @ CLE",
         "market": "runline",
         "label": "CLE +1.5",
-        "prob": 0.4474,
-        "odds": 1.74,
-        "ev": -0.2216,
+        "prob": 0.45,
+        "odds": 1.71,
+        "ev": -0.2305,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -22255,12 +22372,15 @@
         "matchup": "DET @ CLE",
         "market": "runline",
         "label": "DET -1.5",
-        "prob": 0.5526,
-        "odds": 2.1,
-        "ev": 0.1606,
-        "kelly_raw": 0.146,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.55,
+        "odds": 2.15,
+        "ev": 0.1825,
+        "kelly_raw": 0.1587,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -22268,22 +22388,22 @@
     "weather": {
       "source": "ballpark_pal",
       "text": "0% 85°  Wind 7 mph L-R",
-      "precip_prob": null,
-      "temp_f": 79.2,
-      "wind_mph": 7.8,
+      "precip_prob": 0.0,
+      "temp_f": 85.4,
+      "wind_mph": 7.6,
       "venue": "Progressive Field",
       "roof": "open",
-      "forecast_hour": "2026-06-13T20:00:00Z",
-      "wind_direction_deg": 3.0,
-      "humidity_pct": 51.1,
-      "temp_f_3h_avg": 79.2,
-      "wind_mph_3h_avg": 7.8,
-      "wind_direction_deg_3h_avg": 3.0,
-      "_source": "met.no",
-      "carry_adj": 0.0085,
+      "forecast_hour": "2026-06-13T20:00",
+      "wind_direction_deg": 273.0,
+      "humidity_pct": 34.0,
+      "temp_f_3h_avg": 85.9,
+      "wind_mph_3h_avg": 6.9,
+      "wind_direction_deg_3h_avg": 268.0,
+      "_source": "open-meteo",
+      "carry_adj": 0.0225,
       "run_factor": 1.0808,
-      "wind_dot_of": -7.789,
-      "wind_dir_label": "내야 강한 바람 (IN)",
+      "wind_dot_of": -0.398,
+      "wind_dir_label": "옆/잔잔",
       "wind_source": "open-meteo",
       "of_bearing": 0,
       "temp_avg": 83.7,
@@ -22316,44 +22436,44 @@
     },
     "scores_top": [
       {
-        "away": 4,
-        "home": 3,
-        "prob": 0.0219
+        "away": 5,
+        "home": 4,
+        "prob": 0.0207
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0192
+        "prob": 0.0206
       },
       {
-        "away": 5,
-        "home": 4,
-        "prob": 0.0185
+        "away": 4,
+        "home": 3,
+        "prob": 0.0203
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0182
-      },
-      {
-        "away": 4,
-        "home": 5,
-        "prob": 0.017
-      },
-      {
-        "away": 4,
-        "home": 2,
-        "prob": 0.0166
-      },
-      {
-        "away": 5,
-        "home": 3,
-        "prob": 0.0164
+        "prob": 0.0194
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.016
+        "prob": 0.0178
+      },
+      {
+        "away": 5,
+        "home": 3,
+        "prob": 0.0165
+      },
+      {
+        "away": 4,
+        "home": 5,
+        "prob": 0.0163
+      },
+      {
+        "away": 6,
+        "home": 2,
+        "prob": 0.0158
       }
     ],
     "hr_env": {
@@ -22881,15 +23001,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.8559,
-        "raw_factor": 0.8243,
-        "mu": 4.347,
+        "factor": 0.8228,
+        "raw_factor": 0.7839,
+        "mu": 4.193,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.3774,
-        "raw_factor": 1.4603,
-        "mu": 6.657,
+        "factor": 1.3699,
+        "raw_factor": 1.4511,
+        "mu": 6.429,
         "weight": 0.4
       }
     },
@@ -23875,15 +23995,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.34,
-      "away_xr": 3.05,
-      "total_xr": 5.39,
-      "home_win_prob": 0.3409,
-      "away_win_prob": 0.5169,
+      "home_xr": 2.11,
+      "away_xr": 3.41,
+      "total_xr": 5.52,
+      "home_win_prob": 0.2819,
+      "away_win_prob": 0.5866,
       "over_probs": {
-        "4.5": 0.5319,
-        "5.0": 0.4146,
-        "5.5": 0.4146
+        "4.5": 0.555,
+        "5.0": 0.4404,
+        "5.5": 0.4404
       }
     }
   },
@@ -23972,20 +24092,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 8.330490226957602,
+    "raw_total": 8.334541865759267,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 4.271,
-    "raw_away_pre_learn": 4.346,
-    "home_runs": 3.5306263517160774,
-    "away_runs": 4.799863875241525,
-    "total": 8.330490226957602,
-    "home_win_prob": 0.3889,
-    "away_win_prob": 0.6111,
+    "raw_home_pre_learn": 4.272,
+    "raw_away_pre_learn": 4.348,
+    "home_runs": 3.5320609128857416,
+    "away_runs": 4.802480952873525,
+    "total": 8.334541865759267,
+    "home_win_prob": 0.3886,
+    "away_win_prob": 0.6114,
     "runline": {
-      "home_minus_1_5": 0.2557,
-      "home_plus_1_5": 0.5366,
-      "away_minus_1_5": 0.4634,
-      "away_plus_1_5": 0.7443
+      "home_minus_1_5": 0.25655,
+      "home_plus_1_5": 0.5354,
+      "away_minus_1_5": 0.4646,
+      "away_plus_1_5": 0.74345
     },
     "home_matchup": 0.9844999999999999,
     "away_matchup": 1.0785,
@@ -25703,12 +25823,12 @@
       "home_ml": 1.83,
       "away_ml": 2.0,
       "total": 8.0,
-      "over": 1.95,
-      "under": 1.87,
-      "home_spread": 1.5,
-      "home_spread_odds": 1.5,
-      "away_spread": -1.5,
-      "away_spread_odds": 2.65,
+      "over": 1.85,
+      "under": 1.98,
+      "home_spread": -1.5,
+      "home_spread_odds": 2.65,
+      "away_spread": 1.5,
+      "away_spread_odds": 1.45,
       "book": "FanDuel",
       "estimated": true
     },
@@ -25717,12 +25837,15 @@
         "matchup": "TEX @ BOS",
         "market": "moneyline",
         "label": "BOS ML",
-        "prob": 0.3889,
+        "prob": 0.3886,
         "odds": 1.83,
-        "ev": -0.2883,
+        "ev": -0.2889,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.5022,
+        "kelly_f": -0.0977,
+        "ev_debiased": -0.0811,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -25730,12 +25853,15 @@
         "matchup": "TEX @ BOS",
         "market": "moneyline",
         "label": "TEX ML",
-        "prob": 0.6111,
+        "prob": 0.6114,
         "odds": 2.0,
-        "ev": 0.2222,
-        "kelly_raw": 0.2222,
-        "stake": 111,
-        "stake_base": 100,
+        "ev": 0.2228,
+        "kelly_raw": 0.2228,
+        "p_hat": 0.4978,
+        "kelly_f": -0.0043,
+        "ev_debiased": -0.0043,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -25743,55 +25869,67 @@
         "matchup": "TEX @ BOS",
         "market": "total",
         "label": "Over 8.0",
-        "prob": 0.4994,
-        "odds": 1.95,
-        "ev": -0.0262,
+        "prob": 0.5002,
+        "odds": 1.85,
+        "ev": -0.0746,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.5111,
+        "kelly_f": -0.0641,
+        "ev_debiased": -0.0545,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.49,
+        "model_total": 8.5,
         "market_total": 8.0
       },
       {
         "matchup": "TEX @ BOS",
         "market": "total",
         "label": "Under 8.0",
-        "prob": 0.4146,
-        "odds": 1.87,
-        "ev": -0.2246,
+        "prob": 0.4148,
+        "odds": 1.98,
+        "ev": -0.1788,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4591,
+        "kelly_f": -0.0928,
+        "ev_debiased": -0.0909,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.49,
+        "model_total": 8.5,
         "market_total": 8.0
       },
       {
         "matchup": "TEX @ BOS",
         "market": "runline",
-        "label": "BOS +1.5",
-        "prob": 0.5366,
-        "odds": 1.5,
-        "ev": -0.1951,
+        "label": "BOS -1.5",
+        "prob": 0.2566,
+        "odds": 2.65,
+        "ev": -0.3201,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
       {
         "matchup": "TEX @ BOS",
         "market": "runline",
-        "label": "TEX -1.5",
-        "prob": 0.4634,
-        "odds": 2.65,
-        "ev": 0.228,
-        "kelly_raw": 0.1382,
-        "stake": 0.0,
-        "stake_base": 100,
+        "label": "TEX +1.5",
+        "prob": 0.7435,
+        "odds": 1.45,
+        "ev": 0.078,
+        "kelly_raw": 0.1733,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -25800,20 +25938,20 @@
       "source": "ballpark_pal",
       "text": "0% 90°  Wind 7 mph L-R",
       "precip_prob": 0.0,
-      "temp_f": 89.7,
+      "temp_f": 89.6,
       "wind_mph": 9.6,
       "venue": "Fenway Park",
       "roof": "open",
       "forecast_hour": "2026-06-13T20:00",
-      "wind_direction_deg": 288.0,
+      "wind_direction_deg": 292.0,
       "humidity_pct": 25.0,
       "temp_f_3h_avg": 89.0,
-      "wind_mph_3h_avg": 9.3,
-      "wind_direction_deg_3h_avg": 289.0,
+      "wind_mph_3h_avg": 7.9,
+      "wind_direction_deg_3h_avg": 296.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0454,
+      "carry_adj": 0.0444,
       "run_factor": 1.0727,
-      "wind_dot_of": 6.424,
+      "wind_dot_of": 5.91,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 60,
@@ -25849,37 +25987,37 @@
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0299
+        "prob": 0.0314
       },
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0291
+        "prob": 0.0286
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0266
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.028
-      },
-      {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0271
+        "prob": 0.0265
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0254
+        "prob": 0.0244
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0236
+        "prob": 0.0233
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0221
+        "prob": 0.0213
       },
       {
         "away": 4,
@@ -26412,15 +26550,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.8369,
-        "raw_factor": 0.8011,
-        "mu": 4.659,
+        "factor": 0.8376,
+        "raw_factor": 0.802,
+        "mu": 4.662,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.9876,
-        "raw_factor": 0.9849,
-        "mu": 5.341,
+        "factor": 0.9889,
+        "raw_factor": 0.9865,
+        "mu": 5.348,
         "weight": 0.4
       }
     },
@@ -27419,15 +27557,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.3,
-      "away_xr": 2.12,
-      "total_xr": 4.42,
-      "home_win_prob": 0.4409,
-      "away_win_prob": 0.3895,
+      "home_xr": 2.43,
+      "away_xr": 2.28,
+      "total_xr": 4.7,
+      "home_win_prob": 0.4356,
+      "away_win_prob": 0.398,
       "over_probs": {
-        "4.5": 0.4171,
-        "5.0": 0.3074,
-        "5.5": 0.3074
+        "4.5": 0.4488,
+        "5.0": 0.3395,
+        "5.5": 0.3395
       }
     }
   },
@@ -27514,20 +27652,20 @@
         "홈 선발"
       ]
     },
-    "raw_total": 7.148384756494551,
+    "raw_total": 7.051820266257641,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 3.783,
-    "raw_away_pre_learn": 4.996,
-    "home_runs": 2.8014236881794217,
-    "away_runs": 4.346961068315129,
-    "total": 7.148384756494551,
-    "home_win_prob": 0.35485,
-    "away_win_prob": 0.64515,
+    "raw_home_pre_learn": 3.747,
+    "raw_away_pre_learn": 4.936,
+    "home_runs": 2.7654637552237915,
+    "away_runs": 4.2863565110338495,
+    "total": 7.051820266257641,
+    "home_win_prob": 0.3565,
+    "away_win_prob": 0.6435,
     "runline": {
-      "home_minus_1_5": 0.2198,
-      "home_plus_1_5": 0.51445,
-      "away_minus_1_5": 0.48555,
-      "away_plus_1_5": 0.7802
+      "home_minus_1_5": 0.21955,
+      "home_plus_1_5": 0.51865,
+      "away_minus_1_5": 0.48135,
+      "away_plus_1_5": 0.78045
     },
     "home_matchup": 1.091,
     "away_matchup": 0.9450000000000001,
@@ -29006,11 +29144,11 @@
       }
     ],
     "odds": {
-      "home_ml": 1.87,
-      "away_ml": 1.95,
+      "home_ml": 1.85,
+      "away_ml": 1.98,
       "total": 8.5,
-      "over": 1.98,
-      "under": 1.85,
+      "over": 1.95,
+      "under": 1.87,
       "home_spread": 1.5,
       "home_spread_odds": 1.53,
       "away_spread": -1.5,
@@ -29023,12 +29161,15 @@
         "matchup": "ATL @ NYM",
         "market": "moneyline",
         "label": "NYM ML",
-        "prob": 0.3548,
-        "odds": 1.87,
-        "ev": -0.3364,
+        "prob": 0.3565,
+        "odds": 1.85,
+        "ev": -0.3405,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4929,
+        "kelly_f": -0.1037,
+        "ev_debiased": -0.0881,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -29036,12 +29177,15 @@
         "matchup": "ATL @ NYM",
         "market": "moneyline",
         "label": "ATL ML",
-        "prob": 0.6452,
-        "odds": 1.95,
-        "ev": 0.258,
-        "kelly_raw": 0.2716,
-        "stake": 136,
-        "stake_base": 100,
+        "prob": 0.6435,
+        "odds": 1.98,
+        "ev": 0.2741,
+        "kelly_raw": 0.2797,
+        "p_hat": 0.5071,
+        "kelly_f": 0.0041,
+        "ev_debiased": 0.0041,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -29049,42 +29193,51 @@
         "matchup": "ATL @ NYM",
         "market": "total",
         "label": "Over 8.5",
-        "prob": 0.389,
-        "odds": 1.98,
-        "ev": -0.2298,
+        "prob": 0.3811,
+        "odds": 1.95,
+        "ev": -0.2569,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4516,
+        "kelly_f": -0.1257,
+        "ev_debiased": -0.1194,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 7.3,
+        "model_total": 7.22,
         "market_total": 8.5
       },
       {
         "matchup": "ATL @ NYM",
         "market": "total",
         "label": "Under 8.5",
-        "prob": 0.611,
-        "odds": 1.85,
-        "ev": 0.1304,
-        "kelly_raw": 0.1534,
-        "stake": 77,
-        "stake_base": 100,
+        "prob": 0.6189,
+        "odds": 1.87,
+        "ev": 0.1574,
+        "kelly_raw": 0.1809,
+        "p_hat": 0.5484,
+        "kelly_f": 0.0294,
+        "ev_debiased": 0.0256,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 7.3,
+        "model_total": 7.22,
         "market_total": 8.5
       },
       {
         "matchup": "ATL @ NYM",
         "market": "runline",
         "label": "NYM +1.5",
-        "prob": 0.5144,
+        "prob": 0.5187,
         "odds": 1.53,
-        "ev": -0.2129,
+        "ev": -0.2065,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -29092,12 +29245,15 @@
         "matchup": "ATL @ NYM",
         "market": "runline",
         "label": "ATL -1.5",
-        "prob": 0.4855,
+        "prob": 0.4814,
         "odds": 2.55,
-        "ev": 0.2382,
-        "kelly_raw": 0.1536,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.2274,
+        "kelly_raw": 0.1467,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -29106,21 +29262,21 @@
       "source": "ballpark_pal",
       "text": "0% 88°  Wind 9 mph Out",
       "precip_prob": 0.0,
-      "temp_f": 91.1,
-      "wind_mph": 7.0,
+      "temp_f": 90.7,
+      "wind_mph": 6.7,
       "venue": "Citi Field",
       "roof": "open",
       "forecast_hour": "2026-06-13T20:00",
-      "wind_direction_deg": 276.0,
+      "wind_direction_deg": 296.0,
       "humidity_pct": 27.0,
-      "temp_f_3h_avg": 90.5,
-      "wind_mph_3h_avg": 7.9,
-      "wind_direction_deg_3h_avg": 279.0,
+      "temp_f_3h_avg": 90.3,
+      "wind_mph_3h_avg": 8.3,
+      "wind_direction_deg_3h_avg": 278.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0454,
+      "carry_adj": 0.0418,
       "run_factor": 0.9783,
-      "wind_dot_of": 5.663,
-      "wind_dir_label": "외야 강한 바람 (OUT)",
+      "wind_dot_of": 3.747,
+      "wind_dir_label": "외야 바람 (out)",
       "wind_source": "open-meteo",
       "of_bearing": 60,
       "temp_avg": 89.7,
@@ -29155,42 +29311,42 @@
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0398
+        "prob": 0.0406
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0348
+        "prob": 0.0346
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0323
+        "prob": 0.0336
       },
       {
-        "away": 2,
+        "away": 1,
         "home": 0,
-        "prob": 0.0294
+        "prob": 0.0319
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.029
-      },
-      {
-        "away": 1,
-        "home": 0,
-        "prob": 0.0281
+        "prob": 0.0299
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0272
+        "prob": 0.0297
+      },
+      {
+        "away": 2,
+        "home": 0,
+        "prob": 0.0268
       },
       {
         "away": 3,
         "home": 0,
-        "prob": 0.0257
+        "prob": 0.0265
       }
     ],
     "hr_env": {
@@ -29718,15 +29874,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.6738,
-        "raw_factor": 0.6022,
-        "mu": 3.004,
+        "factor": 0.6737,
+        "raw_factor": 0.602,
+        "mu": 2.914,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.1007,
-        "raw_factor": 1.1227,
-        "mu": 4.596,
+        "factor": 1.0918,
+        "raw_factor": 1.112,
+        "mu": 4.445,
         "weight": 0.4
       }
     },
@@ -30602,15 +30758,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.57,
-      "away_xr": 2.93,
-      "total_xr": 5.5,
-      "home_win_prob": 0.3813,
-      "away_win_prob": 0.4741,
+      "home_xr": 2.25,
+      "away_xr": 2.8,
+      "total_xr": 5.05,
+      "home_win_prob": 0.3503,
+      "away_win_prob": 0.4958,
       "over_probs": {
-        "4.5": 0.5528,
-        "5.0": 0.4349,
-        "5.5": 0.4349
+        "4.5": 0.493,
+        "5.0": 0.376,
+        "5.5": 0.376
       }
     }
   },
@@ -30699,20 +30855,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 8.416710426652717,
+    "raw_total": 8.303472131444346,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 3.645,
-    "raw_away_pre_learn": 5.126,
-    "home_runs": 1.725413682341446,
-    "away_runs": 6.691296744311272,
-    "total": 8.416710426652717,
-    "home_win_prob": 0.12075,
-    "away_win_prob": 0.87925,
+    "raw_home_pre_learn": 3.551,
+    "raw_away_pre_learn": 5.108,
+    "home_runs": 1.631141130358035,
+    "away_runs": 6.672331001086311,
+    "total": 8.303472131444346,
+    "home_win_prob": 0.11355,
+    "away_win_prob": 0.88645,
     "runline": {
-      "home_minus_1_5": 0.05985,
-      "home_plus_1_5": 0.21905,
-      "away_minus_1_5": 0.78095,
-      "away_plus_1_5": 0.94015
+      "home_minus_1_5": 0.05575,
+      "home_plus_1_5": 0.2112,
+      "away_minus_1_5": 0.7888,
+      "away_plus_1_5": 0.94425
     },
     "home_matchup": 1.03,
     "away_matchup": 1.029,
@@ -32214,12 +32370,12 @@
       "home_ml": 2.7,
       "away_ml": 1.48,
       "total": 8.0,
-      "over": 1.85,
-      "under": 1.98,
+      "over": 1.87,
+      "under": 1.95,
       "home_spread": 1.5,
-      "home_spread_odds": 1.98,
+      "home_spread_odds": 2.0,
       "away_spread": -1.5,
-      "away_spread_odds": 1.85,
+      "away_spread_odds": 1.83,
       "book": "FanDuel",
       "estimated": true
     },
@@ -32228,12 +32384,15 @@
         "matchup": "LAD @ CWS",
         "market": "moneyline",
         "label": "CWS ML",
-        "prob": 0.1207,
+        "prob": 0.1135,
         "odds": 2.7,
-        "ev": -0.674,
+        "ev": -0.6934,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.318,
+        "kelly_f": -0.0832,
+        "ev_debiased": -0.1414,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -32241,12 +32400,15 @@
         "matchup": "LAD @ CWS",
         "market": "moneyline",
         "label": "LAD ML",
-        "prob": 0.8792,
+        "prob": 0.8864,
         "odds": 1.48,
-        "ev": 0.3013,
-        "kelly_raw": 0.6277,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.3119,
+        "kelly_raw": 0.6499,
+        "p_hat": 0.682,
+        "kelly_f": 0.0195,
+        "ev_debiased": 0.0094,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -32254,42 +32416,51 @@
         "matchup": "LAD @ CWS",
         "market": "total",
         "label": "Over 8.0",
-        "prob": 0.4987,
-        "odds": 1.85,
-        "ev": -0.0773,
+        "prob": 0.4895,
+        "odds": 1.87,
+        "ev": -0.0846,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.5031,
+        "kelly_f": -0.068,
+        "ev_debiased": -0.0591,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.49,
+        "model_total": 8.38,
         "market_total": 8.0
       },
       {
         "matchup": "LAD @ CWS",
         "market": "total",
         "label": "Under 8.0",
-        "prob": 0.4153,
-        "odds": 1.98,
-        "ev": -0.1776,
+        "prob": 0.4243,
+        "odds": 1.95,
+        "ev": -0.1727,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4667,
+        "kelly_f": -0.0947,
+        "ev_debiased": -0.09,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.49,
+        "model_total": 8.38,
         "market_total": 8.0
       },
       {
         "matchup": "LAD @ CWS",
         "market": "runline",
         "label": "CWS +1.5",
-        "prob": 0.219,
-        "odds": 1.98,
-        "ev": -0.5663,
+        "prob": 0.2112,
+        "odds": 2.0,
+        "ev": -0.5776,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -32297,12 +32468,15 @@
         "matchup": "LAD @ CWS",
         "market": "runline",
         "label": "LAD -1.5",
-        "prob": 0.781,
-        "odds": 1.85,
-        "ev": 0.4448,
-        "kelly_raw": 0.5232,
-        "stake": 0.0,
-        "stake_base": 100,
+        "prob": 0.7888,
+        "odds": 1.83,
+        "ev": 0.4435,
+        "kelly_raw": 0.5343,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -32312,19 +32486,19 @@
       "text": "7% Precipitation 87°  Wind 16 mph R-L",
       "precip_prob": 0.0,
       "temp_f": 85.4,
-      "wind_mph": 15.1,
+      "wind_mph": 13.7,
       "venue": "Rate Field",
       "roof": "open",
       "forecast_hour": "2026-06-13T20:00",
       "wind_direction_deg": 230.0,
       "humidity_pct": 41.0,
-      "temp_f_3h_avg": 85.4,
-      "wind_mph_3h_avg": 13.9,
-      "wind_direction_deg_3h_avg": 233.0,
+      "temp_f_3h_avg": 85.7,
+      "wind_mph_3h_avg": 13.3,
+      "wind_direction_deg_3h_avg": 237.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0287,
+      "carry_adj": 0.0283,
       "run_factor": 1.05,
-      "wind_dot_of": 2.622,
+      "wind_dot_of": 2.379,
       "wind_dir_label": "외야 바람 (out)",
       "wind_source": "open-meteo",
       "of_bearing": 130,
@@ -32360,42 +32534,42 @@
       {
         "away": 4,
         "home": 0,
-        "prob": 0.0386
+        "prob": 0.0414
       },
       {
         "away": 5,
         "home": 0,
-        "prob": 0.0369
-      },
-      {
-        "away": 6,
-        "home": 0,
-        "prob": 0.0361
+        "prob": 0.0384
       },
       {
         "away": 3,
         "home": 0,
-        "prob": 0.0345
+        "prob": 0.0364
+      },
+      {
+        "away": 6,
+        "home": 0,
+        "prob": 0.0362
       },
       {
         "away": 7,
         "home": 0,
-        "prob": 0.0307
-      },
-      {
-        "away": 8,
-        "home": 0,
-        "prob": 0.0285
+        "prob": 0.0327
       },
       {
         "away": 2,
         "home": 0,
-        "prob": 0.0282
+        "prob": 0.0301
       },
       {
-        "away": 5,
+        "away": 8,
+        "home": 0,
+        "prob": 0.0277
+      },
+      {
+        "away": 4,
         "home": 1,
-        "prob": 0.0254
+        "prob": 0.0264
       }
     ],
     "hr_env": {
@@ -32923,15 +33097,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.7551,
-        "raw_factor": 0.7014,
-        "mu": 3.813,
+        "factor": 0.7515,
+        "raw_factor": 0.6969,
+        "mu": 3.578,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0969,
-        "raw_factor": 1.1181,
-        "mu": 5.283,
+        "factor": 1.0874,
+        "raw_factor": 1.1066,
+        "mu": 5.236,
         "weight": 0.4
       }
     },
@@ -33822,15 +33996,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.11,
-      "away_xr": 3.02,
-      "total_xr": 5.13,
-      "home_win_prob": 0.3095,
-      "away_win_prob": 0.54,
+      "home_xr": 2.03,
+      "away_xr": 2.96,
+      "total_xr": 4.99,
+      "home_win_prob": 0.3052,
+      "away_win_prob": 0.5468,
       "over_probs": {
-        "4.5": 0.5044,
-        "5.0": 0.3875,
-        "5.5": 0.3875
+        "4.5": 0.4869,
+        "5.0": 0.3718,
+        "5.5": 0.3718
       }
     }
   },
@@ -33919,20 +34093,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.005770563358702,
+    "raw_total": 9.9371615018291,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 6.495,
-    "raw_away_pre_learn": 4.254,
-    "home_runs": 6.7721557260614365,
-    "away_runs": 3.233614837297265,
-    "total": 10.005770563358702,
-    "home_win_prob": 0.7694,
-    "away_win_prob": 0.2306,
+    "raw_home_pre_learn": 6.487,
+    "raw_away_pre_learn": 4.194,
+    "home_runs": 6.763645617427835,
+    "away_runs": 3.1735158844012648,
+    "total": 9.9371615018291,
+    "home_win_prob": 0.77415,
+    "away_win_prob": 0.22585,
     "runline": {
-      "home_minus_1_5": 0.65625,
-      "home_plus_1_5": 0.85465,
-      "away_minus_1_5": 0.14535,
-      "away_plus_1_5": 0.34375
+      "home_minus_1_5": 0.65865,
+      "home_plus_1_5": 0.8621,
+      "away_minus_1_5": 0.1379,
+      "away_plus_1_5": 0.34135
     },
     "home_matchup": 1.041,
     "away_matchup": 0.983,
@@ -35852,12 +36026,15 @@
         "matchup": "HOU @ KC",
         "market": "moneyline",
         "label": "KC ML",
-        "prob": 0.7694,
+        "prob": 0.7742,
         "odds": 1.8,
-        "ev": 0.3849,
-        "kelly_raw": 0.4812,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.3935,
+        "kelly_raw": 0.4918,
+        "p_hat": 0.5687,
+        "kelly_f": 0.0296,
+        "ev_debiased": 0.0237,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -35865,12 +36042,15 @@
         "matchup": "HOU @ KC",
         "market": "moneyline",
         "label": "HOU ML",
-        "prob": 0.2306,
+        "prob": 0.2258,
         "odds": 2.05,
-        "ev": -0.5273,
+        "ev": -0.537,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4313,
+        "kelly_f": -0.1104,
+        "ev_debiased": -0.1159,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -35878,42 +36058,51 @@
         "matchup": "HOU @ KC",
         "market": "total",
         "label": "Over 9.5",
-        "prob": 0.5518,
+        "prob": 0.5459,
         "odds": 2.0,
-        "ev": 0.1035,
-        "kelly_raw": 0.1035,
-        "stake": 52,
-        "stake_base": 100,
+        "ev": 0.0918,
+        "kelly_raw": 0.0918,
+        "p_hat": 0.5016,
+        "kelly_f": 0.0033,
+        "ev_debiased": 0.0033,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.16,
+        "model_total": 10.08,
         "market_total": 9.5
       },
       {
         "matchup": "HOU @ KC",
         "market": "total",
         "label": "Under 9.5",
-        "prob": 0.4482,
+        "prob": 0.4541,
         "odds": 1.83,
-        "ev": -0.1797,
+        "ev": -0.169,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4984,
+        "kelly_f": -0.106,
+        "ev_debiased": -0.088,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.16,
+        "model_total": 10.08,
         "market_total": 9.5
       },
       {
         "matchup": "HOU @ KC",
         "market": "runline",
         "label": "HOU +1.5",
-        "prob": 0.3438,
+        "prob": 0.3413,
         "odds": 1.53,
-        "ev": -0.4741,
+        "ev": -0.4777,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -35922,20 +36111,20 @@
       "source": "ballpark_pal",
       "text": "73% Rain 79°  Wind 8 mph Out",
       "precip_prob": 21.0,
-      "temp_f": 89.2,
-      "wind_mph": 13.0,
+      "temp_f": 91.5,
+      "wind_mph": 10.1,
       "venue": "Kauffman Stadium",
       "roof": "open",
       "forecast_hour": "2026-06-13T23:00",
-      "wind_direction_deg": 181.0,
+      "wind_direction_deg": 194.0,
       "humidity_pct": 45.0,
-      "temp_f_3h_avg": 87.9,
-      "wind_mph_3h_avg": 12.2,
-      "wind_direction_deg_3h_avg": 173.0,
+      "temp_f_3h_avg": 90.4,
+      "wind_mph_3h_avg": 9.7,
+      "wind_direction_deg_3h_avg": 186.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0285,
+      "carry_adj": 0.0271,
       "run_factor": 0.9615,
-      "wind_dot_of": 9.351,
+      "wind_dot_of": 8.657,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 45,
@@ -35969,44 +36158,44 @@
     },
     "scores_top": [
       {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0216
+      },
+      {
         "away": 3,
         "home": 4,
         "prob": 0.0211
       },
       {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0204
-      },
-      {
         "away": 1,
         "home": 5,
-        "prob": 0.0191
-      },
-      {
-        "away": 1,
-        "home": 4,
-        "prob": 0.0188
+        "prob": 0.0187
       },
       {
         "away": 2,
         "home": 5,
-        "prob": 0.0179
+        "prob": 0.0182
       },
       {
-        "away": 4,
-        "home": 3,
-        "prob": 0.0174
-      },
-      {
-        "away": 2,
+        "away": 1,
         "home": 4,
-        "prob": 0.0172
+        "prob": 0.0182
+      },
+      {
+        "away": 1,
+        "home": 7,
+        "prob": 0.0176
       },
       {
         "away": 1,
         "home": 6,
-        "prob": 0.0172
+        "prob": 0.0175
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0175
       }
     ],
     "hr_env": {
@@ -36534,15 +36723,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.508,
-        "raw_factor": 1.6195,
-        "mu": 6.918,
+        "factor": 1.5031,
+        "raw_factor": 1.6136,
+        "mu": 6.897,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.2367,
-        "raw_factor": 1.2886,
-        "mu": 5.646,
+        "factor": 1.2714,
+        "raw_factor": 1.331,
+        "mu": 5.495,
         "weight": 0.4
       }
     },
@@ -37634,15 +37823,15 @@
       }
     },
     "f5": {
-      "home_xr": 3.73,
-      "away_xr": 1.94,
-      "total_xr": 5.67,
-      "home_win_prob": 0.6421,
-      "away_win_prob": 0.2376,
+      "home_xr": 3.83,
+      "away_xr": 2.17,
+      "total_xr": 6.0,
+      "home_win_prob": 0.6205,
+      "away_win_prob": 0.2558,
       "over_probs": {
-        "4.5": 0.569,
-        "5.0": 0.4483,
-        "5.5": 0.4483
+        "4.5": 0.6096,
+        "5.0": 0.4893,
+        "5.5": 0.4893
       }
     }
   },
@@ -37725,20 +37914,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.132348990840697,
+    "raw_total": 9.943065029558777,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 5.892,
-    "raw_away_pre_learn": 3.512,
-    "home_runs": 6.698086069193453,
-    "away_runs": 3.434262921647245,
-    "total": 10.132348990840697,
-    "home_win_prob": 0.754,
-    "away_win_prob": 0.246,
+    "raw_home_pre_learn": 5.843,
+    "raw_away_pre_learn": 3.372,
+    "home_runs": 6.648753490471533,
+    "away_runs": 3.294311539087245,
+    "total": 9.943065029558777,
+    "home_win_prob": 0.76175,
+    "away_win_prob": 0.23825,
     "runline": {
-      "home_minus_1_5": 0.6366,
-      "home_plus_1_5": 0.84175,
-      "away_minus_1_5": 0.15825,
-      "away_plus_1_5": 0.3634
+      "home_minus_1_5": 0.64315,
+      "home_plus_1_5": 0.84825,
+      "away_minus_1_5": 0.15175,
+      "away_plus_1_5": 0.35685
     },
     "home_matchup": 1.0194999999999999,
     "away_matchup": 1.012,
@@ -39221,9 +39410,9 @@
       "over": 1.87,
       "under": 1.95,
       "home_spread": -1.5,
-      "home_spread_odds": 2.54,
+      "home_spread_odds": 2.45,
       "away_spread": 1.5,
-      "away_spread_odds": 1.53,
+      "away_spread_odds": 1.56,
       "book": "FanDuel",
       "estimated": true
     },
@@ -39232,12 +39421,15 @@
         "matchup": "PHI @ MIL",
         "market": "moneyline",
         "label": "MIL ML",
-        "prob": 0.754,
+        "prob": 0.7618,
         "odds": 1.69,
-        "ev": 0.2743,
-        "kelly_raw": 0.3975,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.2874,
+        "kelly_raw": 0.4165,
+        "p_hat": 0.595,
+        "kelly_f": 0.008,
+        "ev_debiased": 0.0055,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -39245,12 +39437,15 @@
         "matchup": "PHI @ MIL",
         "market": "moneyline",
         "label": "PHI ML",
-        "prob": 0.246,
+        "prob": 0.2382,
         "odds": 2.2,
-        "ev": -0.4588,
+        "ev": -0.4758,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.405,
+        "kelly_f": -0.0908,
+        "ev_debiased": -0.109,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -39258,42 +39453,67 @@
         "matchup": "PHI @ MIL",
         "market": "total",
         "label": "Over 8.0",
-        "prob": 0.6383,
+        "prob": 0.6252,
         "odds": 1.87,
-        "ev": 0.1935,
-        "kelly_raw": 0.2225,
-        "stake": 111,
-        "stake_base": 100,
+        "ev": 0.1692,
+        "kelly_raw": 0.1945,
+        "p_hat": 0.5506,
+        "kelly_f": 0.0341,
+        "ev_debiased": 0.0297,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.29,
+        "model_total": 10.1,
         "market_total": 8.0
       },
       {
         "matchup": "PHI @ MIL",
         "market": "total",
         "label": "Under 8.0",
-        "prob": 0.2906,
+        "prob": 0.3021,
         "odds": 1.95,
-        "ev": -0.4332,
+        "ev": -0.4109,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4239,
+        "kelly_f": -0.1824,
+        "ev_debiased": -0.1733,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 10.29,
+        "model_total": 10.1,
         "market_total": 8.0
       },
       {
         "matchup": "PHI @ MIL",
         "market": "runline",
+        "label": "MIL -1.5",
+        "prob": 0.6431,
+        "odds": 2.45,
+        "ev": 0.5757,
+        "kelly_raw": 0.397,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
+        "book": "FanDuel",
+        "estimated_odds": true
+      },
+      {
+        "matchup": "PHI @ MIL",
+        "market": "runline",
         "label": "PHI +1.5",
-        "prob": 0.3634,
-        "odds": 1.53,
-        "ev": -0.444,
+        "prob": 0.3569,
+        "odds": 1.56,
+        "ev": -0.4433,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -39338,42 +39558,42 @@
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0214
+        "prob": 0.0225
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0202
+        "prob": 0.0211
+      },
+      {
+        "away": 1,
+        "home": 5,
+        "prob": 0.0193
       },
       {
         "away": 2,
         "home": 5,
-        "prob": 0.019
-      },
-      {
-        "away": 1,
-        "home": 5,
-        "prob": 0.0187
-      },
-      {
-        "away": 1,
-        "home": 4,
         "prob": 0.0181
       },
       {
-        "away": 2,
+        "away": 1,
+        "home": 6,
+        "prob": 0.018
+      },
+      {
+        "away": 1,
         "home": 4,
         "prob": 0.0179
       },
       {
-        "away": 2,
-        "home": 6,
-        "prob": 0.0176
-      },
-      {
         "away": 4,
         "home": 5,
-        "prob": 0.0171
+        "prob": 0.0178
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0174
       }
     ],
     "hr_env": {
@@ -39901,15 +40121,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.4411,
-        "raw_factor": 1.5379,
-        "mu": 6.315,
+        "factor": 1.4112,
+        "raw_factor": 1.5015,
+        "mu": 6.192,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.8311,
-        "raw_factor": 0.794,
-        "mu": 3.738,
+        "factor": 0.8275,
+        "raw_factor": 0.7897,
+        "mu": 3.389,
         "weight": 0.4
       }
     },
@@ -40789,15 +41009,15 @@
       }
     },
     "f5": {
-      "home_xr": 3.02,
-      "away_xr": 2.01,
-      "total_xr": 5.03,
-      "home_win_prob": 0.5464,
-      "away_win_prob": 0.3063,
+      "home_xr": 3.32,
+      "away_xr": 1.91,
+      "total_xr": 5.23,
+      "home_win_prob": 0.6027,
+      "away_win_prob": 0.262,
       "over_probs": {
-        "4.5": 0.4936,
-        "5.0": 0.3777,
-        "5.5": 0.3777
+        "4.5": 0.5246,
+        "5.0": 0.403,
+        "5.5": 0.403
       }
     }
   },
@@ -40878,7 +41098,7 @@
       "away_pitcher": "statsapi",
       "home_pitch_form": "fallback",
       "away_pitch_form": "statcast",
-      "weather": "met.no",
+      "weather": "open-meteo",
       "ballpark_pal": "ballpark_pal",
       "odds": "live"
     },
@@ -40888,20 +41108,20 @@
         "홈 선발"
       ]
     },
-    "raw_total": 15.714981691316051,
+    "raw_total": 15.668822856628054,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 10.24,
-    "raw_away_pre_learn": 6.117,
+    "raw_home_pre_learn": 10.207,
+    "raw_away_pre_learn": 6.07,
     "home_runs": 9.5,
-    "away_runs": 6.214981691316052,
-    "total": 15.714981691316051,
-    "home_win_prob": 0.70415,
-    "away_win_prob": 0.29585,
+    "away_runs": 6.168822856628053,
+    "total": 15.668822856628054,
+    "home_win_prob": 0.70605,
+    "away_win_prob": 0.29395,
     "runline": {
-      "home_minus_1_5": 0.61295,
-      "home_plus_1_5": 0.7844,
-      "away_minus_1_5": 0.2156,
-      "away_plus_1_5": 0.38705
+      "home_minus_1_5": 0.61825,
+      "home_plus_1_5": 0.7848,
+      "away_minus_1_5": 0.2152,
+      "away_plus_1_5": 0.38175
     },
     "home_matchup": 0.9895,
     "away_matchup": 0.9245,
@@ -42715,12 +42935,15 @@
         "matchup": "COL @ ATH",
         "market": "moneyline",
         "label": "ATH ML",
-        "prob": 0.7042,
+        "prob": 0.706,
         "odds": 1.57,
-        "ev": 0.1055,
-        "kelly_raw": 0.1851,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.1085,
+        "kelly_raw": 0.1903,
+        "p_hat": 0.6239,
+        "kelly_f": -0.0358,
+        "ev_debiased": -0.0204,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -42728,12 +42951,15 @@
         "matchup": "COL @ ATH",
         "market": "moneyline",
         "label": "COL ML",
-        "prob": 0.2959,
+        "prob": 0.2939,
         "odds": 2.45,
-        "ev": -0.2752,
+        "ev": -0.2798,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.3761,
+        "kelly_f": -0.0542,
+        "ev_debiased": -0.0787,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -42741,42 +42967,51 @@
         "matchup": "COL @ ATH",
         "market": "total",
         "label": "Over 13.5",
-        "prob": 0.6426,
+        "prob": 0.6408,
         "odds": 1.91,
-        "ev": 0.2274,
-        "kelly_raw": 0.2499,
-        "stake": 125,
-        "stake_base": 100,
+        "ev": 0.224,
+        "kelly_raw": 0.2461,
+        "p_hat": 0.5493,
+        "kelly_f": 0.054,
+        "ev_debiased": 0.0491,
+        "stake": 3,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 15.81,
+        "model_total": 15.77,
         "market_total": 13.5
       },
       {
         "matchup": "COL @ ATH",
         "market": "total",
         "label": "Under 13.5",
-        "prob": 0.3574,
+        "prob": 0.3592,
         "odds": 1.91,
-        "ev": -0.3174,
+        "ev": -0.314,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4507,
+        "kelly_f": -0.1529,
+        "ev_debiased": -0.1391,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 15.81,
+        "model_total": 15.77,
         "market_total": 13.5
       },
       {
         "matchup": "COL @ ATH",
         "market": "runline",
         "label": "ATH -1.5",
-        "prob": 0.6129,
+        "prob": 0.6182,
         "odds": 2.05,
-        "ev": 0.2565,
-        "kelly_raw": 0.2443,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.2674,
+        "kelly_raw": 0.2547,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -42784,12 +43019,15 @@
         "matchup": "COL @ ATH",
         "market": "runline",
         "label": "COL +1.5",
-        "prob": 0.3871,
+        "prob": 0.3817,
         "odds": 1.77,
-        "ev": -0.3149,
+        "ev": -0.3243,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -42797,21 +43035,21 @@
     "weather": {
       "source": "ballpark_pal",
       "text": "1% Precipitation 101°  Wind 11 mph",
-      "precip_prob": null,
-      "temp_f": 100.0,
-      "wind_mph": 12.3,
+      "precip_prob": 1.0,
+      "temp_f": 97.6,
+      "wind_mph": 16.5,
       "venue": "Las Vegas Ballpark",
       "roof": "open",
-      "forecast_hour": "2026-06-14T02:00:00Z",
-      "wind_direction_deg": 171.0,
-      "humidity_pct": 8.7,
-      "temp_f_3h_avg": 100.0,
-      "wind_mph_3h_avg": 12.3,
-      "wind_direction_deg_3h_avg": 171.0,
-      "_source": "met.no",
-      "carry_adj": 0.0555,
+      "forecast_hour": "2026-06-14T02:00",
+      "wind_direction_deg": 249.0,
+      "humidity_pct": 10.0,
+      "temp_f_3h_avg": 94.2,
+      "wind_mph_3h_avg": 16.2,
+      "wind_direction_deg_3h_avg": 258.0,
+      "_source": "open-meteo",
+      "carry_adj": 0.0695,
       "run_factor": 1.1176,
-      "wind_dot_of": 7.23,
+      "wind_dot_of": 15.074,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 45,
@@ -42847,42 +43085,42 @@
       {
         "away": 5,
         "home": 6,
-        "prob": 0.0129
+        "prob": 0.0131
       },
       {
         "away": 6,
-        "home": 7,
-        "prob": 0.0123
-      },
-      {
-        "away": 4,
         "home": 5,
         "prob": 0.0114
       },
       {
-        "away": 4,
+        "away": 5,
+        "home": 7,
+        "prob": 0.0114
+      },
+      {
+        "away": 7,
         "home": 8,
-        "prob": 0.011
+        "prob": 0.0105
       },
       {
         "away": 6,
-        "home": 5,
-        "prob": 0.0109
+        "home": 7,
+        "prob": 0.0105
       },
       {
         "away": 4,
+        "home": 8,
+        "prob": 0.0104
+      },
+      {
+        "away": 7,
         "home": 6,
         "prob": 0.0103
       },
       {
-        "away": 5,
-        "home": 4,
-        "prob": 0.01
-      },
-      {
         "away": 4,
-        "home": 9,
-        "prob": 0.0099
+        "home": 5,
+        "prob": 0.0101
       }
     ],
     "hr_env": {
@@ -43411,14 +43649,14 @@
     "markov_detail": {
       "home": {
         "factor": 1.55,
-        "raw_factor": 2.3417,
-        "mu": 10.6,
+        "raw_factor": 2.3265,
+        "mu": 10.519,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.1009,
-        "raw_factor": 1.1231,
-        "mu": 7.508,
+        "factor": 1.0831,
+        "raw_factor": 1.1013,
+        "mu": 7.393,
         "weight": 0.4
       }
     },
@@ -44452,15 +44690,15 @@
       }
     },
     "f5": {
-      "home_xr": 6.0,
-      "away_xr": 2.84,
-      "total_xr": 8.84,
-      "home_win_prob": 0.7319,
-      "away_win_prob": 0.1875,
+      "home_xr": 5.91,
+      "away_xr": 3.35,
+      "total_xr": 9.26,
+      "home_win_prob": 0.6758,
+      "away_win_prob": 0.2355,
       "over_probs": {
-        "4.5": 0.8369,
-        "5.0": 0.7506,
-        "5.5": 0.7506
+        "4.5": 0.8681,
+        "5.0": 0.7875,
+        "5.5": 0.7875
       }
     }
   },
@@ -44549,20 +44787,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 8.030263900955172,
+    "raw_total": 8.02855785295517,
     "calibration": "market_independent",
     "raw_home_pre_learn": 3.278,
-    "raw_away_pre_learn": 4.629,
+    "raw_away_pre_learn": 4.627,
     "home_runs": 3.564954895870875,
-    "away_runs": 4.465309005084297,
-    "total": 8.030263900955172,
-    "home_win_prob": 0.42165,
-    "away_win_prob": 0.57835,
+    "away_runs": 4.463602957084296,
+    "total": 8.02855785295517,
+    "home_win_prob": 0.4216,
+    "away_win_prob": 0.5784,
     "runline": {
-      "home_minus_1_5": 0.2812,
-      "home_plus_1_5": 0.5709,
-      "away_minus_1_5": 0.4291,
-      "away_plus_1_5": 0.7188
+      "home_minus_1_5": 0.282,
+      "home_plus_1_5": 0.57415,
+      "away_minus_1_5": 0.42585,
+      "away_plus_1_5": 0.718
     },
     "home_matchup": 1.0175,
     "away_matchup": 0.987,
@@ -46275,13 +46513,13 @@
       }
     ],
     "odds": {
-      "home_ml": 2.1,
-      "away_ml": 1.74,
+      "home_ml": 2.05,
+      "away_ml": 1.77,
       "total": 7.5,
-      "over": 2.0,
-      "under": 1.83,
+      "over": 1.95,
+      "under": 1.87,
       "home_spread": 1.5,
-      "home_spread_odds": 1.61,
+      "home_spread_odds": 1.62,
       "away_spread": -1.5,
       "away_spread_odds": 2.35,
       "book": "FanDuel",
@@ -46292,12 +46530,15 @@
         "matchup": "CHC @ SF",
         "market": "moneyline",
         "label": "SF ML",
-        "prob": 0.4217,
-        "odds": 2.1,
-        "ev": -0.1145,
+        "prob": 0.4216,
+        "odds": 2.05,
+        "ev": -0.1357,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4571,
+        "kelly_f": -0.06,
+        "ev_debiased": -0.063,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -46306,11 +46547,14 @@
         "market": "moneyline",
         "label": "CHC ML",
         "prob": 0.5784,
-        "odds": 1.74,
-        "ev": 0.0063,
-        "kelly_raw": 0.0086,
-        "stake": 4,
-        "stake_base": 100,
+        "odds": 1.77,
+        "ev": 0.0238,
+        "kelly_raw": 0.0309,
+        "p_hat": 0.5429,
+        "kelly_f": -0.0507,
+        "ev_debiased": -0.039,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -46318,42 +46562,51 @@
         "matchup": "CHC @ SF",
         "market": "total",
         "label": "Over 7.5",
-        "prob": 0.5589,
-        "odds": 2.0,
-        "ev": 0.1178,
-        "kelly_raw": 0.1178,
-        "stake": 59,
-        "stake_base": 100,
+        "prob": 0.5593,
+        "odds": 1.95,
+        "ev": 0.0905,
+        "kelly_raw": 0.0953,
+        "p_hat": 0.5139,
+        "kelly_f": 0.0023,
+        "ev_debiased": 0.0022,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.17,
+        "model_total": 8.18,
         "market_total": 7.5
       },
       {
         "matchup": "CHC @ SF",
         "market": "total",
         "label": "Under 7.5",
-        "prob": 0.4411,
-        "odds": 1.83,
-        "ev": -0.1928,
+        "prob": 0.4407,
+        "odds": 1.87,
+        "ev": -0.1758,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.4861,
+        "kelly_f": -0.1047,
+        "ev_debiased": -0.0911,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.17,
+        "model_total": 8.18,
         "market_total": 7.5
       },
       {
         "matchup": "CHC @ SF",
         "market": "runline",
         "label": "SF +1.5",
-        "prob": 0.5709,
-        "odds": 1.61,
-        "ev": -0.0809,
+        "prob": 0.5742,
+        "odds": 1.62,
+        "ev": -0.0699,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -46361,12 +46614,15 @@
         "matchup": "CHC @ SF",
         "market": "runline",
         "label": "CHC -1.5",
-        "prob": 0.4291,
+        "prob": 0.4259,
         "odds": 2.35,
-        "ev": 0.0084,
-        "kelly_raw": 0.0062,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.0007,
+        "kelly_raw": 0.0006,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -46375,20 +46631,20 @@
       "source": "ballpark_pal",
       "text": "0% 65°  Wind 10 mph Out",
       "precip_prob": 1.0,
-      "temp_f": 58.6,
-      "wind_mph": 16.5,
+      "temp_f": 59.3,
+      "wind_mph": 17.1,
       "venue": "Oracle Park",
       "roof": "open",
       "forecast_hour": "2026-06-14T02:00",
-      "wind_direction_deg": 261.0,
+      "wind_direction_deg": 259.0,
       "humidity_pct": 90.0,
-      "temp_f_3h_avg": 57.0,
-      "wind_mph_3h_avg": 13.9,
-      "wind_direction_deg_3h_avg": 262.0,
+      "temp_f_3h_avg": 57.4,
+      "wind_mph_3h_avg": 15.4,
+      "wind_direction_deg_3h_avg": 261.0,
       "_source": "open-meteo",
       "carry_adj": 0.0134,
       "run_factor": 0.9901,
-      "wind_dot_of": 16.01,
+      "wind_dot_of": 16.438,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 95,
@@ -46424,42 +46680,42 @@
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0324
+        "prob": 0.0337
       },
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0307
+        "prob": 0.0319
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.029
+        "prob": 0.03
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0273
+        "prob": 0.0281
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0272
+        "prob": 0.0278
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0254
+        "prob": 0.0244
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0243
+        "prob": 0.023
       },
       {
         "away": 4,
-        "home": 2,
-        "prob": 0.021
+        "home": 1,
+        "prob": 0.0192
       }
     ],
     "hr_env": {
@@ -46988,14 +47244,14 @@
     "markov_detail": {
       "home": {
         "factor": 0.62,
-        "raw_factor": 0.5272,
+        "raw_factor": 0.5226,
         "mu": 3.063,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.022,
-        "raw_factor": 1.0268,
-        "mu": 4.73,
+        "factor": 1.021,
+        "raw_factor": 1.0256,
+        "mu": 4.726,
         "weight": 0.4
       }
     },
@@ -47996,15 +48252,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.04,
-      "away_xr": 2.7,
-      "total_xr": 4.74,
-      "home_win_prob": 0.3361,
-      "away_win_prob": 0.5062,
+      "home_xr": 1.9,
+      "away_xr": 2.59,
+      "total_xr": 4.49,
+      "home_win_prob": 0.3231,
+      "away_win_prob": 0.5143,
       "over_probs": {
-        "4.5": 0.4605,
-        "5.0": 0.3505,
-        "5.5": 0.3505
+        "4.5": 0.4268,
+        "5.0": 0.3122,
+        "5.5": 0.3122
       }
     }
   },
@@ -48093,20 +48349,20 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 11.408966369463887,
+    "raw_total": 11.40193855735265,
     "calibration": "market_independent",
-    "raw_home_pre_learn": 5.848,
-    "raw_away_pre_learn": 5.34,
-    "home_runs": 6.0065836386673865,
-    "away_runs": 5.4023827307965,
-    "total": 11.408966369463887,
-    "home_win_prob": 0.5493,
-    "away_win_prob": 0.4507,
+    "raw_home_pre_learn": 5.85,
+    "raw_away_pre_learn": 5.331,
+    "home_runs": 6.008693419644151,
+    "away_runs": 5.3932451377085,
+    "total": 11.40193855735265,
+    "home_win_prob": 0.5505,
+    "away_win_prob": 0.4495,
     "runline": {
-      "home_minus_1_5": 0.4297,
-      "home_plus_1_5": 0.66405,
-      "away_minus_1_5": 0.33595,
-      "away_plus_1_5": 0.5703
+      "home_minus_1_5": 0.43075,
+      "home_plus_1_5": 0.66425,
+      "away_minus_1_5": 0.33575,
+      "away_plus_1_5": 0.56925
     },
     "home_matchup": 0.9984999999999999,
     "away_matchup": 0.982,
@@ -49717,11 +49973,11 @@
       }
     ],
     "odds": {
-      "home_ml": 1.91,
-      "away_ml": 1.91,
+      "home_ml": 1.95,
+      "away_ml": 1.87,
       "total": 8.0,
-      "over": 2.0,
-      "under": 1.83,
+      "over": 1.85,
+      "under": 1.98,
       "home_spread": 1.5,
       "home_spread_odds": 1.57,
       "away_spread": -1.5,
@@ -49734,12 +49990,15 @@
         "matchup": "TB @ LAA",
         "market": "moneyline",
         "label": "LAA ML",
-        "prob": 0.5493,
-        "odds": 1.91,
-        "ev": 0.0492,
-        "kelly_raw": 0.054,
-        "stake": 27,
-        "stake_base": 100,
+        "prob": 0.5505,
+        "odds": 1.95,
+        "ev": 0.0735,
+        "kelly_raw": 0.0773,
+        "p_hat": 0.4987,
+        "kelly_f": -0.029,
+        "ev_debiased": -0.0276,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -49747,12 +50006,15 @@
         "matchup": "TB @ LAA",
         "market": "moneyline",
         "label": "TB ML",
-        "prob": 0.4507,
-        "odds": 1.91,
-        "ev": -0.1392,
+        "prob": 0.4495,
+        "odds": 1.87,
+        "ev": -0.1594,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.5013,
+        "kelly_f": -0.0719,
+        "ev_debiased": -0.0625,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -49760,42 +50022,51 @@
         "matchup": "TB @ LAA",
         "market": "total",
         "label": "Over 8.0",
-        "prob": 0.7164,
-        "odds": 2.0,
-        "ev": 0.4327,
-        "kelly_raw": 0.4327,
-        "stake": 142,
-        "stake_base": 100,
+        "prob": 0.714,
+        "odds": 1.85,
+        "ev": 0.321,
+        "kelly_raw": 0.3776,
+        "p_hat": 0.5859,
+        "kelly_f": 0.0988,
+        "ev_debiased": 0.084,
+        "stake": 5,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 11.59,
+        "model_total": 11.56,
         "market_total": 8.0
       },
       {
         "matchup": "TB @ LAA",
         "market": "total",
         "label": "Under 8.0",
-        "prob": 0.2245,
-        "odds": 1.83,
-        "ev": -0.5891,
+        "prob": 0.2267,
+        "odds": 1.98,
+        "ev": -0.5511,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": 0.3933,
+        "kelly_f": -0.2257,
+        "ev_debiased": -0.2212,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 11.59,
+        "model_total": 11.56,
         "market_total": 8.0
       },
       {
         "matchup": "TB @ LAA",
         "market": "runline",
         "label": "LAA +1.5",
-        "prob": 0.6641,
+        "prob": 0.6643,
         "odds": 1.57,
-        "ev": 0.0426,
-        "kelly_raw": 0.0747,
-        "stake": 0.0,
-        "stake_base": 100,
+        "ev": 0.0429,
+        "kelly_raw": 0.0752,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       },
@@ -49803,12 +50074,15 @@
         "matchup": "TB @ LAA",
         "market": "runline",
         "label": "TB -1.5",
-        "prob": 0.336,
+        "prob": 0.3357,
         "odds": 2.45,
-        "ev": -0.1769,
+        "ev": -0.1774,
         "kelly_raw": 0.0,
-        "stake": 0.0,
-        "stake_base": 100,
+        "p_hat": null,
+        "kelly_f": 0.0,
+        "ev_debiased": 0.0,
+        "stake": 0,
+        "stake_base": 200,
         "book": "FanDuel",
         "estimated_odds": true
       }
@@ -49818,19 +50092,19 @@
       "text": "0% 75°  Wind 8 mph Out",
       "precip_prob": 0.0,
       "temp_f": 74.9,
-      "wind_mph": 6.9,
+      "wind_mph": 6.6,
       "venue": "Angel Stadium",
       "roof": "open",
       "forecast_hour": "2026-06-14T02:00",
       "wind_direction_deg": 237.0,
       "humidity_pct": 62.0,
-      "temp_f_3h_avg": 72.3,
-      "wind_mph_3h_avg": 5.7,
-      "wind_direction_deg_3h_avg": 247.0,
+      "temp_f_3h_avg": 72.4,
+      "wind_mph_3h_avg": 5.6,
+      "wind_direction_deg_3h_avg": 249.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0217,
+      "carry_adj": 0.0211,
       "run_factor": 1.0098,
-      "wind_dot_of": 6.849,
+      "wind_dot_of": 6.551,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 50,
@@ -49864,44 +50138,44 @@
     },
     "scores_top": [
       {
-        "away": 4,
-        "home": 3,
-        "prob": 0.0202
+        "away": 5,
+        "home": 4,
+        "prob": 0.0191
       },
       {
         "away": 4,
         "home": 5,
-        "prob": 0.0202
-      },
-      {
-        "away": 5,
-        "home": 4,
         "prob": 0.019
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0186
-      },
-      {
-        "away": 5,
-        "home": 6,
-        "prob": 0.0179
-      },
-      {
-        "away": 6,
-        "home": 5,
-        "prob": 0.016
+        "prob": 0.018
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.015
+        "prob": 0.0175
+      },
+      {
+        "away": 4,
+        "home": 3,
+        "prob": 0.0174
+      },
+      {
+        "away": 5,
+        "home": 6,
+        "prob": 0.017
+      },
+      {
+        "away": 6,
+        "home": 5,
+        "prob": 0.0166
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0143
+        "prob": 0.0151
       }
     ],
     "hr_env": {
@@ -50429,15 +50703,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.2359,
-        "raw_factor": 1.2877,
-        "mu": 5.898,
+        "factor": 1.2458,
+        "raw_factor": 1.2997,
+        "mu": 5.903,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0786,
-        "raw_factor": 1.0958,
-        "mu": 5.109,
+        "factor": 1.0734,
+        "raw_factor": 1.0895,
+        "mu": 5.086,
         "weight": 0.4
       }
     },
@@ -51384,15 +51658,15 @@
       }
     },
     "f5": {
-      "home_xr": 3.03,
-      "away_xr": 3.3,
-      "total_xr": 6.33,
-      "home_win_prob": 0.4042,
-      "away_win_prob": 0.4658,
+      "home_xr": 3.31,
+      "away_xr": 3.06,
+      "total_xr": 6.37,
+      "home_win_prob": 0.4638,
+      "away_win_prob": 0.4114,
       "over_probs": {
-        "4.5": 0.6441,
-        "5.0": 0.5211,
-        "5.5": 0.5211
+        "4.5": 0.6469,
+        "5.0": 0.5352,
+        "5.5": 0.5352
       }
     }
   }
