@@ -72,7 +72,9 @@ nav a.on{color:var(--text);background:var(--card);border-color:var(--line2)}
 .pick-ev{flex:none;text-align:right}
 .ev-v{font-size:16px;font-weight:800;letter-spacing:-.02em}
 .ev-l{font-size:9.5px;color:var(--dim)}
-.stake{font-size:10.5px;color:var(--mute);margin-top:2px}
+.stake{font-size:11.5px;font-weight:800;color:var(--text);margin-top:2px}
+.stake .su{font-size:8.5px;font-weight:500;color:var(--dim)}
+.stake.nobet{font-size:9.5px;font-weight:600;color:var(--dim)}
 
 /* 경기 카드 */
 .gcard{background:var(--card);border:1px solid var(--line);border-radius:16px;
@@ -231,7 +233,7 @@ footer{margin-top:34px;text-align:center;font-size:11px;color:var(--dim);line-he
 <header>
   <div class='hd-row'>
     <h1>🇰🇷 KBO Quant</h1>
-    <span class='hd-sub'>2026-06-13 · 갱신 06/13 17:50 KST</span>
+    <span class='hd-sub'>2026-06-13 · 갱신 06/13 21:11 KST</span>
   </div>
   <nav>
     <a href='#sec-picks' class='on'>픽</a>
@@ -244,7 +246,7 @@ footer{margin-top:34px;text-align:center;font-size:11px;color:var(--dim);line-he
   
   
 <section class='sec' id='sec-picks'>
-  <h2>🎯 TOP 픽</h2>
+  <h2>🎯 TOP 픽 <span class='dim' style='font-size:12px;font-weight:500'>· 스테이크 베이스 100(=1유닛) · 단폴 권장</span></h2>
   <div class='picktabs'>
     <button class='active' data-pane='pp-total'>토탈 TOP0</button>
     <button data-pane='pp-ml'>머니라인 TOP0</button>
@@ -269,7 +271,7 @@ footer{margin-top:34px;text-align:center;font-size:11px;color:var(--dim);line-he
   <footer>
     
     zero-base wOBA + 바텀업 log5 + 24상태 Markov 체인 + Monte Carlo<br>
-    자동 생성 · 2026-06-13 17:50:29 KST · 책임 있는 베팅
+    자동 생성 · 2026-06-13 21:11:30 KST · 책임 있는 베팅
   </footer>
 </div>
 <script>
