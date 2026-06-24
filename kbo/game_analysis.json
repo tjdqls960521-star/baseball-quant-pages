@@ -1,7 +1,7 @@
 [
   {
     "game_pk": "20260624HTWO02026",
-    "status": "BEFORE",
+    "status": "READY",
     "time_kst": "2026-06-24T18:30:00",
     "game_date_kst": "2026-06-24",
     "venue": "고척",
@@ -63,81 +63,81 @@
     "umpire": "",
     "market_total": null,
     "environment_factor": 0.96,
-    "home_runs": 4.303679306104422,
-    "away_runs": 4.581800178223907,
-    "total": 8.885479484328329,
-    "home_win_prob": 0.4289,
-    "away_win_prob": 0.4731,
-    "push_prob": 0.098,
+    "home_runs": 4.843396261481561,
+    "away_runs": 4.83735329592948,
+    "total": 9.68074955741104,
+    "home_win_prob": 0.452,
+    "away_win_prob": 0.45585,
+    "push_prob": 0.09215,
     "runline": {
-      "home_minus_1_5": 0.33695,
-      "home_plus_1_5": 0.6188,
-      "away_minus_1_5": 0.3812,
-      "away_plus_1_5": 0.66305
+      "home_minus_1_5": 0.3652,
+      "home_plus_1_5": 0.62985,
+      "away_minus_1_5": 0.37015,
+      "away_plus_1_5": 0.6348
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.499,
-        "runs_vs_bp": 4.547,
+        "runs_vs_sp": 5.023,
+        "runs_vs_bp": 5.014,
         "sp_share": 0.544,
         "expected_ip": 4.9,
-        "mu_full": 4.557,
-        "mu_f5": 2.285,
+        "mu_full": 5.004,
+        "mu_f5": 2.513,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3238,
+          "batter_woba": 0.3374,
           "pitcher_woba_against": 0.3432,
-          "matchup_woba": 0.327,
+          "matchup_woba": 0.3406,
           "sp_path": {
-            "eff_woba": 0.3276,
-            "rpa": 0.1148,
-            "obp_eff": 0.3112,
-            "pa_per_inning": 4.355
+            "eff_woba": 0.3408,
+            "rpa": 0.1258,
+            "obp_eff": 0.3238,
+            "pa_per_inning": 4.436
           },
           "bp_path": {
-            "eff_woba": 0.3288,
-            "rpa": 0.1158,
-            "obp_eff": 0.3124,
-            "pa_per_inning": 4.363
+            "eff_woba": 0.3406,
+            "rpa": 0.1256,
+            "obp_eff": 0.3235,
+            "pa_per_inning": 4.435
           },
           "hand_factor": 1.0,
           "park": 0.96,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.888
+          "bp_factor": 0.889
         }
       },
       "away": {
-        "runs_vs_sp": 4.413,
-        "runs_vs_bp": 4.408,
+        "runs_vs_sp": 4.83,
+        "runs_vs_bp": 4.829,
         "sp_share": 0.433,
         "expected_ip": 3.9,
-        "mu_full": 4.461,
-        "mu_f5": 2.159,
+        "mu_full": 4.827,
+        "mu_f5": 2.333,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3447,
+          "batter_woba": 0.3558,
           "pitcher_woba_against": 0.32,
-          "matchup_woba": 0.3247,
+          "matchup_woba": 0.3358,
           "sp_path": {
-            "eff_woba": 0.3253,
-            "rpa": 0.1129,
-            "obp_eff": 0.3091,
-            "pa_per_inning": 4.342
+            "eff_woba": 0.336,
+            "rpa": 0.1218,
+            "obp_eff": 0.3192,
+            "pa_per_inning": 4.407
           },
           "bp_path": {
-            "eff_woba": 0.3252,
-            "rpa": 0.1128,
-            "obp_eff": 0.3089,
-            "pa_per_inning": 4.341
+            "eff_woba": 0.336,
+            "rpa": 0.1218,
+            "obp_eff": 0.3192,
+            "pa_per_inning": 4.406
           },
           "hand_factor": 1.0,
           "park": 0.96,
@@ -157,14 +157,14 @@
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.56,
-      "away_xr": 2.15,
-      "total_xr": 4.72,
-      "home_win_prob": 0.4691,
+      "home_xr": 2.83,
+      "away_xr": 2.3,
+      "total_xr": 5.13,
+      "home_win_prob": 0.4818,
       "over_probs": {
-        "4.5": 0.4487,
-        "5.0": 0.3389,
-        "5.5": 0.3389
+        "4.5": 0.5054,
+        "5.0": 0.393,
+        "5.5": 0.393
       }
     },
     "learn_correction": {
@@ -326,24 +326,15 @@
       }
     },
     "sabermetric_detail": {
-      "home_lineup_rate": {
-        "k_pct": 0.1701,
-        "bb_pct": 0.1194,
-        "hr_pct": 0.009,
-        "iso": 0.0968,
-        "babip": 0.3419,
-        "pa": 670,
-        "n_batters": 9,
-        "_present": true
-      },
+      "home_lineup_rate": {},
       "away_lineup_rate": {
-        "k_pct": 0.2179,
-        "bb_pct": 0.1085,
-        "hr_pct": 0.0422,
-        "iso": 0.2069,
-        "babip": 0.3245,
-        "pa": 1161,
-        "n_batters": 9,
+        "k_pct": 0.2175,
+        "bb_pct": 0.1068,
+        "hr_pct": 0.0443,
+        "iso": 0.214,
+        "babip": 0.3276,
+        "pa": 1039,
+        "n_batters": 8,
         "_present": true
       }
     },
@@ -351,14 +342,14 @@
       "home_season": {
         "rpg": 4.567248322147651,
         "ops": 0.642,
-        "woba": 0.3238,
+        "woba": 0.3374,
         "iso": 0.095,
         "avg": 0.233
       },
       "away_season": {
         "rpg": 5.477852348993289,
         "ops": 0.77,
-        "woba": 0.3447,
+        "woba": 0.3558,
         "iso": 0.15799999999999997,
         "avg": 0.267
       },
@@ -403,22 +394,22 @@
         }
       },
       "away_top_player": {
-        "name": "정현창",
+        "name": "변우혁",
         "position": "",
         "season": {
-          "ab": 39,
-          "hit": 6,
-          "hr": 0,
-          "rbi": 6,
-          "avg": 0.154,
-          "obp": 0.227
+          "ab": 30,
+          "hit": 7,
+          "hr": 3,
+          "rbi": 4,
+          "avg": 0.233,
+          "obp": 0.281
         },
         "recent5": {
-          "ab": 5,
+          "ab": 6,
           "hit": 3,
-          "hr": 0,
-          "rbi": 0,
-          "avg": 0.6,
+          "hr": 2,
+          "rbi": 2,
+          "avg": 0.5,
           "_present": false
         }
       }
@@ -887,26 +878,26 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.19,
-        "raw_factor": 1.2317,
-        "mu": 5.566,
+        "factor": 1.3522,
+        "raw_factor": 1.4295,
+        "mu": 6.244,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.966,
-        "raw_factor": 0.9585,
-        "mu": 4.569,
+        "factor": 0.9878,
+        "raw_factor": 0.9851,
+        "mu": 4.658,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "양현종",
-        "lineup_woba": 0.3283,
-        "matchup_score": 0.9838,
+        "lineup_woba": 0.3453,
+        "matchup_score": 1.0048,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 1.0346,
+        "platoon": 1.0388,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -915,85 +906,55 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "브룩스",
-            "hand": "R",
-            "pa": 161,
-            "woba": 0.302,
-            "ops": 0.63,
-            "platoon": 1.023,
-            "matchup_woba": 0.33,
-            "k_pct": 0.138,
-            "hr_pct": 0.02,
-            "edge": 0.0161,
-            "vs_hand_ops": 0.644,
+            "name": "서건창",
+            "hand": "L",
+            "pa": 182,
+            "woba": 0.344,
+            "ops": 0.757,
+            "platoon": 0.972,
+            "matchup_woba": 0.377,
+            "k_pct": 0.113,
+            "hr_pct": 0.022,
+            "edge": 0.0266,
+            "vs_hand_ops": 0.736,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
-            "name": "이주형",
-            "hand": "R",
-            "pa": 102,
-            "woba": 0.339,
-            "ops": 0.741,
-            "platoon": 0.989,
-            "matchup_woba": 0.355,
-            "k_pct": 0.174,
-            "hr_pct": 0.035,
-            "edge": 0.0254,
-            "vs_hand_ops": 0.734,
+            "name": "임병욱",
+            "hand": "L",
+            "pa": 160,
+            "woba": 0.349,
+            "ops": 0.772,
+            "platoon": 0.976,
+            "matchup_woba": 0.379,
+            "k_pct": 0.238,
+            "hr_pct": 0.046,
+            "edge": 0.0357,
+            "vs_hand_ops": 0.753,
             "source": "kbo_player_detail"
           },
           {
             "order": 3,
-            "name": "안치홍",
+            "name": "히우라",
             "hand": "R",
-            "pa": 269,
-            "woba": 0.338,
-            "ops": 0.74,
-            "platoon": 1.07,
-            "matchup_woba": 0.398,
-            "k_pct": 0.128,
-            "hr_pct": 0.031,
-            "edge": 0.0252,
-            "vs_hand_ops": 0.791,
+            "pa": 95,
+            "woba": 0.353,
+            "ops": 0.784,
+            "platoon": 1.076,
+            "matchup_woba": 0.428,
+            "k_pct": 0.235,
+            "hr_pct": 0.051,
+            "edge": 0.0407,
+            "vs_hand_ops": 0.844,
             "source": "kbo_player_detail"
           },
           {
             "order": 4,
-            "name": "어준서",
-            "hand": "R",
-            "pa": 72,
-            "woba": 0.308,
-            "ops": 0.647,
-            "platoon": 1.056,
-            "matchup_woba": 0.35,
-            "k_pct": 0.196,
-            "hr_pct": 0.028,
-            "edge": 0.0195,
-            "vs_hand_ops": 0.683,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
-            "name": "최주환",
-            "hand": "R",
-            "pa": 259,
-            "woba": 0.319,
-            "ops": 0.682,
-            "platoon": 0.98,
-            "matchup_woba": 0.346,
-            "k_pct": 0.137,
-            "hr_pct": 0.025,
-            "edge": 0.0241,
-            "vs_hand_ops": 0.668,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
             "name": "김건희",
             "hand": "R",
             "pa": 239,
@@ -1008,22 +969,7 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 7,
-            "name": "박한결",
-            "hand": "R",
-            "pa": 41,
-            "woba": 0.305,
-            "ops": 0.638,
-            "platoon": 1.027,
-            "matchup_woba": 0.338,
-            "k_pct": 0.197,
-            "hr_pct": 0.031,
-            "edge": 0.0224,
-            "vs_hand_ops": 0.655,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 8,
+            "order": 5,
             "name": "박찬혁",
             "hand": "R",
             "pa": 98,
@@ -1038,29 +984,74 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 9,
-            "name": "임지열",
+            "order": 6,
+            "name": "안치홍",
             "hand": "R",
-            "pa": 75,
-            "woba": 0.315,
-            "ops": 0.669,
-            "platoon": 1.015,
-            "matchup_woba": 0.352,
-            "k_pct": 0.208,
-            "hr_pct": 0.033,
-            "edge": 0.0267,
-            "vs_hand_ops": 0.679,
+            "pa": 269,
+            "woba": 0.338,
+            "ops": 0.74,
+            "platoon": 1.07,
+            "matchup_woba": 0.398,
+            "k_pct": 0.128,
+            "hr_pct": 0.031,
+            "edge": 0.0252,
+            "vs_hand_ops": 0.791,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "김웅빈",
+            "hand": "L",
+            "pa": 134,
+            "woba": 0.332,
+            "ops": 0.72,
+            "platoon": 0.979,
+            "matchup_woba": 0.368,
+            "k_pct": 0.203,
+            "hr_pct": 0.036,
+            "edge": 0.0308,
+            "vs_hand_ops": 0.704,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "권혁빈",
+            "hand": "R",
+            "pa": 108,
+            "woba": 0.299,
+            "ops": 0.622,
+            "platoon": 1.05,
+            "matchup_woba": 0.336,
+            "k_pct": 0.202,
+            "hr_pct": 0.024,
+            "edge": 0.0171,
+            "vs_hand_ops": 0.653,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "여동욱",
+            "hand": "R",
+            "pa": 42,
+            "woba": 0.346,
+            "ops": 0.764,
+            "platoon": 1.086,
+            "matchup_woba": 0.432,
+            "k_pct": 0.173,
+            "hr_pct": 0.048,
+            "edge": 0.0464,
+            "vs_hand_ops": 0.83,
             "source": "kbo_player_detail"
           }
         ]
       },
       "away": {
         "vs_pitcher": "안우진",
-        "lineup_woba": 0.3438,
-        "matchup_score": 0.9874,
+        "lineup_woba": 0.3577,
+        "matchup_score": 0.98,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.971,
+        "platoon": 1.0193,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -1069,21 +1060,21 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "카스트로",
-            "hand": "R",
-            "pa": 117,
-            "woba": 0.348,
-            "ops": 0.769,
-            "platoon": 1.002,
-            "matchup_woba": 0.302,
-            "k_pct": 0.313,
-            "hr_pct": 0.016,
-            "edge": -0.0385,
-            "vs_hand_ops": 0.77,
+            "name": "박재현",
+            "hand": "L",
+            "pa": 273,
+            "woba": 0.334,
+            "ops": 0.726,
+            "platoon": 1.087,
+            "matchup_woba": 0.319,
+            "k_pct": 0.305,
+            "hr_pct": 0.017,
+            "edge": -0.0403,
+            "vs_hand_ops": 0.79,
             "source": "kbo_player_detail"
           },
           {
@@ -1118,92 +1109,92 @@
           },
           {
             "order": 4,
-            "name": "김선빈",
-            "hand": "R",
-            "pa": 281,
-            "woba": 0.329,
-            "ops": 0.71,
-            "platoon": 0.885,
-            "matchup_woba": 0.285,
-            "k_pct": 0.195,
-            "hr_pct": 0.006,
-            "edge": -0.0279,
-            "vs_hand_ops": 0.629,
+            "name": "나성범",
+            "hand": "L",
+            "pa": 280,
+            "woba": 0.38,
+            "ops": 0.865,
+            "platoon": 1.122,
+            "matchup_woba": 0.374,
+            "k_pct": 0.364,
+            "hr_pct": 0.026,
+            "edge": -0.0612,
+            "vs_hand_ops": 0.971,
             "source": "kbo_player_detail"
           },
           {
             "order": 5,
-            "name": "데일",
-            "hand": "R",
-            "pa": 135,
-            "woba": 0.322,
-            "ops": 0.692,
-            "platoon": 0.976,
-            "matchup_woba": 0.291,
-            "k_pct": 0.208,
-            "hr_pct": 0.009,
-            "edge": -0.0307,
-            "vs_hand_ops": 0.675,
+            "name": "카스트로",
+            "hand": "L",
+            "pa": 117,
+            "woba": 0.348,
+            "ops": 0.769,
+            "platoon": 1.06,
+            "matchup_woba": 0.319,
+            "k_pct": 0.308,
+            "hr_pct": 0.017,
+            "edge": -0.0404,
+            "vs_hand_ops": 0.815,
             "source": "kbo_player_detail"
           },
           {
             "order": 6,
-            "name": "나성범",
-            "hand": "R",
-            "pa": 280,
-            "woba": 0.38,
-            "ops": 0.865,
-            "platoon": 1.078,
-            "matchup_woba": 0.361,
-            "k_pct": 0.369,
-            "hr_pct": 0.025,
-            "edge": -0.0593,
-            "vs_hand_ops": 0.933,
+            "name": "한준수",
+            "hand": "L",
+            "pa": 207,
+            "woba": 0.376,
+            "ops": 0.853,
+            "platoon": 0.981,
+            "matchup_woba": 0.339,
+            "k_pct": 0.231,
+            "hr_pct": 0.013,
+            "edge": -0.0433,
+            "vs_hand_ops": 0.836,
             "source": "kbo_player_detail"
           },
           {
             "order": 7,
-            "name": "한준수",
+            "name": "변우혁",
             "hand": "R",
-            "pa": 207,
-            "woba": 0.376,
-            "ops": 0.853,
-            "platoon": 0.932,
-            "matchup_woba": 0.326,
-            "k_pct": 0.234,
-            "hr_pct": 0.013,
-            "edge": -0.0418,
-            "vs_hand_ops": 0.795,
+            "pa": 32,
+            "woba": 0.347,
+            "ops": 0.767,
+            "platoon": 0.977,
+            "matchup_woba": 0.296,
+            "k_pct": 0.329,
+            "hr_pct": 0.019,
+            "edge": -0.0461,
+            "vs_hand_ops": 0.749,
             "source": "kbo_player_detail"
           },
           {
             "order": 8,
-            "name": "오선우",
-            "hand": "R",
-            "pa": 61,
-            "woba": 0.347,
-            "ops": 0.767,
-            "platoon": 0.999,
-            "matchup_woba": 0.306,
-            "k_pct": 0.337,
-            "hr_pct": 0.017,
-            "edge": -0.0445,
-            "vs_hand_ops": 0.766,
+            "name": "김규성",
+            "hand": "L",
+            "pa": 132,
+            "woba": 0.322,
+            "ops": 0.691,
+            "platoon": 1.032,
+            "matchup_woba": 0.301,
+            "k_pct": 0.268,
+            "hr_pct": 0.008,
+            "edge": -0.0289,
+            "vs_hand_ops": 0.713,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "윤도현",
+            "name": "박민",
             "hand": "R",
-            "pa": 43,
-            "woba": 0.307,
-            "ops": 0.644,
-            "platoon": 0.922,
-            "matchup_woba": 0.258,
-            "k_pct": 0.382,
-            "hr_pct": 0.01,
-            "edge": -0.0291,
-            "vs_hand_ops": 0.594,
+            "pa": 155,
+            "woba": 0.317,
+            "ops": 0.674,
+            "platoon": 0.958,
+            "matchup_woba": 0.276,
+            "k_pct": 0.255,
+            "hr_pct": 0.012,
+            "edge": -0.0346,
+            "vs_hand_ops": 0.645,
             "source": "kbo_player_detail"
           }
         ]
@@ -1247,44 +1238,44 @@
     "picks": [],
     "scores_top": [
       {
+        "away": 3,
+        "home": 3,
+        "prob": 0.0176
+      },
+      {
         "away": 2,
         "home": 2,
-        "prob": 0.0201
+        "prob": 0.0173
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0186
-      },
-      {
-        "away": 3,
-        "home": 3,
-        "prob": 0.0182
+        "prob": 0.0168
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.018
+        "prob": 0.0163
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0154
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0175
+        "prob": 0.0149
       },
       {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0169
+        "away": 4,
+        "home": 2,
+        "prob": 0.0148
       },
       {
-        "away": 3,
-        "home": 1,
-        "prob": 0.0169
-      },
-      {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0169
+        "away": 4,
+        "home": 4,
+        "prob": 0.0147
       }
     ],
     "data_sources": {
@@ -1302,7 +1293,7 @@
   },
   {
     "game_pk": "20260624NCLT02026",
-    "status": "BEFORE",
+    "status": "READY",
     "time_kst": "2026-06-24T18:30:00",
     "game_date_kst": "2026-06-24",
     "venue": "사직",
@@ -1363,47 +1354,47 @@
     },
     "umpire": "",
     "market_total": null,
-    "environment_factor": 0.9887,
-    "home_runs": 3.3694250961295986,
-    "away_runs": 5.731692218121105,
-    "total": 9.101117314250704,
-    "home_win_prob": 0.26515,
-    "away_win_prob": 0.6473,
-    "push_prob": 0.08755,
+    "environment_factor": 1.0054,
+    "home_runs": 3.8718092791639287,
+    "away_runs": 6.245938511547989,
+    "total": 10.117747790711917,
+    "home_win_prob": 0.27595,
+    "away_win_prob": 0.64345,
+    "push_prob": 0.0806,
     "runline": {
-      "home_minus_1_5": 0.19455,
-      "home_plus_1_5": 0.44315,
-      "away_minus_1_5": 0.55685,
-      "away_plus_1_5": 0.80545
+      "home_minus_1_5": 0.2053,
+      "home_plus_1_5": 0.4434,
+      "away_minus_1_5": 0.5566,
+      "away_plus_1_5": 0.7947
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.124,
-        "runs_vs_bp": 4.097,
+        "runs_vs_sp": 4.701,
+        "runs_vs_bp": 4.685,
         "sp_share": 0.578,
         "expected_ip": 5.2,
-        "mu_full": 4.207,
-        "mu_f5": 2.232,
+        "mu_full": 4.717,
+        "mu_f5": 2.498,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3247,
+          "batter_woba": 0.3397,
           "pitcher_woba_against": 0.3329,
-          "matchup_woba": 0.3176,
+          "matchup_woba": 0.3326,
           "sp_path": {
-            "eff_woba": 0.3178,
-            "rpa": 0.1066,
-            "obp_eff": 0.3019,
-            "pa_per_inning": 4.297
+            "eff_woba": 0.3327,
+            "rpa": 0.1191,
+            "obp_eff": 0.3161,
+            "pa_per_inning": 4.386
           },
           "bp_path": {
-            "eff_woba": 0.3171,
-            "rpa": 0.106,
-            "obp_eff": 0.3012,
-            "pa_per_inning": 4.293
+            "eff_woba": 0.3323,
+            "rpa": 0.1187,
+            "obp_eff": 0.3157,
+            "pa_per_inning": 4.384
           },
           "hand_factor": 1.0,
           "park": 1.0,
@@ -1413,69 +1404,69 @@
         }
       },
       "away": {
-        "runs_vs_sp": 5.133,
-        "runs_vs_bp": 5.12,
+        "runs_vs_sp": 5.774,
+        "runs_vs_bp": 5.75,
         "sp_share": 0.589,
         "expected_ip": 5.3,
-        "mu_full": 5.099,
-        "mu_f5": 2.743,
+        "mu_full": 5.66,
+        "mu_f5": 3.046,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.341,
+          "batter_woba": 0.3563,
           "pitcher_woba_against": 0.3423,
-          "matchup_woba": 0.3433,
+          "matchup_woba": 0.3586,
           "sp_path": {
-            "eff_woba": 0.3435,
-            "rpa": 0.1281,
-            "obp_eff": 0.3263,
-            "pa_per_inning": 4.453
+            "eff_woba": 0.3589,
+            "rpa": 0.1409,
+            "obp_eff": 0.341,
+            "pa_per_inning": 4.552
           },
           "bp_path": {
-            "eff_woba": 0.3432,
-            "rpa": 0.1278,
-            "obp_eff": 0.326,
-            "pa_per_inning": 4.451
+            "eff_woba": 0.3584,
+            "rpa": 0.1405,
+            "obp_eff": 0.3405,
+            "pa_per_inning": 4.549
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.983
+          "bp_factor": 0.984
         }
       }
     },
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 20.5,
-      "temp_f": 68.9,
-      "wind_mph": 7.4,
+      "temp_c": 20.0,
+      "temp_f": 68.0,
+      "wind_mph": 7.8,
       "wind_dir_label": "교차풍",
-      "wind_dot_of": 0.9,
+      "wind_dot_of": 3.3,
       "precip_prob": 71,
-      "humidity_pct": 93,
-      "air_density": 1.1841,
-      "density_delta_pct": -0.4,
-      "carry_dist_pct": 0.46,
-      "run_factor": 0.9887,
-      "factor": 0.9887
+      "humidity_pct": 92,
+      "air_density": 1.1868,
+      "density_delta_pct": -0.18,
+      "carry_dist_pct": 1.22,
+      "run_factor": 1.0054,
+      "factor": 1.0054
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.24,
-      "away_xr": 2.95,
-      "total_xr": 5.2,
-      "home_win_prob": 0.3384,
+      "home_xr": 2.53,
+      "away_xr": 3.22,
+      "total_xr": 5.75,
+      "home_win_prob": 0.3494,
       "over_probs": {
-        "4.5": 0.5118,
-        "5.0": 0.396,
-        "5.5": 0.396
+        "4.5": 0.5725,
+        "5.0": 0.459,
+        "5.5": 0.459
       }
     },
     "learn_correction": {
@@ -1638,23 +1629,23 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.1583,
-        "bb_pct": 0.0883,
-        "hr_pct": 0.0367,
-        "iso": 0.1812,
-        "babip": 0.3393,
-        "pa": 872,
-        "n_batters": 9,
+        "k_pct": 0.1566,
+        "bb_pct": 0.0805,
+        "hr_pct": 0.0316,
+        "iso": 0.1611,
+        "babip": 0.3439,
+        "pa": 696,
+        "n_batters": 6,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.1607,
-        "bb_pct": 0.1179,
-        "hr_pct": 0.0312,
-        "iso": 0.1664,
-        "babip": 0.3409,
-        "pa": 1120,
-        "n_batters": 9,
+        "k_pct": 0.1575,
+        "bb_pct": 0.1018,
+        "hr_pct": 0.0283,
+        "iso": 0.1545,
+        "babip": 0.359,
+        "pa": 1238,
+        "n_batters": 8,
         "_present": true
       }
     },
@@ -1662,14 +1653,14 @@
       "home_season": {
         "rpg": 4.97986577181208,
         "ops": 0.7,
-        "woba": 0.3247,
+        "woba": 0.3397,
         "iso": 0.122,
         "avg": 0.258
       },
       "away_season": {
         "rpg": 5.463624161073826,
         "ops": 0.768,
-        "woba": 0.341,
+        "woba": 0.3563,
         "iso": 0.12999999999999995,
         "avg": 0.278
       },
@@ -2198,26 +2189,26 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.0399,
-        "raw_factor": 1.0486,
-        "mu": 5.068,
+        "factor": 1.1347,
+        "raw_factor": 1.1643,
+        "mu": 5.559,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.2954,
-        "raw_factor": 1.3602,
-        "mu": 6.086,
+        "factor": 1.3768,
+        "raw_factor": 1.4595,
+        "mu": 6.531,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "테일러",
-        "lineup_woba": 0.3246,
-        "matchup_score": 1.0066,
+        "lineup_woba": 0.3433,
+        "matchup_score": 1.0006,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9622,
+        "platoon": 1.0048,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -2226,10 +2217,85 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
+            "name": "황성빈",
+            "hand": "L",
+            "pa": 205,
+            "woba": 0.337,
+            "ops": 0.736,
+            "platoon": 1.021,
+            "matchup_woba": 0.34,
+            "k_pct": 0.149,
+            "hr_pct": 0.005,
+            "edge": -0.0007,
+            "vs_hand_ops": 0.752,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "고승민",
+            "hand": "L",
+            "pa": 185,
+            "woba": 0.342,
+            "ops": 0.751,
+            "platoon": 1.013,
+            "matchup_woba": 0.327,
+            "k_pct": 0.183,
+            "hr_pct": 0.01,
+            "edge": -0.0165,
+            "vs_hand_ops": 0.76,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "레이예스",
+            "hand": "S",
+            "pa": 316,
+            "woba": 0.382,
+            "ops": 0.873,
+            "platoon": 1.051,
+            "matchup_woba": 0.389,
+            "k_pct": 0.125,
+            "hr_pct": 0.013,
+            "edge": -0.023,
+            "vs_hand_ops": 0.917,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "한동희",
+            "hand": "R",
+            "pa": 147,
+            "woba": 0.338,
+            "ops": 0.738,
+            "platoon": 0.976,
+            "matchup_woba": 0.315,
+            "k_pct": 0.209,
+            "hr_pct": 0.011,
+            "edge": -0.0186,
+            "vs_hand_ops": 0.72,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "나승엽",
+            "hand": "L",
+            "pa": 156,
+            "woba": 0.336,
+            "ops": 0.734,
+            "platoon": 1.024,
+            "matchup_woba": 0.33,
+            "k_pct": 0.164,
+            "hr_pct": 0.013,
+            "edge": -0.0214,
+            "vs_hand_ops": 0.751,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
             "name": "윤동희",
             "hand": "R",
             "pa": 141,
@@ -2244,67 +2310,7 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 2,
-            "name": "전준우",
-            "hand": "R",
-            "pa": 193,
-            "woba": 0.304,
-            "ops": 0.635,
-            "platoon": 0.898,
-            "matchup_woba": 0.272,
-            "k_pct": 0.163,
-            "hr_pct": 0.007,
-            "edge": -0.0075,
-            "vs_hand_ops": 0.571,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 3,
-            "name": "레이예스",
-            "hand": "R",
-            "pa": 316,
-            "woba": 0.382,
-            "ops": 0.873,
-            "platoon": 1.012,
-            "matchup_woba": 0.376,
-            "k_pct": 0.127,
-            "hr_pct": 0.013,
-            "edge": -0.0219,
-            "vs_hand_ops": 0.883,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 4,
-            "name": "노진혁",
-            "hand": "R",
-            "pa": 151,
-            "woba": 0.332,
-            "ops": 0.72,
-            "platoon": 0.983,
-            "matchup_woba": 0.31,
-            "k_pct": 0.204,
-            "hr_pct": 0.012,
-            "edge": -0.0209,
-            "vs_hand_ops": 0.708,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
-            "name": "손호영",
-            "hand": "R",
-            "pa": 141,
-            "woba": 0.327,
-            "ops": 0.705,
-            "platoon": 0.988,
-            "matchup_woba": 0.308,
-            "k_pct": 0.184,
-            "hr_pct": 0.011,
-            "edge": -0.0189,
-            "vs_hand_ops": 0.697,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
+            "order": 7,
             "name": "전민재",
             "hand": "R",
             "pa": 248,
@@ -2319,59 +2325,44 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 7,
-            "name": "한태양",
-            "hand": "R",
-            "pa": 105,
-            "woba": 0.318,
-            "ops": 0.679,
-            "platoon": 0.935,
-            "matchup_woba": 0.302,
-            "k_pct": 0.209,
-            "hr_pct": 0.006,
-            "edge": -0.0044,
-            "vs_hand_ops": 0.635,
-            "source": "kbo_player_detail"
-          },
-          {
             "order": 8,
-            "name": "유강남",
-            "hand": "R",
-            "pa": 109,
-            "woba": 0.323,
-            "ops": 0.693,
-            "platoon": 0.928,
-            "matchup_woba": 0.283,
-            "k_pct": 0.235,
-            "hr_pct": 0.01,
-            "edge": -0.0182,
-            "vs_hand_ops": 0.642,
+            "name": "김동현",
+            "hand": "L",
+            "pa": 35,
+            "woba": 0.35,
+            "ops": 0.775,
+            "platoon": 1.068,
+            "matchup_woba": 0.347,
+            "k_pct": 0.19,
+            "hr_pct": 0.014,
+            "edge": -0.0248,
+            "vs_hand_ops": 0.827,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "황성빈",
+            "name": "손성빈",
             "hand": "R",
-            "pa": 205,
-            "woba": 0.337,
-            "ops": 0.736,
-            "platoon": 0.975,
-            "matchup_woba": 0.327,
-            "k_pct": 0.152,
-            "hr_pct": 0.005,
-            "edge": -0.0004,
-            "vs_hand_ops": 0.718,
+            "pa": 176,
+            "woba": 0.311,
+            "ops": 0.656,
+            "platoon": 0.942,
+            "matchup_woba": 0.292,
+            "k_pct": 0.185,
+            "hr_pct": 0.007,
+            "edge": -0.0081,
+            "vs_hand_ops": 0.619,
             "source": "kbo_player_detail"
           }
         ]
       },
       "away": {
         "vs_pitcher": "로드리게스",
-        "lineup_woba": 0.3393,
-        "matchup_score": 1.002,
+        "lineup_woba": 0.3585,
+        "matchup_score": 1.0031,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9715,
+        "platoon": 1.0073,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -2380,70 +2371,55 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
             "name": "김주원",
-            "hand": "R",
+            "hand": "S",
             "pa": 314,
             "woba": 0.374,
             "ops": 0.847,
-            "platoon": 1.016,
-            "matchup_woba": 0.431,
-            "k_pct": 0.214,
-            "hr_pct": 0.057,
-            "edge": 0.037,
-            "vs_hand_ops": 0.86,
+            "platoon": 1.055,
+            "matchup_woba": 0.446,
+            "k_pct": 0.212,
+            "hr_pct": 0.059,
+            "edge": 0.0384,
+            "vs_hand_ops": 0.893,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
-            "name": "박민우",
+            "name": "이우성",
             "hand": "R",
-            "pa": 280,
-            "woba": 0.378,
-            "ops": 0.861,
-            "platoon": 0.996,
-            "matchup_woba": 0.409,
-            "k_pct": 0.193,
-            "hr_pct": 0.031,
-            "edge": 0.013,
-            "vs_hand_ops": 0.857,
+            "pa": 253,
+            "woba": 0.36,
+            "ops": 0.806,
+            "platoon": 0.978,
+            "matchup_woba": 0.37,
+            "k_pct": 0.255,
+            "hr_pct": 0.032,
+            "edge": 0.0144,
+            "vs_hand_ops": 0.789,
             "source": "kbo_player_detail"
           },
           {
             "order": 3,
-            "name": "데이비슨",
-            "hand": "R",
-            "pa": 239,
-            "woba": 0.351,
-            "ops": 0.78,
-            "platoon": 0.984,
-            "matchup_woba": 0.387,
-            "k_pct": 0.336,
-            "hr_pct": 0.049,
-            "edge": 0.0312,
-            "vs_hand_ops": 0.767,
+            "name": "박민우",
+            "hand": "L",
+            "pa": 280,
+            "woba": 0.378,
+            "ops": 0.861,
+            "platoon": 1.038,
+            "matchup_woba": 0.423,
+            "k_pct": 0.19,
+            "hr_pct": 0.032,
+            "edge": 0.0136,
+            "vs_hand_ops": 0.893,
             "source": "kbo_player_detail"
           },
           {
             "order": 4,
-            "name": "김휘집",
-            "hand": "R",
-            "pa": 61,
-            "woba": 0.337,
-            "ops": 0.737,
-            "platoon": 0.986,
-            "matchup_woba": 0.358,
-            "k_pct": 0.259,
-            "hr_pct": 0.03,
-            "edge": 0.0138,
-            "vs_hand_ops": 0.727,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
             "name": "박건우",
             "hand": "R",
             "pa": 268,
@@ -2458,63 +2434,78 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 6,
-            "name": "김형준",
+            "order": 5,
+            "name": "권희동",
             "hand": "R",
-            "pa": 192,
-            "woba": 0.325,
-            "ops": 0.699,
-            "platoon": 0.893,
-            "matchup_woba": 0.33,
-            "k_pct": 0.432,
-            "hr_pct": 0.038,
-            "edge": 0.0232,
-            "vs_hand_ops": 0.624,
+            "pa": 100,
+            "woba": 0.339,
+            "ops": 0.743,
+            "platoon": 0.95,
+            "matchup_woba": 0.356,
+            "k_pct": 0.283,
+            "hr_pct": 0.036,
+            "edge": 0.0204,
+            "vs_hand_ops": 0.705,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "데이비슨",
+            "hand": "R",
+            "pa": 239,
+            "woba": 0.351,
+            "ops": 0.78,
+            "platoon": 0.984,
+            "matchup_woba": 0.387,
+            "k_pct": 0.336,
+            "hr_pct": 0.049,
+            "edge": 0.0312,
+            "vs_hand_ops": 0.767,
             "source": "kbo_player_detail"
           },
           {
             "order": 7,
-            "name": "최정원",
+            "name": "김휘집",
             "hand": "R",
-            "pa": 131,
-            "woba": 0.324,
-            "ops": 0.695,
-            "platoon": 0.95,
-            "matchup_woba": 0.324,
-            "k_pct": 0.271,
-            "hr_pct": 0.022,
-            "edge": 0.0075,
-            "vs_hand_ops": 0.66,
+            "pa": 61,
+            "woba": 0.337,
+            "ops": 0.737,
+            "platoon": 0.986,
+            "matchup_woba": 0.358,
+            "k_pct": 0.259,
+            "hr_pct": 0.03,
+            "edge": 0.0138,
+            "vs_hand_ops": 0.727,
             "source": "kbo_player_detail"
           },
           {
             "order": 8,
-            "name": "신재인",
-            "hand": "R",
-            "pa": 75,
-            "woba": 0.323,
-            "ops": 0.692,
-            "platoon": 0.943,
-            "matchup_woba": 0.351,
-            "k_pct": 0.258,
+            "name": "오장한",
+            "hand": "L",
+            "pa": 29,
+            "woba": 0.356,
+            "ops": 0.795,
+            "platoon": 1.057,
+            "matchup_woba": 0.396,
+            "k_pct": 0.331,
             "hr_pct": 0.046,
-            "edge": 0.0303,
-            "vs_hand_ops": 0.653,
+            "edge": 0.0269,
+            "vs_hand_ops": 0.84,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "서호철",
+            "name": "안중열",
             "hand": "R",
-            "pa": 139,
-            "woba": 0.317,
-            "ops": 0.675,
-            "platoon": 0.936,
-            "matchup_woba": 0.322,
-            "k_pct": 0.297,
-            "hr_pct": 0.031,
-            "edge": 0.0168,
-            "vs_hand_ops": 0.632,
+            "pa": 81,
+            "woba": 0.333,
+            "ops": 0.724,
+            "platoon": 0.996,
+            "matchup_woba": 0.352,
+            "k_pct": 0.302,
+            "hr_pct": 0.034,
+            "edge": 0.0182,
+            "vs_hand_ops": 0.72,
             "source": "kbo_player_detail"
           }
         ]
@@ -2559,43 +2550,43 @@
     "scores_top": [
       {
         "away": 4,
-        "home": 2,
-        "prob": 0.0205
-      },
-      {
-        "away": 5,
-        "home": 1,
-        "prob": 0.02
+        "home": 3,
+        "prob": 0.0167
       },
       {
         "away": 3,
-        "home": 1,
-        "prob": 0.0192
+        "home": 2,
+        "prob": 0.0161
       },
       {
         "away": 4,
-        "home": 1,
-        "prob": 0.0187
-      },
-      {
-        "away": 3,
         "home": 2,
-        "prob": 0.0176
-      },
-      {
-        "away": 2,
-        "home": 2,
-        "prob": 0.0174
-      },
-      {
-        "away": 6,
-        "home": 1,
-        "prob": 0.0169
+        "prob": 0.016
       },
       {
         "away": 5,
         "home": 2,
-        "prob": 0.0169
+        "prob": 0.0157
+      },
+      {
+        "away": 5,
+        "home": 1,
+        "prob": 0.0155
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0154
+      },
+      {
+        "away": 5,
+        "home": 3,
+        "prob": 0.0154
+      },
+      {
+        "away": 6,
+        "home": 2,
+        "prob": 0.0149
       }
     ],
     "data_sources": {
@@ -2613,7 +2604,7 @@
   },
   {
     "game_pk": "20260624OBHH02026",
-    "status": "BEFORE",
+    "status": "READY",
     "time_kst": "2026-06-24T18:30:00",
     "game_date_kst": "2026-06-24",
     "venue": "대전",
@@ -2674,119 +2665,119 @@
     },
     "umpire": "",
     "market_total": null,
-    "environment_factor": 1.0082,
-    "home_runs": 5.511967098997686,
-    "away_runs": 3.869451885148175,
-    "total": 9.38141898414586,
-    "home_win_prob": 0.5889,
-    "away_win_prob": 0.3232,
-    "push_prob": 0.0879,
+    "environment_factor": 1.0068,
+    "home_runs": 6.089284889526861,
+    "away_runs": 4.228252960737563,
+    "total": 10.317537850264424,
+    "home_win_prob": 0.60725,
+    "away_win_prob": 0.31415,
+    "push_prob": 0.0786,
     "runline": {
-      "home_minus_1_5": 0.4963,
-      "home_plus_1_5": 0.7565,
-      "away_minus_1_5": 0.2435,
-      "away_plus_1_5": 0.5037
+      "home_minus_1_5": 0.52055,
+      "home_plus_1_5": 0.75775,
+      "away_minus_1_5": 0.24225,
+      "away_plus_1_5": 0.47945
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 3.827,
-        "runs_vs_bp": 3.875,
+        "runs_vs_sp": 4.684,
+        "runs_vs_bp": 4.686,
         "sp_share": 0.633,
         "expected_ip": 5.7,
-        "mu_full": 3.97,
-        "mu_f5": 2.264,
+        "mu_full": 4.7,
+        "mu_f5": 2.698,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3411,
+          "batter_woba": 0.363,
           "pitcher_woba_against": 0.3091,
-          "matchup_woba": 0.3102,
+          "matchup_woba": 0.3321,
           "sp_path": {
-            "eff_woba": 0.3099,
-            "rpa": 0.1,
-            "obp_eff": 0.2944,
-            "pa_per_inning": 4.251
+            "eff_woba": 0.3323,
+            "rpa": 0.1187,
+            "obp_eff": 0.3157,
+            "pa_per_inning": 4.384
           },
           "bp_path": {
-            "eff_woba": 0.3111,
-            "rpa": 0.1011,
-            "obp_eff": 0.2956,
-            "pa_per_inning": 4.259
+            "eff_woba": 0.3323,
+            "rpa": 0.1188,
+            "obp_eff": 0.3157,
+            "pa_per_inning": 4.384
           },
           "hand_factor": 1.0,
           "park": 1.05,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.947
+          "bp_factor": 0.949
         }
       },
       "away": {
-        "runs_vs_sp": 4.564,
-        "runs_vs_bp": 4.582,
+        "runs_vs_sp": 4.988,
+        "runs_vs_bp": 4.98,
         "sp_share": 0.567,
         "expected_ip": 5.1,
-        "mu_full": 4.609,
-        "mu_f5": 2.395,
+        "mu_full": 4.973,
+        "mu_f5": 2.587,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3347,
+          "batter_woba": 0.3453,
           "pitcher_woba_against": 0.3344,
-          "matchup_woba": 0.3291,
+          "matchup_woba": 0.3397,
           "sp_path": {
-            "eff_woba": 0.3292,
-            "rpa": 0.1162,
-            "obp_eff": 0.3128,
-            "pa_per_inning": 4.365
+            "eff_woba": 0.3399,
+            "rpa": 0.1251,
+            "obp_eff": 0.3229,
+            "pa_per_inning": 4.431
           },
           "bp_path": {
-            "eff_woba": 0.3297,
-            "rpa": 0.1166,
-            "obp_eff": 0.3132,
-            "pa_per_inning": 4.368
+            "eff_woba": 0.3397,
+            "rpa": 0.1249,
+            "obp_eff": 0.3227,
+            "pa_per_inning": 4.43
           },
           "hand_factor": 1.0,
           "park": 1.05,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.938
+          "bp_factor": 0.937
         }
       }
     },
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 22.7,
-      "temp_f": 72.9,
-      "wind_mph": 6.7,
+      "temp_c": 21.9,
+      "temp_f": 71.4,
+      "wind_mph": 5.8,
       "wind_dir_label": "IN(억제)",
-      "wind_dot_of": -7.2,
+      "wind_dot_of": -8.1,
       "precip_prob": 4,
-      "humidity_pct": 71,
-      "air_density": 1.1774,
-      "density_delta_pct": -0.97,
-      "carry_dist_pct": -1.76,
-      "run_factor": 0.9602,
-      "factor": 0.9602
+      "humidity_pct": 73,
+      "air_density": 1.1808,
+      "density_delta_pct": -0.68,
+      "carry_dist_pct": -1.83,
+      "run_factor": 0.9588,
+      "factor": 0.9588
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.17,
-      "away_xr": 2.51,
-      "total_xr": 4.68,
-      "home_win_prob": 0.3767,
+      "home_xr": 2.52,
+      "away_xr": 2.72,
+      "total_xr": 5.24,
+      "home_win_prob": 0.4059,
       "over_probs": {
-        "4.5": 0.4471,
-        "5.0": 0.3384,
-        "5.5": 0.3384
+        "4.5": 0.5158,
+        "5.0": 0.3992,
+        "5.5": 0.3992
       }
     },
     "learn_correction": {
@@ -2943,23 +2934,23 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.1806,
-        "bb_pct": 0.1153,
-        "hr_pct": 0.0379,
-        "iso": 0.2064,
-        "babip": 0.3293,
-        "pa": 1240,
-        "n_batters": 9,
+        "k_pct": 0.1777,
+        "bb_pct": 0.1234,
+        "hr_pct": 0.0433,
+        "iso": 0.2276,
+        "babip": 0.3329,
+        "pa": 1086,
+        "n_batters": 8,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.1703,
-        "bb_pct": 0.1024,
-        "hr_pct": 0.0196,
-        "iso": 0.1413,
-        "babip": 0.3148,
-        "pa": 869,
-        "n_batters": 9,
+        "k_pct": 0.1624,
+        "bb_pct": 0.1069,
+        "hr_pct": 0.0158,
+        "iso": 0.1194,
+        "babip": 0.3008,
+        "pa": 505,
+        "n_batters": 8,
         "_present": true
       }
     },
@@ -2967,14 +2958,14 @@
       "home_season": {
         "rpg": 5.513422818791946,
         "ops": 0.775,
-        "woba": 0.3411,
+        "woba": 0.363,
         "iso": 0.14799999999999996,
         "avg": 0.273
       },
       "away_season": {
         "rpg": 5.143489932885906,
         "ops": 0.723,
-        "woba": 0.3347,
+        "woba": 0.3453,
         "iso": 0.122,
         "avg": 0.265
       },
@@ -3431,26 +3422,26 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.7939,
-        "raw_factor": 0.7486,
-        "mu": 4.075,
+        "factor": 0.8744,
+        "raw_factor": 0.8469,
+        "mu": 4.423,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.9912,
-        "raw_factor": 0.9893,
-        "mu": 4.878,
+        "factor": 1.0738,
+        "raw_factor": 1.09,
+        "mu": 5.229,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "최민석",
-        "lineup_woba": 0.3389,
-        "matchup_score": 1.0026,
+        "lineup_woba": 0.3663,
+        "matchup_score": 0.9808,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9786,
+        "platoon": 1.0219,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -3459,25 +3450,70 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "오재원",
-            "hand": "R",
-            "pa": 114,
-            "woba": 0.296,
-            "ops": 0.612,
-            "platoon": 0.933,
-            "matchup_woba": 0.253,
-            "k_pct": 0.214,
+            "name": "이도윤",
+            "hand": "L",
+            "pa": 207,
+            "woba": 0.335,
+            "ops": 0.729,
+            "platoon": 0.984,
+            "matchup_woba": 0.274,
+            "k_pct": 0.191,
             "hr_pct": 0.005,
-            "edge": -0.0357,
-            "vs_hand_ops": 0.571,
+            "edge": -0.0489,
+            "vs_hand_ops": 0.718,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
+            "name": "페라자",
+            "hand": "S",
+            "pa": 322,
+            "woba": 0.401,
+            "ops": 0.93,
+            "platoon": 1.137,
+            "matchup_woba": 0.38,
+            "k_pct": 0.222,
+            "hr_pct": 0.018,
+            "edge": -0.0833,
+            "vs_hand_ops": 1.057,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "문현빈",
+            "hand": "L",
+            "pa": 316,
+            "woba": 0.365,
+            "ops": 0.822,
+            "platoon": 1.011,
+            "matchup_woba": 0.322,
+            "k_pct": 0.154,
+            "hr_pct": 0.011,
+            "edge": -0.0556,
+            "vs_hand_ops": 0.831,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "강백호",
+            "hand": "L",
+            "pa": 294,
+            "woba": 0.391,
+            "ops": 0.898,
+            "platoon": 1.121,
+            "matchup_woba": 0.354,
+            "k_pct": 0.252,
+            "hr_pct": 0.02,
+            "edge": -0.0922,
+            "vs_hand_ops": 1.006,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
             "name": "노시환",
             "hand": "R",
             "pa": 292,
@@ -3492,82 +3528,52 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 3,
-            "name": "강백호",
+            "order": 6,
+            "name": "김태연",
             "hand": "R",
-            "pa": 294,
-            "woba": 0.391,
-            "ops": 0.898,
-            "platoon": 1.08,
-            "matchup_woba": 0.344,
-            "k_pct": 0.256,
-            "hr_pct": 0.02,
-            "edge": -0.0887,
-            "vs_hand_ops": 0.971,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 4,
-            "name": "문현빈",
-            "hand": "R",
-            "pa": 316,
-            "woba": 0.365,
-            "ops": 0.822,
-            "platoon": 0.972,
-            "matchup_woba": 0.312,
-            "k_pct": 0.156,
-            "hr_pct": 0.01,
-            "edge": -0.0531,
+            "pa": 209,
+            "woba": 0.355,
+            "ops": 0.791,
+            "platoon": 1.01,
+            "matchup_woba": 0.299,
+            "k_pct": 0.202,
+            "hr_pct": 0.008,
+            "edge": -0.0533,
             "vs_hand_ops": 0.799,
             "source": "kbo_player_detail"
           },
           {
-            "order": 5,
-            "name": "페라자",
-            "hand": "R",
-            "pa": 322,
-            "woba": 0.401,
-            "ops": 0.93,
-            "platoon": 1.098,
-            "matchup_woba": 0.37,
-            "k_pct": 0.225,
-            "hr_pct": 0.018,
-            "edge": -0.0803,
-            "vs_hand_ops": 1.021,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
-            "name": "채은성",
-            "hand": "R",
-            "pa": 115,
-            "woba": 0.324,
-            "ops": 0.697,
-            "platoon": 0.954,
-            "matchup_woba": 0.271,
-            "k_pct": 0.232,
-            "hr_pct": 0.008,
-            "edge": -0.0479,
-            "vs_hand_ops": 0.664,
-            "source": "kbo_player_detail"
-          },
-          {
             "order": 7,
-            "name": "하주석",
+            "name": "허인서",
             "hand": "R",
-            "pa": 85,
-            "woba": 0.319,
-            "ops": 0.681,
-            "platoon": 0.933,
-            "matchup_woba": 0.262,
-            "k_pct": 0.279,
-            "hr_pct": 0.006,
-            "edge": -0.043,
-            "vs_hand_ops": 0.636,
+            "pa": 203,
+            "woba": 0.364,
+            "ops": 0.817,
+            "platoon": 1.014,
+            "matchup_woba": 0.308,
+            "k_pct": 0.331,
+            "hr_pct": 0.016,
+            "edge": -0.0733,
+            "vs_hand_ops": 0.828,
             "source": "kbo_player_detail"
           },
           {
             "order": 8,
+            "name": "유민",
+            "hand": "R",
+            "pa": 24,
+            "woba": 0.333,
+            "ops": 0.725,
+            "platoon": 0.97,
+            "matchup_woba": 0.286,
+            "k_pct": 0.291,
+            "hr_pct": 0.008,
+            "edge": -0.0478,
+            "vs_hand_ops": 0.703,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
             "name": "심우준",
             "hand": "R",
             "pa": 226,
@@ -3580,31 +3586,16 @@
             "edge": -0.0414,
             "vs_hand_ops": 0.686,
             "source": "kbo_player_detail"
-          },
-          {
-            "order": 9,
-            "name": "최재훈",
-            "hand": "R",
-            "pa": 101,
-            "woba": 0.294,
-            "ops": 0.606,
-            "platoon": 0.889,
-            "matchup_woba": 0.255,
-            "k_pct": 0.225,
-            "hr_pct": 0.005,
-            "edge": -0.0311,
-            "vs_hand_ops": 0.539,
-            "source": "kbo_player_detail"
           }
         ]
       },
       "away": {
         "vs_pitcher": "에르난데스",
-        "lineup_woba": 0.3352,
-        "matchup_score": 1.001,
+        "lineup_woba": 0.3484,
+        "matchup_score": 1.0019,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9892,
+        "platoon": 1.0157,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -3613,100 +3604,40 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "박찬호",
-            "hand": "R",
-            "pa": 314,
-            "woba": 0.337,
-            "ops": 0.734,
-            "platoon": 0.992,
-            "matchup_woba": 0.346,
-            "k_pct": 0.132,
-            "hr_pct": 0.013,
-            "edge": 0.0083,
-            "vs_hand_ops": 0.729,
+            "name": "정수빈",
+            "hand": "L",
+            "pa": 278,
+            "woba": 0.343,
+            "ops": 0.753,
+            "platoon": 0.998,
+            "matchup_woba": 0.355,
+            "k_pct": 0.137,
+            "hr_pct": 0.018,
+            "edge": 0.0068,
+            "vs_hand_ops": 0.752,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
-            "name": "정수빈",
-            "hand": "R",
-            "pa": 278,
-            "woba": 0.343,
-            "ops": 0.753,
-            "platoon": 0.957,
-            "matchup_woba": 0.342,
-            "k_pct": 0.139,
-            "hr_pct": 0.017,
-            "edge": 0.0066,
-            "vs_hand_ops": 0.72,
+            "name": "류승민",
+            "hand": "L",
+            "pa": 26,
+            "woba": 0.358,
+            "ops": 0.798,
+            "platoon": 1.061,
+            "matchup_woba": 0.381,
+            "k_pct": 0.163,
+            "hr_pct": 0.02,
+            "edge": 0.0072,
+            "vs_hand_ops": 0.847,
             "source": "kbo_player_detail"
           },
           {
             "order": 3,
-            "name": "안재석",
-            "hand": "R",
-            "pa": 156,
-            "woba": 0.319,
-            "ops": 0.683,
-            "platoon": 0.989,
-            "matchup_woba": 0.318,
-            "k_pct": 0.163,
-            "hr_pct": 0.019,
-            "edge": 0.0055,
-            "vs_hand_ops": 0.675,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 4,
-            "name": "카메론",
-            "hand": "R",
-            "pa": 309,
-            "woba": 0.362,
-            "ops": 0.812,
-            "platoon": 1.019,
-            "matchup_woba": 0.378,
-            "k_pct": 0.16,
-            "hr_pct": 0.025,
-            "edge": 0.0055,
-            "vs_hand_ops": 0.827,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
-            "name": "양의지",
-            "hand": "R",
-            "pa": 277,
-            "woba": 0.345,
-            "ops": 0.761,
-            "platoon": 1.027,
-            "matchup_woba": 0.371,
-            "k_pct": 0.117,
-            "hr_pct": 0.031,
-            "edge": 0.0029,
-            "vs_hand_ops": 0.782,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
-            "name": "양석환",
-            "hand": "R",
-            "pa": 113,
-            "woba": 0.304,
-            "ops": 0.635,
-            "platoon": 0.959,
-            "matchup_woba": 0.301,
-            "k_pct": 0.24,
-            "hr_pct": 0.015,
-            "edge": 0.006,
-            "vs_hand_ops": 0.609,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 7,
             "name": "박준순",
             "hand": "R",
             "pa": 171,
@@ -3721,33 +3652,93 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 8,
-            "name": "김민석",
+            "order": 4,
+            "name": "양의지",
             "hand": "R",
+            "pa": 277,
+            "woba": 0.345,
+            "ops": 0.761,
+            "platoon": 1.027,
+            "matchup_woba": 0.371,
+            "k_pct": 0.117,
+            "hr_pct": 0.031,
+            "edge": 0.0029,
+            "vs_hand_ops": 0.782,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "김민석",
+            "hand": "L",
             "pa": 230,
             "woba": 0.344,
             "ops": 0.758,
-            "platoon": 0.973,
-            "matchup_woba": 0.35,
-            "k_pct": 0.168,
-            "hr_pct": 0.015,
-            "edge": 0.0076,
-            "vs_hand_ops": 0.737,
+            "platoon": 1.018,
+            "matchup_woba": 0.364,
+            "k_pct": 0.166,
+            "hr_pct": 0.016,
+            "edge": 0.0078,
+            "vs_hand_ops": 0.771,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "박찬호",
+            "hand": "R",
+            "pa": 314,
+            "woba": 0.337,
+            "ops": 0.734,
+            "platoon": 0.992,
+            "matchup_woba": 0.346,
+            "k_pct": 0.132,
+            "hr_pct": 0.013,
+            "edge": 0.0083,
+            "vs_hand_ops": 0.729,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "오명진",
+            "hand": "L",
+            "pa": 114,
+            "woba": 0.342,
+            "ops": 0.751,
+            "platoon": 1.036,
+            "matchup_woba": 0.36,
+            "k_pct": 0.162,
+            "hr_pct": 0.02,
+            "edge": 0.0065,
+            "vs_hand_ops": 0.778,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "윤준호",
+            "hand": "R",
+            "pa": 96,
+            "woba": 0.333,
+            "ops": 0.724,
+            "platoon": 0.938,
+            "matchup_woba": 0.322,
+            "k_pct": 0.212,
+            "hr_pct": 0.019,
+            "edge": 0.0054,
+            "vs_hand_ops": 0.679,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "강승호",
-            "hand": "R",
-            "pa": 136,
-            "woba": 0.311,
-            "ops": 0.657,
-            "platoon": 0.96,
-            "matchup_woba": 0.312,
-            "k_pct": 0.241,
+            "name": "안재석",
+            "hand": "L",
+            "pa": 156,
+            "woba": 0.319,
+            "ops": 0.683,
+            "platoon": 1.04,
+            "matchup_woba": 0.332,
+            "k_pct": 0.16,
             "hr_pct": 0.02,
-            "edge": 0.0049,
-            "vs_hand_ops": 0.631,
+            "edge": 0.0056,
+            "vs_hand_ops": 0.71,
             "source": "kbo_player_detail"
           }
         ]
@@ -3792,43 +3783,43 @@
     "scores_top": [
       {
         "away": 2,
-        "home": 4,
-        "prob": 0.0184
-      },
-      {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0184
-      },
-      {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0175
-      },
-      {
-        "away": 1,
-        "home": 4,
-        "prob": 0.0168
-      },
-      {
-        "away": 2,
         "home": 5,
-        "prob": 0.0165
+        "prob": 0.0171
       },
       {
         "away": 2,
-        "home": 2,
-        "prob": 0.0164
+        "home": 4,
+        "prob": 0.017
       },
       {
         "away": 3,
-        "home": 3,
+        "home": 5,
         "prob": 0.0162
       },
       {
         "away": 3,
-        "home": 2,
+        "home": 4,
         "prob": 0.0158
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0149
+      },
+      {
+        "away": 2,
+        "home": 6,
+        "prob": 0.0149
+      },
+      {
+        "away": 1,
+        "home": 5,
+        "prob": 0.0143
+      },
+      {
+        "away": 4,
+        "home": 3,
+        "prob": 0.0141
       }
     ],
     "data_sources": {
@@ -3846,7 +3837,7 @@
   },
   {
     "game_pk": "20260624SKKT02026",
-    "status": "BEFORE",
+    "status": "READY",
     "time_kst": "2026-06-24T18:30:00",
     "game_date_kst": "2026-06-24",
     "venue": "수원",
@@ -3907,119 +3898,119 @@
     },
     "umpire": "",
     "market_total": null,
-    "environment_factor": 1.0024,
-    "home_runs": 5.184280343033419,
-    "away_runs": 6.329792859012311,
-    "total": 11.51407320204573,
-    "home_win_prob": 0.37235,
-    "away_win_prob": 0.5452,
-    "push_prob": 0.08245,
+    "environment_factor": 0.9677,
+    "home_runs": 5.680445582154228,
+    "away_runs": 6.4467532502984,
+    "total": 12.127198832452628,
+    "home_win_prob": 0.40235,
+    "away_win_prob": 0.52165,
+    "push_prob": 0.076,
     "runline": {
-      "home_minus_1_5": 0.2989,
-      "home_plus_1_5": 0.5337,
-      "away_minus_1_5": 0.4663,
-      "away_plus_1_5": 0.7011
+      "home_minus_1_5": 0.3292,
+      "home_plus_1_5": 0.5556,
+      "away_minus_1_5": 0.4444,
+      "away_plus_1_5": 0.6708
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 5.651,
-        "runs_vs_bp": 5.604,
+        "runs_vs_sp": 6.278,
+        "runs_vs_bp": 6.187,
         "sp_share": 0.444,
         "expected_ip": 4.0,
-        "mu_full": 5.542,
-        "mu_f5": 2.674,
+        "mu_full": 6.073,
+        "mu_f5": 2.934,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3496,
+          "batter_woba": 0.365,
           "pitcher_woba_against": 0.3462,
-          "matchup_woba": 0.3558,
+          "matchup_woba": 0.3712,
           "sp_path": {
-            "eff_woba": 0.356,
-            "rpa": 0.1385,
-            "obp_eff": 0.3382,
-            "pa_per_inning": 4.533
+            "eff_woba": 0.3706,
+            "rpa": 0.1507,
+            "obp_eff": 0.3521,
+            "pa_per_inning": 4.63
           },
           "bp_path": {
-            "eff_woba": 0.3549,
-            "rpa": 0.1376,
-            "obp_eff": 0.3372,
-            "pa_per_inning": 4.526
+            "eff_woba": 0.3685,
+            "rpa": 0.1489,
+            "obp_eff": 0.3501,
+            "pa_per_inning": 4.616
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.93
+          "bp_factor": 0.932
         }
       },
       "away": {
-        "runs_vs_sp": 4.972,
-        "runs_vs_bp": 4.958,
+        "runs_vs_sp": 5.235,
+        "runs_vs_bp": 5.216,
         "sp_share": 0.644,
         "expected_ip": 5.8,
-        "mu_full": 4.957,
-        "mu_f5": 2.889,
+        "mu_full": 5.186,
+        "mu_f5": 3.025,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3467,
+          "batter_woba": 0.3534,
           "pitcher_woba_against": 0.3325,
-          "matchup_woba": 0.3392,
+          "matchup_woba": 0.3459,
           "sp_path": {
-            "eff_woba": 0.3395,
-            "rpa": 0.1247,
-            "obp_eff": 0.3226,
-            "pa_per_inning": 4.428
+            "eff_woba": 0.346,
+            "rpa": 0.1302,
+            "obp_eff": 0.3287,
+            "pa_per_inning": 4.469
           },
           "bp_path": {
-            "eff_woba": 0.3392,
-            "rpa": 0.1245,
-            "obp_eff": 0.3222,
-            "pa_per_inning": 4.426
+            "eff_woba": 0.3456,
+            "rpa": 0.1298,
+            "obp_eff": 0.3283,
+            "pa_per_inning": 4.466
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.98
+          "bp_factor": 0.978
         }
       }
     },
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 26.1,
-      "temp_f": 79.0,
-      "wind_mph": 2.6,
+      "temp_c": 25.5,
+      "temp_f": 77.9,
+      "wind_mph": 5.4,
       "wind_dir_label": "IN(억제)",
-      "wind_dot_of": -6.8,
+      "wind_dot_of": -9.5,
       "precip_prob": 0,
-      "humidity_pct": 60,
-      "air_density": 1.1632,
-      "density_delta_pct": -2.17,
-      "carry_dist_pct": 0.11,
-      "run_factor": 1.0024,
-      "factor": 1.0024
+      "humidity_pct": 62,
+      "air_density": 1.1655,
+      "density_delta_pct": -1.97,
+      "carry_dist_pct": -1.47,
+      "run_factor": 0.9677,
+      "factor": 0.9677
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.85,
-      "away_xr": 2.74,
-      "total_xr": 5.58,
-      "home_win_prob": 0.4403,
+      "home_xr": 3.16,
+      "away_xr": 2.86,
+      "total_xr": 6.02,
+      "home_win_prob": 0.472,
       "over_probs": {
-        "4.5": 0.5588,
-        "5.0": 0.4434,
-        "5.5": 0.4434
+        "4.5": 0.6065,
+        "5.0": 0.4903,
+        "5.5": 0.4903
       }
     },
     "learn_correction": {
@@ -4176,23 +4167,23 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.1754,
-        "bb_pct": 0.1119,
-        "hr_pct": 0.0235,
-        "iso": 0.1467,
-        "babip": 0.3667,
-        "pa": 1448,
-        "n_batters": 9,
+        "k_pct": 0.1697,
+        "bb_pct": 0.1173,
+        "hr_pct": 0.0239,
+        "iso": 0.1481,
+        "babip": 0.3666,
+        "pa": 1338,
+        "n_batters": 8,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.1583,
-        "bb_pct": 0.1137,
-        "hr_pct": 0.0309,
-        "iso": 0.168,
-        "babip": 0.3146,
-        "pa": 1390,
-        "n_batters": 9,
+        "k_pct": 0.1559,
+        "bb_pct": 0.111,
+        "hr_pct": 0.0316,
+        "iso": 0.1705,
+        "babip": 0.3164,
+        "pa": 1360,
+        "n_batters": 8,
         "_present": true
       }
     },
@@ -4200,14 +4191,14 @@
       "home_season": {
         "rpg": 5.520536912751679,
         "ops": 0.776,
-        "woba": 0.3496,
+        "woba": 0.365,
         "iso": 0.11900000000000005,
         "avg": 0.285
       },
       "away_season": {
         "rpg": 5.371140939597315,
         "ops": 0.755,
-        "woba": 0.3467,
+        "woba": 0.3534,
         "iso": 0.14999999999999997,
         "avg": 0.261
       },
@@ -4711,26 +4702,26 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.2935,
-        "raw_factor": 1.358,
-        "mu": 6.238,
+        "factor": 1.4451,
+        "raw_factor": 1.5428,
+        "mu": 6.682,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.2829,
-        "raw_factor": 1.345,
-        "mu": 6.109,
+        "factor": 1.3166,
+        "raw_factor": 1.386,
+        "mu": 6.058,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "김민준",
-        "lineup_woba": 0.3495,
-        "matchup_score": 1.0128,
+        "lineup_woba": 0.3687,
+        "matchup_score": 1.0136,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9957,
+        "platoon": 1.0284,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -4739,55 +4730,40 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
             "name": "최원준",
-            "hand": "R",
+            "hand": "L",
             "pa": 336,
             "woba": 0.4,
             "ops": 0.926,
-            "platoon": 1.02,
-            "matchup_woba": 0.438,
-            "k_pct": 0.135,
+            "platoon": 1.058,
+            "matchup_woba": 0.452,
+            "k_pct": 0.133,
             "hr_pct": 0.017,
-            "edge": 0.0169,
-            "vs_hand_ops": 0.944,
+            "edge": 0.0168,
+            "vs_hand_ops": 0.98,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
-            "name": "힐리어드",
-            "hand": "R",
-            "pa": 317,
-            "woba": 0.377,
-            "ops": 0.858,
-            "platoon": 1.047,
-            "matchup_woba": 0.406,
-            "k_pct": 0.246,
-            "hr_pct": 0.037,
-            "edge": 0.0039,
-            "vs_hand_ops": 0.898,
+            "name": "김현수",
+            "hand": "L",
+            "pa": 319,
+            "woba": 0.347,
+            "ops": 0.766,
+            "platoon": 1.08,
+            "matchup_woba": 0.394,
+            "k_pct": 0.109,
+            "hr_pct": 0.016,
+            "edge": 0.0126,
+            "vs_hand_ops": 0.827,
             "source": "kbo_player_detail"
           },
           {
             "order": 3,
-            "name": "김현수",
-            "hand": "R",
-            "pa": 319,
-            "woba": 0.347,
-            "ops": 0.766,
-            "platoon": 1.039,
-            "matchup_woba": 0.382,
-            "k_pct": 0.111,
-            "hr_pct": 0.016,
-            "edge": 0.0127,
-            "vs_hand_ops": 0.796,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 4,
             "name": "안현민",
             "hand": "R",
             "pa": 94,
@@ -4802,37 +4778,22 @@
             "source": "kbo_player_detail"
           },
           {
+            "order": 4,
+            "name": "힐리어드",
+            "hand": "L",
+            "pa": 317,
+            "woba": 0.377,
+            "ops": 0.858,
+            "platoon": 1.087,
+            "matchup_woba": 0.419,
+            "k_pct": 0.242,
+            "hr_pct": 0.039,
+            "edge": 0.0035,
+            "vs_hand_ops": 0.933,
+            "source": "kbo_player_detail"
+          },
+          {
             "order": 5,
-            "name": "장성우",
-            "hand": "R",
-            "pa": 201,
-            "woba": 0.346,
-            "ops": 0.763,
-            "platoon": 1.028,
-            "matchup_woba": 0.392,
-            "k_pct": 0.213,
-            "hr_pct": 0.028,
-            "edge": 0.0168,
-            "vs_hand_ops": 0.785,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
-            "name": "이강민",
-            "hand": "R",
-            "pa": 160,
-            "woba": 0.281,
-            "ops": 0.565,
-            "platoon": 0.941,
-            "matchup_woba": 0.28,
-            "k_pct": 0.221,
-            "hr_pct": 0.01,
-            "edge": 0.0102,
-            "vs_hand_ops": 0.531,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 7,
             "name": "김상수",
             "hand": "R",
             "pa": 245,
@@ -4847,22 +4808,37 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 8,
-            "name": "류현인",
+            "order": 6,
+            "name": "허경민",
             "hand": "R",
-            "pa": 112,
-            "woba": 0.33,
-            "ops": 0.715,
-            "platoon": 0.964,
-            "matchup_woba": 0.336,
-            "k_pct": 0.179,
-            "hr_pct": 0.011,
-            "edge": 0.0129,
-            "vs_hand_ops": 0.689,
+            "pa": 156,
+            "woba": 0.355,
+            "ops": 0.789,
+            "platoon": 0.999,
+            "matchup_woba": 0.378,
+            "k_pct": 0.088,
+            "hr_pct": 0.018,
+            "edge": 0.0134,
+            "vs_hand_ops": 0.788,
             "source": "kbo_player_detail"
           },
           {
-            "order": 9,
+            "order": 7,
+            "name": "김민혁",
+            "hand": "L",
+            "pa": 208,
+            "woba": 0.342,
+            "ops": 0.751,
+            "platoon": 1.057,
+            "matchup_woba": 0.383,
+            "k_pct": 0.146,
+            "hr_pct": 0.012,
+            "edge": 0.0136,
+            "vs_hand_ops": 0.794,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
             "name": "한승택",
             "hand": "R",
             "pa": 171,
@@ -4875,16 +4851,31 @@
             "edge": 0.0151,
             "vs_hand_ops": 0.609,
             "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "권동진",
+            "hand": "L",
+            "pa": 124,
+            "woba": 0.367,
+            "ops": 0.826,
+            "platoon": 1.069,
+            "matchup_woba": 0.407,
+            "k_pct": 0.187,
+            "hr_pct": 0.015,
+            "edge": 0.0182,
+            "vs_hand_ops": 0.882,
+            "source": "kbo_player_detail"
           }
         ]
       },
       "away": {
         "vs_pitcher": "사우어",
-        "lineup_woba": 0.3475,
-        "matchup_score": 1.0003,
+        "lineup_woba": 0.3559,
+        "matchup_score": 0.9981,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9833,
+        "platoon": 1.0128,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -4893,85 +4884,40 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "박성한",
-            "hand": "R",
-            "pa": 316,
-            "woba": 0.379,
-            "ops": 0.862,
-            "platoon": 0.989,
-            "matchup_woba": 0.378,
-            "k_pct": 0.119,
-            "hr_pct": 0.012,
-            "edge": -0.0188,
-            "vs_hand_ops": 0.853,
+            "name": "정준재",
+            "hand": "L",
+            "pa": 277,
+            "woba": 0.335,
+            "ops": 0.731,
+            "platoon": 1.041,
+            "matchup_woba": 0.324,
+            "k_pct": 0.143,
+            "hr_pct": 0.01,
+            "edge": -0.0187,
+            "vs_hand_ops": 0.761,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
-            "name": "김재환",
-            "hand": "R",
-            "pa": 255,
-            "woba": 0.335,
-            "ops": 0.73,
-            "platoon": 0.95,
-            "matchup_woba": 0.327,
-            "k_pct": 0.293,
-            "hr_pct": 0.029,
-            "edge": -0.0184,
-            "vs_hand_ops": 0.693,
+            "name": "박성한",
+            "hand": "L",
+            "pa": 316,
+            "woba": 0.379,
+            "ops": 0.862,
+            "platoon": 1.027,
+            "matchup_woba": 0.39,
+            "k_pct": 0.117,
+            "hr_pct": 0.013,
+            "edge": -0.0195,
+            "vs_hand_ops": 0.886,
             "source": "kbo_player_detail"
           },
           {
             "order": 3,
-            "name": "고명준",
-            "hand": "R",
-            "pa": 93,
-            "woba": 0.365,
-            "ops": 0.82,
-            "platoon": 0.995,
-            "matchup_woba": 0.338,
-            "k_pct": 0.205,
-            "hr_pct": 0.026,
-            "edge": -0.0252,
-            "vs_hand_ops": 0.816,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 4,
-            "name": "에레디아",
-            "hand": "R",
-            "pa": 313,
-            "woba": 0.351,
-            "ops": 0.779,
-            "platoon": 0.963,
-            "matchup_woba": 0.327,
-            "k_pct": 0.176,
-            "hr_pct": 0.031,
-            "edge": -0.024,
-            "vs_hand_ops": 0.75,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
-            "name": "최지훈",
-            "hand": "R",
-            "pa": 291,
-            "woba": 0.328,
-            "ops": 0.708,
-            "platoon": 0.958,
-            "matchup_woba": 0.291,
-            "k_pct": 0.153,
-            "hr_pct": 0.023,
-            "edge": -0.0212,
-            "vs_hand_ops": 0.678,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
             "name": "최정",
             "hand": "R",
             "pa": 247,
@@ -4986,7 +4932,82 @@
             "source": "kbo_player_detail"
           },
           {
+            "order": 4,
+            "name": "김재환",
+            "hand": "L",
+            "pa": 255,
+            "woba": 0.335,
+            "ops": 0.73,
+            "platoon": 0.991,
+            "matchup_woba": 0.338,
+            "k_pct": 0.289,
+            "hr_pct": 0.03,
+            "edge": -0.0193,
+            "vs_hand_ops": 0.723,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "에레디아",
+            "hand": "R",
+            "pa": 313,
+            "woba": 0.351,
+            "ops": 0.779,
+            "platoon": 0.963,
+            "matchup_woba": 0.327,
+            "k_pct": 0.176,
+            "hr_pct": 0.031,
+            "edge": -0.024,
+            "vs_hand_ops": 0.75,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "전의산",
+            "hand": "L",
+            "pa": 66,
+            "woba": 0.352,
+            "ops": 0.781,
+            "platoon": 1.07,
+            "matchup_woba": 0.351,
+            "k_pct": 0.242,
+            "hr_pct": 0.023,
+            "edge": -0.0238,
+            "vs_hand_ops": 0.836,
+            "source": "kbo_player_detail"
+          },
+          {
             "order": 7,
+            "name": "고명준",
+            "hand": "R",
+            "pa": 93,
+            "woba": 0.365,
+            "ops": 0.82,
+            "platoon": 0.995,
+            "matchup_woba": 0.338,
+            "k_pct": 0.205,
+            "hr_pct": 0.026,
+            "edge": -0.0252,
+            "vs_hand_ops": 0.816,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "최지훈",
+            "hand": "L",
+            "pa": 291,
+            "woba": 0.328,
+            "ops": 0.708,
+            "platoon": 0.998,
+            "matchup_woba": 0.301,
+            "k_pct": 0.151,
+            "hr_pct": 0.024,
+            "edge": -0.0221,
+            "vs_hand_ops": 0.706,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
             "name": "조형우",
             "hand": "R",
             "pa": 176,
@@ -4998,36 +5019,6 @@
             "hr_pct": 0.017,
             "edge": -0.0185,
             "vs_hand_ops": 0.639,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 8,
-            "name": "정준재",
-            "hand": "R",
-            "pa": 277,
-            "woba": 0.335,
-            "ops": 0.731,
-            "platoon": 1.0,
-            "matchup_woba": 0.313,
-            "k_pct": 0.145,
-            "hr_pct": 0.01,
-            "edge": -0.0179,
-            "vs_hand_ops": 0.731,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 9,
-            "name": "김성욱",
-            "hand": "R",
-            "pa": 98,
-            "woba": 0.347,
-            "ops": 0.767,
-            "platoon": 0.987,
-            "matchup_woba": 0.339,
-            "k_pct": 0.206,
-            "hr_pct": 0.019,
-            "edge": -0.0195,
-            "vs_hand_ops": 0.756,
             "source": "kbo_player_detail"
           }
         ]
@@ -5073,42 +5064,42 @@
       {
         "away": 4,
         "home": 4,
-        "prob": 0.0143
+        "prob": 0.0134
       },
       {
-        "away": 3,
-        "home": 3,
-        "prob": 0.0138
-      },
-      {
-        "away": 5,
+        "away": 4,
         "home": 3,
         "prob": 0.0132
       },
       {
         "away": 3,
-        "home": 4,
-        "prob": 0.0126
-      },
-      {
-        "away": 4,
-        "home": 2,
-        "prob": 0.0123
-      },
-      {
-        "away": 4,
         "home": 3,
-        "prob": 0.0123
+        "prob": 0.0127
       },
       {
-        "away": 4,
-        "home": 5,
-        "prob": 0.0121
+        "away": 5,
+        "home": 3,
+        "prob": 0.0125
       },
       {
         "away": 6,
+        "home": 3,
+        "prob": 0.0121
+      },
+      {
+        "away": 5,
         "home": 2,
         "prob": 0.012
+      },
+      {
+        "away": 3,
+        "home": 4,
+        "prob": 0.0118
+      },
+      {
+        "away": 5,
+        "home": 4,
+        "prob": 0.0117
       }
     ],
     "data_sources": {
@@ -5128,7 +5119,7 @@
   },
   {
     "game_pk": "20260624SSLG02026",
-    "status": "BEFORE",
+    "status": "READY",
     "time_kst": "2026-06-24T18:30:00",
     "game_date_kst": "2026-06-24",
     "venue": "잠실",
@@ -5189,119 +5180,119 @@
     },
     "umpire": "",
     "market_total": null,
-    "environment_factor": 0.9494,
-    "home_runs": 3.977857927143746,
-    "away_runs": 3.1356271679048255,
-    "total": 7.1134850950485715,
-    "home_win_prob": 0.52865,
-    "away_win_prob": 0.36155,
-    "push_prob": 0.1098,
+    "environment_factor": 0.9295,
+    "home_runs": 4.234870972536026,
+    "away_runs": 3.370549080811932,
+    "total": 7.605420053347958,
+    "home_win_prob": 0.52595,
+    "away_win_prob": 0.3663,
+    "push_prob": 0.10775,
     "runline": {
-      "home_minus_1_5": 0.4198,
-      "home_plus_1_5": 0.73495,
-      "away_minus_1_5": 0.26505,
-      "away_plus_1_5": 0.5802
+      "home_minus_1_5": 0.4237,
+      "home_plus_1_5": 0.72915,
+      "away_minus_1_5": 0.27085,
+      "away_plus_1_5": 0.5763
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.825,
-        "runs_vs_bp": 4.83,
+        "runs_vs_sp": 5.305,
+        "runs_vs_bp": 5.273,
         "sp_share": 0.567,
         "expected_ip": 5.1,
-        "mu_full": 4.837,
-        "mu_f5": 2.513,
+        "mu_full": 5.242,
+        "mu_f5": 2.731,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3495,
+          "batter_woba": 0.362,
           "pitcher_woba_against": 0.326,
-          "matchup_woba": 0.3355,
+          "matchup_woba": 0.348,
           "sp_path": {
-            "eff_woba": 0.3359,
-            "rpa": 0.1217,
-            "obp_eff": 0.3191,
-            "pa_per_inning": 4.406
+            "eff_woba": 0.3477,
+            "rpa": 0.1316,
+            "obp_eff": 0.3303,
+            "pa_per_inning": 4.48
           },
           "bp_path": {
-            "eff_woba": 0.336,
-            "rpa": 0.1218,
-            "obp_eff": 0.3192,
-            "pa_per_inning": 4.406
+            "eff_woba": 0.347,
+            "rpa": 0.1309,
+            "obp_eff": 0.3296,
+            "pa_per_inning": 4.475
           },
           "hand_factor": 1.0,
           "park": 0.94,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 0.923
+          "bp_factor": 0.924
         }
       },
       "away": {
-        "runs_vs_sp": 4.706,
-        "runs_vs_bp": 4.717,
+        "runs_vs_sp": 5.034,
+        "runs_vs_bp": 5.021,
         "sp_share": 0.6,
         "expected_ip": 5.4,
-        "mu_full": 4.725,
-        "mu_f5": 2.584,
+        "mu_full": 5.005,
+        "mu_f5": 2.742,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3463,
+          "batter_woba": 0.355,
           "pitcher_woba_against": 0.3259,
-          "matchup_woba": 0.3322,
+          "matchup_woba": 0.3409,
           "sp_path": {
-            "eff_woba": 0.3328,
-            "rpa": 0.1192,
-            "obp_eff": 0.3162,
-            "pa_per_inning": 4.387
+            "eff_woba": 0.3411,
+            "rpa": 0.126,
+            "obp_eff": 0.324,
+            "pa_per_inning": 4.438
           },
           "bp_path": {
-            "eff_woba": 0.3331,
-            "rpa": 0.1194,
-            "obp_eff": 0.3165,
-            "pa_per_inning": 4.389
+            "eff_woba": 0.3408,
+            "rpa": 0.1258,
+            "obp_eff": 0.3237,
+            "pa_per_inning": 4.436
           },
           "hand_factor": 1.0,
           "park": 0.94,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.926
+          "bp_factor": 0.925
         }
       }
     },
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 27.3,
-      "temp_f": 81.1,
-      "wind_mph": 2.6,
+      "temp_c": 27.5,
+      "temp_f": 81.5,
+      "wind_mph": 4.1,
       "wind_dir_label": "IN(억제)",
-      "wind_dot_of": -5.2,
+      "wind_dot_of": -8.8,
       "precip_prob": 0,
-      "humidity_pct": 53,
-      "air_density": 1.159,
-      "density_delta_pct": -2.52,
-      "carry_dist_pct": 0.45,
-      "run_factor": 1.01,
-      "factor": 1.01
+      "humidity_pct": 54,
+      "air_density": 1.1576,
+      "density_delta_pct": -2.63,
+      "carry_dist_pct": -0.51,
+      "run_factor": 0.9889,
+      "factor": 0.9889
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.52,
-      "away_xr": 2.42,
-      "total_xr": 4.94,
-      "home_win_prob": 0.4352,
+      "home_xr": 2.63,
+      "away_xr": 2.58,
+      "total_xr": 5.21,
+      "home_win_prob": 0.4314,
       "over_probs": {
-        "4.5": 0.4764,
-        "5.0": 0.3673,
-        "5.5": 0.3673
+        "4.5": 0.5112,
+        "5.0": 0.3942,
+        "5.5": 0.3942
       }
     },
     "learn_correction": {
@@ -5464,23 +5455,23 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.1572,
-        "bb_pct": 0.1112,
-        "hr_pct": 0.0299,
-        "iso": 0.1668,
-        "babip": 0.3323,
-        "pa": 935,
-        "n_batters": 9,
+        "k_pct": 0.1446,
+        "bb_pct": 0.1072,
+        "hr_pct": 0.0337,
+        "iso": 0.1788,
+        "babip": 0.3304,
+        "pa": 830,
+        "n_batters": 8,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.1398,
-        "bb_pct": 0.1176,
-        "hr_pct": 0.0229,
-        "iso": 0.1428,
-        "babip": 0.3284,
-        "pa": 1531,
-        "n_batters": 9,
+        "k_pct": 0.1536,
+        "bb_pct": 0.1144,
+        "hr_pct": 0.0284,
+        "iso": 0.1673,
+        "babip": 0.3398,
+        "pa": 1198,
+        "n_batters": 8,
         "_present": true
       }
     },
@@ -5488,14 +5479,14 @@
       "home_season": {
         "rpg": 5.385369127516778,
         "ops": 0.757,
-        "woba": 0.3495,
+        "woba": 0.362,
         "iso": 0.128,
         "avg": 0.27
       },
       "away_season": {
         "rpg": 5.477852348993289,
         "ops": 0.77,
-        "woba": 0.3463,
+        "woba": 0.355,
         "iso": 0.136,
         "avg": 0.27
       },
@@ -5994,26 +5985,26 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.9355,
-        "raw_factor": 0.9213,
-        "mu": 4.457,
+        "factor": 0.9641,
+        "raw_factor": 0.9562,
+        "mu": 4.492,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.8857,
-        "raw_factor": 0.8606,
-        "mu": 4.197,
+        "factor": 0.9465,
+        "raw_factor": 0.9347,
+        "mu": 4.364,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "오러클린",
-        "lineup_woba": 0.3509,
-        "matchup_score": 1.0088,
+        "lineup_woba": 0.3665,
+        "matchup_score": 1.0004,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 1.0306,
+        "platoon": 1.0297,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -6022,25 +6013,40 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "홍창기",
+            "name": "송찬의",
             "hand": "R",
-            "pa": 282,
-            "woba": 0.322,
-            "ops": 0.689,
-            "platoon": 1.06,
-            "matchup_woba": 0.336,
-            "k_pct": 0.287,
-            "hr_pct": 0.008,
-            "edge": -0.0252,
-            "vs_hand_ops": 0.73,
+            "pa": 171,
+            "woba": 0.392,
+            "ops": 0.901,
+            "platoon": 1.153,
+            "matchup_woba": 0.405,
+            "k_pct": 0.271,
+            "hr_pct": 0.034,
+            "edge": -0.0459,
+            "vs_hand_ops": 1.04,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
+            "name": "박해민",
+            "hand": "L",
+            "pa": 281,
+            "woba": 0.333,
+            "ops": 0.722,
+            "platoon": 1.006,
+            "matchup_woba": 0.305,
+            "k_pct": 0.191,
+            "hr_pct": 0.013,
+            "edge": -0.0351,
+            "vs_hand_ops": 0.726,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
             "name": "오스틴",
             "hand": "R",
             "pa": 323,
@@ -6055,22 +6061,37 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 3,
-            "name": "박해민",
-            "hand": "R",
-            "pa": 281,
-            "woba": 0.333,
-            "ops": 0.722,
-            "platoon": 1.065,
-            "matchup_woba": 0.32,
-            "k_pct": 0.187,
-            "hr_pct": 0.014,
-            "edge": -0.0374,
-            "vs_hand_ops": 0.769,
+            "order": 4,
+            "name": "문보경",
+            "hand": "L",
+            "pa": 200,
+            "woba": 0.355,
+            "ops": 0.79,
+            "platoon": 0.925,
+            "matchup_woba": 0.33,
+            "k_pct": 0.242,
+            "hr_pct": 0.021,
+            "edge": -0.027,
+            "vs_hand_ops": 0.731,
             "source": "kbo_player_detail"
           },
           {
-            "order": 4,
+            "order": 5,
+            "name": "문정빈",
+            "hand": "R",
+            "pa": 62,
+            "woba": 0.369,
+            "ops": 0.833,
+            "platoon": 1.089,
+            "matchup_woba": 0.351,
+            "k_pct": 0.298,
+            "hr_pct": 0.035,
+            "edge": -0.0453,
+            "vs_hand_ops": 0.907,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
             "name": "박동원",
             "hand": "R",
             "pa": 226,
@@ -6085,89 +6106,59 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 5,
-            "name": "문성주",
-            "hand": "R",
-            "pa": 152,
-            "woba": 0.343,
-            "ops": 0.754,
-            "platoon": 1.053,
-            "matchup_woba": 0.321,
-            "k_pct": 0.175,
-            "hr_pct": 0.011,
-            "edge": -0.0414,
-            "vs_hand_ops": 0.794,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
-            "name": "신민재",
-            "hand": "R",
-            "pa": 247,
-            "woba": 0.3,
-            "ops": 0.624,
-            "platoon": 1.013,
-            "matchup_woba": 0.291,
-            "k_pct": 0.185,
-            "hr_pct": 0.008,
-            "edge": -0.028,
-            "vs_hand_ops": 0.632,
-            "source": "kbo_player_detail"
-          },
-          {
             "order": 7,
             "name": "오지환",
-            "hand": "R",
+            "hand": "L",
             "pa": 244,
             "woba": 0.334,
             "ops": 0.727,
-            "platoon": 0.997,
-            "matchup_woba": 0.303,
-            "k_pct": 0.238,
-            "hr_pct": 0.02,
-            "edge": -0.036,
-            "vs_hand_ops": 0.725,
+            "platoon": 0.936,
+            "matchup_woba": 0.287,
+            "k_pct": 0.243,
+            "hr_pct": 0.019,
+            "edge": -0.0334,
+            "vs_hand_ops": 0.68,
             "source": "kbo_player_detail"
           },
           {
             "order": 8,
-            "name": "천성호",
+            "name": "구본혁",
             "hand": "R",
-            "pa": 193,
-            "woba": 0.335,
-            "ops": 0.73,
-            "platoon": 0.971,
-            "matchup_woba": 0.287,
-            "k_pct": 0.209,
-            "hr_pct": 0.011,
-            "edge": -0.0385,
-            "vs_hand_ops": 0.709,
+            "pa": 197,
+            "woba": 0.317,
+            "ops": 0.676,
+            "platoon": 1.047,
+            "matchup_woba": 0.298,
+            "k_pct": 0.186,
+            "hr_pct": 0.01,
+            "edge": -0.0373,
+            "vs_hand_ops": 0.708,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "문보경",
-            "hand": "R",
-            "pa": 200,
-            "woba": 0.355,
-            "ops": 0.79,
-            "platoon": 0.989,
-            "matchup_woba": 0.347,
-            "k_pct": 0.237,
-            "hr_pct": 0.022,
-            "edge": -0.0296,
-            "vs_hand_ops": 0.781,
+            "name": "문성주",
+            "hand": "L",
+            "pa": 152,
+            "woba": 0.343,
+            "ops": 0.754,
+            "platoon": 0.987,
+            "matchup_woba": 0.304,
+            "k_pct": 0.179,
+            "hr_pct": 0.01,
+            "edge": -0.0387,
+            "vs_hand_ops": 0.744,
             "source": "kbo_player_detail"
           }
         ]
       },
       "away": {
         "vs_pitcher": "톨허스트",
-        "lineup_woba": 0.3458,
-        "matchup_score": 0.9872,
+        "lineup_woba": 0.3567,
+        "matchup_score": 0.9861,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9778,
+        "platoon": 1.0106,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
           "games_last3": 2,
@@ -6176,140 +6167,140 @@
           "factor": 1.022,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver",
         "batters": [
           {
             "order": 1,
-            "name": "디아즈",
-            "hand": "R",
-            "pa": 319,
-            "woba": 0.364,
-            "ops": 0.817,
-            "platoon": 0.992,
-            "matchup_woba": 0.332,
-            "k_pct": 0.168,
-            "hr_pct": 0.027,
-            "edge": -0.0432,
-            "vs_hand_ops": 0.81,
+            "name": "김성윤",
+            "hand": "L",
+            "pa": 213,
+            "woba": 0.345,
+            "ops": 0.761,
+            "platoon": 1.006,
+            "matchup_woba": 0.314,
+            "k_pct": 0.144,
+            "hr_pct": 0.012,
+            "edge": -0.034,
+            "vs_hand_ops": 0.766,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
             "name": "구자욱",
-            "hand": "R",
+            "hand": "L",
             "pa": 228,
             "woba": 0.375,
             "ops": 0.851,
-            "platoon": 0.995,
-            "matchup_woba": 0.338,
-            "k_pct": 0.167,
-            "hr_pct": 0.021,
-            "edge": -0.0433,
-            "vs_hand_ops": 0.847,
+            "platoon": 1.041,
+            "matchup_woba": 0.352,
+            "k_pct": 0.165,
+            "hr_pct": 0.022,
+            "edge": -0.0445,
+            "vs_hand_ops": 0.886,
             "source": "kbo_player_detail"
           },
           {
             "order": 3,
-            "name": "최형우",
+            "name": "박승규",
             "hand": "R",
-            "pa": 289,
-            "woba": 0.375,
-            "ops": 0.852,
-            "platoon": 0.987,
-            "matchup_woba": 0.344,
-            "k_pct": 0.167,
-            "hr_pct": 0.02,
-            "edge": -0.0471,
-            "vs_hand_ops": 0.841,
+            "pa": 219,
+            "woba": 0.379,
+            "ops": 0.862,
+            "platoon": 0.98,
+            "matchup_woba": 0.335,
+            "k_pct": 0.173,
+            "hr_pct": 0.026,
+            "edge": -0.0485,
+            "vs_hand_ops": 0.845,
             "source": "kbo_player_detail"
           },
           {
             "order": 4,
-            "name": "김지찬",
-            "hand": "R",
-            "pa": 265,
-            "woba": 0.338,
-            "ops": 0.738,
-            "platoon": 0.969,
-            "matchup_woba": 0.309,
-            "k_pct": 0.095,
-            "hr_pct": 0.007,
-            "edge": -0.0364,
-            "vs_hand_ops": 0.715,
+            "name": "디아즈",
+            "hand": "L",
+            "pa": 319,
+            "woba": 0.364,
+            "ops": 0.817,
+            "platoon": 1.032,
+            "matchup_woba": 0.344,
+            "k_pct": 0.166,
+            "hr_pct": 0.028,
+            "edge": -0.0443,
+            "vs_hand_ops": 0.843,
             "source": "kbo_player_detail"
           },
           {
             "order": 5,
-            "name": "류지혁",
-            "hand": "R",
-            "pa": 265,
-            "woba": 0.355,
-            "ops": 0.79,
-            "platoon": 0.997,
-            "matchup_woba": 0.323,
-            "k_pct": 0.169,
-            "hr_pct": 0.014,
-            "edge": -0.0377,
-            "vs_hand_ops": 0.788,
+            "name": "최형우",
+            "hand": "L",
+            "pa": 289,
+            "woba": 0.375,
+            "ops": 0.852,
+            "platoon": 1.028,
+            "matchup_woba": 0.356,
+            "k_pct": 0.165,
+            "hr_pct": 0.021,
+            "edge": -0.0481,
+            "vs_hand_ops": 0.876,
             "source": "kbo_player_detail"
           },
           {
             "order": 6,
             "name": "김영웅",
-            "hand": "R",
+            "hand": "L",
             "pa": 47,
             "woba": 0.311,
             "ops": 0.658,
-            "platoon": 0.936,
-            "matchup_woba": 0.266,
-            "k_pct": 0.275,
-            "hr_pct": 0.014,
-            "edge": -0.0286,
-            "vs_hand_ops": 0.615,
+            "platoon": 1.002,
+            "matchup_woba": 0.283,
+            "k_pct": 0.269,
+            "hr_pct": 0.015,
+            "edge": -0.0297,
+            "vs_hand_ops": 0.659,
             "source": "kbo_player_detail"
           },
           {
             "order": 7,
-            "name": "이재현",
-            "hand": "R",
-            "pa": 135,
-            "woba": 0.357,
-            "ops": 0.795,
-            "platoon": 0.995,
-            "matchup_woba": 0.32,
-            "k_pct": 0.156,
-            "hr_pct": 0.031,
-            "edge": -0.0486,
-            "vs_hand_ops": 0.791,
+            "name": "류지혁",
+            "hand": "L",
+            "pa": 265,
+            "woba": 0.355,
+            "ops": 0.79,
+            "platoon": 1.04,
+            "matchup_woba": 0.335,
+            "k_pct": 0.166,
+            "hr_pct": 0.015,
+            "edge": -0.0385,
+            "vs_hand_ops": 0.821,
             "source": "kbo_player_detail"
           },
           {
             "order": 8,
-            "name": "김성윤",
+            "name": "김도환",
             "hand": "R",
-            "pa": 213,
-            "woba": 0.345,
-            "ops": 0.761,
-            "platoon": 0.96,
-            "matchup_woba": 0.301,
-            "k_pct": 0.146,
-            "hr_pct": 0.012,
-            "edge": -0.0332,
-            "vs_hand_ops": 0.731,
+            "pa": 68,
+            "woba": 0.35,
+            "ops": 0.777,
+            "platoon": 0.952,
+            "matchup_woba": 0.302,
+            "k_pct": 0.221,
+            "hr_pct": 0.016,
+            "edge": -0.0352,
+            "vs_hand_ops": 0.739,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "강민호",
-            "hand": "R",
-            "pa": 161,
-            "woba": 0.332,
-            "ops": 0.721,
-            "platoon": 0.962,
-            "matchup_woba": 0.294,
-            "k_pct": 0.239,
-            "hr_pct": 0.018,
-            "edge": -0.0378,
+            "name": "양우현",
+            "hand": "L",
+            "pa": 82,
+            "woba": 0.321,
+            "ops": 0.687,
+            "platoon": 1.008,
+            "matchup_woba": 0.296,
+            "k_pct": 0.219,
+            "hr_pct": 0.016,
+            "edge": -0.0382,
             "vs_hand_ops": 0.693,
             "source": "kbo_player_detail"
           }
@@ -6356,22 +6347,7 @@
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0278
-      },
-      {
-        "away": 1,
-        "home": 1,
-        "prob": 0.0268
-      },
-      {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0256
-      },
-      {
-        "away": 0,
-        "home": 2,
-        "prob": 0.0243
+        "prob": 0.024
       },
       {
         "away": 2,
@@ -6379,19 +6355,34 @@
         "prob": 0.0239
       },
       {
-        "away": 2,
+        "away": 1,
         "home": 1,
         "prob": 0.023
       },
       {
-        "away": 0,
+        "away": 2,
         "home": 1,
+        "prob": 0.0228
+      },
+      {
+        "away": 2,
+        "home": 3,
         "prob": 0.0222
       },
       {
         "away": 1,
+        "home": 3,
+        "prob": 0.0221
+      },
+      {
+        "away": 0,
+        "home": 2,
+        "prob": 0.0217
+      },
+      {
+        "away": 1,
         "home": 4,
-        "prob": 0.022
+        "prob": 0.0203
       }
     ],
     "data_sources": {
