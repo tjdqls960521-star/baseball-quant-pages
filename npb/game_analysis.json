@@ -9,8 +9,8 @@
     "away_team": "DeNA",
     "home_abbr": "CHU",
     "away_abbr": "DEN",
-    "home_pitcher_name": "櫻井",
-    "away_pitcher_name": "東",
+    "home_pitcher_name": "櫻井 頼之介",
+    "away_pitcher_name": "東 克樹",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -48,6 +48,8 @@
       "_source": "npb_official"
     },
     "umpire": "",
+    "home_pitcher_hand": "R",
+    "away_pitcher_hand": "L",
     "market_total": null,
     "environment_factor": 0.92,
     "home_runs": 3.508260195047424,
@@ -861,136 +863,142 @@
     "away_team": "オリックス",
     "home_abbr": "SOF",
     "away_abbr": "ORX",
-    "home_pitcher_name": "中村稔",
-    "away_pitcher_name": "田嶋大",
+    "home_pitcher_name": "中村 稔弥",
+    "away_pitcher_name": "田嶋 大樹",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
-      "era": 3.3,
-      "whip": 1.2,
-      "k9": 7.5,
-      "bb9": 2.8,
-      "hr9": 0.7,
-      "ip": 0,
-      "hand": "R",
-      "expected_ip": 6.0,
-      "games_started": 0,
+      "name": "中村 稔弥",
+      "team_abbr": "SOF",
+      "era": 4.5,
+      "whip": 0.0,
+      "k9": 4.5,
+      "bb9": 0.0,
+      "hr9": 0.0,
+      "ip": 2.0,
+      "games_started": 2,
+      "expected_ip": 2.5,
+      "hand": "L",
       "is_foreign": false,
       "xwoba": 0.31,
-      "fip": 3.3,
-      "_source": "fallback"
+      "fip": 4.5,
+      "_source": "npb_official_lowsample"
     },
     "away_pitcher": {
-      "era": 3.3,
-      "whip": 1.2,
-      "k9": 7.5,
-      "bb9": 2.8,
-      "hr9": 0.7,
-      "ip": 0,
-      "hand": "R",
-      "expected_ip": 6.0,
-      "games_started": 0,
+      "name": "田嶋 大樹",
+      "team_abbr": "ORX",
+      "era": 4.64,
+      "whip": 1.2121212121212122,
+      "k9": 5.181818181818182,
+      "bb9": 1.0909090909090908,
+      "hr9": 1.0909090909090908,
+      "ip": 33.0,
+      "games_started": 7,
+      "expected_ip": 4.71,
+      "hand": "L",
       "is_foreign": false,
       "xwoba": 0.31,
-      "fip": 3.3,
-      "_source": "fallback"
+      "fip": 4.64,
+      "_source": "npb_official"
     },
     "umpire": "",
+    "home_pitcher_hand": "L",
+    "away_pitcher_hand": "L",
     "market_total": null,
     "environment_factor": 0.98,
-    "home_runs": 4.485700661879807,
-    "away_runs": 3.95975903808,
-    "total": 8.445459699959807,
-    "home_win_prob": 0.49385,
-    "away_win_prob": 0.40515,
-    "push_prob": 0.101,
+    "home_runs": 4.557111411995136,
+    "away_runs": 3.690925943808,
+    "total": 8.248037355803136,
+    "home_win_prob": 0.5276,
+    "away_win_prob": 0.37075,
+    "push_prob": 0.10165,
     "runline": {
-      "home_minus_1_5": 0.39505,
-      "home_plus_1_5": 0.69005,
-      "away_minus_1_5": 0.30995,
-      "away_plus_1_5": 0.60495
+      "home_minus_1_5": 0.4229,
+      "home_plus_1_5": 0.7207,
+      "away_minus_1_5": 0.2793,
+      "away_plus_1_5": 0.5771
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.622,
-        "runs_vs_bp": 4.575,
-        "sp_share": 0.667,
-        "expected_ip": 6.0,
-        "mu_full": 4.536,
-        "mu_f5": 2.527,
+        "runs_vs_sp": 4.952,
+        "runs_vs_bp": 4.891,
+        "sp_share": 0.523,
+        "expected_ip": 4.71,
+        "mu_full": 4.806,
+        "mu_f5": 2.33,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "npb_zero_base_woba",
-          "batter_woba": 0.3227,
-          "pitcher_woba_against": 0.31,
-          "matchup_woba": 0.3227,
+          "batter_woba": 0.3182,
+          "pitcher_woba_against": 0.3234,
+          "matchup_woba": 0.3316,
           "sp_path": {
-            "eff_woba": 0.323,
-            "rpa": 0.1186,
-            "obp_eff": 0.3068,
-            "pa_per_inning": 4.328
+            "eff_woba": 0.3315,
+            "rpa": 0.1256,
+            "obp_eff": 0.3149,
+            "pa_per_inning": 4.379
           },
           "bp_path": {
-            "eff_woba": 0.3218,
-            "rpa": 0.1176,
-            "obp_eff": 0.3057,
-            "pa_per_inning": 4.321
+            "eff_woba": 0.33,
+            "rpa": 0.1244,
+            "obp_eff": 0.3135,
+            "pa_per_inning": 4.37
           },
           "hand_factor": 1.0,
           "park": 0.98,
           "hr_adj": 1.0,
           "home_mult": 1.012,
-          "bp_factor": 0.935
+          "bp_factor": 0.934
         }
       },
       "away": {
-        "runs_vs_sp": 4.057,
-        "runs_vs_bp": 4.059,
-        "sp_share": 0.667,
-        "expected_ip": 6.0,
-        "mu_full": 4.064,
-        "mu_f5": 2.258,
+        "runs_vs_sp": 4.014,
+        "runs_vs_bp": 4.036,
+        "sp_share": 0.278,
+        "expected_ip": 2.5,
+        "mu_full": 4.04,
+        "mu_f5": 1.949,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "npb_zero_base_woba",
-          "batter_woba": 0.3075,
-          "pitcher_woba_against": 0.31,
-          "matchup_woba": 0.3075,
+          "batter_woba": 0.3065,
+          "pitcher_woba_against": 0.3102,
+          "matchup_woba": 0.3067,
           "sp_path": {
-            "eff_woba": 0.3079,
-            "rpa": 0.1063,
-            "obp_eff": 0.2925,
-            "pa_per_inning": 4.241
+            "eff_woba": 0.3068,
+            "rpa": 0.1054,
+            "obp_eff": 0.2914,
+            "pa_per_inning": 4.234
           },
           "bp_path": {
-            "eff_woba": 0.308,
-            "rpa": 0.1064,
-            "obp_eff": 0.2926,
-            "pa_per_inning": 4.241
+            "eff_woba": 0.3074,
+            "rpa": 0.1058,
+            "obp_eff": 0.292,
+            "pa_per_inning": 4.237
           },
           "hand_factor": 1.0,
           "park": 0.98,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.821
+          "bp_factor": 0.82
         }
       }
     },
     "f5": {
-      "home_xr": 2.57,
-      "away_xr": 2.29,
-      "total_xr": 4.86,
-      "home_win_prob": 0.4585,
+      "home_xr": 2.43,
+      "away_xr": 2.05,
+      "total_xr": 4.47,
+      "home_win_prob": 0.4661,
       "over_probs": {
-        "3.5": 0.6021,
-        "4.5": 0.4733,
-        "5.0": 0.3555
+        "3.5": 0.5442,
+        "4.5": 0.4134,
+        "5.0": 0.308
       }
     },
     "learn_correction": {
@@ -1001,12 +1009,12 @@
     },
     "lineup_detail": {
       "home": {
-        "vs_pitcher": "",
-        "lineup_woba": 0.3239,
-        "matchup_score": 1.0,
+        "vs_pitcher": "田嶋 大樹",
+        "lineup_woba": 0.3186,
+        "matchup_score": 0.9943,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0223,
+        "platoon": 0.9877,
         "lineup_src": "projected",
         "batters": [
           {
@@ -1016,11 +1024,11 @@
             "pa": 292,
             "woba": 0.357,
             "ops": 0.843,
-            "platoon": 1.05,
-            "matchup_woba": 0.386,
-            "k_pct": 0.202,
-            "hr_pct": 0.053,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.381,
+            "k_pct": 0.165,
+            "hr_pct": 0.063,
+            "edge": 0.0241,
             "source": "npb_official"
           },
           {
@@ -1030,11 +1038,11 @@
             "pa": 275,
             "woba": 0.371,
             "ops": 0.886,
-            "platoon": 1.05,
-            "matchup_woba": 0.413,
-            "k_pct": 0.163,
-            "hr_pct": 0.043,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.385,
+            "k_pct": 0.132,
+            "hr_pct": 0.052,
+            "edge": 0.002,
             "source": "npb_official"
           },
           {
@@ -1044,11 +1052,11 @@
             "pa": 261,
             "woba": 0.306,
             "ops": 0.687,
-            "platoon": 1.05,
-            "matchup_woba": 0.327,
-            "k_pct": 0.148,
-            "hr_pct": 0.011,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.303,
+            "k_pct": 0.12,
+            "hr_pct": 0.013,
+            "edge": 0.0002,
             "source": "npb_official"
           },
           {
@@ -1058,11 +1066,11 @@
             "pa": 243,
             "woba": 0.308,
             "ops": 0.695,
-            "platoon": 1.05,
-            "matchup_woba": 0.329,
-            "k_pct": 0.176,
-            "hr_pct": 0.011,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.312,
+            "k_pct": 0.143,
+            "hr_pct": 0.013,
+            "edge": 0.0085,
             "source": "npb_official"
           },
           {
@@ -1072,11 +1080,11 @@
             "pa": 222,
             "woba": 0.307,
             "ops": 0.691,
-            "platoon": 1.05,
-            "matchup_woba": 0.335,
-            "k_pct": 0.203,
-            "hr_pct": 0.031,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.324,
+            "k_pct": 0.167,
+            "hr_pct": 0.037,
+            "edge": 0.0141,
             "source": "npb_official"
           },
           {
@@ -1086,11 +1094,11 @@
             "pa": 168,
             "woba": 0.304,
             "ops": 0.682,
-            "platoon": 0.96,
-            "matchup_woba": 0.317,
-            "k_pct": 0.246,
-            "hr_pct": 0.035,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.347,
+            "k_pct": 0.191,
+            "hr_pct": 0.05,
+            "edge": 0.005,
             "source": "npb_official"
           },
           {
@@ -1100,11 +1108,11 @@
             "pa": 151,
             "woba": 0.269,
             "ops": 0.576,
-            "platoon": 0.96,
-            "matchup_woba": 0.254,
-            "k_pct": 0.247,
-            "hr_pct": 0.013,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.285,
+            "k_pct": 0.191,
+            "hr_pct": 0.019,
+            "edge": 0.0094,
             "source": "npb_official"
           },
           {
@@ -1114,11 +1122,11 @@
             "pa": 142,
             "woba": 0.297,
             "ops": 0.661,
-            "platoon": 1.05,
-            "matchup_woba": 0.319,
-            "k_pct": 0.201,
-            "hr_pct": 0.011,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.293,
+            "k_pct": 0.165,
+            "hr_pct": 0.014,
+            "edge": -0.0027,
             "source": "npb_official"
           },
           {
@@ -1128,22 +1136,22 @@
             "pa": 140,
             "woba": 0.355,
             "ops": 0.837,
-            "platoon": 0.96,
-            "matchup_woba": 0.359,
-            "k_pct": 0.205,
-            "hr_pct": 0.032,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.394,
+            "k_pct": 0.157,
+            "hr_pct": 0.046,
+            "edge": 0.0063,
             "source": "npb_official"
           }
         ]
       },
       "away": {
-        "vs_pitcher": "",
-        "lineup_woba": 0.3091,
-        "matchup_score": 1.0,
+        "vs_pitcher": "中村 稔弥",
+        "lineup_woba": 0.3079,
+        "matchup_score": 0.999,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0091,
+        "platoon": 1.0009,
         "lineup_src": "projected",
         "batters": [
           {
@@ -1153,11 +1161,11 @@
             "pa": 290,
             "woba": 0.309,
             "ops": 0.698,
-            "platoon": 1.05,
-            "matchup_woba": 0.331,
-            "k_pct": 0.13,
-            "hr_pct": 0.012,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.292,
+            "k_pct": 0.132,
+            "hr_pct": 0.011,
+            "edge": -0.0135,
             "source": "npb_official"
           },
           {
@@ -1167,11 +1175,11 @@
             "pa": 254,
             "woba": 0.312,
             "ops": 0.707,
-            "platoon": 1.05,
-            "matchup_woba": 0.346,
-            "k_pct": 0.161,
-            "hr_pct": 0.021,
-            "edge": -0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.307,
+            "k_pct": 0.163,
+            "hr_pct": 0.018,
+            "edge": -0.0143,
             "source": "npb_official"
           },
           {
@@ -1181,11 +1189,11 @@
             "pa": 244,
             "woba": 0.308,
             "ops": 0.693,
-            "platoon": 0.96,
-            "matchup_woba": 0.306,
-            "k_pct": 0.135,
-            "hr_pct": 0.017,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.316,
+            "k_pct": 0.128,
+            "hr_pct": 0.018,
+            "edge": -0.0147,
             "source": "npb_official"
           },
           {
@@ -1195,11 +1203,11 @@
             "pa": 229,
             "woba": 0.313,
             "ops": 0.709,
-            "platoon": 0.96,
-            "matchup_woba": 0.317,
-            "k_pct": 0.138,
-            "hr_pct": 0.027,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.328,
+            "k_pct": 0.132,
+            "hr_pct": 0.029,
+            "edge": -0.0152,
             "source": "npb_official"
           },
           {
@@ -1209,11 +1217,11 @@
             "pa": 219,
             "woba": 0.323,
             "ops": 0.739,
-            "platoon": 0.96,
-            "matchup_woba": 0.325,
-            "k_pct": 0.205,
-            "hr_pct": 0.018,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.335,
+            "k_pct": 0.195,
+            "hr_pct": 0.019,
+            "edge": -0.0155,
             "source": "npb_official"
           },
           {
@@ -1223,11 +1231,11 @@
             "pa": 171,
             "woba": 0.294,
             "ops": 0.651,
-            "platoon": 0.96,
-            "matchup_woba": 0.284,
-            "k_pct": 0.177,
-            "hr_pct": 0.012,
-            "edge": 0.0,
+            "platoon": 1.05,
+            "matchup_woba": 0.293,
+            "k_pct": 0.169,
+            "hr_pct": 0.013,
+            "edge": -0.0137,
             "source": "npb_official"
           },
           {
@@ -1237,11 +1245,11 @@
             "pa": 164,
             "woba": 0.323,
             "ops": 0.74,
-            "platoon": 1.05,
-            "matchup_woba": 0.349,
-            "k_pct": 0.195,
-            "hr_pct": 0.026,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.308,
+            "k_pct": 0.198,
+            "hr_pct": 0.023,
+            "edge": -0.0144,
             "source": "npb_official"
           },
           {
@@ -1251,11 +1259,11 @@
             "pa": 156,
             "woba": 0.314,
             "ops": 0.712,
-            "platoon": 1.05,
-            "matchup_woba": 0.342,
-            "k_pct": 0.179,
-            "hr_pct": 0.021,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.303,
+            "k_pct": 0.182,
+            "hr_pct": 0.018,
+            "edge": -0.0141,
             "source": "npb_official"
           },
           {
@@ -1265,11 +1273,11 @@
             "pa": 135,
             "woba": 0.268,
             "ops": 0.574,
-            "platoon": 1.05,
-            "matchup_woba": 0.283,
-            "k_pct": 0.264,
-            "hr_pct": 0.022,
-            "edge": 0.0,
+            "platoon": 0.96,
+            "matchup_woba": 0.249,
+            "k_pct": 0.268,
+            "hr_pct": 0.019,
+            "edge": -0.0119,
             "source": "npb_official"
           }
         ]
@@ -1663,15 +1671,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.0958,
-        "raw_factor": 1.1169,
-        "mu": 4.41,
+        "factor": 1.0311,
+        "raw_factor": 1.0379,
+        "mu": 4.184,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.9335,
-        "raw_factor": 0.9189,
-        "mu": 3.803,
+        "factor": 0.7496,
+        "raw_factor": 0.6946,
+        "mu": 3.167,
         "weight": 0.4
       }
     },
@@ -1688,60 +1696,57 @@
     "picks": [],
     "scores_top": [
       {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0211
+        "away": 1,
+        "home": 2,
+        "prob": 0.0223
       },
       {
         "away": 2,
-        "home": 2,
-        "prob": 0.0203
+        "home": 3,
+        "prob": 0.0222
       },
       {
         "away": 1,
         "home": 3,
-        "prob": 0.02
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0199
-      },
-      {
-        "away": 1,
-        "home": 2,
-        "prob": 0.0191
+        "prob": 0.0207
       },
       {
         "away": 3,
         "home": 3,
-        "prob": 0.0188
+        "prob": 0.0207
       },
       {
         "away": 2,
-        "home": 1,
-        "prob": 0.0186
+        "home": 2,
+        "prob": 0.0207
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0198
+      },
+      {
+        "away": 3,
+        "home": 4,
+        "prob": 0.0192
       },
       {
         "away": 2,
         "home": 4,
-        "prob": 0.0181
+        "prob": 0.0189
       }
     ],
     "data_sources": {
       "home_hitting": "npb_official",
       "away_hitting": "npb_official",
-      "home_pitcher": "fallback",
-      "away_pitcher": "fallback",
+      "home_pitcher": "npb_official_lowsample",
+      "away_pitcher": "npb_official",
       "weather": "indoor",
       "odds": "none"
     },
     "data_quality": {
-      "level": "fallback",
-      "missing": [
-        "홈 선발",
-        "원정 선발"
-      ]
+      "level": "full",
+      "missing": []
     }
   }
 ]
