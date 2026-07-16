@@ -1,1 +1,3012 @@
-[]
+[
+  {
+    "game_pk": 823440,
+    "status": "Preview",
+    "time_kst": "07/17 08:10 KST",
+    "game_date_utc": "2026-07-16T23:10:00Z",
+    "game_date_kst": "2026-07-17",
+    "venue": "Citizens Bank Park",
+    "home_team": "Philadelphia Phillies",
+    "away_team": "New York Mets",
+    "home_id": 143,
+    "away_id": 121,
+    "home_abbr": "PHI",
+    "away_abbr": "NYM",
+    "home_pitcher": {
+      "id": 605400,
+      "fullName": "Aaron Nola",
+      "link": "/api/v1/people/605400"
+    },
+    "away_pitcher": {
+      "id": 681035,
+      "fullName": "Christian Scott",
+      "link": "/api/v1/people/681035"
+    },
+    "umpire": "",
+    "home_lineup_ids": [],
+    "away_lineup_ids": [],
+    "market_total": 9.5,
+    "ballpark_pal": {
+      "source": "ballpark_pal",
+      "game_pk": 823440,
+      "matchup": "NYM @ PHI",
+      "away_abbr": "NYM",
+      "home_abbr": "PHI",
+      "venue": "Citizens Bank Park",
+      "hr_pct": 30.0,
+      "runs_pct": 14.0,
+      "runs_number": 1.22,
+      "stadium_runs_pct": 5.0,
+      "weather_runs_pct": 9.0,
+      "stadium_runs_number": 0.44,
+      "weather_runs_number": 0.78,
+      "wind_receptiveness": "Very High",
+      "wind_hour_1": {
+        "speed_mph": 7.0,
+        "direction": "OutRightMiddle"
+      },
+      "wind_hour_2": {
+        "speed_mph": 6.0,
+        "direction": "FromLeft"
+      },
+      "wind_hour_3": {
+        "speed_mph": 6.0,
+        "direction": "FromLeft"
+      },
+      "temp_hour_1": 91.0,
+      "temp_hour_2": 88.0,
+      "temp_hour_3": 86.0,
+      "humidity": 42.0,
+      "pressure": 1011.0,
+      "outfield_size": "Small",
+      "altitude": 9.0,
+      "typical_flight": -3.0,
+      "contact_rate": "Bad",
+      "contact_quality": "Great",
+      "description": "One of the smaller outfields in MLB . Relies on tall fences to keep home runs from getting out of hand. The most wind-receptive venue outside of Wrigley.",
+      "combined_run_factor": 1.14,
+      "stadium_run_factor": 1.05,
+      "weather_run_factor": 1.09
+    },
+    "environment_factor": 1.14,
+    "data_sources": {
+      "home_hitting": "statsapi",
+      "away_hitting": "statsapi",
+      "home_pitcher": "statsapi",
+      "away_pitcher": "statsapi",
+      "home_pitch_form": "statcast",
+      "away_pitch_form": "statcast",
+      "weather": "open-meteo",
+      "ballpark_pal": "ballpark_pal",
+      "odds": "live"
+    },
+    "data_quality": {
+      "level": "full",
+      "missing": []
+    },
+    "raw_total": 12.107353662314893,
+    "calibration": "market_anchored_w0.52",
+    "raw_home_pre_learn": 5.191,
+    "raw_away_pre_learn": 6.23,
+    "learn_correction": {
+      "home_team": 0.694,
+      "away_team": 0.126,
+      "home_pitcher": -0.989,
+      "away_pitcher": 0.854
+    },
+    "home_runs": 4.35112432596288,
+    "away_runs": 6.406923816104056,
+    "total": 10.758048142066936,
+    "home_win_prob": 0.3392,
+    "away_win_prob": 0.6608,
+    "runline": {
+      "home_minus_1_5": 0.2348,
+      "home_plus_1_5": 0.45785,
+      "away_minus_1_5": 0.54215,
+      "away_plus_1_5": 0.7652
+    },
+    "home_matchup": 1.0350000000000001,
+    "away_matchup": 0.9884999999999999,
+    "home_bp_factor": 1.065,
+    "away_bp_factor": 1.013,
+    "home_bp_quality": {
+      "overall_factor": 1.017,
+      "stopper_factor": 0.956,
+      "chase_factor": 1.185,
+      "middle_factor": 1.017,
+      "stopper_available": 1.0,
+      "chase_available": 1.0,
+      "effective_era": 3.71,
+      "raw_era": 3.71,
+      "n_available": 7,
+      "n_out": 0,
+      "out": [],
+      "fatigued": [],
+      "relievers": [
+        {
+          "id": "661395",
+          "name": "Jhoan Duran",
+          "season": {
+            "ip": 32.67,
+            "era": 1.38,
+            "ra9": 1.65,
+            "whip": 0.92,
+            "k9": 13.78,
+            "bb9": 1.65,
+            "hr9": 0.28,
+            "kbb": 8.33,
+            "bf": 126.0
+          },
+          "recent": {
+            "ip": 3.0,
+            "era": 0.0,
+            "ra9": 0.0,
+            "whip": 0.67,
+            "k9": 15.0,
+            "bb9": 0.0,
+            "hr9": 0.0,
+            "kbb": 5.0,
+            "bf": 12.0
+          },
+          "usage": {},
+          "role_score": 75.75,
+          "games": 34.0,
+          "starts": 0.0,
+          "saves": 24.0,
+          "holds": 0.0,
+          "games_finished": 33.0,
+          "role": "stopper",
+          "run_factor": 0.787,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 1.21,
+          "eff_era": 1.21,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "641745",
+          "name": "Brad Keller",
+          "season": {
+            "ip": 31.33,
+            "era": 4.02,
+            "ra9": 4.31,
+            "whip": 1.34,
+            "k9": 9.19,
+            "bb9": 3.73,
+            "hr9": 1.15,
+            "kbb": 2.46,
+            "bf": 135.0
+          },
+          "recent": {
+            "ip": 1.0,
+            "era": 0.0,
+            "ra9": 0.0,
+            "whip": 1.0,
+            "k9": 9.0,
+            "bb9": 9.0,
+            "hr9": 0.0,
+            "kbb": 1.0,
+            "bf": 4.0
+          },
+          "usage": {},
+          "role_score": 28.7,
+          "games": 32.0,
+          "starts": 0.0,
+          "saves": 3.0,
+          "holds": 13.0,
+          "games_finished": 6.0,
+          "role": "stopper",
+          "run_factor": 1.028,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 3.86,
+          "eff_era": 3.86,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "621237",
+          "name": "José Alvarado",
+          "season": {
+            "ip": 33.0,
+            "era": 6.82,
+            "ra9": 7.09,
+            "whip": 1.73,
+            "k9": 12.82,
+            "bb9": 3.82,
+            "hr9": 0.82,
+            "kbb": 3.36,
+            "bf": 161.0
+          },
+          "recent": {
+            "ip": 2.0,
+            "era": 18.0,
+            "ra9": 18.0,
+            "whip": 2.5,
+            "k9": 18.0,
+            "bb9": 13.5,
+            "hr9": 0.0,
+            "kbb": 1.33,
+            "bf": 11.0
+          },
+          "usage": {},
+          "role_score": 16.65,
+          "games": 39.0,
+          "starts": 0.0,
+          "saves": 1.0,
+          "holds": 9.0,
+          "games_finished": 3.0,
+          "role": "stopper",
+          "run_factor": 1.254,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 7.71,
+          "eff_era": 7.71,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "689147",
+          "name": "Orion Kerkering",
+          "season": {
+            "ip": 37.0,
+            "era": 2.43,
+            "ra9": 2.68,
+            "whip": 1.16,
+            "k9": 9.97,
+            "bb9": 4.86,
+            "hr9": 0.73,
+            "kbb": 2.05,
+            "bf": 158.0
+          },
+          "recent": {
+            "ip": 2.67,
+            "era": 0.0,
+            "ra9": 0.0,
+            "whip": 1.13,
+            "k9": 10.12,
+            "bb9": 10.12,
+            "hr9": 0.0,
+            "kbb": 1.0,
+            "bf": 11.0
+          },
+          "usage": {},
+          "role_score": 16.35,
+          "games": 39.0,
+          "starts": 0.0,
+          "saves": 1.0,
+          "holds": 8.0,
+          "games_finished": 5.0,
+          "role": "stopper",
+          "run_factor": 0.94,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 2.17,
+          "eff_era": 2.17,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "680742",
+          "name": "Jonathan Bowlan",
+          "season": {
+            "ip": 30.67,
+            "era": 2.93,
+            "ra9": 3.52,
+            "whip": 1.08,
+            "k9": 11.15,
+            "bb9": 2.05,
+            "hr9": 0.59,
+            "kbb": 5.43,
+            "bf": 125.0
+          },
+          "recent": {
+            "ip": 4.33,
+            "era": 0.0,
+            "ra9": 0.0,
+            "whip": 0.46,
+            "k9": 12.46,
+            "bb9": 2.08,
+            "hr9": 0.0,
+            "kbb": 6.0,
+            "bf": 15.0
+          },
+          "usage": {},
+          "role_score": 8.1,
+          "games": 33.0,
+          "starts": 0.0,
+          "saves": 0.0,
+          "holds": 5.0,
+          "games_finished": 2.0,
+          "role": "stopper",
+          "run_factor": 0.78,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 2.42,
+          "eff_era": 2.42,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "663767",
+          "name": "Chase Shugart",
+          "season": {
+            "ip": 29.0,
+            "era": 4.97,
+            "ra9": 4.97,
+            "whip": 1.34,
+            "k9": 10.55,
+            "bb9": 3.41,
+            "hr9": 2.17,
+            "kbb": 3.09,
+            "bf": 125.0
+          },
+          "recent": {
+            "ip": 0.0,
+            "era": 4.15,
+            "ra9": 4.35,
+            "whip": 1.3,
+            "k9": 0.0,
+            "bb9": 0.0,
+            "hr9": 0.0,
+            "kbb": 0.0,
+            "bf": 0
+          },
+          "usage": {},
+          "role_score": 4.95,
+          "games": 26.0,
+          "starts": 0.0,
+          "saves": 0.0,
+          "holds": 0.0,
+          "games_finished": 9.0,
+          "role": "chase",
+          "run_factor": 1.147,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 4.97,
+          "eff_era": 4.97,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "676661",
+          "name": "Max Lazar",
+          "season": {
+            "ip": 6.33,
+            "era": 7.11,
+            "ra9": 7.11,
+            "whip": 1.26,
+            "k9": 5.68,
+            "bb9": 1.42,
+            "hr9": 4.26,
+            "kbb": 4.0,
+            "bf": 27.0
+          },
+          "recent": {
+            "ip": 2.33,
+            "era": 11.57,
+            "ra9": 11.57,
+            "whip": 2.14,
+            "k9": 0.0,
+            "bb9": 3.86,
+            "hr9": 7.71,
+            "kbb": 0.0,
+            "bf": 12.0
+          },
+          "usage": {},
+          "role_score": 0.55,
+          "games": 5.0,
+          "starts": 0.0,
+          "saves": 0.0,
+          "holds": 0.0,
+          "games_finished": 1.0,
+          "role": "chase",
+          "run_factor": 1.225,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 7.53,
+          "eff_era": 7.53,
+          "fatigue_score": 0.0
+        }
+      ]
+    },
+    "away_bp_quality": {
+      "overall_factor": 1.014,
+      "stopper_factor": 1.032,
+      "chase_factor": 0.972,
+      "middle_factor": 1.014,
+      "stopper_available": 1.0,
+      "chase_available": 1.0,
+      "effective_era": 3.76,
+      "raw_era": 3.76,
+      "n_available": 6,
+      "n_out": 0,
+      "out": [],
+      "fatigued": [],
+      "relievers": [
+        {
+          "id": "642207",
+          "name": "Devin Williams",
+          "season": {
+            "ip": 31.67,
+            "era": 4.83,
+            "ra9": 6.25,
+            "whip": 1.71,
+            "k9": 12.51,
+            "bb9": 5.4,
+            "hr9": 0.85,
+            "kbb": 2.32,
+            "bf": 149.0
+          },
+          "recent": {
+            "ip": 3.33,
+            "era": 10.8,
+            "ra9": 13.5,
+            "whip": 3.6,
+            "k9": 8.1,
+            "bb9": 8.1,
+            "hr9": 2.7,
+            "kbb": 1.0,
+            "bf": 22.0
+          },
+          "usage": {},
+          "role_score": 43.85,
+          "games": 35.0,
+          "starts": 0.0,
+          "saves": 13.0,
+          "holds": 0.0,
+          "games_finished": 23.0,
+          "role": "stopper",
+          "run_factor": 1.214,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 5.63,
+          "eff_era": 5.63,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "596133",
+          "name": "Luke Weaver",
+          "season": {
+            "ip": 39.0,
+            "era": 1.85,
+            "ra9": 2.08,
+            "whip": 0.82,
+            "k9": 9.92,
+            "bb9": 2.54,
+            "hr9": 0.46,
+            "kbb": 3.91,
+            "bf": 150.0
+          },
+          "recent": {
+            "ip": 3.0,
+            "era": 0.0,
+            "ra9": 3.0,
+            "whip": 1.0,
+            "k9": 12.0,
+            "bb9": 6.0,
+            "hr9": 0.0,
+            "kbb": 2.0,
+            "bf": 12.0
+          },
+          "usage": {},
+          "role_score": 21.4,
+          "games": 37.0,
+          "starts": 0.0,
+          "saves": 1.0,
+          "holds": 12.0,
+          "games_finished": 4.0,
+          "role": "stopper",
+          "run_factor": 0.814,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 1.63,
+          "eff_era": 1.63,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "548384",
+          "name": "Brooks Raley",
+          "season": {
+            "ip": 35.33,
+            "era": 2.04,
+            "ra9": 2.8,
+            "whip": 1.13,
+            "k9": 9.17,
+            "bb9": 3.31,
+            "hr9": 0.51,
+            "kbb": 2.77,
+            "bf": 148.0
+          },
+          "recent": {
+            "ip": 4.33,
+            "era": 0.0,
+            "ra9": 2.08,
+            "whip": 0.23,
+            "k9": 4.15,
+            "bb9": 0.0,
+            "hr9": 0.0,
+            "kbb": 2.0,
+            "bf": 14.0
+          },
+          "usage": {},
+          "role_score": 19.55,
+          "games": 39.0,
+          "starts": 0.0,
+          "saves": 0.0,
+          "holds": 12.0,
+          "games_finished": 5.0,
+          "role": "stopper",
+          "run_factor": 0.803,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 1.69,
+          "eff_era": 1.69,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "672335",
+          "name": "Cionel Pérez",
+          "season": {
+            "ip": 36.0,
+            "era": 5.75,
+            "ra9": 6.0,
+            "whip": 1.56,
+            "k9": 8.0,
+            "bb9": 4.0,
+            "hr9": 1.75,
+            "kbb": 2.0,
+            "bf": 159.0
+          },
+          "recent": {
+            "ip": 3.0,
+            "era": 6.0,
+            "ra9": 6.0,
+            "whip": 2.67,
+            "k9": 15.0,
+            "bb9": 9.0,
+            "hr9": 3.0,
+            "kbb": 1.67,
+            "bf": 17.0
+          },
+          "usage": {},
+          "role_score": 4.75,
+          "games": 31.0,
+          "starts": 2.0,
+          "saves": 0.0,
+          "holds": 5.0,
+          "games_finished": 5.0,
+          "role": "stopper",
+          "run_factor": 1.319,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 5.78,
+          "eff_era": 5.78,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "621345",
+          "name": "A.J. Minter",
+          "season": {
+            "ip": 19.0,
+            "era": 1.42,
+            "ra9": 2.37,
+            "whip": 0.84,
+            "k9": 8.05,
+            "bb9": 0.47,
+            "hr9": 0.95,
+            "kbb": 17.0,
+            "bf": 73.0
+          },
+          "recent": {
+            "ip": 5.0,
+            "era": 5.4,
+            "ra9": 5.4,
+            "whip": 1.6,
+            "k9": 10.8,
+            "bb9": 0.0,
+            "hr9": 3.6,
+            "kbb": 6.0,
+            "bf": 23.0
+          },
+          "usage": {},
+          "role_score": 5.8,
+          "games": 19.0,
+          "starts": 0.0,
+          "saves": 0.0,
+          "holds": 1.0,
+          "games_finished": 8.0,
+          "role": "chase",
+          "run_factor": 0.909,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 2.22,
+          "eff_era": 2.22,
+          "fatigue_score": 0.0
+        },
+        {
+          "id": "675540",
+          "name": "Xzavion Curry",
+          "season": {
+            "ip": 1.33,
+            "era": 6.75,
+            "ra9": 6.75,
+            "whip": 1.5,
+            "k9": 6.75,
+            "bb9": 6.75,
+            "hr9": 0.0,
+            "kbb": 1.0,
+            "bf": 6.0
+          },
+          "recent": {
+            "ip": 1.33,
+            "era": 6.75,
+            "ra9": 6.75,
+            "whip": 1.5,
+            "k9": 6.75,
+            "bb9": 6.75,
+            "hr9": 0.0,
+            "kbb": 1.0,
+            "bf": 6.0
+          },
+          "usage": {},
+          "role_score": 1.1,
+          "games": 2.0,
+          "starts": 0.0,
+          "saves": 0.0,
+          "holds": 0.0,
+          "games_finished": 2.0,
+          "role": "chase",
+          "run_factor": 1.039,
+          "availability": "available",
+          "avail_reason": "기록없음",
+          "streak": 0,
+          "blended_era": 6.75,
+          "eff_era": 6.75,
+          "fatigue_score": 0.0
+        }
+      ]
+    },
+    "home_bullpen": [
+      {
+        "id": "661395",
+        "name": "Jhoan Duran",
+        "season": {
+          "ip": 32.67,
+          "era": 1.38,
+          "ra9": 1.65,
+          "whip": 0.92,
+          "k9": 13.78,
+          "bb9": 1.65,
+          "hr9": 0.28,
+          "kbb": 8.33,
+          "bf": 126.0
+        },
+        "recent": {
+          "ip": 3.0,
+          "era": 0.0,
+          "ra9": 0.0,
+          "whip": 0.67,
+          "k9": 15.0,
+          "bb9": 0.0,
+          "hr9": 0.0,
+          "kbb": 5.0,
+          "bf": 12.0
+        },
+        "usage": {},
+        "role_score": 75.75,
+        "games": 34.0,
+        "starts": 0.0,
+        "saves": 24.0,
+        "holds": 0.0,
+        "games_finished": 33.0,
+        "role": "stopper",
+        "run_factor": 0.787,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 1.21,
+        "eff_era": 1.21,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "641745",
+        "name": "Brad Keller",
+        "season": {
+          "ip": 31.33,
+          "era": 4.02,
+          "ra9": 4.31,
+          "whip": 1.34,
+          "k9": 9.19,
+          "bb9": 3.73,
+          "hr9": 1.15,
+          "kbb": 2.46,
+          "bf": 135.0
+        },
+        "recent": {
+          "ip": 1.0,
+          "era": 0.0,
+          "ra9": 0.0,
+          "whip": 1.0,
+          "k9": 9.0,
+          "bb9": 9.0,
+          "hr9": 0.0,
+          "kbb": 1.0,
+          "bf": 4.0
+        },
+        "usage": {},
+        "role_score": 28.7,
+        "games": 32.0,
+        "starts": 0.0,
+        "saves": 3.0,
+        "holds": 13.0,
+        "games_finished": 6.0,
+        "role": "stopper",
+        "run_factor": 1.028,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 3.86,
+        "eff_era": 3.86,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "621237",
+        "name": "José Alvarado",
+        "season": {
+          "ip": 33.0,
+          "era": 6.82,
+          "ra9": 7.09,
+          "whip": 1.73,
+          "k9": 12.82,
+          "bb9": 3.82,
+          "hr9": 0.82,
+          "kbb": 3.36,
+          "bf": 161.0
+        },
+        "recent": {
+          "ip": 2.0,
+          "era": 18.0,
+          "ra9": 18.0,
+          "whip": 2.5,
+          "k9": 18.0,
+          "bb9": 13.5,
+          "hr9": 0.0,
+          "kbb": 1.33,
+          "bf": 11.0
+        },
+        "usage": {},
+        "role_score": 16.65,
+        "games": 39.0,
+        "starts": 0.0,
+        "saves": 1.0,
+        "holds": 9.0,
+        "games_finished": 3.0,
+        "role": "stopper",
+        "run_factor": 1.254,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 7.71,
+        "eff_era": 7.71,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "689147",
+        "name": "Orion Kerkering",
+        "season": {
+          "ip": 37.0,
+          "era": 2.43,
+          "ra9": 2.68,
+          "whip": 1.16,
+          "k9": 9.97,
+          "bb9": 4.86,
+          "hr9": 0.73,
+          "kbb": 2.05,
+          "bf": 158.0
+        },
+        "recent": {
+          "ip": 2.67,
+          "era": 0.0,
+          "ra9": 0.0,
+          "whip": 1.13,
+          "k9": 10.12,
+          "bb9": 10.12,
+          "hr9": 0.0,
+          "kbb": 1.0,
+          "bf": 11.0
+        },
+        "usage": {},
+        "role_score": 16.35,
+        "games": 39.0,
+        "starts": 0.0,
+        "saves": 1.0,
+        "holds": 8.0,
+        "games_finished": 5.0,
+        "role": "stopper",
+        "run_factor": 0.94,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 2.17,
+        "eff_era": 2.17,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "680742",
+        "name": "Jonathan Bowlan",
+        "season": {
+          "ip": 30.67,
+          "era": 2.93,
+          "ra9": 3.52,
+          "whip": 1.08,
+          "k9": 11.15,
+          "bb9": 2.05,
+          "hr9": 0.59,
+          "kbb": 5.43,
+          "bf": 125.0
+        },
+        "recent": {
+          "ip": 4.33,
+          "era": 0.0,
+          "ra9": 0.0,
+          "whip": 0.46,
+          "k9": 12.46,
+          "bb9": 2.08,
+          "hr9": 0.0,
+          "kbb": 6.0,
+          "bf": 15.0
+        },
+        "usage": {},
+        "role_score": 8.1,
+        "games": 33.0,
+        "starts": 0.0,
+        "saves": 0.0,
+        "holds": 5.0,
+        "games_finished": 2.0,
+        "role": "stopper",
+        "run_factor": 0.78,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 2.42,
+        "eff_era": 2.42,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "663767",
+        "name": "Chase Shugart",
+        "season": {
+          "ip": 29.0,
+          "era": 4.97,
+          "ra9": 4.97,
+          "whip": 1.34,
+          "k9": 10.55,
+          "bb9": 3.41,
+          "hr9": 2.17,
+          "kbb": 3.09,
+          "bf": 125.0
+        },
+        "recent": {
+          "ip": 0.0,
+          "era": 4.15,
+          "ra9": 4.35,
+          "whip": 1.3,
+          "k9": 0.0,
+          "bb9": 0.0,
+          "hr9": 0.0,
+          "kbb": 0.0,
+          "bf": 0
+        },
+        "usage": {},
+        "role_score": 4.95,
+        "games": 26.0,
+        "starts": 0.0,
+        "saves": 0.0,
+        "holds": 0.0,
+        "games_finished": 9.0,
+        "role": "chase",
+        "run_factor": 1.147,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 4.97,
+        "eff_era": 4.97,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "676661",
+        "name": "Max Lazar",
+        "season": {
+          "ip": 6.33,
+          "era": 7.11,
+          "ra9": 7.11,
+          "whip": 1.26,
+          "k9": 5.68,
+          "bb9": 1.42,
+          "hr9": 4.26,
+          "kbb": 4.0,
+          "bf": 27.0
+        },
+        "recent": {
+          "ip": 2.33,
+          "era": 11.57,
+          "ra9": 11.57,
+          "whip": 2.14,
+          "k9": 0.0,
+          "bb9": 3.86,
+          "hr9": 7.71,
+          "kbb": 0.0,
+          "bf": 12.0
+        },
+        "usage": {},
+        "role_score": 0.55,
+        "games": 5.0,
+        "starts": 0.0,
+        "saves": 0.0,
+        "holds": 0.0,
+        "games_finished": 1.0,
+        "role": "chase",
+        "run_factor": 1.225,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 7.53,
+        "eff_era": 7.53,
+        "fatigue_score": 0.0
+      }
+    ],
+    "away_bullpen": [
+      {
+        "id": "642207",
+        "name": "Devin Williams",
+        "season": {
+          "ip": 31.67,
+          "era": 4.83,
+          "ra9": 6.25,
+          "whip": 1.71,
+          "k9": 12.51,
+          "bb9": 5.4,
+          "hr9": 0.85,
+          "kbb": 2.32,
+          "bf": 149.0
+        },
+        "recent": {
+          "ip": 3.33,
+          "era": 10.8,
+          "ra9": 13.5,
+          "whip": 3.6,
+          "k9": 8.1,
+          "bb9": 8.1,
+          "hr9": 2.7,
+          "kbb": 1.0,
+          "bf": 22.0
+        },
+        "usage": {},
+        "role_score": 43.85,
+        "games": 35.0,
+        "starts": 0.0,
+        "saves": 13.0,
+        "holds": 0.0,
+        "games_finished": 23.0,
+        "role": "stopper",
+        "run_factor": 1.214,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 5.63,
+        "eff_era": 5.63,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "596133",
+        "name": "Luke Weaver",
+        "season": {
+          "ip": 39.0,
+          "era": 1.85,
+          "ra9": 2.08,
+          "whip": 0.82,
+          "k9": 9.92,
+          "bb9": 2.54,
+          "hr9": 0.46,
+          "kbb": 3.91,
+          "bf": 150.0
+        },
+        "recent": {
+          "ip": 3.0,
+          "era": 0.0,
+          "ra9": 3.0,
+          "whip": 1.0,
+          "k9": 12.0,
+          "bb9": 6.0,
+          "hr9": 0.0,
+          "kbb": 2.0,
+          "bf": 12.0
+        },
+        "usage": {},
+        "role_score": 21.4,
+        "games": 37.0,
+        "starts": 0.0,
+        "saves": 1.0,
+        "holds": 12.0,
+        "games_finished": 4.0,
+        "role": "stopper",
+        "run_factor": 0.814,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 1.63,
+        "eff_era": 1.63,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "548384",
+        "name": "Brooks Raley",
+        "season": {
+          "ip": 35.33,
+          "era": 2.04,
+          "ra9": 2.8,
+          "whip": 1.13,
+          "k9": 9.17,
+          "bb9": 3.31,
+          "hr9": 0.51,
+          "kbb": 2.77,
+          "bf": 148.0
+        },
+        "recent": {
+          "ip": 4.33,
+          "era": 0.0,
+          "ra9": 2.08,
+          "whip": 0.23,
+          "k9": 4.15,
+          "bb9": 0.0,
+          "hr9": 0.0,
+          "kbb": 2.0,
+          "bf": 14.0
+        },
+        "usage": {},
+        "role_score": 19.55,
+        "games": 39.0,
+        "starts": 0.0,
+        "saves": 0.0,
+        "holds": 12.0,
+        "games_finished": 5.0,
+        "role": "stopper",
+        "run_factor": 0.803,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 1.69,
+        "eff_era": 1.69,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "672335",
+        "name": "Cionel Pérez",
+        "season": {
+          "ip": 36.0,
+          "era": 5.75,
+          "ra9": 6.0,
+          "whip": 1.56,
+          "k9": 8.0,
+          "bb9": 4.0,
+          "hr9": 1.75,
+          "kbb": 2.0,
+          "bf": 159.0
+        },
+        "recent": {
+          "ip": 3.0,
+          "era": 6.0,
+          "ra9": 6.0,
+          "whip": 2.67,
+          "k9": 15.0,
+          "bb9": 9.0,
+          "hr9": 3.0,
+          "kbb": 1.67,
+          "bf": 17.0
+        },
+        "usage": {},
+        "role_score": 4.75,
+        "games": 31.0,
+        "starts": 2.0,
+        "saves": 0.0,
+        "holds": 5.0,
+        "games_finished": 5.0,
+        "role": "stopper",
+        "run_factor": 1.319,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 5.78,
+        "eff_era": 5.78,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "621345",
+        "name": "A.J. Minter",
+        "season": {
+          "ip": 19.0,
+          "era": 1.42,
+          "ra9": 2.37,
+          "whip": 0.84,
+          "k9": 8.05,
+          "bb9": 0.47,
+          "hr9": 0.95,
+          "kbb": 17.0,
+          "bf": 73.0
+        },
+        "recent": {
+          "ip": 5.0,
+          "era": 5.4,
+          "ra9": 5.4,
+          "whip": 1.6,
+          "k9": 10.8,
+          "bb9": 0.0,
+          "hr9": 3.6,
+          "kbb": 6.0,
+          "bf": 23.0
+        },
+        "usage": {},
+        "role_score": 5.8,
+        "games": 19.0,
+        "starts": 0.0,
+        "saves": 0.0,
+        "holds": 1.0,
+        "games_finished": 8.0,
+        "role": "chase",
+        "run_factor": 0.909,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 2.22,
+        "eff_era": 2.22,
+        "fatigue_score": 0.0
+      },
+      {
+        "id": "675540",
+        "name": "Xzavion Curry",
+        "season": {
+          "ip": 1.33,
+          "era": 6.75,
+          "ra9": 6.75,
+          "whip": 1.5,
+          "k9": 6.75,
+          "bb9": 6.75,
+          "hr9": 0.0,
+          "kbb": 1.0,
+          "bf": 6.0
+        },
+        "recent": {
+          "ip": 1.33,
+          "era": 6.75,
+          "ra9": 6.75,
+          "whip": 1.5,
+          "k9": 6.75,
+          "bb9": 6.75,
+          "hr9": 0.0,
+          "kbb": 1.0,
+          "bf": 6.0
+        },
+        "usage": {},
+        "role_score": 1.1,
+        "games": 2.0,
+        "starts": 0.0,
+        "saves": 0.0,
+        "holds": 0.0,
+        "games_finished": 2.0,
+        "role": "chase",
+        "run_factor": 1.039,
+        "availability": "available",
+        "avail_reason": "기록없음",
+        "streak": 0,
+        "blended_era": 6.75,
+        "eff_era": 6.75,
+        "fatigue_score": 0.0
+      }
+    ],
+    "starter_phase": {
+      "home_runs_no_bp": 5.149,
+      "away_runs_no_bp": 6.098,
+      "home_lead_prob": 0.3311556284860897,
+      "away_lead_prob": 0.6688443715139103
+    },
+    "home_stuff": 76.8,
+    "home_loc": 99.5,
+    "away_stuff": 90.1,
+    "away_loc": 101.1,
+    "home_pitch_form": {
+      "xwoba": 0.299,
+      "k_rate": 0.256,
+      "bb_rate": 0.078,
+      "hr_rate": 0.056,
+      "stuff_plus_proxy": 76.8,
+      "location_plus_proxy": 99.5,
+      "pitch_mix": {
+        "FB": 0.41,
+        "CB": 0.348,
+        "CH": 0.152,
+        "FC": 0.062,
+        "SL": 0.027,
+        "na": 0.001
+      },
+      "pitch_xwoba": {
+        "CB": 0.252,
+        "CH": 0.259,
+        "FB": 0.355,
+        "FC": 0.34,
+        "SL": 0.239,
+        "na": 0.299
+      },
+      "velo": 85.7,
+      "velo_recent": 91.9,
+      "velo_drop": 0.44,
+      "samples": 730,
+      "_source": "statcast"
+    },
+    "away_pitch_form": {
+      "xwoba": 0.335,
+      "k_rate": 0.276,
+      "bb_rate": 0.102,
+      "hr_rate": 0.061,
+      "stuff_plus_proxy": 90.1,
+      "location_plus_proxy": 101.1,
+      "pitch_mix": {
+        "FB": 0.5,
+        "SL": 0.234,
+        "FC": 0.166,
+        "CB": 0.077,
+        "FS": 0.023
+      },
+      "pitch_xwoba": {
+        "CB": 0.156,
+        "FB": 0.385,
+        "FC": 0.288,
+        "FS": 0.623,
+        "SL": 0.318
+      },
+      "velo": 89.8,
+      "velo_recent": 95.46,
+      "velo_drop": -0.69,
+      "samples": 440,
+      "_source": "statcast"
+    },
+    "home_lineup_match_detail": [
+      {
+        "slot": 1,
+        "name": "Alec Bohm",
+        "score": 1.028
+      },
+      {
+        "slot": 2,
+        "name": "Brandon Marsh",
+        "score": 0.994
+      },
+      {
+        "slot": 3,
+        "name": "Bryce Harper",
+        "score": 1.333
+      },
+      {
+        "slot": 4,
+        "name": "Bryson Stott",
+        "score": 1.252
+      },
+      {
+        "slot": 5,
+        "name": "Derek Hill",
+        "score": 0.909
+      },
+      {
+        "slot": 6,
+        "name": "Edmundo Sosa",
+        "score": 1.215
+      },
+      {
+        "slot": 7,
+        "name": "Gabriel Rincones Jr.",
+        "score": 0.747
+      },
+      {
+        "slot": 8,
+        "name": "Garrett Stubbs",
+        "score": 0.994
+      },
+      {
+        "slot": 9,
+        "name": "J.T. Realmuto",
+        "score": 1.098
+      }
+    ],
+    "away_lineup_match_detail": [
+      {
+        "slot": 1,
+        "name": "A.J. Ewing",
+        "score": 1.053
+      },
+      {
+        "slot": 2,
+        "name": "Bo Bichette",
+        "score": 0.895
+      },
+      {
+        "slot": 3,
+        "name": "Brett Baty",
+        "score": 1.061
+      },
+      {
+        "slot": 4,
+        "name": "Carson Benge",
+        "score": 1.162
+      },
+      {
+        "slot": 5,
+        "name": "Eric Wagaman",
+        "score": 0.811
+      },
+      {
+        "slot": 6,
+        "name": "Francisco Alvarez",
+        "score": 1.004
+      },
+      {
+        "slot": 7,
+        "name": "Francisco Lindor",
+        "score": 1.153
+      },
+      {
+        "slot": 8,
+        "name": "Jared Young",
+        "score": 0.881
+      },
+      {
+        "slot": 9,
+        "name": "Jorge Polanco",
+        "score": 0.72
+      }
+    ],
+    "odds": {
+      "home_ml": 1.76,
+      "away_ml": 2.09,
+      "total": 9.5,
+      "over": 1.92,
+      "under": 1.9,
+      "home_spread": null,
+      "home_spread_odds": null,
+      "away_spread": null,
+      "away_spread_odds": null,
+      "book": "FanDuel",
+      "estimated": true
+    },
+    "picks": [
+      {
+        "matchup": "NYM @ PHI",
+        "market": "moneyline",
+        "label": "PHI ML",
+        "prob": 0.3392,
+        "odds": 1.76,
+        "ev": -0.403,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5225,
+        "kelly_f": -0.1058,
+        "ev_debiased": -0.0804,
+        "stake": 0,
+        "stake_base": 150,
+        "book": "FanDuel",
+        "estimated_odds": true
+      },
+      {
+        "matchup": "NYM @ PHI",
+        "market": "moneyline",
+        "label": "NYM ML",
+        "prob": 0.6608,
+        "odds": 2.09,
+        "ev": 0.3811,
+        "kelly_raw": 0.3496,
+        "p_hat": 0.4775,
+        "kelly_f": -0.0006,
+        "ev_debiased": -0.002,
+        "stake": 0,
+        "stake_base": 150,
+        "book": "FanDuel",
+        "estimated_odds": true
+      },
+      {
+        "matchup": "NYM @ PHI",
+        "market": "total",
+        "label": "Over 9.5",
+        "prob": 0.6081,
+        "odds": 1.92,
+        "ev": 0.1676,
+        "kelly_raw": 0.1822,
+        "p_hat": 0.4974,
+        "kelly_f": -0.0489,
+        "ev_debiased": -0.045,
+        "stake": 0,
+        "stake_base": 150,
+        "book": "FanDuel",
+        "estimated_odds": true,
+        "model_total": 10.94,
+        "market_total": 9.5
+      },
+      {
+        "matchup": "NYM @ PHI",
+        "market": "total",
+        "label": "Under 9.5",
+        "prob": 0.3919,
+        "odds": 1.9,
+        "ev": -0.2554,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5026,
+        "kelly_f": -0.05,
+        "ev_debiased": -0.045,
+        "stake": 0,
+        "stake_base": 150,
+        "book": "FanDuel",
+        "estimated_odds": true,
+        "model_total": 10.94,
+        "market_total": 9.5
+      }
+    ],
+    "weather": {
+      "source": "ballpark_pal",
+      "text": "31% Precipitation 92°  Wind 11 mph L-R",
+      "precip_prob": 4.0,
+      "temp_f": 96.7,
+      "wind_mph": 11.8,
+      "venue": "Citizens Bank Park",
+      "roof": "open",
+      "forecast_hour": "2026-07-16T23:00",
+      "wind_direction_deg": 280.0,
+      "humidity_pct": 36.0,
+      "temp_f_3h_avg": 93.8,
+      "wind_mph_3h_avg": 9.9,
+      "wind_direction_deg_3h_avg": 286.0,
+      "_source": "open-meteo",
+      "carry_adj": 0.0408,
+      "run_factor": 1.0857,
+      "wind_dot_of": 4.036,
+      "wind_dir_label": "외야 바람 (out)",
+      "wind_source": "open-meteo",
+      "of_bearing": 30,
+      "temp_avg": 88.3,
+      "humidity": 42.0,
+      "pressure": 1011.0,
+      "altitude": 9.0,
+      "combined_run_factor": 1.14,
+      "stadium_run_factor": 1.05,
+      "weather_run_factor": 1.09,
+      "runs_pct": 14.0,
+      "hr_pct": 30.0,
+      "wind_receptiveness": "Very High",
+      "wind_hour_1": {
+        "speed_mph": 7.0,
+        "direction": "OutRightMiddle"
+      },
+      "wind_hour_2": {
+        "speed_mph": 6.0,
+        "direction": "FromLeft"
+      },
+      "wind_hour_3": {
+        "speed_mph": 6.0,
+        "direction": "FromLeft"
+      },
+      "description": "One of the smaller outfields in MLB . Relies on tall fences to keep home runs from getting out of hand. The most wind-receptive venue outside of Wrigley."
+    },
+    "umpire_detail": {
+      "umpire": "Unknown",
+      "source": "neutral"
+    },
+    "scores_top": [
+      {
+        "away": 5,
+        "home": 4,
+        "prob": 0.0199
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0191
+      },
+      {
+        "away": 4,
+        "home": 5,
+        "prob": 0.0191
+      },
+      {
+        "away": 3,
+        "home": 4,
+        "prob": 0.0189
+      },
+      {
+        "away": 4,
+        "home": 3,
+        "prob": 0.0183
+      },
+      {
+        "away": 6,
+        "home": 5,
+        "prob": 0.0162
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0162
+      },
+      {
+        "away": 5,
+        "home": 2,
+        "prob": 0.0162
+      }
+    ],
+    "hr_env": {
+      "hr_env_pct": 30.0,
+      "home_hr_adj": {
+        "hr_env_pct": 30.0,
+        "hr_env_excess": -0.7,
+        "team_hr_dep": 1.17,
+        "hr_dep_excess": 0.17,
+        "pitch_hr_factor": 1.014,
+        "applied": -0.0656
+      },
+      "away_hr_adj": {
+        "hr_env_pct": 30.0,
+        "hr_env_excess": -0.7,
+        "team_hr_dep": 1.125,
+        "hr_dep_excess": 0.125,
+        "pitch_hr_factor": 1.25,
+        "applied": -0.0499
+      }
+    },
+    "hand_split": {
+      "ap_hand": "R",
+      "hp_hand": "R",
+      "home_vs_opp": {
+        "hand": "R",
+        "vs_hand_woba": 0.315,
+        "pa": 2485,
+        "shrunk_woba": 0.315,
+        "applied": 0.0007
+      },
+      "away_vs_opp": {
+        "hand": "R",
+        "vs_hand_woba": 0.304,
+        "pa": 2613,
+        "shrunk_woba": 0.304,
+        "applied": -0.0271
+      }
+    },
+    "pitcher_detail": {
+      "home_season": {
+        "era": 5.75,
+        "whip": 1.43,
+        "k9": 9.463917525773196,
+        "ip": 97.0,
+        "name": "Aaron Nola",
+        "hand": "R"
+      },
+      "away_season": {
+        "era": 3.17,
+        "whip": 1.3,
+        "k9": 10.833333333333334,
+        "ip": 54.0,
+        "name": "Christian Scott",
+        "hand": "R"
+      },
+      "home_recent": {
+        "era": 6.61,
+        "whip": 1.35,
+        "k9": 11.02,
+        "ip": 16.3,
+        "starts": 3,
+        "_present": true
+      },
+      "away_recent": {
+        "era": 3.38,
+        "whip": 1.12,
+        "k9": 12.15,
+        "ip": 13.3,
+        "starts": 3,
+        "_present": true
+      },
+      "home_splits": {
+        "vs_lhb": {
+          "ops_against": 0.853,
+          "whip": 1.59,
+          "k9": 9.55,
+          "ip": 54.666666666666664,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.802,
+          "whip": 1.25,
+          "k9": 9.5,
+          "ip": 41.666666666666664,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.923,
+          "whip": 1.7,
+          "k9": 10.33,
+          "ip": 38.333333333333336,
+          "_present": true
+        },
+        "away": {
+          "ops_against": 0.766,
+          "whip": 1.26,
+          "k9": 8.9,
+          "ip": 58.666666666666664,
+          "_present": true
+        },
+        "day": {
+          "ops_against": 0.792,
+          "whip": 1.41,
+          "k9": 9.63,
+          "ip": 38.333333333333336,
+          "_present": true
+        },
+        "night": {
+          "ops_against": 0.859,
+          "whip": 1.45,
+          "k9": 9.36,
+          "ip": 58.666666666666664,
+          "_present": true
+        }
+      },
+      "away_splits": {
+        "vs_lhb": {
+          "ops_against": 0.66,
+          "whip": 1.13,
+          "k9": 10.7,
+          "ip": 35.333333333333336,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.731,
+          "whip": 1.64,
+          "k9": 11.29,
+          "ip": 18.333333333333332,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.79,
+          "whip": 1.52,
+          "k9": 11.16,
+          "ip": 25.0,
+          "_present": true
+        },
+        "away": {
+          "ops_against": 0.594,
+          "whip": 1.1,
+          "k9": 10.55,
+          "ip": 29.0,
+          "_present": true
+        },
+        "day": {
+          "ops_against": 0.734,
+          "whip": 1.27,
+          "k9": 11.47,
+          "ip": 24.333333333333332,
+          "_present": true
+        },
+        "night": {
+          "ops_against": 0.648,
+          "whip": 1.31,
+          "k9": 10.31,
+          "ip": 29.666666666666668,
+          "_present": true
+        }
+      },
+      "home_split_factor": {
+        "hand_factor": 1.0457,
+        "venue_factor": 1.08,
+        "time_factor": 1.08,
+        "combined": 1.14,
+        "vs_lhb_ops": 0.853,
+        "vs_rhb_ops": 0.802,
+        "venue_ops": 0.923,
+        "time_ops": 0.859,
+        "lhb_frac": 0.667,
+        "is_home": true,
+        "is_day": false
+      },
+      "away_split_factor": {
+        "hand_factor": 0.9843,
+        "venue_factor": 0.93,
+        "time_factor": 0.9487,
+        "combined": 0.88,
+        "vs_lhb_ops": 0.66,
+        "vs_rhb_ops": 0.731,
+        "venue_ops": 0.594,
+        "time_ops": 0.648,
+        "lhb_frac": 0.667,
+        "is_home": false,
+        "is_day": false
+      }
+    },
+    "hitting_detail": {
+      "home_season": {
+        "rpg": 4.371134020618556,
+        "ops": 0.701,
+        "woba": 0.3284,
+        "iso": 0.16200000000000003
+      },
+      "away_season": {
+        "rpg": 4.103092783505154,
+        "ops": 0.684,
+        "woba": 0.3277,
+        "iso": 0.147
+      },
+      "home_recent": {
+        "rpg": 5.17,
+        "ops": 0.745,
+        "woba": 0.3249,
+        "iso": 0.16699999999999998,
+        "games": 24,
+        "_present": true
+      },
+      "away_recent": {
+        "rpg": 4.46,
+        "ops": 0.74,
+        "woba": 0.3233,
+        "iso": 0.17099999999999999,
+        "games": 24,
+        "_present": true
+      },
+      "home_vs_lhp": {
+        "ops": 0.67,
+        "obp": 0.301,
+        "slg": 0.369,
+        "woba": 0.3002,
+        "iso": 0.145,
+        "pa": 1141.0
+      },
+      "home_vs_rhp": {
+        "ops": 0.716,
+        "obp": 0.304,
+        "slg": 0.412,
+        "woba": 0.3153,
+        "iso": 0.17099999999999999,
+        "pa": 2485.0
+      },
+      "away_vs_lhp": {
+        "ops": 0.686,
+        "obp": 0.304,
+        "slg": 0.382,
+        "woba": 0.3054,
+        "iso": 0.148,
+        "pa": 1020.0
+      },
+      "away_vs_rhp": {
+        "ops": 0.682,
+        "obp": 0.302,
+        "slg": 0.38,
+        "woba": 0.3041,
+        "iso": 0.147,
+        "pa": 2613.0
+      }
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "",
+        "lineup_woba": 0.3316,
+        "matchup_score": 1.0074,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.021,
+        "lineup_src": "rw_expected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "Trea Turner",
+            "hand": "R",
+            "pa": 415,
+            "woba": 0.299,
+            "ops": 0.653,
+            "platoon": 0.955,
+            "matchup_woba": 0.293,
+            "k_pct": 0.286,
+            "hr_pct": 0.026,
+            "edge": 0.0007,
+            "source": "statsapi"
+          },
+          {
+            "order": 2,
+            "name": "Kyle Schwarber",
+            "hand": "L",
+            "pa": 414,
+            "woba": 0.373,
+            "ops": 0.876,
+            "platoon": 1.055,
+            "matchup_woba": 0.443,
+            "k_pct": 0.399,
+            "hr_pct": 0.072,
+            "edge": 0.027,
+            "source": "statsapi"
+          },
+          {
+            "order": 3,
+            "name": "Bryce Harper",
+            "hand": "L",
+            "pa": 408,
+            "woba": 0.356,
+            "ops": 0.825,
+            "platoon": 1.055,
+            "matchup_woba": 0.411,
+            "k_pct": 0.256,
+            "hr_pct": 0.049,
+            "edge": 0.0196,
+            "source": "statsapi"
+          },
+          {
+            "order": 4,
+            "name": "Brandon Marsh",
+            "hand": "L",
+            "pa": 363,
+            "woba": 0.347,
+            "ops": 0.797,
+            "platoon": 1.055,
+            "matchup_woba": 0.37,
+            "k_pct": 0.319,
+            "hr_pct": 0.043,
+            "edge": -0.0024,
+            "source": "statsapi"
+          },
+          {
+            "order": 5,
+            "name": "Alec Bohm",
+            "hand": "R",
+            "pa": 374,
+            "woba": 0.298,
+            "ops": 0.649,
+            "platoon": 0.955,
+            "matchup_woba": 0.3,
+            "k_pct": 0.211,
+            "hr_pct": 0.03,
+            "edge": 0.0067,
+            "source": "statsapi"
+          },
+          {
+            "order": 6,
+            "name": "Bryson Stott",
+            "hand": "L",
+            "pa": 353,
+            "woba": 0.315,
+            "ops": 0.7,
+            "platoon": 1.055,
+            "matchup_woba": 0.332,
+            "k_pct": 0.228,
+            "hr_pct": 0.026,
+            "edge": 0.0007,
+            "source": "statsapi"
+          },
+          {
+            "order": 7,
+            "name": "J.T. Realmuto",
+            "hand": "R",
+            "pa": 257,
+            "woba": 0.3,
+            "ops": 0.655,
+            "platoon": 0.955,
+            "matchup_woba": 0.308,
+            "k_pct": 0.271,
+            "hr_pct": 0.029,
+            "edge": 0.0103,
+            "source": "statsapi"
+          },
+          {
+            "order": 8,
+            "name": "Gabriel Rincones Jr.",
+            "hand": "L",
+            "pa": 71,
+            "woba": 0.293,
+            "ops": 0.635,
+            "platoon": 1.055,
+            "matchup_woba": 0.309,
+            "k_pct": 0.306,
+            "hr_pct": 0.032,
+            "edge": 0.0014,
+            "source": "statsapi"
+          },
+          {
+            "order": 9,
+            "name": "Justin Crawford",
+            "hand": "L",
+            "pa": 287,
+            "woba": 0.307,
+            "ops": 0.676,
+            "platoon": 1.055,
+            "matchup_woba": 0.318,
+            "k_pct": 0.261,
+            "hr_pct": 0.017,
+            "edge": -0.0046,
+            "source": "statsapi"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "",
+        "lineup_woba": 0.3318,
+        "matchup_score": 1.015,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0335,
+        "lineup_src": "rw_expected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "A.J. Ewing",
+            "hand": "L",
+            "pa": 222,
+            "woba": 0.334,
+            "ops": 0.758,
+            "platoon": 1.055,
+            "matchup_woba": 0.435,
+            "k_pct": 0.271,
+            "hr_pct": 0.055,
+            "edge": 0.0762,
+            "source": "statsapi"
+          },
+          {
+            "order": 2,
+            "name": "Juan Soto",
+            "hand": "L",
+            "pa": 334,
+            "woba": 0.392,
+            "ops": 0.896,
+            "platoon": 1.055,
+            "matchup_woba": 0.524,
+            "k_pct": 0.158,
+            "hr_pct": 0.092,
+            "edge": 0.1028,
+            "source": "statsapi"
+          },
+          {
+            "order": 3,
+            "name": "Bo Bichette",
+            "hand": "R",
+            "pa": 413,
+            "woba": 0.321,
+            "ops": 0.682,
+            "platoon": 0.955,
+            "matchup_woba": 0.366,
+            "k_pct": 0.207,
+            "hr_pct": 0.042,
+            "edge": 0.0639,
+            "source": "statsapi"
+          },
+          {
+            "order": 4,
+            "name": "Francisco Lindor",
+            "hand": "S",
+            "pa": 171,
+            "woba": 0.303,
+            "ops": 0.683,
+            "platoon": 1.055,
+            "matchup_woba": 0.402,
+            "k_pct": 0.192,
+            "hr_pct": 0.052,
+            "edge": 0.0709,
+            "source": "statsapi"
+          },
+          {
+            "order": 5,
+            "name": "Carson Benge",
+            "hand": "L",
+            "pa": 386,
+            "woba": 0.322,
+            "ops": 0.722,
+            "platoon": 1.055,
+            "matchup_woba": 0.423,
+            "k_pct": 0.235,
+            "hr_pct": 0.052,
+            "edge": 0.0742,
+            "source": "statsapi"
+          },
+          {
+            "order": 6,
+            "name": "Jorge Polanco",
+            "hand": "S",
+            "pa": 79,
+            "woba": 0.291,
+            "ops": 0.626,
+            "platoon": 1.055,
+            "matchup_woba": 0.372,
+            "k_pct": 0.215,
+            "hr_pct": 0.042,
+            "edge": 0.0634,
+            "source": "statsapi"
+          },
+          {
+            "order": 7,
+            "name": "Jared Young",
+            "hand": "L",
+            "pa": 157,
+            "woba": 0.323,
+            "ops": 0.725,
+            "platoon": 1.055,
+            "matchup_woba": 0.426,
+            "k_pct": 0.228,
+            "hr_pct": 0.06,
+            "edge": 0.0794,
+            "source": "statsapi"
+          },
+          {
+            "order": 8,
+            "name": "Brett Baty",
+            "hand": "L",
+            "pa": 328,
+            "woba": 0.281,
+            "ops": 0.634,
+            "platoon": 1.055,
+            "matchup_woba": 0.369,
+            "k_pct": 0.286,
+            "hr_pct": 0.032,
+            "edge": 0.0543,
+            "source": "statsapi"
+          },
+          {
+            "order": 9,
+            "name": "Francisco Alvarez",
+            "hand": "R",
+            "pa": 232,
+            "woba": 0.322,
+            "ops": 0.722,
+            "platoon": 0.955,
+            "matchup_woba": 0.393,
+            "k_pct": 0.282,
+            "hr_pct": 0.056,
+            "edge": 0.0743,
+            "source": "statsapi"
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": {
+        "factor": 1.1525,
+        "raw_factor": 1.186,
+        "mu": 5.286,
+        "weight": 0.4
+      },
+      "away": {
+        "factor": 1.4475,
+        "raw_factor": 1.5457,
+        "mu": 6.432,
+        "weight": 0.4
+      }
+    },
+    "bullpen_detail": {
+      "home_recent": {
+        "era": 5.14,
+        "ip": 77.0,
+        "games": 9,
+        "_present": true
+      },
+      "away_recent": {
+        "era": 5.6,
+        "ip": 90.0,
+        "games": 10,
+        "_present": true
+      },
+      "home_bottomup": {
+        "effective_era": 3.71,
+        "raw_era": 3.71,
+        "n_available": 7,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "id": "661395",
+            "name": "Jhoan Duran",
+            "season": {
+              "ip": 32.67,
+              "era": 1.38,
+              "ra9": 1.65,
+              "whip": 0.92,
+              "k9": 13.78,
+              "bb9": 1.65,
+              "hr9": 0.28,
+              "kbb": 8.33,
+              "bf": 126.0
+            },
+            "recent": {
+              "ip": 3.0,
+              "era": 0.0,
+              "ra9": 0.0,
+              "whip": 0.67,
+              "k9": 15.0,
+              "bb9": 0.0,
+              "hr9": 0.0,
+              "kbb": 5.0,
+              "bf": 12.0
+            },
+            "usage": {},
+            "role_score": 75.75,
+            "games": 34.0,
+            "starts": 0.0,
+            "saves": 24.0,
+            "holds": 0.0,
+            "games_finished": 33.0,
+            "role": "stopper",
+            "run_factor": 0.787,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 1.21,
+            "eff_era": 1.21,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "641745",
+            "name": "Brad Keller",
+            "season": {
+              "ip": 31.33,
+              "era": 4.02,
+              "ra9": 4.31,
+              "whip": 1.34,
+              "k9": 9.19,
+              "bb9": 3.73,
+              "hr9": 1.15,
+              "kbb": 2.46,
+              "bf": 135.0
+            },
+            "recent": {
+              "ip": 1.0,
+              "era": 0.0,
+              "ra9": 0.0,
+              "whip": 1.0,
+              "k9": 9.0,
+              "bb9": 9.0,
+              "hr9": 0.0,
+              "kbb": 1.0,
+              "bf": 4.0
+            },
+            "usage": {},
+            "role_score": 28.7,
+            "games": 32.0,
+            "starts": 0.0,
+            "saves": 3.0,
+            "holds": 13.0,
+            "games_finished": 6.0,
+            "role": "stopper",
+            "run_factor": 1.028,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 3.86,
+            "eff_era": 3.86,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "621237",
+            "name": "José Alvarado",
+            "season": {
+              "ip": 33.0,
+              "era": 6.82,
+              "ra9": 7.09,
+              "whip": 1.73,
+              "k9": 12.82,
+              "bb9": 3.82,
+              "hr9": 0.82,
+              "kbb": 3.36,
+              "bf": 161.0
+            },
+            "recent": {
+              "ip": 2.0,
+              "era": 18.0,
+              "ra9": 18.0,
+              "whip": 2.5,
+              "k9": 18.0,
+              "bb9": 13.5,
+              "hr9": 0.0,
+              "kbb": 1.33,
+              "bf": 11.0
+            },
+            "usage": {},
+            "role_score": 16.65,
+            "games": 39.0,
+            "starts": 0.0,
+            "saves": 1.0,
+            "holds": 9.0,
+            "games_finished": 3.0,
+            "role": "stopper",
+            "run_factor": 1.254,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 7.71,
+            "eff_era": 7.71,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "689147",
+            "name": "Orion Kerkering",
+            "season": {
+              "ip": 37.0,
+              "era": 2.43,
+              "ra9": 2.68,
+              "whip": 1.16,
+              "k9": 9.97,
+              "bb9": 4.86,
+              "hr9": 0.73,
+              "kbb": 2.05,
+              "bf": 158.0
+            },
+            "recent": {
+              "ip": 2.67,
+              "era": 0.0,
+              "ra9": 0.0,
+              "whip": 1.13,
+              "k9": 10.12,
+              "bb9": 10.12,
+              "hr9": 0.0,
+              "kbb": 1.0,
+              "bf": 11.0
+            },
+            "usage": {},
+            "role_score": 16.35,
+            "games": 39.0,
+            "starts": 0.0,
+            "saves": 1.0,
+            "holds": 8.0,
+            "games_finished": 5.0,
+            "role": "stopper",
+            "run_factor": 0.94,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 2.17,
+            "eff_era": 2.17,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "680742",
+            "name": "Jonathan Bowlan",
+            "season": {
+              "ip": 30.67,
+              "era": 2.93,
+              "ra9": 3.52,
+              "whip": 1.08,
+              "k9": 11.15,
+              "bb9": 2.05,
+              "hr9": 0.59,
+              "kbb": 5.43,
+              "bf": 125.0
+            },
+            "recent": {
+              "ip": 4.33,
+              "era": 0.0,
+              "ra9": 0.0,
+              "whip": 0.46,
+              "k9": 12.46,
+              "bb9": 2.08,
+              "hr9": 0.0,
+              "kbb": 6.0,
+              "bf": 15.0
+            },
+            "usage": {},
+            "role_score": 8.1,
+            "games": 33.0,
+            "starts": 0.0,
+            "saves": 0.0,
+            "holds": 5.0,
+            "games_finished": 2.0,
+            "role": "stopper",
+            "run_factor": 0.78,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 2.42,
+            "eff_era": 2.42,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "663767",
+            "name": "Chase Shugart",
+            "season": {
+              "ip": 29.0,
+              "era": 4.97,
+              "ra9": 4.97,
+              "whip": 1.34,
+              "k9": 10.55,
+              "bb9": 3.41,
+              "hr9": 2.17,
+              "kbb": 3.09,
+              "bf": 125.0
+            },
+            "recent": {
+              "ip": 0.0,
+              "era": 4.15,
+              "ra9": 4.35,
+              "whip": 1.3,
+              "k9": 0.0,
+              "bb9": 0.0,
+              "hr9": 0.0,
+              "kbb": 0.0,
+              "bf": 0
+            },
+            "usage": {},
+            "role_score": 4.95,
+            "games": 26.0,
+            "starts": 0.0,
+            "saves": 0.0,
+            "holds": 0.0,
+            "games_finished": 9.0,
+            "role": "chase",
+            "run_factor": 1.147,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 4.97,
+            "eff_era": 4.97,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "676661",
+            "name": "Max Lazar",
+            "season": {
+              "ip": 6.33,
+              "era": 7.11,
+              "ra9": 7.11,
+              "whip": 1.26,
+              "k9": 5.68,
+              "bb9": 1.42,
+              "hr9": 4.26,
+              "kbb": 4.0,
+              "bf": 27.0
+            },
+            "recent": {
+              "ip": 2.33,
+              "era": 11.57,
+              "ra9": 11.57,
+              "whip": 2.14,
+              "k9": 0.0,
+              "bb9": 3.86,
+              "hr9": 7.71,
+              "kbb": 0.0,
+              "bf": 12.0
+            },
+            "usage": {},
+            "role_score": 0.55,
+            "games": 5.0,
+            "starts": 0.0,
+            "saves": 0.0,
+            "holds": 0.0,
+            "games_finished": 1.0,
+            "role": "chase",
+            "run_factor": 1.225,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 7.53,
+            "eff_era": 7.53,
+            "fatigue_score": 0.0
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 3.76,
+        "raw_era": 3.76,
+        "n_available": 6,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "id": "642207",
+            "name": "Devin Williams",
+            "season": {
+              "ip": 31.67,
+              "era": 4.83,
+              "ra9": 6.25,
+              "whip": 1.71,
+              "k9": 12.51,
+              "bb9": 5.4,
+              "hr9": 0.85,
+              "kbb": 2.32,
+              "bf": 149.0
+            },
+            "recent": {
+              "ip": 3.33,
+              "era": 10.8,
+              "ra9": 13.5,
+              "whip": 3.6,
+              "k9": 8.1,
+              "bb9": 8.1,
+              "hr9": 2.7,
+              "kbb": 1.0,
+              "bf": 22.0
+            },
+            "usage": {},
+            "role_score": 43.85,
+            "games": 35.0,
+            "starts": 0.0,
+            "saves": 13.0,
+            "holds": 0.0,
+            "games_finished": 23.0,
+            "role": "stopper",
+            "run_factor": 1.214,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 5.63,
+            "eff_era": 5.63,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "596133",
+            "name": "Luke Weaver",
+            "season": {
+              "ip": 39.0,
+              "era": 1.85,
+              "ra9": 2.08,
+              "whip": 0.82,
+              "k9": 9.92,
+              "bb9": 2.54,
+              "hr9": 0.46,
+              "kbb": 3.91,
+              "bf": 150.0
+            },
+            "recent": {
+              "ip": 3.0,
+              "era": 0.0,
+              "ra9": 3.0,
+              "whip": 1.0,
+              "k9": 12.0,
+              "bb9": 6.0,
+              "hr9": 0.0,
+              "kbb": 2.0,
+              "bf": 12.0
+            },
+            "usage": {},
+            "role_score": 21.4,
+            "games": 37.0,
+            "starts": 0.0,
+            "saves": 1.0,
+            "holds": 12.0,
+            "games_finished": 4.0,
+            "role": "stopper",
+            "run_factor": 0.814,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 1.63,
+            "eff_era": 1.63,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "548384",
+            "name": "Brooks Raley",
+            "season": {
+              "ip": 35.33,
+              "era": 2.04,
+              "ra9": 2.8,
+              "whip": 1.13,
+              "k9": 9.17,
+              "bb9": 3.31,
+              "hr9": 0.51,
+              "kbb": 2.77,
+              "bf": 148.0
+            },
+            "recent": {
+              "ip": 4.33,
+              "era": 0.0,
+              "ra9": 2.08,
+              "whip": 0.23,
+              "k9": 4.15,
+              "bb9": 0.0,
+              "hr9": 0.0,
+              "kbb": 2.0,
+              "bf": 14.0
+            },
+            "usage": {},
+            "role_score": 19.55,
+            "games": 39.0,
+            "starts": 0.0,
+            "saves": 0.0,
+            "holds": 12.0,
+            "games_finished": 5.0,
+            "role": "stopper",
+            "run_factor": 0.803,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 1.69,
+            "eff_era": 1.69,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "672335",
+            "name": "Cionel Pérez",
+            "season": {
+              "ip": 36.0,
+              "era": 5.75,
+              "ra9": 6.0,
+              "whip": 1.56,
+              "k9": 8.0,
+              "bb9": 4.0,
+              "hr9": 1.75,
+              "kbb": 2.0,
+              "bf": 159.0
+            },
+            "recent": {
+              "ip": 3.0,
+              "era": 6.0,
+              "ra9": 6.0,
+              "whip": 2.67,
+              "k9": 15.0,
+              "bb9": 9.0,
+              "hr9": 3.0,
+              "kbb": 1.67,
+              "bf": 17.0
+            },
+            "usage": {},
+            "role_score": 4.75,
+            "games": 31.0,
+            "starts": 2.0,
+            "saves": 0.0,
+            "holds": 5.0,
+            "games_finished": 5.0,
+            "role": "stopper",
+            "run_factor": 1.319,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 5.78,
+            "eff_era": 5.78,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "621345",
+            "name": "A.J. Minter",
+            "season": {
+              "ip": 19.0,
+              "era": 1.42,
+              "ra9": 2.37,
+              "whip": 0.84,
+              "k9": 8.05,
+              "bb9": 0.47,
+              "hr9": 0.95,
+              "kbb": 17.0,
+              "bf": 73.0
+            },
+            "recent": {
+              "ip": 5.0,
+              "era": 5.4,
+              "ra9": 5.4,
+              "whip": 1.6,
+              "k9": 10.8,
+              "bb9": 0.0,
+              "hr9": 3.6,
+              "kbb": 6.0,
+              "bf": 23.0
+            },
+            "usage": {},
+            "role_score": 5.8,
+            "games": 19.0,
+            "starts": 0.0,
+            "saves": 0.0,
+            "holds": 1.0,
+            "games_finished": 8.0,
+            "role": "chase",
+            "run_factor": 0.909,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 2.22,
+            "eff_era": 2.22,
+            "fatigue_score": 0.0
+          },
+          {
+            "id": "675540",
+            "name": "Xzavion Curry",
+            "season": {
+              "ip": 1.33,
+              "era": 6.75,
+              "ra9": 6.75,
+              "whip": 1.5,
+              "k9": 6.75,
+              "bb9": 6.75,
+              "hr9": 0.0,
+              "kbb": 1.0,
+              "bf": 6.0
+            },
+            "recent": {
+              "ip": 1.33,
+              "era": 6.75,
+              "ra9": 6.75,
+              "whip": 1.5,
+              "k9": 6.75,
+              "bb9": 6.75,
+              "hr9": 0.0,
+              "kbb": 1.0,
+              "bf": 6.0
+            },
+            "usage": {},
+            "role_score": 1.1,
+            "games": 2.0,
+            "starts": 0.0,
+            "saves": 0.0,
+            "holds": 0.0,
+            "games_finished": 2.0,
+            "role": "chase",
+            "run_factor": 1.039,
+            "availability": "available",
+            "avail_reason": "기록없음",
+            "streak": 0,
+            "blended_era": 6.75,
+            "eff_era": 6.75,
+            "fatigue_score": 0.0
+          }
+        ]
+      }
+    },
+    "sabermetric_detail": {
+      "home_lineup_rate": {
+        "k_pct": 0.225,
+        "bb_pct": 0.0857,
+        "hr_pct": 0.036,
+        "iso": 0.1729,
+        "babip": 0.2893,
+        "pa": 2942,
+        "n_batters": 9,
+        "_present": true
+      },
+      "away_lineup_rate": {
+        "k_pct": 0.2059,
+        "bb_pct": 0.0909,
+        "hr_pct": 0.0319,
+        "iso": 0.154,
+        "babip": 0.292,
+        "pa": 2322,
+        "n_batters": 9,
+        "_present": true
+      },
+      "home_sp_batted_ball": {
+        "gb_pct": 0.464,
+        "fb_pct": 0.536,
+        "hr_per_fb": 0.204,
+        "gb_fb_ratio": 0.87,
+        "_present": true
+      },
+      "away_sp_batted_ball": {
+        "gb_pct": 0.376,
+        "fb_pct": 0.624,
+        "hr_per_fb": 0.121,
+        "gb_fb_ratio": 0.6,
+        "_present": true
+      },
+      "home_sp_rate_stats": {
+        "k_pct": 0.24,
+        "bb_pct": 0.073,
+        "hr_pct": 0.047,
+        "bf": 425,
+        "_present": true
+      },
+      "away_sp_rate_stats": {
+        "k_pct": 0.279,
+        "bb_pct": 0.112,
+        "hr_pct": 0.03,
+        "bf": 233,
+        "_present": true
+      },
+      "home_bb_factor": {
+        "applied": 0.0376,
+        "fb_pct": 0.624,
+        "hr_per_fb": 0.121,
+        "park_hr_idx": 0.3,
+        "fb_relative": 0.733
+      },
+      "away_bb_factor": {
+        "applied": 0.0326,
+        "fb_pct": 0.536,
+        "hr_per_fb": 0.204,
+        "park_hr_idx": 0.3,
+        "fb_relative": 0.489
+      },
+      "home_coors_hangover": {
+        "applied": 0.0
+      },
+      "away_coors_hangover": {
+        "applied": 0.0
+      },
+      "home_discipline_match": {
+        "applied": -0.0036,
+        "pitcher_k_bb": 0.167,
+        "hitter_woba": 0.328
+      },
+      "away_discipline_match": {
+        "applied": -0.0039,
+        "pitcher_k_bb": 0.167,
+        "hitter_woba": 0.328
+      },
+      "home_velo_drop": {
+        "velo_drop": -0.69,
+        "month_gate": 1.0,
+        "applied": 0.0
+      },
+      "away_velo_drop": {
+        "velo_drop": 0.44,
+        "velo_recent": 91.9,
+        "month_gate": 1.0,
+        "applied": 0.0007
+      },
+      "home_venue_history": {
+        "coors_hangover": false,
+        "last_venue": null,
+        "days_since_coors": null
+      },
+      "away_venue_history": {
+        "coors_hangover": false,
+        "last_venue": null,
+        "days_since_coors": null
+      }
+    },
+    "tto": {
+      "home_vs_opp_sp": {
+        "expected_ip": 4.5,
+        "pa_3rd": 2.1,
+        "pa_4th": 0.0,
+        "applied": 0.006
+      },
+      "away_vs_opp_sp": {
+        "expected_ip": 5.11,
+        "pa_3rd": 4.7,
+        "pa_4th": 0.0,
+        "applied": 0.0117
+      }
+    },
+    "travel": {
+      "home": {
+        "applied": 0.0
+      },
+      "away": {
+        "applied": 0.0
+      }
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 5.149,
+        "runs_vs_bp": 5.192,
+        "sp_share": 0.5,
+        "expected_ip": 4.5,
+        "mu_full": 5.128,
+        "mu_f5": 2.475,
+        "explain": [
+          {
+            "key": "league",
+            "label": "리그 평균",
+            "after": 4.499,
+            "delta": 4.499
+          },
+          {
+            "key": "batter",
+            "label": "우리 타선",
+            "after": 5.004,
+            "delta": 0.505
+          },
+          {
+            "key": "pitcher",
+            "label": "상대 선발",
+            "after": 4.872,
+            "delta": -0.132
+          },
+          {
+            "key": "hand",
+            "label": "좌우·구속·타구 보정",
+            "after": 4.571,
+            "delta": -0.301
+          },
+          {
+            "key": "env",
+            "label": "환경(구장·날씨)",
+            "after": 5.125,
+            "delta": 0.554
+          },
+          {
+            "key": "bullpen",
+            "label": "상대 불펜",
+            "after": 5.159,
+            "delta": 0.034
+          },
+          {
+            "key": "tto",
+            "label": "TTO·라인업 궁합",
+            "after": 5.189,
+            "delta": 0.03
+          },
+          {
+            "key": "shrink",
+            "label": "리그평균 수축",
+            "after": 5.128,
+            "delta": -0.061
+          },
+          {
+            "key": "learn",
+            "label": "학습 보정",
+            "after": 4.833,
+            "delta": -0.295
+          },
+          {
+            "key": "adjust",
+            "label": "안전·시장 보정",
+            "after": 4.351,
+            "delta": -0.482
+          },
+          {
+            "key": "final",
+            "label": "최종 예상득점",
+            "after": 4.351,
+            "delta": 0.0
+          }
+        ],
+        "hr_env": {
+          "hr_env_pct": 30.0,
+          "hr_env_excess": -0.7,
+          "team_hr_dep": 1.17,
+          "hr_dep_excess": 0.17,
+          "pitch_hr_factor": 1.014,
+          "applied": -0.0656
+        },
+        "components": {
+          "method": "zero_base_woba",
+          "batter_woba": 0.3284,
+          "pitcher_woba_against": 0.3116,
+          "matchup_woba": 0.325,
+          "sp_path": {
+            "eff_woba": 0.3174,
+            "rpa": 0.1187,
+            "obp_eff": 0.3015,
+            "pa_per_inning": 4.295
+          },
+          "bp_path": {
+            "eff_woba": 0.3168,
+            "rpa": 0.1182,
+            "obp_eff": 0.301,
+            "pa_per_inning": 4.292
+          },
+          "hand_factor": 0.909,
+          "tto_mult": 1.006,
+          "park": 1.05,
+          "wx": 1.086,
+          "ump": 1.0,
+          "hr_adj": 0.934,
+          "travel_mult": 1.0,
+          "home_mult": 1.018,
+          "bp_factor": 1.013
+        }
+      },
+      "away": {
+        "runs_vs_sp": 6.098,
+        "runs_vs_bp": 6.443,
+        "sp_share": 0.568,
+        "expected_ip": 5.11,
+        "mu_full": 6.096,
+        "mu_f5": 3.26,
+        "explain": [
+          {
+            "key": "league",
+            "label": "리그 평균",
+            "after": 4.499,
+            "delta": 4.499
+          },
+          {
+            "key": "batter",
+            "label": "우리 타선",
+            "after": 4.977,
+            "delta": 0.478
+          },
+          {
+            "key": "pitcher",
+            "label": "상대 선발",
+            "after": 5.329,
+            "delta": 0.352
+          },
+          {
+            "key": "hand",
+            "label": "좌우·구속·타구 보정",
+            "after": 5.647,
+            "delta": 0.318
+          },
+          {
+            "key": "env",
+            "label": "환경(구장·날씨)",
+            "after": 6.05,
+            "delta": 0.403
+          },
+          {
+            "key": "bullpen",
+            "label": "상대 불펜",
+            "after": 6.22,
+            "delta": 0.17
+          },
+          {
+            "key": "tto",
+            "label": "TTO·라인업 궁합",
+            "after": 6.24,
+            "delta": 0.02
+          },
+          {
+            "key": "shrink",
+            "label": "리그평균 수축",
+            "after": 6.096,
+            "delta": -0.144
+          },
+          {
+            "key": "learn",
+            "label": "학습 보정",
+            "after": 7.076,
+            "delta": 0.98
+          },
+          {
+            "key": "adjust",
+            "label": "안전·시장 보정",
+            "after": 6.407,
+            "delta": -0.669
+          },
+          {
+            "key": "final",
+            "label": "최종 예상득점",
+            "after": 6.407,
+            "delta": 0.0
+          }
+        ],
+        "hr_env": {
+          "hr_env_pct": 30.0,
+          "hr_env_excess": -0.7,
+          "team_hr_dep": 1.125,
+          "hr_dep_excess": 0.125,
+          "pitch_hr_factor": 1.25,
+          "applied": -0.0499
+        },
+        "components": {
+          "method": "zero_base_woba",
+          "batter_woba": 0.3277,
+          "pitcher_woba_against": 0.3241,
+          "matchup_woba": 0.3368,
+          "sp_path": {
+            "eff_woba": 0.3444,
+            "rpa": 0.1403,
+            "obp_eff": 0.3272,
+            "pa_per_inning": 4.459
+          },
+          "bp_path": {
+            "eff_woba": 0.3433,
+            "rpa": 0.1395,
+            "obp_eff": 0.3261,
+            "pa_per_inning": 4.452
+          },
+          "hand_factor": 1.205,
+          "tto_mult": 1.012,
+          "park": 1.05,
+          "wx": 1.086,
+          "ump": 1.0,
+          "hr_adj": 0.95,
+          "travel_mult": 1.0,
+          "home_mult": 0.982,
+          "bp_factor": 1.065
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 2.71,
+      "away_xr": 3.45,
+      "total_xr": 6.16,
+      "home_win_prob": 0.3525,
+      "away_win_prob": 0.5189,
+      "over_probs": {
+        "4.5": 0.6277,
+        "5.0": 0.5111,
+        "5.5": 0.5111
+      }
+    }
+  }
+]
