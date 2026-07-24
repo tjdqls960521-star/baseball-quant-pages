@@ -1,20 +1,43 @@
 [
   {
-    "game_pk": "20260723OBKT02026",
+    "game_pk": "20260724KTLT02026",
     "status": "BEFORE",
-    "time_kst": "2026-07-23T18:30:00",
-    "game_date_kst": "2026-07-23",
-    "venue": "수원",
-    "home_team": "KT",
-    "away_team": "두산",
-    "home_abbr": "KT",
-    "away_abbr": "DSN",
-    "home_pitcher_name": "로건",
-    "away_pitcher_name": "곽빈",
+    "time_kst": "2026-07-24T18:30:00",
+    "game_date_kst": "2026-07-24",
+    "venue": "사직",
+    "home_team": "롯데",
+    "away_team": "KT",
+    "home_abbr": "LOT",
+    "away_abbr": "KT",
+    "home_pitcher_name": "나균안",
+    "away_pitcher_name": "로건",
     "home_score": 0,
     "away_score": 0,
     "winner": "DRAW",
     "home_pitcher": {
+      "id": "67539",
+      "name": "나균안",
+      "hand": "R",
+      "ip": 97.1,
+      "expected_ip": 5.7,
+      "era": 4.08,
+      "whip": 1.43,
+      "k9": 7.69,
+      "bb9": 2.6,
+      "hr9": 1.3,
+      "k_pct": 0.193,
+      "bb_pct": 0.065,
+      "hr_pct": 0.033,
+      "k_bb_pct": 0.128,
+      "games_started": 17,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 4.08,
+      "wins": 5,
+      "losses": 8,
+      "_source": "naver_preview"
+    },
+    "away_pitcher": {
       "id": "55912",
       "name": "로건",
       "hand": "L",
@@ -37,52 +60,64 @@
       "losses": 1,
       "_source": "naver_preview"
     },
-    "away_pitcher": {
-      "id": "68220",
-      "name": "곽빈",
-      "hand": "R",
-      "ip": 103.0,
-      "expected_ip": 5.7,
-      "era": 2.8,
-      "whip": 1.18,
-      "k9": 10.49,
-      "bb9": 2.53,
-      "hr9": 0.7,
-      "k_pct": 0.278,
-      "bb_pct": 0.067,
-      "hr_pct": 0.019,
-      "k_bb_pct": 0.211,
-      "games_started": 18,
-      "is_foreign": false,
-      "xwoba": 0.34,
-      "fip": 2.8,
-      "wins": 8,
-      "losses": 4,
-      "_source": "naver_preview"
-    },
     "umpire": "",
-    "market_total": 9.5,
-    "environment_factor": 0.9523,
-    "home_runs": 3.2080368390892966,
-    "away_runs": 4.451492212754759,
-    "total": 7.659529051844055,
-    "home_win_prob": 0.33575,
-    "away_win_prob": 0.55685,
-    "push_prob": 0.1074,
+    "market_total": 10.0,
+    "environment_factor": 1.0115,
+    "home_runs": 3.721659607143588,
+    "away_runs": 5.722366153602895,
+    "total": 9.444025760746483,
+    "home_win_prob": 0.2959,
+    "away_win_prob": 0.617,
+    "push_prob": 0.0871,
     "runline": {
-      "home_minus_1_5": 0.24425,
-      "home_plus_1_5": 0.54625,
-      "away_minus_1_5": 0.45375,
-      "away_plus_1_5": 0.75575
+      "home_minus_1_5": 0.22305,
+      "home_plus_1_5": 0.46825,
+      "away_minus_1_5": 0.53175,
+      "away_plus_1_5": 0.77695
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 3.84,
-        "runs_vs_bp": 3.82,
+        "runs_vs_sp": 4.665,
+        "runs_vs_bp": 4.663,
+        "sp_share": 0.6,
+        "expected_ip": 5.4,
+        "mu_full": 4.688,
+        "mu_f5": 2.565,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3365,
+          "pitcher_woba_against": 0.3352,
+          "matchup_woba": 0.3317,
+          "sp_path": {
+            "eff_woba": 0.3318,
+            "rpa": 0.1183,
+            "obp_eff": 0.3152,
+            "pa_per_inning": 4.381
+          },
+          "bp_path": {
+            "eff_woba": 0.3318,
+            "rpa": 0.1183,
+            "obp_eff": 0.3152,
+            "pa_per_inning": 4.381
+          },
+          "hand_factor": 1.0,
+          "park": 1.0,
+          "hr_adj": 1.0,
+          "home_mult": 1.015,
+          "bp_factor": 0.972
+        }
+      },
+      "away": {
+        "runs_vs_sp": 4.864,
+        "runs_vs_bp": 4.845,
         "sp_share": 0.633,
         "expected_ip": 5.7,
-        "mu_full": 3.955,
-        "mu_f5": 2.271,
+        "mu_full": 4.853,
+        "mu_f5": 2.79,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -90,101 +125,81 @@
         "components": {
           "method": "kbo_zero_base_woba",
           "batter_woba": 0.3443,
-          "pitcher_woba_against": 0.3045,
-          "matchup_woba": 0.3088,
+          "pitcher_woba_against": 0.3322,
+          "matchup_woba": 0.3365,
           "sp_path": {
-            "eff_woba": 0.3102,
-            "rpa": 0.1003,
-            "obp_eff": 0.2947,
-            "pa_per_inning": 4.253
+            "eff_woba": 0.3368,
+            "rpa": 0.1225,
+            "obp_eff": 0.32,
+            "pa_per_inning": 4.412
           },
           "bp_path": {
-            "eff_woba": 0.3097,
-            "rpa": 0.0999,
-            "obp_eff": 0.2942,
-            "pa_per_inning": 4.25
-          },
-          "hand_factor": 1.0,
-          "park": 1.0,
-          "hr_adj": 1.0,
-          "home_mult": 1.015,
-          "bp_factor": 1.007
-        }
-      },
-      "away": {
-        "runs_vs_sp": 5.243,
-        "runs_vs_bp": 5.225,
-        "sp_share": 0.6,
-        "expected_ip": 5.4,
-        "mu_full": 5.194,
-        "mu_f5": 2.842,
-        "hr_env": {
-          "hr_env_pct": null,
-          "applied": 0.0
-        },
-        "components": {
-          "method": "kbo_zero_base_woba",
-          "batter_woba": 0.351,
-          "pitcher_woba_against": 0.3352,
-          "matchup_woba": 0.3462,
-          "sp_path": {
-            "eff_woba": 0.3462,
-            "rpa": 0.1303,
-            "obp_eff": 0.3289,
-            "pa_per_inning": 4.47
-          },
-          "bp_path": {
-            "eff_woba": 0.3458,
-            "rpa": 0.13,
-            "obp_eff": 0.3285,
-            "pa_per_inning": 4.468
+            "eff_woba": 0.3363,
+            "rpa": 0.1221,
+            "obp_eff": 0.3195,
+            "pa_per_inning": 4.409
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.972
+          "bp_factor": 1.043
         }
       }
     },
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 27.1,
-      "temp_f": 80.8,
-      "wind_mph": 7.0,
+      "temp_c": 30.0,
+      "temp_f": 86.0,
+      "wind_mph": 4.1,
       "wind_dir_label": "IN(억제)",
-      "wind_dot_of": -7.1,
-      "precip_prob": 84,
-      "humidity_pct": 91,
-      "air_density": 1.1549,
-      "density_delta_pct": -2.86,
-      "carry_dist_pct": -1.03,
-      "run_factor": 0.9523,
-      "factor": 0.9523
+      "wind_dot_of": -5.2,
+      "precip_prob": 0,
+      "humidity_pct": 77,
+      "air_density": 1.1472,
+      "density_delta_pct": -3.51,
+      "carry_dist_pct": 0.52,
+      "run_factor": 1.0115,
+      "factor": 1.0115
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.19,
-      "away_xr": 3.0,
-      "total_xr": 5.19,
-      "home_win_prob": 0.3252,
+      "home_xr": 2.77,
+      "away_xr": 2.95,
+      "total_xr": 5.72,
+      "home_win_prob": 0.4047,
       "over_probs": {
-        "4.5": 0.5135,
-        "5.0": 0.3976,
-        "5.5": 0.3976
+        "4.5": 0.577,
+        "5.0": 0.464,
+        "5.5": 0.464
       }
     },
     "learn_correction": {
-      "home_team": -0.6361825151775109,
-      "away_team": -0.8470229039999999,
+      "home_team": -1.1818770454883647,
+      "away_team": -0.0772107003740161,
       "home_pitcher": 0.0,
-      "away_pitcher": 0.0
+      "away_pitcher": 0.53898207648
     },
     "pitcher_detail": {
       "home_season": {
+        "name": "나균안",
+        "hand": "R",
+        "era": 4.08,
+        "whip": 1.43,
+        "k9": 7.69,
+        "ip": 97.1,
+        "k_pct": 0.193,
+        "bb_pct": 0.065,
+        "hr_pct": 0.033,
+        "k_bb_pct": 0.128,
+        "wins": 5,
+        "losses": 8,
+        "is_foreign": false
+      },
+      "away_season": {
         "name": "로건",
         "hand": "L",
         "era": 3.33,
@@ -199,31 +214,22 @@
         "losses": 1,
         "is_foreign": false
       },
-      "away_season": {
-        "name": "곽빈",
-        "hand": "R",
-        "era": 2.8,
-        "whip": 1.18,
-        "k9": 10.49,
-        "ip": 103.0,
-        "k_pct": 0.278,
-        "bb_pct": 0.067,
-        "hr_pct": 0.019,
-        "k_bb_pct": 0.211,
-        "wins": 8,
-        "losses": 4,
-        "is_foreign": false
-      },
       "home_vs_opp": {
-        "_present": false
-      },
-      "away_vs_opp": {
-        "ip": 12.0,
-        "era": 0.75,
-        "whip": 0.5,
+        "ip": 4.0,
+        "era": 0.0,
+        "whip": 0.75,
         "k9": 13.5,
         "ba_against": null,
-        "games": 2,
+        "games": 1,
+        "_present": true
+      },
+      "away_vs_opp": {
+        "ip": 7.0,
+        "era": 2.57,
+        "whip": 0.29,
+        "k9": 0.0,
+        "ba_against": null,
+        "games": 1,
         "_present": true
       },
       "home_pitch_mix": [
@@ -274,6 +280,34 @@
       ],
       "home_splits": {
         "vs_lhb": {
+          "ops_against": 0.83,
+          "ba_against": 0.307,
+          "pa": 219,
+          "ip": 50.93023255813954,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.769,
+          "ba_against": 0.268,
+          "pa": 195,
+          "ip": 45.348837209302324,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      },
+      "away_splits": {
+        "vs_lhb": {
           "ops_against": 0.646,
           "ba_against": 0.298,
           "pa": 49,
@@ -299,38 +333,20 @@
           "ip": 0,
           "_present": false
         }
-      },
-      "away_splits": {
-        "vs_lhb": {
-          "ops_against": 0.613,
-          "ba_against": 0.244,
-          "pa": 228,
-          "ip": 53.02325581395349,
-          "_present": true
-        },
-        "vs_rhb": {
-          "ops_against": 0.65,
-          "ba_against": 0.23,
-          "pa": 197,
-          "ip": 45.81395348837209,
-          "_present": true
-        },
-        "home": {
-          "ops_against": 0.72,
-          "ba_against": 0.255,
-          "ip": 0,
-          "_present": false
-        },
-        "away": {
-          "ops_against": 0.72,
-          "ba_against": 0.255,
-          "ip": 0,
-          "_present": false
-        }
       }
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
+        "k_pct": 0.1448,
+        "bb_pct": 0.0979,
+        "hr_pct": 0.0349,
+        "iso": 0.184,
+        "babip": 0.3482,
+        "pa": 746,
+        "n_batters": 9,
+        "_present": true
+      },
+      "away_lineup_rate": {
         "k_pct": 0.1767,
         "bb_pct": 0.1006,
         "hr_pct": 0.025,
@@ -339,35 +355,25 @@
         "pa": 1720,
         "n_batters": 9,
         "_present": true
-      },
-      "away_lineup_rate": {
-        "k_pct": 0.1654,
-        "bb_pct": 0.1043,
-        "hr_pct": 0.0178,
-        "iso": 0.1322,
-        "babip": 0.3286,
-        "pa": 1294,
-        "n_batters": 9,
-        "_present": true
       }
     },
     "hitting_detail": {
       "home_season": {
+        "rpg": 4.958523489932886,
+        "ops": 0.697,
+        "woba": 0.3365,
+        "iso": 0.11699999999999999,
+        "avg": 0.259
+      },
+      "away_season": {
         "rpg": 5.406711409395974,
         "ops": 0.76,
         "woba": 0.3443,
         "iso": 0.11499999999999999,
         "avg": 0.281
       },
-      "away_season": {
-        "rpg": 5.271543624161073,
-        "ops": 0.741,
-        "woba": 0.351,
-        "iso": 0.127,
-        "avg": 0.27
-      },
       "home_recent": {
-        "rpg": 3.3,
+        "rpg": 4.9,
         "rpg_allowed": null,
         "games": 5,
         "wins": 0,
@@ -375,7 +381,7 @@
         "_present": true
       },
       "away_recent": {
-        "rpg": 5.0,
+        "rpg": 3.3,
         "rpg_allowed": null,
         "games": 5,
         "wins": 0,
@@ -387,6 +393,26 @@
       "away_vs_lhp": null,
       "away_vs_rhp": null,
       "home_top_player": {
+        "name": "나승엽",
+        "position": "",
+        "season": {
+          "ab": 180,
+          "hit": 45,
+          "hr": 5,
+          "rbi": 30,
+          "avg": 0.25,
+          "obp": 0.32
+        },
+        "recent5": {
+          "ab": 13,
+          "hit": 7,
+          "hr": 0,
+          "rbi": 3,
+          "avg": 0.538,
+          "_present": true
+        }
+      },
+      "away_top_player": {
         "name": "허경민",
         "position": "",
         "season": {
@@ -405,41 +431,21 @@
           "avg": 0.455,
           "_present": true
         }
-      },
-      "away_top_player": {
-        "name": "김대한",
-        "position": "",
-        "season": {
-          "ab": 7,
-          "hit": 3,
-          "hr": 0,
-          "rbi": 0,
-          "avg": 0.429,
-          "obp": 0.5
-        },
-        "recent5": {
-          "ab": 6,
-          "hit": 3,
-          "hr": 0,
-          "rbi": 0,
-          "avg": 0.5,
-          "_present": false
-        }
       }
     },
     "home_bp_quality": {
+      "overall_factor": 1.059,
+      "stopper_factor": 0.952,
+      "stopper_available": 1,
+      "chase_factor": 1.095,
+      "middle_factor": 1.038
+    },
+    "away_bp_quality": {
       "overall_factor": 0.971,
       "stopper_factor": 0.976,
       "stopper_available": 5,
       "chase_factor": null,
       "middle_factor": 0.952
-    },
-    "away_bp_quality": {
-      "overall_factor": 1.001,
-      "stopper_factor": 0.9,
-      "stopper_available": 4,
-      "chase_factor": 1.213,
-      "middle_factor": 1.01
     },
     "bullpen_detail": {
       "home_recent": {
@@ -455,6 +461,171 @@
         "_present": false
       },
       "home_bottomup": {
+        "effective_era": 5.05,
+        "raw_era": 4.86,
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "현도훈",
+            "reason": "2연투",
+            "eff_era": 5.23
+          },
+          {
+            "name": "김강현",
+            "reason": "2연투",
+            "eff_era": 4.09
+          }
+        ],
+        "relievers": [
+          {
+            "name": "김강현",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.65,
+            "eff_era": 4.09,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 3.0,
+              "pitches_3d": 27.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김원중",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 3.92,
+            "eff_era": 3.92,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 12.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 4
+            }
+          },
+          {
+            "name": "최준용",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 4.08,
+            "eff_era": 4.08,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 16.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 14
+            }
+          },
+          {
+            "name": "현도훈",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 4.44,
+            "eff_era": 5.23,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 27.0,
+              "pitches_3d": 45.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김기준",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.5,
+            "eff_era": 4.5,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "정철원",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.33,
+            "eff_era": 5.33,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 22.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이이무라",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 5.65,
+            "eff_era": 5.65,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 10.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이민석",
+            "hand": "?",
+            "ip": 21.3,
+            "era": 6.02,
+            "eff_era": 6.02,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 33.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
         "effective_era": 4.24,
         "raw_era": 4.24,
         "n_available": 7,
@@ -589,10 +760,3622 @@
             }
           }
         ]
+      }
+    },
+    "markov_detail": {
+      "home": {
+        "factor": 1.0526,
+        "raw_factor": 1.0642,
+        "mu": 5.227,
+        "weight": 0.4
+      },
+      "away": {
+        "factor": 1.2169,
+        "raw_factor": 1.2645,
+        "mu": 5.872,
+        "weight": 0.4
+      }
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "로건",
+        "lineup_woba": 0.3396,
+        "matchup_score": 0.9945,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 1.0422,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 1,
+          "games_last7": 4,
+          "acwr": 0.583,
+          "factor": 1.0,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "윤동희",
+            "hand": "R",
+            "pa": 195,
+            "woba": 0.326,
+            "ops": 0.701,
+            "platoon": 1.054,
+            "matchup_woba": 0.365,
+            "k_pct": 0.235,
+            "hr_pct": 0.035,
+            "edge": 0.014,
+            "vs_hand_ops": 0.739,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "전준우",
+            "hand": "R",
+            "pa": 199,
+            "woba": 0.3,
+            "ops": 0.623,
+            "platoon": 1.041,
+            "matchup_woba": 0.324,
+            "k_pct": 0.155,
+            "hr_pct": 0.026,
+            "edge": 0.011,
+            "vs_hand_ops": 0.648,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "레이예스",
+            "hand": "R",
+            "pa": 399,
+            "woba": 0.385,
+            "ops": 0.88,
+            "platoon": 1.047,
+            "matchup_woba": 0.437,
+            "k_pct": 0.12,
+            "hr_pct": 0.044,
+            "edge": 0.0218,
+            "vs_hand_ops": 0.922,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "노진혁",
+            "hand": "R",
+            "pa": 178,
+            "woba": 0.328,
+            "ops": 0.707,
+            "platoon": 1.006,
+            "matchup_woba": 0.354,
+            "k_pct": 0.188,
+            "hr_pct": 0.039,
+            "edge": 0.0179,
+            "vs_hand_ops": 0.711,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "손호영",
+            "hand": "R",
+            "pa": 171,
+            "woba": 0.318,
+            "ops": 0.678,
+            "platoon": 1.003,
+            "matchup_woba": 0.339,
+            "k_pct": 0.194,
+            "hr_pct": 0.035,
+            "edge": 0.0167,
+            "vs_hand_ops": 0.68,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "전민재",
+            "hand": "R",
+            "pa": 317,
+            "woba": 0.331,
+            "ops": 0.718,
+            "platoon": 1.114,
+            "matchup_woba": 0.39,
+            "k_pct": 0.197,
+            "hr_pct": 0.041,
+            "edge": 0.0216,
+            "vs_hand_ops": 0.799,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "한태양",
+            "hand": "R",
+            "pa": 141,
+            "woba": 0.331,
+            "ops": 0.718,
+            "platoon": 1.027,
+            "matchup_woba": 0.348,
+            "k_pct": 0.201,
+            "hr_pct": 0.02,
+            "edge": 0.0048,
+            "vs_hand_ops": 0.737,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "유강남",
+            "hand": "R",
+            "pa": 109,
+            "woba": 0.323,
+            "ops": 0.693,
+            "platoon": 1.065,
+            "matchup_woba": 0.362,
+            "k_pct": 0.224,
+            "hr_pct": 0.04,
+            "edge": 0.0217,
+            "vs_hand_ops": 0.737,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "황성빈",
+            "hand": "R",
+            "pa": 282,
+            "woba": 0.324,
+            "ops": 0.698,
+            "platoon": 1.025,
+            "matchup_woba": 0.329,
+            "k_pct": 0.162,
+            "hr_pct": 0.014,
+            "edge": 0.0026,
+            "vs_hand_ops": 0.715,
+            "source": "kbo_player_detail"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "나균안",
+        "lineup_woba": 0.3441,
+        "matchup_score": 0.9844,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.9927,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 3,
+          "games_last7": 5,
+          "acwr": 1.4,
+          "factor": 1.05,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "최원준",
+            "hand": "R",
+            "pa": 398,
+            "woba": 0.391,
+            "ops": 0.899,
+            "platoon": 1.005,
+            "matchup_woba": 0.437,
+            "k_pct": 0.174,
+            "hr_pct": 0.03,
+            "edge": 0.03,
+            "vs_hand_ops": 0.903,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "힐리어드",
+            "hand": "R",
+            "pa": 390,
+            "woba": 0.38,
+            "ops": 0.867,
+            "platoon": 1.035,
+            "matchup_woba": 0.457,
+            "k_pct": 0.301,
+            "hr_pct": 0.07,
+            "edge": 0.0542,
+            "vs_hand_ops": 0.897,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "김현수",
+            "hand": "R",
+            "pa": 393,
+            "woba": 0.337,
+            "ops": 0.737,
+            "platoon": 1.052,
+            "matchup_woba": 0.392,
+            "k_pct": 0.14,
+            "hr_pct": 0.027,
+            "edge": 0.0316,
+            "vs_hand_ops": 0.776,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "안현민",
+            "hand": "R",
+            "pa": 166,
+            "woba": 0.381,
+            "ops": 0.871,
+            "platoon": 0.996,
+            "matchup_woba": 0.424,
+            "k_pct": 0.22,
+            "hr_pct": 0.034,
+            "edge": 0.0169,
+            "vs_hand_ops": 0.867,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "장성우",
+            "hand": "R",
+            "pa": 215,
+            "woba": 0.345,
+            "ops": 0.761,
+            "platoon": 1.047,
+            "matchup_woba": 0.409,
+            "k_pct": 0.268,
+            "hr_pct": 0.05,
+            "edge": 0.0283,
+            "vs_hand_ops": 0.797,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "이강민",
+            "hand": "R",
+            "pa": 162,
+            "woba": 0.279,
+            "ops": 0.561,
+            "platoon": 0.943,
+            "matchup_woba": 0.29,
+            "k_pct": 0.274,
+            "hr_pct": 0.017,
+            "edge": 0.0217,
+            "vs_hand_ops": 0.529,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "김상수",
+            "hand": "R",
+            "pa": 308,
+            "woba": 0.331,
+            "ops": 0.718,
+            "platoon": 0.963,
+            "matchup_woba": 0.347,
+            "k_pct": 0.161,
+            "hr_pct": 0.012,
+            "edge": 0.0127,
+            "vs_hand_ops": 0.692,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "류현인",
+            "hand": "R",
+            "pa": 129,
+            "woba": 0.331,
+            "ops": 0.717,
+            "platoon": 0.968,
+            "matchup_woba": 0.348,
+            "k_pct": 0.216,
+            "hr_pct": 0.019,
+            "edge": 0.0235,
+            "vs_hand_ops": 0.694,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "한승택",
+            "hand": "R",
+            "pa": 210,
+            "woba": 0.309,
+            "ops": 0.65,
+            "platoon": 0.895,
+            "matchup_woba": 0.299,
+            "k_pct": 0.257,
+            "hr_pct": 0.017,
+            "edge": 0.0175,
+            "vs_hand_ops": 0.582,
+            "source": "kbo_player_detail"
+          }
+        ]
+      }
+    },
+    "standings_detail": {
+      "home": {
+        "d": 2,
+        "era": "4.45",
+        "hra": "0.259",
+        "w": 40,
+        "wra": "0.449",
+        "name": "롯데",
+        "rank": 8,
+        "hr": 66,
+        "l": 49,
+        "seriesOutcome": {
+          "d": 2,
+          "w": 40,
+          "l": 49
+        }
+      },
+      "away": {
+        "d": 2,
+        "era": "4.53",
+        "hra": "0.281",
+        "w": 51,
+        "wra": "0.593",
+        "name": "KT",
+        "rank": 2,
+        "hr": 61,
+        "l": 35,
+        "seriesOutcome": {
+          "d": 2,
+          "w": 51,
+          "l": 35
+        }
+      }
+    },
+    "odds": {
+      "book": "Pinnacle",
+      "away_ml": 1.52,
+      "home_ml": 2.55,
+      "total": 10.0,
+      "over": 2.08,
+      "under": 1.76
+    },
+    "picks": [
+      {
+        "matchup": "KT @ LOT",
+        "market": "moneyline",
+        "label": "LOT ML",
+        "prob": 0.2959,
+        "odds": 2.55,
+        "ev": -0.2455,
+        "kelly_raw": 0.0,
+        "p_hat": 0.3618,
+        "kelly_f": -0.0499,
+        "ev_debiased": -0.0773,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "KT @ LOT",
+        "market": "moneyline",
+        "label": "KT ML",
+        "prob": 0.617,
+        "odds": 1.52,
+        "ev": -0.0622,
+        "kelly_raw": 0.0,
+        "p_hat": 0.6251,
+        "kelly_f": -0.0958,
+        "ev_debiased": -0.0498,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "KT @ LOT",
+        "market": "total",
+        "label": "Over 10.0",
+        "prob": 0.4189,
+        "odds": 2.08,
+        "ev": -0.1287,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4445,
+        "kelly_f": -0.0698,
+        "ev_debiased": -0.0754,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 9.47,
+        "market_total": 10.0
+      },
+      {
+        "matchup": "KT @ LOT",
+        "market": "total",
+        "label": "Under 10.0",
+        "prob": 0.5022,
+        "odds": 1.76,
+        "ev": -0.1161,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5279,
+        "kelly_f": -0.0934,
+        "ev_debiased": -0.071,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 9.47,
+        "market_total": 10.0
+      }
+    ],
+    "scores_top": [
+      {
+        "away": 4,
+        "home": 1,
+        "prob": 0.0188
+      },
+      {
+        "away": 4,
+        "home": 2,
+        "prob": 0.0184
+      },
+      {
+        "away": 5,
+        "home": 1,
+        "prob": 0.0176
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0173
+      },
+      {
+        "away": 5,
+        "home": 2,
+        "prob": 0.0173
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0165
+      },
+      {
+        "away": 6,
+        "home": 2,
+        "prob": 0.0163
+      },
+      {
+        "away": 3,
+        "home": 3,
+        "prob": 0.016
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "kbo_official",
+      "away_hitting": "kbo_official",
+      "home_pitcher": "naver_preview",
+      "away_pitcher": "naver_preview",
+      "weather": "open-meteo",
+      "odds": "live"
+    },
+    "data_quality": {
+      "level": "full",
+      "missing": []
+    }
+  },
+  {
+    "game_pk": "20260724LGHH02026",
+    "status": "BEFORE",
+    "time_kst": "2026-07-24T18:30:00",
+    "game_date_kst": "2026-07-24",
+    "venue": "대전",
+    "home_team": "한화",
+    "away_team": "LG",
+    "home_abbr": "HAN",
+    "away_abbr": "LG",
+    "home_pitcher_name": "박준영",
+    "away_pitcher_name": "임찬규",
+    "home_score": 0,
+    "away_score": 0,
+    "winner": "DRAW",
+    "home_pitcher": {
+      "id": "52731",
+      "name": "박준영",
+      "hand": "R",
+      "ip": 38.2,
+      "expected_ip": 1.3,
+      "era": 4.01,
+      "whip": 1.52,
+      "k9": 7.54,
+      "bb9": 5.89,
+      "hr9": 0.94,
+      "k_pct": 0.185,
+      "bb_pct": 0.145,
+      "hr_pct": 0.023,
+      "k_bb_pct": 0.041,
+      "games_started": 29,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 4.01,
+      "wins": 1,
+      "losses": 0,
+      "_source": "naver_preview"
+    },
+    "away_pitcher": {
+      "id": "61101",
+      "name": "임찬규",
+      "hand": "R",
+      "ip": 99.1,
+      "expected_ip": 5.5,
+      "era": 4.09,
+      "whip": 1.44,
+      "k9": 4.9,
+      "bb9": 2.54,
+      "hr9": 0.64,
+      "k_pct": 0.123,
+      "bb_pct": 0.064,
+      "hr_pct": 0.016,
+      "k_bb_pct": 0.059,
+      "games_started": 18,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 4.09,
+      "wins": 9,
+      "losses": 3,
+      "_source": "naver_preview"
+    },
+    "umpire": "",
+    "market_total": 10.5,
+    "environment_factor": 1.1034,
+    "home_runs": 7.038997091147561,
+    "away_runs": 4.67775875499874,
+    "total": 11.7167558461463,
+    "home_win_prob": 0.63545,
+    "away_win_prob": 0.29245,
+    "push_prob": 0.0721,
+    "runline": {
+      "home_minus_1_5": 0.55325,
+      "home_plus_1_5": 0.77015,
+      "away_minus_1_5": 0.22985,
+      "away_plus_1_5": 0.44675
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 4.867,
+        "runs_vs_bp": 4.859,
+        "sp_share": 0.611,
+        "expected_ip": 5.5,
+        "mu_full": 4.859,
+        "mu_f5": 2.705,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3458,
+          "pitcher_woba_against": 0.3311,
+          "matchup_woba": 0.3369,
+          "sp_path": {
+            "eff_woba": 0.3369,
+            "rpa": 0.1226,
+            "obp_eff": 0.3201,
+            "pa_per_inning": 4.412
+          },
+          "bp_path": {
+            "eff_woba": 0.3367,
+            "rpa": 0.1224,
+            "obp_eff": 0.3199,
+            "pa_per_inning": 4.411
+          },
+          "hand_factor": 1.0,
+          "park": 1.05,
+          "hr_adj": 1.0,
+          "home_mult": 1.015,
+          "bp_factor": 0.958
+        }
+      },
+      "away": {
+        "runs_vs_sp": 4.913,
+        "runs_vs_bp": 4.915,
+        "sp_share": 0.2,
+        "expected_ip": 1.3,
+        "mu_full": 4.922,
+        "mu_f5": 2.367,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3409,
+          "pitcher_woba_against": 0.3373,
+          "matchup_woba": 0.3382,
+          "sp_path": {
+            "eff_woba": 0.3381,
+            "rpa": 0.1235,
+            "obp_eff": 0.3212,
+            "pa_per_inning": 4.419
+          },
+          "bp_path": {
+            "eff_woba": 0.3381,
+            "rpa": 0.1236,
+            "obp_eff": 0.3212,
+            "pa_per_inning": 4.42
+          },
+          "hand_factor": 1.0,
+          "park": 1.05,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.98
+        }
+      }
+    },
+    "weather": {
+      "source": "open-meteo",
+      "model": "air_density_v3",
+      "temp_c": 31.7,
+      "temp_f": 89.1,
+      "wind_mph": 4.0,
+      "wind_dir_label": "OUT(밀어줌)",
+      "wind_dot_of": 5.6,
+      "precip_prob": 31,
+      "humidity_pct": 68,
+      "air_density": 1.1397,
+      "density_delta_pct": -4.14,
+      "carry_dist_pct": 2.74,
+      "run_factor": 1.0508,
+      "factor": 1.0508
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "f5": {
+      "home_xr": 2.9,
+      "away_xr": 2.84,
+      "total_xr": 5.75,
+      "home_win_prob": 0.4355,
+      "over_probs": {
+        "4.5": 0.5694,
+        "5.0": 0.4562,
+        "5.5": 0.4562
+      }
+    },
+    "learn_correction": {
+      "home_team": 1.5,
+      "away_team": -0.35895629165107235,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0
+    },
+    "pitcher_detail": {
+      "home_season": {
+        "name": "박준영",
+        "hand": "R",
+        "era": 4.01,
+        "whip": 1.52,
+        "k9": 7.54,
+        "ip": 38.2,
+        "k_pct": 0.185,
+        "bb_pct": 0.145,
+        "hr_pct": 0.023,
+        "k_bb_pct": 0.041,
+        "wins": 1,
+        "losses": 0,
+        "is_foreign": false
+      },
+      "away_season": {
+        "name": "임찬규",
+        "hand": "R",
+        "era": 4.09,
+        "whip": 1.44,
+        "k9": 4.9,
+        "ip": 99.1,
+        "k_pct": 0.123,
+        "bb_pct": 0.064,
+        "hr_pct": 0.016,
+        "k_bb_pct": 0.059,
+        "wins": 9,
+        "losses": 3,
+        "is_foreign": false
+      },
+      "home_vs_opp": {
+        "ip": 7.1,
+        "era": 3.8,
+        "whip": 0.7,
+        "k9": 10.14,
+        "ba_against": null,
+        "games": 3,
+        "_present": true
+      },
+      "away_vs_opp": {
+        "_present": false
+      },
+      "home_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "away_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "home_splits": {
+        "vs_lhb": {
+          "ops_against": 0.794,
+          "ba_against": 0.254,
+          "pa": 74,
+          "ip": 17.209302325581397,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.841,
+          "ba_against": 0.243,
+          "pa": 88,
+          "ip": 20.46511627906977,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      },
+      "away_splits": {
+        "vs_lhb": {
+          "ops_against": 0.691,
+          "ba_against": 0.282,
+          "pa": 228,
+          "ip": 53.02325581395349,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.797,
+          "ba_against": 0.307,
+          "pa": 196,
+          "ip": 45.58139534883721,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      }
+    },
+    "sabermetric_detail": {
+      "home_lineup_rate": {
+        "k_pct": 0.179,
+        "bb_pct": 0.1113,
+        "hr_pct": 0.0383,
+        "iso": 0.2057,
+        "babip": 0.3313,
+        "pa": 1464,
+        "n_batters": 9,
+        "_present": true
+      },
+      "away_lineup_rate": {
+        "k_pct": 0.1525,
+        "bb_pct": 0.1132,
+        "hr_pct": 0.032,
+        "iso": 0.1745,
+        "babip": 0.3302,
+        "pa": 1095,
+        "n_batters": 9,
+        "_present": true
+      }
+    },
+    "hitting_detail": {
+      "home_season": {
+        "rpg": 5.556107382550335,
+        "ops": 0.781,
+        "woba": 0.3458,
+        "iso": 0.15199999999999997,
+        "avg": 0.275
+      },
+      "away_season": {
+        "rpg": 5.371140939597315,
+        "ops": 0.755,
+        "woba": 0.3409,
+        "iso": 0.128,
+        "avg": 0.27
+      },
+      "home_recent": {
+        "rpg": 5.6,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "away_recent": {
+        "rpg": 4.6,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "home_vs_lhp": null,
+      "home_vs_rhp": null,
+      "away_vs_lhp": null,
+      "away_vs_rhp": null,
+      "home_top_player": {
+        "name": "최인호",
+        "position": "",
+        "season": {
+          "ab": 50,
+          "hit": 14,
+          "hr": 1,
+          "rbi": 6,
+          "avg": 0.28,
+          "obp": 0.356
+        },
+        "recent5": {
+          "ab": 9,
+          "hit": 4,
+          "hr": 0,
+          "rbi": 1,
+          "avg": 0.444,
+          "_present": false
+        }
+      },
+      "away_top_player": {
+        "name": "구본혁",
+        "position": "",
+        "season": {
+          "ab": 195,
+          "hit": 54,
+          "hr": 0,
+          "rbi": 15,
+          "avg": 0.277,
+          "obp": 0.34
+        },
+        "recent5": {
+          "ab": 7,
+          "hit": 3,
+          "hr": 0,
+          "rbi": 0,
+          "avg": 0.429,
+          "_present": false
+        }
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.991,
+      "stopper_factor": 0.957,
+      "stopper_available": 1,
+      "chase_factor": 0.981,
+      "middle_factor": 1.183
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.981,
+      "stopper_factor": 0.884,
+      "stopper_available": 1,
+      "chase_factor": 0.985,
+      "middle_factor": 0.991
+    },
+    "bullpen_detail": {
+      "home_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "away_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "home_bottomup": {
+        "effective_era": 4.42,
+        "raw_era": 4.42,
+        "n_available": 10,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "장유호",
+            "hand": "?",
+            "ip": 18.7,
+            "era": 2.16,
+            "eff_era": 2.16,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 10.0,
+              "pitches_3d": 10.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "박준영",
+            "hand": "?",
+            "ip": 22.7,
+            "era": 3.96,
+            "eff_era": 3.96,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "조동욱",
+            "hand": "?",
+            "ip": 10.7,
+            "era": 4.05,
+            "eff_era": 4.05,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 15.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "이민우",
+            "hand": "?",
+            "ip": 14.7,
+            "era": 4.12,
+            "eff_era": 4.12,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 27.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 6
+            }
+          },
+          {
+            "name": "이상규",
+            "hand": "?",
+            "ip": 10.7,
+            "era": 4.38,
+            "eff_era": 4.38,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 22.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김종수",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 4.88,
+            "eff_era": 4.88,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 17.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "강재민",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.02,
+            "eff_era": 5.02,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 22.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이교훈",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 5.04,
+            "eff_era": 5.04,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 54.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "박상원",
+            "hand": "?",
+            "ip": 18.7,
+            "era": 5.96,
+            "eff_era": 5.96,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 8.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "박재규",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 6.3,
+            "eff_era": 6.3,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 21.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
       },
       "away_bottomup": {
-        "effective_era": 4.51,
-        "raw_era": 4.51,
+        "effective_era": 4.33,
+        "raw_era": 4.33,
+        "n_available": 11,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "손주영",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.52,
+            "eff_era": 3.52,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 19
+            }
+          },
+          {
+            "name": "김진수",
+            "hand": "?",
+            "ip": 17.3,
+            "era": 3.67,
+            "eff_era": 3.67,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 22.0,
+              "pitches_3d": 37.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "김영우",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.86,
+            "eff_era": 3.86,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이우찬",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.05,
+            "eff_era": 4.05,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 10.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "우강훈",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 4.07,
+            "eff_era": 4.07,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 19.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "리오스",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.15,
+            "eff_era": 4.15,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 2
+            }
+          },
+          {
+            "name": "김진성",
+            "hand": "?",
+            "ip": 10.7,
+            "era": 4.4,
+            "eff_era": 4.4,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 14.0,
+              "pitches_3d": 31.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "박시원",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.4,
+            "eff_era": 4.4,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 4.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김윤식",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 4.78,
+            "eff_era": 4.78,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "함덕주",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 5.04,
+            "eff_era": 5.04,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 32.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "이정용",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.62,
+            "eff_era": 5.62,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": {
+        "factor": 1.2419,
+        "raw_factor": 1.295,
+        "mu": 6.559,
+        "weight": 0.4
+      },
+      "away": {
+        "factor": 0.9756,
+        "raw_factor": 0.9702,
+        "mu": 5.209,
+        "weight": 0.4
+      }
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "임찬규",
+        "lineup_woba": 0.3443,
+        "matchup_score": 0.9833,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.984,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 2,
+          "games_last7": 5,
+          "acwr": 0.933,
+          "factor": 1.022,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "오재원",
+            "hand": "R",
+            "pa": 157,
+            "woba": 0.32,
+            "ops": 0.683,
+            "platoon": 0.974,
+            "matchup_woba": 0.34,
+            "k_pct": 0.112,
+            "hr_pct": 0.008,
+            "edge": 0.022,
+            "vs_hand_ops": 0.665,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "노시환",
+            "hand": "R",
+            "pa": 372,
+            "woba": 0.36,
+            "ops": 0.806,
+            "platoon": 0.975,
+            "matchup_woba": 0.361,
+            "k_pct": 0.205,
+            "hr_pct": 0.029,
+            "edge": -0.0029,
+            "vs_hand_ops": 0.786,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "강백호",
+            "hand": "R",
+            "pa": 358,
+            "woba": 0.398,
+            "ops": 0.921,
+            "platoon": 1.079,
+            "matchup_woba": 0.438,
+            "k_pct": 0.141,
+            "hr_pct": 0.039,
+            "edge": -0.0042,
+            "vs_hand_ops": 0.994,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "문현빈",
+            "hand": "R",
+            "pa": 400,
+            "woba": 0.366,
+            "ops": 0.823,
+            "platoon": 0.974,
+            "matchup_woba": 0.38,
+            "k_pct": 0.095,
+            "hr_pct": 0.017,
+            "edge": 0.0154,
+            "vs_hand_ops": 0.801,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "페라자",
+            "hand": "R",
+            "pa": 398,
+            "woba": 0.395,
+            "ops": 0.912,
+            "platoon": 1.098,
+            "matchup_woba": 0.444,
+            "k_pct": 0.137,
+            "hr_pct": 0.03,
+            "edge": -0.0018,
+            "vs_hand_ops": 1.002,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "채은성",
+            "hand": "R",
+            "pa": 115,
+            "woba": 0.324,
+            "ops": 0.697,
+            "platoon": 0.954,
+            "matchup_woba": 0.334,
+            "k_pct": 0.137,
+            "hr_pct": 0.014,
+            "edge": 0.0151,
+            "vs_hand_ops": 0.664,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "하주석",
+            "hand": "R",
+            "pa": 85,
+            "woba": 0.319,
+            "ops": 0.681,
+            "platoon": 0.933,
+            "matchup_woba": 0.326,
+            "k_pct": 0.168,
+            "hr_pct": 0.01,
+            "edge": 0.0217,
+            "vs_hand_ops": 0.636,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "심우준",
+            "hand": "R",
+            "pa": 285,
+            "woba": 0.328,
+            "ops": 0.708,
+            "platoon": 0.953,
+            "matchup_woba": 0.341,
+            "k_pct": 0.129,
+            "hr_pct": 0.012,
+            "edge": 0.016,
+            "vs_hand_ops": 0.674,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "최재훈",
+            "hand": "R",
+            "pa": 110,
+            "woba": 0.294,
+            "ops": 0.606,
+            "platoon": 0.892,
+            "matchup_woba": 0.296,
+            "k_pct": 0.135,
+            "hr_pct": 0.009,
+            "edge": 0.0099,
+            "vs_hand_ops": 0.54,
+            "source": "kbo_player_detail"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "박준영",
+        "lineup_woba": 0.3403,
+        "matchup_score": 1.0272,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.9896,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 3,
+          "games_last7": 5,
+          "acwr": 1.4,
+          "factor": 1.05,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "홍창기",
+            "hand": "R",
+            "pa": 353,
+            "woba": 0.331,
+            "ops": 0.718,
+            "platoon": 0.955,
+            "matchup_woba": 0.381,
+            "k_pct": 0.247,
+            "hr_pct": 0.008,
+            "edge": 0.0382,
+            "vs_hand_ops": 0.685,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "오스틴",
+            "hand": "R",
+            "pa": 405,
+            "woba": 0.424,
+            "ops": 1.0,
+            "platoon": 1.038,
+            "matchup_woba": 0.485,
+            "k_pct": 0.17,
+            "hr_pct": 0.059,
+            "edge": 0.0282,
+            "vs_hand_ops": 1.038,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "박해민",
+            "hand": "R",
+            "pa": 359,
+            "woba": 0.334,
+            "ops": 0.727,
+            "platoon": 0.958,
+            "matchup_woba": 0.343,
+            "k_pct": 0.153,
+            "hr_pct": 0.013,
+            "edge": 0.017,
+            "vs_hand_ops": 0.696,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "박동원",
+            "hand": "R",
+            "pa": 287,
+            "woba": 0.342,
+            "ops": 0.75,
+            "platoon": 0.995,
+            "matchup_woba": 0.385,
+            "k_pct": 0.257,
+            "hr_pct": 0.031,
+            "edge": 0.032,
+            "vs_hand_ops": 0.746,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "문성주",
+            "hand": "R",
+            "pa": 209,
+            "woba": 0.333,
+            "ops": 0.724,
+            "platoon": 0.98,
+            "matchup_woba": 0.353,
+            "k_pct": 0.155,
+            "hr_pct": 0.013,
+            "edge": 0.0163,
+            "vs_hand_ops": 0.71,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "신민재",
+            "hand": "R",
+            "pa": 299,
+            "woba": 0.305,
+            "ops": 0.64,
+            "platoon": 0.963,
+            "matchup_woba": 0.328,
+            "k_pct": 0.158,
+            "hr_pct": 0.009,
+            "edge": 0.0201,
+            "vs_hand_ops": 0.617,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "오지환",
+            "hand": "R",
+            "pa": 298,
+            "woba": 0.332,
+            "ops": 0.721,
+            "platoon": 0.968,
+            "matchup_woba": 0.355,
+            "k_pct": 0.221,
+            "hr_pct": 0.023,
+            "edge": 0.0224,
+            "vs_hand_ops": 0.698,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "천성호",
+            "hand": "R",
+            "pa": 221,
+            "woba": 0.331,
+            "ops": 0.719,
+            "platoon": 1.025,
+            "matchup_woba": 0.346,
+            "k_pct": 0.173,
+            "hr_pct": 0.014,
+            "edge": 0.0083,
+            "vs_hand_ops": 0.737,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "문보경",
+            "hand": "R",
+            "pa": 268,
+            "woba": 0.339,
+            "ops": 0.741,
+            "platoon": 1.032,
+            "matchup_woba": 0.4,
+            "k_pct": 0.216,
+            "hr_pct": 0.027,
+            "edge": 0.0324,
+            "vs_hand_ops": 0.765,
+            "source": "kbo_player_detail"
+          }
+        ]
+      }
+    },
+    "standings_detail": {
+      "home": {
+        "d": 3,
+        "era": "4.59",
+        "hra": "0.275",
+        "w": 42,
+        "wra": "0.488",
+        "name": "한화",
+        "rank": 6,
+        "hr": 103,
+        "l": 44,
+        "seriesOutcome": {
+          "d": 3,
+          "w": 42,
+          "l": 44
+        }
+      },
+      "away": {
+        "d": 0,
+        "era": "4.59",
+        "hra": "0.270",
+        "w": 52,
+        "wra": "0.571",
+        "name": "LG",
+        "rank": 3,
+        "hr": 79,
+        "l": 39,
+        "seriesOutcome": {
+          "d": 0,
+          "w": 52,
+          "l": 39
+        }
+      }
+    },
+    "odds": {
+      "book": "Pinnacle",
+      "home_ml": 2.49,
+      "away_ml": 1.54,
+      "total": 10.5,
+      "over": 1.82,
+      "under": 2.01
+    },
+    "picks": [
+      {
+        "matchup": "LG @ HAN",
+        "market": "moneyline",
+        "label": "HAN ML",
+        "prob": 0.6354,
+        "odds": 2.49,
+        "ev": 0.5823,
+        "kelly_raw": 0.3908,
+        "p_hat": 0.4201,
+        "kelly_f": 0.031,
+        "ev_debiased": 0.0461,
+        "stake": 34,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "LG @ HAN",
+        "market": "moneyline",
+        "label": "LG ML",
+        "prob": 0.2924,
+        "odds": 1.54,
+        "ev": -0.5496,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5691,
+        "kelly_f": -0.229,
+        "ev_debiased": -0.1237,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "LG @ HAN",
+        "market": "total",
+        "label": "Over 10.5",
+        "prob": 0.5908,
+        "odds": 1.82,
+        "ev": 0.0753,
+        "kelly_raw": 0.0919,
+        "p_hat": 0.5479,
+        "kelly_f": -0.0034,
+        "ev_debiased": -0.0028,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 11.79,
+        "market_total": 10.5
+      },
+      {
+        "matchup": "LG @ HAN",
+        "market": "total",
+        "label": "Under 10.5",
+        "prob": 0.4092,
+        "odds": 2.01,
+        "ev": -0.1776,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4521,
+        "kelly_f": -0.0904,
+        "ev_debiased": -0.0913,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 11.79,
+        "market_total": 10.5
+      }
+    ],
+    "scores_top": [
+      {
+        "away": 3,
+        "home": 4,
+        "prob": 0.0146
+      },
+      {
+        "away": 2,
+        "home": 6,
+        "prob": 0.0138
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0129
+      },
+      {
+        "away": 4,
+        "home": 5,
+        "prob": 0.0129
+      },
+      {
+        "away": 4,
+        "home": 6,
+        "prob": 0.0127
+      },
+      {
+        "away": 2,
+        "home": 5,
+        "prob": 0.0126
+      },
+      {
+        "away": 2,
+        "home": 7,
+        "prob": 0.0123
+      },
+      {
+        "away": 3,
+        "home": 6,
+        "prob": 0.0123
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "kbo_official",
+      "away_hitting": "kbo_official",
+      "home_pitcher": "naver_preview",
+      "away_pitcher": "naver_preview",
+      "weather": "open-meteo",
+      "odds": "live"
+    },
+    "data_quality": {
+      "level": "full",
+      "missing": []
+    }
+  },
+  {
+    "game_pk": "20260724NCSK02026",
+    "status": "BEFORE",
+    "time_kst": "2026-07-24T18:30:00",
+    "game_date_kst": "2026-07-24",
+    "venue": "문학",
+    "home_team": "SSG",
+    "away_team": "NC",
+    "home_abbr": "SSG",
+    "away_abbr": "NC",
+    "home_pitcher_name": "해치",
+    "away_pitcher_name": "구창모",
+    "home_score": 0,
+    "away_score": 0,
+    "winner": "DRAW",
+    "home_pitcher": {
+      "id": "56855",
+      "name": "해치",
+      "hand": "R",
+      "ip": 28.1,
+      "expected_ip": 4.7,
+      "era": 7.69,
+      "whip": 1.92,
+      "k9": 7.37,
+      "bb9": 3.52,
+      "hr9": 1.28,
+      "k_pct": 0.166,
+      "bb_pct": 0.08,
+      "hr_pct": 0.029,
+      "k_bb_pct": 0.087,
+      "games_started": 6,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 7.69,
+      "wins": 1,
+      "losses": 4,
+      "_source": "naver_preview"
+    },
+    "away_pitcher": {
+      "id": "65933",
+      "name": "구창모",
+      "hand": "L",
+      "ip": 97.1,
+      "expected_ip": 5.7,
+      "era": 3.61,
+      "whip": 1.25,
+      "k9": 7.6,
+      "bb9": 2.5,
+      "hr9": 1.11,
+      "k_pct": 0.199,
+      "bb_pct": 0.065,
+      "hr_pct": 0.029,
+      "k_bb_pct": 0.133,
+      "games_started": 17,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 3.61,
+      "wins": 8,
+      "losses": 2,
+      "_source": "naver_preview"
+    },
+    "umpire": "",
+    "market_total": 9.5,
+    "environment_factor": 1.0,
+    "home_runs": 4.569274844014428,
+    "away_runs": 6.643577936495626,
+    "total": 11.212852780510055,
+    "home_win_prob": 0.3053,
+    "away_win_prob": 0.6179,
+    "push_prob": 0.0768,
+    "runline": {
+      "home_minus_1_5": 0.2399,
+      "home_plus_1_5": 0.4655,
+      "away_minus_1_5": 0.5345,
+      "away_plus_1_5": 0.7601
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 5.031,
+        "runs_vs_bp": 5.02,
+        "sp_share": 0.633,
+        "expected_ip": 5.7,
+        "mu_full": 5.009,
+        "mu_f5": 2.875,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3561,
+          "pitcher_woba_against": 0.3246,
+          "matchup_woba": 0.3407,
+          "sp_path": {
+            "eff_woba": 0.341,
+            "rpa": 0.126,
+            "obp_eff": 0.324,
+            "pa_per_inning": 4.438
+          },
+          "bp_path": {
+            "eff_woba": 0.3407,
+            "rpa": 0.1257,
+            "obp_eff": 0.3237,
+            "pa_per_inning": 4.436
+          },
+          "hand_factor": 1.0,
+          "park": 1.0,
+          "hr_adj": 1.0,
+          "home_mult": 1.015,
+          "bp_factor": 1.093
+        }
+      },
+      "away": {
+        "runs_vs_sp": 5.966,
+        "runs_vs_bp": 5.996,
+        "sp_share": 0.522,
+        "expected_ip": 4.7,
+        "mu_full": 5.848,
+        "mu_f5": 2.818,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3454,
+          "pitcher_woba_against": 0.3579,
+          "matchup_woba": 0.3633,
+          "sp_path": {
+            "eff_woba": 0.3634,
+            "rpa": 0.1447,
+            "obp_eff": 0.3453,
+            "pa_per_inning": 4.582
+          },
+          "bp_path": {
+            "eff_woba": 0.3641,
+            "rpa": 0.1453,
+            "obp_eff": 0.3459,
+            "pa_per_inning": 4.587
+          },
+          "hand_factor": 1.0,
+          "park": 1.0,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 1.036
+        }
+      }
+    },
+    "weather": {
+      "source": "fallback",
+      "model": "air_density_v3",
+      "temp_c": 22.0,
+      "temp_f": 71.6,
+      "wind_mph": 5.0,
+      "wind_dir_label": "—",
+      "wind_dot_of": 0.0,
+      "precip_prob": null,
+      "humidity_pct": 60,
+      "air_density": 1.1889,
+      "density_delta_pct": 0.0,
+      "carry_dist_pct": 0.0,
+      "run_factor": 1.0,
+      "factor": 1.0
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "f5": {
+      "home_xr": 2.89,
+      "away_xr": 3.28,
+      "total_xr": 6.17,
+      "home_win_prob": 0.393,
+      "over_probs": {
+        "4.5": 0.6226,
+        "5.0": 0.5083,
+        "5.5": 0.5083
+      }
+    },
+    "learn_correction": {
+      "home_team": -1.2882256775112642,
+      "away_team": 0.23770079999999996,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0
+    },
+    "pitcher_detail": {
+      "home_season": {
+        "name": "해치",
+        "hand": "R",
+        "era": 7.69,
+        "whip": 1.92,
+        "k9": 7.37,
+        "ip": 28.1,
+        "k_pct": 0.166,
+        "bb_pct": 0.08,
+        "hr_pct": 0.029,
+        "k_bb_pct": 0.087,
+        "wins": 1,
+        "losses": 4,
+        "is_foreign": false
+      },
+      "away_season": {
+        "name": "구창모",
+        "hand": "L",
+        "era": 3.61,
+        "whip": 1.25,
+        "k9": 7.6,
+        "ip": 97.1,
+        "k_pct": 0.199,
+        "bb_pct": 0.065,
+        "hr_pct": 0.029,
+        "k_bb_pct": 0.133,
+        "wins": 8,
+        "losses": 2,
+        "is_foreign": false
+      },
+      "home_vs_opp": {
+        "ip": 5.2,
+        "era": 5.19,
+        "whip": 0.58,
+        "k9": 10.38,
+        "ba_against": null,
+        "games": 1,
+        "_present": true
+      },
+      "away_vs_opp": {
+        "_present": false
+      },
+      "home_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "away_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "home_splits": {
+        "vs_lhb": {
+          "ops_against": 0.999,
+          "ba_against": 0.38,
+          "pa": 80,
+          "ip": 18.6046511627907,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.819,
+          "ba_against": 0.308,
+          "pa": 56,
+          "ip": 13.023255813953488,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      },
+      "away_splits": {
+        "vs_lhb": {
+          "ops_against": 0.789,
+          "ba_against": 0.294,
+          "pa": 200,
+          "ip": 46.51162790697675,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.629,
+          "ba_against": 0.207,
+          "pa": 205,
+          "ip": 47.674418604651166,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      }
+    },
+    "sabermetric_detail": {
+      "home_lineup_rate": {
+        "k_pct": 0.1731,
+        "bb_pct": 0.1107,
+        "hr_pct": 0.0342,
+        "iso": 0.179,
+        "babip": 0.3142,
+        "pa": 1346,
+        "n_batters": 9,
+        "_present": true
+      },
+      "away_lineup_rate": {
+        "k_pct": 0.1586,
+        "bb_pct": 0.1142,
+        "hr_pct": 0.0304,
+        "iso": 0.1605,
+        "babip": 0.3359,
+        "pa": 1349,
+        "n_batters": 9,
+        "_present": true
+      }
+    },
+    "hitting_detail": {
+      "home_season": {
+        "rpg": 5.335570469798658,
+        "ops": 0.75,
+        "woba": 0.3561,
+        "iso": 0.15199999999999997,
+        "avg": 0.26
+      },
+      "away_season": {
+        "rpg": 5.48496644295302,
+        "ops": 0.771,
+        "woba": 0.3454,
+        "iso": 0.13499999999999995,
+        "avg": 0.277
+      },
+      "home_recent": {
+        "rpg": 5.3,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "away_recent": {
+        "rpg": 6.4,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "home_vs_lhp": null,
+      "home_vs_rhp": null,
+      "away_vs_lhp": null,
+      "away_vs_rhp": null,
+      "home_top_player": {
+        "name": "조형우",
+        "position": "",
+        "season": {
+          "ab": 206,
+          "hit": 49,
+          "hr": 4,
+          "rbi": 24,
+          "avg": 0.238,
+          "obp": 0.301
+        },
+        "recent5": {
+          "ab": 13,
+          "hit": 6,
+          "hr": 1,
+          "rbi": 4,
+          "avg": 0.462,
+          "_present": true
+        }
+      },
+      "away_top_player": {
+        "name": "안중열",
+        "position": "",
+        "season": {
+          "ab": 85,
+          "hit": 23,
+          "hr": 1,
+          "rbi": 10,
+          "avg": 0.271,
+          "obp": 0.351
+        },
+        "recent5": {
+          "ab": 6,
+          "hit": 3,
+          "hr": 0,
+          "rbi": 0,
+          "avg": 0.5,
+          "_present": false
+        }
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 1.035,
+      "stopper_factor": 0.999,
+      "stopper_available": 2,
+      "chase_factor": 1.063,
+      "middle_factor": 1.013
+    },
+    "away_bp_quality": {
+      "overall_factor": 1.071,
+      "stopper_factor": 1.031,
+      "stopper_available": 3,
+      "chase_factor": 1.239,
+      "middle_factor": 1.082
+    },
+    "bullpen_detail": {
+      "home_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "away_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "home_bottomup": {
+        "effective_era": 4.82,
+        "raw_era": 4.78,
+        "n_available": 11,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "조병현",
+            "reason": "2연투",
+            "eff_era": 4.33
+          }
+        ],
+        "relievers": [
+          {
+            "name": "조병현",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.86,
+            "eff_era": 4.33,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 7.0,
+              "pitches_3d": 19.0,
+              "holds": 0,
+              "saves": 1,
+              "season_sv": 11
+            }
+          },
+          {
+            "name": "문승원",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.95,
+            "eff_era": 3.95,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 23.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이건욱",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 4.03,
+            "eff_era": 4.03,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 5.0,
+              "pitches_3d": 14.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "노경은",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 4.6,
+            "eff_era": 4.6,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 17.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김민",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.68,
+            "eff_era": 4.68,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 21.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "박시후",
+            "hand": "?",
+            "ip": 10.7,
+            "era": 4.71,
+            "eff_era": 4.71,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "최민준",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 4.77,
+            "eff_era": 4.77,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 28.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "한두솔",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.0,
+            "eff_era": 5.0,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "서진용",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.02,
+            "eff_era": 5.02,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이로운",
+            "hand": "?",
+            "ip": 10.7,
+            "era": 5.48,
+            "eff_era": 5.48,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 12.0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "전영준",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 6.11,
+            "eff_era": 6.11,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 12.0,
+              "pitches_3d": 12.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 5.17,
+        "raw_era": 5.08,
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "김진호",
+            "reason": "어제 31구",
+            "eff_era": 5.94
+          }
+        ],
+        "relievers": [
+          {
+            "name": "최우석",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.97,
+            "eff_era": 3.97,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "전사민",
+            "hand": "?",
+            "ip": 20.0,
+            "era": 3.98,
+            "eff_era": 3.98,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 49.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 6
+            }
+          },
+          {
+            "name": "임지민",
+            "hand": "?",
+            "ip": 14.7,
+            "era": 4.52,
+            "eff_era": 4.52,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 14.0,
+              "pitches_3d": 31.0,
+              "holds": 0,
+              "saves": 2,
+              "season_sv": 5
+            }
+          },
+          {
+            "name": "김준원",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.72,
+            "eff_era": 4.72,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "송명기",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.19,
+            "eff_era": 5.19,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김진호",
+            "hand": "?",
+            "ip": 17.3,
+            "era": 5.5,
+            "eff_era": 5.94,
+            "availability": "fatigued",
+            "avail_reason": "어제 31구",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 31.0,
+              "pitches_3d": 42.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "손주환",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 6.91,
+            "eff_era": 6.91,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 4.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "하준영",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 7.2,
+            "eff_era": 7.2,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": {
+        "factor": 1.5013,
+        "raw_factor": 1.6113,
+        "mu": 7.13,
+        "weight": 0.4
+      },
+      "away": {
+        "factor": 1.55,
+        "raw_factor": 1.8176,
+        "mu": 7.243,
+        "weight": 0.4
+      }
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "구창모",
+        "lineup_woba": 0.3597,
+        "matchup_score": 0.9987,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 1.034,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 2,
+          "games_last7": 5,
+          "acwr": 0.933,
+          "factor": 1.022,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "박성한",
+            "hand": "R",
+            "pa": 407,
+            "woba": 0.365,
+            "ops": 0.821,
+            "platoon": 1.052,
+            "matchup_woba": 0.368,
+            "k_pct": 0.154,
+            "hr_pct": 0.016,
+            "edge": -0.0323,
+            "vs_hand_ops": 0.864,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "김재환",
+            "hand": "R",
+            "pa": 321,
+            "woba": 0.34,
+            "ops": 0.745,
+            "platoon": 1.035,
+            "matchup_woba": 0.356,
+            "k_pct": 0.304,
+            "hr_pct": 0.048,
+            "edge": -0.0171,
+            "vs_hand_ops": 0.772,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "고명준",
+            "hand": "R",
+            "pa": 166,
+            "woba": 0.358,
+            "ops": 0.801,
+            "platoon": 1.068,
+            "matchup_woba": 0.377,
+            "k_pct": 0.232,
+            "hr_pct": 0.05,
+            "edge": -0.0085,
+            "vs_hand_ops": 0.855,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "에레디아",
+            "hand": "R",
+            "pa": 366,
+            "woba": 0.353,
+            "ops": 0.785,
+            "platoon": 1.085,
+            "matchup_woba": 0.379,
+            "k_pct": 0.182,
+            "hr_pct": 0.047,
+            "edge": -0.0105,
+            "vs_hand_ops": 0.853,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "최지훈",
+            "hand": "R",
+            "pa": 374,
+            "woba": 0.333,
+            "ops": 0.722,
+            "platoon": 1.034,
+            "matchup_woba": 0.325,
+            "k_pct": 0.161,
+            "hr_pct": 0.035,
+            "edge": -0.0127,
+            "vs_hand_ops": 0.747,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "최정",
+            "hand": "R",
+            "pa": 305,
+            "woba": 0.403,
+            "ops": 0.937,
+            "platoon": 1.002,
+            "matchup_woba": 0.404,
+            "k_pct": 0.242,
+            "hr_pct": 0.061,
+            "edge": -0.0121,
+            "vs_hand_ops": 0.938,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "조형우",
+            "hand": "R",
+            "pa": 234,
+            "woba": 0.323,
+            "ops": 0.692,
+            "platoon": 1.035,
+            "matchup_woba": 0.313,
+            "k_pct": 0.209,
+            "hr_pct": 0.025,
+            "edge": -0.0183,
+            "vs_hand_ops": 0.717,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "정준재",
+            "hand": "R",
+            "pa": 370,
+            "woba": 0.332,
+            "ops": 0.721,
+            "platoon": 0.946,
+            "matchup_woba": 0.29,
+            "k_pct": 0.168,
+            "hr_pct": 0.011,
+            "edge": -0.0261,
+            "vs_hand_ops": 0.681,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "김성욱",
+            "hand": "R",
+            "pa": 139,
+            "woba": 0.347,
+            "ops": 0.765,
+            "platoon": 1.032,
+            "matchup_woba": 0.35,
+            "k_pct": 0.21,
+            "hr_pct": 0.033,
+            "edge": -0.0221,
+            "vs_hand_ops": 0.789,
+            "source": "kbo_player_detail"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "해치",
+        "lineup_woba": 0.3446,
+        "matchup_score": 0.998,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.9771,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 3,
+          "games_last7": 5,
+          "acwr": 1.4,
+          "factor": 1.05,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "김주원",
+            "hand": "R",
+            "pa": 393,
+            "woba": 0.363,
+            "ops": 0.815,
+            "platoon": 1.027,
+            "matchup_woba": 0.486,
+            "k_pct": 0.148,
+            "hr_pct": 0.039,
+            "edge": 0.0994,
+            "vs_hand_ops": 0.837,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "박민우",
+            "hand": "R",
+            "pa": 354,
+            "woba": 0.374,
+            "ops": 0.848,
+            "platoon": 0.989,
+            "matchup_woba": 0.486,
+            "k_pct": 0.148,
+            "hr_pct": 0.024,
+            "edge": 0.0955,
+            "vs_hand_ops": 0.839,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "데이비슨",
+            "hand": "R",
+            "pa": 301,
+            "woba": 0.366,
+            "ops": 0.824,
+            "platoon": 1.001,
+            "matchup_woba": 0.475,
+            "k_pct": 0.228,
+            "hr_pct": 0.04,
+            "edge": 0.0977,
+            "vs_hand_ops": 0.824,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "김휘집",
+            "hand": "R",
+            "pa": 130,
+            "woba": 0.36,
+            "ops": 0.805,
+            "platoon": 0.997,
+            "matchup_woba": 0.463,
+            "k_pct": 0.173,
+            "hr_pct": 0.046,
+            "edge": 0.0921,
+            "vs_hand_ops": 0.802,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "박건우",
+            "hand": "R",
+            "pa": 344,
+            "woba": 0.371,
+            "ops": 0.841,
+            "platoon": 1.019,
+            "matchup_woba": 0.49,
+            "k_pct": 0.187,
+            "hr_pct": 0.049,
+            "edge": 0.0985,
+            "vs_hand_ops": 0.856,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "김형준",
+            "hand": "R",
+            "pa": 245,
+            "woba": 0.335,
+            "ops": 0.729,
+            "platoon": 0.923,
+            "matchup_woba": 0.403,
+            "k_pct": 0.314,
+            "hr_pct": 0.039,
+            "edge": 0.0828,
+            "vs_hand_ops": 0.672,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "최정원",
+            "hand": "R",
+            "pa": 140,
+            "woba": 0.321,
+            "ops": 0.688,
+            "platoon": 0.943,
+            "matchup_woba": 0.396,
+            "k_pct": 0.2,
+            "hr_pct": 0.016,
+            "edge": 0.0816,
+            "vs_hand_ops": 0.649,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "신재인",
+            "hand": "R",
+            "pa": 95,
+            "woba": 0.326,
+            "ops": 0.703,
+            "platoon": 0.935,
+            "matchup_woba": 0.402,
+            "k_pct": 0.194,
+            "hr_pct": 0.031,
+            "edge": 0.0809,
+            "vs_hand_ops": 0.658,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "서호철",
+            "hand": "R",
+            "pa": 139,
+            "woba": 0.317,
+            "ops": 0.675,
+            "platoon": 0.936,
+            "matchup_woba": 0.386,
+            "k_pct": 0.212,
+            "hr_pct": 0.023,
+            "edge": 0.0806,
+            "vs_hand_ops": 0.632,
+            "source": "kbo_player_detail"
+          }
+        ]
+      }
+    },
+    "standings_detail": {
+      "home": {
+        "d": 3,
+        "era": "5.81",
+        "hra": "0.260",
+        "w": 34,
+        "wra": "0.378",
+        "name": "SSG",
+        "rank": 9,
+        "hr": 103,
+        "l": 56,
+        "seriesOutcome": {
+          "d": 3,
+          "w": 34,
+          "l": 56
+        }
+      },
+      "away": {
+        "d": 1,
+        "era": "4.65",
+        "hra": "0.277",
+        "w": 42,
+        "wra": "0.483",
+        "name": "NC",
+        "rank": 7,
+        "hr": 88,
+        "l": 45,
+        "seriesOutcome": {
+          "d": 1,
+          "w": 42,
+          "l": 45
+        }
+      }
+    },
+    "odds": {
+      "book": "Pinnacle",
+      "away_ml": 1.49,
+      "home_ml": 2.64,
+      "total": 9.5,
+      "over": 1.79,
+      "under": 2.04
+    },
+    "picks": [
+      {
+        "matchup": "NC @ SSG",
+        "market": "moneyline",
+        "label": "SSG ML",
+        "prob": 0.3053,
+        "odds": 2.64,
+        "ev": -0.194,
+        "kelly_raw": 0.0,
+        "p_hat": 0.3525,
+        "kelly_f": -0.0424,
+        "ev_debiased": -0.0695,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "NC @ SSG",
+        "market": "moneyline",
+        "label": "NC ML",
+        "prob": 0.6179,
+        "odds": 1.49,
+        "ev": -0.0793,
+        "kelly_raw": 0.0,
+        "p_hat": 0.636,
+        "kelly_f": -0.1068,
+        "ev_debiased": -0.0523,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "NC @ SSG",
+        "market": "total",
+        "label": "Over 9.5",
+        "prob": 0.6267,
+        "odds": 1.79,
+        "ev": 0.1218,
+        "kelly_raw": 0.1542,
+        "p_hat": 0.5656,
+        "kelly_f": 0.0157,
+        "ev_debiased": 0.0124,
+        "stake": 17,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 11.27,
+        "market_total": 9.5
+      },
+      {
+        "matchup": "NC @ SSG",
+        "market": "total",
+        "label": "Under 9.5",
+        "prob": 0.3733,
+        "odds": 2.04,
+        "ev": -0.2385,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4344,
+        "kelly_f": -0.1094,
+        "ev_debiased": -0.1138,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 11.27,
+        "market_total": 9.5
+      }
+    ],
+    "scores_top": [
+      {
+        "away": 5,
+        "home": 2,
+        "prob": 0.0141
+      },
+      {
+        "away": 4,
+        "home": 3,
+        "prob": 0.014
+      },
+      {
+        "away": 5,
+        "home": 4,
+        "prob": 0.0139
+      },
+      {
+        "away": 3,
+        "home": 3,
+        "prob": 0.0138
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0137
+      },
+      {
+        "away": 5,
+        "home": 3,
+        "prob": 0.0135
+      },
+      {
+        "away": 4,
+        "home": 1,
+        "prob": 0.0134
+      },
+      {
+        "away": 6,
+        "home": 2,
+        "prob": 0.0132
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "kbo_official",
+      "away_hitting": "kbo_official",
+      "home_pitcher": "naver_preview",
+      "away_pitcher": "naver_preview",
+      "weather": "fallback",
+      "odds": "live"
+    },
+    "data_quality": {
+      "level": "full",
+      "missing": []
+    }
+  },
+  {
+    "game_pk": "20260724SSOB02026",
+    "status": "BEFORE",
+    "time_kst": "2026-07-24T18:30:00",
+    "game_date_kst": "2026-07-24",
+    "venue": "잠실",
+    "home_team": "두산",
+    "away_team": "삼성",
+    "home_abbr": "DSN",
+    "away_abbr": "SAM",
+    "home_pitcher_name": "최민석",
+    "away_pitcher_name": "페덱",
+    "home_score": 0,
+    "away_score": 0,
+    "winner": "DRAW",
+    "home_pitcher": {
+      "id": "55268",
+      "name": "최민석",
+      "hand": "R",
+      "ip": 98.2,
+      "expected_ip": 5.8,
+      "era": 2.2,
+      "whip": 1.17,
+      "k9": 8.43,
+      "bb9": 3.48,
+      "hr9": 0.27,
+      "k_pct": 0.225,
+      "bb_pct": 0.093,
+      "hr_pct": 0.007,
+      "k_bb_pct": 0.132,
+      "games_started": 17,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 2.2,
+      "wins": 9,
+      "losses": 2,
+      "_source": "naver_preview"
+    },
+    "away_pitcher": {
+      "id": "56459",
+      "name": "페덱",
+      "hand": "R",
+      "ip": 6.0,
+      "expected_ip": 6.0,
+      "era": 0.0,
+      "whip": 0.33,
+      "k9": 10.5,
+      "bb9": 1.5,
+      "hr9": 0.0,
+      "k_pct": 0.35,
+      "bb_pct": 0.05,
+      "hr_pct": 0.0,
+      "k_bb_pct": 0.3,
+      "games_started": 1,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 0.0,
+      "wins": 1,
+      "losses": 0,
+      "_source": "naver_preview_lowsample"
+    },
+    "umpire": "",
+    "market_total": 8.0,
+    "environment_factor": 0.9596,
+    "home_runs": 6.079745136698744,
+    "away_runs": 2.5353980089975297,
+    "total": 8.615143145696273,
+    "home_win_prob": 0.752,
+    "away_win_prob": 0.1755,
+    "push_prob": 0.0725,
+    "runline": {
+      "home_minus_1_5": 0.66345,
+      "home_plus_1_5": 0.87985,
+      "away_minus_1_5": 0.12015,
+      "away_plus_1_5": 0.33655
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 4.89,
+        "runs_vs_bp": 4.884,
+        "sp_share": 0.667,
+        "expected_ip": 6.0,
+        "mu_full": 4.886,
+        "mu_f5": 2.933,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3449,
+          "pitcher_woba_against": 0.3321,
+          "matchup_woba": 0.337,
+          "sp_path": {
+            "eff_woba": 0.3375,
+            "rpa": 0.123,
+            "obp_eff": 0.3206,
+            "pa_per_inning": 4.416
+          },
+          "bp_path": {
+            "eff_woba": 0.3373,
+            "rpa": 0.1229,
+            "obp_eff": 0.3205,
+            "pa_per_inning": 4.415
+          },
+          "hand_factor": 1.0,
+          "park": 0.94,
+          "hr_adj": 1.0,
+          "home_mult": 1.015,
+          "bp_factor": 0.914
+        }
+      },
+      "away": {
+        "runs_vs_sp": 3.988,
+        "runs_vs_bp": 3.959,
+        "sp_share": 0.644,
+        "expected_ip": 5.8,
+        "mu_full": 4.085,
+        "mu_f5": 2.381,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3533,
+          "pitcher_woba_against": 0.2994,
+          "matchup_woba": 0.3127,
+          "sp_path": {
+            "eff_woba": 0.3142,
+            "rpa": 0.1036,
+            "obp_eff": 0.2985,
+            "pa_per_inning": 4.276
+          },
+          "bp_path": {
+            "eff_woba": 0.3134,
+            "rpa": 0.103,
+            "obp_eff": 0.2977,
+            "pa_per_inning": 4.272
+          },
+          "hand_factor": 1.0,
+          "park": 0.94,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 1.016
+        }
+      }
+    },
+    "weather": {
+      "source": "open-meteo",
+      "model": "air_density_v3",
+      "temp_c": 29.6,
+      "temp_f": 85.3,
+      "wind_mph": 6.5,
+      "wind_dir_label": "교차풍",
+      "wind_dot_of": -1.1,
+      "precip_prob": 12,
+      "humidity_pct": 76,
+      "air_density": 1.1486,
+      "density_delta_pct": -3.39,
+      "carry_dist_pct": 1.12,
+      "run_factor": 1.0208,
+      "factor": 1.0208
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "f5": {
+      "home_xr": 2.63,
+      "away_xr": 2.18,
+      "total_xr": 4.81,
+      "home_win_prob": 0.475,
+      "over_probs": {
+        "4.5": 0.4588,
+        "5.0": 0.3477,
+        "5.5": 0.3477
+      }
+    },
+    "learn_correction": {
+      "home_team": 1.5,
+      "away_team": -1.3781668593437233,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0
+    },
+    "pitcher_detail": {
+      "home_season": {
+        "name": "최민석",
+        "hand": "R",
+        "era": 2.2,
+        "whip": 1.17,
+        "k9": 8.43,
+        "ip": 98.2,
+        "k_pct": 0.225,
+        "bb_pct": 0.093,
+        "hr_pct": 0.007,
+        "k_bb_pct": 0.132,
+        "wins": 9,
+        "losses": 2,
+        "is_foreign": false
+      },
+      "away_season": {
+        "name": "페덱",
+        "hand": "R",
+        "era": 0.0,
+        "whip": 0.33,
+        "k9": 10.5,
+        "ip": 6.0,
+        "k_pct": 0.35,
+        "bb_pct": 0.05,
+        "hr_pct": 0.0,
+        "k_bb_pct": 0.3,
+        "wins": 1,
+        "losses": 0,
+        "is_foreign": false
+      },
+      "home_vs_opp": {
+        "ip": 10.0,
+        "era": 3.6,
+        "whip": 0.9,
+        "k9": 7.2,
+        "ba_against": null,
+        "games": 2,
+        "_present": true
+      },
+      "away_vs_opp": {
+        "_present": false
+      },
+      "home_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "away_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "home_splits": {
+        "vs_lhb": {
+          "ops_against": 0.618,
+          "ba_against": 0.209,
+          "pa": 250,
+          "ip": 58.139534883720934,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.522,
+          "ba_against": 0.216,
+          "pa": 155,
+          "ip": 36.04651162790698,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      },
+      "away_splits": {
+        "vs_lhb": {
+          "ops_against": 0.311,
+          "ba_against": 0.111,
+          "pa": 10,
+          "ip": 2.3255813953488373,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      }
+    },
+    "sabermetric_detail": {
+      "home_lineup_rate": {
+        "k_pct": 0.1654,
+        "bb_pct": 0.1043,
+        "hr_pct": 0.0178,
+        "iso": 0.1322,
+        "babip": 0.3286,
+        "pa": 1294,
+        "n_batters": 9,
+        "_present": true
+      },
+      "away_lineup_rate": {
+        "k_pct": 0.1335,
+        "bb_pct": 0.1172,
+        "hr_pct": 0.0222,
+        "iso": 0.1407,
+        "babip": 0.3367,
+        "pa": 2210,
+        "n_batters": 9,
+        "_present": true
+      }
+    },
+    "hitting_detail": {
+      "home_season": {
+        "rpg": 5.271543624161073,
+        "ops": 0.741,
+        "woba": 0.3449,
+        "iso": 0.127,
+        "avg": 0.27
+      },
+      "away_season": {
+        "rpg": 5.541879194630873,
+        "ops": 0.779,
+        "woba": 0.3533,
+        "iso": 0.13199999999999995,
+        "avg": 0.277
+      },
+      "home_recent": {
+        "rpg": 5.0,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "away_recent": {
+        "rpg": 4.6,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "home_vs_lhp": null,
+      "home_vs_rhp": null,
+      "away_vs_lhp": null,
+      "away_vs_rhp": null,
+      "home_top_player": {
+        "name": "김대한",
+        "position": "",
+        "season": {
+          "ab": 7,
+          "hit": 3,
+          "hr": 0,
+          "rbi": 0,
+          "avg": 0.429,
+          "obp": 0.5
+        },
+        "recent5": {
+          "ab": 6,
+          "hit": 3,
+          "hr": 0,
+          "rbi": 0,
+          "avg": 0.5,
+          "_present": false
+        }
+      },
+      "away_top_player": {
+        "name": "구자욱",
+        "position": "",
+        "season": {
+          "ab": 269,
+          "hit": 91,
+          "hr": 10,
+          "rbi": 64,
+          "avg": 0.338,
+          "obp": 0.419
+        },
+        "recent5": {
+          "ab": 20,
+          "hit": 8,
+          "hr": 2,
+          "rbi": 7,
+          "avg": 0.4,
+          "_present": true
+        }
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 1.002,
+      "stopper_factor": 0.921,
+      "stopper_available": 4,
+      "chase_factor": 1.186,
+      "middle_factor": 1.01
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.903,
+      "stopper_factor": 0.827,
+      "stopper_available": 3,
+      "chase_factor": 0.994,
+      "middle_factor": 0.983
+    },
+    "bullpen_detail": {
+      "home_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "away_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "home_bottomup": {
+        "effective_era": 4.52,
+        "raw_era": 4.52,
         "n_available": 9,
         "n_out": 0,
         "out": [],
@@ -601,9 +4384,9 @@
           {
             "name": "김정우",
             "hand": "?",
-            "ip": 16.0,
-            "era": 2.39,
-            "eff_era": 2.39,
+            "ip": 12.0,
+            "era": 2.92,
+            "eff_era": 2.92,
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0,
@@ -691,9 +4474,9 @@
           {
             "name": "이용찬",
             "hand": "?",
-            "ip": 10.7,
-            "era": 4.62,
-            "eff_era": 4.62,
+            "ip": 8.0,
+            "era": 4.59,
+            "eff_era": 4.59,
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0,
@@ -745,16 +4528,181 @@
           {
             "name": "타카다",
             "hand": "?",
-            "ip": 21.3,
-            "era": 6.62,
-            "eff_era": 6.62,
+            "ip": 17.3,
+            "era": 6.33,
+            "eff_era": 6.33,
             "availability": "available",
             "avail_reason": "가용",
             "streak": 0,
-            "role": "chase",
+            "role": "long",
             "usage": {
               "pitches_yesterday": 0,
               "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 3.67,
+        "raw_era": 3.58,
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "이재희",
+            "reason": "2연투",
+            "eff_era": 4.45
+          },
+          {
+            "name": "김재윤",
+            "reason": "어제 29구",
+            "eff_era": 3.34
+          }
+        ],
+        "relievers": [
+          {
+            "name": "김태훈",
+            "hand": "?",
+            "ip": 18.7,
+            "era": 2.85,
+            "eff_era": 2.85,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 42.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이승민",
+            "hand": "?",
+            "ip": 13.3,
+            "era": 2.91,
+            "eff_era": 2.91,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 4.0,
+              "pitches_3d": 19.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김재윤",
+            "hand": "?",
+            "ip": 24.0,
+            "era": 3.09,
+            "eff_era": 3.34,
+            "availability": "fatigued",
+            "avail_reason": "어제 29구",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 29.0,
+              "pitches_3d": 47.0,
+              "holds": 0,
+              "saves": 2,
+              "season_sv": 24
+            }
+          },
+          {
+            "name": "배찬승",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.69,
+            "eff_era": 3.69,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 8.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이재희",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.97,
+            "eff_era": 4.45,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 12.0,
+              "pitches_3d": 27.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "임기영",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.2,
+            "eff_era": 4.2,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이승현",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 4.43,
+            "eff_era": 4.43,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "미야지",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.0,
+            "eff_era": 5.0,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 16.0,
               "holds": 0,
               "saves": 0,
               "season_sv": 0
@@ -765,186 +4713,32 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.7449,
-        "raw_factor": 0.6889,
-        "mu": 3.678,
+        "factor": 0.845,
+        "raw_factor": 0.8109,
+        "mu": 4.12,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.1906,
-        "raw_factor": 1.2324,
-        "mu": 5.455,
+        "factor": 0.7451,
+        "raw_factor": 0.6891,
+        "mu": 3.656,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
-        "vs_pitcher": "곽빈",
-        "lineup_woba": 0.3441,
-        "matchup_score": 0.9913,
+        "vs_pitcher": "페덱",
+        "lineup_woba": 0.3464,
+        "matchup_score": 0.9973,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 0.9927,
+        "platoon": 0.9995,
         "arsenal_mult": 1.0,
         "bullpen_workload": {
-          "games_last3": 1,
+          "games_last3": 3,
           "games_last7": 5,
-          "acwr": 0.467,
-          "factor": 1.0,
-          "_present": true
-        },
-        "lineup_src": "projected",
-        "batters": [
-          {
-            "order": 1,
-            "name": "최원준",
-            "hand": "R",
-            "pa": 398,
-            "woba": 0.391,
-            "ops": 0.899,
-            "platoon": 1.005,
-            "matchup_woba": 0.353,
-            "k_pct": 0.24,
-            "hr_pct": 0.016,
-            "edge": -0.0539,
-            "vs_hand_ops": 0.903,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 2,
-            "name": "힐리어드",
-            "hand": "R",
-            "pa": 390,
-            "woba": 0.38,
-            "ops": 0.867,
-            "platoon": 1.035,
-            "matchup_woba": 0.342,
-            "k_pct": 0.393,
-            "hr_pct": 0.038,
-            "edge": -0.0606,
-            "vs_hand_ops": 0.897,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 3,
-            "name": "김현수",
-            "hand": "R",
-            "pa": 393,
-            "woba": 0.337,
-            "ops": 0.737,
-            "platoon": 1.052,
-            "matchup_woba": 0.314,
-            "k_pct": 0.197,
-            "hr_pct": 0.014,
-            "edge": -0.0457,
-            "vs_hand_ops": 0.776,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 4,
-            "name": "안현민",
-            "hand": "R",
-            "pa": 166,
-            "woba": 0.381,
-            "ops": 0.871,
-            "platoon": 0.996,
-            "matchup_woba": 0.344,
-            "k_pct": 0.298,
-            "hr_pct": 0.018,
-            "edge": -0.0627,
-            "vs_hand_ops": 0.867,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
-            "name": "장성우",
-            "hand": "R",
-            "pa": 215,
-            "woba": 0.345,
-            "ops": 0.761,
-            "platoon": 1.047,
-            "matchup_woba": 0.318,
-            "k_pct": 0.355,
-            "hr_pct": 0.027,
-            "edge": -0.0619,
-            "vs_hand_ops": 0.797,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
-            "name": "이강민",
-            "hand": "R",
-            "pa": 162,
-            "woba": 0.279,
-            "ops": 0.561,
-            "platoon": 0.943,
-            "matchup_woba": 0.234,
-            "k_pct": 0.362,
-            "hr_pct": 0.009,
-            "edge": -0.0345,
-            "vs_hand_ops": 0.529,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 7,
-            "name": "김상수",
-            "hand": "R",
-            "pa": 308,
-            "woba": 0.331,
-            "ops": 0.718,
-            "platoon": 0.963,
-            "matchup_woba": 0.29,
-            "k_pct": 0.224,
-            "hr_pct": 0.006,
-            "edge": -0.0448,
-            "vs_hand_ops": 0.692,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 8,
-            "name": "류현인",
-            "hand": "R",
-            "pa": 129,
-            "woba": 0.331,
-            "ops": 0.717,
-            "platoon": 0.968,
-            "matchup_woba": 0.283,
-            "k_pct": 0.292,
-            "hr_pct": 0.01,
-            "edge": -0.0419,
-            "vs_hand_ops": 0.694,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 9,
-            "name": "한승택",
-            "hand": "R",
-            "pa": 210,
-            "woba": 0.309,
-            "ops": 0.65,
-            "platoon": 0.895,
-            "matchup_woba": 0.243,
-            "k_pct": 0.342,
-            "hr_pct": 0.009,
-            "edge": -0.0389,
-            "vs_hand_ops": 0.582,
-            "source": "kbo_player_detail"
-          }
-        ]
-      },
-      "away": {
-        "vs_pitcher": "로건",
-        "lineup_woba": 0.3541,
-        "matchup_score": 1.0008,
-        "coverage": 1.0,
-        "bu_weight": 0.8,
-        "platoon": 1.0321,
-        "arsenal_mult": 1.0,
-        "bullpen_workload": {
-          "games_last3": 1,
-          "games_last7": 5,
-          "acwr": 0.467,
-          "factor": 1.0,
+          "acwr": 1.4,
+          "factor": 1.05,
           "_present": true
         },
         "lineup_src": "projected",
@@ -956,12 +4750,12 @@
             "pa": 393,
             "woba": 0.342,
             "ops": 0.75,
-            "platoon": 1.036,
-            "matchup_woba": 0.365,
-            "k_pct": 0.147,
-            "hr_pct": 0.025,
-            "edge": 0.0082,
-            "vs_hand_ops": 0.776,
+            "platoon": 0.982,
+            "matchup_woba": 0.306,
+            "k_pct": 0.159,
+            "hr_pct": 0.014,
+            "edge": -0.0353,
+            "vs_hand_ops": 0.736,
             "source": "kbo_player_detail"
           },
           {
@@ -971,12 +4765,12 @@
             "pa": 359,
             "woba": 0.338,
             "ops": 0.738,
-            "platoon": 1.101,
-            "matchup_woba": 0.386,
-            "k_pct": 0.145,
-            "hr_pct": 0.031,
-            "edge": 0.0112,
-            "vs_hand_ops": 0.812,
+            "platoon": 0.944,
+            "matchup_woba": 0.295,
+            "k_pct": 0.164,
+            "hr_pct": 0.016,
+            "edge": -0.034,
+            "vs_hand_ops": 0.697,
             "source": "kbo_player_detail"
           },
           {
@@ -986,12 +4780,12 @@
             "pa": 236,
             "woba": 0.34,
             "ops": 0.744,
-            "platoon": 1.028,
-            "matchup_woba": 0.366,
-            "k_pct": 0.174,
-            "hr_pct": 0.038,
-            "edge": 0.0188,
-            "vs_hand_ops": 0.766,
+            "platoon": 1.007,
+            "matchup_woba": 0.305,
+            "k_pct": 0.187,
+            "hr_pct": 0.022,
+            "edge": -0.0365,
+            "vs_hand_ops": 0.75,
             "source": "kbo_player_detail"
           },
           {
@@ -1001,12 +4795,12 @@
             "pa": 314,
             "woba": 0.361,
             "ops": 0.809,
-            "platoon": 1.037,
-            "matchup_woba": 0.398,
-            "k_pct": 0.169,
-            "hr_pct": 0.042,
-            "edge": 0.0198,
-            "vs_hand_ops": 0.838,
+            "platoon": 1.022,
+            "matchup_woba": 0.334,
+            "k_pct": 0.181,
+            "hr_pct": 0.024,
+            "edge": -0.0395,
+            "vs_hand_ops": 0.827,
             "source": "kbo_player_detail"
           },
           {
@@ -1016,12 +4810,12 @@
             "pa": 355,
             "woba": 0.344,
             "ops": 0.758,
-            "platoon": 1.011,
-            "matchup_woba": 0.384,
-            "k_pct": 0.12,
-            "hr_pct": 0.046,
-            "edge": 0.0203,
-            "vs_hand_ops": 0.766,
+            "platoon": 1.03,
+            "matchup_woba": 0.331,
+            "k_pct": 0.128,
+            "hr_pct": 0.027,
+            "edge": -0.0384,
+            "vs_hand_ops": 0.78,
             "source": "kbo_player_detail"
           },
           {
@@ -1031,12 +4825,12 @@
             "pa": 113,
             "woba": 0.304,
             "ops": 0.635,
-            "platoon": 1.007,
-            "matchup_woba": 0.319,
-            "k_pct": 0.253,
-            "hr_pct": 0.027,
-            "edge": 0.0115,
-            "vs_hand_ops": 0.639,
+            "platoon": 0.959,
+            "matchup_woba": 0.264,
+            "k_pct": 0.272,
+            "hr_pct": 0.015,
+            "edge": -0.0315,
+            "vs_hand_ops": 0.609,
             "source": "kbo_player_detail"
           },
           {
@@ -1046,12 +4840,12 @@
             "pa": 258,
             "woba": 0.389,
             "ops": 0.894,
-            "platoon": 1.016,
-            "matchup_woba": 0.433,
-            "k_pct": 0.191,
-            "hr_pct": 0.06,
-            "edge": 0.0344,
-            "vs_hand_ops": 0.908,
+            "platoon": 1.055,
+            "matchup_woba": 0.368,
+            "k_pct": 0.201,
+            "hr_pct": 0.037,
+            "edge": -0.0444,
+            "vs_hand_ops": 0.943,
             "source": "kbo_player_detail"
           },
           {
@@ -1061,12 +4855,12 @@
             "pa": 314,
             "woba": 0.357,
             "ops": 0.797,
-            "platoon": 1.022,
-            "matchup_woba": 0.383,
-            "k_pct": 0.181,
-            "hr_pct": 0.026,
-            "edge": 0.0075,
-            "vs_hand_ops": 0.814,
+            "platoon": 0.996,
+            "matchup_woba": 0.33,
+            "k_pct": 0.195,
+            "hr_pct": 0.014,
+            "edge": -0.0375,
+            "vs_hand_ops": 0.793,
             "source": "kbo_player_detail"
           },
           {
@@ -1076,12 +4870,166 @@
             "pa": 189,
             "woba": 0.344,
             "ops": 0.757,
-            "platoon": 1.02,
-            "matchup_woba": 0.379,
-            "k_pct": 0.227,
-            "hr_pct": 0.047,
-            "edge": 0.0244,
+            "platoon": 1.01,
+            "matchup_woba": 0.314,
+            "k_pct": 0.242,
+            "hr_pct": 0.027,
+            "edge": -0.0377,
+            "vs_hand_ops": 0.764,
+            "source": "kbo_player_detail"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "최민석",
+        "lineup_woba": 0.3538,
+        "matchup_score": 0.9959,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.9875,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 1,
+          "games_last7": 4,
+          "acwr": 0.583,
+          "factor": 1.0,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "디아즈",
+            "hand": "R",
+            "pa": 409,
+            "woba": 0.373,
+            "ops": 0.844,
+            "platoon": 1.025,
+            "matchup_woba": 0.307,
+            "k_pct": 0.199,
+            "hr_pct": 0.011,
+            "edge": -0.0885,
+            "vs_hand_ops": 0.866,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "구자욱",
+            "hand": "R",
+            "pa": 314,
+            "woba": 0.389,
+            "ops": 0.893,
+            "platoon": 1.005,
+            "matchup_woba": 0.32,
+            "k_pct": 0.189,
+            "hr_pct": 0.009,
+            "edge": -0.0813,
+            "vs_hand_ops": 0.898,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "최형우",
+            "hand": "R",
+            "pa": 375,
+            "woba": 0.384,
+            "ops": 0.879,
+            "platoon": 1.001,
+            "matchup_woba": 0.327,
+            "k_pct": 0.196,
+            "hr_pct": 0.009,
+            "edge": -0.0798,
+            "vs_hand_ops": 0.88,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "김지찬",
+            "hand": "R",
+            "pa": 347,
+            "woba": 0.342,
+            "ops": 0.752,
+            "platoon": 0.998,
+            "matchup_woba": 0.31,
+            "k_pct": 0.109,
+            "hr_pct": 0.002,
+            "edge": -0.0472,
+            "vs_hand_ops": 0.75,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "류지혁",
+            "hand": "R",
+            "pa": 349,
+            "woba": 0.357,
+            "ops": 0.796,
+            "platoon": 1.009,
+            "matchup_woba": 0.305,
+            "k_pct": 0.186,
+            "hr_pct": 0.005,
+            "edge": -0.062,
+            "vs_hand_ops": 0.803,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "김영웅",
+            "hand": "R",
+            "pa": 88,
+            "woba": 0.303,
+            "ops": 0.632,
+            "platoon": 0.893,
+            "matchup_woba": 0.215,
+            "k_pct": 0.311,
+            "hr_pct": 0.006,
+            "edge": -0.0599,
+            "vs_hand_ops": 0.565,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "이재현",
+            "hand": "R",
+            "pa": 149,
+            "woba": 0.354,
+            "ops": 0.786,
+            "platoon": 0.982,
+            "matchup_woba": 0.272,
+            "k_pct": 0.196,
+            "hr_pct": 0.012,
+            "edge": -0.0893,
             "vs_hand_ops": 0.772,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "김성윤",
+            "hand": "R",
+            "pa": 289,
+            "woba": 0.351,
+            "ops": 0.779,
+            "platoon": 0.968,
+            "matchup_woba": 0.285,
+            "k_pct": 0.154,
+            "hr_pct": 0.004,
+            "edge": -0.0579,
+            "vs_hand_ops": 0.754,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "강민호",
+            "hand": "R",
+            "pa": 213,
+            "woba": 0.344,
+            "ops": 0.758,
+            "platoon": 0.994,
+            "matchup_woba": 0.287,
+            "k_pct": 0.268,
+            "hr_pct": 0.008,
+            "edge": -0.0713,
+            "vs_hand_ops": 0.754,
             "source": "kbo_player_detail"
           }
         ]
@@ -1089,22 +5037,6 @@
     },
     "standings_detail": {
       "home": {
-        "d": 2,
-        "era": "4.53",
-        "hra": "0.281",
-        "w": 51,
-        "wra": "0.593",
-        "name": "KT",
-        "rank": 2,
-        "hr": 61,
-        "l": 35,
-        "seriesOutcome": {
-          "d": 2,
-          "w": 51,
-          "l": 35
-        }
-      },
-      "away": {
         "d": 3,
         "era": "3.84",
         "hra": "0.270",
@@ -1119,126 +5051,1495 @@
           "w": 47,
           "l": 42
         }
+      },
+      "away": {
+        "d": 2,
+        "era": "4.07",
+        "hra": "0.277",
+        "w": 55,
+        "wra": "0.618",
+        "name": "삼성",
+        "rank": 1,
+        "hr": 80,
+        "l": 34,
+        "seriesOutcome": {
+          "d": 2,
+          "w": 55,
+          "l": 34
+        }
       }
     },
     "odds": {
       "book": "Pinnacle",
-      "away_ml": 1.75,
-      "home_ml": 2.1,
-      "total": 9.5,
-      "over": 2.02,
-      "under": 1.81
+      "home_ml": 2.24,
+      "away_ml": 1.66,
+      "total": 8.0,
+      "over": 1.84,
+      "under": 1.98
     },
     "picks": [
       {
-        "matchup": "DSN @ KT",
+        "matchup": "SAM @ DSN",
         "market": "moneyline",
-        "label": "KT ML",
-        "prob": 0.3357,
-        "odds": 2.1,
-        "ev": -0.2949,
+        "label": "SAM ML",
+        "prob": 0.1755,
+        "odds": 1.66,
+        "ev": -0.7087,
         "kelly_raw": 0.0,
-        "p_hat": 0.4367,
-        "kelly_f": -0.0753,
-        "ev_debiased": -0.0829,
+        "p_hat": 0.5145,
+        "kelly_f": -0.221,
+        "ev_debiased": -0.1459,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false
       },
       {
-        "matchup": "DSN @ KT",
-        "market": "moneyline",
-        "label": "DSN ML",
-        "prob": 0.5568,
-        "odds": 1.75,
-        "ev": -0.0255,
-        "kelly_raw": 0.0,
-        "p_hat": 0.5472,
-        "kelly_f": -0.0566,
-        "ev_debiased": -0.0425,
-        "stake": 0,
-        "stake_base": 100,
-        "book": "Pinnacle",
-        "estimated_odds": false
-      },
-      {
-        "matchup": "DSN @ KT",
+        "matchup": "SAM @ DSN",
         "market": "total",
-        "label": "Over 9.5",
-        "prob": 0.3445,
-        "odds": 2.02,
-        "ev": -0.304,
+        "label": "Over 8.0",
+        "prob": 0.5134,
+        "odds": 1.84,
+        "ev": -0.0554,
         "kelly_raw": 0.0,
-        "p_hat": 0.4278,
-        "kelly_f": -0.1332,
-        "ev_debiased": -0.1359,
+        "p_hat": 0.5166,
+        "kelly_f": -0.0589,
+        "ev_debiased": -0.0495,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 7.69,
-        "market_total": 9.5
+        "model_total": 8.66,
+        "market_total": 8.0
       },
       {
-        "matchup": "DSN @ KT",
+        "matchup": "SAM @ DSN",
         "market": "total",
-        "label": "Under 9.5",
-        "prob": 0.6555,
-        "odds": 1.81,
-        "ev": 0.1864,
-        "kelly_raw": 0.2301,
-        "p_hat": 0.5722,
-        "kelly_f": 0.0441,
-        "ev_debiased": 0.0357,
-        "stake": 100,
+        "label": "Under 8.0",
+        "prob": 0.4035,
+        "odds": 1.98,
+        "ev": -0.201,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4543,
+        "kelly_f": -0.1025,
+        "ev_debiased": -0.1004,
+        "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 7.69,
-        "market_total": 9.5
+        "model_total": 8.66,
+        "market_total": 8.0
       }
     ],
     "scores_top": [
       {
-        "away": 3,
-        "home": 1,
-        "prob": 0.027
-      },
-      {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0247
+        "away": 0,
+        "home": 4,
+        "prob": 0.0238
       },
       {
         "away": 1,
-        "home": 1,
-        "prob": 0.0235
+        "home": 5,
+        "prob": 0.0237
       },
       {
-        "away": 2,
-        "home": 2,
-        "prob": 0.0231
+        "away": 1,
+        "home": 3,
+        "prob": 0.0236
       },
       {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0217
+        "away": 0,
+        "home": 5,
+        "prob": 0.0233
       },
       {
-        "away": 4,
-        "home": 1,
+        "away": 1,
+        "home": 4,
+        "prob": 0.0232
+      },
+      {
+        "away": 0,
+        "home": 6,
+        "prob": 0.023
+      },
+      {
+        "away": 0,
+        "home": 3,
+        "prob": 0.022
+      },
+      {
+        "away": 1,
+        "home": 6,
         "prob": 0.0215
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "kbo_official",
+      "away_hitting": "kbo_official",
+      "home_pitcher": "naver_preview",
+      "away_pitcher": "naver_preview_lowsample",
+      "weather": "open-meteo",
+      "odds": "live"
+    },
+    "data_quality": {
+      "level": "partial",
+      "missing": [
+        "원정 선발 표본↓"
+      ]
+    }
+  },
+  {
+    "game_pk": "20260724WOHT02026",
+    "status": "BEFORE",
+    "time_kst": "2026-07-24T18:30:00",
+    "game_date_kst": "2026-07-24",
+    "venue": "광주",
+    "home_team": "KIA",
+    "away_team": "키움",
+    "home_abbr": "KIA",
+    "away_abbr": "KIW",
+    "home_pitcher_name": "네일",
+    "away_pitcher_name": "안우진",
+    "home_score": 0,
+    "away_score": 0,
+    "winner": "DRAW",
+    "home_pitcher": {
+      "id": "54640",
+      "name": "네일",
+      "hand": "R",
+      "ip": 109.2,
+      "expected_ip": 5.7,
+      "era": 3.71,
+      "whip": 1.14,
+      "k9": 7.17,
+      "bb9": 1.9,
+      "hr9": 0.49,
+      "k_pct": 0.193,
+      "bb_pct": 0.051,
+      "hr_pct": 0.013,
+      "k_bb_pct": 0.142,
+      "games_started": 19,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 3.71,
+      "wins": 6,
+      "losses": 5,
+      "_source": "naver_preview"
+    },
+    "away_pitcher": {
+      "id": "68341",
+      "name": "안우진",
+      "hand": "R",
+      "ip": 62.0,
+      "expected_ip": 4.4,
+      "era": 3.48,
+      "whip": 1.23,
+      "k9": 11.18,
+      "bb9": 2.9,
+      "hr9": 0.29,
+      "k_pct": 0.294,
+      "bb_pct": 0.076,
+      "hr_pct": 0.008,
+      "k_bb_pct": 0.218,
+      "games_started": 14,
+      "is_foreign": false,
+      "xwoba": 0.34,
+      "fip": 3.48,
+      "wins": 2,
+      "losses": 5,
+      "_source": "naver_preview"
+    },
+    "umpire": "",
+    "market_total": 9.0,
+    "environment_factor": 1.1067,
+    "home_runs": 4.057708536676606,
+    "away_runs": 2.347263649688784,
+    "total": 6.40497218636539,
+    "home_win_prob": 0.61405,
+    "away_win_prob": 0.2683,
+    "push_prob": 0.11765,
+    "runline": {
+      "home_minus_1_5": 0.49445,
+      "home_plus_1_5": 0.8172,
+      "away_minus_1_5": 0.1828,
+      "away_plus_1_5": 0.50555
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 3.921,
+        "runs_vs_bp": 3.856,
+        "sp_share": 0.489,
+        "expected_ip": 4.4,
+        "mu_full": 3.998,
+        "mu_f5": 1.955,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.3475,
+          "pitcher_woba_against": 0.3078,
+          "matchup_woba": 0.3153,
+          "sp_path": {
+            "eff_woba": 0.3124,
+            "rpa": 0.1021,
+            "obp_eff": 0.2967,
+            "pa_per_inning": 4.266
+          },
+          "bp_path": {
+            "eff_woba": 0.3106,
+            "rpa": 0.1007,
+            "obp_eff": 0.2951,
+            "pa_per_inning": 4.256
+          },
+          "hand_factor": 1.0,
+          "park": 1.02,
+          "hr_adj": 1.0,
+          "home_mult": 1.015,
+          "bp_factor": 1.059
+        }
+      },
+      "away": {
+        "runs_vs_sp": 2.926,
+        "runs_vs_bp": 3.048,
+        "sp_share": 0.633,
+        "expected_ip": 5.7,
+        "mu_full": 3.205,
+        "mu_f5": 1.808,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "kbo_zero_base_woba",
+          "batter_woba": 0.311,
+          "pitcher_woba_against": 0.3187,
+          "matchup_woba": 0.2897,
+          "sp_path": {
+            "eff_woba": 0.2847,
+            "rpa": 0.0791,
+            "obp_eff": 0.2705,
+            "pa_per_inning": 4.112
+          },
+          "bp_path": {
+            "eff_woba": 0.2882,
+            "rpa": 0.082,
+            "obp_eff": 0.2738,
+            "pa_per_inning": 4.131
+          },
+          "hand_factor": 1.0,
+          "park": 1.02,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.93
+        }
+      }
+    },
+    "weather": {
+      "source": "open-meteo",
+      "model": "air_density_v3",
+      "temp_c": 31.0,
+      "temp_f": 87.8,
+      "wind_mph": 6.0,
+      "wind_dir_label": "OUT(밀어줌)",
+      "wind_dot_of": 9.8,
+      "precip_prob": 29,
+      "humidity_pct": 71,
+      "air_density": 1.1431,
+      "density_delta_pct": -3.86,
+      "carry_dist_pct": 4.28,
+      "run_factor": 1.085,
+      "factor": 1.085
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "f5": {
+      "home_xr": 2.06,
+      "away_xr": 1.86,
+      "total_xr": 3.93,
+      "home_win_prob": 0.4324,
+      "over_probs": {
+        "4.5": 0.3507,
+        "5.0": 0.2513,
+        "5.5": 0.2513
+      }
+    },
+    "learn_correction": {
+      "home_team": -1.5,
+      "away_team": -1.2867101064796755,
+      "home_pitcher": 1.2,
+      "away_pitcher": 0.0
+    },
+    "pitcher_detail": {
+      "home_season": {
+        "name": "네일",
+        "hand": "R",
+        "era": 3.71,
+        "whip": 1.14,
+        "k9": 7.17,
+        "ip": 109.2,
+        "k_pct": 0.193,
+        "bb_pct": 0.051,
+        "hr_pct": 0.013,
+        "k_bb_pct": 0.142,
+        "wins": 6,
+        "losses": 5,
+        "is_foreign": false
+      },
+      "away_season": {
+        "name": "안우진",
+        "hand": "R",
+        "era": 3.48,
+        "whip": 1.23,
+        "k9": 11.18,
+        "ip": 62.0,
+        "k_pct": 0.294,
+        "bb_pct": 0.076,
+        "hr_pct": 0.008,
+        "k_bb_pct": 0.218,
+        "wins": 2,
+        "losses": 5,
+        "is_foreign": false
+      },
+      "home_vs_opp": {
+        "ip": 19.0,
+        "era": 0.95,
+        "whip": 0.0,
+        "k9": 9.0,
+        "ba_against": null,
+        "games": 3,
+        "_present": true
+      },
+      "away_vs_opp": {
+        "ip": 9.1,
+        "era": 4.95,
+        "whip": 0.55,
+        "k9": 12.86,
+        "ba_against": null,
+        "games": 2,
+        "_present": true
+      },
+      "home_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "away_pitch_mix": [
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        },
+        {
+          "kind": "?",
+          "count": 0,
+          "avg_speed": 0,
+          "max_speed": 0,
+          "ratio": 0
+        }
+      ],
+      "home_splits": {
+        "vs_lhb": {
+          "ops_against": 0.648,
+          "ba_against": 0.25,
+          "pa": 274,
+          "ip": 63.72093023255814,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.61,
+          "ba_against": 0.234,
+          "pa": 175,
+          "ip": 40.697674418604656,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      },
+      "away_splits": {
+        "vs_lhb": {
+          "ops_against": 0.608,
+          "ba_against": 0.22,
+          "pa": 140,
+          "ip": 32.55813953488372,
+          "_present": true
+        },
+        "vs_rhb": {
+          "ops_against": 0.69,
+          "ba_against": 0.252,
+          "pa": 119,
+          "ip": 27.674418604651162,
+          "_present": true
+        },
+        "home": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        },
+        "away": {
+          "ops_against": 0.72,
+          "ba_against": 0.255,
+          "ip": 0,
+          "_present": false
+        }
+      }
+    },
+    "sabermetric_detail": {
+      "home_lineup_rate": {
+        "k_pct": 0.221,
+        "bb_pct": 0.1045,
+        "hr_pct": 0.0438,
+        "iso": 0.2157,
+        "babip": 0.3261,
+        "pa": 1416,
+        "n_batters": 9,
+        "_present": true
+      },
+      "away_lineup_rate": {
+        "k_pct": 0.1826,
+        "bb_pct": 0.1413,
+        "hr_pct": 0.0065,
+        "iso": 0.1043,
+        "babip": 0.3636,
+        "pa": 460,
+        "n_batters": 9,
+        "_present": true
+      }
+    },
+    "hitting_detail": {
+      "home_season": {
+        "rpg": 5.499194630872483,
+        "ops": 0.773,
+        "woba": 0.3475,
+        "iso": 0.16199999999999998,
+        "avg": 0.268
+      },
+      "away_season": {
+        "rpg": 4.688187919463087,
+        "ops": 0.659,
+        "woba": 0.311,
+        "iso": 0.10300000000000004,
+        "avg": 0.239
+      },
+      "home_recent": {
+        "rpg": 6.0,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "away_recent": {
+        "rpg": 4.6,
+        "rpg_allowed": null,
+        "games": 5,
+        "wins": 0,
+        "losses": 0,
+        "_present": true
+      },
+      "home_vs_lhp": null,
+      "home_vs_rhp": null,
+      "away_vs_lhp": null,
+      "away_vs_rhp": null,
+      "home_top_player": {
+        "name": "카스트로",
+        "position": "",
+        "season": {
+          "ab": 187,
+          "hit": 61,
+          "hr": 9,
+          "rbi": 40,
+          "avg": 0.326,
+          "obp": 0.355
+        },
+        "recent5": {
+          "ab": 21,
+          "hit": 11,
+          "hr": 3,
+          "rbi": 6,
+          "avg": 0.524,
+          "_present": true
+        }
+      },
+      "away_top_player": {
+        "name": "임병욱",
+        "position": "",
+        "season": {
+          "ab": 186,
+          "hit": 48,
+          "hr": 7,
+          "rbi": 23,
+          "avg": 0.258,
+          "obp": 0.31
+        },
+        "recent5": {
+          "ab": 15,
+          "hit": 6,
+          "hr": 0,
+          "rbi": 0,
+          "avg": 0.4,
+          "_present": true
+        }
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.942,
+      "stopper_factor": 0.886,
+      "stopper_available": 4,
+      "chase_factor": 0.968,
+      "middle_factor": 1.007
+    },
+    "away_bp_quality": {
+      "overall_factor": 1.039,
+      "stopper_factor": 0.996,
+      "stopper_available": 5,
+      "chase_factor": 1.136,
+      "middle_factor": 1.048
+    },
+    "bullpen_detail": {
+      "home_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "away_recent": {
+        "era": 4.1,
+        "ip": null,
+        "games": 0,
+        "_present": false
+      },
+      "home_bottomup": {
+        "effective_era": 3.99,
+        "raw_era": 4.84,
+        "n_available": 9,
+        "n_out": 1,
+        "out": [
+          {
+            "name": "이의리",
+            "reason": "어제 44구",
+            "era": 8.36
+          }
+        ],
+        "fatigued": [
+          {
+            "name": "한재승",
+            "reason": "2연투",
+            "eff_era": 4.73
+          },
+          {
+            "name": "이태양",
+            "reason": "2연투",
+            "eff_era": 3.27
+          }
+        ],
+        "relievers": [
+          {
+            "name": "조상우",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 2.65,
+            "eff_era": 2.65,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 21.0,
+              "holds": 0,
+              "saves": 1,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "이태양",
+            "hand": "?",
+            "ip": 13.3,
+            "era": 2.92,
+            "eff_era": 3.27,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 12.0,
+              "pitches_3d": 21.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "곽도규",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 3.16,
+            "eff_era": 3.16,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 11.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "이형범",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 3.9,
+            "eff_era": 3.9,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 7.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "한재승",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 4.01,
+            "eff_era": 4.73,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 28.0,
+              "pitches_3d": 50.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "성영탁",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.17,
+            "eff_era": 4.17,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 33.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 12
+            }
+          },
+          {
+            "name": "전상현",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 4.5,
+            "eff_era": 4.5,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 15.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김범수",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.77,
+            "eff_era": 4.77,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 10.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 1
+            }
+          },
+          {
+            "name": "정해영",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 5.23,
+            "eff_era": 5.23,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 18.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 2
+            }
+          },
+          {
+            "name": "이의리",
+            "hand": "?",
+            "ip": 26.7,
+            "era": 8.36,
+            "eff_era": 8.36,
+            "availability": "out",
+            "avail_reason": "어제 44구",
+            "streak": 1,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 44.0,
+              "pitches_3d": 44.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 4.86,
+        "raw_era": 4.7,
+        "n_available": 9,
+        "n_out": 1,
+        "out": [
+          {
+            "name": "김성민",
+            "reason": "3연투",
+            "era": 4.5
+          }
+        ],
+        "fatigued": [
+          {
+            "name": "원종현",
+            "reason": "2연투",
+            "eff_era": 3.97
+          },
+          {
+            "name": "박지성",
+            "reason": "2연투",
+            "eff_era": 4.77
+          }
+        ],
+        "relievers": [
+          {
+            "name": "유토",
+            "hand": "?",
+            "ip": 20.0,
+            "era": 3.03,
+            "eff_era": 3.03,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 21.0,
+              "holds": 2,
+              "saves": 1,
+              "season_sv": 12
+            }
+          },
+          {
+            "name": "원종현",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 3.55,
+            "eff_era": 3.97,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 18.0,
+              "pitches_3d": 32.0,
+              "holds": 1,
+              "saves": 2,
+              "season_sv": 5
+            }
+          },
+          {
+            "name": "박지성",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 4.26,
+            "eff_era": 4.77,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 14.0,
+              "pitches_3d": 37.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "정다훈",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 4.46,
+            "eff_era": 4.46,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 16.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "박정훈",
+            "hand": "?",
+            "ip": 16.0,
+            "era": 4.85,
+            "eff_era": 4.85,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 21.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김선기",
+            "hand": "?",
+            "ip": 9.3,
+            "era": 5.36,
+            "eff_era": 5.36,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "조영건",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 5.69,
+            "eff_era": 5.69,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 34.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김재웅",
+            "hand": "?",
+            "ip": 8.0,
+            "era": 6.42,
+            "eff_era": 6.42,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 5
+            }
+          },
+          {
+            "name": "정현우",
+            "hand": "?",
+            "ip": 12.0,
+            "era": 7.2,
+            "eff_era": 7.2,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 14.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "김성민",
+            "hand": "?",
+            "ip": 14.7,
+            "era": 4.5,
+            "eff_era": 4.5,
+            "availability": "out",
+            "avail_reason": "3연투",
+            "streak": 3,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 14.0,
+              "pitches_3d": 50.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": {
+        "factor": 0.8937,
+        "raw_factor": 0.8704,
+        "mu": 4.897,
+        "weight": 0.4
+      },
+      "away": {
+        "factor": 0.7767,
+        "raw_factor": 0.7277,
+        "mu": 4.277,
+        "weight": 0.4
+      }
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "안우진",
+        "lineup_woba": 0.3471,
+        "matchup_score": 0.976,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.9695,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 3,
+          "games_last7": 5,
+          "acwr": 1.4,
+          "factor": 1.05,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "카스트로",
+            "hand": "R",
+            "pa": 200,
+            "woba": 0.374,
+            "ops": 0.849,
+            "platoon": 0.999,
+            "matchup_woba": 0.308,
+            "k_pct": 0.304,
+            "hr_pct": 0.011,
+            "edge": -0.0638,
+            "vs_hand_ops": 0.848,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "김호령",
+            "hand": "R",
+            "pa": 394,
+            "woba": 0.348,
+            "ops": 0.768,
+            "platoon": 0.941,
+            "matchup_woba": 0.279,
+            "k_pct": 0.402,
+            "hr_pct": 0.008,
+            "edge": -0.0493,
+            "vs_hand_ops": 0.722,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "김도영",
+            "hand": "R",
+            "pa": 403,
+            "woba": 0.4,
+            "ops": 0.925,
+            "platoon": 0.997,
+            "matchup_woba": 0.318,
+            "k_pct": 0.285,
+            "hr_pct": 0.017,
+            "edge": -0.0971,
+            "vs_hand_ops": 0.922,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "김선빈",
+            "hand": "R",
+            "pa": 345,
+            "woba": 0.323,
+            "ops": 0.693,
+            "platoon": 0.882,
+            "matchup_woba": 0.276,
+            "k_pct": 0.21,
+            "hr_pct": 0.003,
+            "edge": -0.0295,
+            "vs_hand_ops": 0.612,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "데일",
+            "hand": "R",
+            "pa": 135,
+            "woba": 0.322,
+            "ops": 0.692,
+            "platoon": 0.976,
+            "matchup_woba": 0.283,
+            "k_pct": 0.224,
+            "hr_pct": 0.005,
+            "edge": -0.0383,
+            "vs_hand_ops": 0.675,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "나성범",
+            "hand": "R",
+            "pa": 361,
+            "woba": 0.381,
+            "ops": 0.869,
+            "platoon": 1.078,
+            "matchup_woba": 0.336,
+            "k_pct": 0.399,
+            "hr_pct": 0.015,
+            "edge": -0.0863,
+            "vs_hand_ops": 0.937,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "한준수",
+            "hand": "R",
+            "pa": 286,
+            "woba": 0.373,
+            "ops": 0.847,
+            "platoon": 0.935,
+            "matchup_woba": 0.314,
+            "k_pct": 0.273,
+            "hr_pct": 0.007,
+            "edge": -0.0523,
+            "vs_hand_ops": 0.792,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "오선우",
+            "hand": "R",
+            "pa": 61,
+            "woba": 0.347,
+            "ops": 0.767,
+            "platoon": 0.999,
+            "matchup_woba": 0.291,
+            "k_pct": 0.358,
+            "hr_pct": 0.01,
+            "edge": -0.0599,
+            "vs_hand_ops": 0.766,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "윤도현",
+            "hand": "R",
+            "pa": 53,
+            "woba": 0.31,
+            "ops": 0.655,
+            "platoon": 0.915,
+            "matchup_woba": 0.248,
+            "k_pct": 0.422,
+            "hr_pct": 0.007,
+            "edge": -0.0425,
+            "vs_hand_ops": 0.6,
+            "source": "kbo_player_detail"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "네일",
+        "lineup_woba": 0.3109,
+        "matchup_score": 1.0181,
+        "coverage": 1.0,
+        "bu_weight": 0.8,
+        "platoon": 0.956,
+        "arsenal_mult": 1.0,
+        "bullpen_workload": {
+          "games_last3": 3,
+          "games_last7": 5,
+          "acwr": 1.4,
+          "factor": 1.05,
+          "_present": true
+        },
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "브룩스",
+            "hand": "R",
+            "pa": 161,
+            "woba": 0.302,
+            "ops": 0.63,
+            "platoon": 0.936,
+            "matchup_woba": 0.247,
+            "k_pct": 0.175,
+            "hr_pct": 0.006,
+            "edge": -0.0447,
+            "vs_hand_ops": 0.59,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 2,
+            "name": "이주형",
+            "hand": "R",
+            "pa": 103,
+            "woba": 0.338,
+            "ops": 0.738,
+            "platoon": 1.037,
+            "matchup_woba": 0.286,
+            "k_pct": 0.208,
+            "hr_pct": 0.012,
+            "edge": -0.0554,
+            "vs_hand_ops": 0.765,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 3,
+            "name": "안치홍",
+            "hand": "R",
+            "pa": 338,
+            "woba": 0.332,
+            "ops": 0.722,
+            "platoon": 0.976,
+            "matchup_woba": 0.281,
+            "k_pct": 0.16,
+            "hr_pct": 0.01,
+            "edge": -0.0558,
+            "vs_hand_ops": 0.704,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 4,
+            "name": "어준서",
+            "hand": "R",
+            "pa": 76,
+            "woba": 0.308,
+            "ops": 0.649,
+            "platoon": 0.91,
+            "matchup_woba": 0.244,
+            "k_pct": 0.251,
+            "hr_pct": 0.008,
+            "edge": -0.0446,
+            "vs_hand_ops": 0.591,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
+            "name": "최주환",
+            "hand": "R",
+            "pa": 282,
+            "woba": 0.319,
+            "ops": 0.68,
+            "platoon": 0.984,
+            "matchup_woba": 0.268,
+            "k_pct": 0.157,
+            "hr_pct": 0.008,
+            "edge": -0.056,
+            "vs_hand_ops": 0.669,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "김건희",
+            "hand": "R",
+            "pa": 290,
+            "woba": 0.328,
+            "ops": 0.708,
+            "platoon": 0.954,
+            "matchup_woba": 0.265,
+            "k_pct": 0.286,
+            "hr_pct": 0.011,
+            "edge": -0.0538,
+            "vs_hand_ops": 0.676,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "박한결",
+            "hand": "R",
+            "pa": 41,
+            "woba": 0.305,
+            "ops": 0.638,
+            "platoon": 0.918,
+            "matchup_woba": 0.239,
+            "k_pct": 0.248,
+            "hr_pct": 0.009,
+            "edge": -0.0469,
+            "vs_hand_ops": 0.586,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "박찬혁",
+            "hand": "R",
+            "pa": 175,
+            "woba": 0.333,
+            "ops": 0.725,
+            "platoon": 0.919,
+            "matchup_woba": 0.259,
+            "k_pct": 0.269,
+            "hr_pct": 0.013,
+            "edge": -0.056,
+            "vs_hand_ops": 0.666,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "임지열",
+            "hand": "R",
+            "pa": 83,
+            "woba": 0.321,
+            "ops": 0.688,
+            "platoon": 0.957,
+            "matchup_woba": 0.262,
+            "k_pct": 0.25,
+            "hr_pct": 0.01,
+            "edge": -0.056,
+            "vs_hand_ops": 0.658,
+            "source": "kbo_player_detail"
+          }
+        ]
+      }
+    },
+    "standings_detail": {
+      "home": {
+        "d": 2,
+        "era": "4.29",
+        "hra": "0.268",
+        "w": 49,
+        "wra": "0.538",
+        "name": "KIA",
+        "rank": 4,
+        "hr": 111,
+        "l": 42,
+        "seriesOutcome": {
+          "d": 2,
+          "w": 49,
+          "l": 42
+        }
+      },
+      "away": {
+        "d": 2,
+        "era": "4.95",
+        "hra": "0.239",
+        "w": 33,
+        "wra": "0.359",
+        "name": "키움",
+        "rank": 10,
+        "hr": 60,
+        "l": 59,
+        "seriesOutcome": {
+          "d": 2,
+          "w": 33,
+          "l": 59
+        }
+      }
+    },
+    "odds": {
+      "book": "Pinnacle",
+      "home_ml": 1.6,
+      "away_ml": 2.37,
+      "total": 9.0,
+      "over": 2.16,
+      "under": 1.71
+    },
+    "picks": [
+      {
+        "matchup": "KIW @ KIA",
+        "market": "moneyline",
+        "label": "KIA ML",
+        "prob": 0.614,
+        "odds": 1.6,
+        "ev": -0.0175,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5995,
+        "kelly_f": -0.0679,
+        "ev_debiased": -0.0407,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
       },
       {
-        "away": 2,
-        "home": 0,
-        "prob": 0.0207
+        "matchup": "KIW @ KIA",
+        "market": "moneyline",
+        "label": "KIW ML",
+        "prob": 0.2683,
+        "odds": 2.37,
+        "ev": -0.3641,
+        "kelly_raw": 0.0,
+        "p_hat": 0.3828,
+        "kelly_f": -0.0677,
+        "ev_debiased": -0.0927,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "KIW @ KIA",
+        "market": "total",
+        "label": "Over 9.0",
+        "prob": 0.2328,
+        "odds": 2.16,
+        "ev": -0.497,
+        "kelly_raw": 0.0,
+        "p_hat": 0.3687,
+        "kelly_f": -0.1755,
+        "ev_debiased": -0.2036,
+        "stake": 0,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.45,
+        "market_total": 9.0
+      },
+      {
+        "matchup": "KIW @ KIA",
+        "market": "total",
+        "label": "Under 9.0",
+        "prob": 0.688,
+        "odds": 1.71,
+        "ev": 0.1765,
+        "kelly_raw": 0.2486,
+        "p_hat": 0.6036,
+        "kelly_f": 0.0453,
+        "ev_debiased": 0.0321,
+        "stake": 49,
+        "stake_base": 100,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.45,
+        "market_total": 9.0
+      }
+    ],
+    "scores_top": [
+      {
+        "away": 0,
+        "home": 2,
+        "prob": 0.0363
+      },
+      {
+        "away": 0,
+        "home": 1,
+        "prob": 0.0348
+      },
+      {
+        "away": 0,
+        "home": 3,
+        "prob": 0.0337
+      },
+      {
+        "away": 0,
+        "home": 4,
+        "prob": 0.0326
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0205
+        "prob": 0.0323
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0307
+      },
+      {
+        "away": 1,
+        "home": 1,
+        "prob": 0.0301
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0269
       }
     ],
     "data_sources": {
