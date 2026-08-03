@@ -48,7 +48,7 @@
       "_source": "npb_official"
     },
     "umpire": "",
-    "market_total": null,
+    "market_total": 6.5,
     "environment_factor": 1.06,
     "raw_home_pre_learn": 4.799,
     "raw_away_pre_learn": 3.971,
@@ -935,8 +935,84 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "FanDuel",
+      "home_ml": 1.78,
+      "away_ml": 2.04,
+      "total": 6.5,
+      "over": 1.7,
+      "under": 2.14
+    },
+    "picks": [
+      {
+        "matchup": "RAK @ ORX",
+        "market": "moneyline",
+        "label": "ORX ML",
+        "prob": 0.5255,
+        "odds": 1.78,
+        "ev": -0.0645,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5328,
+        "kelly_f": -0.0663,
+        "ev_debiased": -0.0517,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "FanDuel",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "RAK @ ORX",
+        "market": "moneyline",
+        "label": "RAK ML",
+        "prob": 0.3748,
+        "odds": 2.04,
+        "ev": -0.2355,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4523,
+        "kelly_f": -0.0744,
+        "ev_debiased": -0.0773,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "FanDuel",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "RAK @ ORX",
+        "market": "total",
+        "label": "Over 6.5",
+        "prob": 0.6869,
+        "odds": 1.7,
+        "ev": 0.1678,
+        "kelly_raw": 0.2397,
+        "p_hat": 0.6027,
+        "kelly_f": 0.035,
+        "ev_debiased": 0.0245,
+        "stake": 50,
+        "stake_base": 50,
+        "book": "FanDuel",
+        "estimated_odds": false,
+        "model_total": 8.82,
+        "market_total": 6.5
+      },
+      {
+        "matchup": "RAK @ ORX",
+        "market": "total",
+        "label": "Under 6.5",
+        "prob": 0.3131,
+        "odds": 2.14,
+        "ev": -0.33,
+        "kelly_raw": 0.0,
+        "p_hat": 0.3973,
+        "kelly_f": -0.1313,
+        "ev_debiased": -0.1497,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "FanDuel",
+        "estimated_odds": false,
+        "model_total": 8.82,
+        "market_total": 6.5
+      }
+    ],
     "scores_top": [
       {
         "away": 3,
@@ -985,7 +1061,7 @@
       "home_pitcher": "npb_official",
       "away_pitcher": "npb_official",
       "weather": "indoor",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
       "level": "full",
