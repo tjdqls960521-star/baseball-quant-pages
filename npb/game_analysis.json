@@ -1,1 +1,5424 @@
-[]
+[
+  {
+    "game_pk": "2021039248",
+    "status": "BEFORE",
+    "time_kst": "14:00",
+    "game_date_kst": "2026-08-09",
+    "venue": "東京ドーム",
+    "home_team": "巨人",
+    "away_team": "ヤクルト",
+    "home_abbr": "YOM",
+    "away_abbr": "YAK",
+    "home_pitcher_name": "小笠原",
+    "away_pitcher_name": "松本健",
+    "home_score": null,
+    "away_score": null,
+    "home_pitcher": {
+      "name": "小笠原 慎之介",
+      "team_abbr": "YOM",
+      "era": 1.35,
+      "whip": 0.9,
+      "k9": 8.55,
+      "bb9": 0.45,
+      "hr9": 0.45,
+      "ip": 20.0,
+      "current_ip": 20.0,
+      "prior_ip": 0.0,
+      "projection_ip": 20.0,
+      "appearances": 3,
+      "games_started": null,
+      "expected_ip": 6.02,
+      "hand": "L",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 1.35,
+      "_bb": 1.0,
+      "_so": 19.0,
+      "_hr": 1.0,
+      "_hits": 17.0,
+      "_er": 3.0,
+      "season": 2026,
+      "_source": "npb_official"
+    },
+    "away_pitcher": {
+      "era": 3.3,
+      "whip": 1.2,
+      "k9": 7.5,
+      "bb9": 2.8,
+      "hr9": 0.7,
+      "ip": 0,
+      "hand": "R",
+      "expected_ip": 6.0,
+      "games_started": 0,
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.3,
+      "_source": "fallback"
+    },
+    "umpire": "",
+    "model_version": "projection_v2",
+    "market_total": null,
+    "environment_factor": 1.06,
+    "raw_home_pre_learn": 3.725,
+    "raw_away_pre_learn": 2.998,
+    "home_pitcher_id": "小笠原 慎之介",
+    "away_pitcher_id": "松本健",
+    "home_runs": 3.130564961350017,
+    "away_runs": 2.403564961350017,
+    "total": 5.534129922700034,
+    "home_win_prob": 0.51265,
+    "away_win_prob": 0.3451,
+    "push_prob": 0.14225,
+    "runline": {
+      "home_minus_1_5": 0.38525,
+      "home_plus_1_5": 0.7613,
+      "away_minus_1_5": 0.2387,
+      "away_plus_1_5": 0.61475
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 3.752,
+        "runs_vs_bp": 3.737,
+        "sp_share": 0.667,
+        "expected_ip": 6.0,
+        "mu_full": 3.725,
+        "mu_f5": 2.072,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3131,
+          "pitcher_woba_against": 0.31,
+          "matchup_woba": 0.3131,
+          "sp_path": {
+            "eff_woba": 0.3138,
+            "rpa": 0.0975,
+            "obp_eff": 0.2981,
+            "pa_per_inning": 4.274
+          },
+          "bp_path": {
+            "eff_woba": 0.3133,
+            "rpa": 0.0972,
+            "obp_eff": 0.2977,
+            "pa_per_inning": 4.271
+          },
+          "hand_factor": 1.0,
+          "park": 1.06,
+          "hr_adj": 1.0,
+          "home_mult": 1.012,
+          "bp_factor": 1.003
+        }
+      },
+      "away": {
+        "runs_vs_sp": 2.872,
+        "runs_vs_bp": 2.964,
+        "sp_share": 0.669,
+        "expected_ip": 6.02,
+        "mu_full": 2.998,
+        "mu_f5": 1.656,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3027,
+          "pitcher_woba_against": 0.297,
+          "matchup_woba": 0.2897,
+          "sp_path": {
+            "eff_woba": 0.2889,
+            "rpa": 0.0772,
+            "obp_eff": 0.2744,
+            "pa_per_inning": 4.135
+          },
+          "bp_path": {
+            "eff_woba": 0.2916,
+            "rpa": 0.0794,
+            "obp_eff": 0.277,
+            "pa_per_inning": 4.149
+          },
+          "hand_factor": 1.0,
+          "park": 1.06,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.856
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 2.04,
+      "away_xr": 1.65,
+      "total_xr": 3.69,
+      "home_win_prob": 0.4541,
+      "over_probs": {
+        "3.5": 0.4444,
+        "4.5": 0.3189,
+        "5.0": 0.2229
+      }
+    },
+    "learn_correction": {
+      "home_team": -0.23197352557582837,
+      "away_team": -0.9568965517241379,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0,
+      "home_applied": -0.5944,
+      "away_applied": -0.5944,
+      "margin_weight": 0.0
+    },
+    "feature_snapshot": {
+      "home_team_woba": 0.3131,
+      "away_team_woba": 0.3027,
+      "home_lineup_coverage": 1.0,
+      "away_lineup_coverage": 1.0,
+      "home_starter_ip": 20.0,
+      "away_starter_ip": 0.0,
+      "home_projection_ip": 20.0,
+      "away_projection_ip": 0.0,
+      "home_expected_ip": 6.02,
+      "away_expected_ip": 6.0,
+      "home_bullpen_factor": 0.8561,
+      "away_bullpen_factor": 1.0033
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "",
+        "lineup_woba": 0.3148,
+        "matchup_score": 1.0,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0197,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "ダルベック",
+            "hand": "R",
+            "pa": 393,
+            "woba": 0.337,
+            "ops": 0.783,
+            "platoon": 0.96,
+            "matchup_woba": 0.342,
+            "k_pct": 0.299,
+            "hr_pct": 0.036,
+            "edge": 0.0,
+            "source": "npb_official"
+          },
+          {
+            "order": 2,
+            "name": "浦田 俊輔",
+            "hand": "L",
+            "pa": 362,
+            "woba": 0.297,
+            "ops": 0.66,
+            "platoon": 1.05,
+            "matchup_woba": 0.32,
+            "k_pct": 0.128,
+            "hr_pct": 0.007,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "泉口 友汰",
+            "hand": "L",
+            "pa": 539,
+            "woba": 0.311,
+            "ops": 0.704,
+            "platoon": 1.05,
+            "matchup_woba": 0.339,
+            "k_pct": 0.13,
+            "hr_pct": 0.017,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "キャベッジ",
+            "hand": "L",
+            "pa": 499,
+            "woba": 0.317,
+            "ops": 0.72,
+            "platoon": 1.05,
+            "matchup_woba": 0.347,
+            "k_pct": 0.295,
+            "hr_pct": 0.035,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "松本 剛",
+            "hand": "R",
+            "pa": 354,
+            "woba": 0.291,
+            "ops": 0.643,
+            "platoon": 0.96,
+            "matchup_woba": 0.289,
+            "k_pct": 0.144,
+            "hr_pct": 0.008,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "佐々木 俊輔",
+            "hand": "L",
+            "pa": 305,
+            "woba": 0.317,
+            "ops": 0.72,
+            "platoon": 1.05,
+            "matchup_woba": 0.34,
+            "k_pct": 0.229,
+            "hr_pct": 0.025,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "大城 卓三",
+            "hand": "L",
+            "pa": 261,
+            "woba": 0.331,
+            "ops": 0.763,
+            "platoon": 1.05,
+            "matchup_woba": 0.355,
+            "k_pct": 0.268,
+            "hr_pct": 0.03,
+            "edge": -0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "岸田 行倫",
+            "hand": "R",
+            "pa": 300,
+            "woba": 0.307,
+            "ops": 0.69,
+            "platoon": 0.96,
+            "matchup_woba": 0.308,
+            "k_pct": 0.177,
+            "hr_pct": 0.021,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "吉川 尚輝",
+            "hand": "L",
+            "pa": 303,
+            "woba": 0.295,
+            "ops": 0.656,
+            "platoon": 1.05,
+            "matchup_woba": 0.323,
+            "k_pct": 0.153,
+            "hr_pct": 0.012,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "小笠原 慎之介",
+        "lineup_woba": 0.3041,
+        "matchup_score": 0.9993,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0186,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "サンタナ",
+            "hand": "R",
+            "pa": 441,
+            "woba": 0.339,
+            "ops": 0.788,
+            "platoon": 1.05,
+            "matchup_woba": 0.327,
+            "k_pct": 0.269,
+            "hr_pct": 0.027,
+            "edge": -0.0552,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "長岡 秀樹",
+            "hand": "L",
+            "pa": 446,
+            "woba": 0.294,
+            "ops": 0.652,
+            "platoon": 0.96,
+            "matchup_woba": 0.264,
+            "k_pct": 0.139,
+            "hr_pct": 0.009,
+            "edge": -0.0299,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "岩田 幸宏",
+            "hand": "L",
+            "pa": 470,
+            "woba": 0.284,
+            "ops": 0.622,
+            "platoon": 0.96,
+            "matchup_woba": 0.256,
+            "k_pct": 0.187,
+            "hr_pct": 0.005,
+            "edge": -0.0246,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "増田 珠",
+            "hand": "R",
+            "pa": 332,
+            "woba": 0.32,
+            "ops": 0.729,
+            "platoon": 1.05,
+            "matchup_woba": 0.313,
+            "k_pct": 0.179,
+            "hr_pct": 0.018,
+            "edge": -0.039,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "古賀 優大",
+            "hand": "R",
+            "pa": 353,
+            "woba": 0.295,
+            "ops": 0.653,
+            "platoon": 1.05,
+            "matchup_woba": 0.288,
+            "k_pct": 0.11,
+            "hr_pct": 0.008,
+            "edge": -0.0249,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "武岡 龍世",
+            "hand": "L",
+            "pa": 284,
+            "woba": 0.287,
+            "ops": 0.632,
+            "platoon": 0.96,
+            "matchup_woba": 0.251,
+            "k_pct": 0.257,
+            "hr_pct": 0.012,
+            "edge": -0.0323,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "内山 壮真",
+            "hand": "R",
+            "pa": 402,
+            "woba": 0.304,
+            "ops": 0.683,
+            "platoon": 1.05,
+            "matchup_woba": 0.294,
+            "k_pct": 0.18,
+            "hr_pct": 0.017,
+            "edge": -0.0403,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "オスナ",
+            "hand": "R",
+            "pa": 426,
+            "woba": 0.295,
+            "ops": 0.656,
+            "platoon": 1.05,
+            "matchup_woba": 0.287,
+            "k_pct": 0.17,
+            "hr_pct": 0.019,
+            "edge": -0.0351,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "赤羽 由紘",
+            "hand": "R",
+            "pa": 312,
+            "woba": 0.286,
+            "ops": 0.627,
+            "platoon": 1.05,
+            "matchup_woba": 0.272,
+            "k_pct": 0.273,
+            "hr_pct": 0.014,
+            "edge": -0.0312,
+            "source": "npb_official_2yr"
+          }
+        ]
+      }
+    },
+    "home_bp_quality": null,
+    "away_bp_quality": {
+      "overall_factor": 1.004,
+      "stopper_factor": 0.952,
+      "stopper_available": 4,
+      "chase_factor": 1.038,
+      "middle_factor": 1.054
+    },
+    "bullpen_detail": {
+      "home_recent": null,
+      "away_recent": null,
+      "home_bottomup": null,
+      "away_bottomup": {
+        "effective_era": 3.33,
+        "raw_era": 3.3,
+        "n_available": 11,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "荘司 宏太",
+            "reason": "어제 33구(추정)",
+            "eff_era": 3.37
+          }
+        ],
+        "relievers": [
+          {
+            "name": "リランソ",
+            "hand": "R",
+            "ip": 20.333333333333332,
+            "era": 1.77,
+            "eff_era": 1.77,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 15.0,
+              "pitches_3d": 15.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "星 知弥",
+            "hand": "R",
+            "ip": 33.666666666666664,
+            "era": 2.36,
+            "eff_era": 2.36,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 13.0,
+              "holds": 3,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "廣澤 優",
+            "hand": "R",
+            "ip": 31.666666666666668,
+            "era": 2.56,
+            "eff_era": 2.56,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "清水 昇",
+            "hand": "R",
+            "ip": 28.333333333333332,
+            "era": 2.59,
+            "eff_era": 2.59,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 15.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "阪口 皓亮",
+            "hand": "R",
+            "ip": 17.666666666666668,
+            "era": 2.96,
+            "eff_era": 2.96,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "田口 麗斗",
+            "hand": "L",
+            "ip": 14.333333333333334,
+            "era": 3.07,
+            "eff_era": 3.07,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 12.0,
+              "pitches_3d": 12.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "荘司 宏太",
+            "hand": "L",
+            "ip": 24.666666666666668,
+            "era": 3.12,
+            "eff_era": 3.37,
+            "availability": "fatigued",
+            "avail_reason": "어제 33구(추정)",
+            "streak": 1,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 33.0,
+              "pitches_3d": 33.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "石原 勇輝",
+            "hand": "L",
+            "ip": 8.333333333333334,
+            "era": 3.75,
+            "eff_era": 3.75,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "キハダ",
+            "hand": "L",
+            "ip": 34.666666666666664,
+            "era": 3.89,
+            "eff_era": 3.89,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "丸山 翔大",
+            "hand": "R",
+            "ip": 28.0,
+            "era": 4.63,
+            "eff_era": 4.63,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 17.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "ウォルターズ",
+            "hand": "R",
+            "ip": 25.333333333333332,
+            "era": 5.65,
+            "eff_era": 5.65,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 14.0,
+              "pitches_3d": 14.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": null,
+      "away": null
+    },
+    "weather": {
+      "source": "indoor",
+      "run_factor": 1.0,
+      "wind_dir_label": "돔",
+      "temp_f": null
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "odds": {},
+    "picks": [],
+    "scores_top": [
+      {
+        "away": 0,
+        "home": 1,
+        "prob": 0.0422
+      },
+      {
+        "away": 1,
+        "home": 1,
+        "prob": 0.0418
+      },
+      {
+        "away": 0,
+        "home": 2,
+        "prob": 0.0398
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0376
+      },
+      {
+        "away": 0,
+        "home": 0,
+        "prob": 0.0355
+      },
+      {
+        "away": 0,
+        "home": 3,
+        "prob": 0.0333
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0328
+      },
+      {
+        "away": 1,
+        "home": 0,
+        "prob": 0.0326
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "npb_official",
+      "away_hitting": "npb_official",
+      "home_pitcher": "npb_official",
+      "away_pitcher": "fallback",
+      "weather": "indoor",
+      "odds": "none"
+    },
+    "data_quality": {
+      "level": "fallback",
+      "missing": [
+        "원정 선발"
+      ]
+    }
+  },
+  {
+    "game_pk": "2021039249",
+    "status": "BEFORE",
+    "time_kst": "18:00",
+    "game_date_kst": "2026-08-09",
+    "venue": "横浜",
+    "home_team": "DeNA",
+    "away_team": "広島",
+    "home_abbr": "DEN",
+    "away_abbr": "HIR",
+    "home_pitcher_name": "片山",
+    "away_pitcher_name": "鈴木",
+    "home_score": null,
+    "away_score": null,
+    "home_pitcher": {
+      "name": "片山 皓心",
+      "team_abbr": "DEN",
+      "era": 9.39,
+      "whip": 2.217391304347826,
+      "k9": 9.391304347826086,
+      "bb9": 5.869565217391304,
+      "hr9": 1.1739130434782608,
+      "ip": 7.666666666666667,
+      "current_ip": 7.666666666666667,
+      "prior_ip": 0.0,
+      "projection_ip": 7.666666666666667,
+      "appearances": 2,
+      "games_started": null,
+      "expected_ip": 5.22,
+      "hand": "L",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 9.39,
+      "_bb": 5.0,
+      "_so": 8.0,
+      "_hr": 1.0,
+      "_hits": 12.0,
+      "_er": 8.0,
+      "season": 2026,
+      "_source": "npb_official_lowsample"
+    },
+    "away_pitcher": {
+      "name": "鈴木 健矢",
+      "team_abbr": "HIR",
+      "era": 2.19,
+      "whip": 1.133,
+      "k9": 4.529,
+      "bb9": 2.643,
+      "hr9": 0.259,
+      "ip": 35.333333333333336,
+      "current_ip": 35.333333333333336,
+      "prior_ip": 33.333333333333336,
+      "projection_ip": 47.0,
+      "appearances": 25,
+      "games_started": null,
+      "expected_ip": 5.11,
+      "hand": "R",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 2.19,
+      "_bb": 11.0,
+      "_so": 17.0,
+      "_hr": 1.0,
+      "_hits": 30.0,
+      "_er": 9.0,
+      "season": 2026,
+      "_source": "npb_official_2yr",
+      "projection_prior_weight": 0.35
+    },
+    "umpire": "",
+    "model_version": "projection_v2",
+    "market_total": null,
+    "environment_factor": 1.0533,
+    "raw_home_pre_learn": 3.56,
+    "raw_away_pre_learn": 3.767,
+    "home_pitcher_id": "片山 皓心",
+    "away_pitcher_id": "鈴木 健矢",
+    "home_runs": 3.2370482692990445,
+    "away_runs": 3.4440482692990444,
+    "total": 6.681096538598089,
+    "home_win_prob": 0.41585,
+    "away_win_prob": 0.4594,
+    "push_prob": 0.12475,
+    "runline": {
+      "home_minus_1_5": 0.30655,
+      "home_plus_1_5": 0.65245,
+      "away_minus_1_5": 0.34755,
+      "away_plus_1_5": 0.69345
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 3.566,
+        "runs_vs_bp": 3.559,
+        "sp_share": 0.568,
+        "expected_ip": 5.11,
+        "mu_full": 3.56,
+        "mu_f5": 1.73,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3194,
+          "pitcher_woba_against": 0.2991,
+          "matchup_woba": 0.3085,
+          "sp_path": {
+            "eff_woba": 0.3086,
+            "rpa": 0.0934,
+            "obp_eff": 0.2932,
+            "pa_per_inning": 4.245
+          },
+          "bp_path": {
+            "eff_woba": 0.3084,
+            "rpa": 0.0932,
+            "obp_eff": 0.293,
+            "pa_per_inning": 4.243
+          },
+          "hand_factor": 1.0,
+          "park": 1.02,
+          "hr_adj": 1.0,
+          "home_mult": 1.012,
+          "bp_factor": 0.976
+        }
+      },
+      "away": {
+        "runs_vs_sp": 3.802,
+        "runs_vs_bp": 3.787,
+        "sp_share": 0.58,
+        "expected_ip": 5.22,
+        "mu_full": 3.767,
+        "mu_f5": 1.86,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3028,
+          "pitcher_woba_against": 0.3218,
+          "matchup_woba": 0.3146,
+          "sp_path": {
+            "eff_woba": 0.3151,
+            "rpa": 0.0987,
+            "obp_eff": 0.2994,
+            "pa_per_inning": 4.282
+          },
+          "bp_path": {
+            "eff_woba": 0.3147,
+            "rpa": 0.0983,
+            "obp_eff": 0.299,
+            "pa_per_inning": 4.279
+          },
+          "hand_factor": 1.0,
+          "park": 1.02,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.969
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 1.71,
+      "away_xr": 1.84,
+      "total_xr": 3.56,
+      "home_win_prob": 0.3728,
+      "over_probs": {
+        "3.5": 0.4232,
+        "4.5": 0.3042,
+        "5.0": 0.2086
+      }
+    },
+    "learn_correction": {
+      "home_team": 0.31076879261766,
+      "away_team": -0.9566722540195707,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0,
+      "home_applied": -0.323,
+      "away_applied": -0.323,
+      "margin_weight": 0.0
+    },
+    "feature_snapshot": {
+      "home_team_woba": 0.3194,
+      "away_team_woba": 0.3028,
+      "home_lineup_coverage": 1.0,
+      "away_lineup_coverage": 1.0,
+      "home_starter_ip": 7.7,
+      "away_starter_ip": 35.3,
+      "home_projection_ip": 7.7,
+      "away_projection_ip": 47.0,
+      "home_expected_ip": 5.22,
+      "away_expected_ip": 5.11,
+      "home_bullpen_factor": 0.9687,
+      "away_bullpen_factor": 0.9759
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "鈴木 健矢",
+        "lineup_woba": 0.3205,
+        "matchup_score": 0.9771,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0108,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "佐野 恵太",
+            "hand": "L",
+            "pa": 595,
+            "woba": 0.312,
+            "ops": 0.707,
+            "platoon": 1.05,
+            "matchup_woba": 0.302,
+            "k_pct": 0.08,
+            "hr_pct": 0.006,
+            "edge": -0.0435,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "度会 隆輝",
+            "hand": "L",
+            "pa": 422,
+            "woba": 0.313,
+            "ops": 0.709,
+            "platoon": 1.05,
+            "matchup_woba": 0.297,
+            "k_pct": 0.083,
+            "hr_pct": 0.007,
+            "edge": -0.045,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "勝又 温史",
+            "hand": "L",
+            "pa": 303,
+            "woba": 0.312,
+            "ops": 0.705,
+            "platoon": 1.05,
+            "matchup_woba": 0.302,
+            "k_pct": 0.105,
+            "hr_pct": 0.005,
+            "edge": -0.0339,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "牧 秀悟",
+            "hand": "R",
+            "pa": 424,
+            "woba": 0.357,
+            "ops": 0.843,
+            "platoon": 0.96,
+            "matchup_woba": 0.287,
+            "k_pct": 0.12,
+            "hr_pct": 0.015,
+            "edge": -0.0784,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "蝦名 達夫",
+            "hand": "R",
+            "pa": 423,
+            "woba": 0.307,
+            "ops": 0.692,
+            "platoon": 0.96,
+            "matchup_woba": 0.272,
+            "k_pct": 0.135,
+            "hr_pct": 0.006,
+            "edge": -0.0397,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "宮﨑 敏郎",
+            "hand": "R",
+            "pa": 390,
+            "woba": 0.323,
+            "ops": 0.738,
+            "platoon": 0.96,
+            "matchup_woba": 0.281,
+            "k_pct": 0.078,
+            "hr_pct": 0.008,
+            "edge": -0.049,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "筒香 嘉智",
+            "hand": "L",
+            "pa": 329,
+            "woba": 0.336,
+            "ops": 0.778,
+            "platoon": 1.05,
+            "matchup_woba": 0.294,
+            "k_pct": 0.156,
+            "hr_pct": 0.015,
+            "edge": -0.0793,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "松尾 汐恩",
+            "hand": "R",
+            "pa": 306,
+            "woba": 0.303,
+            "ops": 0.68,
+            "platoon": 0.96,
+            "matchup_woba": 0.262,
+            "k_pct": 0.074,
+            "hr_pct": 0.006,
+            "edge": -0.0398,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "ヒュンメル",
+            "hand": "S",
+            "pa": 148,
+            "woba": 0.304,
+            "ops": 0.682,
+            "platoon": 1.05,
+            "matchup_woba": 0.278,
+            "k_pct": 0.186,
+            "hr_pct": 0.009,
+            "edge": -0.0566,
+            "source": "npb_official"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "片山 皓心",
+        "lineup_woba": 0.3047,
+        "matchup_score": 1.0011,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0088,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "坂倉 将吾",
+            "hand": "L",
+            "pa": 522,
+            "woba": 0.322,
+            "ops": 0.735,
+            "platoon": 0.96,
+            "matchup_woba": 0.371,
+            "k_pct": 0.197,
+            "hr_pct": 0.024,
+            "edge": 0.041,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "小園 海斗",
+            "hand": "L",
+            "pa": 582,
+            "woba": 0.301,
+            "ops": 0.672,
+            "platoon": 0.96,
+            "matchup_woba": 0.34,
+            "k_pct": 0.126,
+            "hr_pct": 0.008,
+            "edge": 0.0374,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "菊池 涼介",
+            "hand": "R",
+            "pa": 489,
+            "woba": 0.292,
+            "ops": 0.647,
+            "platoon": 1.05,
+            "matchup_woba": 0.347,
+            "k_pct": 0.203,
+            "hr_pct": 0.017,
+            "edge": 0.0383,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "大盛 穂",
+            "hand": "L",
+            "pa": 335,
+            "woba": 0.287,
+            "ops": 0.63,
+            "platoon": 0.96,
+            "matchup_woba": 0.31,
+            "k_pct": 0.26,
+            "hr_pct": 0.02,
+            "edge": 0.0339,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "ファビアン",
+            "hand": "R",
+            "pa": 455,
+            "woba": 0.318,
+            "ops": 0.723,
+            "platoon": 1.05,
+            "matchup_woba": 0.386,
+            "k_pct": 0.172,
+            "hr_pct": 0.043,
+            "edge": 0.0408,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "モンテロ",
+            "hand": "R",
+            "pa": 389,
+            "woba": 0.317,
+            "ops": 0.721,
+            "platoon": 1.05,
+            "matchup_woba": 0.39,
+            "k_pct": 0.228,
+            "hr_pct": 0.032,
+            "edge": 0.0421,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "佐々木 泰",
+            "hand": "R",
+            "pa": 309,
+            "woba": 0.292,
+            "ops": 0.646,
+            "platoon": 1.05,
+            "matchup_woba": 0.352,
+            "k_pct": 0.139,
+            "hr_pct": 0.015,
+            "edge": 0.0376,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "名原 典彦",
+            "hand": "R",
+            "pa": 222,
+            "woba": 0.304,
+            "ops": 0.681,
+            "platoon": 1.05,
+            "matchup_woba": 0.355,
+            "k_pct": 0.159,
+            "hr_pct": 0.019,
+            "edge": 0.0384,
+            "source": "npb_official"
+          },
+          {
+            "order": 9,
+            "name": "持丸 泰輝",
+            "hand": "L",
+            "pa": 210,
+            "woba": 0.295,
+            "ops": 0.656,
+            "platoon": 0.96,
+            "matchup_woba": 0.343,
+            "k_pct": 0.242,
+            "hr_pct": 0.023,
+            "edge": 0.0385,
+            "source": "npb_official"
+          }
+        ]
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.96,
+      "stopper_factor": 0.968,
+      "stopper_available": 6,
+      "chase_factor": 0.986,
+      "middle_factor": 0.939
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.983,
+      "stopper_factor": 0.955,
+      "stopper_available": 6,
+      "chase_factor": 0.984,
+      "middle_factor": 1.152
+    },
+    "bullpen_detail": {
+      "home_recent": null,
+      "away_recent": null,
+      "home_bottomup": {
+        "effective_era": 3.04,
+        "raw_era": 2.97,
+        "n_available": 13,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "レイノルズ",
+            "reason": "2연투",
+            "eff_era": 1.34
+          },
+          {
+            "name": "ルイーズ",
+            "reason": "2연투",
+            "eff_era": 4.08
+          },
+          {
+            "name": "馬場 皐輔",
+            "reason": "어제 28구(추정)",
+            "eff_era": 3.43
+          }
+        ],
+        "relievers": [
+          {
+            "name": "レイノルズ",
+            "hand": "R",
+            "ip": 45.0,
+            "era": 1.2,
+            "eff_era": 1.34,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 9.0,
+              "pitches_3d": 26.0,
+              "holds": 1,
+              "saves": 4,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "浜地 真澄",
+            "hand": "R",
+            "ip": 10.0,
+            "era": 1.93,
+            "eff_era": 1.93,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 16.0,
+              "pitches_3d": 16.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "岩田 将貴",
+            "hand": "L",
+            "ip": 21.666666666666668,
+            "era": 2.33,
+            "eff_era": 2.33,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "松本 凌人",
+            "hand": "R",
+            "ip": 9.333333333333334,
+            "era": 2.57,
+            "eff_era": 2.57,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 24.0,
+              "pitches_3d": 25.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "中川 虎大",
+            "hand": "R",
+            "ip": 33.333333333333336,
+            "era": 2.8,
+            "eff_era": 2.8,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 13.0,
+              "pitches_3d": 13.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "宮城 滝太",
+            "hand": "R",
+            "ip": 28.666666666666668,
+            "era": 2.93,
+            "eff_era": 2.93,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "伊勢 大夢",
+            "hand": "R",
+            "ip": 29.666666666666668,
+            "era": 2.98,
+            "eff_era": 2.98,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 7.0,
+              "pitches_3d": 7.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "若松 尚輝",
+            "hand": "R",
+            "ip": 27.666666666666668,
+            "era": 3.09,
+            "eff_era": 3.09,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 66.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "馬場 皐輔",
+            "hand": "R",
+            "ip": 2.0,
+            "era": 3.18,
+            "eff_era": 3.43,
+            "availability": "fatigued",
+            "avail_reason": "어제 28구(추정)",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 28.0,
+              "pitches_3d": 28.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "中川 颯",
+            "hand": "R",
+            "ip": 9.333333333333334,
+            "era": 3.56,
+            "eff_era": 3.56,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "ルイーズ",
+            "hand": "R",
+            "ip": 29.666666666666668,
+            "era": 3.64,
+            "eff_era": 4.08,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 18.0,
+              "pitches_3d": 32.0,
+              "holds": 4,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "吉野 光樹",
+            "hand": "R",
+            "ip": 17.0,
+            "era": 3.76,
+            "eff_era": 3.76,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 36.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "マルセリーノ",
+            "hand": "R",
+            "ip": 28.333333333333332,
+            "era": 5.22,
+            "eff_era": 5.22,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 3.19,
+        "raw_era": 3.15,
+        "n_available": 10,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "髙 太一",
+            "reason": "2연투",
+            "eff_era": 2.4
+          }
+        ],
+        "relievers": [
+          {
+            "name": "髙 太一",
+            "hand": "L",
+            "ip": 37.0,
+            "era": 2.14,
+            "eff_era": 2.4,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 31.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "森浦 大輔",
+            "hand": "L",
+            "ip": 40.666666666666664,
+            "era": 2.17,
+            "eff_era": 2.17,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 15.0,
+              "pitches_3d": 15.0,
+              "holds": 2,
+              "saves": 3,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "鈴木 健矢",
+            "hand": "R",
+            "ip": 35.333333333333336,
+            "era": 2.19,
+            "eff_era": 2.19,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "遠藤 淳志",
+            "hand": "R",
+            "ip": 40.333333333333336,
+            "era": 2.82,
+            "eff_era": 2.82,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 24.0,
+              "pitches_3d": 37.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "菊地 ハルン",
+            "hand": "R",
+            "ip": 8.666666666666666,
+            "era": 3.94,
+            "eff_era": 3.94,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 34.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "辻 大雅",
+            "hand": "L",
+            "ip": 28.333333333333332,
+            "era": 4.16,
+            "eff_era": 4.16,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 13.0,
+              "pitches_3d": 43.0,
+              "holds": 3,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "赤木 晴哉",
+            "hand": "R",
+            "ip": 8.0,
+            "era": 4.23,
+            "eff_era": 4.23,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 5.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "アドゥワ 誠",
+            "hand": "R",
+            "ip": 15.666666666666666,
+            "era": 4.46,
+            "eff_era": 4.46,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 21.0,
+              "pitches_3d": 21.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "益田 武尚",
+            "hand": "R",
+            "ip": 17.666666666666668,
+            "era": 5.2,
+            "eff_era": 5.2,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 12.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "黒原 拓未",
+            "hand": "L",
+            "ip": 7.333333333333333,
+            "era": 6.14,
+            "eff_era": 6.14,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 5.0,
+              "pitches_3d": 49.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": null,
+      "away": null
+    },
+    "weather": {
+      "source": "open-meteo",
+      "model": "air_density_v3",
+      "temp_c": 28.7,
+      "temp_f": 83.7,
+      "wind_mph": 2.7,
+      "wind_dir_label": "OUT(밀어줌)",
+      "wind_dot_of": 8.7,
+      "precip_prob": 94,
+      "humidity_pct": 77,
+      "air_density": 1.1478,
+      "density_delta_pct": -3.45,
+      "carry_dist_pct": 2.5,
+      "run_factor": 1.0326,
+      "factor": 1.0326
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "odds": {},
+    "picks": [],
+    "scores_top": [
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.032
+      },
+      {
+        "away": 1,
+        "home": 1,
+        "prob": 0.0319
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0302
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0288
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0242
+      },
+      {
+        "away": 1,
+        "home": 0,
+        "prob": 0.0241
+      },
+      {
+        "away": 0,
+        "home": 1,
+        "prob": 0.0234
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0232
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "npb_official",
+      "away_hitting": "npb_official",
+      "home_pitcher": "npb_official_lowsample",
+      "away_pitcher": "npb_official_2yr",
+      "weather": "open-meteo",
+      "odds": "none"
+    },
+    "data_quality": {
+      "level": "full",
+      "missing": []
+    }
+  },
+  {
+    "game_pk": "2021039250",
+    "status": "BEFORE",
+    "time_kst": "18:00",
+    "game_date_kst": "2026-08-09",
+    "venue": "京セラドーム",
+    "home_team": "阪神",
+    "away_team": "中日",
+    "home_abbr": "HAN",
+    "away_abbr": "CHU",
+    "home_pitcher_name": "伊藤将",
+    "away_pitcher_name": "柳",
+    "home_score": null,
+    "away_score": null,
+    "home_pitcher": {
+      "era": 3.3,
+      "whip": 1.2,
+      "k9": 7.5,
+      "bb9": 2.8,
+      "hr9": 0.7,
+      "ip": 0,
+      "hand": "R",
+      "expected_ip": 6.0,
+      "games_started": 0,
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.3,
+      "_source": "fallback"
+    },
+    "away_pitcher": {
+      "name": "柳 裕也",
+      "team_abbr": "CHU",
+      "era": 2.71,
+      "whip": 1.181,
+      "k9": 7.412,
+      "bb9": 2.241,
+      "hr9": 0.625,
+      "ip": 112.0,
+      "current_ip": 112.0,
+      "prior_ip": 79.33333333333333,
+      "projection_ip": 139.77,
+      "appearances": 18,
+      "games_started": null,
+      "expected_ip": 6.22,
+      "hand": "R",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 2.71,
+      "_bb": 25.0,
+      "_so": 92.0,
+      "_hr": 9.0,
+      "_hits": 104.0,
+      "_er": 32.0,
+      "season": 2026,
+      "_source": "npb_official_2yr",
+      "projection_prior_weight": 0.35
+    },
+    "umpire": "",
+    "model_version": "projection_v2",
+    "market_total": null,
+    "environment_factor": 0.97,
+    "raw_home_pre_learn": 3.658,
+    "raw_away_pre_learn": 3.51,
+    "home_pitcher_id": "伊藤将",
+    "away_pitcher_id": "柳 裕也",
+    "home_runs": 3.4010231883128705,
+    "away_runs": 3.2530231883128704,
+    "total": 6.654046376625741,
+    "home_win_prob": 0.4534,
+    "away_win_prob": 0.42205,
+    "push_prob": 0.12455,
+    "runline": {
+      "home_minus_1_5": 0.34595,
+      "home_plus_1_5": 0.68925,
+      "away_minus_1_5": 0.31075,
+      "away_plus_1_5": 0.65405
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 3.68,
+        "runs_vs_bp": 3.657,
+        "sp_share": 0.691,
+        "expected_ip": 6.22,
+        "mu_full": 3.658,
+        "mu_f5": 2.102,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.32,
+          "pitcher_woba_against": 0.3014,
+          "matchup_woba": 0.3114,
+          "sp_path": {
+            "eff_woba": 0.3118,
+            "rpa": 0.0959,
+            "obp_eff": 0.2962,
+            "pa_per_inning": 4.263
+          },
+          "bp_path": {
+            "eff_woba": 0.3111,
+            "rpa": 0.0954,
+            "obp_eff": 0.2956,
+            "pa_per_inning": 4.259
+          },
+          "hand_factor": 1.0,
+          "park": 0.97,
+          "hr_adj": 1.0,
+          "home_mult": 1.012,
+          "bp_factor": 0.838
+        }
+      },
+      "away": {
+        "runs_vs_sp": 3.5,
+        "runs_vs_bp": 3.493,
+        "sp_share": 0.667,
+        "expected_ip": 6.0,
+        "mu_full": 3.51,
+        "mu_f5": 1.951,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3063,
+          "pitcher_woba_against": 0.31,
+          "matchup_woba": 0.3063,
+          "sp_path": {
+            "eff_woba": 0.3068,
+            "rpa": 0.0918,
+            "obp_eff": 0.2915,
+            "pa_per_inning": 4.234
+          },
+          "bp_path": {
+            "eff_woba": 0.3066,
+            "rpa": 0.0917,
+            "obp_eff": 0.2913,
+            "pa_per_inning": 4.233
+          },
+          "hand_factor": 1.0,
+          "park": 0.97,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.946
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 2.07,
+      "away_xr": 1.94,
+      "total_xr": 4.02,
+      "home_win_prob": 0.4293,
+      "over_probs": {
+        "3.5": 0.4947,
+        "4.5": 0.3648,
+        "5.0": 0.2574
+      }
+    },
+    "learn_correction": {
+      "home_team": -0.9568965517241379,
+      "away_team": 0.44294292834987936,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0,
+      "home_applied": -0.257,
+      "away_applied": -0.257,
+      "margin_weight": 0.0
+    },
+    "feature_snapshot": {
+      "home_team_woba": 0.32,
+      "away_team_woba": 0.3063,
+      "home_lineup_coverage": 1.0,
+      "away_lineup_coverage": 1.0,
+      "home_starter_ip": 0.0,
+      "away_starter_ip": 112.0,
+      "home_projection_ip": 0.0,
+      "away_projection_ip": 139.8,
+      "home_expected_ip": 6.0,
+      "away_expected_ip": 6.22,
+      "home_bullpen_factor": 0.9465,
+      "away_bullpen_factor": 0.8382
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "柳 裕也",
+        "lineup_woba": 0.3208,
+        "matchup_score": 0.9893,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0101,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "森下 翔太",
+            "hand": "R",
+            "pa": 649,
+            "woba": 0.361,
+            "ops": 0.855,
+            "platoon": 0.96,
+            "matchup_woba": 0.341,
+            "k_pct": 0.15,
+            "hr_pct": 0.035,
+            "edge": -0.0321,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "佐藤 輝明",
+            "hand": "L",
+            "pa": 628,
+            "woba": 0.387,
+            "ops": 0.934,
+            "platoon": 1.05,
+            "matchup_woba": 0.395,
+            "k_pct": 0.261,
+            "hr_pct": 0.044,
+            "edge": -0.036,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "中野 拓夢",
+            "hand": "L",
+            "pa": 625,
+            "woba": 0.302,
+            "ops": 0.677,
+            "platoon": 1.05,
+            "matchup_woba": 0.311,
+            "k_pct": 0.148,
+            "hr_pct": 0.004,
+            "edge": -0.0095,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "大山 悠輔",
+            "hand": "R",
+            "pa": 607,
+            "woba": 0.338,
+            "ops": 0.783,
+            "platoon": 0.96,
+            "matchup_woba": 0.325,
+            "k_pct": 0.174,
+            "hr_pct": 0.021,
+            "edge": -0.0282,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "髙寺 望夢",
+            "hand": "L",
+            "pa": 329,
+            "woba": 0.293,
+            "ops": 0.648,
+            "platoon": 1.05,
+            "matchup_woba": 0.303,
+            "k_pct": 0.215,
+            "hr_pct": 0.01,
+            "edge": -0.0204,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "近本 光司",
+            "hand": "L",
+            "pa": 433,
+            "woba": 0.301,
+            "ops": 0.674,
+            "platoon": 1.05,
+            "matchup_woba": 0.319,
+            "k_pct": 0.153,
+            "hr_pct": 0.006,
+            "edge": -0.0148,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "坂本 誠志郎",
+            "hand": "R",
+            "pa": 338,
+            "woba": 0.299,
+            "ops": 0.668,
+            "platoon": 0.96,
+            "matchup_woba": 0.279,
+            "k_pct": 0.242,
+            "hr_pct": 0.014,
+            "edge": -0.0208,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "熊谷 敬宥",
+            "hand": "R",
+            "pa": 210,
+            "woba": 0.276,
+            "ops": 0.596,
+            "platoon": 0.96,
+            "matchup_woba": 0.255,
+            "k_pct": 0.229,
+            "hr_pct": 0.008,
+            "edge": -0.0084,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "福島 圭音",
+            "hand": "L",
+            "pa": 144,
+            "woba": 0.295,
+            "ops": 0.654,
+            "platoon": 1.05,
+            "matchup_woba": 0.301,
+            "k_pct": 0.184,
+            "hr_pct": 0.009,
+            "edge": -0.0165,
+            "source": "npb_official"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "",
+        "lineup_woba": 0.3067,
+        "matchup_score": 1.0,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 0.9892,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "細川 成也",
+            "hand": "R",
+            "pa": 578,
+            "woba": 0.338,
+            "ops": 0.783,
+            "platoon": 0.96,
+            "matchup_woba": 0.357,
+            "k_pct": 0.252,
+            "hr_pct": 0.035,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "村松 開人",
+            "hand": "L",
+            "pa": 478,
+            "woba": 0.307,
+            "ops": 0.692,
+            "platoon": 1.05,
+            "matchup_woba": 0.334,
+            "k_pct": 0.17,
+            "hr_pct": 0.015,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "石伊 雄太",
+            "hand": "R",
+            "pa": 371,
+            "woba": 0.303,
+            "ops": 0.68,
+            "platoon": 0.96,
+            "matchup_woba": 0.296,
+            "k_pct": 0.229,
+            "hr_pct": 0.02,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "福永 裕基",
+            "hand": "R",
+            "pa": 275,
+            "woba": 0.304,
+            "ops": 0.683,
+            "platoon": 0.96,
+            "matchup_woba": 0.313,
+            "k_pct": 0.196,
+            "hr_pct": 0.012,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "田中 幹也",
+            "hand": "R",
+            "pa": 374,
+            "woba": 0.287,
+            "ops": 0.629,
+            "platoon": 0.96,
+            "matchup_woba": 0.278,
+            "k_pct": 0.113,
+            "hr_pct": 0.007,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "石川 昂弥",
+            "hand": "R",
+            "pa": 262,
+            "woba": 0.315,
+            "ops": 0.715,
+            "platoon": 0.96,
+            "matchup_woba": 0.316,
+            "k_pct": 0.223,
+            "hr_pct": 0.024,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "岡林 勇希",
+            "hand": "L",
+            "pa": 457,
+            "woba": 0.299,
+            "ops": 0.667,
+            "platoon": 1.05,
+            "matchup_woba": 0.324,
+            "k_pct": 0.107,
+            "hr_pct": 0.01,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "ボスラー",
+            "hand": "L",
+            "pa": 401,
+            "woba": 0.294,
+            "ops": 0.652,
+            "platoon": 1.05,
+            "matchup_woba": 0.316,
+            "k_pct": 0.244,
+            "hr_pct": 0.028,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "サノー",
+            "hand": "R",
+            "pa": 214,
+            "woba": 0.326,
+            "ops": 0.747,
+            "platoon": 0.96,
+            "matchup_woba": 0.332,
+            "k_pct": 0.26,
+            "hr_pct": 0.041,
+            "edge": 0.0,
+            "source": "npb_official"
+          }
+        ]
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.876,
+      "stopper_factor": 0.8,
+      "stopper_available": 4,
+      "chase_factor": 1.25,
+      "middle_factor": 0.906
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.851,
+      "stopper_factor": 0.8,
+      "stopper_available": 3,
+      "chase_factor": 0.849,
+      "middle_factor": 0.931
+    },
+    "bullpen_detail": {
+      "home_recent": null,
+      "away_recent": null,
+      "home_bottomup": {
+        "effective_era": 2.53,
+        "raw_era": 2.67,
+        "n_available": 8,
+        "n_out": 1,
+        "out": [
+          {
+            "name": "門別 啓人",
+            "reason": "어제 41구(추정)",
+            "era": 4.16
+          }
+        ],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "工藤 泰成",
+            "hand": "R",
+            "ip": 36.666666666666664,
+            "era": 1.51,
+            "eff_era": 1.51,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 16.0,
+              "holds": 1,
+              "saves": 1,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "ドリス",
+            "hand": "R",
+            "ip": 37.0,
+            "era": 1.94,
+            "eff_era": 1.94,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 30.0,
+              "holds": 0,
+              "saves": 2,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "木下 里都",
+            "hand": "R",
+            "ip": 27.0,
+            "era": 2.48,
+            "eff_era": 2.48,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 14.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "岩崎 優",
+            "hand": "L",
+            "ip": 31.333333333333332,
+            "era": 2.59,
+            "eff_era": 2.59,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "湯浅 京己",
+            "hand": "R",
+            "ip": 20.333333333333332,
+            "era": 2.61,
+            "eff_era": 2.61,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 15.0,
+              "pitches_3d": 15.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "及川 雅貴",
+            "hand": "L",
+            "ip": 25.0,
+            "era": 2.72,
+            "eff_era": 2.72,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 17.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "セベリーノ",
+            "hand": "L",
+            "ip": 6.0,
+            "era": 3.66,
+            "eff_era": 3.66,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 16.0,
+              "pitches_3d": 16.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "早川 太貴",
+            "hand": "R",
+            "ip": 13.666666666666666,
+            "era": 5.93,
+            "eff_era": 5.93,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "門別 啓人",
+            "hand": "L",
+            "ip": 17.333333333333332,
+            "era": 4.16,
+            "eff_era": 4.16,
+            "availability": "out",
+            "avail_reason": "어제 41구(추정)",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 41.0,
+              "pitches_3d": 41.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 2.39,
+        "raw_era": 2.39,
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "松山 晋也",
+            "hand": "R",
+            "ip": 28.666666666666668,
+            "era": 1.37,
+            "eff_era": 1.37,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 18.0,
+              "holds": 0,
+              "saves": 2,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "草加 勝",
+            "hand": "R",
+            "ip": 15.666666666666666,
+            "era": 1.87,
+            "eff_era": 1.87,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 35.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "伊藤 茉央",
+            "hand": "R",
+            "ip": 14.666666666666666,
+            "era": 2.07,
+            "eff_era": 2.07,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "吉田 聖弥",
+            "hand": "L",
+            "ip": 33.666666666666664,
+            "era": 2.14,
+            "eff_era": 2.14,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 25.0,
+              "pitches_3d": 25.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "橋本 侑樹",
+            "hand": "L",
+            "ip": 27.666666666666668,
+            "era": 2.43,
+            "eff_era": 2.43,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 14.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "藤嶋 健人",
+            "hand": "R",
+            "ip": 34.666666666666664,
+            "era": 2.82,
+            "eff_era": 2.82,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 15.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "アブレウ",
+            "hand": "R",
+            "ip": 12.666666666666666,
+            "era": 3.01,
+            "eff_era": 3.01,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 15.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "齋藤 綱記",
+            "hand": "L",
+            "ip": 29.666666666666668,
+            "era": 3.3,
+            "eff_era": 3.3,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 9.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": null,
+      "away": null
+    },
+    "weather": {
+      "source": "indoor",
+      "run_factor": 1.0,
+      "wind_dir_label": "돔",
+      "temp_f": null
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "odds": {},
+    "picks": [],
+    "scores_top": [
+      {
+        "away": 1,
+        "home": 1,
+        "prob": 0.0305
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0292
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0291
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0266
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0248
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0242
+      },
+      {
+        "away": 1,
+        "home": 0,
+        "prob": 0.0238
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0234
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "npb_official",
+      "away_hitting": "npb_official",
+      "home_pitcher": "fallback",
+      "away_pitcher": "npb_official_2yr",
+      "weather": "indoor",
+      "odds": "none"
+    },
+    "data_quality": {
+      "level": "fallback",
+      "missing": [
+        "홈 선발"
+      ]
+    }
+  },
+  {
+    "game_pk": "2021039251",
+    "status": "BEFORE",
+    "time_kst": "14:00",
+    "game_date_kst": "2026-08-09",
+    "venue": "エスコンF",
+    "home_team": "日本ハム",
+    "away_team": "楽天",
+    "home_abbr": "NIP",
+    "away_abbr": "RAK",
+    "home_pitcher_name": "有原",
+    "away_pitcher_name": "古謝",
+    "home_score": null,
+    "away_score": null,
+    "home_pitcher": {
+      "name": "有原 航平",
+      "team_abbr": "NIP",
+      "era": 3.91,
+      "whip": 1.268,
+      "k9": 6.28,
+      "bb9": 2.343,
+      "hr9": 0.733,
+      "ip": 55.333333333333336,
+      "current_ip": 55.333333333333336,
+      "prior_ip": 175.0,
+      "projection_ip": 116.58,
+      "appearances": 9,
+      "games_started": null,
+      "expected_ip": 6.15,
+      "hand": "R",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.91,
+      "_bb": 16.0,
+      "_so": 39.0,
+      "_hr": 6.0,
+      "_hits": 59.0,
+      "_er": 30.0,
+      "season": 2026,
+      "_source": "npb_official_2yr",
+      "projection_prior_weight": 0.35
+    },
+    "away_pitcher": {
+      "name": "古謝 樹",
+      "team_abbr": "RAK",
+      "era": 3.94,
+      "whip": 1.283,
+      "k9": 7.464,
+      "bb9": 2.4,
+      "hr9": 0.962,
+      "ip": 73.0,
+      "current_ip": 73.0,
+      "prior_ip": 107.0,
+      "projection_ip": 110.45,
+      "appearances": 13,
+      "games_started": null,
+      "expected_ip": 5.62,
+      "hand": "L",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.94,
+      "_bb": 20.0,
+      "_so": 65.0,
+      "_hr": 9.0,
+      "_hits": 71.0,
+      "_er": 33.0,
+      "season": 2026,
+      "_source": "npb_official_2yr",
+      "projection_prior_weight": 0.35
+    },
+    "umpire": "",
+    "model_version": "projection_v2",
+    "market_total": null,
+    "environment_factor": 1.0,
+    "raw_home_pre_learn": 4.511,
+    "raw_away_pre_learn": 3.817,
+    "home_pitcher_id": "有原 航平",
+    "away_pitcher_id": "古謝 樹",
+    "home_runs": 3.99323425141521,
+    "away_runs": 3.29923425141521,
+    "total": 7.29246850283042,
+    "home_win_prob": 0.5055,
+    "away_win_prob": 0.37995,
+    "push_prob": 0.11455,
+    "runline": {
+      "home_minus_1_5": 0.40235,
+      "home_plus_1_5": 0.7173,
+      "away_minus_1_5": 0.2827,
+      "away_plus_1_5": 0.59765
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 4.651,
+        "runs_vs_bp": 4.661,
+        "sp_share": 0.624,
+        "expected_ip": 5.62,
+        "mu_full": 4.511,
+        "mu_f5": 2.361,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3276,
+          "pitcher_woba_against": 0.3193,
+          "matchup_woba": 0.3369,
+          "sp_path": {
+            "eff_woba": 0.3375,
+            "rpa": 0.117,
+            "obp_eff": 0.3206,
+            "pa_per_inning": 4.416
+          },
+          "bp_path": {
+            "eff_woba": 0.3378,
+            "rpa": 0.1172,
+            "obp_eff": 0.3209,
+            "pa_per_inning": 4.418
+          },
+          "hand_factor": 1.0,
+          "park": 1.0,
+          "hr_adj": 1.0,
+          "home_mult": 1.012,
+          "bp_factor": 1.022
+        }
+      },
+      "away": {
+        "runs_vs_sp": 3.868,
+        "runs_vs_bp": 3.826,
+        "sp_share": 0.683,
+        "expected_ip": 6.15,
+        "mu_full": 3.817,
+        "mu_f5": 2.173,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3078,
+          "pitcher_woba_against": 0.3187,
+          "matchup_woba": 0.3165,
+          "sp_path": {
+            "eff_woba": 0.3169,
+            "rpa": 0.1001,
+            "obp_eff": 0.3011,
+            "pa_per_inning": 4.292
+          },
+          "bp_path": {
+            "eff_woba": 0.3158,
+            "rpa": 0.0992,
+            "obp_eff": 0.3,
+            "pa_per_inning": 4.286
+          },
+          "hand_factor": 1.0,
+          "park": 1.0,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.892
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 2.34,
+      "away_xr": 2.17,
+      "total_xr": 4.51,
+      "home_win_prob": 0.4341,
+      "over_probs": {
+        "3.5": 0.5573,
+        "4.5": 0.4271,
+        "5.0": 0.312
+      }
+    },
+    "learn_correction": {
+      "home_team": -0.2390129646651472,
+      "away_team": -0.7965185325044328,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0,
+      "home_applied": -0.5178,
+      "away_applied": -0.5178,
+      "margin_weight": 0.0
+    },
+    "feature_snapshot": {
+      "home_team_woba": 0.3276,
+      "away_team_woba": 0.3078,
+      "home_lineup_coverage": 1.0,
+      "away_lineup_coverage": 1.0,
+      "home_starter_ip": 55.3,
+      "away_starter_ip": 73.0,
+      "home_projection_ip": 116.6,
+      "away_projection_ip": 110.5,
+      "home_expected_ip": 6.15,
+      "away_expected_ip": 5.62,
+      "home_bullpen_factor": 0.8923,
+      "away_bullpen_factor": 1.0217
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "古謝 樹",
+        "lineup_woba": 0.3268,
+        "matchup_score": 1.014,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0193,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "レイエス",
+            "hand": "R",
+            "pa": 599,
+            "woba": 0.373,
+            "ops": 0.892,
+            "platoon": 1.05,
+            "matchup_woba": 0.451,
+            "k_pct": 0.197,
+            "hr_pct": 0.066,
+            "edge": 0.034,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "水野 達稀",
+            "hand": "L",
+            "pa": 525,
+            "woba": 0.329,
+            "ops": 0.757,
+            "platoon": 0.96,
+            "matchup_woba": 0.339,
+            "k_pct": 0.184,
+            "hr_pct": 0.024,
+            "edge": 0.0182,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "万波 中正",
+            "hand": "R",
+            "pa": 558,
+            "woba": 0.336,
+            "ops": 0.778,
+            "platoon": 1.05,
+            "matchup_woba": 0.398,
+            "k_pct": 0.248,
+            "hr_pct": 0.055,
+            "edge": 0.0267,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "清宮 幸太郎",
+            "hand": "L",
+            "pa": 564,
+            "woba": 0.32,
+            "ops": 0.73,
+            "platoon": 0.96,
+            "matchup_woba": 0.344,
+            "k_pct": 0.175,
+            "hr_pct": 0.031,
+            "edge": 0.0145,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "野村 佑希",
+            "hand": "R",
+            "pa": 431,
+            "woba": 0.321,
+            "ops": 0.732,
+            "platoon": 1.05,
+            "matchup_woba": 0.375,
+            "k_pct": 0.211,
+            "hr_pct": 0.042,
+            "edge": 0.0263,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "郡司 裕也",
+            "hand": "R",
+            "pa": 431,
+            "woba": 0.311,
+            "ops": 0.704,
+            "platoon": 1.05,
+            "matchup_woba": 0.36,
+            "k_pct": 0.165,
+            "hr_pct": 0.024,
+            "edge": 0.0095,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "田宮 裕涼",
+            "hand": "L",
+            "pa": 331,
+            "woba": 0.303,
+            "ops": 0.679,
+            "platoon": 0.96,
+            "matchup_woba": 0.309,
+            "k_pct": 0.199,
+            "hr_pct": 0.02,
+            "edge": 0.0185,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "奈良間 大己",
+            "hand": "R",
+            "pa": 228,
+            "woba": 0.302,
+            "ops": 0.675,
+            "platoon": 1.05,
+            "matchup_woba": 0.341,
+            "k_pct": 0.249,
+            "hr_pct": 0.026,
+            "edge": 0.0177,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "カストロ",
+            "hand": "R",
+            "pa": 164,
+            "woba": 0.306,
+            "ops": 0.689,
+            "platoon": 1.05,
+            "matchup_woba": 0.354,
+            "k_pct": 0.227,
+            "hr_pct": 0.041,
+            "edge": 0.0217,
+            "source": "npb_official"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "有原 航平",
+        "lineup_woba": 0.3079,
+        "matchup_score": 0.9967,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 0.992,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "辰己 涼介",
+            "hand": "L",
+            "pa": 562,
+            "woba": 0.322,
+            "ops": 0.737,
+            "platoon": 1.05,
+            "matchup_woba": 0.361,
+            "k_pct": 0.178,
+            "hr_pct": 0.02,
+            "edge": 0.003,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "村林 一輝",
+            "hand": "R",
+            "pa": 580,
+            "woba": 0.305,
+            "ops": 0.685,
+            "platoon": 0.96,
+            "matchup_woba": 0.317,
+            "k_pct": 0.144,
+            "hr_pct": 0.01,
+            "edge": 0.0087,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "黒川 史陽",
+            "hand": "L",
+            "pa": 500,
+            "woba": 0.295,
+            "ops": 0.655,
+            "platoon": 1.05,
+            "matchup_woba": 0.332,
+            "k_pct": 0.122,
+            "hr_pct": 0.01,
+            "edge": 0.0059,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "浅村 栄斗",
+            "hand": "R",
+            "pa": 469,
+            "woba": 0.303,
+            "ops": 0.68,
+            "platoon": 0.96,
+            "matchup_woba": 0.313,
+            "k_pct": 0.186,
+            "hr_pct": 0.022,
+            "edge": -0.0034,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "中島 大輔",
+            "hand": "L",
+            "pa": 435,
+            "woba": 0.306,
+            "ops": 0.688,
+            "platoon": 1.05,
+            "matchup_woba": 0.334,
+            "k_pct": 0.113,
+            "hr_pct": 0.012,
+            "edge": 0.0125,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "マッカスカー",
+            "hand": "R",
+            "pa": 226,
+            "woba": 0.349,
+            "ops": 0.818,
+            "platoon": 0.96,
+            "matchup_woba": 0.354,
+            "k_pct": 0.263,
+            "hr_pct": 0.043,
+            "edge": -0.0009,
+            "source": "npb_official"
+          },
+          {
+            "order": 7,
+            "name": "平良 竜哉",
+            "hand": "R",
+            "pa": 217,
+            "woba": 0.311,
+            "ops": 0.704,
+            "platoon": 0.96,
+            "matchup_woba": 0.319,
+            "k_pct": 0.137,
+            "hr_pct": 0.03,
+            "edge": 0.007,
+            "source": "npb_official"
+          },
+          {
+            "order": 8,
+            "name": "太田 光",
+            "hand": "R",
+            "pa": 284,
+            "woba": 0.275,
+            "ops": 0.593,
+            "platoon": 0.96,
+            "matchup_woba": 0.278,
+            "k_pct": 0.202,
+            "hr_pct": 0.012,
+            "edge": 0.0047,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "佐藤 直樹",
+            "hand": "R",
+            "pa": 264,
+            "woba": 0.314,
+            "ops": 0.711,
+            "platoon": 0.96,
+            "matchup_woba": 0.311,
+            "k_pct": 0.255,
+            "hr_pct": 0.024,
+            "edge": 0.0106,
+            "source": "npb_official_2yr"
+          }
+        ]
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.895,
+      "stopper_factor": 0.925,
+      "stopper_available": 5,
+      "chase_factor": 0.841,
+      "middle_factor": 0.851
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.979,
+      "stopper_factor": 0.884,
+      "stopper_available": 4,
+      "chase_factor": 1.196,
+      "middle_factor": 1.078
+    },
+    "bullpen_detail": {
+      "home_recent": null,
+      "away_recent": null,
+      "home_bottomup": {
+        "effective_era": 2.65,
+        "raw_era": 2.65,
+        "n_available": 10,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "柳川 大晟",
+            "hand": "R",
+            "ip": 35.0,
+            "era": 1.79,
+            "eff_era": 1.79,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 29.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "島本 浩也",
+            "hand": "L",
+            "ip": 29.333333333333332,
+            "era": 1.85,
+            "eff_era": 1.85,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "堀 瑞輝",
+            "hand": "L",
+            "ip": 18.333333333333332,
+            "era": 2.04,
+            "eff_era": 2.04,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 6.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "田中 正義",
+            "hand": "R",
+            "ip": 33.666666666666664,
+            "era": 2.58,
+            "eff_era": 2.58,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "金村 尚真",
+            "hand": "R",
+            "ip": 18.666666666666668,
+            "era": 2.62,
+            "eff_era": 2.62,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "柴田 獅子",
+            "hand": "R",
+            "ip": 10.333333333333334,
+            "era": 2.99,
+            "eff_era": 2.99,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "上原 健太",
+            "hand": "L",
+            "ip": 28.666666666666668,
+            "era": 3.16,
+            "eff_era": 3.16,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 23.0,
+              "pitches_3d": 33.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "福島 蓮",
+            "hand": "R",
+            "ip": 61.0,
+            "era": 3.28,
+            "eff_era": 3.28,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "孫 易磊",
+            "hand": "R",
+            "ip": 15.333333333333334,
+            "era": 3.38,
+            "eff_era": 3.38,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 28.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "生田目 翼",
+            "hand": "R",
+            "ip": 10.666666666666666,
+            "era": 3.78,
+            "eff_era": 3.78,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 11.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 3.16,
+        "raw_era": 3.16,
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "泰 勝利",
+            "hand": "L",
+            "ip": 11.0,
+            "era": 1.86,
+            "eff_era": 1.86,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 12.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "九谷 瑠",
+            "hand": "R",
+            "ip": 29.0,
+            "era": 1.86,
+            "eff_era": 1.86,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 33.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "藤平 尚真",
+            "hand": "R",
+            "ip": 33.0,
+            "era": 2.49,
+            "eff_era": 2.49,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 6.0,
+              "holds": 0,
+              "saves": 1,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "マルテ",
+            "hand": "R",
+            "ip": 3.6666666666666665,
+            "era": 3.29,
+            "eff_era": 3.29,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 20.0,
+              "pitches_3d": 20.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "津留﨑 大成",
+            "hand": "R",
+            "ip": 22.666666666666668,
+            "era": 3.31,
+            "eff_era": 3.31,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "加治屋 蓮",
+            "hand": "R",
+            "ip": 33.0,
+            "era": 3.53,
+            "eff_era": 3.53,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 8.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "コントレラス",
+            "hand": "R",
+            "ip": 12.0,
+            "era": 4.02,
+            "eff_era": 4.02,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "柴田 大地",
+            "hand": "R",
+            "ip": 18.666666666666668,
+            "era": 4.36,
+            "eff_era": 4.36,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "中込 陽翔",
+            "hand": "R",
+            "ip": 13.0,
+            "era": 5.12,
+            "eff_era": 5.12,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 17.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": null,
+      "away": null
+    },
+    "weather": {
+      "source": "indoor",
+      "run_factor": 1.0,
+      "wind_dir_label": "돔",
+      "temp_f": null
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "odds": {},
+    "picks": [],
+    "scores_top": [
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0265
+      },
+      {
+        "away": 1,
+        "home": 1,
+        "prob": 0.0262
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0245
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0244
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0238
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0233
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0217
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0215
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "npb_official",
+      "away_hitting": "npb_official",
+      "home_pitcher": "npb_official_2yr",
+      "away_pitcher": "npb_official_2yr",
+      "weather": "indoor",
+      "odds": "none"
+    },
+    "data_quality": {
+      "level": "full",
+      "missing": []
+    }
+  },
+  {
+    "game_pk": "2021039252",
+    "status": "BEFORE",
+    "time_kst": "17:00",
+    "game_date_kst": "2026-08-09",
+    "venue": "ベルーナドーム",
+    "home_team": "西武",
+    "away_team": "ソフトバンク",
+    "home_abbr": "SEI",
+    "away_abbr": "SOF",
+    "home_pitcher_name": "武内",
+    "away_pitcher_name": "前田悠",
+    "home_score": null,
+    "away_score": null,
+    "home_pitcher": {
+      "name": "武内 夏暉",
+      "team_abbr": "SEI",
+      "era": 3.38,
+      "whip": 1.091,
+      "k9": 6.928,
+      "bb9": 1.777,
+      "hr9": 0.728,
+      "ip": 102.66666666666667,
+      "current_ip": 102.66666666666667,
+      "prior_ip": 63.333333333333336,
+      "projection_ip": 124.83,
+      "appearances": 16,
+      "games_started": null,
+      "expected_ip": 6.42,
+      "hand": "L",
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.38,
+      "_bb": 18.0,
+      "_so": 80.0,
+      "_hr": 8.0,
+      "_hits": 87.0,
+      "_er": 34.0,
+      "season": 2026,
+      "_source": "npb_official_2yr",
+      "projection_prior_weight": 0.35
+    },
+    "away_pitcher": {
+      "era": 3.3,
+      "whip": 1.2,
+      "k9": 7.5,
+      "bb9": 2.8,
+      "hr9": 0.7,
+      "ip": 0,
+      "hand": "R",
+      "expected_ip": 6.0,
+      "games_started": 0,
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.3,
+      "_source": "fallback"
+    },
+    "umpire": "",
+    "model_version": "projection_v2",
+    "market_total": null,
+    "environment_factor": 1.01,
+    "raw_home_pre_learn": 3.543,
+    "raw_away_pre_learn": 4.008,
+    "home_pitcher_id": "武内 夏暉",
+    "away_pitcher_id": "前田悠",
+    "home_runs": 4.0123105211579615,
+    "away_runs": 4.477310521157961,
+    "total": 8.489621042315923,
+    "home_win_prob": 0.4072,
+    "away_win_prob": 0.49435,
+    "push_prob": 0.09845,
+    "runline": {
+      "home_minus_1_5": 0.3145,
+      "home_plus_1_5": 0.6064,
+      "away_minus_1_5": 0.3936,
+      "away_plus_1_5": 0.6855
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 3.534,
+        "runs_vs_bp": 3.536,
+        "sp_share": 0.667,
+        "expected_ip": 6.0,
+        "mu_full": 3.543,
+        "mu_f5": 1.968,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3074,
+          "pitcher_woba_against": 0.31,
+          "matchup_woba": 0.3074,
+          "sp_path": {
+            "eff_woba": 0.3077,
+            "rpa": 0.0926,
+            "obp_eff": 0.2924,
+            "pa_per_inning": 4.239
+          },
+          "bp_path": {
+            "eff_woba": 0.3078,
+            "rpa": 0.0927,
+            "obp_eff": 0.2924,
+            "pa_per_inning": 4.24
+          },
+          "hand_factor": 1.0,
+          "park": 1.01,
+          "hr_adj": 1.0,
+          "home_mult": 1.012,
+          "bp_factor": 0.823
+        }
+      },
+      "away": {
+        "runs_vs_sp": 4.098,
+        "runs_vs_bp": 4.046,
+        "sp_share": 0.713,
+        "expected_ip": 6.42,
+        "mu_full": 4.008,
+        "mu_f5": 2.374,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3225,
+          "pitcher_woba_against": 0.31,
+          "matchup_woba": 0.3225,
+          "sp_path": {
+            "eff_woba": 0.3231,
+            "rpa": 0.1052,
+            "obp_eff": 0.3069,
+            "pa_per_inning": 4.328
+          },
+          "bp_path": {
+            "eff_woba": 0.3217,
+            "rpa": 0.104,
+            "obp_eff": 0.3056,
+            "pa_per_inning": 4.32
+          },
+          "hand_factor": 1.0,
+          "park": 1.01,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.928
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 1.93,
+      "away_xr": 2.38,
+      "total_xr": 4.31,
+      "home_win_prob": 0.3483,
+      "over_probs": {
+        "3.5": 0.5322,
+        "4.5": 0.4016,
+        "5.0": 0.2916
+      }
+    },
+    "learn_correction": {
+      "home_team": 0.047838049630289925,
+      "away_team": 0.59872282549986,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.29206016718577255,
+      "home_applied": 0.4693,
+      "away_applied": 0.4693,
+      "margin_weight": 0.0
+    },
+    "feature_snapshot": {
+      "home_team_woba": 0.3074,
+      "away_team_woba": 0.3225,
+      "home_lineup_coverage": 1.0,
+      "away_lineup_coverage": 1.0,
+      "home_starter_ip": 102.7,
+      "away_starter_ip": 0.0,
+      "home_projection_ip": 124.8,
+      "away_projection_ip": 0.0,
+      "home_expected_ip": 6.42,
+      "away_expected_ip": 6.0,
+      "home_bullpen_factor": 0.9284,
+      "away_bullpen_factor": 0.8228
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "",
+        "lineup_woba": 0.3069,
+        "matchup_score": 1.0,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 0.9984,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "渡部 聖弥",
+            "hand": "R",
+            "pa": 569,
+            "woba": 0.3,
+            "ops": 0.67,
+            "platoon": 0.96,
+            "matchup_woba": 0.299,
+            "k_pct": 0.182,
+            "hr_pct": 0.019,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "カナリオ",
+            "hand": "R",
+            "pa": 363,
+            "woba": 0.3,
+            "ops": 0.671,
+            "platoon": 0.96,
+            "matchup_woba": 0.303,
+            "k_pct": 0.257,
+            "hr_pct": 0.022,
+            "edge": 0.0,
+            "source": "npb_official"
+          },
+          {
+            "order": 3,
+            "name": "滝澤 夏央",
+            "hand": "L",
+            "pa": 516,
+            "woba": 0.297,
+            "ops": 0.661,
+            "platoon": 1.05,
+            "matchup_woba": 0.323,
+            "k_pct": 0.131,
+            "hr_pct": 0.007,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "ネビン",
+            "hand": "R",
+            "pa": 464,
+            "woba": 0.347,
+            "ops": 0.814,
+            "platoon": 0.96,
+            "matchup_woba": 0.353,
+            "k_pct": 0.158,
+            "hr_pct": 0.041,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "西川 愛也",
+            "hand": "L",
+            "pa": 456,
+            "woba": 0.292,
+            "ops": 0.647,
+            "platoon": 1.05,
+            "matchup_woba": 0.308,
+            "k_pct": 0.157,
+            "hr_pct": 0.017,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "長谷川 信哉",
+            "hand": "R",
+            "pa": 393,
+            "woba": 0.321,
+            "ops": 0.734,
+            "platoon": 0.96,
+            "matchup_woba": 0.317,
+            "k_pct": 0.165,
+            "hr_pct": 0.025,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "桑原 将志",
+            "hand": "R",
+            "pa": 381,
+            "woba": 0.306,
+            "ops": 0.686,
+            "platoon": 0.96,
+            "matchup_woba": 0.305,
+            "k_pct": 0.154,
+            "hr_pct": 0.015,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "小島 大河",
+            "hand": "L",
+            "pa": 224,
+            "woba": 0.299,
+            "ops": 0.667,
+            "platoon": 1.05,
+            "matchup_woba": 0.318,
+            "k_pct": 0.116,
+            "hr_pct": 0.022,
+            "edge": 0.0,
+            "source": "npb_official"
+          },
+          {
+            "order": 9,
+            "name": "平沢 大河",
+            "hand": "L",
+            "pa": 224,
+            "woba": 0.3,
+            "ops": 0.67,
+            "platoon": 1.05,
+            "matchup_woba": 0.324,
+            "k_pct": 0.172,
+            "hr_pct": 0.014,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "武内 夏暉",
+        "lineup_woba": 0.3209,
+        "matchup_score": 0.9832,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 0.979,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "栗原 陵矢",
+            "hand": "L",
+            "pa": 555,
+            "woba": 0.353,
+            "ops": 0.83,
+            "platoon": 0.96,
+            "matchup_woba": 0.318,
+            "k_pct": 0.193,
+            "hr_pct": 0.046,
+            "edge": -0.045,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "近藤 健介",
+            "hand": "L",
+            "pa": 524,
+            "woba": 0.387,
+            "ops": 0.932,
+            "platoon": 0.96,
+            "matchup_woba": 0.351,
+            "k_pct": 0.149,
+            "hr_pct": 0.039,
+            "edge": -0.0547,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "周東 佑京",
+            "hand": "L",
+            "pa": 554,
+            "woba": 0.311,
+            "ops": 0.703,
+            "platoon": 0.96,
+            "matchup_woba": 0.277,
+            "k_pct": 0.151,
+            "hr_pct": 0.007,
+            "edge": -0.0357,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "牧原 大成",
+            "hand": "L",
+            "pa": 523,
+            "woba": 0.312,
+            "ops": 0.706,
+            "platoon": 0.96,
+            "matchup_woba": 0.282,
+            "k_pct": 0.156,
+            "hr_pct": 0.009,
+            "edge": -0.0249,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "柳田 悠岐",
+            "hand": "L",
+            "pa": 360,
+            "woba": 0.322,
+            "ops": 0.737,
+            "platoon": 0.96,
+            "matchup_woba": 0.294,
+            "k_pct": 0.177,
+            "hr_pct": 0.027,
+            "edge": -0.0312,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "正木 智也",
+            "hand": "R",
+            "pa": 314,
+            "woba": 0.35,
+            "ops": 0.821,
+            "platoon": 1.05,
+            "matchup_woba": 0.345,
+            "k_pct": 0.199,
+            "hr_pct": 0.041,
+            "edge": -0.0476,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "海野 隆司",
+            "hand": "R",
+            "pa": 326,
+            "woba": 0.27,
+            "ops": 0.579,
+            "platoon": 1.05,
+            "matchup_woba": 0.246,
+            "k_pct": 0.236,
+            "hr_pct": 0.009,
+            "edge": -0.0273,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "柳町 達",
+            "hand": "L",
+            "pa": 394,
+            "woba": 0.311,
+            "ops": 0.704,
+            "platoon": 0.96,
+            "matchup_woba": 0.277,
+            "k_pct": 0.214,
+            "hr_pct": 0.009,
+            "edge": -0.0412,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "庄子 雄大",
+            "hand": "L",
+            "pa": 176,
+            "woba": 0.284,
+            "ops": 0.62,
+            "platoon": 0.96,
+            "matchup_woba": 0.25,
+            "k_pct": 0.226,
+            "hr_pct": 0.009,
+            "edge": -0.0381,
+            "source": "npb_official_2yr"
+          }
+        ]
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.905,
+      "stopper_factor": 0.8,
+      "stopper_available": 4,
+      "chase_factor": 1.073,
+      "middle_factor": 0.934
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.82,
+      "stopper_factor": 0.846,
+      "stopper_available": 5,
+      "chase_factor": 0.8,
+      "middle_factor": 0.8
+    },
+    "bullpen_detail": {
+      "home_recent": null,
+      "away_recent": null,
+      "home_bottomup": {
+        "effective_era": 2.71,
+        "raw_era": 2.71,
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "ウィンゲンター",
+            "hand": "R",
+            "ip": 17.333333333333332,
+            "era": 1.17,
+            "eff_era": 1.17,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "甲斐野 央",
+            "hand": "R",
+            "ip": 39.666666666666664,
+            "era": 2.0,
+            "eff_era": 2.0,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 14.0,
+              "pitches_3d": 14.0,
+              "holds": 1,
+              "saves": 2,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "中村 祐太",
+            "hand": "R",
+            "ip": 22.666666666666668,
+            "era": 2.0,
+            "eff_era": 2.0,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "豆田 泰志",
+            "hand": "R",
+            "ip": 19.333333333333332,
+            "era": 2.21,
+            "eff_era": 2.21,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "森脇 亮介",
+            "hand": "R",
+            "ip": 10.0,
+            "era": 2.55,
+            "eff_era": 2.55,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 22.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "篠原 響",
+            "hand": "R",
+            "ip": 31.0,
+            "era": 2.64,
+            "eff_era": 2.64,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 17.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "山田 陽翔",
+            "hand": "R",
+            "ip": 4.0,
+            "era": 2.98,
+            "eff_era": 2.98,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "岩城 颯空",
+            "hand": "L",
+            "ip": 28.0,
+            "era": 3.86,
+            "eff_era": 3.86,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "佐藤 隼輔",
+            "hand": "L",
+            "ip": 18.0,
+            "era": 5.5,
+            "eff_era": 5.5,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 14.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 2.2,
+        "raw_era": 2.16,
+        "n_available": 8,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [
+          {
+            "name": "松本 裕樹",
+            "reason": "2연투",
+            "eff_era": 2.4
+          }
+        ],
+        "relievers": [
+          {
+            "name": "木村 光",
+            "hand": "R",
+            "ip": 28.0,
+            "era": 1.76,
+            "eff_era": 1.76,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 19.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "津森 宥紀",
+            "hand": "R",
+            "ip": 31.333333333333332,
+            "era": 1.81,
+            "eff_era": 1.81,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "鈴木 豪太",
+            "hand": "R",
+            "ip": 31.333333333333332,
+            "era": 2.01,
+            "eff_era": 2.01,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "伊藤 優輔",
+            "hand": "R",
+            "ip": 23.0,
+            "era": 2.12,
+            "eff_era": 2.12,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 5.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "松本 裕樹",
+            "hand": "R",
+            "ip": 41.666666666666664,
+            "era": 2.14,
+            "eff_era": 2.4,
+            "availability": "fatigued",
+            "avail_reason": "2연투",
+            "streak": 2,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 17.0,
+              "pitches_3d": 41.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "ヘルナンデス",
+            "hand": "L",
+            "ip": 27.333333333333332,
+            "era": 2.23,
+            "eff_era": 2.23,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 12.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "オスナ",
+            "hand": "R",
+            "ip": 36.333333333333336,
+            "era": 2.42,
+            "eff_era": 2.42,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 16.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "杉山 一樹",
+            "hand": "R",
+            "ip": 37.0,
+            "era": 2.65,
+            "eff_era": 2.65,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 17.0,
+              "holds": 0,
+              "saves": 4,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": null,
+      "away": null
+    },
+    "weather": {
+      "source": "indoor",
+      "run_factor": 1.0,
+      "wind_dir_label": "돔",
+      "temp_f": null
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "odds": {},
+    "picks": [],
+    "scores_top": [
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0207
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0204
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0196
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0193
+      },
+      {
+        "away": 4,
+        "home": 2,
+        "prob": 0.0185
+      },
+      {
+        "away": 4,
+        "home": 3,
+        "prob": 0.0184
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0183
+      },
+      {
+        "away": 3,
+        "home": 3,
+        "prob": 0.0181
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "npb_official",
+      "away_hitting": "npb_official",
+      "home_pitcher": "npb_official_2yr",
+      "away_pitcher": "fallback",
+      "weather": "indoor",
+      "odds": "none"
+    },
+    "data_quality": {
+      "level": "fallback",
+      "missing": [
+        "원정 선발"
+      ]
+    }
+  },
+  {
+    "game_pk": "2021039253",
+    "status": "BEFORE",
+    "time_kst": "17:00",
+    "game_date_kst": "2026-08-09",
+    "venue": "ZOZOマリン",
+    "home_team": "ロッテ",
+    "away_team": "オリックス",
+    "home_abbr": "LOT",
+    "away_abbr": "ORX",
+    "home_pitcher_name": "ルケーシー",
+    "away_pitcher_name": "ジェリー",
+    "home_score": null,
+    "away_score": null,
+    "home_pitcher": {
+      "era": 3.3,
+      "whip": 1.2,
+      "k9": 7.5,
+      "bb9": 2.8,
+      "hr9": 0.7,
+      "ip": 0,
+      "hand": "R",
+      "expected_ip": 6.0,
+      "games_started": 0,
+      "is_foreign": false,
+      "xwoba": 0.31,
+      "fip": 3.3,
+      "_source": "fallback"
+    },
+    "away_pitcher": {
+      "name": "ジェリー",
+      "team_abbr": "ORX",
+      "era": 2.6,
+      "whip": 1.2650602409638554,
+      "k9": 7.265060240963855,
+      "bb9": 2.3855421686746987,
+      "hr9": 0.3253012048192771,
+      "ip": 83.0,
+      "current_ip": 83.0,
+      "prior_ip": 0.0,
+      "projection_ip": 83.0,
+      "appearances": 16,
+      "games_started": null,
+      "expected_ip": 5.19,
+      "hand": "R",
+      "is_foreign": true,
+      "xwoba": 0.31,
+      "fip": 2.6,
+      "_bb": 22.0,
+      "_so": 67.0,
+      "_hr": 3.0,
+      "_hits": 83.0,
+      "_er": 24.0,
+      "season": 2026,
+      "_source": "npb_official"
+    },
+    "umpire": "",
+    "model_version": "projection_v2",
+    "market_total": null,
+    "environment_factor": 0.9808,
+    "raw_home_pre_learn": 3.189,
+    "raw_away_pre_learn": 3.647,
+    "home_pitcher_id": "ルケーシー",
+    "away_pitcher_id": "ジェリー",
+    "home_runs": 3.1626235662329383,
+    "away_runs": 3.620623566232938,
+    "total": 6.783247132465876,
+    "home_win_prob": 0.39755,
+    "away_win_prob": 0.4854,
+    "push_prob": 0.11705,
+    "runline": {
+      "home_minus_1_5": 0.2893,
+      "home_plus_1_5": 0.63105,
+      "away_minus_1_5": 0.36895,
+      "away_plus_1_5": 0.7107
+    },
+    "inning_split": {
+      "home": {
+        "runs_vs_sp": 3.125,
+        "runs_vs_bp": 3.129,
+        "sp_share": 0.577,
+        "expected_ip": 5.19,
+        "mu_full": 3.189,
+        "mu_f5": 1.571,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3085,
+          "pitcher_woba_against": 0.2974,
+          "matchup_woba": 0.2959,
+          "sp_path": {
+            "eff_woba": 0.2962,
+            "rpa": 0.0832,
+            "obp_eff": 0.2814,
+            "pa_per_inning": 4.175
+          },
+          "bp_path": {
+            "eff_woba": 0.2963,
+            "rpa": 0.0833,
+            "obp_eff": 0.2815,
+            "pa_per_inning": 4.175
+          },
+          "hand_factor": 1.0,
+          "park": 0.95,
+          "hr_adj": 1.0,
+          "home_mult": 1.012,
+          "bp_factor": 0.975
+        }
+      },
+      "away": {
+        "runs_vs_sp": 3.662,
+        "runs_vs_bp": 3.645,
+        "sp_share": 0.667,
+        "expected_ip": 6.0,
+        "mu_full": 3.647,
+        "mu_f5": 2.029,
+        "hr_env": {
+          "hr_env_pct": null,
+          "applied": 0.0
+        },
+        "components": {
+          "method": "npb_zero_base_woba",
+          "batter_woba": 0.3109,
+          "pitcher_woba_against": 0.31,
+          "matchup_woba": 0.3109,
+          "sp_path": {
+            "eff_woba": 0.3113,
+            "rpa": 0.0955,
+            "obp_eff": 0.2957,
+            "pa_per_inning": 4.26
+          },
+          "bp_path": {
+            "eff_woba": 0.3108,
+            "rpa": 0.0951,
+            "obp_eff": 0.2953,
+            "pa_per_inning": 4.257
+          },
+          "hand_factor": 1.0,
+          "park": 0.95,
+          "hr_adj": 1.0,
+          "home_mult": 1.0,
+          "bp_factor": 0.914
+        }
+      }
+    },
+    "f5": {
+      "home_xr": 1.55,
+      "away_xr": 2.02,
+      "total_xr": 3.57,
+      "home_win_prob": 0.3225,
+      "over_probs": {
+        "3.5": 0.4272,
+        "4.5": 0.3059,
+        "5.0": 0.2134
+      }
+    },
+    "learn_correction": {
+      "home_team": -0.02056151405625774,
+      "away_team": -0.03219135347786576,
+      "home_pitcher": 0.0,
+      "away_pitcher": 0.0,
+      "home_applied": -0.0264,
+      "away_applied": -0.0264,
+      "margin_weight": 0.0
+    },
+    "feature_snapshot": {
+      "home_team_woba": 0.3085,
+      "away_team_woba": 0.3109,
+      "home_lineup_coverage": 1.0,
+      "away_lineup_coverage": 1.0,
+      "home_starter_ip": 0.0,
+      "away_starter_ip": 83.0,
+      "home_projection_ip": 0.0,
+      "away_projection_ip": 83.0,
+      "home_expected_ip": 6.0,
+      "away_expected_ip": 5.19,
+      "home_bullpen_factor": 0.9139,
+      "away_bullpen_factor": 0.9753
+    },
+    "lineup_detail": {
+      "home": {
+        "vs_pitcher": "ジェリー",
+        "lineup_woba": 0.309,
+        "matchup_score": 0.9875,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0094,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "西川 史礁",
+            "hand": "R",
+            "pa": 553,
+            "woba": 0.326,
+            "ops": 0.75,
+            "platoon": 0.96,
+            "matchup_woba": 0.334,
+            "k_pct": 0.175,
+            "hr_pct": 0.006,
+            "edge": 0.0024,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "小川 龍成",
+            "hand": "L",
+            "pa": 416,
+            "woba": 0.29,
+            "ops": 0.638,
+            "platoon": 1.05,
+            "matchup_woba": 0.323,
+            "k_pct": 0.163,
+            "hr_pct": 0.003,
+            "edge": 0.0155,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "ソト",
+            "hand": "R",
+            "pa": 430,
+            "woba": 0.32,
+            "ops": 0.731,
+            "platoon": 0.96,
+            "matchup_woba": 0.294,
+            "k_pct": 0.247,
+            "hr_pct": 0.016,
+            "edge": -0.032,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "佐藤 都志也",
+            "hand": "L",
+            "pa": 379,
+            "woba": 0.315,
+            "ops": 0.714,
+            "platoon": 1.05,
+            "matchup_woba": 0.321,
+            "k_pct": 0.19,
+            "hr_pct": 0.014,
+            "edge": -0.0294,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "藤原 恭大",
+            "hand": "L",
+            "pa": 436,
+            "woba": 0.324,
+            "ops": 0.743,
+            "platoon": 1.05,
+            "matchup_woba": 0.357,
+            "k_pct": 0.175,
+            "hr_pct": 0.007,
+            "edge": -0.0036,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "友杉 篤輝",
+            "hand": "R",
+            "pa": 381,
+            "woba": 0.275,
+            "ops": 0.594,
+            "platoon": 0.96,
+            "matchup_woba": 0.278,
+            "k_pct": 0.149,
+            "hr_pct": 0.003,
+            "edge": 0.013,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "寺地 隆成",
+            "hand": "L",
+            "pa": 403,
+            "woba": 0.271,
+            "ops": 0.581,
+            "platoon": 1.05,
+            "matchup_woba": 0.293,
+            "k_pct": 0.165,
+            "hr_pct": 0.006,
+            "edge": -0.0021,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "山口 航輝",
+            "hand": "R",
+            "pa": 282,
+            "woba": 0.352,
+            "ops": 0.827,
+            "platoon": 0.96,
+            "matchup_woba": 0.307,
+            "k_pct": 0.235,
+            "hr_pct": 0.022,
+            "edge": -0.0455,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "ポランコ",
+            "hand": "L",
+            "pa": 202,
+            "woba": 0.293,
+            "ops": 0.648,
+            "platoon": 1.05,
+            "matchup_woba": 0.296,
+            "k_pct": 0.249,
+            "hr_pct": 0.012,
+            "edge": -0.0212,
+            "source": "npb_official_2yr"
+          }
+        ]
+      },
+      "away": {
+        "vs_pitcher": "",
+        "lineup_woba": 0.3111,
+        "matchup_score": 1.0,
+        "coverage": 1.0,
+        "bu_weight": 0.85,
+        "platoon": 1.0099,
+        "lineup_src": "projected",
+        "batters": [
+          {
+            "order": 1,
+            "name": "西川 龍馬",
+            "hand": "L",
+            "pa": 580,
+            "woba": 0.321,
+            "ops": 0.734,
+            "platoon": 1.05,
+            "matchup_woba": 0.348,
+            "k_pct": 0.134,
+            "hr_pct": 0.018,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 2,
+            "name": "宗 佑磨",
+            "hand": "L",
+            "pa": 523,
+            "woba": 0.297,
+            "ops": 0.66,
+            "platoon": 1.05,
+            "matchup_woba": 0.325,
+            "k_pct": 0.147,
+            "hr_pct": 0.02,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 3,
+            "name": "中川 圭太",
+            "hand": "R",
+            "pa": 528,
+            "woba": 0.305,
+            "ops": 0.686,
+            "platoon": 0.96,
+            "matchup_woba": 0.305,
+            "k_pct": 0.115,
+            "hr_pct": 0.019,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 4,
+            "name": "紅林 弘太郎",
+            "hand": "R",
+            "pa": 521,
+            "woba": 0.321,
+            "ops": 0.734,
+            "platoon": 0.96,
+            "matchup_woba": 0.327,
+            "k_pct": 0.145,
+            "hr_pct": 0.027,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 5,
+            "name": "太田 椋",
+            "hand": "R",
+            "pa": 520,
+            "woba": 0.328,
+            "ops": 0.754,
+            "platoon": 0.96,
+            "matchup_woba": 0.336,
+            "k_pct": 0.21,
+            "hr_pct": 0.021,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 6,
+            "name": "森 友哉",
+            "hand": "L",
+            "pa": 316,
+            "woba": 0.306,
+            "ops": 0.687,
+            "platoon": 1.05,
+            "matchup_woba": 0.34,
+            "k_pct": 0.173,
+            "hr_pct": 0.023,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 7,
+            "name": "山中 稜真",
+            "hand": "L",
+            "pa": 262,
+            "woba": 0.322,
+            "ops": 0.735,
+            "platoon": 1.05,
+            "matchup_woba": 0.352,
+            "k_pct": 0.142,
+            "hr_pct": 0.014,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 8,
+            "name": "若月 健矢",
+            "hand": "R",
+            "pa": 384,
+            "woba": 0.287,
+            "ops": 0.629,
+            "platoon": 0.96,
+            "matchup_woba": 0.277,
+            "k_pct": 0.175,
+            "hr_pct": 0.011,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          },
+          {
+            "order": 9,
+            "name": "渡部 遼人",
+            "hand": "L",
+            "pa": 219,
+            "woba": 0.296,
+            "ops": 0.657,
+            "platoon": 1.05,
+            "matchup_woba": 0.321,
+            "k_pct": 0.182,
+            "hr_pct": 0.017,
+            "edge": 0.0,
+            "source": "npb_official_2yr"
+          }
+        ]
+      }
+    },
+    "home_bp_quality": {
+      "overall_factor": 0.903,
+      "stopper_factor": 0.876,
+      "stopper_available": 4,
+      "chase_factor": 0.964,
+      "middle_factor": 0.917
+    },
+    "away_bp_quality": {
+      "overall_factor": 0.99,
+      "stopper_factor": 0.928,
+      "stopper_available": 7,
+      "chase_factor": 1.001,
+      "middle_factor": 1.155
+    },
+    "bullpen_detail": {
+      "home_recent": null,
+      "away_recent": null,
+      "home_bottomup": {
+        "effective_era": 2.69,
+        "raw_era": 2.69,
+        "n_available": 9,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "中森 俊介",
+            "hand": "R",
+            "ip": 26.0,
+            "era": 1.34,
+            "eff_era": 1.34,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "横山 陸人",
+            "hand": "R",
+            "ip": 38.333333333333336,
+            "era": 1.95,
+            "eff_era": 1.95,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "closer",
+            "usage": {
+              "pitches_yesterday": 16.0,
+              "pitches_3d": 16.0,
+              "holds": 0,
+              "saves": 2,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "小野 郁",
+            "hand": "R",
+            "ip": 28.0,
+            "era": 2.16,
+            "eff_era": 2.16,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "八木 彬",
+            "hand": "R",
+            "ip": 42.0,
+            "era": 2.64,
+            "eff_era": 2.64,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "坂本 光士郎",
+            "hand": "L",
+            "ip": 26.333333333333332,
+            "era": 2.99,
+            "eff_era": 2.99,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 39.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "鈴木 昭汰",
+            "hand": "L",
+            "ip": 35.666666666666664,
+            "era": 3.22,
+            "eff_era": 3.22,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 22.0,
+              "pitches_3d": 22.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "澤田 圭佑",
+            "hand": "R",
+            "ip": 32.333333333333336,
+            "era": 3.48,
+            "eff_era": 3.48,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "石川 柊太",
+            "hand": "R",
+            "ip": 5.0,
+            "era": 3.49,
+            "eff_era": 3.49,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "long",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "益田 直也",
+            "hand": "R",
+            "ip": 26.333333333333332,
+            "era": 3.62,
+            "eff_era": 3.62,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 1,
+              "saves": 1,
+              "season_sv": 0
+            }
+          }
+        ]
+      },
+      "away_bottomup": {
+        "effective_era": 3.24,
+        "raw_era": 3.24,
+        "n_available": 12,
+        "n_out": 0,
+        "out": [],
+        "fatigued": [],
+        "relievers": [
+          {
+            "name": "マチャド",
+            "hand": "R",
+            "ip": 37.666666666666664,
+            "era": 1.4,
+            "eff_era": 1.4,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 9.0,
+              "holds": 1,
+              "saves": 1,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "才木 海翔",
+            "hand": "R",
+            "ip": 8.0,
+            "era": 2.79,
+            "eff_era": 2.79,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "椋木 蓮",
+            "hand": "R",
+            "ip": 38.333333333333336,
+            "era": 3.0,
+            "eff_era": 3.0,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 17.0,
+              "holds": 3,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "山﨑 颯一郎",
+            "hand": "R",
+            "ip": 39.666666666666664,
+            "era": 3.03,
+            "eff_era": 3.03,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 20.0,
+              "holds": 2,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "山田 修義",
+            "hand": "L",
+            "ip": 8.0,
+            "era": 3.06,
+            "eff_era": 3.06,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 13.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "入山 海斗",
+            "hand": "R",
+            "ip": 29.333333333333332,
+            "era": 3.09,
+            "eff_era": 3.09,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 11.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "吉田 輝星",
+            "hand": "R",
+            "ip": 20.333333333333332,
+            "era": 3.1,
+            "eff_era": 3.1,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 9.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "片山 楽生",
+            "hand": "R",
+            "ip": 29.0,
+            "era": 3.75,
+            "eff_era": 3.75,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 15.0,
+              "pitches_3d": 15.0,
+              "holds": 1,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "阿部 翔太",
+            "hand": "R",
+            "ip": 8.0,
+            "era": 3.83,
+            "eff_era": 3.83,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 1,
+            "role": "chase",
+            "usage": {
+              "pitches_yesterday": 27.0,
+              "pitches_3d": 47.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "髙島 泰都",
+            "hand": "R",
+            "ip": 66.0,
+            "era": 3.88,
+            "eff_era": 3.88,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "山岡 泰輔",
+            "hand": "R",
+            "ip": 5.666666666666667,
+            "era": 3.9,
+            "eff_era": 3.9,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "stopper",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 15.0,
+              "holds": 0,
+              "saves": 1,
+              "season_sv": 0
+            }
+          },
+          {
+            "name": "宮國 凌空",
+            "hand": "R",
+            "ip": 13.0,
+            "era": 7.0,
+            "eff_era": 7.0,
+            "availability": "available",
+            "avail_reason": "가용",
+            "streak": 0,
+            "role": "middle",
+            "usage": {
+              "pitches_yesterday": 0,
+              "pitches_3d": 0.0,
+              "holds": 0,
+              "saves": 0,
+              "season_sv": 0
+            }
+          }
+        ]
+      }
+    },
+    "markov_detail": {
+      "home": null,
+      "away": null
+    },
+    "weather": {
+      "source": "open-meteo",
+      "model": "air_density_v3",
+      "temp_c": 29.7,
+      "temp_f": 85.5,
+      "wind_mph": 7.7,
+      "wind_dir_label": "교차풍",
+      "wind_dot_of": 1.2,
+      "precip_prob": 50,
+      "humidity_pct": 63,
+      "air_density": 1.1456,
+      "density_delta_pct": -3.64,
+      "carry_dist_pct": 1.95,
+      "run_factor": 1.0325,
+      "factor": 1.0325
+    },
+    "umpire_detail": {
+      "applied": 0.0
+    },
+    "odds": {},
+    "picks": [],
+    "scores_top": [
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0299
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0278
+      },
+      {
+        "away": 1,
+        "home": 1,
+        "prob": 0.0276
+      },
+      {
+        "away": 3,
+        "home": 1,
+        "prob": 0.0265
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0262
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0251
+      },
+      {
+        "away": 1,
+        "home": 0,
+        "prob": 0.0248
+      },
+      {
+        "away": 2,
+        "home": 0,
+        "prob": 0.024
+      }
+    ],
+    "data_sources": {
+      "home_hitting": "npb_official",
+      "away_hitting": "npb_official",
+      "home_pitcher": "fallback",
+      "away_pitcher": "npb_official",
+      "weather": "open-meteo",
+      "odds": "none"
+    },
+    "data_quality": {
+      "level": "fallback",
+      "missing": [
+        "홈 선발"
+      ]
+    }
+  }
+]
