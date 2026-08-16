@@ -786,24 +786,24 @@
     "umpire": "",
     "model_version": "projection_v2",
     "market_total": null,
-    "environment_factor": 1.0682,
+    "environment_factor": 1.057,
     "raw_home_pre_learn": 3.698,
-    "raw_away_pre_learn": 4.004,
+    "raw_away_pre_learn": 4.001,
     "home_pitcher_id": "松本健",
     "away_pitcher_id": "片山 皓心",
     "home_runs": 4.134762232359391,
-    "away_runs": 4.44076223235939,
-    "total": 8.57552446471878,
-    "home_win_prob": 0.4681833351874513,
-    "away_win_prob": 0.5318166648125486,
-    "home_unconditional_win_prob": 0.42085,
-    "away_unconditional_win_prob": 0.47805,
-    "push_prob": 0.1011,
+    "away_runs": 4.437762232359391,
+    "total": 8.572524464718782,
+    "home_win_prob": 0.46996054021008166,
+    "away_win_prob": 0.5300394597899183,
+    "home_unconditional_win_prob": 0.4228,
+    "away_unconditional_win_prob": 0.47685,
+    "push_prob": 0.10035,
     "runline": {
-      "home_minus_1_5": 0.3316,
-      "home_plus_1_5": 0.61915,
-      "away_minus_1_5": 0.38085,
-      "away_plus_1_5": 0.6684
+      "home_minus_1_5": 0.3304,
+      "home_plus_1_5": 0.62125,
+      "away_minus_1_5": 0.37875,
+      "away_plus_1_5": 0.6696
     },
     "inning_split": {
       "home": {
@@ -842,12 +842,12 @@
         }
       },
       "away": {
-        "runs_vs_sp": 4.067,
-        "runs_vs_bp": 4.042,
+        "runs_vs_sp": 4.063,
+        "runs_vs_bp": 4.038,
         "sp_share": 0.667,
         "expected_ip": 6.0,
-        "mu_full": 4.004,
-        "mu_f5": 2.229,
+        "mu_full": 4.001,
+        "mu_f5": 2.227,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -858,15 +858,15 @@
           "pitcher_woba_against": 0.31,
           "matchup_woba": 0.3191,
           "sp_path": {
-            "eff_woba": 0.3201,
-            "rpa": 0.1048,
-            "obp_eff": 0.3041,
+            "eff_woba": 0.32,
+            "rpa": 0.1047,
+            "obp_eff": 0.304,
             "pa_per_inning": 4.311
           },
           "bp_path": {
-            "eff_woba": 0.3195,
-            "rpa": 0.1043,
-            "obp_eff": 0.3035,
+            "eff_woba": 0.3194,
+            "rpa": 0.1042,
+            "obp_eff": 0.3034,
             "pa_per_inning": 4.307
           },
           "hand_factor": 1.0,
@@ -879,13 +879,13 @@
     },
     "f5": {
       "home_xr": 1.8,
-      "away_xr": 2.21,
+      "away_xr": 2.2,
       "total_xr": 4.01,
-      "home_win_prob": 0.3455,
+      "home_win_prob": 0.3463,
       "over_probs": {
-        "3.5": 0.4923,
-        "4.5": 0.3618,
-        "5.0": 0.26
+        "3.5": 0.4909,
+        "4.5": 0.3606,
+        "5.0": 0.2595
       }
     },
     "learn_correction": {
@@ -1622,18 +1622,18 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 26.0,
-      "temp_f": 78.8,
-      "wind_mph": 2.7,
-      "wind_dir_label": "교차풍",
-      "wind_dot_of": -1.9,
-      "precip_prob": 76,
-      "humidity_pct": 76,
-      "air_density": 1.1685,
-      "density_delta_pct": -1.72,
-      "carry_dist_pct": 0.49,
-      "run_factor": 0.9891,
-      "factor": 0.9891
+      "temp_c": 25.0,
+      "temp_f": 77.0,
+      "wind_mph": 1.6,
+      "wind_dir_label": "IN(억제)",
+      "wind_dot_of": -8.9,
+      "precip_prob": 69,
+      "humidity_pct": 87,
+      "air_density": 1.1715,
+      "density_delta_pct": -1.46,
+      "carry_dist_pct": -0.03,
+      "run_factor": 0.9787,
+      "factor": 0.9787
     },
     "umpire_detail": {
       "applied": 0.0
@@ -1644,42 +1644,42 @@
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0209
-      },
-      {
-        "away": 2,
-        "home": 2,
         "prob": 0.0204
       },
       {
         "away": 2,
+        "home": 2,
+        "prob": 0.0202
+      },
+      {
+        "away": 2,
         "home": 3,
-        "prob": 0.0187
+        "prob": 0.0198
       },
       {
         "away": 3,
         "home": 3,
-        "prob": 0.0186
+        "prob": 0.0192
       },
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0181
+        "prob": 0.0186
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0177
+        "prob": 0.0184
       },
       {
         "away": 2,
         "home": 4,
-        "prob": 0.0174
+        "prob": 0.0175
       },
       {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0169
+        "away": 4,
+        "home": 2,
+        "prob": 0.0172
       }
     ],
     "data_sources": {
@@ -1771,33 +1771,33 @@
     "umpire": "",
     "model_version": "projection_v2",
     "market_total": null,
-    "environment_factor": 1.0587,
-    "raw_home_pre_learn": 3.269,
-    "raw_away_pre_learn": 4.007,
+    "environment_factor": 1.0665,
+    "raw_home_pre_learn": 3.266,
+    "raw_away_pre_learn": 4.01,
     "home_pitcher_id": "森 翔平",
     "away_pitcher_id": "伊原 陵人",
-    "home_runs": 3.4095775280752267,
-    "away_runs": 4.147577528075226,
+    "home_runs": 3.4065775280752266,
+    "away_runs": 4.150577528075226,
     "total": 7.557155056150453,
-    "home_win_prob": 0.42495793606281546,
-    "away_win_prob": 0.5750420639371845,
-    "home_unconditional_win_prob": 0.37885,
-    "away_unconditional_win_prob": 0.51265,
-    "push_prob": 0.1085,
+    "home_win_prob": 0.423780999832055,
+    "away_win_prob": 0.5762190001679449,
+    "home_unconditional_win_prob": 0.3785,
+    "away_unconditional_win_prob": 0.51465,
+    "push_prob": 0.10685,
     "runline": {
-      "home_minus_1_5": 0.28525,
-      "home_plus_1_5": 0.59485,
-      "away_minus_1_5": 0.40515,
-      "away_plus_1_5": 0.71475
+      "home_minus_1_5": 0.28065,
+      "home_plus_1_5": 0.59345,
+      "away_minus_1_5": 0.40655,
+      "away_plus_1_5": 0.71935
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 3.186,
-        "runs_vs_bp": 3.224,
+        "runs_vs_sp": 3.183,
+        "runs_vs_bp": 3.221,
         "sp_share": 0.529,
         "expected_ip": 4.76,
-        "mu_full": 3.269,
-        "mu_f5": 1.579,
+        "mu_full": 3.266,
+        "mu_f5": 1.578,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -1808,15 +1808,15 @@
           "pitcher_woba_against": 0.3034,
           "matchup_woba": 0.2966,
           "sp_path": {
-            "eff_woba": 0.2958,
-            "rpa": 0.0849,
-            "obp_eff": 0.281,
+            "eff_woba": 0.2957,
+            "rpa": 0.0848,
+            "obp_eff": 0.2809,
             "pa_per_inning": 4.172
           },
           "bp_path": {
             "eff_woba": 0.2968,
             "rpa": 0.0857,
-            "obp_eff": 0.282,
+            "obp_eff": 0.2819,
             "pa_per_inning": 4.178
           },
           "hand_factor": 1.0,
@@ -1827,12 +1827,12 @@
         }
       },
       "away": {
-        "runs_vs_sp": 4.071,
-        "runs_vs_bp": 4.056,
+        "runs_vs_sp": 4.074,
+        "runs_vs_bp": 4.059,
         "sp_share": 0.637,
         "expected_ip": 5.73,
-        "mu_full": 4.007,
-        "mu_f5": 2.143,
+        "mu_full": 4.01,
+        "mu_f5": 2.144,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -1843,16 +1843,16 @@
           "pitcher_woba_against": 0.3103,
           "matchup_woba": 0.3193,
           "sp_path": {
-            "eff_woba": 0.3202,
-            "rpa": 0.1049,
-            "obp_eff": 0.3042,
+            "eff_woba": 0.3203,
+            "rpa": 0.105,
+            "obp_eff": 0.3043,
             "pa_per_inning": 4.312
           },
           "bp_path": {
-            "eff_woba": 0.3198,
+            "eff_woba": 0.3199,
             "rpa": 0.1046,
             "obp_eff": 0.3039,
-            "pa_per_inning": 4.309
+            "pa_per_inning": 4.31
           },
           "hand_factor": 1.0,
           "park": 1.04,
@@ -1866,11 +1866,11 @@
       "home_xr": 1.56,
       "away_xr": 2.14,
       "total_xr": 3.7,
-      "home_win_prob": 0.3109,
+      "home_win_prob": 0.3105,
       "over_probs": {
-        "3.5": 0.4415,
-        "4.5": 0.3227,
-        "5.0": 0.2276
+        "3.5": 0.4408,
+        "4.5": 0.3229,
+        "5.0": 0.2267
       }
     },
     "learn_correction": {
@@ -2649,18 +2649,18 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 26.4,
-      "temp_f": 79.5,
-      "wind_mph": 1.0,
+      "temp_c": 26.8,
+      "temp_f": 80.2,
+      "wind_mph": 1.5,
       "wind_dir_label": "OUT(밀어줌)",
       "wind_dot_of": 5.3,
-      "precip_prob": 43,
-      "humidity_pct": 86,
-      "air_density": 1.1596,
-      "density_delta_pct": -2.46,
-      "carry_dist_pct": 1.27,
-      "run_factor": 1.018,
-      "factor": 1.018
+      "precip_prob": 33,
+      "humidity_pct": 83,
+      "air_density": 1.1578,
+      "density_delta_pct": -2.62,
+      "carry_dist_pct": 1.46,
+      "run_factor": 1.0255,
+      "factor": 1.0255
     },
     "umpire_detail": {
       "applied": 0.0
@@ -2671,17 +2671,12 @@
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0259
+        "prob": 0.0255
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0249
-      },
-      {
-        "away": 2,
-        "home": 2,
-        "prob": 0.0239
+        "prob": 0.025
       },
       {
         "away": 3,
@@ -2689,24 +2684,29 @@
         "prob": 0.0236
       },
       {
-        "away": 1,
-        "home": 1,
-        "prob": 0.0228
+        "away": 2,
+        "home": 2,
+        "prob": 0.0234
       },
       {
-        "away": 2,
-        "home": 3,
+        "away": 1,
+        "home": 1,
+        "prob": 0.0226
+      },
+      {
+        "away": 4,
+        "home": 1,
         "prob": 0.0215
       },
       {
         "away": 2,
-        "home": 0,
-        "prob": 0.0209
+        "home": 3,
+        "prob": 0.0214
       },
       {
         "away": 1,
-        "home": 3,
-        "prob": 0.0199
+        "home": 2,
+        "prob": 0.0213
       }
     ],
     "data_sources": {
