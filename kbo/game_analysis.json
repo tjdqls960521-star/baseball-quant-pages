@@ -14,9 +14,9 @@
     "home_score": 0,
     "away_score": 0,
     "winner": "DRAW",
-    "cancel": false,
+    "cancel": true,
     "suspended": false,
-    "status_info": "경기전",
+    "status_info": "경기취소",
     "home_pitcher": {
       "id": "56459",
       "name": "페덱",
@@ -65,31 +65,31 @@
     },
     "umpire": "",
     "market_total": 11.5,
-    "environment_factor": 1.0171,
-    "raw_home_pre_learn": 6.668,
-    "raw_away_pre_learn": 4.94,
-    "home_runs": 6.146361538764442,
-    "away_runs": 3.257291597318776,
-    "total": 9.403653136083218,
-    "home_win_prob": 0.7505171475231356,
-    "away_win_prob": 0.24948285247686444,
-    "home_unconditional_win_prob": 0.68935,
-    "away_unconditional_win_prob": 0.22915,
-    "push_prob": 0.0815,
+    "environment_factor": 0.9974,
+    "raw_home_pre_learn": 6.606,
+    "raw_away_pre_learn": 4.911,
+    "home_runs": 6.084142949740073,
+    "away_runs": 3.228470075149672,
+    "total": 9.312613024889746,
+    "home_win_prob": 0.7492676575892373,
+    "away_win_prob": 0.25073234241076275,
+    "home_unconditional_win_prob": 0.6906,
+    "away_unconditional_win_prob": 0.2311,
+    "push_prob": 0.0783,
     "runline": {
-      "home_minus_1_5": 0.60125,
+      "home_minus_1_5": 0.60175,
       "home_plus_1_5": 0.83255,
       "away_minus_1_5": 0.16745,
-      "away_plus_1_5": 0.39875
+      "away_plus_1_5": 0.39825
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 5.821,
-        "runs_vs_bp": 5.805,
+        "runs_vs_sp": 5.812,
+        "runs_vs_bp": 5.797,
         "sp_share": 0.578,
         "expected_ip": 5.2,
-        "mu_full": 5.75,
-        "mu_f5": 3.042,
+        "mu_full": 5.742,
+        "mu_f5": 3.038,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -100,16 +100,16 @@
           "pitcher_woba_against": 0.3234,
           "matchup_woba": 0.35,
           "sp_path": {
-            "eff_woba": 0.3506,
-            "rpa": 0.1438,
-            "obp_eff": 0.333,
-            "pa_per_inning": 4.498
+            "eff_woba": 0.3504,
+            "rpa": 0.1436,
+            "obp_eff": 0.3328,
+            "pa_per_inning": 4.497
           },
           "bp_path": {
-            "eff_woba": 0.3502,
-            "rpa": 0.1435,
-            "obp_eff": 0.3327,
-            "pa_per_inning": 4.495
+            "eff_woba": 0.35,
+            "rpa": 0.1433,
+            "obp_eff": 0.3325,
+            "pa_per_inning": 4.494
           },
           "hand_factor": 1.0,
           "park": 1.06,
@@ -119,8 +119,8 @@
         }
       },
       "away": {
-        "runs_vs_sp": 5.35,
-        "runs_vs_bp": 5.333,
+        "runs_vs_sp": 5.351,
+        "runs_vs_bp": 5.334,
         "sp_share": 0.667,
         "expected_ip": 6.0,
         "mu_full": 5.331,
@@ -141,7 +141,7 @@
             "pa_per_inning": 4.426
           },
           "bp_path": {
-            "eff_woba": 0.3387,
+            "eff_woba": 0.3388,
             "rpa": 0.134,
             "obp_eff": 0.3218,
             "pa_per_inning": 4.424
@@ -157,31 +157,31 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 21.9,
-      "temp_f": 71.4,
-      "wind_mph": 3.4,
+      "temp_c": 22.2,
+      "temp_f": 72.0,
+      "wind_mph": 7.2,
       "wind_dir_label": "IN(억제)",
-      "wind_dot_of": -6.6,
+      "wind_dot_of": -5.7,
       "precip_prob": 99,
-      "humidity_pct": 96,
-      "air_density": 1.1744,
-      "density_delta_pct": -1.22,
-      "carry_dist_pct": -0.49,
-      "run_factor": 0.9595,
-      "factor": 0.9595
+      "humidity_pct": 95,
+      "air_density": 1.1742,
+      "density_delta_pct": -1.23,
+      "carry_dist_pct": -1.34,
+      "run_factor": 0.9409,
+      "factor": 0.9409
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 3.46,
-      "away_xr": 2.82,
-      "total_xr": 6.27,
-      "home_win_prob": 0.5056,
+      "home_xr": 3.42,
+      "away_xr": 2.8,
+      "total_xr": 6.22,
+      "home_win_prob": 0.4997,
       "over_probs": {
-        "4.5": 0.6338,
-        "5.0": 0.5187,
-        "5.5": 0.5187
+        "4.5": 0.6363,
+        "5.0": 0.5141,
+        "5.5": 0.5141
       }
     },
     "learn_correction": {
@@ -846,13 +846,13 @@
       "home": {
         "factor": 1.55,
         "raw_factor": 1.7156,
-        "mu": 8.045,
+        "mu": 7.902,
         "weight": 0.4
       },
       "away": {
         "factor": 0.7897,
         "raw_factor": 0.7435,
-        "mu": 4.353,
+        "mu": 4.281,
         "weight": 0.4
       }
     },
@@ -1213,13 +1213,13 @@
         "matchup": "HAN @ SAM",
         "market": "moneyline",
         "label": "SAM ML",
-        "prob": 0.7505,
+        "prob": 0.7493,
         "odds": 1.58,
-        "ev": 0.1858,
-        "kelly_raw": 0.3204,
-        "p_hat": 0.626,
-        "kelly_f": -0.0189,
-        "ev_debiased": -0.0109,
+        "ev": 0.1838,
+        "kelly_raw": 0.317,
+        "p_hat": 0.6258,
+        "kelly_f": -0.0194,
+        "ev_debiased": -0.0112,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -1229,13 +1229,13 @@
         "matchup": "HAN @ SAM",
         "market": "moneyline",
         "label": "HAN ML",
-        "prob": 0.2495,
+        "prob": 0.2507,
         "odds": 2.41,
-        "ev": -0.3987,
+        "ev": -0.3957,
         "kelly_raw": 0.0,
-        "p_hat": 0.374,
-        "kelly_f": -0.0699,
-        "ev_debiased": -0.0986,
+        "p_hat": 0.3742,
+        "kelly_f": -0.0696,
+        "ev_debiased": -0.0982,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -1245,78 +1245,78 @@
         "matchup": "HAN @ SAM",
         "market": "total",
         "label": "Over 11.5",
-        "prob": 0.3425,
+        "prob": 0.3321,
         "odds": 1.99,
-        "ev": -0.3183,
+        "ev": -0.3392,
         "kelly_raw": 0.0,
-        "p_hat": 0.4313,
-        "kelly_f": -0.1432,
-        "ev_debiased": -0.1418,
+        "p_hat": 0.4276,
+        "kelly_f": -0.1506,
+        "ev_debiased": -0.1491,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 9.45,
+        "model_total": 9.34,
         "market_total": 11.5
       },
       {
         "matchup": "HAN @ SAM",
         "market": "total",
         "label": "Under 11.5",
-        "prob": 0.6575,
+        "prob": 0.6679,
         "odds": 1.83,
-        "ev": 0.2031,
-        "kelly_raw": 0.2448,
-        "p_hat": 0.5687,
-        "kelly_f": 0.0491,
-        "ev_debiased": 0.0408,
-        "stake": 13,
+        "ev": 0.2223,
+        "kelly_raw": 0.2679,
+        "p_hat": 0.5724,
+        "kelly_f": 0.0572,
+        "ev_debiased": 0.0475,
+        "stake": 15,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 9.45,
+        "model_total": 9.34,
         "market_total": 11.5
       }
     ],
     "scores_top": [
       {
         "away": 1,
-        "home": 4,
-        "prob": 0.0212
+        "home": 3,
+        "prob": 0.021
       },
       {
         "away": 1,
-        "home": 5,
-        "prob": 0.0209
-      },
-      {
-        "away": 2,
         "home": 4,
-        "prob": 0.0189
-      },
-      {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0189
+        "prob": 0.0192
       },
       {
         "away": 2,
         "home": 5,
-        "prob": 0.0184
+        "prob": 0.0188
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0186
       },
       {
         "away": 1,
-        "home": 3,
-        "prob": 0.0184
+        "home": 5,
+        "prob": 0.0181
       },
       {
         "away": 1,
         "home": 6,
-        "prob": 0.0179
+        "prob": 0.0175
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0173
       },
       {
         "away": 1,
-        "home": 7,
+        "home": 2,
         "prob": 0.0167
       }
     ],
@@ -1399,31 +1399,31 @@
     },
     "umpire": "",
     "market_total": 9.5,
-    "environment_factor": 0.9202,
-    "raw_home_pre_learn": 4.311,
-    "raw_away_pre_learn": 5.284,
-    "home_runs": 5.351085891269235,
-    "away_runs": 3.647218149795288,
-    "total": 8.998304041064522,
-    "home_win_prob": 0.6560695231285408,
-    "away_win_prob": 0.34393047687145917,
-    "home_unconditional_win_prob": 0.5964,
-    "away_unconditional_win_prob": 0.31265,
-    "push_prob": 0.09095,
+    "environment_factor": 0.9,
+    "raw_home_pre_learn": 4.291,
+    "raw_away_pre_learn": 5.244,
+    "home_runs": 5.331223160988374,
+    "away_runs": 3.606838921423975,
+    "total": 8.93806208241235,
+    "home_win_prob": 0.6599007170435741,
+    "away_win_prob": 0.34009928295642583,
+    "home_unconditional_win_prob": 0.5982,
+    "away_unconditional_win_prob": 0.3083,
+    "push_prob": 0.0935,
     "runline": {
-      "home_minus_1_5": 0.5007,
-      "home_plus_1_5": 0.7671,
-      "away_minus_1_5": 0.2329,
-      "away_plus_1_5": 0.4993
+      "home_minus_1_5": 0.5046,
+      "home_plus_1_5": 0.77145,
+      "away_minus_1_5": 0.22855,
+      "away_plus_1_5": 0.4954
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 3.65,
-        "runs_vs_bp": 3.502,
+        "runs_vs_sp": 3.686,
+        "runs_vs_bp": 3.54,
         "sp_share": 0.644,
         "expected_ip": 5.8,
-        "mu_full": 3.795,
-        "mu_f5": 2.233,
+        "mu_full": 3.827,
+        "mu_f5": 2.251,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -1434,31 +1434,31 @@
           "pitcher_woba_against": 0.3093,
           "matchup_woba": 0.2912,
           "sp_path": {
-            "eff_woba": 0.2948,
-            "rpa": 0.0973,
-            "obp_eff": 0.2801,
-            "pa_per_inning": 4.167
+            "eff_woba": 0.2958,
+            "rpa": 0.0982,
+            "obp_eff": 0.281,
+            "pa_per_inning": 4.172
           },
           "bp_path": {
-            "eff_woba": 0.2907,
-            "rpa": 0.0939,
-            "obp_eff": 0.2761,
-            "pa_per_inning": 4.144
+            "eff_woba": 0.2917,
+            "rpa": 0.0948,
+            "obp_eff": 0.2772,
+            "pa_per_inning": 4.15
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 1.083
+          "bp_factor": 1.084
         }
       },
       "away": {
-        "runs_vs_sp": 4.832,
-        "runs_vs_bp": 4.787,
+        "runs_vs_sp": 4.844,
+        "runs_vs_bp": 4.8,
         "sp_share": 0.6,
         "expected_ip": 5.4,
-        "mu_full": 4.861,
-        "mu_f5": 2.67,
+        "mu_full": 4.871,
+        "mu_f5": 2.676,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -1469,16 +1469,16 @@
           "pitcher_woba_against": 0.3245,
           "matchup_woba": 0.3247,
           "sp_path": {
-            "eff_woba": 0.3262,
-            "rpa": 0.1235,
-            "obp_eff": 0.3099,
-            "pa_per_inning": 4.347
+            "eff_woba": 0.3265,
+            "rpa": 0.1238,
+            "obp_eff": 0.3102,
+            "pa_per_inning": 4.349
           },
           "bp_path": {
-            "eff_woba": 0.3251,
-            "rpa": 0.1225,
-            "obp_eff": 0.3088,
-            "pa_per_inning": 4.34
+            "eff_woba": 0.3254,
+            "rpa": 0.1228,
+            "obp_eff": 0.3091,
+            "pa_per_inning": 4.342
           },
           "hand_factor": 1.0,
           "park": 1.0,
@@ -1491,31 +1491,31 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 24.8,
-      "temp_f": 76.6,
-      "wind_mph": 7.4,
+      "temp_c": 23.1,
+      "temp_f": 73.6,
+      "wind_mph": 9.8,
       "wind_dir_label": "IN(억제)",
       "wind_dot_of": -9.7,
       "precip_prob": 100,
-      "humidity_pct": 94,
-      "air_density": 1.1619,
-      "density_delta_pct": -2.27,
-      "carry_dist_pct": -2.28,
-      "run_factor": 0.9202,
-      "factor": 0.9202
+      "humidity_pct": 91,
+      "air_density": 1.171,
+      "density_delta_pct": -1.51,
+      "carry_dist_pct": -3.63,
+      "run_factor": 0.9,
+      "factor": 0.9
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.12,
-      "away_xr": 2.73,
-      "total_xr": 4.85,
-      "home_win_prob": 0.3423,
+      "home_xr": 2.11,
+      "away_xr": 2.71,
+      "total_xr": 4.82,
+      "home_win_prob": 0.3488,
       "over_probs": {
-        "4.5": 0.4679,
-        "5.0": 0.3575,
-        "5.5": 0.3575
+        "4.5": 0.4711,
+        "5.0": 0.3554,
+        "5.5": 0.3554
       }
     },
     "learn_correction": {
@@ -2177,13 +2177,13 @@
       "home": {
         "factor": 1.0292,
         "raw_factor": 1.0356,
-        "mu": 5.085,
+        "mu": 4.988,
         "weight": 0.4
       },
       "away": {
         "factor": 1.2403,
         "raw_factor": 1.2931,
-        "mu": 5.92,
+        "mu": 5.804,
         "weight": 0.4
       }
     },
@@ -2544,13 +2544,13 @@
         "matchup": "NC @ LOT",
         "market": "moneyline",
         "label": "LOT ML",
-        "prob": 0.6561,
+        "prob": 0.6599,
         "odds": 2.1,
-        "ev": 0.3777,
-        "kelly_raw": 0.3434,
-        "p_hat": 0.4848,
-        "kelly_f": 0.0164,
-        "ev_debiased": 0.018,
+        "ev": 0.3858,
+        "kelly_raw": 0.3507,
+        "p_hat": 0.4853,
+        "kelly_f": 0.0175,
+        "ev_debiased": 0.0192,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -2560,13 +2560,13 @@
         "matchup": "NC @ LOT",
         "market": "moneyline",
         "label": "NC ML",
-        "prob": 0.3439,
+        "prob": 0.3401,
         "odds": 1.75,
-        "ev": -0.3981,
+        "ev": -0.4048,
         "kelly_raw": 0.0,
-        "p_hat": 0.5152,
-        "kelly_f": -0.1311,
-        "ev_debiased": -0.0984,
+        "p_hat": 0.5147,
+        "kelly_f": -0.1325,
+        "ev_debiased": -0.0994,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -2576,79 +2576,79 @@
         "matchup": "NC @ LOT",
         "market": "total",
         "label": "Over 9.5",
-        "prob": 0.4641,
+        "prob": 0.4592,
         "odds": 2.01,
-        "ev": -0.0672,
+        "ev": -0.0769,
         "kelly_raw": 0.0,
-        "p_hat": 0.4713,
-        "kelly_f": -0.0522,
-        "ev_debiased": -0.0527,
+        "p_hat": 0.4696,
+        "kelly_f": -0.0555,
+        "ev_debiased": -0.0561,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 9.05,
+        "model_total": 9.0,
         "market_total": 9.5
       },
       {
         "matchup": "NC @ LOT",
         "market": "total",
         "label": "Under 9.5",
-        "prob": 0.5359,
+        "prob": 0.5408,
         "odds": 1.82,
-        "ev": -0.0246,
+        "ev": -0.0158,
         "kelly_raw": 0.0,
-        "p_hat": 0.5287,
-        "kelly_f": -0.0461,
-        "ev_debiased": -0.0378,
+        "p_hat": 0.5304,
+        "kelly_f": -0.0423,
+        "ev_debiased": -0.0347,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 9.05,
+        "model_total": 9.0,
         "market_total": 9.5
       }
     ],
     "scores_top": [
       {
         "away": 1,
-        "home": 4,
-        "prob": 0.0197
+        "home": 3,
+        "prob": 0.0198
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0194
+        "prob": 0.0192
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0189
       },
       {
         "away": 1,
-        "home": 3,
+        "home": 4,
         "prob": 0.0188
       },
       {
+        "away": 2,
+        "home": 5,
+        "prob": 0.0184
+      },
+      {
         "away": 3,
         "home": 3,
-        "prob": 0.0179
+        "prob": 0.0183
       },
       {
         "away": 2,
         "home": 2,
-        "prob": 0.0177
-      },
-      {
-        "away": 3,
-        "home": 4,
-        "prob": 0.0175
+        "prob": 0.0181
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0174
-      },
-      {
-        "away": 1,
-        "home": 5,
-        "prob": 0.0172
+        "prob": 0.0162
       }
     ],
     "data_sources": {
@@ -2730,31 +2730,31 @@
     },
     "umpire": "",
     "market_total": 8.5,
-    "environment_factor": 1.0224,
-    "raw_home_pre_learn": 4.43,
-    "raw_away_pre_learn": 4.492,
-    "home_runs": 3.0259016072557707,
-    "away_runs": 3.5143977749474367,
-    "total": 6.540299382203207,
-    "home_win_prob": 0.4461695956321447,
-    "away_win_prob": 0.5538304043678554,
-    "home_unconditional_win_prob": 0.39225,
-    "away_unconditional_win_prob": 0.4869,
-    "push_prob": 0.12085,
+    "environment_factor": 1.0138,
+    "raw_home_pre_learn": 4.421,
+    "raw_away_pre_learn": 4.483,
+    "home_runs": 3.017131948000746,
+    "away_runs": 3.5055990184263885,
+    "total": 6.522730966427135,
+    "home_win_prob": 0.4446532285616673,
+    "away_win_prob": 0.5553467714383328,
+    "home_unconditional_win_prob": 0.39045,
+    "away_unconditional_win_prob": 0.48765,
+    "push_prob": 0.1219,
     "runline": {
-      "home_minus_1_5": 0.2876,
-      "home_plus_1_5": 0.6303,
-      "away_minus_1_5": 0.3697,
-      "away_plus_1_5": 0.7124
+      "home_minus_1_5": 0.28645,
+      "home_plus_1_5": 0.62645,
+      "away_minus_1_5": 0.37355,
+      "away_plus_1_5": 0.71355
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.035,
-        "runs_vs_bp": 4.056,
+        "runs_vs_sp": 4.046,
+        "runs_vs_bp": 4.067,
         "sp_share": 0.644,
         "expected_ip": 5.8,
-        "mu_full": 4.183,
-        "mu_f5": 2.431,
+        "mu_full": 4.192,
+        "mu_f5": 2.437,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -2765,16 +2765,16 @@
           "pitcher_woba_against": 0.2986,
           "matchup_woba": 0.3062,
           "sp_path": {
-            "eff_woba": 0.3053,
-            "rpa": 0.1061,
-            "obp_eff": 0.29,
-            "pa_per_inning": 4.226
+            "eff_woba": 0.3056,
+            "rpa": 0.1063,
+            "obp_eff": 0.2903,
+            "pa_per_inning": 4.227
           },
           "bp_path": {
-            "eff_woba": 0.3059,
-            "rpa": 0.1066,
-            "obp_eff": 0.2906,
-            "pa_per_inning": 4.229
+            "eff_woba": 0.3062,
+            "rpa": 0.1068,
+            "obp_eff": 0.2909,
+            "pa_per_inning": 4.231
           },
           "hand_factor": 1.0,
           "park": 1.02,
@@ -2784,12 +2784,12 @@
         }
       },
       "away": {
-        "runs_vs_sp": 4.422,
-        "runs_vs_bp": 4.403,
+        "runs_vs_sp": 4.43,
+        "runs_vs_bp": 4.411,
         "sp_share": 0.644,
         "expected_ip": 5.8,
-        "mu_full": 4.516,
-        "mu_f5": 2.631,
+        "mu_full": 4.523,
+        "mu_f5": 2.635,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -2800,16 +2800,16 @@
           "pitcher_woba_against": 0.3156,
           "matchup_woba": 0.3158,
           "sp_path": {
-            "eff_woba": 0.3156,
-            "rpa": 0.1147,
-            "obp_eff": 0.2998,
-            "pa_per_inning": 4.285
+            "eff_woba": 0.3158,
+            "rpa": 0.1149,
+            "obp_eff": 0.3,
+            "pa_per_inning": 4.286
           },
           "bp_path": {
-            "eff_woba": 0.3151,
-            "rpa": 0.1143,
-            "obp_eff": 0.2993,
-            "pa_per_inning": 4.282
+            "eff_woba": 0.3153,
+            "rpa": 0.1144,
+            "obp_eff": 0.2995,
+            "pa_per_inning": 4.283
           },
           "hand_factor": 1.0,
           "park": 1.02,
@@ -2822,31 +2822,31 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 25.2,
-      "temp_f": 77.4,
-      "wind_mph": 4.0,
+      "temp_c": 24.9,
+      "temp_f": 76.8,
+      "wind_mph": 3.7,
       "wind_dir_label": "교차풍",
-      "wind_dot_of": 1.4,
+      "wind_dot_of": -0.5,
       "precip_prob": 88,
-      "humidity_pct": 87,
-      "air_density": 1.1588,
-      "density_delta_pct": -2.53,
-      "carry_dist_pct": 1.31,
-      "run_factor": 1.0024,
-      "factor": 1.0024
+      "humidity_pct": 88,
+      "air_density": 1.1602,
+      "density_delta_pct": -2.41,
+      "carry_dist_pct": 0.93,
+      "run_factor": 0.9939,
+      "factor": 0.9939
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
       "home_xr": 2.34,
-      "away_xr": 2.46,
-      "total_xr": 4.8,
-      "home_win_prob": 0.4067,
+      "away_xr": 2.44,
+      "total_xr": 4.78,
+      "home_win_prob": 0.4039,
       "over_probs": {
-        "4.5": 0.4627,
-        "5.0": 0.354,
-        "5.5": 0.354
+        "4.5": 0.4621,
+        "5.0": 0.3507,
+        "5.5": 0.3507
       }
     },
     "learn_correction": {
@@ -3469,13 +3469,13 @@
       "home": {
         "factor": 0.8668,
         "raw_factor": 0.8375,
-        "mu": 4.8,
+        "mu": 4.764,
         "weight": 0.4
       },
       "away": {
         "factor": 0.8071,
         "raw_factor": 0.7648,
-        "mu": 4.455,
+        "mu": 4.423,
         "weight": 0.4
       }
     },
@@ -3836,13 +3836,13 @@
         "matchup": "DSN @ KIA",
         "market": "moneyline",
         "label": "KIA ML",
-        "prob": 0.4462,
+        "prob": 0.4447,
         "odds": 2.03,
-        "ev": -0.0943,
+        "ev": -0.0974,
         "kelly_raw": 0.0,
-        "p_hat": 0.4664,
-        "kelly_f": -0.0517,
-        "ev_debiased": -0.0532,
+        "p_hat": 0.4662,
+        "kelly_f": -0.0521,
+        "ev_debiased": -0.0537,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -3852,13 +3852,13 @@
         "matchup": "DSN @ KIA",
         "market": "moneyline",
         "label": "DSN ML",
-        "prob": 0.5538,
+        "prob": 0.5553,
         "odds": 1.8,
-        "ev": -0.0031,
+        "ev": -0.0004,
         "kelly_raw": 0.0,
-        "p_hat": 0.5336,
-        "kelly_f": -0.0494,
-        "ev_debiased": -0.0395,
+        "p_hat": 0.5338,
+        "kelly_f": -0.0489,
+        "ev_debiased": -0.0391,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -3868,79 +3868,79 @@
         "matchup": "DSN @ KIA",
         "market": "total",
         "label": "Over 8.5",
-        "prob": 0.3218,
+        "prob": 0.3216,
         "odds": 2.01,
-        "ev": -0.3531,
+        "ev": -0.3537,
         "kelly_raw": 0.0,
-        "p_hat": 0.4215,
-        "kelly_f": -0.1512,
-        "ev_debiased": -0.1527,
+        "p_hat": 0.4214,
+        "kelly_f": -0.1514,
+        "ev_debiased": -0.1529,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 6.56,
+        "model_total": 6.57,
         "market_total": 8.5
       },
       {
         "matchup": "DSN @ KIA",
         "market": "total",
         "label": "Under 8.5",
-        "prob": 0.6782,
+        "prob": 0.6784,
         "odds": 1.82,
-        "ev": 0.2343,
-        "kelly_raw": 0.2857,
-        "p_hat": 0.5785,
-        "kelly_f": 0.0644,
-        "ev_debiased": 0.0528,
+        "ev": 0.2348,
+        "kelly_raw": 0.2863,
+        "p_hat": 0.5786,
+        "kelly_f": 0.0646,
+        "ev_debiased": 0.053,
         "stake": 18,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 6.56,
+        "model_total": 6.57,
         "market_total": 8.5
       }
     ],
     "scores_top": [
       {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0308
-      },
-      {
         "away": 1,
         "home": 1,
-        "prob": 0.0297
+        "prob": 0.0314
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0305
       },
       {
         "away": 1,
         "home": 0,
-        "prob": 0.0288
-      },
-      {
-        "away": 2,
-        "home": 2,
-        "prob": 0.0279
-      },
-      {
-        "away": 1,
-        "home": 2,
-        "prob": 0.0271
-      },
-      {
-        "away": 2,
-        "home": 0,
-        "prob": 0.0265
+        "prob": 0.0283
       },
       {
         "away": 3,
         "home": 1,
-        "prob": 0.0257
+        "prob": 0.0279
       },
       {
-        "away": 0,
-        "home": 1,
-        "prob": 0.0242
+        "away": 2,
+        "home": 2,
+        "prob": 0.0275
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.027
+      },
+      {
+        "away": 2,
+        "home": 0,
+        "prob": 0.0267
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0236
       }
     ],
     "data_sources": {
@@ -4022,31 +4022,31 @@
     },
     "umpire": "",
     "market_total": 9.5,
-    "environment_factor": 0.934,
-    "raw_home_pre_learn": 4.566,
-    "raw_away_pre_learn": 4.858,
-    "home_runs": 2.614291173611357,
-    "away_runs": 2.932799383693312,
-    "total": 5.547090557304669,
-    "home_win_prob": 0.4559071117561683,
-    "away_win_prob": 0.5440928882438316,
-    "home_unconditional_win_prob": 0.39265,
-    "away_unconditional_win_prob": 0.4686,
-    "push_prob": 0.13875,
+    "environment_factor": 0.9353,
+    "raw_home_pre_learn": 4.568,
+    "raw_away_pre_learn": 4.86,
+    "home_runs": 2.6159533518747136,
+    "away_runs": 2.9348519333416556,
+    "total": 5.550805285216369,
+    "home_win_prob": 0.4596313148990783,
+    "away_win_prob": 0.5403686851009217,
+    "home_unconditional_win_prob": 0.39395,
+    "away_unconditional_win_prob": 0.46315,
+    "push_prob": 0.1429,
     "runline": {
-      "home_minus_1_5": 0.27865,
-      "home_plus_1_5": 0.65735,
-      "away_minus_1_5": 0.34265,
-      "away_plus_1_5": 0.72135
+      "home_minus_1_5": 0.2806,
+      "home_plus_1_5": 0.66005,
+      "away_minus_1_5": 0.33995,
+      "away_plus_1_5": 0.7194
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.485,
-        "runs_vs_bp": 4.476,
+        "runs_vs_sp": 4.484,
+        "runs_vs_bp": 4.474,
         "sp_share": 0.622,
         "expected_ip": 5.6,
-        "mu_full": 4.582,
-        "mu_f5": 2.584,
+        "mu_full": 4.581,
+        "mu_f5": 2.583,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -4057,7 +4057,7 @@
           "pitcher_woba_against": 0.3172,
           "matchup_woba": 0.3157,
           "sp_path": {
-            "eff_woba": 0.3173,
+            "eff_woba": 0.3172,
             "rpa": 0.116,
             "obp_eff": 0.3014,
             "pa_per_inning": 4.294
@@ -4065,7 +4065,7 @@
           "bp_path": {
             "eff_woba": 0.317,
             "rpa": 0.1158,
-            "obp_eff": 0.3012,
+            "obp_eff": 0.3011,
             "pa_per_inning": 4.293
           },
           "hand_factor": 1.0,
@@ -4114,18 +4114,18 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 25.4,
-      "temp_f": 77.7,
-      "wind_mph": 6.0,
+      "temp_c": 25.1,
+      "temp_f": 77.2,
+      "wind_mph": 6.6,
       "wind_dir_label": "교차풍",
-      "wind_dot_of": -2.2,
+      "wind_dot_of": -1.7,
       "precip_prob": 50,
-      "humidity_pct": 79,
-      "air_density": 1.1606,
-      "density_delta_pct": -2.38,
-      "carry_dist_pct": 0.39,
-      "run_factor": 0.9936,
-      "factor": 0.9936
+      "humidity_pct": 87,
+      "air_density": 1.1613,
+      "density_delta_pct": -2.32,
+      "carry_dist_pct": 0.46,
+      "run_factor": 0.995,
+      "factor": 0.995
     },
     "umpire_detail": {
       "applied": 0.0
@@ -4136,9 +4136,9 @@
       "total_xr": 5.24,
       "home_win_prob": 0.4007,
       "over_probs": {
-        "4.5": 0.5144,
-        "5.0": 0.3988,
-        "5.5": 0.3988
+        "4.5": 0.5155,
+        "5.0": 0.3995,
+        "5.5": 0.3995
       }
     },
     "learn_correction": {
@@ -4790,13 +4790,13 @@
       "home": {
         "factor": 0.8905,
         "raw_factor": 0.8665,
-        "mu": 4.543,
+        "mu": 4.549,
         "weight": 0.4
       },
       "away": {
         "factor": 0.8201,
         "raw_factor": 0.7806,
-        "mu": 4.181,
+        "mu": 4.186,
         "weight": 0.4
       }
     },
@@ -5157,13 +5157,13 @@
         "matchup": "SSG @ LG",
         "market": "moneyline",
         "label": "LG ML",
-        "prob": 0.4559,
+        "prob": 0.4596,
         "odds": 1.58,
-        "ev": -0.2797,
+        "ev": -0.2738,
         "kelly_raw": 0.0,
-        "p_hat": 0.5809,
-        "kelly_f": -0.1416,
-        "ev_debiased": -0.0821,
+        "p_hat": 0.5815,
+        "kelly_f": -0.14,
+        "ev_debiased": -0.0812,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -5173,13 +5173,13 @@
         "matchup": "SSG @ LG",
         "market": "moneyline",
         "label": "SSG ML",
-        "prob": 0.5441,
+        "prob": 0.5404,
         "odds": 2.4,
-        "ev": 0.3058,
-        "kelly_raw": 0.2184,
-        "p_hat": 0.4191,
-        "kelly_f": 0.0041,
-        "ev_debiased": 0.0057,
+        "ev": 0.2969,
+        "kelly_raw": 0.2121,
+        "p_hat": 0.4185,
+        "kelly_f": 0.0031,
+        "ev_debiased": 0.0044,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -5189,36 +5189,36 @@
         "matchup": "SSG @ LG",
         "market": "total",
         "label": "Over 9.5",
-        "prob": 0.1563,
+        "prob": 0.1564,
         "odds": 2.02,
-        "ev": -0.6843,
+        "ev": -0.684,
         "kelly_raw": 0.0,
         "p_hat": 0.3619,
-        "kelly_f": -0.2637,
-        "ev_debiased": -0.269,
+        "kelly_f": -0.2636,
+        "ev_debiased": -0.2689,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 5.58,
+        "model_total": 5.59,
         "market_total": 9.5
       },
       {
         "matchup": "SSG @ LG",
         "market": "total",
         "label": "Under 9.5",
-        "prob": 0.8437,
+        "prob": 0.8436,
         "odds": 1.81,
-        "ev": 0.5271,
-        "kelly_raw": 0.6508,
+        "ev": 0.5269,
+        "kelly_raw": 0.6505,
         "p_hat": 0.6381,
         "kelly_f": 0.1913,
-        "ev_debiased": 0.155,
-        "stake": 53,
+        "ev_debiased": 0.1549,
+        "stake": 52,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 5.58,
+        "model_total": 5.59,
         "market_total": 9.5
       }
     ],
@@ -5226,42 +5226,42 @@
       {
         "away": 1,
         "home": 0,
-        "prob": 0.0442
+        "prob": 0.0401
       },
       {
         "away": 0,
         "home": 0,
-        "prob": 0.0396
+        "prob": 0.0399
       },
       {
         "away": 1,
         "home": 1,
-        "prob": 0.0387
-      },
-      {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0352
+        "prob": 0.0382
       },
       {
         "away": 0,
         "home": 1,
-        "prob": 0.035
-      },
-      {
-        "away": 1,
-        "home": 2,
-        "prob": 0.0346
+        "prob": 0.0376
       },
       {
         "away": 2,
         "home": 0,
-        "prob": 0.0345
+        "prob": 0.0356
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.0355
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0328
       },
       {
         "away": 0,
         "home": 2,
-        "prob": 0.0297
+        "prob": 0.0307
       }
     ],
     "data_sources": {
@@ -5345,31 +5345,31 @@
     },
     "umpire": "",
     "market_total": 11.5,
-    "environment_factor": 1.0024,
-    "raw_home_pre_learn": 6.924,
-    "raw_away_pre_learn": 4.764,
-    "home_runs": 8.270711838415295,
-    "away_runs": 5.3483677803613565,
-    "total": 13.619079618776652,
-    "home_win_prob": 0.706039837224245,
-    "away_win_prob": 0.29396016277575504,
-    "home_unconditional_win_prob": 0.6593,
-    "away_unconditional_win_prob": 0.2745,
-    "push_prob": 0.0662,
+    "environment_factor": 0.9939,
+    "raw_home_pre_learn": 6.894,
+    "raw_away_pre_learn": 4.753,
+    "home_runs": 8.241186443633334,
+    "away_runs": 5.337277561652716,
+    "total": 13.57846400528605,
+    "home_win_prob": 0.7053948564401433,
+    "away_win_prob": 0.29460514355985673,
+    "home_unconditional_win_prob": 0.65965,
+    "away_unconditional_win_prob": 0.2755,
+    "push_prob": 0.06485,
     "runline": {
-      "home_minus_1_5": 0.58745,
-      "home_plus_1_5": 0.78355,
-      "away_minus_1_5": 0.21645,
-      "away_plus_1_5": 0.41255
+      "home_minus_1_5": 0.5903,
+      "home_plus_1_5": 0.78055,
+      "away_minus_1_5": 0.21945,
+      "away_plus_1_5": 0.4097
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 6.361,
-        "runs_vs_bp": 6.393,
+        "runs_vs_sp": 6.352,
+        "runs_vs_bp": 6.384,
         "sp_share": 0.289,
         "expected_ip": 2.6,
-        "mu_full": 6.247,
-        "mu_f5": 2.994,
+        "mu_full": 6.239,
+        "mu_f5": 2.991,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -5380,31 +5380,31 @@
           "pitcher_woba_against": 0.3601,
           "matchup_woba": 0.3628,
           "sp_path": {
-            "eff_woba": 0.3632,
-            "rpa": 0.1543,
-            "obp_eff": 0.345,
-            "pa_per_inning": 4.58
+            "eff_woba": 0.363,
+            "rpa": 0.1541,
+            "obp_eff": 0.3448,
+            "pa_per_inning": 4.579
           },
           "bp_path": {
-            "eff_woba": 0.3639,
-            "rpa": 0.1549,
-            "obp_eff": 0.3457,
-            "pa_per_inning": 4.585
+            "eff_woba": 0.3637,
+            "rpa": 0.1547,
+            "obp_eff": 0.3455,
+            "pa_per_inning": 4.584
           },
           "hand_factor": 1.0,
           "park": 1.0,
           "hr_adj": 1.0,
           "home_mult": 1.015,
-          "bp_factor": 1.032
+          "bp_factor": 1.031
         }
       },
       "away": {
-        "runs_vs_sp": 4.401,
-        "runs_vs_bp": 4.414,
+        "runs_vs_sp": 4.409,
+        "runs_vs_bp": 4.422,
         "sp_share": 0.6,
         "expected_ip": 5.4,
-        "mu_full": 4.507,
-        "mu_f5": 2.463,
+        "mu_full": 4.514,
+        "mu_f5": 2.467,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -5415,16 +5415,16 @@
           "pitcher_woba_against": 0.3273,
           "matchup_woba": 0.3148,
           "sp_path": {
-            "eff_woba": 0.3151,
-            "rpa": 0.1142,
-            "obp_eff": 0.2993,
-            "pa_per_inning": 4.281
+            "eff_woba": 0.3153,
+            "rpa": 0.1144,
+            "obp_eff": 0.2995,
+            "pa_per_inning": 4.283
           },
           "bp_path": {
-            "eff_woba": 0.3154,
-            "rpa": 0.1145,
-            "obp_eff": 0.2996,
-            "pa_per_inning": 4.283
+            "eff_woba": 0.3156,
+            "rpa": 0.1147,
+            "obp_eff": 0.2998,
+            "pa_per_inning": 4.285
           },
           "hand_factor": 1.0,
           "park": 1.0,
@@ -5437,18 +5437,18 @@
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 24.5,
-      "temp_f": 76.1,
-      "wind_mph": 6.3,
+      "temp_c": 24.7,
+      "temp_f": 76.5,
+      "wind_mph": 6.5,
       "wind_dir_label": "교차풍",
-      "wind_dot_of": -0.2,
+      "wind_dot_of": -1.6,
       "precip_prob": 54,
-      "humidity_pct": 86,
-      "air_density": 1.1635,
-      "density_delta_pct": -2.13,
-      "carry_dist_pct": 0.85,
-      "run_factor": 1.0024,
-      "factor": 1.0024
+      "humidity_pct": 87,
+      "air_density": 1.1629,
+      "density_delta_pct": -2.18,
+      "carry_dist_pct": 0.46,
+      "run_factor": 0.9939,
+      "factor": 0.9939
     },
     "umpire_detail": {
       "applied": 0.0
@@ -5456,12 +5456,12 @@
     "f5": {
       "home_xr": 3.49,
       "away_xr": 2.67,
-      "total_xr": 6.17,
-      "home_win_prob": 0.5307,
+      "total_xr": 6.16,
+      "home_win_prob": 0.5221,
       "over_probs": {
-        "4.5": 0.6174,
-        "5.0": 0.5055,
-        "5.5": 0.5055
+        "4.5": 0.6216,
+        "5.0": 0.5049,
+        "5.5": 0.5049
       }
     },
     "learn_correction": {
@@ -6126,13 +6126,13 @@
       "home": {
         "factor": 1.55,
         "raw_factor": 1.9085,
-        "mu": 7.938,
+        "mu": 7.876,
         "weight": 0.4
       },
       "away": {
         "factor": 0.9729,
         "raw_factor": 0.967,
-        "mu": 5.15,
+        "mu": 5.112,
         "weight": 0.4
       }
     },
@@ -6493,13 +6493,13 @@
         "matchup": "KIW @ KT",
         "market": "moneyline",
         "label": "KT ML",
-        "prob": 0.706,
+        "prob": 0.7054,
         "odds": 1.3,
-        "ev": -0.0821,
+        "ev": -0.083,
         "kelly_raw": 0.0,
-        "p_hat": 0.7271,
-        "kelly_f": -0.1824,
-        "ev_debiased": -0.0547,
+        "p_hat": 0.727,
+        "kelly_f": -0.1829,
+        "ev_debiased": -0.0549,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -6509,13 +6509,13 @@
         "matchup": "KIW @ KT",
         "market": "moneyline",
         "label": "KIW ML",
-        "prob": 0.294,
+        "prob": 0.2946,
         "odds": 3.53,
-        "ev": 0.0377,
-        "kelly_raw": 0.0149,
-        "p_hat": 0.2729,
-        "kelly_f": -0.0145,
-        "ev_debiased": -0.0368,
+        "ev": 0.04,
+        "kelly_raw": 0.0158,
+        "p_hat": 0.273,
+        "kelly_f": -0.0144,
+        "ev_debiased": -0.0364,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
@@ -6525,79 +6525,79 @@
         "matchup": "KIW @ KT",
         "market": "total",
         "label": "Over 11.5",
-        "prob": 0.644,
+        "prob": 0.6403,
         "odds": 1.93,
-        "ev": 0.2429,
-        "kelly_raw": 0.2612,
-        "p_hat": 0.5461,
-        "kelly_f": 0.0581,
-        "ev_debiased": 0.054,
-        "stake": 16,
+        "ev": 0.2358,
+        "kelly_raw": 0.2536,
+        "p_hat": 0.5448,
+        "kelly_f": 0.0554,
+        "ev_debiased": 0.0516,
+        "stake": 15,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 13.7,
+        "model_total": 13.66,
         "market_total": 11.5
       },
       {
         "matchup": "KIW @ KT",
         "market": "total",
         "label": "Under 11.5",
-        "prob": 0.356,
+        "prob": 0.3597,
         "odds": 1.88,
-        "ev": -0.3307,
+        "ev": -0.3238,
         "kelly_raw": 0.0,
-        "p_hat": 0.4539,
-        "kelly_f": -0.1667,
-        "ev_debiased": -0.1467,
+        "p_hat": 0.4552,
+        "kelly_f": -0.164,
+        "ev_debiased": -0.1443,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 13.7,
+        "model_total": 13.66,
         "market_total": 11.5
       }
     ],
     "scores_top": [
       {
         "away": 3,
-        "home": 6,
-        "prob": 0.0124
-      },
-      {
-        "away": 3,
         "home": 7,
-        "prob": 0.0122
-      },
-      {
-        "away": 4,
-        "home": 6,
         "prob": 0.0118
       },
       {
         "away": 4,
         "home": 7,
-        "prob": 0.0109
+        "prob": 0.0114
+      },
+      {
+        "away": 4,
+        "home": 6,
+        "prob": 0.0111
+      },
+      {
+        "away": 5,
+        "home": 7,
+        "prob": 0.011
       },
       {
         "away": 4,
         "home": 5,
-        "prob": 0.0107
+        "prob": 0.0106
+      },
+      {
+        "away": 2,
+        "home": 6,
+        "prob": 0.0104
       },
       {
         "away": 3,
         "home": 8,
-        "prob": 0.0103
+        "prob": 0.0104
       },
       {
         "away": 3,
         "home": 5,
-        "prob": 0.0102
-      },
-      {
-        "away": 5,
-        "home": 6,
-        "prob": 0.0101
+        "prob": 0.0103
       }
     ],
     "data_sources": {
