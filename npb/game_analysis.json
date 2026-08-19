@@ -1795,33 +1795,33 @@
     "umpire": "",
     "model_version": "projection_v2",
     "market_total": null,
-    "environment_factor": 1.0993,
-    "raw_home_pre_learn": 4.424,
-    "raw_away_pre_learn": 3.214,
+    "environment_factor": 1.0987,
+    "raw_home_pre_learn": 4.423,
+    "raw_away_pre_learn": 3.215,
     "home_pitcher_id": "鈴木 健矢",
     "away_pitcher_id": "櫻井 頼之介",
-    "home_runs": 5.226306020797429,
-    "away_runs": 4.016306020797428,
+    "home_runs": 5.2253060207974285,
+    "away_runs": 4.017306020797428,
     "total": 9.242612041594857,
-    "home_win_prob": 0.6161566304705495,
-    "away_win_prob": 0.3838433695294505,
-    "home_unconditional_win_prob": 0.56175,
-    "away_unconditional_win_prob": 0.34995,
-    "push_prob": 0.0883,
+    "home_win_prob": 0.6122224059073125,
+    "away_win_prob": 0.38777759409268747,
+    "home_unconditional_win_prob": 0.5555,
+    "away_unconditional_win_prob": 0.35185,
+    "push_prob": 0.09265,
     "runline": {
-      "home_minus_1_5": 0.4628,
-      "home_plus_1_5": 0.73215,
-      "away_minus_1_5": 0.26785,
-      "away_plus_1_5": 0.5372
+      "home_minus_1_5": 0.46045,
+      "home_plus_1_5": 0.73115,
+      "away_minus_1_5": 0.26885,
+      "away_plus_1_5": 0.53955
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.568,
-        "runs_vs_bp": 4.514,
+        "runs_vs_sp": 4.567,
+        "runs_vs_bp": 4.513,
         "sp_share": 0.53,
         "expected_ip": 4.77,
-        "mu_full": 4.424,
-        "mu_f5": 2.142,
+        "mu_full": 4.423,
+        "mu_f5": 2.141,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -1832,13 +1832,13 @@
           "pitcher_woba_against": 0.3374,
           "matchup_woba": 0.3304,
           "sp_path": {
-            "eff_woba": 0.3329,
+            "eff_woba": 0.3328,
             "rpa": 0.1157,
             "obp_eff": 0.3162,
             "pa_per_inning": 4.387
           },
           "bp_path": {
-            "eff_woba": 0.3315,
+            "eff_woba": 0.3314,
             "rpa": 0.1145,
             "obp_eff": 0.3149,
             "pa_per_inning": 4.379
@@ -1855,7 +1855,7 @@
         "runs_vs_bp": 3.121,
         "sp_share": 0.56,
         "expected_ip": 5.04,
-        "mu_full": 3.214,
+        "mu_full": 3.215,
         "mu_f5": 1.568,
         "hr_env": {
           "hr_env_pct": null,
@@ -1875,7 +1875,7 @@
           "bp_path": {
             "eff_woba": 0.2934,
             "rpa": 0.0834,
-            "obp_eff": 0.2787,
+            "obp_eff": 0.2788,
             "pa_per_inning": 4.159
           },
           "hand_factor": 1.0,
@@ -1890,11 +1890,11 @@
       "home_xr": 2.13,
       "away_xr": 1.54,
       "total_xr": 3.68,
-      "home_win_prob": 0.4898,
+      "home_win_prob": 0.4842,
       "over_probs": {
-        "3.5": 0.4379,
-        "4.5": 0.317,
-        "5.0": 0.2238
+        "3.5": 0.44,
+        "4.5": 0.3161,
+        "5.0": 0.2211
       }
     },
     "learn_correction": {
@@ -2617,13 +2617,13 @@
       "wind_mph": 3.2,
       "wind_dir_label": "OUT(밀어줌)",
       "wind_dot_of": 6.9,
-      "precip_prob": 0,
+      "precip_prob": 2,
       "humidity_pct": 68,
       "air_density": 1.1508,
       "density_delta_pct": -3.2,
       "carry_dist_pct": 2.35,
-      "run_factor": 1.057,
-      "factor": 1.057
+      "run_factor": 1.0564,
+      "factor": 1.0564
     },
     "umpire_detail": {
       "applied": 0.0
@@ -2634,12 +2634,17 @@
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0199
+        "prob": 0.0187
       },
       {
         "away": 2,
         "home": 4,
-        "prob": 0.0183
+        "prob": 0.0186
+      },
+      {
+        "away": 2,
+        "home": 2,
+        "prob": 0.0182
       },
       {
         "away": 1,
@@ -2647,29 +2652,24 @@
         "prob": 0.0181
       },
       {
-        "away": 1,
+        "away": 3,
+        "home": 3,
+        "prob": 0.0176
+      },
+      {
+        "away": 3,
         "home": 4,
-        "prob": 0.018
+        "prob": 0.0175
       },
       {
         "away": 2,
         "home": 5,
-        "prob": 0.0175
+        "prob": 0.0171
       },
       {
-        "away": 3,
-        "home": 3,
-        "prob": 0.0173
-      },
-      {
-        "away": 3,
+        "away": 1,
         "home": 4,
-        "prob": 0.0172
-      },
-      {
-        "away": 2,
-        "home": 2,
-        "prob": 0.0169
+        "prob": 0.0168
       }
     ],
     "data_sources": {
@@ -2695,8 +2695,8 @@
     "away_team": "ソフトバンク",
     "home_abbr": "NIP",
     "away_abbr": "SOF",
-    "home_pitcher_name": "細野",
-    "away_pitcher_name": "上沢",
+    "home_pitcher_name": "細野 晴希",
+    "away_pitcher_name": "上沢 直之",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -2756,6 +2756,8 @@
       "projection_prior_weight": 0.35
     },
     "umpire": "",
+    "home_pitcher_hand": "L",
+    "away_pitcher_hand": "R",
     "model_version": "projection_v2",
     "market_total": null,
     "environment_factor": 1.0,
