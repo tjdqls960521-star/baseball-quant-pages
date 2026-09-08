@@ -9,8 +9,8 @@
     "away_team": "中日",
     "home_abbr": "YOM",
     "away_abbr": "CHU",
-    "home_pitcher_name": "戸郷",
-    "away_pitcher_name": "柳",
+    "home_pitcher_name": "戸郷 翔征",
+    "away_pitcher_name": "柳 裕也",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -70,8 +70,10 @@
       "projection_prior_weight": 0.35
     },
     "umpire": "",
+    "home_pitcher_hand": "R",
+    "away_pitcher_hand": "R",
     "model_version": "projection_v2",
-    "market_total": null,
+    "market_total": 6.5,
     "environment_factor": 1.06,
     "raw_home_pre_learn": 3.403,
     "raw_away_pre_learn": 3.468,
@@ -671,8 +673,84 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "Pinnacle",
+      "away_ml": 2.28,
+      "home_ml": 1.69,
+      "total": 6.5,
+      "over": 1.96,
+      "under": 1.89
+    },
+    "picks": [
+      {
+        "matchup": "CHU @ YOM",
+        "market": "moneyline",
+        "label": "YOM ML",
+        "prob": 0.4958,
+        "odds": 1.69,
+        "ev": -0.1622,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5625,
+        "kelly_f": -0.0715,
+        "ev_debiased": -0.0493,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "CHU @ YOM",
+        "market": "moneyline",
+        "label": "CHU ML",
+        "prob": 0.5042,
+        "odds": 2.28,
+        "ev": 0.1497,
+        "kelly_raw": 0.1169,
+        "p_hat": 0.4375,
+        "kelly_f": -0.002,
+        "ev_debiased": -0.0026,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "CHU @ YOM",
+        "market": "total",
+        "label": "Over 6.5",
+        "prob": 0.4705,
+        "odds": 1.96,
+        "ev": -0.0778,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4838,
+        "kelly_f": -0.054,
+        "ev_debiased": -0.0518,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.2,
+        "market_total": 6.5
+      },
+      {
+        "matchup": "CHU @ YOM",
+        "market": "total",
+        "label": "Under 6.5",
+        "prob": 0.5295,
+        "odds": 1.89,
+        "ev": 0.0007,
+        "kelly_raw": 0.0008,
+        "p_hat": 0.5162,
+        "kelly_f": -0.0273,
+        "ev_debiased": -0.0243,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.2,
+        "market_total": 6.5
+      }
+    ],
     "scores_top": [
       {
         "away": 1,
@@ -721,7 +799,7 @@
       "home_pitcher": "npb_official_2yr",
       "away_pitcher": "npb_official_2yr",
       "weather": "indoor",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
       "level": "full",
@@ -738,8 +816,8 @@
     "away_team": "ヤクルト",
     "home_abbr": "DEN",
     "away_abbr": "YAK",
-    "home_pitcher_name": "東",
-    "away_pitcher_name": "奥川",
+    "home_pitcher_name": "東 克樹",
+    "away_pitcher_name": "奥川 恭伸",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -799,8 +877,10 @@
       "projection_prior_weight": 0.35
     },
     "umpire": "",
+    "home_pitcher_hand": "L",
+    "away_pitcher_hand": "R",
     "model_version": "projection_v2",
-    "market_total": null,
+    "market_total": 7.0,
     "environment_factor": 1.0722,
     "raw_home_pre_learn": 4.05,
     "raw_away_pre_learn": 3.053,
@@ -1623,8 +1703,84 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "Pinnacle",
+      "away_ml": 2.96,
+      "home_ml": 1.44,
+      "total": 7.0,
+      "over": 1.96,
+      "under": 1.89
+    },
+    "picks": [
+      {
+        "matchup": "YAK @ DEN",
+        "market": "moneyline",
+        "label": "DEN ML",
+        "prob": 0.6231,
+        "odds": 1.44,
+        "ev": -0.1028,
+        "kelly_raw": 0.0,
+        "p_hat": 0.6653,
+        "kelly_f": -0.0954,
+        "ev_debiased": -0.042,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "YAK @ DEN",
+        "market": "moneyline",
+        "label": "YAK ML",
+        "prob": 0.3769,
+        "odds": 2.96,
+        "ev": 0.1157,
+        "kelly_raw": 0.059,
+        "p_hat": 0.3347,
+        "kelly_f": -0.0047,
+        "ev_debiased": -0.0092,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "YAK @ DEN",
+        "market": "total",
+        "label": "Over 7.0",
+        "prob": 0.3517,
+        "odds": 1.96,
+        "ev": -0.3107,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4422,
+        "kelly_f": -0.1389,
+        "ev_debiased": -0.1333,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.01,
+        "market_total": 7.0
+      },
+      {
+        "matchup": "YAK @ DEN",
+        "market": "total",
+        "label": "Under 7.0",
+        "prob": 0.5501,
+        "odds": 1.89,
+        "ev": 0.0396,
+        "kelly_raw": 0.0445,
+        "p_hat": 0.5234,
+        "kelly_f": -0.012,
+        "ev_debiased": -0.0107,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.01,
+        "market_total": 7.0
+      }
+    ],
     "scores_top": [
       {
         "away": 0,
@@ -1673,7 +1829,7 @@
       "home_pitcher": "npb_official_2yr",
       "away_pitcher": "npb_official_2yr",
       "weather": "open-meteo",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
       "level": "full",
@@ -1690,8 +1846,8 @@
     "away_team": "楽天",
     "home_abbr": "LOT",
     "away_abbr": "RAK",
-    "home_pitcher_name": "田中",
-    "away_pitcher_name": "前田健",
+    "home_pitcher_name": "田中 晴也",
+    "away_pitcher_name": "前田 健太",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -1723,50 +1879,64 @@
       "projection_prior_weight": 0.35
     },
     "away_pitcher": {
-      "era": 3.3,
-      "whip": 1.2,
-      "k9": 7.5,
-      "bb9": 2.8,
-      "hr9": 0.7,
-      "ip": 0,
+      "name": "前田 健太",
+      "team_abbr": "RAK",
+      "era": 2.48,
+      "whip": 1.1173469387755104,
+      "k9": 6.887755102040817,
+      "bb9": 2.479591836734694,
+      "hr9": 0.5510204081632654,
+      "ip": 65.33333333333333,
+      "current_ip": 65.33333333333333,
+      "prior_ip": 0.0,
+      "projection_ip": 65.33333333333333,
+      "appearances": 12,
+      "games_started": null,
+      "expected_ip": 5.44,
       "hand": "R",
-      "expected_ip": 6.0,
-      "games_started": 0,
       "is_foreign": false,
       "xwoba": 0.31,
-      "fip": 3.3,
-      "_source": "fallback"
+      "fip": 2.48,
+      "_bb": 18.0,
+      "_so": 50.0,
+      "_hr": 4.0,
+      "_hits": 55.0,
+      "_er": 18.0,
+      "season": 2026,
+      "_source": "npb_official"
     },
     "umpire": "",
+    "home_pitcher_hand": "R",
+    "away_pitcher_hand": "R",
     "model_version": "projection_v2",
-    "market_total": null,
+    "market_total": 8.5,
     "environment_factor": 0.9046,
-    "raw_home_pre_learn": 3.655,
-    "raw_away_pre_learn": 3.797,
+    "raw_home_pre_learn": 3.359,
+    "raw_away_pre_learn": 3.798,
     "home_pitcher_id": "田中 晴也",
-    "away_pitcher_id": "前田健",
-    "home_runs": 3.3809577084467306,
-    "away_runs": 3.522957708446731,
-    "total": 6.9039154168934616,
-    "home_win_prob": 0.4869015356820235,
-    "away_win_prob": 0.5130984643179766,
-    "home_unconditional_win_prob": 0.4312,
-    "away_unconditional_win_prob": 0.4544,
-    "push_prob": 0.1144,
+    "away_pitcher_id": "前田 健太",
+    "home_runs": 3.027182746560379,
+    "away_runs": 3.466182746560379,
+    "total": 6.493365493120758,
+    "home_win_prob": 0.44905294386125055,
+    "away_win_prob": 0.5509470561387494,
+    "home_unconditional_win_prob": 0.39355,
+    "away_unconditional_win_prob": 0.48285,
+    "push_prob": 0.1236,
     "runline": {
-      "home_minus_1_5": 0.32505,
-      "home_plus_1_5": 0.65665,
-      "away_minus_1_5": 0.34335,
-      "away_plus_1_5": 0.67495
+      "home_minus_1_5": 0.28755,
+      "home_plus_1_5": 0.6356,
+      "away_minus_1_5": 0.3644,
+      "away_plus_1_5": 0.71245
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 3.662,
-        "runs_vs_bp": 3.649,
-        "sp_share": 0.667,
-        "expected_ip": 6.0,
-        "mu_full": 3.655,
-        "mu_f5": 2.033,
+        "runs_vs_sp": 3.318,
+        "runs_vs_bp": 3.312,
+        "sp_share": 0.604,
+        "expected_ip": 5.44,
+        "mu_full": 3.359,
+        "mu_f5": 1.721,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
@@ -1774,33 +1944,33 @@
         "components": {
           "method": "npb_zero_base_woba",
           "batter_woba": 0.3095,
-          "pitcher_woba_against": 0.31,
-          "matchup_woba": 0.3095,
+          "pitcher_woba_against": 0.2996,
+          "matchup_woba": 0.2991,
           "sp_path": {
-            "eff_woba": 0.3099,
-            "rpa": 0.0957,
-            "obp_eff": 0.2944,
-            "pa_per_inning": 4.252
+            "eff_woba": 0.3003,
+            "rpa": 0.0878,
+            "obp_eff": 0.2853,
+            "pa_per_inning": 4.198
           },
           "bp_path": {
-            "eff_woba": 0.3095,
-            "rpa": 0.0954,
-            "obp_eff": 0.2941,
-            "pa_per_inning": 4.25
+            "eff_woba": 0.3001,
+            "rpa": 0.0877,
+            "obp_eff": 0.2851,
+            "pa_per_inning": 4.197
           },
           "hand_factor": 1.0,
           "park": 0.95,
           "hr_adj": 1.0,
           "home_mult": 1.012,
-          "bp_factor": 0.994
+          "bp_factor": 0.992
         }
       },
       "away": {
         "runs_vs_sp": 3.832,
-        "runs_vs_bp": 3.807,
+        "runs_vs_bp": 3.808,
         "sp_share": 0.592,
         "expected_ip": 5.33,
-        "mu_full": 3.797,
+        "mu_full": 3.798,
         "mu_f5": 1.91,
         "hr_env": {
           "hr_env_pct": null,
@@ -1827,28 +1997,28 @@
           "park": 0.95,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.898
+          "bp_factor": 0.9
         }
       }
     },
     "f5": {
-      "home_xr": 2.01,
+      "home_xr": 1.71,
       "away_xr": 1.9,
-      "total_xr": 3.91,
-      "home_win_prob": 0.4164,
+      "total_xr": 3.61,
+      "home_win_prob": 0.3626,
       "over_probs": {
-        "3.5": 0.4758,
-        "4.5": 0.3459,
-        "5.0": 0.2507
+        "3.5": 0.4292,
+        "4.5": 0.3065,
+        "5.0": 0.212
       }
     },
     "learn_correction": {
       "home_team": -0.13673082321599103,
       "away_team": -0.5269036836632507,
-      "home_pitcher": 0.11554992377270346,
+      "home_pitcher": 0.0,
       "away_pitcher": 0.0,
-      "home_applied": -0.274,
-      "away_applied": -0.274,
+      "home_applied": -0.3318,
+      "away_applied": -0.3318,
       "margin_weight": 0.0
     },
     "feature_snapshot": {
@@ -1857,19 +2027,19 @@
       "home_lineup_coverage": 1.0,
       "away_lineup_coverage": 1.0,
       "home_starter_ip": 69.3,
-      "away_starter_ip": 0.0,
+      "away_starter_ip": 65.3,
       "home_projection_ip": 96.0,
-      "away_projection_ip": 0.0,
+      "away_projection_ip": 65.3,
       "home_expected_ip": 5.33,
-      "away_expected_ip": 6.0,
-      "home_bullpen_factor": 0.8979,
-      "away_bullpen_factor": 0.9943
+      "away_expected_ip": 5.44,
+      "home_bullpen_factor": 0.9003,
+      "away_bullpen_factor": 0.9922
     },
     "lineup_detail": {
       "home": {
-        "vs_pitcher": "",
+        "vs_pitcher": "前田 健太",
         "lineup_woba": 0.3102,
-        "matchup_score": 1.0,
+        "matchup_score": 0.9933,
         "coverage": 1.0,
         "bu_weight": 0.85,
         "platoon": 1.01,
@@ -1883,10 +2053,10 @@
             "woba": 0.321,
             "ops": 0.733,
             "platoon": 0.96,
-            "matchup_woba": 0.326,
-            "k_pct": 0.181,
-            "hr_pct": 0.014,
-            "edge": 0.0,
+            "matchup_woba": 0.291,
+            "k_pct": 0.172,
+            "hr_pct": 0.01,
+            "edge": -0.035,
             "source": "npb_official_2yr"
           },
           {
@@ -1897,10 +2067,10 @@
             "woba": 0.292,
             "ops": 0.644,
             "platoon": 1.05,
-            "matchup_woba": 0.309,
-            "k_pct": 0.152,
-            "hr_pct": 0.008,
-            "edge": 0.0,
+            "matchup_woba": 0.279,
+            "k_pct": 0.144,
+            "hr_pct": 0.006,
+            "edge": -0.0294,
             "source": "npb_official_2yr"
           },
           {
@@ -1911,10 +2081,10 @@
             "woba": 0.316,
             "ops": 0.718,
             "platoon": 1.05,
-            "matchup_woba": 0.351,
-            "k_pct": 0.198,
-            "hr_pct": 0.033,
-            "edge": 0.0,
+            "matchup_woba": 0.302,
+            "k_pct": 0.187,
+            "hr_pct": 0.024,
+            "edge": -0.0486,
             "source": "npb_official_2yr"
           },
           {
@@ -1925,10 +2095,10 @@
             "woba": 0.321,
             "ops": 0.734,
             "platoon": 1.05,
-            "matchup_woba": 0.358,
-            "k_pct": 0.179,
-            "hr_pct": 0.018,
-            "edge": 0.0,
+            "matchup_woba": 0.317,
+            "k_pct": 0.17,
+            "hr_pct": 0.013,
+            "edge": -0.0414,
             "source": "npb_official_2yr"
           },
           {
@@ -1939,10 +2109,10 @@
             "woba": 0.308,
             "ops": 0.696,
             "platoon": 0.96,
-            "matchup_woba": 0.313,
-            "k_pct": 0.258,
-            "hr_pct": 0.034,
-            "edge": 0.0,
+            "matchup_woba": 0.269,
+            "k_pct": 0.246,
+            "hr_pct": 0.025,
+            "edge": -0.0448,
             "source": "npb_official_2yr"
           },
           {
@@ -1953,10 +2123,10 @@
             "woba": 0.36,
             "ops": 0.851,
             "platoon": 0.96,
-            "matchup_woba": 0.364,
-            "k_pct": 0.241,
-            "hr_pct": 0.058,
-            "edge": -0.0,
+            "matchup_woba": 0.307,
+            "k_pct": 0.23,
+            "hr_pct": 0.042,
+            "edge": -0.0568,
             "source": "npb_official_2yr"
           },
           {
@@ -1967,10 +2137,10 @@
             "woba": 0.274,
             "ops": 0.592,
             "platoon": 1.05,
-            "matchup_woba": 0.299,
-            "k_pct": 0.165,
-            "hr_pct": 0.015,
-            "edge": 0.0,
+            "matchup_woba": 0.264,
+            "k_pct": 0.157,
+            "hr_pct": 0.011,
+            "edge": -0.0346,
             "source": "npb_official_2yr"
           },
           {
@@ -1981,10 +2151,10 @@
             "woba": 0.273,
             "ops": 0.586,
             "platoon": 0.96,
-            "matchup_woba": 0.262,
-            "k_pct": 0.15,
-            "hr_pct": 0.006,
-            "edge": 0.0,
+            "matchup_woba": 0.236,
+            "k_pct": 0.142,
+            "hr_pct": 0.005,
+            "edge": -0.0259,
             "source": "npb_official_2yr"
           },
           {
@@ -1995,10 +2165,10 @@
             "woba": 0.308,
             "ops": 0.693,
             "platoon": 1.05,
-            "matchup_woba": 0.332,
-            "k_pct": 0.221,
-            "hr_pct": 0.02,
-            "edge": 0.0,
+            "matchup_woba": 0.293,
+            "k_pct": 0.21,
+            "hr_pct": 0.015,
+            "edge": -0.0388,
             "source": "npb_official_2yr"
           }
         ]
@@ -2580,63 +2750,137 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "Pinnacle",
+      "home_ml": 1.89,
+      "away_ml": 2.0,
+      "total": 8.5,
+      "over": 2.13,
+      "under": 1.76
+    },
+    "picks": [
+      {
+        "matchup": "RAK @ LOT",
+        "market": "moneyline",
+        "label": "LOT ML",
+        "prob": 0.4491,
+        "odds": 1.89,
+        "ev": -0.1513,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5044,
+        "kelly_f": -0.0525,
+        "ev_debiased": -0.0467,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "RAK @ LOT",
+        "market": "moneyline",
+        "label": "RAK ML",
+        "prob": 0.5509,
+        "odds": 2.0,
+        "ev": 0.1019,
+        "kelly_raw": 0.1019,
+        "p_hat": 0.4956,
+        "kelly_f": -0.0088,
+        "ev_debiased": -0.0088,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "RAK @ LOT",
+        "market": "total",
+        "label": "Over 8.5",
+        "prob": 0.314,
+        "odds": 2.13,
+        "ev": -0.3311,
+        "kelly_raw": 0.0,
+        "p_hat": 0.404,
+        "kelly_f": -0.1234,
+        "ev_debiased": -0.1395,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.51,
+        "market_total": 8.5
+      },
+      {
+        "matchup": "RAK @ LOT",
+        "market": "total",
+        "label": "Under 8.5",
+        "prob": 0.686,
+        "odds": 1.76,
+        "ev": 0.2073,
+        "kelly_raw": 0.2728,
+        "p_hat": 0.596,
+        "kelly_f": 0.0644,
+        "ev_debiased": 0.049,
+        "stake": 42,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.51,
+        "market_total": 8.5
+      }
+    ],
     "scores_top": [
       {
         "away": 2,
         "home": 1,
-        "prob": 0.029
+        "prob": 0.0341
       },
       {
         "away": 1,
         "home": 1,
-        "prob": 0.0277
+        "prob": 0.0314
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0274
+        "prob": 0.0284
       },
       {
         "away": 2,
         "home": 2,
-        "prob": 0.0251
+        "prob": 0.028
       },
       {
-        "away": 3,
+        "away": 1,
+        "home": 0,
+        "prob": 0.0273
+      },
+      {
+        "away": 0,
         "home": 1,
-        "prob": 0.025
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0245
+        "prob": 0.026
       },
       {
         "away": 2,
-        "home": 3,
-        "prob": 0.024
+        "home": 0,
+        "prob": 0.0247
       },
       {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0226
+        "away": 4,
+        "home": 1,
+        "prob": 0.0243
       }
     ],
     "data_sources": {
       "home_hitting": "npb_official",
       "away_hitting": "npb_official",
       "home_pitcher": "npb_official_2yr",
-      "away_pitcher": "fallback",
+      "away_pitcher": "npb_official",
       "weather": "open-meteo",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
-      "level": "fallback",
-      "missing": [
-        "원정 선발"
-      ]
+      "level": "full",
+      "missing": []
     }
   },
   {
@@ -2650,7 +2894,7 @@
     "home_abbr": "ORX",
     "away_abbr": "SEI",
     "home_pitcher_name": "ジェリー",
-    "away_pitcher_name": "平良",
+    "away_pitcher_name": "平良 海馬",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -2709,8 +2953,10 @@
       "projection_prior_weight": 0.35
     },
     "umpire": "",
+    "home_pitcher_hand": "R",
+    "away_pitcher_hand": "R",
     "model_version": "projection_v2",
-    "market_total": null,
+    "market_total": 6.5,
     "environment_factor": 0.97,
     "raw_home_pre_learn": 2.917,
     "raw_away_pre_learn": 3.422,
@@ -3523,8 +3769,84 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "Pinnacle",
+      "home_ml": 2.31,
+      "away_ml": 1.67,
+      "total": 6.5,
+      "over": 1.99,
+      "under": 1.86
+    },
+    "picks": [
+      {
+        "matchup": "SEI @ ORX",
+        "market": "moneyline",
+        "label": "ORX ML",
+        "prob": 0.4446,
+        "odds": 2.31,
+        "ev": 0.0271,
+        "kelly_raw": 0.0207,
+        "p_hat": 0.4234,
+        "kelly_f": -0.0168,
+        "ev_debiased": -0.0221,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "SEI @ ORX",
+        "market": "moneyline",
+        "label": "SEI ML",
+        "prob": 0.5554,
+        "odds": 1.67,
+        "ev": -0.0725,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5766,
+        "kelly_f": -0.0552,
+        "ev_debiased": -0.037,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "SEI @ ORX",
+        "market": "total",
+        "label": "Over 6.5",
+        "prob": 0.4959,
+        "odds": 1.99,
+        "ev": -0.0131,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4876,
+        "kelly_f": -0.03,
+        "ev_debiased": -0.0297,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.46,
+        "market_total": 6.5
+      },
+      {
+        "matchup": "SEI @ ORX",
+        "market": "total",
+        "label": "Under 6.5",
+        "prob": 0.5041,
+        "odds": 1.86,
+        "ev": -0.0624,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5124,
+        "kelly_f": -0.0546,
+        "ev_debiased": -0.0469,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.46,
+        "market_total": 6.5
+      }
+    ],
     "scores_top": [
       {
         "away": 1,
@@ -3573,7 +3895,7 @@
       "home_pitcher": "npb_official",
       "away_pitcher": "npb_official_2yr",
       "weather": "indoor",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
       "level": "full",
@@ -3654,7 +3976,7 @@
     "home_pitcher_hand": "L",
     "away_pitcher_hand": "L",
     "model_version": "projection_v2",
-    "market_total": null,
+    "market_total": 7.5,
     "environment_factor": 0.98,
     "raw_home_pre_learn": 3.979,
     "raw_away_pre_learn": 3.308,
@@ -4431,8 +4753,84 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "Pinnacle",
+      "home_ml": 1.46,
+      "away_ml": 2.88,
+      "total": 7.5,
+      "over": 2.03,
+      "under": 1.83
+    },
+    "picks": [
+      {
+        "matchup": "NIP @ SOF",
+        "market": "moneyline",
+        "label": "SOF ML",
+        "prob": 0.5681,
+        "odds": 1.46,
+        "ev": -0.1705,
+        "kelly_raw": 0.0,
+        "p_hat": 0.6493,
+        "kelly_f": -0.1132,
+        "ev_debiased": -0.0521,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "NIP @ SOF",
+        "market": "moneyline",
+        "label": "NIP ML",
+        "prob": 0.4319,
+        "odds": 2.88,
+        "ev": 0.2438,
+        "kelly_raw": 0.1297,
+        "p_hat": 0.3507,
+        "kelly_f": 0.0054,
+        "ev_debiased": 0.0101,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "NIP @ SOF",
+        "market": "total",
+        "label": "Over 7.5",
+        "prob": 0.5436,
+        "odds": 2.03,
+        "ev": 0.1035,
+        "kelly_raw": 0.1005,
+        "p_hat": 0.4984,
+        "kelly_f": 0.0114,
+        "ev_debiased": 0.0118,
+        "stake": 8,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 8.0,
+        "market_total": 7.5
+      },
+      {
+        "matchup": "NIP @ SOF",
+        "market": "total",
+        "label": "Under 7.5",
+        "prob": 0.4564,
+        "odds": 1.83,
+        "ev": -0.1648,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5016,
+        "kelly_f": -0.0989,
+        "ev_debiased": -0.0821,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 8.0,
+        "market_total": 7.5
+      }
+    ],
     "scores_top": [
       {
         "away": 1,
@@ -4481,7 +4879,7 @@
       "home_pitcher": "npb_official_2yr",
       "away_pitcher": "npb_official_2yr",
       "weather": "indoor",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
       "level": "full",
