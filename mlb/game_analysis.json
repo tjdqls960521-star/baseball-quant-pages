@@ -22,7 +22,7 @@
       "fullName": "Nick Martinez",
       "link": "/api/v1/people/607259"
     },
-    "umpire": "",
+    "umpire": "Jansen Visconti",
     "home_lineup_ids": [],
     "away_lineup_ids": [],
     "model_version": "market_physics_consensus_v2",
@@ -34,12 +34,12 @@
       "away_abbr": "TB",
       "home_abbr": "ATL",
       "venue": "Truist Park",
-      "hr_pct": 1.0,
-      "runs_pct": 2.0,
-      "runs_number": 0.17,
-      "stadium_runs_pct": -5.0,
+      "hr_pct": 0.0,
+      "runs_pct": 1.0,
+      "runs_number": 0.1,
+      "stadium_runs_pct": -6.0,
       "weather_runs_pct": 7.0,
-      "stadium_runs_number": -0.46,
+      "stadium_runs_number": -0.53,
       "weather_runs_number": 0.63,
       "wind_receptiveness": "Medium",
       "wind_hour_1": {
@@ -65,11 +65,11 @@
       "contact_rate": "Poor",
       "contact_quality": "Great",
       "description": "An unevenly shaped outfield with a deep left side . The tall fence in right makes up for a shallow right field corner . Benefits from warm temperatures and relatively high altitude .",
-      "combined_run_factor": 1.02,
-      "stadium_run_factor": 0.95,
+      "combined_run_factor": 1.01,
+      "stadium_run_factor": 0.94,
       "weather_run_factor": 1.07
     },
-    "environment_factor": 1.02,
+    "environment_factor": 1.01,
     "data_sources": {
       "home_hitting": "statsapi",
       "away_hitting": "statsapi",
@@ -87,41 +87,41 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.023370574520706,
+    "raw_total": 9.753253203788262,
     "calibration": "market_anchored_w0.95",
-    "raw_home_pre_learn": 4.166,
-    "raw_away_pre_learn": 4.41,
+    "raw_home_pre_learn": 3.99,
+    "raw_away_pre_learn": 4.316,
     "learn_correction": {
       "home_team": -0.385,
       "away_team": 0.811,
       "home_pitcher": 0.876,
       "away_pitcher": 0.146
     },
-    "home_runs": 4.183562583564862,
-    "away_runs": 4.392758282218624,
-    "total": 8.576320865783487,
-    "home_win_prob": 0.5116185959352675,
-    "away_win_prob": 0.4883814040647325,
+    "home_runs": 4.13820335464752,
+    "away_runs": 4.424584630862271,
+    "total": 8.562787985509791,
+    "home_win_prob": 0.5108710917497659,
+    "away_win_prob": 0.48912890825023414,
     "win_probability_model": {
-      "home": 0.5116185959352675,
-      "away": 0.4883814040647325,
-      "physics_home": 0.4955605456209659,
-      "physics_away": 0.504439454379034,
+      "home": 0.5108710917497659,
+      "away": 0.48912890825023414,
+      "physics_home": 0.4925705288789591,
+      "physics_away": 0.507429471121041,
       "market_home": 0.5169712793733681,
       "market_away": 0.4830287206266319,
       "market_weight": 0.75,
       "source": "market_physics_consensus"
     },
     "runline": {
-      "home_minus_1_5": 0.3471,
-      "home_plus_1_5": 0.62745,
-      "away_minus_1_5": 0.37255,
-      "away_plus_1_5": 0.6529
+      "home_minus_1_5": 0.3368,
+      "home_plus_1_5": 0.61855,
+      "away_minus_1_5": 0.38145,
+      "away_plus_1_5": 0.6632
     },
     "home_matchup": 0.9744999999999999,
     "away_matchup": 0.9575,
     "home_bp_factor": 0.86,
-    "away_bp_factor": 0.926,
+    "away_bp_factor": 0.924,
     "home_bp_quality": {
       "overall_factor": 0.841,
       "stopper_factor": 0.848,
@@ -1411,10 +1411,10 @@
       }
     ],
     "starter_phase": {
-      "home_runs_no_bp": 4.183,
-      "away_runs_no_bp": 4.608,
-      "home_lead_prob": 0.4219399343563755,
-      "away_lead_prob": 0.5780600656436246
+      "home_runs_no_bp": 3.985,
+      "away_runs_no_bp": 4.528,
+      "home_lead_prob": 0.4007785444034076,
+      "away_lead_prob": 0.5992214555965925
     },
     "home_stuff": 71.4,
     "home_loc": 98.8,
@@ -1584,13 +1584,13 @@
         "matchup": "TB @ ATL",
         "market": "moneyline",
         "label": "ATL ML",
-        "prob": 0.5116,
+        "prob": 0.5109,
         "odds": 1.85,
-        "ev": -0.0535,
+        "ev": -0.0549,
         "kelly_raw": 0.0,
         "p_hat": 0.5164,
-        "kelly_f": -0.0525,
-        "ev_debiased": -0.0446,
+        "kelly_f": -0.0526,
+        "ev_debiased": -0.0447,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -1598,29 +1598,29 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "market_below_threshold",
-        "selection_confidence": 0.5116,
+        "selection_confidence": 0.5109,
         "selection_market_implied": 0.5405,
-        "selection_model_prob": 0.5116,
-        "selection_gap": 0.045,
-        "selection_lineup_confirmed": false,
+        "selection_model_prob": 0.5109,
+        "selection_gap": 0.048,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
           "market_below_threshold",
           "model_disagrees",
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.4956
+        "selection_agreement_model_prob": 0.4926
       },
       {
         "matchup": "TB @ ATL",
         "market": "moneyline",
         "label": "TB ML",
-        "prob": 0.4884,
+        "prob": 0.4891,
         "odds": 1.98,
-        "ev": -0.033,
+        "ev": -0.0315,
         "kelly_raw": 0.0,
         "p_hat": 0.4836,
-        "kelly_f": -0.0152,
-        "ev_debiased": -0.0425,
+        "kelly_f": -0.0151,
+        "ev_debiased": -0.0424,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -1628,24 +1628,24 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "market_below_threshold",
-        "selection_confidence": 0.4884,
+        "selection_confidence": 0.4891,
         "selection_market_implied": 0.5051,
-        "selection_model_prob": 0.4884,
-        "selection_gap": 0.0006,
-        "selection_lineup_confirmed": false,
+        "selection_model_prob": 0.4891,
+        "selection_gap": 0.0024,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
           "market_below_threshold"
         ],
-        "selection_agreement_model_prob": 0.5044
+        "selection_agreement_model_prob": 0.5074
       },
       {
         "matchup": "TB @ ATL",
         "market": "total",
         "label": "Over 8.5",
-        "prob": 0.5223,
+        "prob": 0.5209,
         "odds": 1.98,
-        "ev": 0.0341,
-        "kelly_raw": 0.0348,
+        "ev": 0.0315,
+        "kelly_raw": 0.0321,
         "p_hat": 0.483,
         "kelly_f": -0.0445,
         "ev_debiased": -0.0436,
@@ -1653,16 +1653,16 @@
         "stake_base": 150,
         "book": "DraftKings",
         "estimated_odds": true,
-        "model_total": 8.77,
+        "model_total": 8.75,
         "market_total": 8.5
       },
       {
         "matchup": "TB @ ATL",
         "market": "total",
         "label": "Under 8.5",
-        "prob": 0.4777,
+        "prob": 0.4791,
         "odds": 1.85,
-        "ev": -0.1162,
+        "ev": -0.1138,
         "kelly_raw": 0.0,
         "p_hat": 0.517,
         "kelly_f": -0.0513,
@@ -1671,28 +1671,28 @@
         "stake_base": 150,
         "book": "DraftKings",
         "estimated_odds": true,
-        "model_total": 8.77,
+        "model_total": 8.75,
         "market_total": 8.5
       }
     ],
     "weather": {
       "source": "ballpark_pal",
-      "text": "0% 85°  Wind 2 mph R-L",
+      "text": "0% 85°  Wind 3 mph R-L",
       "precip_prob": 0.0,
-      "temp_f": 86.1,
-      "wind_mph": 4.2,
+      "temp_f": 82.9,
+      "wind_mph": 4.6,
       "venue": "Truist Park",
       "roof": "open",
       "forecast_hour": "2026-09-10T16:00",
-      "wind_direction_deg": 164.0,
-      "humidity_pct": 48.0,
-      "temp_f_3h_avg": 88.4,
-      "wind_mph_3h_avg": 3.4,
-      "wind_direction_deg_3h_avg": 193.0,
+      "wind_direction_deg": 157.0,
+      "humidity_pct": 64.0,
+      "temp_f_3h_avg": 86.3,
+      "wind_mph_3h_avg": 4.3,
+      "wind_direction_deg_3h_avg": 155.0,
       "_source": "open-meteo",
-      "carry_adj": 0.03,
-      "run_factor": 1.0737,
-      "wind_dot_of": -3.482,
+      "carry_adj": 0.0288,
+      "run_factor": 1.0745,
+      "wind_dot_of": -4.099,
       "wind_dir_label": "내야 바람 (in)",
       "wind_source": "open-meteo",
       "of_bearing": 130,
@@ -1700,11 +1700,11 @@
       "humidity": 52.0,
       "pressure": 1019.0,
       "altitude": null,
-      "combined_run_factor": 1.02,
-      "stadium_run_factor": 0.95,
+      "combined_run_factor": 1.01,
+      "stadium_run_factor": 0.94,
       "weather_run_factor": 1.07,
-      "runs_pct": 2.0,
-      "hr_pct": 1.0,
+      "runs_pct": 1.0,
+      "hr_pct": 0.0,
       "wind_receptiveness": "Medium",
       "wind_hour_1": {
         "speed_mph": 3.0,
@@ -1721,64 +1721,64 @@
       "description": "An unevenly shaped outfield with a deep left side . The tall fence in right makes up for a shallow right field corner . Benefits from warm temperatures and relatively high altitude ."
     },
     "umpire_detail": {
-      "umpire": "Unknown",
+      "umpire": "Jansen Visconti",
       "source": "neutral"
     },
     "scores_top": [
       {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0289
+      },
+      {
         "away": 2,
         "home": 3,
-        "prob": 0.0295
+        "prob": 0.0276
       },
       {
         "away": 3,
-        "home": 2,
-        "prob": 0.0267
+        "home": 4,
+        "prob": 0.0273
       },
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0262
-      },
-      {
-        "away": 1,
-        "home": 2,
         "prob": 0.0255
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0255
+        "prob": 0.0251
       },
       {
-        "away": 3,
-        "home": 4,
-        "prob": 0.0254
+        "away": 1,
+        "home": 2,
+        "prob": 0.0248
       },
       {
         "away": 4,
         "home": 2,
-        "prob": 0.0194
+        "prob": 0.0208
       },
       {
-        "away": 5,
-        "home": 4,
-        "prob": 0.0187
+        "away": 4,
+        "home": 5,
+        "prob": 0.0199
       }
     ],
     "hr_env": {
-      "hr_env_pct": 1.0,
+      "hr_env_pct": 0.0,
       "home_hr_adj": {
-        "hr_env_pct": 1.0,
-        "hr_env_excess": -0.99,
+        "hr_env_pct": 0.0,
+        "hr_env_excess": -1.0,
         "team_hr_dep": 1.095,
         "hr_dep_excess": 0.095,
         "pitch_hr_factor": 0.929,
-        "applied": -0.0512
+        "applied": -0.0517
       },
       "away_hr_adj": {
-        "hr_env_pct": 1.0,
-        "hr_env_excess": -0.99,
+        "hr_env_pct": 0.0,
+        "hr_env_excess": -1.0,
         "team_hr_dep": 0.932,
         "hr_dep_excess": 0.0,
         "pitch_hr_factor": 0.816,
@@ -1938,15 +1938,15 @@
         "is_day": false
       },
       "away_split_factor": {
-        "hand_factor": 0.983,
+        "hand_factor": 0.9873,
         "venue_factor": 0.93,
         "time_factor": 0.9839,
-        "combined": 0.8995,
+        "combined": 0.9034,
         "vs_lhb_ops": 0.651,
         "vs_rhb_ops": 0.71,
         "venue_ops": 0.611,
         "time_ops": 0.697,
-        "lhb_frac": 0.5,
+        "lhb_frac": 0.333,
         "is_home": false,
         "is_day": false
       }
@@ -1955,13 +1955,13 @@
       "home_season": {
         "rpg": 4.575342465753424,
         "ops": 0.718,
-        "woba": 0.3253,
+        "woba": 0.3196,
         "iso": 0.16299999999999998
       },
       "away_season": {
         "rpg": 4.558620689655172,
         "ops": 0.734,
-        "woba": 0.3213,
+        "woba": 0.3191,
         "iso": 0.14400000000000002
       },
       "home_recent": {
@@ -2018,12 +2018,12 @@
     "lineup_detail": {
       "home": {
         "vs_pitcher": "",
-        "lineup_woba": 0.3272,
-        "matchup_score": 0.9939,
+        "lineup_woba": 0.3205,
+        "matchup_score": 0.9879,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0113,
-        "lineup_src": "rw_expected",
+        "platoon": 0.9909,
+        "lineup_src": "rw_confirmed",
         "batters": [
           {
             "order": 1,
@@ -2097,34 +2097,20 @@
           },
           {
             "order": 6,
-            "name": "Ozzie Albies",
-            "hand": "S",
-            "pa": 621,
+            "name": "Lane Thomas",
+            "hand": "R",
+            "pa": 374,
             "woba": 0.311,
-            "ops": 0.711,
-            "platoon": 1.055,
-            "matchup_woba": 0.318,
-            "k_pct": 0.09,
-            "hr_pct": 0.034,
-            "edge": -0.0232,
+            "ops": 0.706,
+            "platoon": 0.955,
+            "matchup_woba": 0.28,
+            "k_pct": 0.158,
+            "hr_pct": 0.028,
+            "edge": -0.0361,
             "source": "statsapi"
           },
           {
             "order": 7,
-            "name": "Sean Murphy",
-            "hand": "R",
-            "pa": 80,
-            "woba": 0.303,
-            "ops": 0.682,
-            "platoon": 0.955,
-            "matchup_woba": 0.275,
-            "k_pct": 0.19,
-            "hr_pct": 0.029,
-            "edge": -0.0228,
-            "source": "statsapi"
-          },
-          {
-            "order": 8,
             "name": "Austin Riley",
             "hand": "R",
             "pa": 570,
@@ -2138,29 +2124,43 @@
             "source": "statsapi"
           },
           {
+            "order": 8,
+            "name": "Brewer Hicklen",
+            "hand": "R",
+            "pa": 28,
+            "woba": 0.335,
+            "ops": 0.78,
+            "platoon": 0.955,
+            "matchup_woba": 0.291,
+            "k_pct": 0.173,
+            "hr_pct": 0.023,
+            "edge": -0.0326,
+            "source": "statsapi"
+          },
+          {
             "order": 9,
-            "name": "Mike Yastrzemski",
-            "hand": "L",
-            "pa": 362,
-            "woba": 0.291,
-            "ops": 0.684,
-            "platoon": 1.055,
-            "matchup_woba": 0.3,
-            "k_pct": 0.148,
-            "hr_pct": 0.027,
-            "edge": -0.0327,
+            "name": "Ha-Seong Kim",
+            "hand": "R",
+            "pa": 111,
+            "woba": 0.252,
+            "ops": 0.526,
+            "platoon": 0.955,
+            "matchup_woba": 0.229,
+            "k_pct": 0.164,
+            "hr_pct": 0.016,
+            "edge": -0.0281,
             "source": "statsapi"
           }
         ]
       },
       "away": {
         "vs_pitcher": "",
-        "lineup_woba": 0.3215,
-        "matchup_score": 0.9958,
+        "lineup_woba": 0.3189,
+        "matchup_score": 0.9955,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0316,
-        "lineup_src": "rw_expected",
+        "platoon": 1.0342,
+        "lineup_src": "rw_confirmed",
         "batters": [
           {
             "order": 1,
@@ -2178,16 +2178,16 @@
           },
           {
             "order": 2,
-            "name": "Jonathan Aranda",
-            "hand": "L",
-            "pa": 616,
-            "woba": 0.333,
-            "ops": 0.776,
-            "platoon": 0.955,
-            "matchup_woba": 0.343,
-            "k_pct": 0.19,
-            "hr_pct": 0.025,
-            "edge": -0.002,
+            "name": "Ryan Vilade",
+            "hand": "R",
+            "pa": 236,
+            "woba": 0.334,
+            "ops": 0.775,
+            "platoon": 1.055,
+            "matchup_woba": 0.352,
+            "k_pct": 0.172,
+            "hr_pct": 0.036,
+            "edge": -0.0087,
             "source": "statsapi"
           },
           {
@@ -2206,16 +2206,16 @@
           },
           {
             "order": 4,
-            "name": "Ryan Vilade",
+            "name": "Jonny DeLuca",
             "hand": "R",
-            "pa": 236,
-            "woba": 0.334,
-            "ops": 0.775,
+            "pa": 316,
+            "woba": 0.312,
+            "ops": 0.709,
             "platoon": 1.055,
-            "matchup_woba": 0.352,
-            "k_pct": 0.172,
-            "hr_pct": 0.036,
-            "edge": -0.0087,
+            "matchup_woba": 0.318,
+            "k_pct": 0.157,
+            "hr_pct": 0.026,
+            "edge": -0.0128,
             "source": "statsapi"
           },
           {
@@ -2234,34 +2234,6 @@
           },
           {
             "order": 6,
-            "name": "Jonny DeLuca",
-            "hand": "R",
-            "pa": 316,
-            "woba": 0.312,
-            "ops": 0.709,
-            "platoon": 1.055,
-            "matchup_woba": 0.318,
-            "k_pct": 0.157,
-            "hr_pct": 0.026,
-            "edge": -0.0128,
-            "source": "statsapi"
-          },
-          {
-            "order": 7,
-            "name": "Nick Fortes",
-            "hand": "R",
-            "pa": 294,
-            "woba": 0.304,
-            "ops": 0.685,
-            "platoon": 1.055,
-            "matchup_woba": 0.316,
-            "k_pct": 0.111,
-            "hr_pct": 0.017,
-            "edge": -0.0088,
-            "source": "statsapi"
-          },
-          {
-            "order": 8,
             "name": "Nick Madrigal",
             "hand": "R",
             "pa": 52,
@@ -2275,7 +2247,7 @@
             "source": "statsapi"
           },
           {
-            "order": 9,
+            "order": 7,
             "name": "Jorge Mateo",
             "hand": "R",
             "pa": 189,
@@ -2287,21 +2259,49 @@
             "hr_pct": 0.025,
             "edge": -0.0087,
             "source": "statsapi"
+          },
+          {
+            "order": 8,
+            "name": "Nick Fortes",
+            "hand": "R",
+            "pa": 294,
+            "woba": 0.304,
+            "ops": 0.685,
+            "platoon": 1.055,
+            "matchup_woba": 0.316,
+            "k_pct": 0.111,
+            "hr_pct": 0.017,
+            "edge": -0.0088,
+            "source": "statsapi"
+          },
+          {
+            "order": 9,
+            "name": "Cedric Mullins",
+            "hand": "L",
+            "pa": 469,
+            "woba": 0.281,
+            "ops": 0.653,
+            "platoon": 0.955,
+            "matchup_woba": 0.292,
+            "k_pct": 0.155,
+            "hr_pct": 0.025,
+            "edge": -0.0015,
+            "source": "statsapi"
           }
         ]
       }
     },
     "markov_detail": {
       "home": {
-        "factor": 0.9533,
-        "raw_factor": 0.9431,
-        "mu": 4.3,
+        "factor": 0.9114,
+        "raw_factor": 0.8919,
+        "mu": 4.127,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.9954,
-        "raw_factor": 0.9944,
-        "mu": 4.542,
+        "factor": 0.9625,
+        "raw_factor": 0.9542,
+        "mu": 4.409,
         "weight": 0.4
       }
     },
@@ -2967,22 +2967,22 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.2158,
-        "bb_pct": 0.0783,
-        "hr_pct": 0.037,
-        "iso": 0.1746,
-        "babip": 0.2913,
-        "pa": 4329,
+        "k_pct": 0.2281,
+        "bb_pct": 0.0831,
+        "hr_pct": 0.0365,
+        "iso": 0.1741,
+        "babip": 0.2968,
+        "pa": 3779,
         "n_batters": 9,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.1724,
-        "bb_pct": 0.0781,
-        "hr_pct": 0.031,
-        "iso": 0.152,
-        "babip": 0.3146,
-        "pa": 3520,
+        "k_pct": 0.1634,
+        "bb_pct": 0.0753,
+        "hr_pct": 0.0308,
+        "iso": 0.1511,
+        "babip": 0.2991,
+        "pa": 3373,
         "n_batters": 9,
         "_present": true
       },
@@ -3015,17 +3015,17 @@
         "_present": true
       },
       "home_bb_factor": {
-        "applied": 0.0004,
+        "applied": -0.0008,
         "fb_pct": 0.591,
         "hr_per_fb": 0.087,
-        "park_hr_idx": 0.01,
+        "park_hr_idx": 0.0,
         "fb_relative": 0.642
       },
       "away_bb_factor": {
-        "applied": 0.0004,
+        "applied": -0.0004,
         "fb_pct": 0.462,
         "hr_per_fb": 0.106,
-        "park_hr_idx": 0.01,
+        "park_hr_idx": 0.0,
         "fb_relative": 0.283
       },
       "home_coors_hangover": {
@@ -3035,14 +3035,14 @@
         "applied": 0.0
       },
       "home_discipline_match": {
-        "applied": 0.0121,
+        "applied": 0.0102,
         "pitcher_k_bb": 0.111,
-        "hitter_woba": 0.325
+        "hitter_woba": 0.32
       },
       "away_discipline_match": {
-        "applied": 0.0213,
+        "applied": 0.0206,
         "pitcher_k_bb": 0.076,
-        "hitter_woba": 0.321
+        "hitter_woba": 0.319
       },
       "home_velo_drop": {
         "velo_drop": -0.72,
@@ -3089,194 +3089,194 @@
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.183,
-        "runs_vs_bp": 3.815,
+        "runs_vs_sp": 3.985,
+        "runs_vs_bp": 3.625,
         "sp_share": 0.659,
         "expected_ip": 5.93,
-        "mu_full": 4.076,
-        "mu_f5": 2.548,
+        "mu_full": 3.898,
+        "mu_f5": 2.437,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 4.855,
-            "delta": 0.386
+            "after": 4.655,
+            "delta": 0.171
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 4.079,
-            "delta": -0.776
+            "after": 3.891,
+            "delta": -0.764
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 3.795,
-            "delta": -0.284
+            "after": 3.611,
+            "delta": -0.28
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 4.12,
-            "delta": 0.325
+            "after": 3.923,
+            "delta": 0.312
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 4.016,
-            "delta": -0.104
+            "after": 3.821,
+            "delta": -0.102
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 4.047,
+            "after": 3.852,
             "delta": 0.031
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 4.076,
-            "delta": 0.029
+            "after": 3.898,
+            "delta": 0.046
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 4.8,
+            "after": 4.622,
             "delta": 0.724
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 4.184,
-            "delta": -0.616
+            "after": 4.138,
+            "delta": -0.484
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 4.184,
+            "after": 4.138,
             "delta": 0.0
           }
         ],
         "hr_env": {
-          "hr_env_pct": 1.0,
-          "hr_env_excess": -0.99,
+          "hr_env_pct": 0.0,
+          "hr_env_excess": -1.0,
           "team_hr_dep": 1.095,
           "hr_dep_excess": 0.095,
           "pitch_hr_factor": 0.929,
-          "applied": -0.0512
+          "applied": -0.0517
         },
         "components": {
           "method": "zero_base_woba",
-          "batter_woba": 0.3253,
+          "batter_woba": 0.3196,
           "pitcher_woba_against": 0.294,
-          "matchup_woba": 0.3043,
+          "matchup_woba": 0.2986,
           "sp_path": {
-            "eff_woba": 0.2989,
-            "rpa": 0.1031,
-            "obp_eff": 0.284,
-            "pa_per_inning": 4.19
+            "eff_woba": 0.2935,
+            "rpa": 0.0992,
+            "obp_eff": 0.2789,
+            "pa_per_inning": 4.16
           },
           "bp_path": {
-            "eff_woba": 0.2973,
-            "rpa": 0.1018,
-            "obp_eff": 0.2824,
-            "pa_per_inning": 4.181
+            "eff_woba": 0.2919,
+            "rpa": 0.0978,
+            "obp_eff": 0.2773,
+            "pa_per_inning": 4.151
           },
-          "hand_factor": 0.925,
+          "hand_factor": 0.923,
           "tto_mult": 1.018,
-          "park": 0.95,
+          "park": 0.94,
           "wx": 1.074,
           "ump": 1.0,
-          "hr_adj": 0.949,
+          "hr_adj": 0.948,
           "travel_mult": 1.0,
           "home_mult": 1.018,
-          "bp_factor": 0.926
+          "bp_factor": 0.924
         }
       },
       "away": {
-        "runs_vs_sp": 4.608,
-        "runs_vs_bp": 3.916,
+        "runs_vs_sp": 4.528,
+        "runs_vs_bp": 3.849,
         "sp_share": 0.602,
         "expected_ip": 5.42,
-        "mu_full": 4.322,
-        "mu_f5": 2.651,
+        "mu_full": 4.254,
+        "mu_f5": 2.609,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 4.704,
-            "delta": 0.235
+            "after": 4.636,
+            "delta": 0.152
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 4.684,
-            "delta": -0.02
+            "after": 4.617,
+            "delta": -0.019
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 4.387,
-            "delta": -0.297
+            "after": 4.322,
+            "delta": -0.295
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 4.554,
-            "delta": 0.167
+            "after": 4.475,
+            "delta": 0.153
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 4.3,
-            "delta": -0.254
+            "after": 4.226,
+            "delta": -0.249
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 4.314,
+            "after": 4.24,
             "delta": 0.014
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 4.322,
-            "delta": 0.008
+            "after": 4.254,
+            "delta": 0.014
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 5.046,
+            "after": 4.978,
             "delta": 0.724
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 4.393,
-            "delta": -0.653
+            "after": 4.425,
+            "delta": -0.553
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 4.393,
+            "after": 4.425,
             "delta": 0.0
           }
         ],
         "hr_env": {
-          "hr_env_pct": 1.0,
-          "hr_env_excess": -0.99,
+          "hr_env_pct": 0.0,
+          "hr_env_excess": -1.0,
           "team_hr_dep": 0.932,
           "hr_dep_excess": 0.0,
           "pitch_hr_factor": 0.816,
@@ -3284,24 +3284,24 @@
         },
         "components": {
           "method": "zero_base_woba",
-          "batter_woba": 0.3213,
+          "batter_woba": 0.3191,
           "pitcher_woba_against": 0.3145,
-          "matchup_woba": 0.3208,
+          "matchup_woba": 0.3186,
           "sp_path": {
-            "eff_woba": 0.3142,
-            "rpa": 0.1153,
-            "obp_eff": 0.2985,
-            "pa_per_inning": 4.276
+            "eff_woba": 0.312,
+            "rpa": 0.114,
+            "obp_eff": 0.2964,
+            "pa_per_inning": 4.264
           },
           "bp_path": {
-            "eff_woba": 0.3128,
-            "rpa": 0.1142,
-            "obp_eff": 0.2971,
-            "pa_per_inning": 4.268
+            "eff_woba": 0.3106,
+            "rpa": 0.1128,
+            "obp_eff": 0.2951,
+            "pa_per_inning": 4.256
           },
-          "hand_factor": 0.901,
+          "hand_factor": 0.9,
           "tto_mult": 1.014,
-          "park": 0.95,
+          "park": 0.94,
           "wx": 1.074,
           "ump": 1.0,
           "hr_adj": 1.0,
@@ -3312,15 +3312,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.52,
-      "away_xr": 2.75,
-      "total_xr": 5.26,
-      "home_win_prob": 0.3942,
-      "away_win_prob": 0.4516,
+      "home_xr": 2.39,
+      "away_xr": 2.7,
+      "total_xr": 5.09,
+      "home_win_prob": 0.3881,
+      "away_win_prob": 0.4602,
       "over_probs": {
-        "4.5": 0.5161,
-        "5.0": 0.4021,
-        "5.5": 0.4021
+        "4.5": 0.4958,
+        "5.0": 0.3839,
+        "5.5": 0.3839
       }
     }
   },
@@ -3347,7 +3347,7 @@
       "fullName": "Cristian Javier",
       "link": "/api/v1/people/664299"
     },
-    "umpire": "",
+    "umpire": "Jeremie Rehak",
     "home_lineup_ids": [],
     "away_lineup_ids": [],
     "model_version": "market_physics_consensus_v2",
@@ -3412,41 +3412,41 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 10.981312469877388,
+    "raw_total": 10.681282371074415,
     "calibration": "market_anchored_w0.95",
-    "raw_home_pre_learn": 6.999,
-    "raw_away_pre_learn": 4.466,
+    "raw_home_pre_learn": 6.791,
+    "raw_away_pre_learn": 4.375,
     "learn_correction": {
       "home_team": 0.252,
       "away_team": -0.167,
       "home_pitcher": -1.01,
       "away_pitcher": 0.44
     },
-    "home_runs": 5.306610158371422,
-    "away_runs": 3.3177035963694363,
-    "total": 8.624313754740857,
-    "home_win_prob": 0.5979170215421863,
-    "away_win_prob": 0.4020829784578137,
+    "home_runs": 5.278399335750096,
+    "away_runs": 3.3308829110407325,
+    "total": 8.609282246790828,
+    "home_win_prob": 0.6084283733799428,
+    "away_win_prob": 0.3915716266200572,
     "win_probability_model": {
-      "home": 0.5979170215421863,
-      "away": 0.4020829784578137,
-      "physics_home": 0.558750380433084,
-      "physics_away": 0.441249619566916,
-      "market_home": 0.6109725685785536,
-      "market_away": 0.38902743142144636,
+      "home": 0.6084283733799428,
+      "away": 0.3915716266200572,
+      "physics_home": 0.5587134935197714,
+      "physics_away": 0.4412865064802286,
+      "market_home": 0.625,
+      "market_away": 0.375,
       "market_weight": 0.75,
       "source": "market_physics_consensus"
     },
     "runline": {
-      "home_minus_1_5": 0.52755,
-      "home_plus_1_5": 0.7874,
-      "away_minus_1_5": 0.2126,
-      "away_plus_1_5": 0.47245
+      "home_minus_1_5": 0.524,
+      "home_plus_1_5": 0.78805,
+      "away_minus_1_5": 0.21195,
+      "away_plus_1_5": 0.476
     },
     "home_matchup": 1.02,
     "away_matchup": 0.9775,
     "home_bp_factor": 0.988,
-    "away_bp_factor": 1.023,
+    "away_bp_factor": 1.024,
     "home_bp_quality": {
       "overall_factor": 0.99,
       "stopper_factor": 0.986,
@@ -4948,10 +4948,10 @@
       }
     ],
     "starter_phase": {
-      "home_runs_no_bp": 7.036,
-      "away_runs_no_bp": 4.526,
-      "home_lead_prob": 0.8652105853202262,
-      "away_lead_prob": 0.1347894146797738
+      "home_runs_no_bp": 6.641,
+      "away_runs_no_bp": 4.39,
+      "home_lead_prob": 0.8412298550805563,
+      "away_lead_prob": 0.15877014491944375
     },
     "home_stuff": 91.8,
     "home_loc": 98.6,
@@ -5110,11 +5110,11 @@
       }
     ],
     "odds": {
-      "home_ml": 1.56,
-      "away_ml": 2.45,
+      "home_ml": 1.53,
+      "away_ml": 2.55,
       "total": 8.5,
-      "over": 1.87,
-      "under": 1.95,
+      "over": 1.91,
+      "under": 1.91,
       "home_spread": null,
       "home_spread_odds": null,
       "away_spread": null,
@@ -5127,13 +5127,13 @@
         "matchup": "HOU @ PHI",
         "market": "moneyline",
         "label": "PHI ML",
-        "prob": 0.5979,
-        "odds": 1.56,
-        "ev": -0.0672,
+        "prob": 0.6084,
+        "odds": 1.53,
+        "ev": -0.0691,
         "kelly_raw": 0.0,
-        "p_hat": 0.6097,
-        "kelly_f": -0.0874,
-        "ev_debiased": -0.0489,
+        "p_hat": 0.6233,
+        "kelly_f": -0.0873,
+        "ev_debiased": -0.0463,
         "stake": 0,
         "stake_base": 150,
         "book": "FanDuel",
@@ -5141,27 +5141,27 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "agreement_gap",
-        "selection_confidence": 0.5979,
-        "selection_market_implied": 0.641,
-        "selection_model_prob": 0.5979,
-        "selection_gap": 0.0823,
-        "selection_lineup_confirmed": false,
+        "selection_confidence": 0.6084,
+        "selection_market_implied": 0.6536,
+        "selection_model_prob": 0.6084,
+        "selection_gap": 0.0949,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.5588
+        "selection_agreement_model_prob": 0.5587
       },
       {
         "matchup": "HOU @ PHI",
         "market": "moneyline",
         "label": "HOU ML",
-        "prob": 0.4021,
-        "odds": 2.45,
-        "ev": -0.0149,
+        "prob": 0.3916,
+        "odds": 2.55,
+        "ev": -0.0015,
         "kelly_raw": 0.0,
-        "p_hat": 0.3903,
-        "kelly_f": -0.0105,
-        "ev_debiased": -0.0437,
+        "p_hat": 0.3767,
+        "kelly_f": -0.0089,
+        "ev_debiased": -0.0395,
         "stake": 0,
         "stake_base": 150,
         "book": "FanDuel",
@@ -5169,52 +5169,52 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "market_below_threshold",
-        "selection_confidence": 0.4021,
-        "selection_market_implied": 0.4082,
-        "selection_model_prob": 0.4021,
-        "selection_gap": 0.0331,
-        "selection_lineup_confirmed": false,
+        "selection_confidence": 0.3916,
+        "selection_market_implied": 0.3922,
+        "selection_model_prob": 0.3916,
+        "selection_gap": 0.0491,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
           "market_below_threshold",
           "model_disagrees",
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.4412
+        "selection_agreement_model_prob": 0.4413
       },
       {
         "matchup": "HOU @ PHI",
         "market": "total",
         "label": "Over 8.5",
-        "prob": 0.5257,
-        "odds": 1.87,
-        "ev": -0.017,
+        "prob": 0.5228,
+        "odds": 1.91,
+        "ev": -0.0015,
         "kelly_raw": 0.0,
-        "p_hat": 0.5105,
-        "kelly_f": -0.0522,
-        "ev_debiased": -0.0454,
+        "p_hat": 0.5,
+        "kelly_f": -0.0495,
+        "ev_debiased": -0.045,
         "stake": 0,
         "stake_base": 150,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.8,
+        "model_total": 8.77,
         "market_total": 8.5
       },
       {
         "matchup": "HOU @ PHI",
         "market": "total",
         "label": "Under 8.5",
-        "prob": 0.4743,
-        "odds": 1.95,
-        "ev": -0.0751,
+        "prob": 0.4772,
+        "odds": 1.91,
+        "ev": -0.0885,
         "kelly_raw": 0.0,
-        "p_hat": 0.4895,
-        "kelly_f": -0.0478,
-        "ev_debiased": -0.0454,
+        "p_hat": 0.5,
+        "kelly_f": -0.0495,
+        "ev_debiased": -0.045,
         "stake": 0,
         "stake_base": 150,
         "book": "FanDuel",
         "estimated_odds": true,
-        "model_total": 8.8,
+        "model_total": 8.77,
         "market_total": 8.5
       }
     ],
@@ -5222,20 +5222,20 @@
       "source": "ballpark_pal",
       "text": "3% Precipitation 85°  Wind 9 mph L-R",
       "precip_prob": 1.0,
-      "temp_f": 87.6,
-      "wind_mph": 10.1,
+      "temp_f": 87.7,
+      "wind_mph": 10.3,
       "venue": "Citizens Bank Park",
       "roof": "open",
       "forecast_hour": "2026-09-10T17:00",
-      "wind_direction_deg": 264.0,
+      "wind_direction_deg": 265.0,
       "humidity_pct": 56.0,
-      "temp_f_3h_avg": 88.3,
+      "temp_f_3h_avg": 88.4,
       "wind_mph_3h_avg": 11.1,
-      "wind_direction_deg_3h_avg": 269.0,
+      "wind_direction_deg_3h_avg": 265.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0295,
+      "carry_adj": 0.0294,
       "run_factor": 1.0762,
-      "wind_dot_of": 5.937,
+      "wind_dot_of": 5.908,
       "wind_dir_label": "외야 강한 바람 (OUT)",
       "wind_source": "open-meteo",
       "of_bearing": 30,
@@ -5264,49 +5264,49 @@
       "description": "One of the smaller outfields in MLB . Relies on tall fences to keep home runs from getting out of hand. The most wind-receptive venue outside of Wrigley."
     },
     "umpire_detail": {
-      "umpire": "Unknown",
+      "umpire": "Jeremie Rehak",
       "source": "neutral"
     },
     "scores_top": [
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0308
+        "prob": 0.0289
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0271
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.024
+        "prob": 0.0279
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0231
+        "prob": 0.0268
+      },
+      {
+        "away": 3,
+        "home": 2,
+        "prob": 0.0236
       },
       {
         "away": 1,
         "home": 3,
-        "prob": 0.0227
+        "prob": 0.0225
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0215
-      },
-      {
-        "away": 2,
-        "home": 4,
-        "prob": 0.0207
+        "prob": 0.022
       },
       {
         "away": 1,
         "home": 4,
-        "prob": 0.0205
+        "prob": 0.0213
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0211
       }
     ],
     "hr_env": {
@@ -5481,7 +5481,7 @@
         "is_day": false
       },
       "away_split_factor": {
-        "hand_factor": 1.0296,
+        "hand_factor": 1.027,
         "venue_factor": 1.08,
         "time_factor": 1.0587,
         "combined": 1.14,
@@ -5489,7 +5489,7 @@
         "vs_rhb_ops": 0.886,
         "venue_ops": 0.847,
         "time_ops": 0.807,
-        "lhb_frac": 0.667,
+        "lhb_frac": 0.722,
         "is_home": false,
         "is_day": false
       }
@@ -5498,13 +5498,13 @@
       "home_season": {
         "rpg": 4.506849315068493,
         "ops": 0.713,
-        "woba": 0.3267,
+        "woba": 0.3176,
         "iso": 0.15800000000000003
       },
       "away_season": {
         "rpg": 4.52054794520548,
         "ops": 0.725,
-        "woba": 0.3295,
+        "woba": 0.3253,
         "iso": 0.16899999999999998
       },
       "home_recent": {
@@ -5561,12 +5561,12 @@
     "lineup_detail": {
       "home": {
         "vs_pitcher": "",
-        "lineup_woba": 0.3291,
-        "matchup_score": 1.0181,
+        "lineup_woba": 0.3184,
+        "matchup_score": 1.0176,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0217,
-        "lineup_src": "rw_expected",
+        "platoon": 1.0316,
+        "lineup_src": "rw_confirmed",
         "batters": [
           {
             "order": 1,
@@ -5668,20 +5668,6 @@
           },
           {
             "order": 8,
-            "name": "J.T. Realmuto",
-            "hand": "R",
-            "pa": 414,
-            "woba": 0.293,
-            "ops": 0.652,
-            "platoon": 0.955,
-            "matchup_woba": 0.372,
-            "k_pct": 0.231,
-            "hr_pct": 0.037,
-            "edge": 0.077,
-            "source": "statsapi"
-          },
-          {
-            "order": 9,
             "name": "Justin Crawford",
             "hand": "L",
             "pa": 420,
@@ -5693,17 +5679,31 @@
             "hr_pct": 0.019,
             "edge": 0.0693,
             "source": "statsapi"
+          },
+          {
+            "order": 9,
+            "name": "Rafael Marchán",
+            "hand": "S",
+            "pa": 92,
+            "woba": 0.257,
+            "ops": 0.542,
+            "platoon": 1.055,
+            "matchup_woba": 0.353,
+            "k_pct": 0.188,
+            "hr_pct": 0.041,
+            "edge": 0.075,
+            "source": "statsapi"
           }
         ]
       },
       "away": {
         "vs_pitcher": "",
-        "lineup_woba": 0.3317,
-        "matchup_score": 1.0075,
+        "lineup_woba": 0.3267,
+        "matchup_score": 1.0082,
         "coverage": 1.0,
         "bu_weight": 0.85,
         "platoon": 0.9883,
-        "lineup_src": "rw_expected",
+        "lineup_src": "rw_confirmed",
         "batters": [
           {
             "order": 1,
@@ -5791,16 +5791,16 @@
           },
           {
             "order": 7,
-            "name": "Yainer Diaz",
+            "name": "Cam Smith",
             "hand": "R",
-            "pa": 299,
-            "woba": 0.318,
-            "ops": 0.726,
+            "pa": 509,
+            "woba": 0.305,
+            "ops": 0.69,
             "platoon": 0.955,
-            "matchup_woba": 0.281,
-            "k_pct": 0.219,
-            "hr_pct": 0.039,
-            "edge": -0.0308,
+            "matchup_woba": 0.276,
+            "k_pct": 0.315,
+            "hr_pct": 0.041,
+            "edge": -0.0255,
             "source": "statsapi"
           },
           {
@@ -5819,16 +5819,16 @@
           },
           {
             "order": 9,
-            "name": "Cam Smith",
+            "name": "Christian Vázquez",
             "hand": "R",
-            "pa": 509,
-            "woba": 0.305,
-            "ops": 0.69,
+            "pa": 255,
+            "woba": 0.289,
+            "ops": 0.639,
             "platoon": 0.955,
-            "matchup_woba": 0.276,
-            "k_pct": 0.315,
-            "hr_pct": 0.041,
-            "edge": -0.0255,
+            "matchup_woba": 0.255,
+            "k_pct": 0.256,
+            "hr_pct": 0.033,
+            "edge": -0.0292,
             "source": "statsapi"
           }
         ]
@@ -5837,14 +5837,14 @@
     "markov_detail": {
       "home": {
         "factor": 1.55,
-        "raw_factor": 1.8009,
-        "mu": 7.191,
+        "raw_factor": 1.7624,
+        "mu": 7.215,
         "weight": 0.4
       },
       "away": {
-        "factor": 1.0109,
-        "raw_factor": 1.0133,
-        "mu": 4.461,
+        "factor": 0.9965,
+        "raw_factor": 0.9958,
+        "mu": 4.417,
         "weight": 0.4
       }
     },
@@ -6616,22 +6616,22 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.1949,
-        "bb_pct": 0.0893,
-        "hr_pct": 0.0303,
-        "iso": 0.1612,
-        "babip": 0.2964,
-        "pa": 4947,
+        "k_pct": 0.1924,
+        "bb_pct": 0.0891,
+        "hr_pct": 0.0307,
+        "iso": 0.1622,
+        "babip": 0.2958,
+        "pa": 4625,
         "n_batters": 9,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.2034,
-        "bb_pct": 0.0887,
-        "hr_pct": 0.0379,
-        "iso": 0.1842,
-        "babip": 0.283,
-        "pa": 4272,
+        "k_pct": 0.206,
+        "bb_pct": 0.0915,
+        "hr_pct": 0.0374,
+        "iso": 0.1821,
+        "babip": 0.2797,
+        "pa": 4228,
         "n_batters": 9,
         "_present": true
       },
@@ -6684,14 +6684,14 @@
         "applied": 0.0
       },
       "home_discipline_match": {
-        "applied": 0.0084,
+        "applied": 0.0054,
         "pitcher_k_bb": 0.125,
-        "hitter_woba": 0.327
+        "hitter_woba": 0.318
       },
       "away_discipline_match": {
-        "applied": -0.0189,
+        "applied": -0.0203,
         "pitcher_k_bb": 0.219,
-        "hitter_woba": 0.33
+        "hitter_woba": 0.325
       },
       "home_velo_drop": {
         "velo_drop": -0.19,
@@ -6738,77 +6738,77 @@
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 7.036,
-        "runs_vs_bp": 7.128,
+        "runs_vs_sp": 6.641,
+        "runs_vs_bp": 6.732,
         "sp_share": 0.613,
         "expected_ip": 5.52,
-        "mu_full": 6.871,
-        "mu_f5": 4.013,
+        "mu_full": 6.508,
+        "mu_f5": 3.8,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 4.908,
-            "delta": 0.439
+            "after": 4.58,
+            "delta": 0.096
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 5.972,
-            "delta": 1.064
+            "after": 5.618,
+            "delta": 1.038
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 6.305,
-            "delta": 0.333
+            "after": 5.943,
+            "delta": 0.325
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 6.968,
-            "delta": 0.663
+            "after": 6.575,
+            "delta": 0.632
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 7.03,
-            "delta": 0.062
+            "after": 6.636,
+            "delta": 0.061
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 7.085,
-            "delta": 0.055
+            "after": 6.69,
+            "delta": 0.054
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 6.871,
-            "delta": -0.214
+            "after": 6.508,
+            "delta": -0.182
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 6.629,
+            "after": 6.266,
             "delta": -0.242
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 5.307,
-            "delta": -1.322
+            "after": 5.278,
+            "delta": -0.988
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 5.307,
+            "after": 5.278,
             "delta": 0.0
           }
         ],
@@ -6822,22 +6822,22 @@
         },
         "components": {
           "method": "zero_base_woba",
-          "batter_woba": 0.3267,
+          "batter_woba": 0.3176,
           "pitcher_woba_against": 0.3419,
-          "matchup_woba": 0.3536,
+          "matchup_woba": 0.3445,
           "sp_path": {
-            "eff_woba": 0.362,
-            "rpa": 0.1537,
-            "obp_eff": 0.3439,
-            "pa_per_inning": 4.572
+            "eff_woba": 0.3531,
+            "rpa": 0.1469,
+            "obp_eff": 0.3354,
+            "pa_per_inning": 4.514
           },
           "bp_path": {
-            "eff_woba": 0.3605,
-            "rpa": 0.1525,
-            "obp_eff": 0.3425,
-            "pa_per_inning": 4.563
+            "eff_woba": 0.3516,
+            "rpa": 0.1458,
+            "obp_eff": 0.3341,
+            "pa_per_inning": 4.505
           },
-          "hand_factor": 1.209,
+          "hand_factor": 1.205,
           "tto_mult": 1.015,
           "park": 1.05,
           "wx": 1.076,
@@ -6845,81 +6845,81 @@
           "hr_adj": 0.978,
           "travel_mult": 1.0,
           "home_mult": 1.018,
-          "bp_factor": 1.023
+          "bp_factor": 1.024
         }
       },
       "away": {
-        "runs_vs_sp": 4.526,
-        "runs_vs_bp": 4.415,
+        "runs_vs_sp": 4.39,
+        "runs_vs_bp": 4.281,
         "sp_share": 0.631,
         "expected_ip": 5.68,
-        "mu_full": 4.47,
-        "mu_f5": 2.723,
+        "mu_full": 4.346,
+        "mu_f5": 2.647,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 5.015,
-            "delta": 0.546
+            "after": 4.87,
+            "delta": 0.386
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 4.434,
-            "delta": -0.581
+            "after": 4.295,
+            "delta": -0.575
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 4.143,
-            "delta": -0.291
+            "after": 4.006,
+            "delta": -0.289
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 4.469,
-            "delta": 0.326
+            "after": 4.333,
+            "delta": 0.327
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 4.449,
-            "delta": -0.02
+            "after": 4.314,
+            "delta": -0.019
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 4.475,
+            "after": 4.34,
             "delta": 0.026
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 4.47,
-            "delta": -0.005
+            "after": 4.346,
+            "delta": 0.006
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 4.228,
+            "after": 4.104,
             "delta": -0.242
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 3.318,
-            "delta": -0.91
+            "after": 3.331,
+            "delta": -0.773
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 3.318,
+            "after": 3.331,
             "delta": 0.0
           }
         ],
@@ -6933,22 +6933,22 @@
         },
         "components": {
           "method": "zero_base_woba",
-          "batter_woba": 0.3295,
+          "batter_woba": 0.3253,
           "pitcher_woba_against": 0.2996,
-          "matchup_woba": 0.3141,
+          "matchup_woba": 0.3099,
           "sp_path": {
-            "eff_woba": 0.3081,
-            "rpa": 0.1105,
-            "obp_eff": 0.2927,
-            "pa_per_inning": 4.242
+            "eff_woba": 0.3042,
+            "rpa": 0.1077,
+            "obp_eff": 0.289,
+            "pa_per_inning": 4.219
           },
           "bp_path": {
-            "eff_woba": 0.3067,
-            "rpa": 0.1093,
-            "obp_eff": 0.2913,
-            "pa_per_inning": 4.233
+            "eff_woba": 0.3027,
+            "rpa": 0.1065,
+            "obp_eff": 0.2876,
+            "pa_per_inning": 4.211
           },
-          "hand_factor": 0.933,
+          "hand_factor": 0.932,
           "tto_mult": 1.016,
           "park": 1.05,
           "wx": 1.076,
@@ -6961,15 +6961,15 @@
       }
     },
     "f5": {
-      "home_xr": 3.99,
-      "away_xr": 2.59,
-      "total_xr": 6.58,
-      "home_win_prob": 0.5906,
-      "away_win_prob": 0.2933,
+      "home_xr": 3.86,
+      "away_xr": 2.51,
+      "total_xr": 6.37,
+      "home_win_prob": 0.5828,
+      "away_win_prob": 0.3022,
       "over_probs": {
-        "4.5": 0.6672,
-        "5.0": 0.5542,
-        "5.5": 0.5542
+        "4.5": 0.6476,
+        "5.0": 0.5321,
+        "5.5": 0.5321
       }
     }
   },
@@ -7000,7 +7000,7 @@
     "home_lineup_ids": [],
     "away_lineup_ids": [],
     "model_version": "market_physics_consensus_v2",
-    "market_total": 7.0,
+    "market_total": 6.5,
     "ballpark_pal": {
       "source": "ballpark_pal",
       "game_pk": 823088,
@@ -7061,36 +7061,36 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 6.840295980803074,
+    "raw_total": 6.86820555109495,
     "calibration": "market_anchored_w0.95",
-    "raw_home_pre_learn": 4.063,
-    "raw_away_pre_learn": 3.913,
+    "raw_home_pre_learn": 4.077,
+    "raw_away_pre_learn": 3.927,
     "learn_correction": {
       "home_team": -1.081,
       "away_team": -0.793,
       "home_pitcher": 0.722,
       "away_pitcher": 0.017
     },
-    "home_runs": 3.5722359826815637,
-    "away_runs": 3.419762845956671,
-    "total": 6.991998828638234,
-    "home_win_prob": 0.5363651833468634,
-    "away_win_prob": 0.46363481665313655,
+    "home_runs": 3.330092741730572,
+    "away_runs": 3.188354356379284,
+    "total": 6.518447098109856,
+    "home_win_prob": 0.5289229277200012,
+    "away_win_prob": 0.47107707227999884,
     "win_probability_model": {
-      "home": 0.5363651833468634,
-      "away": 0.46363481665313655,
-      "physics_home": 0.5048357333874544,
-      "physics_away": 0.49516426661254564,
-      "market_home": 0.5468749999999999,
-      "market_away": 0.45312499999999994,
+      "home": 0.5289229277200012,
+      "away": 0.47107707227999884,
+      "physics_home": 0.5057440669009468,
+      "physics_away": 0.49425593309905325,
+      "market_home": 0.5366492146596858,
+      "market_away": 0.46335078534031415,
       "market_weight": 0.75,
       "source": "market_physics_consensus"
     },
     "runline": {
-      "home_minus_1_5": 0.35255,
-      "home_plus_1_5": 0.6759,
-      "away_minus_1_5": 0.3241,
-      "away_plus_1_5": 0.64745
+      "home_minus_1_5": 0.3445,
+      "home_plus_1_5": 0.68215,
+      "away_minus_1_5": 0.31785,
+      "away_plus_1_5": 0.6555
     },
     "home_matchup": 1.0030000000000001,
     "away_matchup": 0.962,
@@ -8865,8 +8865,8 @@
       }
     ],
     "starter_phase": {
-      "home_runs_no_bp": 3.869,
-      "away_runs_no_bp": 3.718,
+      "home_runs_no_bp": 3.883,
+      "away_runs_no_bp": 3.732,
       "home_lead_prob": 0.5279338460513607,
       "away_lead_prob": 0.47206615394863927
     },
@@ -9023,11 +9023,11 @@
       }
     ],
     "odds": {
-      "home_ml": 1.74,
-      "away_ml": 2.1,
-      "total": 7.0,
-      "over": 1.83,
-      "under": 2.0,
+      "home_ml": 1.77,
+      "away_ml": 2.05,
+      "total": 6.5,
+      "over": 1.87,
+      "under": 1.95,
       "home_spread": null,
       "home_spread_odds": null,
       "away_spread": null,
@@ -9040,13 +9040,13 @@
         "matchup": "TEX @ SEA",
         "market": "moneyline",
         "label": "SEA ML",
-        "prob": 0.5364,
-        "odds": 1.74,
-        "ev": -0.0667,
+        "prob": 0.5289,
+        "odds": 1.77,
+        "ev": -0.0638,
         "kelly_raw": 0.0,
-        "p_hat": 0.5458,
-        "kelly_f": -0.0679,
-        "ev_debiased": -0.0503,
+        "p_hat": 0.5359,
+        "kelly_f": -0.0669,
+        "ev_debiased": -0.0515,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -9054,27 +9054,27 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "agreement_gap",
-        "selection_confidence": 0.5364,
-        "selection_market_implied": 0.5747,
-        "selection_model_prob": 0.5364,
-        "selection_gap": 0.0699,
+        "selection_confidence": 0.5289,
+        "selection_market_implied": 0.565,
+        "selection_model_prob": 0.5289,
+        "selection_gap": 0.0592,
         "selection_lineup_confirmed": false,
         "selection_reasons": [
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.5048
+        "selection_agreement_model_prob": 0.5057
       },
       {
         "matchup": "TEX @ SEA",
         "market": "moneyline",
         "label": "TEX ML",
-        "prob": 0.4636,
-        "odds": 2.1,
-        "ev": -0.0264,
+        "prob": 0.4711,
+        "odds": 2.05,
+        "ev": -0.0343,
         "kelly_raw": 0.0,
-        "p_hat": 0.4542,
-        "kelly_f": -0.0147,
-        "ev_debiased": -0.0462,
+        "p_hat": 0.4641,
+        "kelly_f": -0.0162,
+        "ev_debiased": -0.0485,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -9082,73 +9082,73 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "market_below_threshold",
-        "selection_confidence": 0.4636,
-        "selection_market_implied": 0.4762,
-        "selection_model_prob": 0.4636,
-        "selection_gap": 0.019,
+        "selection_confidence": 0.4711,
+        "selection_market_implied": 0.4878,
+        "selection_model_prob": 0.4711,
+        "selection_gap": 0.0065,
         "selection_lineup_confirmed": false,
         "selection_reasons": [
           "market_below_threshold",
           "model_disagrees"
         ],
-        "selection_agreement_model_prob": 0.4952
+        "selection_agreement_model_prob": 0.4943
       },
       {
         "matchup": "TEX @ SEA",
         "market": "total",
-        "label": "Over 7.0",
-        "prob": 0.4671,
-        "odds": 1.83,
-        "ev": -0.1452,
+        "label": "Over 6.5",
+        "prob": 0.5218,
+        "odds": 1.87,
+        "ev": -0.0243,
         "kelly_raw": 0.0,
-        "p_hat": 0.5222,
-        "kelly_f": -0.0535,
-        "ev_debiased": -0.0444,
+        "p_hat": 0.5105,
+        "kelly_f": -0.0522,
+        "ev_debiased": -0.0454,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
         "estimated_odds": true,
-        "model_total": 7.15,
-        "market_total": 7.0
+        "model_total": 6.72,
+        "market_total": 6.5
       },
       {
         "matchup": "TEX @ SEA",
         "market": "total",
-        "label": "Under 7.0",
-        "prob": 0.4382,
-        "odds": 2.0,
-        "ev": -0.1235,
+        "label": "Under 6.5",
+        "prob": 0.4782,
+        "odds": 1.95,
+        "ev": -0.0675,
         "kelly_raw": 0.0,
-        "p_hat": 0.4778,
-        "kelly_f": -0.0444,
-        "ev_debiased": -0.0444,
+        "p_hat": 0.4895,
+        "kelly_f": -0.0478,
+        "ev_debiased": -0.0454,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
         "estimated_odds": true,
-        "model_total": 7.15,
-        "market_total": 7.0
+        "model_total": 6.72,
+        "market_total": 6.5
       }
     ],
     "weather": {
       "source": "ballpark_pal",
       "text": "Dome In Domed Stadium",
       "precip_prob": 0.0,
-      "temp_f": 66.5,
-      "wind_mph": 5.8,
+      "temp_f": 67.5,
+      "wind_mph": 4.0,
       "venue": "T-Mobile Park",
       "roof": "open",
       "forecast_hour": "2026-09-10T20:00",
-      "wind_direction_deg": 293.0,
-      "humidity_pct": 72.0,
-      "temp_f_3h_avg": 67.2,
-      "wind_mph_3h_avg": 5.4,
+      "wind_direction_deg": 308.0,
+      "humidity_pct": 71.0,
+      "temp_f_3h_avg": 68.2,
+      "wind_mph_3h_avg": 4.8,
       "wind_direction_deg_3h_avg": 297.0,
       "_source": "open-meteo",
-      "carry_adj": -0.0105,
+      "carry_adj": -0.0139,
       "run_factor": 0.9674,
-      "wind_dot_of": 2.633,
-      "wind_dir_label": "외야 바람 (out)",
+      "wind_dot_of": 0.832,
+      "wind_dir_label": "옆/잔잔",
       "wind_source": "open-meteo",
       "of_bearing": 50,
       "temp_avg": 62.0,
@@ -9181,44 +9181,44 @@
     },
     "scores_top": [
       {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0405
-      },
-      {
         "away": 1,
         "home": 2,
-        "prob": 0.0384
+        "prob": 0.0456
+      },
+      {
+        "away": 2,
+        "home": 1,
+        "prob": 0.042
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0348
+        "prob": 0.0363
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.034
+        "prob": 0.0357
       },
       {
         "away": 0,
         "home": 1,
-        "prob": 0.0275
+        "prob": 0.0336
       },
       {
         "away": 1,
         "home": 0,
-        "prob": 0.0265
+        "prob": 0.0326
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0264
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0262
-      },
-      {
-        "away": 4,
-        "home": 3,
-        "prob": 0.0255
+        "prob": 0.0259
       }
     ],
     "hr_env": {
@@ -9750,13 +9750,13 @@
       "home": {
         "factor": 1.0704,
         "raw_factor": 1.0859,
-        "mu": 4.2,
+        "mu": 4.214,
         "weight": 0.4
       },
       "away": {
         "factor": 1.0621,
         "raw_factor": 1.0758,
-        "mu": 4.067,
+        "mu": 4.081,
         "weight": 0.4
       }
     },
@@ -10785,77 +10785,77 @@
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 3.869,
-        "runs_vs_bp": 4.022,
+        "runs_vs_sp": 3.883,
+        "runs_vs_bp": 4.037,
         "sp_share": 0.59,
         "expected_ip": 5.31,
-        "mu_full": 3.971,
-        "mu_f5": 2.215,
+        "mu_full": 3.985,
+        "mu_f5": 2.223,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 4.644,
+            "after": 4.659,
             "delta": 0.175
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 3.971,
+            "after": 3.986,
             "delta": -0.673
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 3.945,
+            "after": 3.96,
             "delta": -0.026
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 3.827,
-            "delta": -0.118
+            "after": 3.841,
+            "delta": -0.119
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 3.907,
+            "after": 3.921,
             "delta": 0.08
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 3.933,
+            "after": 3.947,
             "delta": 0.026
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 3.971,
+            "after": 3.985,
             "delta": 0.038
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 3.403,
+            "after": 3.417,
             "delta": -0.568
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 3.572,
-            "delta": 0.169
+            "after": 3.33,
+            "delta": -0.087
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 3.572,
+            "after": 3.33,
             "delta": 0.0
           }
         ],
@@ -10874,13 +10874,13 @@
           "matchup_woba": 0.3013,
           "sp_path": {
             "eff_woba": 0.3029,
-            "rpa": 0.1063,
+            "rpa": 0.1067,
             "obp_eff": 0.2877,
             "pa_per_inning": 4.212
           },
           "bp_path": {
             "eff_woba": 0.3017,
-            "rpa": 0.1053,
+            "rpa": 0.1057,
             "obp_eff": 0.2866,
             "pa_per_inning": 4.205
           },
@@ -10896,77 +10896,77 @@
         }
       },
       "away": {
-        "runs_vs_sp": 3.718,
-        "runs_vs_bp": 3.878,
+        "runs_vs_sp": 3.732,
+        "runs_vs_bp": 3.892,
         "sp_share": 0.654,
         "expected_ip": 5.89,
-        "mu_full": 3.811,
-        "mu_f5": 2.286,
+        "mu_full": 3.825,
+        "mu_f5": 2.295,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 4.242,
-            "delta": -0.227
+            "after": 4.256,
+            "delta": -0.228
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 3.837,
+            "after": 3.851,
             "delta": -0.405
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 3.919,
-            "delta": 0.082
+            "after": 3.934,
+            "delta": 0.083
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 3.665,
-            "delta": -0.254
+            "after": 3.679,
+            "delta": -0.255
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 3.738,
+            "after": 3.752,
             "delta": 0.073
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 3.759,
+            "after": 3.773,
             "delta": 0.021
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 3.811,
+            "after": 3.825,
             "delta": 0.052
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 3.243,
+            "after": 3.257,
             "delta": -0.568
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 3.42,
-            "delta": 0.177
+            "after": 3.188,
+            "delta": -0.069
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 3.42,
+            "after": 3.188,
             "delta": 0.0
           }
         ],
@@ -10985,13 +10985,13 @@
           "matchup_woba": 0.2975,
           "sp_path": {
             "eff_woba": 0.3025,
-            "rpa": 0.1059,
+            "rpa": 0.1063,
             "obp_eff": 0.2873,
             "pa_per_inning": 4.21
           },
           "bp_path": {
             "eff_woba": 0.3009,
-            "rpa": 0.1046,
+            "rpa": 0.105,
             "obp_eff": 0.2858,
             "pa_per_inning": 4.201
           },
@@ -11008,15 +11008,15 @@
       }
     },
     "f5": {
-      "home_xr": 2.21,
-      "away_xr": 2.22,
-      "total_xr": 4.43,
-      "home_win_prob": 0.4094,
-      "away_win_prob": 0.4164,
+      "home_xr": 2.22,
+      "away_xr": 2.24,
+      "total_xr": 4.46,
+      "home_win_prob": 0.4095,
+      "away_win_prob": 0.4192,
       "over_probs": {
-        "4.5": 0.4095,
-        "5.0": 0.3054,
-        "5.5": 0.3054
+        "4.5": 0.4174,
+        "5.0": 0.3088,
+        "5.5": 0.3088
       }
     }
   },
@@ -11064,21 +11064,21 @@
       "weather_runs_number": 0.45,
       "wind_receptiveness": "High",
       "wind_hour_1": {
-        "speed_mph": 8.0,
+        "speed_mph": 9.0,
         "direction": "OutCenter"
       },
       "wind_hour_2": {
-        "speed_mph": 7.0,
+        "speed_mph": 8.0,
         "direction": "OutRightCenter"
       },
       "wind_hour_3": {
-        "speed_mph": 8.0,
+        "speed_mph": 7.0,
         "direction": "OutRightMiddle"
       },
       "temp_hour_1": 84.0,
-      "temp_hour_2": 84.0,
+      "temp_hour_2": 82.0,
       "temp_hour_3": 82.0,
-      "humidity": 46.0,
+      "humidity": 47.0,
       "pressure": 1010.0,
       "outfield_size": "Variable",
       "altitude": 54.0,
@@ -11108,36 +11108,36 @@
       "level": "full",
       "missing": []
     },
-    "raw_total": 7.911758003932022,
+    "raw_total": 7.943454604875714,
     "calibration": "market_anchored_w0.95",
-    "raw_home_pre_learn": 6.324,
-    "raw_away_pre_learn": 3.125,
+    "raw_home_pre_learn": 6.343,
+    "raw_away_pre_learn": 3.138,
     "learn_correction": {
       "home_team": -0.709,
       "away_team": -0.379,
       "home_pitcher": -0.442,
       "away_pitcher": -0.007
     },
-    "home_runs": 5.947817390194795,
-    "away_runs": 2.5227116858021983,
-    "total": 8.470529075996993,
-    "home_win_prob": 0.7114785166270279,
-    "away_win_prob": 0.2885214833729721,
+    "home_runs": 5.945259018263064,
+    "away_runs": 2.5268580574412094,
+    "total": 8.472117075704274,
+    "home_win_prob": 0.7012442940702697,
+    "away_win_prob": 0.29875570592973033,
     "win_probability_model": {
-      "home": 0.7114785166270279,
-      "away": 0.2885214833729721,
-      "physics_home": 0.6062284083548696,
-      "physics_away": 0.3937715916451304,
-      "market_home": 0.7465618860510805,
-      "market_away": 0.25343811394891946,
+      "home": 0.7012442940702697,
+      "away": 0.29875570592973033,
+      "physics_home": 0.6053845082566385,
+      "physics_away": 0.3946154917433615,
+      "market_home": 0.7331975560081467,
+      "market_away": 0.26680244399185343,
       "market_weight": 0.75,
       "source": "market_physics_consensus"
     },
     "runline": {
-      "home_minus_1_5": 0.66325,
-      "home_plus_1_5": 0.87675,
-      "away_minus_1_5": 0.12325,
-      "away_plus_1_5": 0.33675
+      "home_minus_1_5": 0.66155,
+      "home_plus_1_5": 0.87605,
+      "away_minus_1_5": 0.12395,
+      "away_plus_1_5": 0.33845
     },
     "home_matchup": 0.9365,
     "away_matchup": 1.0,
@@ -12614,10 +12614,10 @@
       }
     ],
     "starter_phase": {
-      "home_runs_no_bp": 6.375,
-      "away_runs_no_bp": 2.941,
-      "home_lead_prob": 0.9271493834372697,
-      "away_lead_prob": 0.07285061656273029
+      "home_runs_no_bp": 6.391,
+      "away_runs_no_bp": 2.956,
+      "home_lead_prob": 0.927199399760751,
+      "away_lead_prob": 0.07280060023924895
     },
     "home_stuff": 83.2,
     "home_loc": 100.7,
@@ -12772,11 +12772,11 @@
       }
     ],
     "odds": {
-      "home_ml": 1.29,
-      "away_ml": 3.8,
+      "home_ml": 1.31,
+      "away_ml": 3.6,
       "total": 8.5,
-      "over": 1.83,
-      "under": 2.0,
+      "over": 1.98,
+      "under": 1.85,
       "home_spread": null,
       "home_spread_odds": null,
       "away_spread": null,
@@ -12789,13 +12789,13 @@
         "matchup": "COL @ NYY",
         "market": "moneyline",
         "label": "NYY ML",
-        "prob": 0.7115,
-        "odds": 1.29,
-        "ev": -0.0822,
+        "prob": 0.7012,
+        "odds": 1.31,
+        "ev": -0.0814,
         "kelly_raw": 0.0,
-        "p_hat": 0.7431,
-        "kelly_f": -0.143,
-        "ev_debiased": -0.0415,
+        "p_hat": 0.73,
+        "kelly_f": -0.141,
+        "ev_debiased": -0.0437,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -12803,27 +12803,27 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "agreement_gap",
-        "selection_confidence": 0.7115,
-        "selection_market_implied": 0.7752,
-        "selection_model_prob": 0.7115,
-        "selection_gap": 0.169,
+        "selection_confidence": 0.7012,
+        "selection_market_implied": 0.7634,
+        "selection_model_prob": 0.7012,
+        "selection_gap": 0.158,
         "selection_lineup_confirmed": false,
         "selection_reasons": [
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.6062
+        "selection_agreement_model_prob": 0.6054
       },
       {
         "matchup": "COL @ NYY",
         "market": "moneyline",
         "label": "COL ML",
-        "prob": 0.2885,
-        "odds": 3.8,
-        "ev": 0.0964,
-        "kelly_raw": 0.0344,
-        "p_hat": 0.2569,
-        "kelly_f": -0.003,
-        "ev_debiased": -0.0236,
+        "prob": 0.2988,
+        "odds": 3.6,
+        "ev": 0.0755,
+        "kelly_raw": 0.029,
+        "p_hat": 0.27,
+        "kelly_f": -0.0038,
+        "ev_debiased": -0.028,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -12831,29 +12831,29 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "market_below_threshold",
-        "selection_confidence": 0.2632,
-        "selection_market_implied": 0.2632,
-        "selection_model_prob": 0.2885,
-        "selection_gap": 0.1306,
+        "selection_confidence": 0.2778,
+        "selection_market_implied": 0.2778,
+        "selection_model_prob": 0.2988,
+        "selection_gap": 0.1168,
         "selection_lineup_confirmed": false,
         "selection_reasons": [
           "market_below_threshold",
           "model_disagrees",
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.3938
+        "selection_agreement_model_prob": 0.3946
       },
       {
         "matchup": "COL @ NYY",
         "market": "total",
         "label": "Over 8.5",
-        "prob": 0.5093,
-        "odds": 1.83,
-        "ev": -0.0679,
-        "kelly_raw": 0.0,
-        "p_hat": 0.5222,
-        "kelly_f": -0.0535,
-        "ev_debiased": -0.0444,
+        "prob": 0.5094,
+        "odds": 1.98,
+        "ev": 0.0086,
+        "kelly_raw": 0.0087,
+        "p_hat": 0.483,
+        "kelly_f": -0.0445,
+        "ev_debiased": -0.0436,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -12865,13 +12865,13 @@
         "matchup": "COL @ NYY",
         "market": "total",
         "label": "Under 8.5",
-        "prob": 0.4907,
-        "odds": 2.0,
-        "ev": -0.0187,
+        "prob": 0.4906,
+        "odds": 1.85,
+        "ev": -0.0923,
         "kelly_raw": 0.0,
-        "p_hat": 0.4778,
-        "kelly_f": -0.0444,
-        "ev_debiased": -0.0444,
+        "p_hat": 0.517,
+        "kelly_f": -0.0513,
+        "ev_debiased": -0.0436,
         "stake": 0,
         "stake_base": 150,
         "book": "DraftKings",
@@ -12882,27 +12882,27 @@
     ],
     "weather": {
       "source": "ballpark_pal",
-      "text": "1% Precipitation 83°  Wind 9 mph Out",
-      "precip_prob": 1.0,
-      "temp_f": 84.1,
-      "wind_mph": 4.6,
+      "text": "1% Precipitation 83°  Wind 8 mph Out",
+      "precip_prob": 0.0,
+      "temp_f": 84.6,
+      "wind_mph": 6.2,
       "venue": "Yankee Stadium",
       "roof": "open",
       "forecast_hour": "2026-09-10T23:00",
-      "wind_direction_deg": 299.0,
-      "humidity_pct": 43.0,
-      "temp_f_3h_avg": 81.8,
-      "wind_mph_3h_avg": 4.2,
-      "wind_direction_deg_3h_avg": 299.0,
+      "wind_direction_deg": 311.0,
+      "humidity_pct": 44.0,
+      "temp_f_3h_avg": 82.2,
+      "wind_mph_3h_avg": 4.7,
+      "wind_direction_deg_3h_avg": 302.0,
       "_source": "open-meteo",
-      "carry_adj": 0.0313,
+      "carry_adj": 0.0307,
       "run_factor": 1.0521,
-      "wind_dot_of": 3.309,
+      "wind_dot_of": 3.467,
       "wind_dir_label": "외야 바람 (out)",
       "wind_source": "open-meteo",
       "of_bearing": 75,
-      "temp_avg": 83.3,
-      "humidity": 46.0,
+      "temp_avg": 82.7,
+      "humidity": 47.0,
       "pressure": 1010.0,
       "altitude": 54.0,
       "combined_run_factor": 1.01,
@@ -12912,15 +12912,15 @@
       "hr_pct": 22.0,
       "wind_receptiveness": "High",
       "wind_hour_1": {
-        "speed_mph": 8.0,
+        "speed_mph": 9.0,
         "direction": "OutCenter"
       },
       "wind_hour_2": {
-        "speed_mph": 7.0,
+        "speed_mph": 8.0,
         "direction": "OutRightCenter"
       },
       "wind_hour_3": {
-        "speed_mph": 8.0,
+        "speed_mph": 7.0,
         "direction": "OutRightMiddle"
       },
       "description": "A rounded asymmetrical outfield with a very shallow right field wall . The short porch is balanced out by a larger-than-average left field , though still very short to the foul pole on that side."
@@ -12931,44 +12931,44 @@
     },
     "scores_top": [
       {
-        "away": 1,
-        "home": 2,
-        "prob": 0.0267
-      },
-      {
-        "away": 1,
-        "home": 4,
-        "prob": 0.0259
-      },
-      {
         "away": 2,
         "home": 3,
-        "prob": 0.0256
+        "prob": 0.0272
+      },
+      {
+        "away": 1,
+        "home": 2,
+        "prob": 0.0263
+      },
+      {
+        "away": 1,
+        "home": 5,
+        "prob": 0.0255
       },
       {
         "away": 0,
         "home": 4,
-        "prob": 0.0256
-      },
-      {
-        "away": 1,
-        "home": 5,
-        "prob": 0.0252
+        "prob": 0.0254
       },
       {
         "away": 1,
         "home": 3,
-        "prob": 0.0244
+        "prob": 0.0253
+      },
+      {
+        "away": 1,
+        "home": 4,
+        "prob": 0.0249
+      },
+      {
+        "away": 0,
+        "home": 3,
+        "prob": 0.0221
       },
       {
         "away": 0,
         "home": 5,
-        "prob": 0.0232
-      },
-      {
-        "away": 1,
-        "home": 6,
-        "prob": 0.022
+        "prob": 0.0221
       }
     ],
     "hr_env": {
@@ -13500,13 +13500,13 @@
       "home": {
         "factor": 1.55,
         "raw_factor": 1.9829,
-        "mu": 6.409,
+        "mu": 6.43,
         "weight": 0.4
       },
       "away": {
         "factor": 0.7213,
         "raw_factor": 0.6601,
-        "mu": 3.337,
+        "mu": 3.348,
         "weight": 0.4
       }
     },
@@ -14386,77 +14386,77 @@
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 6.375,
-        "runs_vs_bp": 6.595,
+        "runs_vs_sp": 6.391,
+        "runs_vs_bp": 6.612,
         "sp_share": 0.564,
         "expected_ip": 5.08,
-        "mu_full": 6.268,
-        "mu_f5": 3.379,
+        "mu_full": 6.285,
+        "mu_f5": 3.388,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 4.893,
+            "after": 4.908,
             "delta": 0.424
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 5.812,
+            "after": 5.827,
             "delta": 0.919
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 6.141,
-            "delta": 0.329
+            "after": 6.157,
+            "delta": 0.33
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 6.329,
-            "delta": 0.188
+            "after": 6.346,
+            "delta": 0.189
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 6.445,
+            "after": 6.462,
             "delta": 0.116
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 6.429,
+            "after": 6.446,
             "delta": -0.016
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 6.268,
+            "after": 6.285,
             "delta": -0.161
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 5.499,
+            "after": 5.516,
             "delta": -0.769
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 5.948,
-            "delta": 0.449
+            "after": 5.945,
+            "delta": 0.429
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 5.948,
+            "after": 5.945,
             "delta": 0.0
           }
         ],
@@ -14475,13 +14475,13 @@
           "matchup_woba": 0.3496,
           "sp_path": {
             "eff_woba": 0.3549,
-            "rpa": 0.148,
+            "rpa": 0.1483,
             "obp_eff": 0.3371,
             "pa_per_inning": 4.526
           },
           "bp_path": {
             "eff_woba": 0.3538,
-            "rpa": 0.1471,
+            "rpa": 0.1475,
             "obp_eff": 0.3361,
             "pa_per_inning": 4.519
           },
@@ -14497,77 +14497,77 @@
         }
       },
       "away": {
-        "runs_vs_sp": 2.941,
-        "runs_vs_bp": 2.725,
+        "runs_vs_sp": 2.956,
+        "runs_vs_bp": 2.738,
         "sp_share": 0.626,
         "expected_ip": 5.63,
-        "mu_full": 2.984,
-        "mu_f5": 1.824,
+        "mu_full": 2.998,
+        "mu_f5": 1.832,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 5.031,
+            "after": 5.046,
             "delta": 0.562
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 3.096,
-            "delta": -1.935
+            "after": 3.11,
+            "delta": -1.936
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 2.832,
+            "after": 2.846,
             "delta": -0.264
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 2.89,
+            "after": 2.904,
             "delta": 0.058
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 2.828,
+            "after": 2.842,
             "delta": -0.062
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 2.86,
+            "after": 2.874,
             "delta": 0.032
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 2.984,
+            "after": 2.998,
             "delta": 0.124
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 2.215,
+            "after": 2.229,
             "delta": -0.769
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 2.523,
-            "delta": 0.308
+            "after": 2.527,
+            "delta": 0.298
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 2.523,
+            "after": 2.527,
             "delta": 0.0
           }
         ],
@@ -14586,13 +14586,13 @@
           "matchup_woba": 0.2759,
           "sp_path": {
             "eff_woba": 0.2694,
-            "rpa": 0.0794,
+            "rpa": 0.0798,
             "obp_eff": 0.256,
             "pa_per_inning": 4.032
           },
           "bp_path": {
             "eff_woba": 0.2679,
-            "rpa": 0.0782,
+            "rpa": 0.0786,
             "obp_eff": 0.2545,
             "pa_per_inning": 4.024
           },
@@ -14609,15 +14609,15 @@
       }
     },
     "f5": {
-      "home_xr": 3.44,
-      "away_xr": 1.71,
-      "total_xr": 5.16,
-      "home_win_prob": 0.6424,
-      "away_win_prob": 0.2216,
+      "home_xr": 3.46,
+      "away_xr": 1.72,
+      "total_xr": 5.18,
+      "home_win_prob": 0.6365,
+      "away_win_prob": 0.2267,
       "over_probs": {
-        "4.5": 0.5056,
-        "5.0": 0.3869,
-        "5.5": 0.3869
+        "4.5": 0.5129,
+        "5.0": 0.3951,
+        "5.5": 0.3951
       }
     }
   },
@@ -14699,7 +14699,7 @@
       "away_pitcher": "statsapi",
       "home_pitch_form": "statcast",
       "away_pitch_form": "statcast",
-      "weather": "met.no",
+      "weather": "open-meteo",
       "ballpark_pal": "ballpark_pal",
       "odds": "live",
       "home_recent_form": "statsapi",
@@ -14711,36 +14711,36 @@
         "홈 선발 표본↓"
       ]
     },
-    "raw_total": 8.349443102902546,
+    "raw_total": 8.379582987752983,
     "calibration": "market_anchored_w0.95",
-    "raw_home_pre_learn": 4.917,
-    "raw_away_pre_learn": 3.848,
+    "raw_home_pre_learn": 4.932,
+    "raw_away_pre_learn": 3.863,
     "learn_correction": {
       "home_team": -0.14,
       "away_team": -0.21,
       "home_pitcher": -0.066,
       "away_pitcher": 0.0
     },
-    "home_runs": 4.2540181081646065,
-    "away_runs": 3.2885389912908116,
-    "total": 7.5425570994554185,
-    "home_win_prob": 0.5078039852042293,
-    "away_win_prob": 0.4921960147957707,
+    "home_runs": 4.253406136773429,
+    "away_runs": 3.290660970912994,
+    "total": 7.544067107686423,
+    "home_win_prob": 0.5077018318997365,
+    "away_win_prob": 0.4922981681002635,
     "win_probability_model": {
-      "home": 0.5078039852042293,
-      "away": 0.4921960147957707,
-      "physics_home": 0.5312159408169174,
-      "physics_away": 0.46878405918308264,
+      "home": 0.5077018318997365,
+      "away": 0.4922981681002635,
+      "physics_home": 0.530807327598946,
+      "physics_away": 0.469192672401054,
       "market_home": 0.5,
       "market_away": 0.5,
       "market_weight": 0.75,
       "source": "market_physics_consensus"
     },
     "runline": {
-      "home_minus_1_5": 0.43825,
-      "home_plus_1_5": 0.73705,
-      "away_minus_1_5": 0.26295,
-      "away_plus_1_5": 0.56175
+      "home_minus_1_5": 0.43695,
+      "home_plus_1_5": 0.7306,
+      "away_minus_1_5": 0.2694,
+      "away_plus_1_5": 0.56305
     },
     "home_matchup": 0.9764999999999999,
     "away_matchup": 1.0030000000000001,
@@ -16005,10 +16005,10 @@
       }
     ],
     "starter_phase": {
-      "home_runs_no_bp": 5.167,
-      "away_runs_no_bp": 3.167,
-      "home_lead_prob": 0.8147962454552508,
-      "away_lead_prob": 0.18520375454474924
+      "home_runs_no_bp": 5.183,
+      "away_runs_no_bp": 3.181,
+      "home_lead_prob": 0.8150197016820343,
+      "away_lead_prob": 0.1849802983179657
     },
     "home_stuff": 90.0,
     "home_loc": 98.9,
@@ -16162,8 +16162,8 @@
       "home_ml": 1.91,
       "away_ml": 1.91,
       "total": 7.5,
-      "over": 1.87,
-      "under": 1.95,
+      "over": 1.85,
+      "under": 1.98,
       "home_spread": null,
       "home_spread_odds": null,
       "away_spread": null,
@@ -16176,9 +16176,9 @@
         "matchup": "PIT @ CWS",
         "market": "moneyline",
         "label": "CWS ML",
-        "prob": 0.5078,
+        "prob": 0.5077,
         "odds": 1.91,
-        "ev": -0.0301,
+        "ev": -0.0303,
         "kelly_raw": 0.0,
         "p_hat": 0.5008,
         "kelly_f": -0.0167,
@@ -16190,24 +16190,24 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "data_quality",
-        "selection_confidence": 0.5078,
+        "selection_confidence": 0.5077,
         "selection_market_implied": 0.5236,
-        "selection_model_prob": 0.5078,
-        "selection_gap": 0.0077,
+        "selection_model_prob": 0.5077,
+        "selection_gap": 0.0072,
         "selection_lineup_confirmed": false,
         "selection_reasons": [
           "data_quality",
           "market_below_threshold"
         ],
-        "selection_agreement_model_prob": 0.5312
+        "selection_agreement_model_prob": 0.5308
       },
       {
         "matchup": "PIT @ CWS",
         "market": "moneyline",
         "label": "PIT ML",
-        "prob": 0.4922,
+        "prob": 0.4923,
         "odds": 1.91,
-        "ev": -0.0599,
+        "ev": -0.0597,
         "kelly_raw": 0.0,
         "p_hat": 0.4992,
         "kelly_f": -0.0179,
@@ -16219,10 +16219,10 @@
         "high_hit_candidate": false,
         "high_hit_eligible": false,
         "selection_status": "data_quality",
-        "selection_confidence": 0.4922,
+        "selection_confidence": 0.4923,
         "selection_market_implied": 0.5236,
-        "selection_model_prob": 0.4922,
-        "selection_gap": 0.0548,
+        "selection_model_prob": 0.4923,
+        "selection_gap": 0.0544,
         "selection_lineup_confirmed": false,
         "selection_reasons": [
           "data_quality",
@@ -16230,19 +16230,19 @@
           "model_disagrees",
           "agreement_gap"
         ],
-        "selection_agreement_model_prob": 0.4688
+        "selection_agreement_model_prob": 0.4692
       },
       {
         "matchup": "PIT @ CWS",
         "market": "total",
         "label": "Over 7.5",
-        "prob": 0.5211,
-        "odds": 1.87,
-        "ev": -0.0256,
+        "prob": 0.521,
+        "odds": 1.85,
+        "ev": -0.0362,
         "kelly_raw": 0.0,
-        "p_hat": 0.5105,
-        "kelly_f": -0.0522,
-        "ev_debiased": -0.0454,
+        "p_hat": 0.517,
+        "kelly_f": -0.0513,
+        "ev_debiased": -0.0436,
         "stake": 0,
         "stake_base": 150,
         "book": "FanDuel",
@@ -16254,13 +16254,13 @@
         "matchup": "PIT @ CWS",
         "market": "total",
         "label": "Under 7.5",
-        "prob": 0.4789,
-        "odds": 1.95,
-        "ev": -0.0661,
+        "prob": 0.479,
+        "odds": 1.98,
+        "ev": -0.0516,
         "kelly_raw": 0.0,
-        "p_hat": 0.4895,
-        "kelly_f": -0.0478,
-        "ev_debiased": -0.0454,
+        "p_hat": 0.483,
+        "kelly_f": -0.0445,
+        "ev_debiased": -0.0436,
         "stake": 0,
         "stake_base": 150,
         "book": "FanDuel",
@@ -16272,22 +16272,22 @@
     "weather": {
       "source": "ballpark_pal",
       "text": "0% 73°  Wind 7 mph L-R",
-      "precip_prob": null,
-      "temp_f": 71.8,
-      "wind_mph": 8.1,
+      "precip_prob": 0.0,
+      "temp_f": 69.7,
+      "wind_mph": 7.7,
       "venue": "Rate Field",
       "roof": "open",
-      "forecast_hour": "2026-09-11T00:00:00Z",
-      "wind_direction_deg": 67.0,
-      "humidity_pct": 69.5,
-      "temp_f_3h_avg": 71.8,
-      "wind_mph_3h_avg": 8.1,
-      "wind_direction_deg_3h_avg": 67.0,
-      "_source": "met.no",
-      "carry_adj": -0.0097,
+      "forecast_hour": "2026-09-11T00:00",
+      "wind_direction_deg": 36.0,
+      "humidity_pct": 72.0,
+      "temp_f_3h_avg": 68.6,
+      "wind_mph_3h_avg": 7.3,
+      "wind_direction_deg_3h_avg": 45.0,
+      "_source": "open-meteo",
+      "carry_adj": -0.0017,
       "run_factor": 0.9794,
-      "wind_dot_of": -3.677,
-      "wind_dir_label": "내야 바람 (in)",
+      "wind_dot_of": 0.537,
+      "wind_dir_label": "옆/잔잔",
       "wind_source": "open-meteo",
       "of_bearing": 130,
       "temp_avg": 68.7,
@@ -16322,42 +16322,42 @@
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0344
+        "prob": 0.0338
       },
       {
         "away": 2,
         "home": 3,
-        "prob": 0.0335
+        "prob": 0.0324
       },
       {
         "away": 2,
         "home": 1,
-        "prob": 0.0315
+        "prob": 0.0307
       },
       {
         "away": 3,
         "home": 2,
-        "prob": 0.0313
-      },
-      {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0272
+        "prob": 0.0305
       },
       {
         "away": 3,
         "home": 4,
-        "prob": 0.0267
+        "prob": 0.0271
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0242
       },
       {
         "away": 4,
         "home": 3,
-        "prob": 0.0226
+        "prob": 0.0234
       },
       {
         "away": 0,
         "home": 1,
-        "prob": 0.0219
+        "prob": 0.0222
       }
     ],
     "hr_env": {
@@ -16889,13 +16889,13 @@
       "home": {
         "factor": 1.1748,
         "raw_factor": 1.2132,
-        "mu": 4.742,
+        "mu": 4.758,
         "weight": 0.4
       },
       "away": {
         "factor": 1.135,
         "raw_factor": 1.1647,
-        "mu": 4.738,
+        "mu": 4.753,
         "weight": 0.4
       }
     },
@@ -17665,77 +17665,77 @@
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 5.167,
-        "runs_vs_bp": 5.028,
+        "runs_vs_sp": 5.183,
+        "runs_vs_bp": 5.043,
         "sp_share": 0.514,
         "expected_ip": 4.63,
-        "mu_full": 5.033,
-        "mu_f5": 2.547,
+        "mu_full": 5.048,
+        "mu_f5": 2.555,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 5.015,
-            "delta": 0.546
+            "after": 5.031,
+            "delta": 0.547
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 5.113,
-            "delta": 0.098
+            "after": 5.128,
+            "delta": 0.097
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 5.259,
+            "after": 5.274,
             "delta": 0.146
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 5.141,
+            "after": 5.156,
             "delta": -0.118
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 5.086,
+            "after": 5.101,
             "delta": -0.055
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 5.088,
+            "after": 5.103,
             "delta": 0.002
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 5.033,
+            "after": 5.048,
             "delta": -0.055
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 4.825,
+            "after": 4.84,
             "delta": -0.208
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 4.254,
-            "delta": -0.571
+            "after": 4.253,
+            "delta": -0.587
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 4.254,
+            "after": 4.253,
             "delta": 0.0
           }
         ],
@@ -17754,13 +17754,13 @@
           "matchup_woba": 0.332,
           "sp_path": {
             "eff_woba": 0.3351,
-            "rpa": 0.1321,
+            "rpa": 0.1325,
             "obp_eff": 0.3183,
             "pa_per_inning": 4.401
           },
           "bp_path": {
             "eff_woba": 0.3344,
-            "rpa": 0.1315,
+            "rpa": 0.1319,
             "obp_eff": 0.3177,
             "pa_per_inning": 4.397
           },
@@ -17776,77 +17776,77 @@
         }
       },
       "away": {
-        "runs_vs_sp": 3.167,
-        "runs_vs_bp": 3.137,
+        "runs_vs_sp": 3.181,
+        "runs_vs_bp": 3.15,
         "sp_share": 0.578,
         "expected_ip": 5.2,
-        "mu_full": 3.255,
-        "mu_f5": 1.815,
+        "mu_full": 3.269,
+        "mu_f5": 1.822,
         "explain": [
           {
             "key": "league",
             "label": "리그 평균",
-            "after": 4.469,
-            "delta": 4.469
+            "after": 4.484,
+            "delta": 4.484
           },
           {
             "key": "batter",
             "label": "우리 타선",
-            "after": 5.046,
-            "delta": 0.577
+            "after": 5.062,
+            "delta": 0.578
           },
           {
             "key": "pitcher",
             "label": "상대 선발",
-            "after": 3.555,
-            "delta": -1.491
+            "after": 3.57,
+            "delta": -1.492
           },
           {
             "key": "hand",
             "label": "좌우·구속·타구 보정",
-            "after": 3.282,
-            "delta": -0.273
+            "after": 3.296,
+            "delta": -0.274
           },
           {
             "key": "env",
             "label": "환경(구장·날씨)",
-            "after": 3.127,
+            "after": 3.141,
             "delta": -0.155
           },
           {
             "key": "bullpen",
             "label": "상대 불펜",
-            "after": 3.131,
+            "after": 3.145,
             "delta": 0.004
           },
           {
             "key": "tto",
             "label": "TTO·라인업 궁합",
-            "after": 3.155,
+            "after": 3.169,
             "delta": 0.024
           },
           {
             "key": "shrink",
             "label": "리그평균 수축",
-            "after": 3.255,
+            "after": 3.269,
             "delta": 0.1
           },
           {
             "key": "learn",
             "label": "학습 보정",
-            "after": 3.047,
+            "after": 3.061,
             "delta": -0.208
           },
           {
             "key": "adjust",
             "label": "안전·시장 보정",
-            "after": 3.289,
-            "delta": 0.242
+            "after": 3.291,
+            "delta": 0.23
           },
           {
             "key": "final",
             "label": "최종 예상득점",
-            "after": 3.289,
+            "after": 3.291,
             "delta": 0.0
           }
         ],
@@ -17865,13 +17865,13 @@
           "matchup_woba": 0.2894,
           "sp_path": {
             "eff_woba": 0.2827,
-            "rpa": 0.0901,
+            "rpa": 0.0904,
             "obp_eff": 0.2685,
             "pa_per_inning": 4.101
           },
           "bp_path": {
             "eff_woba": 0.2814,
-            "rpa": 0.0891,
+            "rpa": 0.0894,
             "obp_eff": 0.2674,
             "pa_per_inning": 4.095
           },
@@ -17889,14 +17889,14 @@
     },
     "f5": {
       "home_xr": 2.71,
-      "away_xr": 2.02,
-      "total_xr": 4.73,
-      "home_win_prob": 0.5086,
-      "away_win_prob": 0.3332,
+      "away_xr": 2.01,
+      "total_xr": 4.72,
+      "home_win_prob": 0.5043,
+      "away_win_prob": 0.33,
       "over_probs": {
-        "4.5": 0.4528,
-        "5.0": 0.3409,
-        "5.5": 0.3409
+        "4.5": 0.455,
+        "5.0": 0.3452,
+        "5.5": 0.3452
       }
     }
   }
