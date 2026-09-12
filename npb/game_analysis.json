@@ -9,8 +9,8 @@
     "away_team": "日本ハム",
     "home_abbr": "SEI",
     "away_abbr": "NIP",
-    "home_pitcher_name": "隅田",
-    "away_pitcher_name": "伊藤",
+    "home_pitcher_name": "隅田 知一郎",
+    "away_pitcher_name": "伊藤 大海",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -70,8 +70,10 @@
       "projection_prior_weight": 0.35
     },
     "umpire": "",
+    "home_pitcher_hand": "L",
+    "away_pitcher_hand": "R",
     "model_version": "projection_v2",
-    "market_total": null,
+    "market_total": 6.0,
     "environment_factor": 1.01,
     "raw_home_pre_learn": 3.347,
     "raw_away_pre_learn": 3.648,
@@ -836,8 +838,84 @@
     "umpire_detail": {
       "applied": 0.0
     },
-    "odds": {},
-    "picks": [],
+    "odds": {
+      "book": "Pinnacle",
+      "away_ml": 2.04,
+      "home_ml": 1.86,
+      "total": 6.0,
+      "over": 1.87,
+      "under": 1.99
+    },
+    "picks": [
+      {
+        "matchup": "NIP @ SEI",
+        "market": "moneyline",
+        "label": "SEI ML",
+        "prob": 0.4687,
+        "odds": 1.86,
+        "ev": -0.1282,
+        "kelly_raw": 0.0,
+        "p_hat": 0.5149,
+        "kelly_f": -0.0491,
+        "ev_debiased": -0.0422,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "NIP @ SEI",
+        "market": "moneyline",
+        "label": "NIP ML",
+        "prob": 0.5313,
+        "odds": 2.04,
+        "ev": 0.0838,
+        "kelly_raw": 0.0806,
+        "p_hat": 0.4851,
+        "kelly_f": -0.01,
+        "ev_debiased": -0.0104,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false
+      },
+      {
+        "matchup": "NIP @ SEI",
+        "market": "total",
+        "label": "Over 6.0",
+        "prob": 0.5463,
+        "odds": 1.87,
+        "ev": 0.0217,
+        "kelly_raw": 0.0249,
+        "p_hat": 0.5263,
+        "kelly_f": -0.0181,
+        "ev_debiased": -0.0158,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.99,
+        "market_total": 6.0
+      },
+      {
+        "matchup": "NIP @ SEI",
+        "market": "total",
+        "label": "Under 6.0",
+        "prob": 0.3621,
+        "odds": 1.99,
+        "ev": -0.2794,
+        "kelly_raw": 0.0,
+        "p_hat": 0.4416,
+        "kelly_f": -0.1224,
+        "ev_debiased": -0.1211,
+        "stake": 0,
+        "stake_base": 50,
+        "book": "Pinnacle",
+        "estimated_odds": false,
+        "model_total": 6.99,
+        "market_total": 6.0
+      }
+    ],
     "scores_top": [
       {
         "away": 1,
@@ -886,7 +964,7 @@
       "home_pitcher": "npb_official_2yr",
       "away_pitcher": "npb_official_2yr",
       "weather": "indoor",
-      "odds": "none"
+      "odds": "live"
     },
     "data_quality": {
       "level": "full",
