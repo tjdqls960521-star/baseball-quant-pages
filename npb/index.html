@@ -240,12 +240,12 @@ html{scroll-padding-top:105px}body{padding-bottom:calc(92px + env(safe-area-inse
 <header>
   <div class='hd-row'>
     <h1>🇯🇵 NPB Quant</h1>
-    <span class='hd-sub'>2026-09-18 · 갱신 09/18 22:03 KST</span>
+    <span class='hd-sub'>2026-09-18 · 갱신 09/19 02:57 KST</span>
   </div>
   <nav>
     <a href='#sec-games' class='on'>경기 분석</a>
     <a href='#sec-picks'>추천 픽</a>
-    <a href='#sec-learn'>학습</a>
+
   </nav>
 </header>
 <div class='wrap'>
@@ -260,29 +260,23 @@ html{scroll-padding-top:105px}body{padding-bottom:calc(92px + env(safe-area-inse
 </section>
 
 <section class='sec' id='sec-picks'>
-  <h2>🎯 TOP 픽 <span class='dim' style='font-size:12px;font-weight:500'>· 리그예산 전액배분(엣지비율) · 단폴 최대4 · EV=시장대비 엣지</span></h2>
+  <h2>🎯 적중률 검증 추천</h2>
+  <div class='note'>보정 없는 경기 전 기록이 부족합니다</div><div class='note'>학습보정 미사용 · 경기당 1픽 · 최대 4픽 · 조건 미충족 시 추천 없음</div><table class='lineup'><thead><tr><th>종류</th><th>별도 기간 적중률</th><th>검증 상태</th></tr></thead><tbody><tr><td>승패</td><td>기록 수집 중</td><td>보정 없는 경기 전 기록이 부족합니다</td></tr><tr><td>언더오버</td><td>기록 수집 중</td><td>보정 없는 경기 전 기록이 부족합니다</td></tr><tr><td>핸디캡</td><td>기록 수집 중</td><td>보정 없는 경기 전 기록이 부족합니다</td></tr></tbody></table><div class='note'>적중률은 무효·환불을 제외한 과거 검증 결과입니다. 경기별 모델 확률과 구분해 표시합니다.</div>
   <div class='picktabs'>
-    <button class='active' data-pane='pp-total'>토탈 TOP0</button>
-    <button data-pane='pp-ml'>머니라인 TOP0</button>
+    <button class='active' data-pane='pp-total'>언더오버 0</button>
+    <button data-pane='pp-ml'>승패·핸디캡 0</button>
   </div>
-  <div class='pickpane active' id='pp-total'><div class='note'>픽 없음</div></div>
-  <div class='pickpane' id='pp-ml'><div class='note'>픽 없음</div></div>
+  <div class='pickpane active' id='pp-total'><div class='note'>검증 조건을 충족한 추천이 없습니다.</div></div>
+  <div class='pickpane' id='pp-ml'><div class='note'>검증 조건을 충족한 추천이 없습니다.</div></div>
 </section>
 
-<section class='sec' id='sec-learn'>
-  <h2>🧠 학습 상태</h2>
-  <div class='card'>
-    <table class='kv '><tr><th>마지막 학습</th><td>2026-09-08 16:18</td></tr><tr><th>리그 평균 득점</th><td>3.63 점/경기 <span class='dim'>(표본 227)</span></td></tr><tr><th>보정 중인 팀 / 투수</th><td>12 / 73</td></tr></table>
-    <div class='subhead'>팀별 득점 바이어스 보정 (런)</div><div class='wf-row'><span class='wf-lab'>YOM</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>DEN</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>CHU</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>YAK</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>HAN</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>HIR</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>NIP</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>SEI</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>LOT</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>ORX</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>RAK</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div><div class='wf-row'><span class='wf-lab'>SOF</span><div class='wf-track'><div class='wf-mid'></div><div class='wf-fill left' style='width:0.0%;background:var(--neg)'></div></div><span class='wf-val' style='color:var(--neg)'>+0.00</span></div>
-  </div>
-</section>
   <footer>
 
     zero-base wOBA + 바텀업 log5 + 24상태 Markov 체인 + Monte Carlo<br>
-    자동 생성 · 2026-09-18 22:03:35 KST · 책임 있는 베팅
+    자동 생성 · 2026-09-19 02:57:51 KST · 책임 있는 베팅
   </footer>
 </div>
-<nav class='mobile-dock' aria-label='빠른 탐색'><a href='#sec-games' class='on'>경기 분석</a><a href='#sec-picks'>추천 픽</a><a href='#sec-learn'>학습 현황</a></nav>
+<nav class='mobile-dock' aria-label='빠른 탐색'><a href='#sec-games' class='on'>경기 분석</a><a href='#sec-picks'>추천 픽</a></nav>
 <script>
 document.addEventListener('click', function(e){
   // TOP 픽 클릭 → 해당 경기 카드로 스크롤 + 펼침
