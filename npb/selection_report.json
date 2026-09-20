@@ -1,7 +1,7 @@
 {
   "policy_version": "raw-hit-selection-v1",
   "league": "NPB",
-  "target_date": "2026-09-19",
+  "target_date": "2026-09-20",
   "model_version": "npb-raw-v1",
   "learning_correction_enabled": false,
   "validation_start": "2026-08-01",
@@ -24,8 +24,12 @@
   },
   "status": "insufficient_history",
   "recommended_count": 0,
-  "candidate_count": 0,
-  "exclusions": {},
+  "candidate_count": 12,
+  "exclusions": {
+    "data_quality": 12,
+    "lineup_unconfirmed": 12,
+    "quote_unverified": 12
+  },
   "message": "보정 없는 경기 전 기록이 부족합니다",
-  "generated_at_utc": "2026-09-19T17:35:38.712310+00:00"
+  "generated_at_utc": "2026-09-20T06:23:48.824460+00:00"
 }
