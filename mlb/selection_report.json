@@ -1,7 +1,7 @@
 {
   "policy_version": "raw-hit-selection-v1",
   "league": "MLB",
-  "target_date": "2026-10-07",
+  "target_date": "2026-10-08",
   "model_version": "mlb-pa-v2",
   "learning_correction_enabled": false,
   "validation_start": "2026-09-01",
@@ -24,8 +24,12 @@
   },
   "status": "insufficient_history",
   "recommended_count": 0,
-  "candidate_count": 0,
-  "exclusions": {},
+  "candidate_count": 16,
+  "exclusions": {
+    "data_quality": 8,
+    "lineup_unconfirmed": 16,
+    "starter_unconfirmed": 4
+  },
   "message": "보정 없는 경기 전 기록이 부족합니다",
-  "generated_at_utc": "2026-10-07T01:14:33.494164+00:00"
+  "generated_at_utc": "2026-10-07T09:02:11.680302+00:00"
 }
