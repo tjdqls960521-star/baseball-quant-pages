@@ -9,8 +9,8 @@
     "away_team": "DeNA",
     "home_abbr": "HAN",
     "away_abbr": "DEN",
-    "home_pitcher_name": "村上",
-    "away_pitcher_name": "平良",
+    "home_pitcher_name": "村上 頌樹",
+    "away_pitcher_name": "平良 拳太郎",
     "home_score": null,
     "away_score": null,
     "home_pitcher": {
@@ -48,56 +48,58 @@
       "_source": "npb_official"
     },
     "umpire": "",
+    "home_pitcher_hand": "R",
+    "away_pitcher_hand": "R",
     "model_version": "npb-raw-v1",
     "learning_correction_enabled": false,
-    "selection_lineup_confirmed": false,
-    "analysis_generated_at_utc": "2026-10-13T20:28:29.722767+00:00",
-    "market_total": 5.0,
-    "environment_factor": 1.0717,
-    "raw_home_pre_learn": 4.481,
-    "raw_away_pre_learn": 3.86,
+    "selection_lineup_confirmed": true,
+    "analysis_generated_at_utc": "2026-10-14T08:59:03.063748+00:00",
+    "market_total": 4.5,
+    "environment_factor": 1.0742,
+    "raw_home_pre_learn": 4.351,
+    "raw_away_pre_learn": 3.663,
     "home_pitcher_id": "村上 頌樹",
     "away_pitcher_id": "平良 拳太郎",
-    "home_runs": 4.480767939892756,
-    "away_runs": 3.8601436123484207,
-    "total": 8.340911552241177,
-    "home_win_prob": 0.50515,
-    "away_win_prob": 0.3927,
-    "push_prob": 0.10215,
+    "home_runs": 4.350617692002789,
+    "away_runs": 3.6629824275353684,
+    "total": 8.013600119538157,
+    "home_win_prob": 0.5104,
+    "away_win_prob": 0.38375,
+    "push_prob": 0.10585,
     "runline": {
-      "home_minus_1_5": 0.40475,
-      "home_plus_1_5": 0.69765,
-      "away_minus_1_5": 0.30235,
-      "away_plus_1_5": 0.59525
+      "home_minus_1_5": 0.41255,
+      "home_plus_1_5": 0.7084,
+      "away_minus_1_5": 0.2916,
+      "away_plus_1_5": 0.58745
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.579,
-        "runs_vs_bp": 4.508,
+        "runs_vs_sp": 4.403,
+        "runs_vs_bp": 4.357,
         "sp_share": 0.562,
         "expected_ip": 5.06,
-        "mu_full": 4.479,
-        "mu_f5": 2.179,
+        "mu_full": 4.339,
+        "mu_f5": 2.107,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "npb_zero_base_woba",
-          "batter_woba": 0.3257,
+          "batter_woba": 0.3214,
           "pitcher_woba_against": 0.305,
-          "matchup_woba": 0.3207,
+          "matchup_woba": 0.3164,
           "sp_path": {
-            "eff_woba": 0.3219,
-            "rpa": 0.1177,
-            "obp_eff": 0.3058,
-            "pa_per_inning": 4.321
+            "eff_woba": 0.3172,
+            "rpa": 0.1139,
+            "obp_eff": 0.3014,
+            "pa_per_inning": 4.294
           },
           "bp_path": {
-            "eff_woba": 0.32,
-            "rpa": 0.1162,
-            "obp_eff": 0.304,
-            "pa_per_inning": 4.31
+            "eff_woba": 0.316,
+            "rpa": 0.1129,
+            "obp_eff": 0.3002,
+            "pa_per_inning": 4.287
           },
           "hand_factor": 1.0,
           "park": 0.96,
@@ -107,106 +109,78 @@
         }
       },
       "away": {
-        "runs_vs_sp": 3.853,
-        "runs_vs_bp": 3.845,
+        "runs_vs_sp": 3.599,
+        "runs_vs_bp": 3.601,
         "sp_share": 0.742,
         "expected_ip": 6.68,
-        "mu_full": 3.882,
-        "mu_f5": 2.344,
+        "mu_full": 3.665,
+        "mu_f5": 2.21,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "npb_zero_base_woba",
-          "batter_woba": 0.3216,
+          "batter_woba": 0.315,
           "pitcher_woba_against": 0.2907,
-          "matchup_woba": 0.3023,
+          "matchup_woba": 0.2957,
           "sp_path": {
-            "eff_woba": 0.3023,
-            "rpa": 0.1017,
-            "obp_eff": 0.2872,
-            "pa_per_inning": 4.209
+            "eff_woba": 0.2952,
+            "rpa": 0.0959,
+            "obp_eff": 0.2805,
+            "pa_per_inning": 4.169
           },
           "bp_path": {
-            "eff_woba": 0.3021,
-            "rpa": 0.1015,
-            "obp_eff": 0.287,
-            "pa_per_inning": 4.208
+            "eff_woba": 0.2953,
+            "rpa": 0.096,
+            "obp_eff": 0.2806,
+            "pa_per_inning": 4.17
           },
           "hand_factor": 1.0,
           "park": 0.96,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.959
+          "bp_factor": 0.957
         }
       }
     },
     "f5": {
-      "home_xr": 2.36,
-      "away_xr": 2.21,
-      "total_xr": 4.56,
-      "home_win_prob": 0.4313,
+      "home_xr": 2.3,
+      "away_xr": 2.1,
+      "total_xr": 4.4,
+      "home_win_prob": 0.4428,
       "over_probs": {
-        "3.5": 0.5688,
-        "4.5": 0.4325,
-        "5.0": 0.3191
+        "3.5": 0.5368,
+        "4.5": 0.4083,
+        "5.0": 0.3064
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "平良 拳太郎",
-        "lineup_woba": 0.3274,
-        "matchup_score": 0.9839,
+        "lineup_woba": 0.3224,
+        "matchup_score": 0.987,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0188,
-        "lineup_src": "projected",
+        "platoon": 1.0203,
+        "lineup_src": "yahoo_starting_member",
         "batters": [
           {
             "order": 1,
-            "name": "森下 翔太",
-            "hand": "R",
-            "pa": 616,
-            "woba": 0.379,
-            "ops": 0.91,
-            "platoon": 0.96,
-            "matchup_woba": 0.368,
-            "k_pct": 0.205,
-            "hr_pct": 0.047,
-            "edge": -0.0289,
+            "name": "近本 光司",
+            "hand": "L",
+            "pa": 414,
+            "woba": 0.327,
+            "ops": 0.752,
+            "platoon": 1.05,
+            "matchup_woba": 0.347,
+            "k_pct": 0.173,
+            "hr_pct": 0.015,
+            "edge": -0.0177,
             "source": "npb_official"
           },
           {
             "order": 2,
-            "name": "佐藤 輝明",
-            "hand": "L",
-            "pa": 614,
-            "woba": 0.39,
-            "ops": 0.944,
-            "platoon": 1.05,
-            "matchup_woba": 0.412,
-            "k_pct": 0.318,
-            "hr_pct": 0.057,
-            "edge": -0.0221,
-            "source": "npb_official"
-          },
-          {
-            "order": 3,
-            "name": "大山 悠輔",
-            "hand": "R",
-            "pa": 591,
-            "woba": 0.343,
-            "ops": 0.799,
-            "platoon": 0.96,
-            "matchup_woba": 0.332,
-            "k_pct": 0.199,
-            "hr_pct": 0.029,
-            "edge": -0.0222,
-            "source": "npb_official"
-          },
-          {
-            "order": 4,
             "name": "中野 拓夢",
             "hand": "L",
             "pa": 581,
@@ -220,17 +194,45 @@
             "source": "npb_official"
           },
           {
-            "order": 5,
-            "name": "近本 光司",
+            "order": 3,
+            "name": "森下 翔太",
+            "hand": "R",
+            "pa": 616,
+            "woba": 0.379,
+            "ops": 0.91,
+            "platoon": 0.96,
+            "matchup_woba": 0.368,
+            "k_pct": 0.205,
+            "hr_pct": 0.047,
+            "edge": -0.0289,
+            "source": "npb_official"
+          },
+          {
+            "order": 4,
+            "name": "佐藤 輝明",
             "hand": "L",
-            "pa": 414,
-            "woba": 0.327,
-            "ops": 0.752,
+            "pa": 614,
+            "woba": 0.39,
+            "ops": 0.944,
             "platoon": 1.05,
-            "matchup_woba": 0.347,
-            "k_pct": 0.173,
-            "hr_pct": 0.015,
-            "edge": -0.0177,
+            "matchup_woba": 0.412,
+            "k_pct": 0.318,
+            "hr_pct": 0.057,
+            "edge": -0.0221,
+            "source": "npb_official"
+          },
+          {
+            "order": 5,
+            "name": "大山 悠輔",
+            "hand": "R",
+            "pa": 591,
+            "woba": 0.343,
+            "ops": 0.799,
+            "platoon": 0.96,
+            "matchup_woba": 0.332,
+            "k_pct": 0.199,
+            "hr_pct": 0.029,
+            "edge": -0.0222,
             "source": "npb_official"
           },
           {
@@ -249,6 +251,20 @@
           },
           {
             "order": 7,
+            "name": "元山 飛優",
+            "hand": "L",
+            "pa": 186,
+            "woba": 0.285,
+            "ops": 0.625,
+            "platoon": 1.05,
+            "matchup_woba": 0.291,
+            "k_pct": 0.25,
+            "hr_pct": 0.01,
+            "edge": -0.0193,
+            "source": "npb_official"
+          },
+          {
+            "order": 8,
             "name": "坂本 誠志郎",
             "hand": "R",
             "pa": 319,
@@ -262,60 +278,32 @@
             "source": "npb_official"
           },
           {
-            "order": 8,
-            "name": "前川 右京",
-            "hand": "L",
-            "pa": 214,
-            "woba": 0.302,
-            "ops": 0.674,
-            "platoon": 1.05,
-            "matchup_woba": 0.309,
-            "k_pct": 0.256,
-            "hr_pct": 0.023,
-            "edge": -0.0206,
-            "source": "npb_official"
-          },
-          {
             "order": 9,
-            "name": "元山 飛優",
+            "name": "村上 頌樹",
             "hand": "L",
-            "pa": 186,
-            "woba": 0.285,
-            "ops": 0.625,
+            "pa": 59,
+            "woba": 0.258,
+            "ops": 0.541,
             "platoon": 1.05,
-            "matchup_woba": 0.291,
-            "k_pct": 0.25,
-            "hr_pct": 0.01,
-            "edge": -0.0193,
+            "matchup_woba": 0.257,
+            "k_pct": 0.466,
+            "hr_pct": 0.015,
+            "edge": -0.0102,
             "source": "npb_official"
           }
         ]
       },
       "away": {
         "vs_pitcher": "村上 頌樹",
-        "lineup_woba": 0.3227,
-        "matchup_score": 0.9849,
+        "lineup_woba": 0.315,
+        "matchup_score": 0.9851,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0019,
-        "lineup_src": "projected",
+        "platoon": 1.0013,
+        "lineup_src": "yahoo_starting_member",
         "batters": [
           {
             "order": 1,
-            "name": "佐野 恵太",
-            "hand": "L",
-            "pa": 522,
-            "woba": 0.315,
-            "ops": 0.715,
-            "platoon": 1.05,
-            "matchup_woba": 0.275,
-            "k_pct": 0.154,
-            "hr_pct": 0.016,
-            "edge": -0.0729,
-            "source": "npb_official"
-          },
-          {
-            "order": 2,
             "name": "度会 隆輝",
             "hand": "L",
             "pa": 516,
@@ -329,7 +317,7 @@
             "source": "npb_official"
           },
           {
-            "order": 3,
+            "order": 2,
             "name": "牧 秀悟",
             "hand": "R",
             "pa": 474,
@@ -343,35 +331,21 @@
             "source": "npb_official"
           },
           {
-            "order": 4,
-            "name": "筒香 嘉智",
+            "order": 3,
+            "name": "佐野 恵太",
             "hand": "L",
-            "pa": 398,
-            "woba": 0.348,
-            "ops": 0.814,
+            "pa": 522,
+            "woba": 0.315,
+            "ops": 0.715,
             "platoon": 1.05,
-            "matchup_woba": 0.31,
-            "k_pct": 0.26,
-            "hr_pct": 0.04,
-            "edge": -0.0811,
+            "matchup_woba": 0.275,
+            "k_pct": 0.154,
+            "hr_pct": 0.016,
+            "edge": -0.0729,
             "source": "npb_official"
           },
           {
-            "order": 5,
-            "name": "蝦名 達夫",
-            "hand": "R",
-            "pa": 385,
-            "woba": 0.298,
-            "ops": 0.663,
-            "platoon": 0.96,
-            "matchup_woba": 0.235,
-            "k_pct": 0.24,
-            "hr_pct": 0.013,
-            "edge": -0.0642,
-            "source": "npb_official"
-          },
-          {
-            "order": 6,
+            "order": 4,
             "name": "宮﨑 敏郎",
             "hand": "R",
             "pa": 381,
@@ -385,21 +359,21 @@
             "source": "npb_official"
           },
           {
-            "order": 7,
-            "name": "勝又 温史",
+            "order": 5,
+            "name": "筒香 嘉智",
             "hand": "L",
-            "pa": 357,
-            "woba": 0.302,
-            "ops": 0.677,
+            "pa": 398,
+            "woba": 0.348,
+            "ops": 0.814,
             "platoon": 1.05,
-            "matchup_woba": 0.266,
-            "k_pct": 0.177,
-            "hr_pct": 0.013,
-            "edge": -0.0615,
+            "matchup_woba": 0.31,
+            "k_pct": 0.26,
+            "hr_pct": 0.04,
+            "edge": -0.0811,
             "source": "npb_official"
           },
           {
-            "order": 8,
+            "order": 6,
             "name": "松尾 汐恩",
             "hand": "R",
             "pa": 300,
@@ -413,17 +387,45 @@
             "source": "npb_official"
           },
           {
-            "order": 9,
-            "name": "エンカーナシオン",
+            "order": 7,
+            "name": "林 琢真",
+            "hand": "L",
+            "pa": 195,
+            "woba": 0.289,
+            "ops": 0.637,
+            "platoon": 1.05,
+            "matchup_woba": 0.24,
+            "k_pct": 0.207,
+            "hr_pct": 0.014,
+            "edge": -0.0629,
+            "source": "npb_official"
+          },
+          {
+            "order": 8,
+            "name": "蝦名 達夫",
             "hand": "R",
-            "pa": 252,
-            "woba": 0.336,
-            "ops": 0.778,
+            "pa": 385,
+            "woba": 0.298,
+            "ops": 0.663,
             "platoon": 0.96,
-            "matchup_woba": 0.271,
-            "k_pct": 0.212,
-            "hr_pct": 0.03,
-            "edge": -0.0595,
+            "matchup_woba": 0.235,
+            "k_pct": 0.24,
+            "hr_pct": 0.013,
+            "edge": -0.0642,
+            "source": "npb_official"
+          },
+          {
+            "order": 9,
+            "name": "平良 拳太郎",
+            "hand": "R",
+            "pa": 31,
+            "woba": 0.269,
+            "ops": 0.575,
+            "platoon": 0.96,
+            "matchup_woba": 0.21,
+            "k_pct": 0.287,
+            "hr_pct": 0.015,
+            "edge": -0.0565,
             "source": "npb_official"
           }
         ]
@@ -431,14 +433,14 @@
     },
     "lineup_metadata": {
       "source_status": {
-        "home": "projected",
-        "away": "projected"
+        "home": "yahoo_starting_member",
+        "away": "yahoo_starting_member"
       },
-      "retrieved_at_utc": "2026-10-13T20:27:43.407319+00:00",
+      "retrieved_at_utc": "2026-10-14T08:58:26.851692+00:00",
       "source_url": "https://baseball.yahoo.co.jp/npb/game/2021039480/top",
       "raw_counts": {
-        "home": 0,
-        "away": 0
+        "home": 9,
+        "away": 9
       }
     },
     "home_bp_quality": {
@@ -841,33 +843,33 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.0212,
-        "raw_factor": 1.0258,
-        "mu": 4.483,
+        "factor": 0.9887,
+        "raw_factor": 0.9862,
+        "mu": 4.368,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.86,
-        "raw_factor": 0.8292,
-        "mu": 3.827,
+        "factor": 0.8138,
+        "raw_factor": 0.773,
+        "mu": 3.66,
         "weight": 0.4
       }
     },
     "weather": {
       "source": "open-meteo",
       "model": "air_density_v3",
-      "temp_c": 21.1,
-      "temp_f": 70.0,
-      "wind_mph": 11.5,
+      "temp_c": 20.6,
+      "temp_f": 69.1,
+      "wind_mph": 12.0,
       "wind_dir_label": "OUT(밀어줌)",
-      "wind_dot_of": 9.7,
+      "wind_dot_of": 9.6,
       "precip_prob": 0,
-      "humidity_pct": 51,
-      "air_density": 1.1949,
-      "density_delta_pct": 0.51,
-      "carry_dist_pct": 4.79,
-      "run_factor": 1.1163,
-      "factor": 1.1163
+      "humidity_pct": 59,
+      "air_density": 1.1972,
+      "density_delta_pct": 0.7,
+      "carry_dist_pct": 4.9,
+      "run_factor": 1.119,
+      "factor": 1.119
     },
     "umpire_detail": {
       "applied": 0.0
@@ -877,193 +879,181 @@
       "event_id": "742fec71adcaba7e30a940f83a6adffa",
       "commence_time": "2026-10-14T09:00:00Z",
       "market_updated_at": {
-        "h2h": "2026-10-13T15:36:01Z",
-        "totals": "2026-10-13T15:36:01Z"
+        "h2h": "2026-10-14T08:57:46Z",
+        "totals": "2026-10-14T08:57:46Z"
       },
-      "home_ml": 1.65,
-      "away_ml": 2.37,
-      "total": 5.0,
-      "over": 1.86,
-      "under": 1.99
+      "home_ml": 1.59,
+      "away_ml": 2.49,
+      "total": 4.5,
+      "over": 1.91,
+      "under": 1.94
     },
     "picks": [
       {
         "matchup": "DEN @ HAN",
         "market": "moneyline",
         "label": "HAN ML",
-        "prob": 0.50515,
-        "odds": 1.65,
-        "ev": -0.0644,
-        "kelly_raw": -0.1103,
-        "p_hat": 0.50515,
-        "kelly_f": -0.11026769076554689,
-        "ev_debiased": -0.06435250000000015,
+        "prob": 0.5104,
+        "odds": 1.59,
+        "ev": -0.0826,
+        "kelly_raw": -0.1566,
+        "p_hat": 0.5104,
+        "kelly_f": -0.15659981973221415,
+        "ev_debiased": -0.08261399999999997,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "push_prob": 0.10215,
+        "push_prob": 0.10585,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039480",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.56262181878933,
-        "selection_market_implied": 0.5895522388059701,
-        "selection_snapshot_id": "dd3a0725c024b29d407a6e643aae53294b4debbdd4dbcda711beb9e858a06549"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.5708214505396186,
+        "selection_market_implied": 0.6102941176470588,
+        "selection_snapshot_id": "1ad565631a7779ad043c9a618e9869c905ba307976d12f6ab88f746d6000f170"
       },
       {
         "matchup": "DEN @ HAN",
         "market": "moneyline",
         "label": "DEN ML",
-        "prob": 0.3927,
-        "odds": 2.37,
-        "ev": 0.0328,
-        "kelly_raw": 0.0267,
-        "p_hat": 0.3927,
-        "kelly_f": 0.026705320780502025,
-        "ev_debiased": 0.03284900000000013,
+        "prob": 0.38375,
+        "odds": 2.49,
+        "ev": 0.0614,
+        "kelly_raw": 0.0461,
+        "p_hat": 0.38375,
+        "kelly_f": 0.046076904802919275,
+        "ev_debiased": 0.06138749999999993,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "push_prob": 0.10215,
+        "push_prob": 0.10585,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039480",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.4373781812106699,
-        "selection_market_implied": 0.41044776119402976,
-        "selection_snapshot_id": "60a5a3aa9438d05b37c248b019b859921a69285f54eef8814f418b6e7c5e6e16"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.42917854946038136,
+        "selection_market_implied": 0.3897058823529411,
+        "selection_snapshot_id": "60724ebd77df0775ebbb4fa8d62b3e88276732dd7d364f284841ce7ed588f293"
       },
       {
         "matchup": "DEN @ HAN",
         "market": "total",
-        "label": "Over 5.0",
-        "prob": 0.7321602418227469,
-        "odds": 1.86,
-        "ev": 0.4275,
-        "kelly_raw": 0.5321,
-        "p_hat": 0.7321602418227469,
-        "kelly_f": 0.5320837380254295,
-        "ev_debiased": 0.42752502673965087,
+        "label": "Over 4.5",
+        "prob": 0.7825616740609049,
+        "odds": 1.91,
+        "ev": 0.4947,
+        "kelly_raw": 0.5436,
+        "p_hat": 0.7825616740609049,
+        "kelly_f": 0.543618458743218,
+        "ev_debiased": 0.49469279745632844,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 8.39,
-        "market_total": 5.0,
-        "push_prob": 0.06570697694934169,
+        "model_total": 8.07,
+        "market_total": 4.5,
+        "push_prob": 0.0,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039480",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.7836516208074567,
-        "selection_market_implied": 0.5168831168831169,
-        "selection_snapshot_id": "b603926950b1af9a1e93696d357b5a743b36c26b0c1d4256610b041236795a3b"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.7825616740609049,
+        "selection_market_implied": 0.5038961038961038,
+        "selection_snapshot_id": "f22023ba91d66cdac0f9705d2ea9212d9afcc8f719e9cba4a4b7c4437e435bb3"
       },
       {
         "matchup": "DEN @ HAN",
         "market": "total",
-        "label": "Under 5.0",
-        "prob": 0.20213278122791145,
-        "odds": 1.99,
-        "ev": -0.532,
-        "kelly_raw": -0.5752,
-        "p_hat": 0.20213278122791145,
-        "kelly_f": -0.5752189145523624,
-        "ev_debiased": -0.5320487884071146,
+        "label": "Under 4.5",
+        "prob": 0.21743832593909507,
+        "odds": 1.94,
+        "ev": -0.5782,
+        "kelly_raw": -0.6151,
+        "p_hat": 0.21743832593909507,
+        "kelly_f": -0.6150740932746336,
+        "ev_debiased": -0.5781696476781556,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 8.39,
-        "market_total": 5.0,
-        "push_prob": 0.06570697694934169,
+        "model_total": 8.07,
+        "market_total": 4.5,
+        "push_prob": 0.0,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039480",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.21634837919254332,
-        "selection_market_implied": 0.4831168831168831,
-        "selection_snapshot_id": "cd2993e85a85daf61af9b4688ee0b75bbd4f1de64940be813ab42e398fe1b811"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.21743832593909507,
+        "selection_market_implied": 0.49610389610389616,
+        "selection_snapshot_id": "ee28716fb2fce0453addb4a2b9577f3dae96110d79488779d40c05796e77e5a7"
       }
     ],
     "scores_top": [
       {
         "away": 2,
+        "home": 2,
+        "prob": 0.0222
+      },
+      {
+        "away": 1,
         "home": 3,
-        "prob": 0.0218
+        "prob": 0.0219
       },
       {
         "away": 2,
+        "home": 4,
+        "prob": 0.0215
+      },
+      {
+        "away": 1,
         "home": 2,
-        "prob": 0.0208
+        "prob": 0.0213
+      },
+      {
+        "away": 2,
+        "home": 3,
+        "prob": 0.0213
       },
       {
         "away": 3,
-        "home": 2,
+        "home": 3,
+        "prob": 0.0204
+      },
+      {
+        "away": 2,
+        "home": 1,
         "prob": 0.02
       },
       {
         "away": 3,
-        "home": 3,
-        "prob": 0.0198
-      },
-      {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0197
-      },
-      {
-        "away": 2,
-        "home": 1,
-        "prob": 0.0187
-      },
-      {
-        "away": 1,
         "home": 2,
-        "prob": 0.0186
-      },
-      {
-        "away": 1,
-        "home": 1,
-        "prob": 0.0181
+        "prob": 0.0191
       }
     ],
     "data_sources": {
@@ -1071,17 +1061,14 @@
       "away_hitting": "npb_official",
       "home_pitcher": "npb_official",
       "away_pitcher": "npb_official",
-      "home_lineup": "projected",
-      "away_lineup": "projected",
+      "home_lineup": "yahoo_starting_member",
+      "away_lineup": "yahoo_starting_member",
       "weather": "open-meteo",
       "odds": "live"
     },
     "data_quality": {
-      "level": "partial",
-      "missing": [
-        "홈 예상 라인업",
-        "원정 예상 라인업"
-      ]
+      "level": "full",
+      "missing": []
     },
     "analysis_retained": false
   },
@@ -1138,54 +1125,54 @@
     "away_pitcher_hand": "L",
     "model_version": "npb-raw-v1",
     "learning_correction_enabled": false,
-    "selection_lineup_confirmed": false,
-    "analysis_generated_at_utc": "2026-10-13T20:29:25.773183+00:00",
+    "selection_lineup_confirmed": true,
+    "analysis_generated_at_utc": "2026-10-14T08:59:50.150668+00:00",
     "market_total": 6.5,
     "environment_factor": 0.98,
-    "raw_home_pre_learn": 4.614,
-    "raw_away_pre_learn": 3.386,
+    "raw_home_pre_learn": 4.711,
+    "raw_away_pre_learn": 3.346,
     "home_pitcher_id": "モイネロ",
     "away_pitcher_id": "山﨑 福也",
-    "home_runs": 4.614095515112448,
-    "away_runs": 3.3860243781120003,
-    "total": 8.000119893224447,
-    "home_win_prob": 0.56095,
-    "away_win_prob": 0.33285,
-    "push_prob": 0.1062,
+    "home_runs": 4.710941605453824,
+    "away_runs": 3.3460190976,
+    "total": 8.056960703053825,
+    "home_win_prob": 0.5755,
+    "away_win_prob": 0.326,
+    "push_prob": 0.0985,
     "runline": {
-      "home_minus_1_5": 0.4566,
-      "home_plus_1_5": 0.7529,
-      "away_minus_1_5": 0.2471,
-      "away_plus_1_5": 0.5434
+      "home_minus_1_5": 0.46945,
+      "home_plus_1_5": 0.75985,
+      "away_minus_1_5": 0.24015,
+      "away_plus_1_5": 0.53055
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 4.998,
-        "runs_vs_bp": 4.916,
+        "runs_vs_sp": 5.073,
+        "runs_vs_bp": 4.983,
         "sp_share": 0.397,
         "expected_ip": 3.57,
-        "mu_full": 4.834,
-        "mu_f5": 2.349,
+        "mu_full": 4.896,
+        "mu_f5": 2.379,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "npb_zero_base_woba",
-          "batter_woba": 0.33,
+          "batter_woba": 0.3319,
           "pitcher_woba_against": 0.3129,
-          "matchup_woba": 0.3329,
+          "matchup_woba": 0.3348,
           "sp_path": {
-            "eff_woba": 0.3327,
-            "rpa": 0.1266,
-            "obp_eff": 0.3161,
-            "pa_per_inning": 4.386
+            "eff_woba": 0.3346,
+            "rpa": 0.1282,
+            "obp_eff": 0.3179,
+            "pa_per_inning": 4.398
           },
           "bp_path": {
-            "eff_woba": 0.3306,
-            "rpa": 0.1249,
-            "obp_eff": 0.3141,
-            "pa_per_inning": 4.374
+            "eff_woba": 0.3323,
+            "rpa": 0.1263,
+            "obp_eff": 0.3157,
+            "pa_per_inning": 4.384
           },
           "hand_factor": 1.0,
           "park": 0.98,
@@ -1195,134 +1182,64 @@
         }
       },
       "away": {
-        "runs_vs_sp": 3.768,
-        "runs_vs_bp": 3.78,
+        "runs_vs_sp": 3.715,
+        "runs_vs_bp": 3.731,
         "sp_share": 0.751,
         "expected_ip": 6.76,
-        "mu_full": 3.809,
-        "mu_f5": 2.299,
+        "mu_full": 3.764,
+        "mu_f5": 2.272,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "npb_zero_base_woba",
-          "batter_woba": 0.3271,
+          "batter_woba": 0.3256,
           "pitcher_woba_against": 0.2821,
-          "matchup_woba": 0.2992,
+          "matchup_woba": 0.2977,
           "sp_path": {
-            "eff_woba": 0.3,
-            "rpa": 0.0998,
-            "obp_eff": 0.285,
-            "pa_per_inning": 4.196
+            "eff_woba": 0.2985,
+            "rpa": 0.0986,
+            "obp_eff": 0.2836,
+            "pa_per_inning": 4.187
           },
           "bp_path": {
-            "eff_woba": 0.3003,
-            "rpa": 0.1001,
-            "obp_eff": 0.2853,
-            "pa_per_inning": 4.198
+            "eff_woba": 0.299,
+            "rpa": 0.0989,
+            "obp_eff": 0.284,
+            "pa_per_inning": 4.19
           },
           "hand_factor": 1.0,
           "park": 0.98,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.917
+          "bp_factor": 0.918
         }
       }
     },
     "f5": {
-      "home_xr": 2.45,
-      "away_xr": 1.97,
-      "total_xr": 4.42,
-      "home_win_prob": 0.4795,
+      "home_xr": 2.51,
+      "away_xr": 1.95,
+      "total_xr": 4.46,
+      "home_win_prob": 0.4884,
       "over_probs": {
-        "3.5": 0.5479,
-        "4.5": 0.4155,
-        "5.0": 0.3026
+        "3.5": 0.5516,
+        "4.5": 0.4229,
+        "5.0": 0.3101
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "山﨑 福也",
-        "lineup_woba": 0.3285,
-        "matchup_score": 1.0082,
+        "lineup_woba": 0.3307,
+        "matchup_score": 1.0127,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 0.9784,
-        "lineup_src": "projected",
+        "platoon": 0.9903,
+        "lineup_src": "yahoo_starting_member",
         "batters": [
           {
             "order": 1,
-            "name": "栗原 陵矢",
-            "hand": "L",
-            "pa": 628,
-            "woba": 0.371,
-            "ops": 0.886,
-            "platoon": 0.96,
-            "matchup_woba": 0.398,
-            "k_pct": 0.115,
-            "hr_pct": 0.07,
-            "edge": 0.014,
-            "source": "npb_official"
-          },
-          {
-            "order": 2,
-            "name": "近藤 健介",
-            "hand": "L",
-            "pa": 601,
-            "woba": 0.392,
-            "ops": 0.95,
-            "platoon": 0.96,
-            "matchup_woba": 0.42,
-            "k_pct": 0.102,
-            "hr_pct": 0.059,
-            "edge": 0.004,
-            "source": "npb_official"
-          },
-          {
-            "order": 3,
-            "name": "周東 佑京",
-            "hand": "L",
-            "pa": 550,
-            "woba": 0.31,
-            "ops": 0.7,
-            "platoon": 0.96,
-            "matchup_woba": 0.291,
-            "k_pct": 0.093,
-            "hr_pct": 0.013,
-            "edge": -0.0166,
-            "source": "npb_official"
-          },
-          {
-            "order": 4,
-            "name": "牧原 大成",
-            "hand": "L",
-            "pa": 511,
-            "woba": 0.317,
-            "ops": 0.722,
-            "platoon": 0.96,
-            "matchup_woba": 0.302,
-            "k_pct": 0.109,
-            "hr_pct": 0.016,
-            "edge": -0.0145,
-            "source": "npb_official"
-          },
-          {
-            "order": 5,
-            "name": "柳田 悠岐",
-            "hand": "L",
-            "pa": 495,
-            "woba": 0.344,
-            "ops": 0.803,
-            "platoon": 0.96,
-            "matchup_woba": 0.351,
-            "k_pct": 0.111,
-            "hr_pct": 0.044,
-            "edge": 0.0014,
-            "source": "npb_official"
-          },
-          {
-            "order": 6,
             "name": "正木 智也",
             "hand": "R",
             "pa": 478,
@@ -1336,7 +1253,91 @@
             "source": "npb_official"
           },
           {
+            "order": 2,
+            "name": "周東 佑京",
+            "hand": "L",
+            "pa": 550,
+            "woba": 0.31,
+            "ops": 0.7,
+            "platoon": 0.96,
+            "matchup_woba": 0.291,
+            "k_pct": 0.093,
+            "hr_pct": 0.013,
+            "edge": -0.0166,
+            "source": "npb_official"
+          },
+          {
+            "order": 3,
+            "name": "近藤 健介",
+            "hand": "L",
+            "pa": 601,
+            "woba": 0.392,
+            "ops": 0.95,
+            "platoon": 0.96,
+            "matchup_woba": 0.42,
+            "k_pct": 0.102,
+            "hr_pct": 0.059,
+            "edge": 0.004,
+            "source": "npb_official"
+          },
+          {
+            "order": 4,
+            "name": "栗原 陵矢",
+            "hand": "L",
+            "pa": 628,
+            "woba": 0.371,
+            "ops": 0.886,
+            "platoon": 0.96,
+            "matchup_woba": 0.398,
+            "k_pct": 0.115,
+            "hr_pct": 0.07,
+            "edge": 0.014,
+            "source": "npb_official"
+          },
+          {
+            "order": 5,
+            "name": "牧原 大成",
+            "hand": "L",
+            "pa": 511,
+            "woba": 0.317,
+            "ops": 0.722,
+            "platoon": 0.96,
+            "matchup_woba": 0.302,
+            "k_pct": 0.109,
+            "hr_pct": 0.016,
+            "edge": -0.0145,
+            "source": "npb_official"
+          },
+          {
+            "order": 6,
+            "name": "山本 祐大",
+            "hand": "R",
+            "pa": 209,
+            "woba": 0.317,
+            "ops": 0.72,
+            "platoon": 1.05,
+            "matchup_woba": 0.332,
+            "k_pct": 0.108,
+            "hr_pct": 0.035,
+            "edge": -0.0033,
+            "source": "npb_official"
+          },
+          {
             "order": 7,
+            "name": "山川 穂高",
+            "hand": "R",
+            "pa": 212,
+            "woba": 0.305,
+            "ops": 0.684,
+            "platoon": 1.05,
+            "matchup_woba": 0.35,
+            "k_pct": 0.163,
+            "hr_pct": 0.053,
+            "edge": 0.006,
+            "source": "npb_official"
+          },
+          {
+            "order": 8,
             "name": "柳町 達",
             "hand": "L",
             "pa": 318,
@@ -1350,7 +1351,7 @@
             "source": "npb_official"
           },
           {
-            "order": 8,
+            "order": 9,
             "name": "庄子 雄大",
             "hand": "L",
             "pa": 304,
@@ -1362,132 +1363,34 @@
             "hr_pct": 0.012,
             "edge": -0.0157,
             "source": "npb_official"
-          },
-          {
-            "order": 9,
-            "name": "海野 隆司",
-            "hand": "R",
-            "pa": 271,
-            "woba": 0.269,
-            "ops": 0.576,
-            "platoon": 1.05,
-            "matchup_woba": 0.264,
-            "k_pct": 0.15,
-            "hr_pct": 0.014,
-            "edge": -0.014,
-            "source": "npb_official"
           }
         ]
       },
       "away": {
         "vs_pitcher": "モイネロ",
-        "lineup_woba": 0.3269,
-        "matchup_score": 0.9725,
+        "lineup_woba": 0.3251,
+        "matchup_score": 0.9717,
         "coverage": 1.0,
         "bu_weight": 0.85,
-        "platoon": 1.0188,
-        "lineup_src": "projected",
+        "platoon": 1.032,
+        "lineup_src": "yahoo_starting_member",
         "batters": [
           {
             "order": 1,
-            "name": "水野 達稀",
-            "hand": "L",
-            "pa": 553,
-            "woba": 0.333,
-            "ops": 0.768,
-            "platoon": 0.96,
-            "matchup_woba": 0.178,
-            "k_pct": 0.149,
-            "hr_pct": 0.014,
-            "edge": -0.1465,
+            "name": "山縣 秀",
+            "hand": "R",
+            "pa": 107,
+            "woba": 0.284,
+            "ops": 0.621,
+            "platoon": 1.05,
+            "matchup_woba": 0.16,
+            "k_pct": 0.143,
+            "hr_pct": 0.01,
+            "edge": -0.1368,
             "source": "npb_official"
           },
           {
             "order": 2,
-            "name": "レイエス",
-            "hand": "R",
-            "pa": 531,
-            "woba": 0.376,
-            "ops": 0.901,
-            "platoon": 1.05,
-            "matchup_woba": 0.248,
-            "k_pct": 0.165,
-            "hr_pct": 0.04,
-            "edge": -0.1715,
-            "source": "npb_official"
-          },
-          {
-            "order": 3,
-            "name": "清宮 幸太郎",
-            "hand": "L",
-            "pa": 513,
-            "woba": 0.325,
-            "ops": 0.747,
-            "platoon": 0.96,
-            "matchup_woba": 0.2,
-            "k_pct": 0.176,
-            "hr_pct": 0.028,
-            "edge": -0.1367,
-            "source": "npb_official"
-          },
-          {
-            "order": 4,
-            "name": "万波 中正",
-            "hand": "R",
-            "pa": 466,
-            "woba": 0.329,
-            "ops": 0.757,
-            "platoon": 1.05,
-            "matchup_woba": 0.21,
-            "k_pct": 0.21,
-            "hr_pct": 0.03,
-            "edge": -0.1509,
-            "source": "npb_official"
-          },
-          {
-            "order": 5,
-            "name": "野村 佑希",
-            "hand": "R",
-            "pa": 429,
-            "woba": 0.315,
-            "ops": 0.714,
-            "platoon": 1.05,
-            "matchup_woba": 0.195,
-            "k_pct": 0.185,
-            "hr_pct": 0.027,
-            "edge": -0.1472,
-            "source": "npb_official"
-          },
-          {
-            "order": 6,
-            "name": "郡司 裕也",
-            "hand": "R",
-            "pa": 381,
-            "woba": 0.315,
-            "ops": 0.714,
-            "platoon": 1.05,
-            "matchup_woba": 0.202,
-            "k_pct": 0.137,
-            "hr_pct": 0.015,
-            "edge": -0.1514,
-            "source": "npb_official"
-          },
-          {
-            "order": 7,
-            "name": "田宮 裕涼",
-            "hand": "L",
-            "pa": 289,
-            "woba": 0.309,
-            "ops": 0.697,
-            "platoon": 0.96,
-            "matchup_woba": 0.161,
-            "k_pct": 0.172,
-            "hr_pct": 0.016,
-            "edge": -0.1329,
-            "source": "npb_official"
-          },
-          {
-            "order": 8,
             "name": "奈良間 大己",
             "hand": "R",
             "pa": 250,
@@ -1501,17 +1404,101 @@
             "source": "npb_official"
           },
           {
-            "order": 9,
-            "name": "カストロ",
+            "order": 3,
+            "name": "郡司 裕也",
             "hand": "R",
-            "pa": 222,
-            "woba": 0.298,
-            "ops": 0.664,
+            "pa": 381,
+            "woba": 0.315,
+            "ops": 0.714,
             "platoon": 1.05,
-            "matchup_woba": 0.186,
-            "k_pct": 0.213,
-            "hr_pct": 0.023,
-            "edge": -0.1383,
+            "matchup_woba": 0.202,
+            "k_pct": 0.137,
+            "hr_pct": 0.015,
+            "edge": -0.1514,
+            "source": "npb_official"
+          },
+          {
+            "order": 4,
+            "name": "野村 佑希",
+            "hand": "R",
+            "pa": 429,
+            "woba": 0.315,
+            "ops": 0.714,
+            "platoon": 1.05,
+            "matchup_woba": 0.195,
+            "k_pct": 0.185,
+            "hr_pct": 0.027,
+            "edge": -0.1472,
+            "source": "npb_official"
+          },
+          {
+            "order": 5,
+            "name": "万波 中正",
+            "hand": "R",
+            "pa": 466,
+            "woba": 0.329,
+            "ops": 0.757,
+            "platoon": 1.05,
+            "matchup_woba": 0.21,
+            "k_pct": 0.21,
+            "hr_pct": 0.03,
+            "edge": -0.1509,
+            "source": "npb_official"
+          },
+          {
+            "order": 6,
+            "name": "レイエス",
+            "hand": "R",
+            "pa": 531,
+            "woba": 0.376,
+            "ops": 0.901,
+            "platoon": 1.05,
+            "matchup_woba": 0.248,
+            "k_pct": 0.165,
+            "hr_pct": 0.04,
+            "edge": -0.1715,
+            "source": "npb_official"
+          },
+          {
+            "order": 7,
+            "name": "柴田 獅子",
+            "hand": "L",
+            "pa": 32,
+            "woba": 0.321,
+            "ops": 0.733,
+            "platoon": 0.96,
+            "matchup_woba": 0.172,
+            "k_pct": 0.171,
+            "hr_pct": 0.016,
+            "edge": -0.1385,
+            "source": "npb_official"
+          },
+          {
+            "order": 8,
+            "name": "進藤 勇也",
+            "hand": "R",
+            "pa": 160,
+            "woba": 0.314,
+            "ops": 0.713,
+            "platoon": 1.05,
+            "matchup_woba": 0.19,
+            "k_pct": 0.222,
+            "hr_pct": 0.027,
+            "edge": -0.1384,
+            "source": "npb_official"
+          },
+          {
+            "order": 9,
+            "name": "水野 達稀",
+            "hand": "L",
+            "pa": 553,
+            "woba": 0.333,
+            "ops": 0.768,
+            "platoon": 0.96,
+            "matchup_woba": 0.178,
+            "k_pct": 0.149,
+            "hr_pct": 0.014,
+            "edge": -0.1465,
             "source": "npb_official"
           }
         ]
@@ -1519,14 +1506,14 @@
     },
     "lineup_metadata": {
       "source_status": {
-        "home": "projected",
-        "away": "projected"
+        "home": "yahoo_starting_member",
+        "away": "yahoo_starting_member"
       },
-      "retrieved_at_utc": "2026-10-13T20:28:56.504627+00:00",
+      "retrieved_at_utc": "2026-10-14T08:59:27.121456+00:00",
       "source_url": "https://baseball.yahoo.co.jp/npb/game/2021039486/top",
       "raw_counts": {
-        "home": 0,
-        "away": 0
+        "home": 9,
+        "away": 9
       }
     },
     "home_bp_quality": {
@@ -1857,15 +1844,15 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 1.0598,
-        "raw_factor": 1.0729,
-        "mu": 4.284,
+        "factor": 1.1024,
+        "raw_factor": 1.1249,
+        "mu": 4.433,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.6294,
-        "raw_factor": 0.5481,
-        "mu": 2.752,
+        "factor": 0.62,
+        "raw_factor": 0.5191,
+        "mu": 2.719,
         "weight": 0.4
       }
     },
@@ -1883,193 +1870,181 @@
       "event_id": "a6ad5c4b3f9cfec00592bc83ce5bbe5c",
       "commence_time": "2026-10-14T09:00:00Z",
       "market_updated_at": {
-        "h2h": "2026-10-13T15:36:01Z",
-        "totals": "2026-10-13T15:36:01Z"
+        "h2h": "2026-10-14T08:57:46Z",
+        "totals": "2026-10-14T08:57:46Z"
       },
-      "home_ml": 1.32,
-      "away_ml": 3.6,
+      "home_ml": 1.29,
+      "away_ml": 3.82,
       "total": 6.5,
-      "over": 1.94,
-      "under": 1.91
+      "over": 2.1,
+      "under": 1.78
     },
     "picks": [
       {
         "matchup": "NIP @ SOF",
         "market": "moneyline",
         "label": "SOF ML",
-        "prob": 0.56095,
-        "odds": 1.32,
-        "ev": -0.1533,
-        "kelly_raw": -0.5361,
-        "p_hat": 0.56095,
-        "kelly_f": -0.5361448310584023,
-        "ev_debiased": -0.1533460000000001,
+        "prob": 0.5755,
+        "odds": 1.29,
+        "ev": -0.1591,
+        "kelly_raw": -0.6086,
+        "p_hat": 0.5755,
+        "kelly_f": -0.6085833954902746,
+        "ev_debiased": -0.15910499999999994,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "push_prob": 0.1062,
+        "push_prob": 0.0985,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039486",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.6276012530767509,
-        "selection_market_implied": 0.7317073170731706,
-        "selection_snapshot_id": "71fa1d62b5ca1e8313c4dc9040f2f96460c7997d25997cf1a5d8c1232bfce543"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.6383804769828064,
+        "selection_market_implied": 0.7475538160469667,
+        "selection_snapshot_id": "a985c318d269ea7a7bcbfcd421ac6f63b1831a52c0e27767d84fa1b97bf9511c"
       },
       {
         "matchup": "NIP @ SOF",
         "market": "moneyline",
         "label": "NIP ML",
-        "prob": 0.33285,
-        "odds": 3.6,
-        "ev": 0.3045,
-        "kelly_raw": 0.131,
-        "p_hat": 0.33285,
-        "kelly_f": 0.1310136495860371,
-        "ev_debiased": 0.30445999999999995,
+        "prob": 0.326,
+        "odds": 3.82,
+        "ev": 0.3438,
+        "kelly_raw": 0.1352,
+        "p_hat": 0.326,
+        "kelly_f": 0.13524346734953174,
+        "ev_debiased": 0.34382,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "push_prob": 0.1062,
+        "push_prob": 0.0985,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039486",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.37239874692324904,
-        "selection_market_implied": 0.26829268292682923,
-        "selection_snapshot_id": "f50ed63d65270ab3df8008b90cdb87eab03982f2c46d6cbfd5795168008203be"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.3616195230171936,
+        "selection_market_implied": 0.25244618395303325,
+        "selection_snapshot_id": "4e12e77f228726fb170d912fc2e4085a7dc66d631dcf8bf433c3fe1e17ce57c3"
       },
       {
         "matchup": "NIP @ SOF",
         "market": "total",
         "label": "Over 6.5",
-        "prob": 0.632238430597716,
-        "odds": 1.94,
-        "ev": 0.2265,
-        "kelly_raw": 0.241,
-        "p_hat": 0.632238430597716,
-        "kelly_f": 0.2410027184676266,
-        "ev_debiased": 0.22654255535956902,
+        "prob": 0.6365767457781448,
+        "odds": 2.1,
+        "ev": 0.3368,
+        "kelly_raw": 0.3062,
+        "p_hat": 0.6365767457781448,
+        "kelly_f": 0.306191969212822,
+        "ev_debiased": 0.3368111661341042,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 8.04,
+        "model_total": 8.1,
         "market_total": 6.5,
         "push_prob": 0.0,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039486",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.632238430597716,
-        "selection_market_implied": 0.49610389610389616,
-        "selection_snapshot_id": "22aff8ef27adb5d8edaff750696e65debdfc99cc85fe93898e14881a93c4ece1"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.6365767457781448,
+        "selection_market_implied": 0.45876288659793807,
+        "selection_snapshot_id": "a95e71e5a887cfd3b881be3c1b482a9c20c9ee0ce2804d1ecc497433a6f497d6"
       },
       {
         "matchup": "NIP @ SOF",
         "market": "total",
         "label": "Under 6.5",
-        "prob": 0.367761569402284,
-        "odds": 1.91,
-        "ev": -0.2976,
-        "kelly_raw": -0.327,
-        "p_hat": 0.367761569402284,
-        "kelly_f": -0.3270059367490523,
-        "ev_debiased": -0.2975754024416376,
+        "prob": 0.36342325422185523,
+        "odds": 1.78,
+        "ev": -0.3531,
+        "kelly_raw": -0.4527,
+        "p_hat": 0.36342325422185523,
+        "kelly_f": -0.45270077882704834,
+        "ev_debiased": -0.3531066074850977,
         "stake": 0,
         "stake_base": 50,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 8.04,
+        "model_total": 8.1,
         "market_total": 6.5,
         "push_prob": 0.0,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
-        "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
-        ],
-        "selection_status": "data_quality",
+        "selection_lineup_confirmed": true,
+        "selection_reasons": [],
+        "selection_status": "insufficient_history",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "2021039486",
         "game_date_kst": "2026-10-14",
         "scheduled_start_utc": "2026-10-14T09:00:00+00:00",
-        "captured_at_utc": "2026-10-13T20:29:25.773220+00:00",
-        "selection_model_prob": 0.367761569402284,
-        "selection_market_implied": 0.5038961038961038,
-        "selection_snapshot_id": "ce0695e80056ef07aa5f280e76190e2abb2b135368b0fbcacaa439a5e668a4b3"
+        "captured_at_utc": "2026-10-14T08:59:50.150718+00:00",
+        "selection_model_prob": 0.36342325422185523,
+        "selection_market_implied": 0.5412371134020618,
+        "selection_snapshot_id": "e4bc22cc7a9261d9256f665772dd7214dc369fce167fbec16da3adc1cb50fd16"
       }
     ],
     "scores_top": [
       {
-        "away": 1,
-        "home": 3,
-        "prob": 0.0243
-      },
-      {
         "away": 2,
         "home": 3,
-        "prob": 0.0223
+        "prob": 0.0236
+      },
+      {
+        "away": 1,
+        "home": 3,
+        "prob": 0.0233
       },
       {
         "away": 1,
         "home": 2,
-        "prob": 0.0222
+        "prob": 0.0225
+      },
+      {
+        "away": 1,
+        "home": 4,
+        "prob": 0.0221
       },
       {
         "away": 2,
         "home": 2,
-        "prob": 0.0214
+        "prob": 0.0208
+      },
+      {
+        "away": 2,
+        "home": 4,
+        "prob": 0.0207
       },
       {
         "away": 1,
         "home": 1,
-        "prob": 0.0209
+        "prob": 0.0187
       },
       {
-        "away": 2,
-        "home": 4,
-        "prob": 0.0199
-      },
-      {
-        "away": 1,
-        "home": 4,
-        "prob": 0.0198
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0192
+        "away": 0,
+        "home": 3,
+        "prob": 0.0184
       }
     ],
     "data_sources": {
@@ -2077,17 +2052,14 @@
       "away_hitting": "npb_official",
       "home_pitcher": "npb_official",
       "away_pitcher": "npb_official",
-      "home_lineup": "projected",
-      "away_lineup": "projected",
+      "home_lineup": "yahoo_starting_member",
+      "away_lineup": "yahoo_starting_member",
       "weather": "indoor",
       "odds": "live"
     },
     "data_quality": {
-      "level": "partial",
-      "missing": [
-        "홈 예상 라인업",
-        "원정 예상 라인업"
-      ]
+      "level": "full",
+      "missing": []
     },
     "analysis_retained": false
   }
