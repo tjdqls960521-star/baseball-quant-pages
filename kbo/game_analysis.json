@@ -1,7 +1,7 @@
 [
   {
     "game_pk": "33331020HTLG02026",
-    "status": "BEFORE",
+    "status": "READY",
     "time_kst": "2026-10-20T18:30:00",
     "game_date_kst": "2026-10-20",
     "venue": "잠실",
@@ -66,52 +66,52 @@
     "umpire": "",
     "model_version": "kbo-raw-v1",
     "learning_correction_enabled": false,
-    "selection_lineup_confirmed": false,
-    "analysis_generated_at_utc": "2026-10-20T06:41:45.441913+00:00",
+    "selection_lineup_confirmed": true,
+    "analysis_generated_at_utc": "2026-10-20T08:46:25.061480+00:00",
     "market_total": 8.5,
-    "environment_factor": 0.9071,
-    "raw_home_pre_learn": 5.325,
-    "raw_away_pre_learn": 4.717,
-    "home_runs": 5.324724786793065,
-    "away_runs": 4.716786439446369,
-    "total": 10.041511226239434,
-    "home_win_prob": 0.50525,
-    "away_win_prob": 0.40695,
-    "push_prob": 0.0878,
+    "environment_factor": 0.8942,
+    "raw_home_pre_learn": 5.519,
+    "raw_away_pre_learn": 4.81,
+    "home_runs": 5.519387082566432,
+    "away_runs": 4.810187083508591,
+    "total": 10.329574166075023,
+    "home_win_prob": 0.5117,
+    "away_win_prob": 0.4022,
+    "push_prob": 0.0861,
     "runline": {
-      "home_minus_1_5": 0.4159,
-      "home_plus_1_5": 0.67375,
-      "away_minus_1_5": 0.32625,
-      "away_plus_1_5": 0.5841
+      "home_minus_1_5": 0.4268,
+      "home_plus_1_5": 0.67605,
+      "away_minus_1_5": 0.32395,
+      "away_plus_1_5": 0.5732
     },
     "inning_split": {
       "home": {
-        "runs_vs_sp": 5.792,
-        "runs_vs_bp": 5.791,
+        "runs_vs_sp": 6.045,
+        "runs_vs_bp": 6.049,
         "sp_share": 0.511,
         "expected_ip": 4.6,
-        "mu_full": 5.762,
-        "mu_f5": 2.771,
+        "mu_full": 5.986,
+        "mu_f5": 2.876,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3424,
+          "batter_woba": 0.3491,
           "pitcher_woba_against": 0.343,
-          "matchup_woba": 0.3454,
+          "matchup_woba": 0.3521,
           "sp_path": {
-            "eff_woba": 0.345,
-            "rpa": 0.1442,
-            "obp_eff": 0.3278,
-            "pa_per_inning": 4.463
+            "eff_woba": 0.3511,
+            "rpa": 0.1492,
+            "obp_eff": 0.3335,
+            "pa_per_inning": 4.501
           },
           "bp_path": {
-            "eff_woba": 0.345,
-            "rpa": 0.1442,
-            "obp_eff": 0.3278,
-            "pa_per_inning": 4.463
+            "eff_woba": 0.3512,
+            "rpa": 0.1493,
+            "obp_eff": 0.3336,
+            "pa_per_inning": 4.502
           },
           "hand_factor": 1.0,
           "park": 0.94,
@@ -121,38 +121,38 @@
         }
       },
       "away": {
-        "runs_vs_sp": 5.38,
-        "runs_vs_bp": 5.37,
+        "runs_vs_sp": 5.532,
+        "runs_vs_bp": 5.522,
         "sp_share": 0.611,
         "expected_ip": 5.5,
-        "mu_full": 5.37,
-        "mu_f5": 2.994,
+        "mu_full": 5.503,
+        "mu_f5": 3.069,
         "hr_env": {
           "hr_env_pct": null,
           "applied": 0.0
         },
         "components": {
           "method": "kbo_zero_base_woba",
-          "batter_woba": 0.3535,
+          "batter_woba": 0.3576,
           "pitcher_woba_against": 0.3207,
-          "matchup_woba": 0.3342,
+          "matchup_woba": 0.3383,
           "sp_path": {
-            "eff_woba": 0.335,
-            "rpa": 0.1358,
-            "obp_eff": 0.3183,
-            "pa_per_inning": 4.401
+            "eff_woba": 0.3388,
+            "rpa": 0.139,
+            "obp_eff": 0.3218,
+            "pa_per_inning": 4.424
           },
           "bp_path": {
-            "eff_woba": 0.3348,
-            "rpa": 0.1356,
-            "obp_eff": 0.318,
-            "pa_per_inning": 4.399
+            "eff_woba": 0.3385,
+            "rpa": 0.1387,
+            "obp_eff": 0.3216,
+            "pa_per_inning": 4.422
           },
           "hand_factor": 1.0,
           "park": 0.94,
           "hr_adj": 1.0,
           "home_mult": 1.0,
-          "bp_factor": 0.995
+          "bp_factor": 0.994
         }
       }
     },
@@ -161,41 +161,41 @@
       "model": "air_density_v3",
       "temp_c": 17.9,
       "temp_f": 64.2,
-      "wind_mph": 4.0,
-      "wind_dir_label": "교차풍",
-      "wind_dot_of": -4.5,
+      "wind_mph": 5.5,
+      "wind_dir_label": "IN(억제)",
+      "wind_dot_of": -5.7,
       "precip_prob": 6,
-      "humidity_pct": 65,
-      "air_density": 1.2086,
-      "density_delta_pct": 1.66,
-      "carry_dist_pct": -1.51,
-      "run_factor": 0.965,
-      "factor": 0.965
+      "humidity_pct": 64,
+      "air_density": 1.2093,
+      "density_delta_pct": 1.72,
+      "carry_dist_pct": -2.14,
+      "run_factor": 0.9513,
+      "factor": 0.9513
     },
     "umpire_detail": {
       "applied": 0.0
     },
     "f5": {
-      "home_xr": 2.89,
-      "away_xr": 2.52,
-      "total_xr": 5.41,
-      "home_win_prob": 0.47,
+      "home_xr": 2.96,
+      "away_xr": 2.6,
+      "total_xr": 5.56,
+      "home_win_prob": 0.4698,
       "over_probs": {
-        "4.5": 0.5425,
-        "5.0": 0.421,
-        "5.5": 0.421
+        "4.5": 0.5504,
+        "5.0": 0.438,
+        "5.5": 0.438
       }
     },
     "lineup_metadata": {
       "source_status": {
-        "home": "projected",
-        "away": "projected"
+        "home": "naver_published_lineup",
+        "away": "naver_published_lineup"
       },
-      "retrieved_at_utc": "2026-10-20T06:41:45.398115+00:00",
+      "retrieved_at_utc": "2026-10-20T08:46:02.334533+00:00",
       "source_url": "https://api-gw.sports.naver.com/schedule/games/33331020HTLG02026/preview",
       "raw_counts": {
-        "home": 0,
-        "away": 0
+        "home": 9,
+        "away": 9
       }
     },
     "pitcher_detail": {
@@ -348,23 +348,23 @@
     },
     "sabermetric_detail": {
       "home_lineup_rate": {
-        "k_pct": 0.167,
-        "bb_pct": 0.1309,
-        "hr_pct": 0.0203,
-        "iso": 0.1457,
-        "babip": 0.3311,
-        "pa": 443,
-        "n_batters": 9,
+        "k_pct": 0.1391,
+        "bb_pct": 0.1272,
+        "hr_pct": 0.0266,
+        "iso": 0.1681,
+        "babip": 0.3264,
+        "pa": 338,
+        "n_batters": 8,
         "_present": true
       },
       "away_lineup_rate": {
-        "k_pct": 0.1625,
-        "bb_pct": 0.1261,
-        "hr_pct": 0.0168,
-        "iso": 0.1269,
-        "babip": 0.3024,
-        "pa": 357,
-        "n_batters": 9,
+        "k_pct": 0.1667,
+        "bb_pct": 0.1519,
+        "hr_pct": 0.0222,
+        "iso": 0.1476,
+        "babip": 0.309,
+        "pa": 270,
+        "n_batters": 8,
         "_present": true
       }
     },
@@ -372,14 +372,14 @@
       "home_season": {
         "rpg": 5.122147651006711,
         "ops": 0.72,
-        "woba": 0.3424,
+        "woba": 0.3491,
         "iso": 0.13,
         "avg": 0.26
       },
       "away_season": {
         "rpg": 5.122147651006711,
         "ops": 0.72,
-        "woba": 0.3535,
+        "woba": 0.3576,
         "iso": 0.13,
         "avg": 0.26
       },
@@ -404,22 +404,22 @@
       "away_vs_lhp": null,
       "away_vs_rhp": null,
       "home_top_player": {
-        "name": "신민재",
+        "name": "문정빈",
         "position": "",
         "season": {
-          "ab": 399,
-          "hit": 100,
-          "hr": 0,
-          "rbi": 26,
-          "avg": 0.251,
-          "obp": 0.33
+          "ab": 292,
+          "hit": 81,
+          "hr": 19,
+          "rbi": 66,
+          "avg": 0.277,
+          "obp": 0.352
         },
         "recent5": {
-          "ab": 11,
-          "hit": 5,
-          "hr": 0,
-          "rbi": 1,
-          "avg": 0.455,
+          "ab": 20,
+          "hit": 9,
+          "hr": 1,
+          "rbi": 4,
+          "avg": 0.45,
           "_present": true
         }
       },
@@ -836,26 +836,26 @@
     },
     "markov_detail": {
       "home": {
-        "factor": 0.9323,
-        "raw_factor": 0.9174,
-        "mu": 4.744,
+        "factor": 0.9813,
+        "raw_factor": 0.9772,
+        "mu": 4.897,
         "weight": 0.4
       },
       "away": {
-        "factor": 0.7313,
-        "raw_factor": 0.6723,
-        "mu": 3.813,
+        "factor": 0.7503,
+        "raw_factor": 0.6955,
+        "mu": 3.849,
         "weight": 0.4
       }
     },
     "lineup_detail": {
       "home": {
         "vs_pitcher": "시라카와",
-        "lineup_woba": 0.3451,
-        "matchup_score": 1.0189,
+        "lineup_woba": 0.3534,
+        "matchup_score": 1.0191,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 1.0272,
+        "platoon": 1.0047,
         "arsenal_mult": 0.9913,
         "bullpen_workload": {
           "games_last3": 2,
@@ -864,40 +864,10 @@
           "factor": 1.062,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver_published_lineup",
         "batters": [
           {
             "order": 1,
-            "name": "홍창기",
-            "hand": "L",
-            "pa": 518,
-            "woba": 0.317,
-            "ops": 0.676,
-            "platoon": 1.045,
-            "matchup_woba": 0.36,
-            "k_pct": 0.23,
-            "hr_pct": 0.007,
-            "edge": 0.0083,
-            "vs_hand_ops": null,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 2,
-            "name": "오스틴",
-            "hand": "R",
-            "pa": 640,
-            "woba": 0.428,
-            "ops": 1.012,
-            "platoon": 0.97,
-            "matchup_woba": 0.445,
-            "k_pct": 0.175,
-            "hr_pct": 0.057,
-            "edge": 0.0061,
-            "vs_hand_ops": null,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 3,
             "name": "박해민",
             "hand": "L",
             "pa": 591,
@@ -912,52 +882,7 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 4,
-            "name": "박동원",
-            "hand": "R",
-            "pa": 420,
-            "woba": 0.335,
-            "ops": 0.731,
-            "platoon": 0.97,
-            "matchup_woba": 0.347,
-            "k_pct": 0.257,
-            "hr_pct": 0.031,
-            "edge": 0.0092,
-            "vs_hand_ops": null,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 5,
-            "name": "문성주",
-            "hand": "L",
-            "pa": 244,
-            "woba": 0.328,
-            "ops": 0.71,
-            "platoon": 1.045,
-            "matchup_woba": 0.338,
-            "k_pct": 0.147,
-            "hr_pct": 0.014,
-            "edge": -0.0119,
-            "vs_hand_ops": null,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 6,
-            "name": "신민재",
-            "hand": "L",
-            "pa": 458,
-            "woba": 0.303,
-            "ops": 0.634,
-            "platoon": 1.045,
-            "matchup_woba": 0.315,
-            "k_pct": 0.156,
-            "hr_pct": 0.007,
-            "edge": -0.0079,
-            "vs_hand_ops": null,
-            "source": "kbo_player_detail"
-          },
-          {
-            "order": 7,
+            "order": 2,
             "name": "오지환",
             "hand": "L",
             "pa": 452,
@@ -972,22 +897,37 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 8,
-            "name": "천성호",
-            "hand": "L",
-            "pa": 251,
-            "woba": 0.335,
-            "ops": 0.731,
-            "platoon": 1.045,
-            "matchup_woba": 0.331,
-            "k_pct": 0.183,
-            "hr_pct": 0.016,
-            "edge": -0.017,
+            "order": 3,
+            "name": "오스틴",
+            "hand": "R",
+            "pa": 640,
+            "woba": 0.428,
+            "ops": 1.012,
+            "platoon": 0.97,
+            "matchup_woba": 0.445,
+            "k_pct": 0.175,
+            "hr_pct": 0.057,
+            "edge": 0.0061,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
           },
           {
-            "order": 9,
+            "order": 4,
+            "name": "송찬의",
+            "hand": "R",
+            "pa": 434,
+            "woba": 0.367,
+            "ops": 0.827,
+            "platoon": 0.97,
+            "matchup_woba": 0.366,
+            "k_pct": 0.256,
+            "hr_pct": 0.034,
+            "edge": -0.0008,
+            "vs_hand_ops": null,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 5,
             "name": "문보경",
             "hand": "L",
             "pa": 428,
@@ -1000,16 +940,76 @@
             "edge": 0.0041,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
+          },
+          {
+            "order": 6,
+            "name": "문정빈",
+            "hand": "R",
+            "pa": 330,
+            "woba": 0.376,
+            "ops": 0.853,
+            "platoon": 0.97,
+            "matchup_woba": 0.374,
+            "k_pct": 0.316,
+            "hr_pct": 0.047,
+            "edge": -0.0001,
+            "vs_hand_ops": null,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
+            "name": "문성주",
+            "hand": "L",
+            "pa": 244,
+            "woba": 0.328,
+            "ops": 0.71,
+            "platoon": 1.045,
+            "matchup_woba": 0.338,
+            "k_pct": 0.147,
+            "hr_pct": 0.014,
+            "edge": -0.0119,
+            "vs_hand_ops": null,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 8,
+            "name": "박동원",
+            "hand": "R",
+            "pa": 420,
+            "woba": 0.335,
+            "ops": 0.731,
+            "platoon": 0.97,
+            "matchup_woba": 0.347,
+            "k_pct": 0.257,
+            "hr_pct": 0.031,
+            "edge": 0.0092,
+            "vs_hand_ops": null,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 9,
+            "name": "구본혁",
+            "hand": "R",
+            "pa": 390,
+            "woba": 0.32,
+            "ops": 0.683,
+            "platoon": 0.97,
+            "matchup_woba": 0.301,
+            "k_pct": 0.154,
+            "hr_pct": 0.008,
+            "edge": -0.012,
+            "vs_hand_ops": null,
+            "source": "kbo_player_detail"
           }
         ]
       },
       "away": {
         "vs_pitcher": "카라스코",
-        "lineup_woba": 0.359,
-        "matchup_score": 0.9652,
+        "lineup_woba": 0.3641,
+        "matchup_score": 0.9648,
         "coverage": 1.0,
         "bu_weight": 0.8,
-        "platoon": 1.0031,
+        "platoon": 1.028,
         "arsenal_mult": 0.9906,
         "bullpen_workload": {
           "games_last3": 2,
@@ -1018,35 +1018,35 @@
           "factor": 1.0374,
           "_present": true
         },
-        "lineup_src": "projected",
+        "lineup_src": "naver_published_lineup",
         "batters": [
           {
             "order": 1,
-            "name": "카스트로",
+            "name": "박정우",
             "hand": "L",
-            "pa": 431,
-            "woba": 0.387,
-            "ops": 0.888,
+            "pa": 157,
+            "woba": 0.341,
+            "ops": 0.747,
             "platoon": 1.045,
-            "matchup_woba": 0.312,
-            "k_pct": 0.17,
-            "hr_pct": 0.022,
-            "edge": -0.0983,
+            "matchup_woba": 0.28,
+            "k_pct": 0.205,
+            "hr_pct": 0.006,
+            "edge": -0.087,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
           },
           {
             "order": 2,
-            "name": "김호령",
-            "hand": "R",
-            "pa": 581,
-            "woba": 0.331,
-            "ops": 0.718,
-            "platoon": 0.97,
-            "matchup_woba": 0.248,
-            "k_pct": 0.297,
-            "hr_pct": 0.011,
-            "edge": -0.0726,
+            "name": "박재현",
+            "hand": "L",
+            "pa": 556,
+            "woba": 0.355,
+            "ops": 0.791,
+            "platoon": 1.045,
+            "matchup_woba": 0.286,
+            "k_pct": 0.217,
+            "hr_pct": 0.016,
+            "edge": -0.0833,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
           },
@@ -1067,16 +1067,16 @@
           },
           {
             "order": 4,
-            "name": "김선빈",
-            "hand": "R",
-            "pa": 538,
-            "woba": 0.337,
-            "ops": 0.735,
-            "platoon": 0.97,
-            "matchup_woba": 0.265,
-            "k_pct": 0.119,
-            "hr_pct": 0.003,
-            "edge": -0.0806,
+            "name": "카스트로",
+            "hand": "L",
+            "pa": 431,
+            "woba": 0.387,
+            "ops": 0.888,
+            "platoon": 1.045,
+            "matchup_woba": 0.312,
+            "k_pct": 0.17,
+            "hr_pct": 0.022,
+            "edge": -0.0983,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
           },
@@ -1097,6 +1097,21 @@
           },
           {
             "order": 6,
+            "name": "김선빈",
+            "hand": "R",
+            "pa": 538,
+            "woba": 0.337,
+            "ops": 0.735,
+            "platoon": 0.97,
+            "matchup_woba": 0.265,
+            "k_pct": 0.119,
+            "hr_pct": 0.003,
+            "edge": -0.0806,
+            "vs_hand_ops": null,
+            "source": "kbo_player_detail"
+          },
+          {
+            "order": 7,
             "name": "한준수",
             "hand": "L",
             "pa": 390,
@@ -1111,47 +1126,32 @@
             "source": "kbo_player_detail"
           },
           {
-            "order": 7,
-            "name": "김태군",
-            "hand": "R",
-            "pa": 249,
-            "woba": 0.332,
-            "ops": 0.722,
-            "platoon": 0.97,
-            "matchup_woba": 0.244,
-            "k_pct": 0.138,
-            "hr_pct": 0.011,
-            "edge": -0.0833,
-            "vs_hand_ops": null,
-            "source": "kbo_player_detail"
-          },
-          {
             "order": 8,
-            "name": "박민",
-            "hand": "R",
-            "pa": 206,
-            "woba": 0.296,
-            "ops": 0.613,
-            "platoon": 0.97,
-            "matchup_woba": 0.219,
-            "k_pct": 0.194,
-            "hr_pct": 0.009,
-            "edge": -0.0718,
+            "name": "김규성",
+            "hand": "L",
+            "pa": 219,
+            "woba": 0.307,
+            "ops": 0.644,
+            "platoon": 1.045,
+            "matchup_woba": 0.249,
+            "k_pct": 0.227,
+            "hr_pct": 0.005,
+            "edge": -0.0698,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
           },
           {
             "order": 9,
-            "name": "박재현",
+            "name": "하주석",
             "hand": "L",
-            "pa": 556,
-            "woba": 0.355,
-            "ops": 0.791,
+            "pa": 248,
+            "woba": 0.319,
+            "ops": 0.682,
             "platoon": 1.045,
-            "matchup_woba": 0.286,
-            "k_pct": 0.217,
-            "hr_pct": 0.016,
-            "edge": -0.0833,
+            "matchup_woba": 0.258,
+            "k_pct": 0.267,
+            "hr_pct": 0.01,
+            "edge": -0.0739,
             "vs_hand_ops": null,
             "source": "kbo_player_detail"
           }
@@ -1211,179 +1211,175 @@
         "matchup": "KIA @ LG",
         "market": "moneyline",
         "label": "LG ML",
-        "prob": 0.50525,
+        "prob": 0.5117,
         "odds": 1.79,
-        "ev": -0.0078,
-        "kelly_raw": -0.0108,
-        "p_hat": 0.50525,
-        "kelly_f": -0.010827211443193482,
-        "ev_debiased": -0.0078025000000000455,
+        "ev": 0.002,
+        "kelly_raw": 0.0028,
+        "p_hat": 0.5117,
+        "kelly_f": 0.0028297143553640625,
+        "ev_debiased": 0.002043000000000017,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "push_prob": 0.0878,
+        "push_prob": 0.0861,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
+          "data_quality"
         ],
         "selection_status": "data_quality",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "33331020HTLG02026",
         "game_date_kst": "2026-10-20",
         "scheduled_start_utc": "2026-10-20T09:30:00+00:00",
-        "captured_at_utc": "2026-10-20T06:41:45.441944+00:00",
-        "selection_model_prob": 0.5538807279105459,
+        "captured_at_utc": "2026-10-20T08:46:25.061538+00:00",
+        "selection_model_prob": 0.5599080862238757,
         "selection_market_implied": 0.5326370757180157,
-        "selection_snapshot_id": "640b522cade7f580c3ada1586608e6ea031ec3228e8db24a991231fb2aa52e1b"
+        "selection_snapshot_id": "c34e0801801fe2899533f6aa27a0c61b7cb5a68e36b4d9d11da028ab9f910e6c"
       },
       {
         "matchup": "KIA @ LG",
         "market": "moneyline",
         "label": "KIA ML",
-        "prob": 0.40695,
+        "prob": 0.4022,
         "odds": 2.04,
-        "ev": -0.082,
-        "kelly_raw": -0.0865,
-        "p_hat": 0.40695,
-        "kelly_f": -0.08645835090145557,
-        "ev_debiased": -0.08202200000000004,
+        "ev": -0.0934,
+        "kelly_raw": -0.0983,
+        "p_hat": 0.4022,
+        "kelly_f": -0.09828124605452546,
+        "ev_debiased": -0.09341200000000005,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "push_prob": 0.0878,
+        "push_prob": 0.0861,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
+          "data_quality"
         ],
         "selection_status": "data_quality",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "33331020HTLG02026",
         "game_date_kst": "2026-10-20",
         "scheduled_start_utc": "2026-10-20T09:30:00+00:00",
-        "captured_at_utc": "2026-10-20T06:41:45.441944+00:00",
-        "selection_model_prob": 0.446119272089454,
+        "captured_at_utc": "2026-10-20T08:46:25.061538+00:00",
+        "selection_model_prob": 0.4400919137761243,
         "selection_market_implied": 0.46736292428198434,
-        "selection_snapshot_id": "4c288d29800b8623047d3b2dc146d83bab8f4243c6cb88a73a80b72156080ee8"
+        "selection_snapshot_id": "ae1f565ba08c2905fd5c165d9a2b7f383d213436469e0d50166ca4b075a40322"
       },
       {
         "matchup": "KIA @ LG",
         "market": "total",
         "label": "Over 8.5",
-        "prob": 0.6229385961470355,
+        "prob": 0.6411003577353387,
         "odds": 1.85,
-        "ev": 0.1524,
-        "kelly_raw": 0.1793,
-        "p_hat": 0.6229385961470355,
-        "kelly_f": 0.17933694455531263,
-        "ev_debiased": 0.15243640287201576,
+        "ev": 0.186,
+        "kelly_raw": 0.2189,
+        "p_hat": 0.6411003577353387,
+        "kelly_f": 0.21886548448279608,
+        "ev_debiased": 0.18603566181037667,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 10.12,
+        "model_total": 10.4,
         "market_total": 8.5,
-        "push_prob": 0.0,
+        "push_prob": 5.551115123125783e-17,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
+          "data_quality"
         ],
         "selection_status": "data_quality",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "33331020HTLG02026",
         "game_date_kst": "2026-10-20",
         "scheduled_start_utc": "2026-10-20T09:30:00+00:00",
-        "captured_at_utc": "2026-10-20T06:41:45.441944+00:00",
-        "selection_model_prob": 0.6229385961470355,
+        "captured_at_utc": "2026-10-20T08:46:25.061538+00:00",
+        "selection_model_prob": 0.6411003577353387,
         "selection_market_implied": 0.5144356955380577,
-        "selection_snapshot_id": "96ddff338c6f8d7083379f760cd1f2ac9afcf1005c1a5c2cbb7496a71822f170"
+        "selection_snapshot_id": "e1ec6b0553f69fa82a54512d025ff02ea9564473c1c6266497095c1082e3445c"
       },
       {
         "matchup": "KIA @ LG",
         "market": "total",
         "label": "Under 8.5",
-        "prob": 0.3770614038529645,
+        "prob": 0.35889964226466126,
         "odds": 1.96,
-        "ev": -0.261,
-        "kelly_raw": -0.2718,
-        "p_hat": 0.3770614038529645,
-        "kelly_f": -0.2718329671335309,
-        "ev_debiased": -0.26095964844818964,
+        "ev": -0.2966,
+        "kelly_raw": -0.3089,
+        "p_hat": 0.35889964226466126,
+        "kelly_f": -0.3089132303763165,
+        "ev_debiased": -0.296556701161264,
         "stake": 0,
         "stake_base": 100,
         "book": "Pinnacle",
         "estimated_odds": false,
-        "model_total": 10.12,
+        "model_total": 10.4,
         "market_total": 8.5,
-        "push_prob": 0.0,
+        "push_prob": 5.551115123125783e-17,
         "recommendation_eligible": false,
         "high_hit_eligible": false,
-        "selection_lineup_confirmed": false,
+        "selection_lineup_confirmed": true,
         "selection_reasons": [
-          "data_quality",
-          "lineup_unconfirmed"
+          "data_quality"
         ],
         "selection_status": "data_quality",
         "selection_policy_version": "raw-hit-selection-v1",
         "game_pk": "33331020HTLG02026",
         "game_date_kst": "2026-10-20",
         "scheduled_start_utc": "2026-10-20T09:30:00+00:00",
-        "captured_at_utc": "2026-10-20T06:41:45.441944+00:00",
-        "selection_model_prob": 0.3770614038529645,
+        "captured_at_utc": "2026-10-20T08:46:25.061538+00:00",
+        "selection_model_prob": 0.35889964226466126,
         "selection_market_implied": 0.4855643044619423,
-        "selection_snapshot_id": "cbb1ea61a10a5b74ae681917b5523aca2736a06ca4e52a5049b141674b556e1f"
+        "selection_snapshot_id": "99ecfe4cc133ecd7cdb79207323e374499f22645fd60692bc00c5d64c1c65acb"
       }
     ],
     "scores_top": [
       {
-        "away": 2,
-        "home": 3,
-        "prob": 0.0172
-      },
-      {
         "away": 3,
         "home": 3,
-        "prob": 0.017
-      },
-      {
-        "away": 3,
-        "home": 2,
-        "prob": 0.0165
+        "prob": 0.0173
       },
       {
         "away": 2,
-        "home": 4,
-        "prob": 0.016
-      },
-      {
-        "away": 4,
         "home": 3,
-        "prob": 0.0155
+        "prob": 0.0152
       },
       {
         "away": 3,
         "home": 4,
+        "prob": 0.0151
+      },
+      {
+        "away": 2,
+        "home": 5,
         "prob": 0.015
       },
       {
+        "away": 3,
+        "home": 6,
+        "prob": 0.0149
+      },
+      {
         "away": 2,
-        "home": 2,
+        "home": 4,
         "prob": 0.0146
       },
       {
         "away": 4,
-        "home": 4,
-        "prob": 0.0142
+        "home": 3,
+        "prob": 0.0143
+      },
+      {
+        "away": 3,
+        "home": 5,
+        "prob": 0.014
       }
     ],
     "data_sources": {
@@ -1391,8 +1387,8 @@
       "away_hitting": "fallback",
       "home_pitcher": "naver_preview",
       "away_pitcher": "naver_preview",
-      "home_lineup": "projected",
-      "away_lineup": "projected",
+      "home_lineup": "naver_published_lineup",
+      "away_lineup": "naver_published_lineup",
       "weather": "open-meteo",
       "odds": "live"
     },
@@ -1400,9 +1396,7 @@
       "level": "fallback",
       "missing": [
         "홈 타격",
-        "원정 타격",
-        "홈 예상 라인업",
-        "원정 예상 라인업"
+        "원정 타격"
       ]
     },
     "analysis_retained": false
